@@ -1,0 +1,5 @@
+--- List of all the ontologies choosen to be used in the abromics graph database ---
+
+Name;localPath;downloadUrl
+ARO;/home/brieuc/Documents/dev/abromics/choosen-onotlogies/aro.owl;https://bioportal.bioontology.org/ontologies/ARO?p=classes
+VIRO;/home/brieuc/Documents/dev/abromics/choosen-onotlogies/viro.owl;SHALL ONLY BE USED FOR TESTS
