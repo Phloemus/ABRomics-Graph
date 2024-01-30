@@ -3,15 +3,15 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ns1:304cbd48-beba-11ee-9c77-90658429fd42 a ns1:Genomic,
+ns1:0e9cf42e-bf8c-11ee-9496-90658429fd42 a ns1:Genomic,
         sosa:FeatureOfInterest ;
-    ns1:has ns1:304cc180-beba-11ee-9c77-90658429fd42 ;
-    sosa:isFeatureOfInterest ns1:304cb99c-beba-11ee-9c77-90658429fd42 .
+    ns1:has ns1:0e9cfcd0-bf8c-11ee-9496-90658429fd42 ;
+    sosa:isFeatureOfInterest ns1:0e9cec18-bf8c-11ee-9496-90658429fd42 .
 
-ns1:304cd4fe-beba-11ee-9c77-90658429fd42 a <https://bioportal.bioontology.org/ontologies/GO/Gene> ;
-    ns1:givesResistanceTo ns1:304ccfea-beba-11ee-9c77-90658429fd42 .
+ns1:0e9d20a2-bf8c-11ee-9496-90658429fd42 a <https://bioportal.bioontology.org/ontologies/GO/Gene> ;
+    ns1:givesResistanceTo ns1:0e9d13f0-bf8c-11ee-9496-90658429fd42 .
 
-ns1:304ca326-beba-11ee-9c77-90658429fd42 a sosa:ObservableProperty ;
+ns1:0e9cb856-bf8c-11ee-9496-90658429fd42 a sosa:ObservableProperty ;
     ns1:CollectedAt ns1:None ;
     ns1:Host ns1:Other ;
     ns1:Location ns1:None ;
@@ -23,17 +23,17 @@ ns1:304ca326-beba-11ee-9c77-90658429fd42 a sosa:ObservableProperty ;
     ns1:SubmitterEmail <http://www.abromics.org/ontology/admin@analysis.abromics.fr> ;
     ns1:SubmitterName ns1:Admin_Abromics .
 
-ns1:304cb99c-beba-11ee-9c77-90658429fd42 a sosa:Observation ;
-    sosa:ObservedProperty ns1:304ca326-beba-11ee-9c77-90658429fd42 .
+ns1:0e9cec18-bf8c-11ee-9496-90658429fd42 a sosa:Observation ;
+    sosa:ObservedProperty ns1:0e9cb856-bf8c-11ee-9496-90658429fd42 .
 
-ns1:304cc180-beba-11ee-9c77-90658429fd42 a <https://bioportal.bioontology.org/ontologies/OHMI/HumanMicrobiome> ;
-    ns1:contains ns1:304cc46e-beba-11ee-9c77-90658429fd42 .
+ns1:0e9cfcd0-bf8c-11ee-9496-90658429fd42 a <https://bioportal.bioontology.org/ontologies/OHMI/HumanMicrobiome> ;
+    ns1:contains ns1:0e9d0360-bf8c-11ee-9496-90658429fd42 .
 
-ns1:304cc46e-beba-11ee-9c77-90658429fd42 a <https://bioportal.bioontology.org/ontologies/ARO/Strain> ;
+ns1:0e9d0360-bf8c-11ee-9496-90658429fd42 a <https://bioportal.bioontology.org/ontologies/ARO/Strain> ;
     ns1:MLSTProfile "MLST_profile"^^xsd:string ;
     ns1:STProfile "ST_profile"^^xsd:string ;
-    ns1:isResistantTo ns1:304ccfea-beba-11ee-9c77-90658429fd42 .
+    ns1:isResistantTo ns1:0e9d13f0-bf8c-11ee-9496-90658429fd42 .
 
-ns1:304ccfea-beba-11ee-9c77-90658429fd42 a <https://bioportal.bioontology.org/ontologies/ARO/Molecule> ;
+ns1:0e9d13f0-bf8c-11ee-9496-90658429fd42 a <https://bioportal.bioontology.org/ontologies/ARO/Molecule> ;
     rdfs:label "streptomycin"^^xsd:string .
 
