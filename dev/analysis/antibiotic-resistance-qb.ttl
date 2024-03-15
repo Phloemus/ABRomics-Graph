@@ -3,131 +3,131 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.abromics.org/ontology/49fdb0fa-e145-11ee-9a92-90658429fd42> a qb:DataStructureDefinition ;
-    qb:Component <http://www.abromics.org/ontology/49fdae3e-e145-11ee-9a92-90658429fd42> .
+<http://www.abromics.org/ontology/f2a2027c-e205-11ee-9150-90658429fd42> a qb:DataStructureDefinition ;
+    qb:Component <http://www.abromics.org/ontology/f2a1fd5e-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fd9796-e145-11ee-9a92-90658429fd42> a qb:DimensionProperty ;
+<http://www.abromics.org/ontology/f2a1d32e-e205-11ee-9150-90658429fd42> a qb:DimensionProperty ;
     rdfs:label "Resistance Gene"^^xsd:string .
 
-<http://www.abromics.org/ontology/49fd9d7c-e145-11ee-9a92-90658429fd42> a qb:DimensionProperty ;
+<http://www.abromics.org/ontology/f2a1deb4-e205-11ee-9150-90658429fd42> a qb:DimensionProperty ;
     rdfs:label "Target Antibiotic"^^xsd:string .
 
-<http://www.abromics.org/ontology/49fda128-e145-11ee-9a92-90658429fd42> a qb:Slice ;
+<http://www.abromics.org/ontology/f2a1e94a-e205-11ee-9150-90658429fd42> a qb:Slice ;
     rdfs:label "slice by antibiotic target"^^xsd:string .
 
-<http://www.abromics.org/ontology/49fda75e-e145-11ee-9a92-90658429fd42> a qb:SliceKey ;
+<http://www.abromics.org/ontology/f2a1f0d4-e205-11ee-9150-90658429fd42> a qb:SliceKey ;
     rdfs:label "slice by target antibiotic"^^xsd:string .
 
-<http://www.abromics.org/ontology/49fdab5a-e145-11ee-9a92-90658429fd42> a qb:Slice ;
-    qb:observation <http://www.abromics.org/ontology/49fdbe42-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fdc07c-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fdc252-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fdc414-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fdc5a4-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fdc748-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fdc900-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fdcab8-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fdcc66-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fdce1e-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fdd288-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fdd4ae-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fdd652-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fdd7ec-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fdd986-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fddb16-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fddc9c-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fdde40-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fddfe4-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fde174-e145-11ee-9a92-90658429fd42> ;
-    qb:sliceStructure <http://www.abromics.org/ontology/49fda128-e145-11ee-9a92-90658429fd42> .
+<http://www.abromics.org/ontology/f2a1f7c8-e205-11ee-9150-90658429fd42> a qb:Slice ;
+    qb:observation <http://www.abromics.org/ontology/f2a21bae-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a22004-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a22374-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a22694-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a22950-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a22c0c-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a22ef0-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a231a2-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a23468-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a23760-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a23f76-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a242be-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a24584-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a2484a-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a24ac0-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a24d72-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a24ffc-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a252d6-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a25588-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a257ea-e205-11ee-9150-90658429fd42> ;
+    qb:sliceStructure <http://www.abromics.org/ontology/f2a1e94a-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fdae3e-e145-11ee-9a92-90658429fd42> qb:component <http://www.abromics.org/ontology/49fd9796-e145-11ee-9a92-90658429fd42>,
-        <http://www.abromics.org/ontology/49fd9d7c-e145-11ee-9a92-90658429fd42> .
+<http://www.abromics.org/ontology/f2a1fd5e-e205-11ee-9150-90658429fd42> qb:component <http://www.abromics.org/ontology/f2a1d32e-e205-11ee-9150-90658429fd42>,
+        <http://www.abromics.org/ontology/f2a1deb4-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fdbe42-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a21bae-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "aadA13"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fdc07c-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a22004-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "ant(2'')-Ia"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fdc252-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a22374-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "aph(3')-IIb"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fdc414-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a22694-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "blaOXA-488"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fdc5a4-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a22950-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "blaPAO"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fdc748-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a22c0c-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "catB7"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fdc900-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a22ef0-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "crpP"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fdcab8-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a231a2-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "fosA"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fdcc66-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a23468-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "qacE"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fdce1e-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a23760-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "sul1"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fdd288-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a23f76-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "streptomycin"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fdd4ae-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a242be-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "gentamicin"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fdd652-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a24584-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "kanamycin"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fdd7ec-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a2484a-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "ampicillin"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fdd986-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a24ac0-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "ampicillin,amoxicillin/clavulanicacid,cefoxitin,ceftriaxone"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fddb16-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a24d72-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "chloramphenicol"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fddc9c-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a24ffc-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "ciprofloxacinI/R"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fdde40-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a252d6-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "fosfomycin"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fddfe4-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a25588-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "unknown[qacE_1_X68232]"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fde174-e145-11ee-9a92-90658429fd42> a qb:Observation ;
+<http://www.abromics.org/ontology/f2a257ea-e205-11ee-9150-90658429fd42> a qb:Observation ;
     rdfs:label "sulfisoxazole"^^xsd:string ;
-    qb:dataSet <http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> .
+    qb:dataSet <http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> .
 
-<http://www.abromics.org/ontology/49fdb3a2-e145-11ee-9a92-90658429fd42> a qb:DataSet ;
+<http://www.abromics.org/ontology/f2a207b8-e205-11ee-9150-90658429fd42> a qb:DataSet ;
     rdfs:label "Analysis results report"^^xsd:string ;
     dcterms:title "Analysis results report"^^xsd:string ;
-    qb:slice <http://www.abromics.org/ontology/49fdab5a-e145-11ee-9a92-90658429fd42> ;
-    qb:sliceKey <http://www.abromics.org/ontology/49fda75e-e145-11ee-9a92-90658429fd42> ;
+    qb:slice <http://www.abromics.org/ontology/f2a1f7c8-e205-11ee-9150-90658429fd42> ;
+    qb:sliceKey <http://www.abromics.org/ontology/f2a1f0d4-e205-11ee-9150-90658429fd42> ;
     rdfs:comment "Comments about the dataset"^^xsd:string .
 
