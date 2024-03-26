@@ -16,6 +16,15 @@ informations available in other knowledge graphs provided by external data sourc
 4. Provide an integration of the graph with existing ABRomics codebase and compatibility with the relational 
    database set up by the developping team
 
+## Download the codebase of the project
+
+To get the whole codebase of the ABRomics-kg project run:
+
+```
+bash 
+git clone https://gitlab.univ-nantes.fr/BiRD/abromics-kg.git
+```
+
 ## Parts of the project
 
 To ensure the goal written previously, ABRomics KG is composed of multiple parts.
@@ -66,6 +75,23 @@ The project has been tested on:
     - conda 23.7.4
     - nginx/1.18.0 (Ubuntu) | built with OpenSSL 3.0.2
     - virtuso 7.2.11 (Virtuoso Open Source Edition)
+
+### Setting up with Docker 
+
+Build the Docker image of the project with this command
+
+```
+bash
+# in the project directory
+docker build -t abromics-kg .
+```
+
+Running the Docker image of the project with this command
+
+```
+bash
+docker run --name my-custom-nginx-container -d abromics-kg
+```
 
 #### Setting up the VM 
 
