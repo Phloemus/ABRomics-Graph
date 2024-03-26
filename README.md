@@ -124,7 +124,42 @@ conda --version
 
 --- continue the documentation of the virtuoso installation
 
+### Setting up the python envrionments
 
+Conda environments are sets of python packages with fixed versions that are bundled together. Having multiple 
+conda environments reduce the risk of incompatibilites/conflict between python packages as well as ensuring
+maximum portability of the codebase.
+
+1. **FastAPI environment:** (env-name: *fastAPI-env*) : Environment to activate to be able to use the API of the 
+   ABRomics KG project. This is a rest API using the FastAPI package of python and which allows a client to 
+   perform simple CRUD on the graph only by calling the API endpoint instead of doing some sort of SPARQL
+   requests. 
+
+2. **Analysis environment:** (env-name: *analysis-env*) : Environment with SPARQL Wrapper (package that helps
+   to perform SPARQL requests) and jupyter lab. This environment is perfect to do analysis on the graph with 
+   some jupyter notebooks.
+
+3. **Streamlit environment:** (env-name: *streamlit-env*) : Environment with all the packages necessary to 
+   launch the demo web page. These webpages serves as visual demonstrations of SPARQL queries, how to use 
+   them and how to build relevant SPARQL requests relying on the structure of the knowledge graph.
+
+To create the following conda environments there you have to create them using their respective environment.yaml
+files present in <project-name>/envs/<env-name>
+
+```
+bash
+## replace <env-name> with the name of the environment you want to create
+conda env create --name <env-name> -f environment.yaml
+```
+
+Otherwise, if you want to create them automatically you can run the script **build_envs.sh** in **<project-name>/envs**
+
+```
+bash
+cd <project-name>/envs
+chmod +x build_envs.sh
+./build_envs.sh
+```
 
 ### Ontologies used and knowledge graph associated
 
