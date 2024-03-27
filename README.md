@@ -82,16 +82,25 @@ Build the Docker image of the project with this command
 
 ```
 bash
-# in the project directory
+# in the project directory where there is the Dockerfile
 docker build -t abromics-kg .
+```
+
+Check if there is the abromics-kg docker image that can be used to create the container
+
+```
+bash
+docker images
 ```
 
 Running the Docker image of the project with this command
 
 ```
 bash
-docker run --name my-custom-nginx-container -d abromics-kg
+docker run --name my-nginx-container -d -p 8081:80 abromics-kg
 ```
+
+Go to the nginx default webpage on *localhost:8081*
 
 #### Setting up the VM 
 
