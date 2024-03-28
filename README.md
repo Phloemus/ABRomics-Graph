@@ -102,6 +102,23 @@ docker run --name my-nginx-container -d -p 8081:80 abromics-kg
 
 Go to the nginx default webpage on *localhost:8081*
 
+To get the shell of the docker container just created simply run the following command
+
+```
+bash
+docker exec -it abromics-kg sh
+```
+
+Default path in which the index.html is located */usr/share/nginx/html*
+By default there is no program capable to edit files like **nano** ou **vim**. To install them run
+the following command
+
+```
+bash
+apt-get update
+apt-get install vim
+```
+
 #### Setting up the VM 
 
 --> I don't have enough knowledge to set up an Ubuntu VM. This section should be filled in when the 
