@@ -78,45 +78,30 @@ The project has been tested on:
 
 ### Setting up with Docker 
 
-Build the Docker image of the project with this command
+build the docker images and launch the containers for the project.
 
 ```
 bash
-# in the project directory where there is the Dockerfile
-docker build -t abromics-kg .
+# in the project directory where there is the dockerfile
+docker compose up -d 
 ```
 
-Check if there is the abromics-kg docker image that can be used to create the container
+check if there is the abromics-kg docker image that can be used to create the container
 
 ```
 bash
 docker images
 ```
 
-Running the Docker image of the project with this command
+Go to the project main page on *localhost:8081*. It should be the main page of virtuoso
+
+If there is a problem like an image that is overriden or a container stops, simply perform the 
+following command then rebuild the images and relaunch the containers
 
 ```
 bash
-docker run --name my-nginx-container -d -p 8081:80 abromics-kg
-```
-
-Go to the nginx default webpage on *localhost:8081*
-
-To get the shell of the docker container just created simply run the following command
-
-```
-bash
-docker exec -it abromics-kg sh
-```
-
-Default path in which the index.html is located */usr/share/nginx/html*
-By default there is no program capable to edit files like **nano** ou **vim**. To install them run
-the following command
-
-```
-bash
-apt-get update
-apt-get install vim
+#In case of a problem
+docker system prune -a
 ```
 
 #### Setting up the VM 
