@@ -20,5 +20,9 @@ services:
       DEFAULT_GRAPH: "http://sparql.abromics.fr/"
     volumes:
       - ./data/virtuoso:/data
+      - ./graph:/usr/local/virtuoso-opensource/share/virtuoso/vad
     ports:
       - "8890:8890"
+    #entrypoint:
+    #["virtuoso.sh", "/usr/local/virtuoso-opensource/share/virtuoso/vad/set_up.sh"]
+
