@@ -14,3 +14,53 @@ As such, there is two different types of files stored here:
 The graph files contained in the **graph-instance** directory may be very large. As such they might 
 be stored somewhere else in the future. This will require to use a tool to download the large files from a 
 specific server able to store large amount of data. 
+
+When launching the project on a new machine the **graph-instance** doesn't contain the files containing the 
+abromics data. A launching script have to be launch to fetch data from the ABRomics database and replicate
+them over in a graph format with ontologies annotations.
+
+Later the REST API of ABRomics KG can be used to add data in the graph or retrive data from the graph. The
+REST API may be used in several parts of the ABRomics whole codebase. It's a tool allowing the dev to no 
+having to perform SPARQL requests directly even though using SPARQL requests via the sparql endpoint of the 
+ABRomics project server is the way to go for custom queries
+
+To load the graphs files into the virtuoso graph server. Complete the set up of the docker containers by 
+telling virtuoso to consume the files present in **ontologies** and **graph-instance**
+
+```
+bash 
+# after doing a docker compose up -d
+# check the container launched
+docker ps
+```
+
+```
+bash
+# get the ID of the container called abromics-virtuoso and execute the following command
+docker exec -it <containerID> sh
+```
+
+Normally you should be in the shell of the abromics-virtuoso container
+
+```
+bash 
+# execute the script that intergrated the data of the graph files into the virtuoso graph database
+cd /usr/local/virtuoso-opensource/share/virtuoso/vad
+chmod 777 set_up.sh
+./set_up.sh
+# then exit the script with CTRL-C
+```
+
+Now all the nodes present in the included graph files should be displonible in the graph when performing
+a SPARQL query. To check this go to **localhost:8081/sparql** and perform the following query in to count
+the number of elements in the graph
+
+```
+sparql
+select (COUNT(*) AS ?count) where { 
+    ?s ?p ?o .
+}
+```
+
+The basic number of element in a virtuoso graph is arround **5400** if you have more (**~26k**) as of 
+today, the set up has been completed successfully 
