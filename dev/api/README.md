@@ -1,6 +1,11 @@
 # ABRomics-kg API 
 
-This API allows to perform CRUD requests on the ABRomics knowledge graph.
+The ABRomics KG API is a REST API allowing to perform queries and requests to the knowledge graph 
+without ever needing to write a SPARQL query.
+
+## Technical details
+
+The ABRomics KG API relies on FastAPI.  
 
 ## Installation
 
