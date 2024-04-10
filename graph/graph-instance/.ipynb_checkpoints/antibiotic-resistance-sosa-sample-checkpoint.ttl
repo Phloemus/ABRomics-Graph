@@ -48,7 +48,6 @@ ns1:report1 a sosa:Output ;
 
 ns1:resistanceGene1 a aro:aadA13 ;
     rdfs:label "aadA13 resistance gene"^^xsd:string .
-    # Link to ARO an inclusion of ARO ontology to get all the informations about this class and its parent
     
 ns1:targetAntibiotic1 a aro:streptomycin ;
     rdfs:label "streptomycin resistance gene"^^xsd:string .    
