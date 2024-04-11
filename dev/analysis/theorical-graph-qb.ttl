@@ -15,6 +15,7 @@ ns1:targetAntibioticDimensionProperty a qb:DimensionProperty ;
 
 ns1:resistanceGeneSlice a qb:Slice ;
     rdfs:label "slice by resistance gene"^^xsd:string .
+    # link with ARO
 
 ns1:targetAntibioticSlice a qb:SliceKey ;
     rdfs:label "slice by target antibiotic"^^xsd:string .
