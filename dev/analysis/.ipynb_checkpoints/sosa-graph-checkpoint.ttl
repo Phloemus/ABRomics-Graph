@@ -1,0 +1,85 @@
+@prefix sosa: <...> .
+@prefix schema: <...> .
+
+# Samples refer as biological samples extracted from a patient of from 
+# a natural source (water or soil). They are subject to multiple observations.
+# Observations of the sample can be focused to a specific feature of contained
+# within the sample.
+<sample_1> rdf:type sosa:FeatureOfInterest ; 
+        schema:identifier "0001" ; 
+        abromics:collection_date "2023-02-03" ; 
+        abromics:has_latitude "98.877293" ; 
+        abromics:has_longitude "45.874" .
+
+# Observations are made by a workflow implementing a procedure. An observation
+# yield a measure (result) of multiple features of interest and a unique 
+# observable property. The main feature of interest is the sample but the 
+# observation is also focused on other features that are found within the 
+# sample like a strain or a gene for instance.
+# Those features of interest allow to filter the observations when quering 
+# the ABRomics knowledge graph
+<obs_s1_1> rdf:type sosa:Observation ; 
+        sosa:hasFeatureOfInterest <strain_1> ; 
+        sosa:hasFeatureOfInterest <sample_1> ; 
+        sosa:hasFeatureOfInterest <gene_xyz> ; 
+        sosa:hasFeatureOfInterest <S1#location> ;
+        sosa:hasObservableProperty <ABRgenes> ; 
+        sosa:madeBySensor abromics:WF1_impl ;
+        sosa:usedProcedure abromics:WF1_spec ;
+        sosa:hasResult <r1> .
+
+# The result entity allows to hold the value (the measure) of the observation.
+# A result also contains a unit that gives further informations about the 
+# observation made 
+<r1> rdf:type sosa:Result ; 
+        sosa:hasValue "XYZ" ;
+        sosa:hasUnit "Gene name" . # in unit ontology ? 
+        sosa:resultTime "2024-04-15" .
+
+# The observable property define the meaning of what is the result of the 
+# observation is. The result should be the answer of the observable property
+# (ex: ObservableProperty:Height, Result:20m). Feature of interest and 
+# observable property have very close definitions, the only difference is that
+# the observation property is more precised than the feature of interest (which
+# have definitions that should fit to multiple observations of the SAME sample)
+<ABRgenes> rdf:type sosa:ObservableProperty ;
+        rdfs:label "Antibiotic resistant genes"
+
+# A sensor is a specification of a plan of execution. Corresponds to the code 
+# of a workflow
+abromics:WF1_impl rdf:type sosa:Sensor ; 
+        sosa:implements abromics:WF1_spec ;
+        sosa:isHostedBy abromics:NNCR .
+
+# In the context of the ABRomics project, a plateform is a physical location
+# that hosts the sensor that made an observation.
+abromics:NNCR rdf:type sosa:Platform .
+
+# The procedure is an implementation of a plan of execution (a sensor). Multiple
+# procedures coming from the same sensor can be performed at different time and 
+# at different locations.
+abromics:WF1_spec rdf:type sosa:Procedure ;
+        sosa:isImplementedBy abromics:WF1_impl .
+
+# Strains can be seen a "sub features" present within a sample. It's defined as a 
+# sosa:FeatureOfInterest to allow filtration of the strain from sample observations
+<strain_1> rdf:type sosa:FeatureOfInterest, 
+                    aro:Strain ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/562> . #in_taxon E. Coli 
+
+# The gene is not always indicated as the feature of interest for an observation 
+# because the observation may not be focused on a specific gene. This feature of 
+# interest allows to target more specifically a gene but this field may be 
+# very verstile depending on the observation
+<gene_xyz> rdf:type sosa:FeatureOfInterest  ; 
+        rdf:type go:Gene ; 
+        schema:identifier uniprot:XYZ .
+        
+# The location of the sample is also a feature of interest, as we can consider that 
+# the location is a trait of a sample that can be observed only when the extraction
+# of the sample from is natural medium has been made.
+<S1#location> rdf:type sosa:FeatureOfInterest ;
+  rdfs:label "location of S1"@en ;
+  geo:lat 35.8648067 ;
+  geo:long -120.6195831 ;
+  geo:alt 12.75 .
