@@ -26,3 +26,10 @@ services:
     #entrypoint:
     #["virtuoso.sh", "/usr/local/virtuoso-opensource/share/virtuoso/vad/set_up.sh"]
 
+  streamlit:
+    image: phloemus/streamlit:streamlit
+    container_name: streamlit
+    volumes:
+      - ./streamlit:/streamlit
+    ports:
+      - "8501:8501"
