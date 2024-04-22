@@ -1,0 +1,224 @@
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix schema: <https://schema.org/> .
+@prefix abromics: <https://abromics.fr/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix aro: <http://purl.obolibrary.org/obo/aro.owl#> .
+@prefix go: <http://purl.org/obo/owl/GO#> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+
+
+######################### Properties ################################
+
+# Represents the dimensions of the cube. Which are the dimensions 
+# used to make slice in the datacube. For instance, antibiotic 
+# resistance gene names is a dimension therefore it's possible to
+# slice to create a slice with the dimensions by fixing all the 
+# others execpt 2 (including the antibiotic resistance gene names)
+# Doing so will allow to get the coverage for all the resistance
+# genes for example.
+
+# There is different kind of qb:Properties
+# - custom (DimensionProperty)
+# - measure (MeasureProperty): which needs to have a certain kind
+#   of value in side the observation for this property like a decimal
+
+<ABRgenes> a rdf:Property, qb:DimensionProperty ;
+    rdfs:label "Antibiotic resistant gene names"^^xsd:string .
+
+<ABRgenesCovs> a rdf:Property, qb:MeasureProperty ;
+    rdfs:label "Antibiotic resistant gene coverage"^^xsd:string .
+    rdfs:range xsd:decimal .
+
+<ABRantibiotics> a rdf:Property, qb:DimensionProperty ;
+        rdfs:label "Antibiotic name"^^xsd:string .
+
+<ABRsamples> a rdf:Property, qb:DimensionProperty ;
+        rdfs:label "Samples"^^xsd:string .
+
+
+########################### DataStructureDefinition ##################################
+
+# Define a kind of dataset structure. A DataStructureDefinition can be used to define
+# the structure of multiple DataSets ##### Continue from example 9 #####
+
+<dsd-1> a qb:DataStructureDefinition;
+    # The dimensions
+    qb:component [ qb:dimension <ABRgenes>;           qb:order 1 ]; ### ?? How does this work ?
+    qb:component [ qb:dimension <ABRantibiotics>;     qb:order 2 ];
+    qb:component [ qb:dimension <ABRsamples>;         qb:order 3 ];
+    # The measure(s)
+    qb:component [ qb:measure <ABRgenesCovs>];
+    # The attributes
+    qb:component [ qb:componentRequired "true"^^xsd:boolean;
+                   qb:componentAttachment qb:DataSet; ] .
+
+
+################################### DataSet ########################################
+
+# A DataSet follows a certain DataStructureDefinition. Meaning that all the 
+# observations in the DataSet will need to have fill the dimensions indicated in 
+# the DataStructureDefintion
+
+<whole_dataset> a qb:DataSet;
+    rdfs:label "All ABRomics reports dataset"@en;
+    qb:structure <dsd-1> .
+
+
+################################ Observations #####################################
+
+<obs1> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    eg:refArea                 ex-geo:newport_00pr ;                  
+    eg:refPeriod               <http://reference.data.gov.uk/id/gregorian-interval/2004-01-01T00:00:00/P3Y> ;
+    sdmx-dimension:sex         sdmx-code:sex-M ;
+    sdmx-attribute:unitMeasure <http://dbpedia.org/resource/Year> ;
+    eg:lifeExpectancy          76.7 ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+########################### DataStructureDefinition ##################################
+
+# Define the structure of the DataSet. The DataStructureDefinition holds 
+# 
+ns1:dataStructureDefinition1 a qb:DataStructureDefinition ;
+    qb:Component ns1:component1 .
+    
+# 1 dimension per data modality
+ns1:component1 qb:component ns1:geneResistanceDimensionProperty,
+        ns1:targetAntibioticDimensionProperty .
+
+ns1:geneResistanceDimensionProperty a qb:DimensionProperty ;
+    rdfs:label "Resistance Gene"^^xsd:string .
+
+ns1:targetAntibioticDimensionProperty a qb:DimensionProperty ;
+    rdfs:label "Target Antibiotic"^^xsd:string .
+
+ns1:resistanceGeneSliceK a qb:SliceKey ;
+    rdfs:label "resistance gene slice key"^^xsd:string .
+
+ns1:targetAntibioticSliceK a qb:SliceKey ;
+    rdfs:label "target antibiotic slice key"^^xsd:string .
+
+ns1:wholeReportSlice2 a qb:Slice ;
+    qb:observation ns1:obs1,
+        ns1:obs7,
+        ns1:obs8,
+        ns1:obs9 ;
+    qb:sliceStructure ns1:resistanceGeneSliceK .
+
+ns1:wholeReportSlice2 a qb:Slice ;
+    qb:observation ns1:obs2,
+        ns1:obs3,
+        ns1:obs4,
+        ns1:obs5 ;
+    qb:sliceStructure ns1:resistanceGeneSliceK .
+
+ns1:obs1 a qb:Observation ;
+    rdfs:label "aadA13"^^xsd:string ;
+    qb:dataSet ns1:reportDataset1 .
+
+ns1:obs2 a qb:Observation ;
+    rdfs:label "ant(2'')-Ia"^^xsd:string ;
+    qb:dataSet ns1:reportDataset2 .
+
+ns1:obs3 a qb:Observation ;
+    rdfs:label "aph(3')-IIb"^^xsd:string ;
+    qb:dataSet ns1:reportDataset2 .
+
+ns1:obs3 a qb:Observation ;
+    rdfs:label "blaOXA-488"^^xsd:string ;
+    qb:dataSet ns1:reportDataset2 .
+
+ns1:obs4 a qb:Observation ;
+    rdfs:label "blaPAO"^^xsd:string ;
+    qb:dataSet ns1:reportDataset2 .
+
+ns1:obs5 a qb:Observation ;
+    rdfs:label "catB7"^^xsd:string ;
+    qb:dataSet ns1:reportDataset2 .
+
+ns1:obs6 a qb:Observation ;
+    rdfs:label "crpP"^^xsd:string ;
+    qb:dataSet ns1:reportDataset2 .
+
+ns1:obs7 a qb:Observation ;
+    rdfs:label "fosA"^^xsd:string ;
+    qb:dataSet ns1:reportDataset1 .
+
+ns1:obs8 a qb:Observation ;
+    rdfs:label "qacE"^^xsd:string ;
+    qb:dataSet ns1:reportDataset1 .
+
+ns1:obs9 a qb:Observation ;
+    rdfs:label "sul1"^^xsd:string ;
+    qb:dataSet ns1:reportDataset1 .
+
+ns1:obs10 a qb:Observation ;
+    rdfs:label "streptomycin"^^xsd:string ;
+    qb:dataSet ns1:reportDataset2 .
+
+ns1:obs11 a qb:Observation ;
+    rdfs:label "gentamicin"^^xsd:string ;
+    qb:dataSet ns1:reportDataset2 .
+
+ns1:obs12 a qb:Observation ;
+    rdfs:label "kanamycin"^^xsd:string ;
+    qb:dataSet ns1:reportDataset2 .
+
+ns1:obs13 a qb:Observation ;
+    rdfs:label "ampicillin"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs14 a qb:Observation ;
+    rdfs:label "ampicillin,amoxicillin/clavulanicacid,cefoxitin,ceftriaxone"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs15 a qb:Observation ;
+    rdfs:label "chloramphenicol"^^xsd:string ;
+    qb:dataSet ns1:reportDataset2 .
+
+ns1:obs16 a qb:Observation ;
+    rdfs:label "ciprofloxacinI/R"^^xsd:string ;
+    qb:dataSet ns1:reportDataset2 .
+
+ns1:obs17 a qb:Observation ;
+    rdfs:label "fosfomycin"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs18 a qb:Observation ;
+    rdfs:label "unknown[qacE_1_X68232]"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:obs19 a qb:Observation ;
+    rdfs:label "sulfisoxazole"^^xsd:string ;
+    qb:dataSet ns1:reportDataset .
+
+ns1:reportDataset1 a qb:DataSet ;
+    rdfs:label "Analysis results report #1"^^xsd:string ;
+    dcterms:title "Analysis results report"^^xsd:string ;
+    qb:slice ns1:wholeReportSlice1 ;
+    qb:sliceKey ns1:targetAntibioticSliceK ;
+    rdfs:comment "Comments about the dataset"^^xsd:string .
+    
+ns1:reportDataset2 a qb:DataSet ;
+    rdfs:label "Analysis results report #2"^^xsd:string ;
+    dcterms:title "Analysis results report"^^xsd:string ;
+    qb:slice ns1:wholeReportSlice2 ;
+    qb:sliceKey ns1:targetAntibioticSliceK ;
+    rdfs:comment "Comments about the dataset"^^xsd:string .

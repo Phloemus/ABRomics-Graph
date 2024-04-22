@@ -9,6 +9,7 @@
 @prefix go: <http://purl.org/obo/owl/GO#> .
 @prefix uniprot: <http://purl.uniprot.org/uniprot/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix sio: <http://semanticscience.org/resource/> .
 
 ################################### Samples #############################################
 
@@ -18,7 +19,8 @@
 # within the sample.
 
 ###### Sample 1 
-<sample_1> rdf:type sosa:FeatureOfInterest ; 
+<sample_1> rdf:type sosa:FeatureOfInterest ;
+        rdf:type sio:001050 ; ## annotate to indicate that this is a SAMPLE
         schema:identifier "0001" ; 
         abromics:collection_date "2023-02-03" ; 
         abromics:has_latitude "98.877293" ; 
@@ -26,6 +28,7 @@
 
 ###### Sample 1 
 <sample_2> rdf:type sosa:FeatureOfInterest ; 
+        rdf:type sio:001050 ;
         schema:identifier "0002" ; 
         abromics:collection_date "2023-02-04" ; 
         abromics:has_latitude "100.877293" ; 
@@ -882,13 +885,13 @@ abromics:WF1_spec rdf:type sosa:Procedure ;
 ### Location for the sample 1
 <S1#location> rdf:type sosa:FeatureOfInterest ;
   rdfs:label "location of S1"@en ;
-  geo:lat 35.8648067 ;
-  geo:long -120.6195831 ;
-  geo:alt 12.75 .
+  geo:lat "35.8648067"^^xsd:decimal ;
+  geo:long "-120.6195831"^^xsd:decimal ;
+  geo:alt "12.75"^^xsd:decimal .
 
 ### Location for the sample 2
 <S2#location> rdf:type sosa:FeatureOfInterest ;
   rdfs:label "location of S2"@en ;
-  geo:lat 47.209110 ;
-  geo:long -1.553479 ;
-  geo:alt 10.00 .
+  geo:lat "47.209110"^^xsd:decimal ;
+  geo:long "-1.553479"^^xsd:decimal ;
+  geo:alt "10.00"^^xsd:decimal .

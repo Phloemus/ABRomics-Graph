@@ -27,7 +27,7 @@ services:
     #["virtuoso.sh", "/usr/local/virtuoso-opensource/share/virtuoso/vad/set_up.sh"]
 
   streamlit:
-    image: phloemus/streamlit:latest
+    image: phloemus/streamlit:0.0.1-sparql
     container_name: streamlit
     volumes:
       - ./streamlit/app:/streamlit/app

@@ -9,6 +9,7 @@
 @prefix go: <http://purl.org/obo/owl/GO#> .
 @prefix uniprot: <http://purl.uniprot.org/uniprot/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix sio: <http://semanticscience.org/resource/> .
 
 ################################### Samples #############################################
 
@@ -18,7 +19,8 @@
 # within the sample.
 
 ###### Sample 1 
-<sample_1> rdf:type sosa:FeatureOfInterest ; 
+<sample_1> rdf:type sosa:FeatureOfInterest ;
+        rdf:type sio:001050 ; ## annotate to indicate that this is a SAMPLE
         schema:identifier "0001" ; 
         abromics:collection_date "2023-02-03" ; 
         abromics:has_latitude "98.877293" ; 
@@ -26,6 +28,7 @@
 
 ###### Sample 1 
 <sample_2> rdf:type sosa:FeatureOfInterest ; 
+        rdf:type sio:001050 ;
         schema:identifier "0002" ; 
         abromics:collection_date "2023-02-04" ; 
         abromics:has_latitude "100.877293" ; 
@@ -496,226 +499,226 @@
 
 ###### Results for Observations with the strain1 / sample 1 / name of the resistance genes
 <r1> rdf:type sosa:Result ; 
-        sosa:hasValue "blaTEM-1A" ;
+        sosa:hasSimpleResult "blaTEM-1A" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
 
 <r2> rdf:type sosa:Result ; 
-        sosa:hasValue "tet(A)" ;
+        sosa:hasSimpleResult "tet(A)" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
 
 <r3> rdf:type sosa:Result ; 
-        sosa:hasValue "sul1" ;
+        sosa:hasSimpleResult "sul1" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
 
 <r4> rdf:type sosa:Result ; 
-        sosa:hasValue "qacE" ;
+        sosa:hasSimpleResult "qacE" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
 
 <r5> rdf:type sosa:Result ; 
-        sosa:hasValue "dfrA1" ;
+        sosa:hasSimpleResult "dfrA1" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
 
 <r6> rdf:type sosa:Result ; 
-        sosa:hasValue "aadA1" ;
+        sosa:hasSimpleResult "aadA1" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
 
 ###### Results for Observations with the strain1 / sample 1 / coverage of resistance gene
 <r7> rdf:type sosa:Result ; 
-        sosa:hasValue "100"^^xsd:decimal ;
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
 
 <r8> rdf:type sosa:Result ; 
-        sosa:hasValue "97.8"^^xsd:decimal ;
+        sosa:hasSimpleResult "97.8"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
 
 <r9> rdf:type sosa:Result ; 
-        sosa:hasValue "97.95"^^xsd:decimal ;
+        sosa:hasSimpleResult "97.95"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
 
 <r10> rdf:type sosa:Result ; 
-        sosa:hasValue "84.68"^^xsd:decimal ;
+        sosa:hasSimpleResult "84.68"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
 
 <r11> rdf:type sosa:Result ; 
-        sosa:hasValue "100"^^xsd:decimal ;
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
 
 <r12> rdf:type sosa:Result ; 
-        sosa:hasValue "76.17"^^xsd:decimal ;
+        sosa:hasSimpleResult "76.17"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
 
 ###### Results for Observations with the strain1 / sample 1 / antibiotic molecule
 <r13> rdf:type sosa:Result ; 
-        sosa:hasValue "ampicillin" ;
+        sosa:hasSimpleResult "ampicillin" ;
         sosa:hasUnit "antibiotic" ; # in unit ontology ? 
         sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
 
 <r14> rdf:type sosa:Result ; 
-        sosa:hasValue "tetracycline" ;
+        sosa:hasSimpleResult "tetracycline" ;
         sosa:hasUnit "antibiotic" ; # in unit ontology ? 
         sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
 
 <r15> rdf:type sosa:Result ; 
-        sosa:hasValue "sulfisoxazole" ;
+        sosa:hasSimpleResult "sulfisoxazole" ;
         sosa:hasUnit "antibiotic" ; # in unit ontology ? 
         sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
 
 <r16> rdf:type sosa:Result ; 
-        sosa:hasValue "unknown[qacE_1_X68232]" ;
+        sosa:hasSimpleResult "unknown[qacE_1_X68232]" ;
         sosa:hasUnit "antibiotic" ; # in unit ontology ? 
         sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
 
 <r17> rdf:type sosa:Result ; 
-        sosa:hasValue "trimethoprim" ;
+        sosa:hasSimpleResult "trimethoprim" ;
         sosa:hasUnit "antibiotic" ; # in unit ontology ? 
         sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
 
 <r18> rdf:type sosa:Result ; 
-        sosa:hasValue "streptomycin" ;
+        sosa:hasSimpleResult "streptomycin" ;
         sosa:hasUnit "antibiotic" ; # in unit ontology ? 
         sosa:resultTime "2024-05-30T12:36:12Z"^^xsd:dateTime .
 
 ###### Results for Observations with the strain1 / sample 1 / name of the resistance genes
 <r19> rdf:type sosa:Result ; 
-        sosa:hasValue "mcr-1.1" ;
+        sosa:hasSimpleResult "mcr-1.1" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r20> rdf:type sosa:Result ; 
-        sosa:hasValue "tet(A)" ;
+        sosa:hasSimpleResult "tet(A)" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r21> rdf:type sosa:Result ; 
-        sosa:hasValue "dfrA36" ;
+        sosa:hasSimpleResult "dfrA36" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r22> rdf:type sosa:Result ; 
-        sosa:hasValue "floR" ;
+        sosa:hasSimpleResult "floR" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r23> rdf:type sosa:Result ; 
-        sosa:hasValue "sul2" ;
+        sosa:hasSimpleResult "sul2" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r24> rdf:type sosa:Result ; 
-        sosa:hasValue "aph(3')-Ia" ;
+        sosa:hasSimpleResult "aph(3')-Ia" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r25> rdf:type sosa:Result ; 
-        sosa:hasValue "sul1" ;
+        sosa:hasSimpleResult "sul1" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r26> rdf:type sosa:Result ; 
-        sosa:hasValue "qacE" ;
+        sosa:hasSimpleResult "qacE" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r27> rdf:type sosa:Result ; 
-        sosa:hasValue "aadA1" ;
+        sosa:hasSimpleResult "aadA1" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r28> rdf:type sosa:Result ; 
-        sosa:hasValue "aph(6)-Id" ;
+        sosa:hasSimpleResult "aph(6)-Id" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r29> rdf:type sosa:Result ; 
-        sosa:hasValue "aph(3'')-Ib" ;
+        sosa:hasSimpleResult "aph(3'')-Ib" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r30> rdf:type sosa:Result ; 
-        sosa:hasValue "blaOXA-1" ;
+        sosa:hasSimpleResult "blaOXA-1" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r31> rdf:type sosa:Result ; 
-        sosa:hasValue "dfrA1" ;
+        sosa:hasSimpleResult "dfrA1" ;
         sosa:hasUnit "Gene name" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 ###### Results for Observations with the strain2 / sample 2 / coverage of resistance gene
 <r32> rdf:type sosa:Result ; 
-        sosa:hasValue "100"^^xsd:decimal ;
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r33> rdf:type sosa:Result ; 
-        sosa:hasValue "100"^^xsd:decimal ;
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r34> rdf:type sosa:Result ; 
-        sosa:hasValue "100"^^xsd:decimal ;
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r35> rdf:type sosa:Result ; 
-        sosa:hasValue "100"^^xsd:decimal ;
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r36> rdf:type sosa:Result ; 
-        sosa:hasValue "99.92"^^xsd:decimal ;
+        sosa:hasSimpleResult "99.92"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r37> rdf:type sosa:Result ; 
-        sosa:hasValue "99.75"^^xsd:decimal ;
+        sosa:hasSimpleResult "99.75"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r38> rdf:type sosa:Result ; 
-        sosa:hasValue "100"^^xsd:decimal ;
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r39> rdf:type sosa:Result ; 
-        sosa:hasValue "84.68"^^xsd:decimal ;
+        sosa:hasSimpleResult "84.68"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r40> rdf:type sosa:Result ; 
-        sosa:hasValue "98.61"^^xsd:decimal ;
+        sosa:hasSimpleResult "98.61"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r41> rdf:type sosa:Result ; 
-        sosa:hasValue "100"^^xsd:decimal ;
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r42> rdf:type sosa:Result ; 
-        sosa:hasValue "100"^^xsd:decimal ;
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r43> rdf:type sosa:Result ; 
-        sosa:hasValue "100"^^xsd:decimal ;
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
 <r44> rdf:type sosa:Result ; 
-        sosa:hasValue "100"^^xsd:decimal ;
+        sosa:hasSimpleResult "100"^^xsd:decimal ;
         sosa:hasUnit "percent" ; # in unit ontology ? 
         sosa:resultTime "2024-06-16T12:36:12Z"^^xsd:dateTime .
 
@@ -882,13 +885,13 @@ abromics:WF1_spec rdf:type sosa:Procedure ;
 ### Location for the sample 1
 <S1#location> rdf:type sosa:FeatureOfInterest ;
   rdfs:label "location of S1"@en ;
-  geo:lat 35.8648067 ;
-  geo:long -120.6195831 ;
-  geo:alt 12.75 .
+  geo:lat "35.8648067"^^xsd:decimal ;
+  geo:long "-120.6195831"^^xsd:decimal ;
+  geo:alt "12.75"^^xsd:decimal .
 
 ### Location for the sample 2
 <S2#location> rdf:type sosa:FeatureOfInterest ;
   rdfs:label "location of S2"@en ;
-  geo:lat 47.209110 ;
-  geo:long -1.553479 ;
-  geo:alt 10.00 .
+  geo:lat "47.209110"^^xsd:decimal ;
+  geo:long "-1.553479"^^xsd:decimal ;
+  geo:alt "10.00"^^xsd:decimal .
