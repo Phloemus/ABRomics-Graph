@@ -10,6 +10,7 @@
 @prefix uniprot: <http://purl.uniprot.org/uniprot/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix sio: <http://semanticscience.org/resource/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 
 ######################### Properties ################################
@@ -31,7 +32,7 @@
     rdfs:label "Antibiotic resistant gene names"^^xsd:string .
 
 <ABRgenesCovs> a rdf:Property, qb:MeasureProperty ;
-    rdfs:label "Antibiotic resistant gene coverage"^^xsd:string .
+    rdfs:label "Antibiotic resistant gene coverage"^^xsd:string ;
     rdfs:range xsd:decimal .
 
 <ABRantibiotics> a rdf:Property, qb:DimensionProperty ;
@@ -39,6 +40,9 @@
 
 <ABRsamples> a rdf:Property, qb:DimensionProperty ;
         rdfs:label "Samples"^^xsd:string .
+        
+<ABRgeneLength> a rdf:Property, qb:DimensionProperty ;
+        rdfs:label "Gene length"^^xsd:string .
 
 
 ########################### DataStructureDefinition ##################################
@@ -48,177 +52,266 @@
 
 <dsd-1> a qb:DataStructureDefinition;
     # The dimensions
-    qb:component [ qb:dimension <ABRgenes>;           qb:order 1 ]; ### ?? How does this work ?
+    qb:component [ qb:dimension <ABRgenes>;           qb:order 1 ];
     qb:component [ qb:dimension <ABRantibiotics>;     qb:order 2 ];
     qb:component [ qb:dimension <ABRsamples>;         qb:order 3 ];
     # The measure(s)
     qb:component [ qb:measure <ABRgenesCovs>];
+    qb:component [ qb:measure <ABRgeneLength>];
     # The attributes
     qb:component [ qb:componentRequired "true"^^xsd:boolean;
-                   qb:componentAttachment qb:DataSet; ] .
+                   qb:componentAttachment qb:DataSet; ] ;
+    qb:sliceKey <sliceByCoverage> ;
+    qb:sliceKey <sliceByAntibiotics> ;
+    qb:sliceKey <sliceByGeneLength>.
 
 
 ################################### DataSet ########################################
 
 # A DataSet follows a certain DataStructureDefinition. Meaning that all the 
 # observations in the DataSet will need to have fill the dimensions indicated in 
-# the DataStructureDefintion
+# the DataStructureDefintion.
+
+# The instanciated slices should be added to the dataset too because the 
+# DataSetStructure only holds the slice keys that should be implemented in the 
+# the DataSet but the sliceKey does not contain any observations
 
 <whole_dataset> a qb:DataSet;
     rdfs:label "All ABRomics reports dataset"@en;
-    qb:structure <dsd-1> .
+    qb:structure <dsd-1> ;
+    qb:slice <S1> ;
+    qb:slice <S2> ;
+    qb:slice <S3> ;
+    qb:slice <S4> ;
+    qb:slice <S5> .
+
+
+########################## Slices and group of observations #######################
+
+# A sliceKey can be instanciated in many different DataSet as real slice. The 
+# sliceKey holds the 2 componentProperties (dimensions) that allows to perform a 
+# cube slice. The observations contained in the slice (2D array) are stored in the
+# slice which are an instanciation of the sliceKey
+
+<sliceByCoverage> a qb:SliceKey;
+    rdfs:label "slice by coverage"@en;
+    qb:componentProperty <ABRgenes>, <ABRgenesCovs> .
+    
+<sliceByAntibiotics> a qb:SliceKey;
+    rdfs:label "slice by antibiotic drugs"@en;
+    qb:componentProperty <ABRgenes>, <ABRantibiotics> .
+    
+<sliceByGeneLength> a qb:SliceKey;
+    rdfs:label "slice by gene lengh"@en;
+    qb:componentProperty <ABRgenes>, <ABRgeneLength> .
+
+<sliceBySample> a qb:SliceKey;
+    rdfs:label "slice by sample"@en;
+    qb:componentProperty <ABRgenes>, <ABRsamples> .
+
+<sliceByGene> a qb:SliceKey;
+    rdfs:label "slice by gene name"@en;
+    qb:componentProperty <ABRgenes>, <ABRantibiotics> .
+
+
+
+##################### Slices ##############################
+
+# A slice is an implementation of a sliceKey. The slice 
+# already contains the necessary observations meaning 
+# that slicing the datacube is not costly at all
+    
+<S1> a qb:Slice ; 
+    rdfs:label "slice by coverage"@en;
+    qb:sliceStructure <sliceByCoverage>; 
+    qb:observation <obs1>, <obs2>, <obs3>, <obs3>, <obs4>, <obs5>, <obs6>, <obs7>, <obs8>, <obs9>, <obs10>, <obs11>, <obs12>, <obs13>, <obs14>, <obs15>, <obs16>, <obs17>, <obs18>, <obs19> . 
+## Add all the observations that containing the coverage metric ## We may have not understand the way observaions works. In fact it's possible that only one metric should be indicated by observation
+    
+<S2> a qb:Slice ; 
+    rdfs:label "slice by antibiotic drugs"@en;
+    qb:sliceStructure <sliceByAntibiotics>; 
+    qb:observation <obs1>, <obs2>, <obs3>, <obs3>, <obs4>, <obs5>, <obs6>, <obs7>, <obs8>, <obs9>, <obs10>, <obs11>, <obs12>, <obs13>, <obs14>, <obs15>, <obs16>, <obs17>, <obs18>, <obs19> . 
+    
+<S3> a qb:Slice ; 
+    rdfs:label "slice by gene length"@en;
+    qb:sliceStructure <sliceByGeneLength>; 
+    qb:observation <obs1>, <obs2>, <obs3>, <obs3>, <obs4>, <obs5>, <obs6>, <obs7>, <obs8>, <obs9>, <obs10>, <obs11>, <obs12>, <obs13>, <obs14>, <obs15>, <obs16>, <obs17>, <obs18>, <obs19> . 
+
+<S4> a qb:Slice ; 
+    rdfs:label "slice by sample"@en;
+    qb:sliceStructure <sliceBySample>; 
+    qb:observation <obs1>, <obs2>, <obs3>, <obs3>, <obs4>, <obs5>, <obs6>, <obs7>, <obs8>, <obs9>, <obs10>, <obs11>, <obs12>, <obs13>, <obs14>, <obs15>, <obs16>, <obs17>, <obs18>, <obs19> . 
+
+<S5> a qb:Slice ; 
+    rdfs:label "slice by gene name"@en;
+    qb:sliceStructure <sliceByGeneLength>; 
+    qb:observation <obs1>, <obs2>, <obs3>, <obs3>, <obs4>, <obs5>, <obs6>, <obs7>, <obs8>, <obs9>, <obs10>, <obs11>, <obs12>, <obs13>, <obs14>, <obs15>, <obs16>, <obs17>, <obs18>, <obs19> . 
 
 
 ################################ Observations #####################################
 
+##### Observations for the sample 1
 <obs1> a qb:Observation;
     qb:dataSet <whole_dataset> ;
-    eg:refArea                 ex-geo:newport_00pr ;                  
-    eg:refPeriod               <http://reference.data.gov.uk/id/gregorian-interval/2004-01-01T00:00:00/P3Y> ;
-    sdmx-dimension:sex         sdmx-code:sex-M ;
-    sdmx-attribute:unitMeasure <http://dbpedia.org/resource/Year> ;
-    eg:lifeExpectancy          76.7 ;
+    <ABRgenes> "blaTEM-1A"^^xsd:string ;
+    <ABRantibiotics> "ampicillin"^^xsd:string ;
+    <ABRgeneLength> "861"^^xsd:integer ;
+    <ABRgenesCovs> "100"^^xsd:decimal ;
+    <ABRsamples> <Sample1> .
 
+<obs2> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    <ABRgenes> "tet(A)"^^xsd:string ;
+    <ABRantibiotics> "tetracycline"^^xsd:string ;
+    <ABRgeneLength> "1247"^^xsd:integer ;
+    <ABRgenesCovs> "97.8"^^xsd:decimal ;
+    <ABRsamples> <Sample1> .
 
+<obs3> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    <ABRgenes> aro:3000410 ;
+    <ABRgenes> "sul1"^^xsd:string ;
+    <ABRantibiotics> "sulfisoxazole"^^xsd:string ;
+    <ABRgeneLength> "811"^^xsd:integer ;
+    <ABRgenesCovs> "97.95"^^xsd:decimal ;
+    <ABRsamples> <Sample1> .
 
-
-
-
-
-
-
-
-
-
-
-
-########################### DataStructureDefinition ##################################
-
-# Define the structure of the DataSet. The DataStructureDefinition holds 
-# 
-ns1:dataStructureDefinition1 a qb:DataStructureDefinition ;
-    qb:Component ns1:component1 .
+<obs4> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    <ABRgenes> "qacE"^^xsd:string ;
+    <ABRgeneLength> "282"^^xsd:integer ;
+    <ABRgenesCovs> "84.68"^^xsd:decimal ;
+    <ABRsamples> <Sample1> .
     
-# 1 dimension per data modality
-ns1:component1 qb:component ns1:geneResistanceDimensionProperty,
-        ns1:targetAntibioticDimensionProperty .
-
-ns1:geneResistanceDimensionProperty a qb:DimensionProperty ;
-    rdfs:label "Resistance Gene"^^xsd:string .
-
-ns1:targetAntibioticDimensionProperty a qb:DimensionProperty ;
-    rdfs:label "Target Antibiotic"^^xsd:string .
-
-ns1:resistanceGeneSliceK a qb:SliceKey ;
-    rdfs:label "resistance gene slice key"^^xsd:string .
-
-ns1:targetAntibioticSliceK a qb:SliceKey ;
-    rdfs:label "target antibiotic slice key"^^xsd:string .
-
-ns1:wholeReportSlice2 a qb:Slice ;
-    qb:observation ns1:obs1,
-        ns1:obs7,
-        ns1:obs8,
-        ns1:obs9 ;
-    qb:sliceStructure ns1:resistanceGeneSliceK .
-
-ns1:wholeReportSlice2 a qb:Slice ;
-    qb:observation ns1:obs2,
-        ns1:obs3,
-        ns1:obs4,
-        ns1:obs5 ;
-    qb:sliceStructure ns1:resistanceGeneSliceK .
-
-ns1:obs1 a qb:Observation ;
-    rdfs:label "aadA13"^^xsd:string ;
-    qb:dataSet ns1:reportDataset1 .
-
-ns1:obs2 a qb:Observation ;
-    rdfs:label "ant(2'')-Ia"^^xsd:string ;
-    qb:dataSet ns1:reportDataset2 .
-
-ns1:obs3 a qb:Observation ;
-    rdfs:label "aph(3')-IIb"^^xsd:string ;
-    qb:dataSet ns1:reportDataset2 .
-
-ns1:obs3 a qb:Observation ;
-    rdfs:label "blaOXA-488"^^xsd:string ;
-    qb:dataSet ns1:reportDataset2 .
-
-ns1:obs4 a qb:Observation ;
-    rdfs:label "blaPAO"^^xsd:string ;
-    qb:dataSet ns1:reportDataset2 .
-
-ns1:obs5 a qb:Observation ;
-    rdfs:label "catB7"^^xsd:string ;
-    qb:dataSet ns1:reportDataset2 .
-
-ns1:obs6 a qb:Observation ;
-    rdfs:label "crpP"^^xsd:string ;
-    qb:dataSet ns1:reportDataset2 .
-
-ns1:obs7 a qb:Observation ;
-    rdfs:label "fosA"^^xsd:string ;
-    qb:dataSet ns1:reportDataset1 .
-
-ns1:obs8 a qb:Observation ;
-    rdfs:label "qacE"^^xsd:string ;
-    qb:dataSet ns1:reportDataset1 .
-
-ns1:obs9 a qb:Observation ;
-    rdfs:label "sul1"^^xsd:string ;
-    qb:dataSet ns1:reportDataset1 .
-
-ns1:obs10 a qb:Observation ;
-    rdfs:label "streptomycin"^^xsd:string ;
-    qb:dataSet ns1:reportDataset2 .
-
-ns1:obs11 a qb:Observation ;
-    rdfs:label "gentamicin"^^xsd:string ;
-    qb:dataSet ns1:reportDataset2 .
-
-ns1:obs12 a qb:Observation ;
-    rdfs:label "kanamycin"^^xsd:string ;
-    qb:dataSet ns1:reportDataset2 .
-
-ns1:obs13 a qb:Observation ;
-    rdfs:label "ampicillin"^^xsd:string ;
-    qb:dataSet ns1:reportDataset .
-
-ns1:obs14 a qb:Observation ;
-    rdfs:label "ampicillin,amoxicillin/clavulanicacid,cefoxitin,ceftriaxone"^^xsd:string ;
-    qb:dataSet ns1:reportDataset .
-
-ns1:obs15 a qb:Observation ;
-    rdfs:label "chloramphenicol"^^xsd:string ;
-    qb:dataSet ns1:reportDataset2 .
-
-ns1:obs16 a qb:Observation ;
-    rdfs:label "ciprofloxacinI/R"^^xsd:string ;
-    qb:dataSet ns1:reportDataset2 .
-
-ns1:obs17 a qb:Observation ;
-    rdfs:label "fosfomycin"^^xsd:string ;
-    qb:dataSet ns1:reportDataset .
-
-ns1:obs18 a qb:Observation ;
-    rdfs:label "unknown[qacE_1_X68232]"^^xsd:string ;
-    qb:dataSet ns1:reportDataset .
-
-ns1:obs19 a qb:Observation ;
-    rdfs:label "sulfisoxazole"^^xsd:string ;
-    qb:dataSet ns1:reportDataset .
-
-ns1:reportDataset1 a qb:DataSet ;
-    rdfs:label "Analysis results report #1"^^xsd:string ;
-    dcterms:title "Analysis results report"^^xsd:string ;
-    qb:slice ns1:wholeReportSlice1 ;
-    qb:sliceKey ns1:targetAntibioticSliceK ;
-    rdfs:comment "Comments about the dataset"^^xsd:string .
+<obs5> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    <ABRgenes> aro:3000410 ;
+    <ABRgenes> "dfrA1"^^xsd:string ;
+    <ABRantibiotics> "trimethoprim"^^xsd:string ;
+    <ABRgeneLength> "474"^^xsd:integer ;
+    <ABRgenesCovs> "100"^^xsd:decimal ;
+    <ABRsamples> <Sample1> .
     
-ns1:reportDataset2 a qb:DataSet ;
-    rdfs:label "Analysis results report #2"^^xsd:string ;
-    dcterms:title "Analysis results report"^^xsd:string ;
-    qb:slice ns1:wholeReportSlice2 ;
-    qb:sliceKey ns1:targetAntibioticSliceK ;
-    rdfs:comment "Comments about the dataset"^^xsd:string .
+<obs6> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    <ABRgenes> "aadA1"^^xsd:string ;
+    <ABRantibiotics> "streptomycin"^^xsd:string ;
+    <ABRgeneLength> "601"^^xsd:integer ;
+    <ABRgenesCovs> "76.17"^^xsd:decimal ;
+    <ABRsamples> <Sample1> .
+
+
+##### Observations for the sample 2 
+<obs7> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    <ABRgenes> "mcr-1.1"^^xsd:string ;
+    <ABRantibiotics> "colistin"^^xsd:string ;
+    <ABRgeneLength> "1626"^^xsd:integer ;
+    <ABRgenesCovs> "100"^^xsd:decimal ;
+    <ABRsamples> <Sample2> .
+
+<obs8> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    <ABRgenes> "tet(A)"^^xsd:string ;
+    <ABRantibiotics> "tetracycline"^^xsd:string ;
+    <ABRgeneLength> "1200"^^xsd:integer ;
+    <ABRgenesCovs> "100"^^xsd:decimal ;
+    <ABRsamples> <Sample2> .
+
+<obs9> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    <ABRgenes> "dfrA36"^^xsd:string ;
+    <ABRgeneLength> "588"^^xsd:integer ;
+    <ABRgenesCovs> "100"^^xsd:decimal ;
+    <ABRsamples> <Sample2> .
+
+<obs10> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    <ABRgenes> "sul2"^^xsd:string ;
+    <ABRantibiotics> "sulfisoxazole"^^xsd:string ;
+    <ABRgeneLength> "816"^^xsd:integer ;
+    <ABRgenesCovs> "100"^^xsd:decimal ;
+    <ABRsamples> <Sample2> .
+
+<obs11> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    <ABRgenes> "floR"^^xsd:string ;
+    <ABRantibiotics> "chloramphenicol"^^xsd:string ;
+    <ABRgeneLength> "1214"^^xsd:integer ;
+    <ABRgenesCovs> "99.92"^^xsd:decimal ;
+    <ABRsamples> <Sample2> .
+
+<obs12> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    <ABRgenes> "aph(3')-Ia"^^xsd:string ;
+    <ABRantibiotics> "kanamycin"^^xsd:string ;
+    <ABRgeneLength> "814"^^xsd:integer ;
+    <ABRgenesCovs> "99.75"^^xsd:decimal ;
+    <ABRsamples> <Sample2> .
+
+<obs13> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    <ABRgenes> "sul1"^^xsd:string ;
+    <ABRantibiotics> "sulfisoxazole"^^xsd:string ;
+    <ABRgeneLength> "840"^^xsd:integer ;
+    <ABRgenesCovs> "100"^^xsd:decimal ;
+    <ABRsamples> <Sample2> .
+
+<obs14> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    <ABRgenes> "qacE"^^xsd:string ;
+    <ABRgeneLength> "282"^^xsd:integer ;
+    <ABRgenesCovs> "84.88"^^xsd:decimal ;
+    <ABRsamples> <Sample2> .
+
+<obs15> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    <ABRgenes> "aadA1"^^xsd:string ;
+    <ABRantibiotics> "streptomycin"^^xsd:string ;
+    <ABRgeneLength> "781"^^xsd:integer ;
+    <ABRgenesCovs> "98.61"^^xsd:decimal ;
+    <ABRsamples> <Sample2> .
+
+<obs16> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    <ABRgenes> "aph(6)-Id"^^xsd:string ;
+    <ABRantibiotics> "kanamycin"^^xsd:string ;
+    <ABRgeneLength> "837"^^xsd:integer ;
+    <ABRgenesCovs> "100"^^xsd:decimal ;
+    <ABRsamples> <Sample2> .
+
+<obs17> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    <ABRgenes> "aph(3'')-Ib"^^xsd:string ;
+    <ABRantibiotics> "streptomycin"^^xsd:string ;
+    <ABRgeneLength> "804"^^xsd:integer ;
+    <ABRgenesCovs> "100"^^xsd:decimal ;
+    <ABRsamples> <Sample2> .
+
+<obs18> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    <ABRgenes> "blaOXA-1"^^xsd:string ;
+    <ABRantibiotics> "ampicillin"^^xsd:string ;
+    <ABRgeneLength> "831"^^xsd:integer ;
+    <ABRgenesCovs> "100"^^xsd:decimal ;
+    <ABRsamples> <Sample2> .
+
+<obs19> a qb:Observation;
+    qb:dataSet <whole_dataset> ;
+    <ABRgenes> "dfrA1"^^xsd:string ;
+    <ABRantibiotics> "trimethoprim"^^xsd:string ;
+    <ABRgeneLength> "474"^^xsd:integer ;
+    <ABRgenesCovs> "100"^^xsd:decimal ;
+    <ABRsamples> <Sample2> .
+
+
+################################ Samples #####################################
+    
+<Sample1> rdf:type sio:001050 ;
+    schema:identifier "0001" .
+
+<Sample2> rdf:type sio:001050 ;
+    schema:identifier "0002" .
+
+# any determinant of antibiotic resistance is a SKOS concept
+aro:3000000 rdf:type skos:Concept .
