@@ -781,7 +781,7 @@ abromics:WF1_spec rdf:type sosa:Procedure ;
 <strain_1> rdf:type sosa:FeatureOfInterest, 
                     aro:Strain ;
         obo:RO_0002162 <http://purl.uniprot.org/taxonomy/562> ; #in_taxon E. Coli
-        aro:confers_resistance_to_antibiotic aro:ampicillin ;
+        aro:confers_resistance_to_antibiotic aro:ampicillin ; #! is_resistant_to_antibiotic seems much better
         aro:confers_resistance_to_antibiotic aro:tetracycline ;
         aro:confers_resistance_to_antibiotic aro:sulfisoxazole ;
         aro:confers_resistance_to_antibiotic aro:trimethoprim ;
