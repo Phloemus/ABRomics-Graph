@@ -37,6 +37,22 @@ SPARQL prefix sf : <http://www.opengis.net/ont/sf#> SELECT ?s WHERE { ?s rdf:typ
 - CHECK if the whashington monument is in the national monument polygon
 SPARQL prefix sf: <http://www.opengis.net/ont/sf#> prefix geo: <http://www.opengis.net/ont/geosparql#> SELECT ?s WHERE { ?s rdf:type sf:Point ; geo:asWKT ?geoMonument . ?s2 rdf:type sf:Polygon ; geo:asWKT ?geoNationalPoly . FILTER(bif:st_intersects(?geoMonument, ?geoNationalPoly, 0)) };
 
+-- The query to perform with SPARQLWrapper (request on the virtuoso graph directly)
+
+prefix sf: <http://www.opengis.net/ont/sf#> 
+prefix geo: <http://www.opengis.net/ont/geosparql#>
+
+SELECT ?s 
+WHERE { 
+    ?s rdf:type sf:Point ; 
+    geo:asWKT ?geoMonument .
+
+    ?s2 rdf:type sf:Polygon ; 
+    geo:asWKT ?geoNationalPoly . 
+
+    FILTER(bif:st_intersects(?geoMonument, ?geoNationalPoly, 0)) 
+}
+
 This query allows to get filter only the points present in the national poly (meaning only
 one point in this example). 
 
@@ -57,3 +73,9 @@ Next work will consist in dockerizing an image of the community edition of virtu
 having the version 7.2.11 as well as adding the information about the location of the
 samples directly inside the ttl files for the samples or other entities we want to 
 locate precisely on a map.
+
+---
+Locations:
+
+Find the isql-v program (to launch the SQL interactive shell). In the graph VM (glicid)
+~/workdir/soft/virtuoso/bin
