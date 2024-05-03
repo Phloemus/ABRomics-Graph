@@ -79,3 +79,13 @@ Locations:
 
 Find the isql-v program (to launch the SQL interactive shell). In the graph VM (glicid)
 ~/workdir/soft/virtuoso/bin
+
+--- 
+More info:
+
+The current image of virtuoso in the docker compose file is not compatible with GeoSPARQL queries
+as it is a version below 7.2.6 but the image of open-link/virtuoso have a version of virtuoso that 
+is compatible with GeoSPARQL meaning that it can be used for GeoSPARQL queries. 
+
+Now we just need to find a way to use this image instead of the previous one while keeping the structure
+of the git repository. So docker can be used to launch a virtuoso server that works with GeoSPARQL
