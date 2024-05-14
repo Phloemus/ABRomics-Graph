@@ -21,11 +21,22 @@
 
 ###### Sample 1 
 <sample_1> rdf:type sosa:FeatureOfInterest ;
-        rdf:type sio:001050 ; ## annotate to indicate that this is a SAMPLE
+        rdf:type sio:001050 ; ## annotation that indicates that this is a SAMPLE
         schema:identifier "0001" ; 
         abromics:collection_date "2023-02-03" ; 
-        abromics:has_latitude "98.877293" ; 
-        abromics:has_longitude "45.874" .
+        abromics:has_latitude "98.877293" ; #! not present in the report 
+        abromics:has_longitude "45.874" ; #! not present in the report 
+        abromics:original_sample_id ;
+        abromics:microorganism_scientific_name: "Microorganism scientific name"
+2: "Collection date"
+3: "Sample type"
+4: "Sample source"
+5: "Host"
+6: "Country"
+7: "Sequencing technology"
+8: "Sequencing partner"
+9: "Submitter name"
+10: "Submitter email"
 
 ###### Sample 1 
 <sample_2> rdf:type sosa:FeatureOfInterest ; 

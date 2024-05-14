@@ -754,7 +754,7 @@ abromics:WF1_impl rdf:type sosa:Sensor ;
         sosa:isHostedBy abromics:NNCR .
 
 
-############################## Plateform (location) #######################################
+############################## Plateform (place) #########################################
 
 # In the context of the ABRomics project, a plateform is a physical location
 # that hosts the sensor that made an observation.
