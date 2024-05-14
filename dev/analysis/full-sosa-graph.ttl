@@ -11,6 +11,33 @@
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+########################### Full SOSA Graph ############################################
+
+# The full SOSA graph is not full yet. Some factorizing work should be done as well as 
+# putting the full data of an ABRomics report in the knowledge graph
+
+
+################################### Agents #############################################
+
+# Agents can be the persons that submitted some samples or an organization or even a 
+# software agent such as a program that acts on behalf an organization. In the ABRomics
+# graph this is more used to track the contributions of different persons
+
+<user_1> rdf:type prov:Person, prov:Agent ;
+        foaf:givenName "Philippe Glaser"^^xsd:string ;        
+        foaf:mbox <pglaser@pasteur.fr> ;
+        prov:actedOnBehalfOf <organization_1> .
+
+<organization_1> rdf:type prov:Organization, prov:Agent ;
+       foaf:name "Institut Pasteur" ;
+       prov:atLocation [
+            rdf:type prov:Location ;
+            geo:asWKT "POLYGON((2.3098654209775793 48.840952215649864,2.310519879977213 48.840549725656956,2.310949033419596 48.840676828109416,2.3112279831571447 48.840959276848935,2.310573524157511 48.84136882469206,2.3098654209775793 48.840952215649864))"^^geo:wktLiteral .
+       ] .
+
 
 ################################### Samples #############################################
 
@@ -21,11 +48,20 @@
 
 ###### Sample 1 
 <sample_1> rdf:type sosa:FeatureOfInterest ;
-        rdf:type sio:001050 ; ## annotate to indicate that this is a SAMPLE
+        rdf:type sio:001050 ; ## annotation that indicates that this is a SAMPLE
         schema:identifier "0001" ; 
+        abromics:has_latitude "98.877293" ; #! not present in the report 
+        abromics:has_longitude "45.874" ; #! not present in the report 
+        abromics:original_sample_id ;
+        abromics:microorganism_scientific_name ;
         abromics:collection_date "2023-02-03" ; 
-        abromics:has_latitude "98.877293" ; 
-        abromics:has_longitude "45.874" .
+        abromics:sample_type ; # should be the type of host (animal, environmental, human)
+        abromics:sample_source ; # shoudl be the part of the host concerned (like some sort of organ)
+        abromics:host ;
+        abromics:country ;
+        abromics:sequencing_technology ; 
+        abromics:sequencing_partner ;
+        arbomics:submitter <user_1> .
 
 ###### Sample 1 
 <sample_2> rdf:type sosa:FeatureOfInterest ; 

@@ -1,0 +1,111 @@
+#!/usr/bin/env python3
+
+### Create ttl files (aka graphs) from ABRomics reports
+
+# The goal of this program is to generate a large graph by using the data contained in the 
+# ABRomics reports. These generated graphs should then be used to make a comparison between 
+# The way SOSA and RDF data cube both handle the data, compare queries execution time ect..
+
+## Author : Brieuc Quemeneur
+## Last update : 14th may 2024
+
+## Environment to activate : source activate ontology-analysis
+
+### Necessary imports
+
+from dotenv import load_dotenv
+import os
+import requests
+import json
+import pandas as pd
+
+from alive_progress import alive_bar
+import time
+
+
+### Checking for aleady generated graphs
+print("Checking for existing graphs")
+if len(os.listdir("out")) != 0:
+    print("Looks like the output folder is not empty. There might be some graphs there.")
+    print("Do you want to override them ? (yes/no)")
+    userInput = input()
+    if userInput != "yes":
+        print("Program aborted")
+
+
+### Get the abromics reports from the ABRomics api and store them locally
+load_dotenv() 
+
+## load the environment variables
+api_url = os.getenv('API_URL') 
+api_username = os.getenv('API_USERNAME')
+api_password = os.getenv('API_PASSWORD')
+api_temp_basic_token = os.getenv('API_TEMP_BASIC_TOKEN')
+
+## fetches the ids of the reports marked as ready_to_report from ABRomics API
+response = requests.get(
+    "https://analysis.abromics.fr/api/analysis/",
+    params={'status': 'ready_to_report'},
+    headers = {
+        'Authorization': f"Basic {api_temp_basic_token}",
+    }
+)
+exploitable_analysis = response.json()
+exploitable_analysis_ids = [analysis["id"] for analysis in exploitable_analysis["results"]]
+
+## Download all the ABRomics reports (!continue)
+if not os.path.exists("reports"):
+    os.makedirs("reports")
+    
+with alive_bar(len(exploitable_analysis_ids)) as bar:
+    ## TOOD: check if the report has already been downloaded
+    for report_id in exploitable_analysis_ids:
+        if f"abr_report_{report_id}.json" not in os.listdir("reports"):
+            print(f"downloading report {report_id}")
+            response = requests.get(
+                f"https://analysis.abromics.fr/api/analysis/{report_id}/report/",
+                headers = {
+                    'Authorization': f"Basic {api_temp_basic_token}",
+                }
+            )
+            report = response.json()
+        
+            # save the reports in a local file
+            with open(f'reports/abr_report_{report_id}.json', 'w') as f:
+                json.dump(report, f)
+            bar()
+        else:
+            print(f"skipping report {report_id} : exists already")
+            bar()
+
+### Using jinja templates to create the graph using the data present in each report
+
+## Looks for available templates for jinja
+def isTemplateExists(templatePath):
+    if os.path.exists(templatePath): 
+        return True
+    return False 
+
+## For SOSA
+def buildSosaGraph():
+    if isTemplateExists("graph-templates/sosa.j2"):
+        
+    else:
+        print("no jinja template for sosa have been provided")
+
+## For RDF data cube
+def buildQbGraph():
+    pass
+
+### Decide which kind of graph should be generated (SOSA or RDF data cube)
+print("Choose graph type to build: (1:SOSA / 2:QB / 3:both)")
+graphType = input()
+
+if graphType == 1:
+    buildSosaGraph()
+if graphType == 2:
+    buildQbGraph()
+if graphType == 3:
+    buildSosaGraph()
+    buildQbGraph()
+
