@@ -22,6 +22,8 @@ import pandas as pd
 from alive_progress import alive_bar
 import time
 
+from jinja2 import Environment, FileSystemLoader
+
 
 ### Checking for aleady generated graphs
 print("Checking for existing graphs")
@@ -79,6 +81,7 @@ with alive_bar(len(exploitable_analysis_ids)) as bar:
             bar()
 
 ### Using jinja templates to create the graph using the data present in each report
+env = Environment(loader=FileSystemLoader('.'))
 
 ## Looks for available templates for jinja
 def isTemplateExists(templatePath):
@@ -89,7 +92,11 @@ def isTemplateExists(templatePath):
 ## For SOSA
 def buildSosaGraph():
     if isTemplateExists("graph-templates/sosa.j2"):
-        
+        template = env.get_template('graph-templates/sosa.j2')
+        # for report in reportsDirectory
+        template_vars = {
+            
+        }
     else:
         print("no jinja template for sosa have been provided")
 
