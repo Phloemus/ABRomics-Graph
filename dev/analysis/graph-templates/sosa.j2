@@ -1,0 +1,99 @@
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix schema: <https://schema.org/> .
+@prefix abromics: <https://abromics.fr/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix aro: <http://purl.obolibrary.org/obo/aro.owl#> .
+@prefix go: <http://purl.org/obo/owl/GO#> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+################################### Samples #############################################
+
+{% for sample in samples %}
+<sample_{{ loop.index0 }}> rdf:type sosa:FeatureOfInterest ;
+    rdf:type sio:001050 ; 
+    schema:identifier "000{{ loop.index0 }}" ; 
+    abromics:collection_date "2023-02-03" ; 
+    abromics:has_latitude "98.877293" ; 
+    abromics:has_longitude "45.874" .
+{% endfor %}
+
+
+############################### Sensors (workflows) #######################################
+
+abromics:WF1_impl rdf:type sosa:Sensor ; 
+        sosa:implements abromics:WF1_spec ;
+        sosa:isHostedBy abromics:NNCR .
+
+
+############################## Plateform (place) #########################################
+
+abromics:NNCR rdf:type sosa:Platform .
+
+
+################################# Procedures  #############################################
+
+abromics:WF1_spec rdf:type sosa:Procedure ;
+        sosa:isImplementedBy abromics:WF1_impl .
+
+
+########################## Strain Feature of Interest ####################################
+
+{% for sample in samples %}
+    <strain_{{ loop.index0 }}> rdf:type sosa:FeatureOfInterest, aro:Strain ;
+        {% if species[loop.index0] == "Escherichia coli" %} obo:RO_0002162 <http://purl.uniprot.org/taxonomy/562> . #in_taxon E. coli {% endif %}
+        {% if species[loop.index0] == "Enterococcus faecalis" %} obo:RO_0002162 <http://purl.uniprot.org/taxonomy/1157389> . #in_taxon E. faecalis {% endif %}
+        {% if species[loop.index0] == "Enterococcus faecium" %} obo:RO_0002162 <http://purl.uniprot.org/taxonomy/1155766> . #in_taxon E. faecium {% endif %}
+{% endfor %}
+
+########################### Location Feature of Interest ################################
+
+{% for sample in samples %}
+    <S{{ loop.index0 }}#location> rdf:type sosa:FeatureOfInterest ;
+        rdfs:label "location of S{{ loop.index0 }}"@en ;
+        geo:lat "35.8648067"^^xsd:decimal ;
+        geo:long "-120.6195831"^^xsd:decimal ;
+        geo:alt "12.75"^^xsd:decimal .
+{% endfor %}
+
+########################### Genes Feature of Interest ###################################
+
+{% for sample in resistances %}
+##!!! CONTINUE HERE !!!#
+<gene_1> rdf:type sosa:FeatureOfInterest  ; 
+        rdf:type go:Gene ;
+        schema:identifier uniprot:blaTEM-1A ;
+        rdfs:label "blaTEM-1A" .
+
+############################# Observable propertues ########################################
+
+{% for observableProperty in resistanceHeader %}
+    <{{ observableProperty|convertToFriendlyNodeName }}> rdf:type sosa:ObservableProperty ;
+        rdfs:label "{{ observableProperty }}"^^xsd:string .
+{% endfor %}
+
+
+################################  Observations #########################################
+
+{% set ns = namespace(globalObservationCounter=0) %}
+{% for sample in resistances %}
+    {% set sampleId = loop.index0 %}
+    {% for observation in sample %}
+        <obs_s{{ sampleId }}_{{ns.globalObservationCounter}}> rdf:type sosa:Observation ; 
+            sosa:hasFeatureOfInterest <strain_{{ sampleId }}> ; 
+            sosa:hasFeatureOfInterest <sample_{{ sampleId }}> ; 
+            sosa:hasFeatureOfInterest <gene_{{ ns.globalObservationCounter }}> ; 
+            sosa:hasFeatureOfInterest <S{{ sampleId }}#location> ;
+            sosa:hasObservableProperty <{{ resistanceHeader[loop.index0]|convertToFriendlyNodeName }}> 
+            sosa:madeBySensor abromics:WF1_impl ;
+            sosa:usedProcedure abromics:WF1_spec ;
+            sosa:hasResult <r{{ ns.globalObservationCounter }}> .
+        {% set ns.globalObservationCounter = ns.globalObservationCounter + 1 %}
+    {% endfor %}
+{% endfor %}
+
