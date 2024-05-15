@@ -22,8 +22,8 @@ import pandas as pd
 from alive_progress import alive_bar
 import time
 
-from jinja2 import Environment, FileSystemLoader
-
+from jinja2 import Environment, FileSystemLoader, StrictUndefined
+import datetime
 
 ### Checking for aleady generated graphs
 print("Checking for existing graphs")
@@ -33,6 +33,7 @@ if len(os.listdir("out")) != 0:
     userInput = input()
     if userInput != "yes":
         print("Program aborted")
+        exit()
 
 
 ### Get the abromics reports from the ABRomics api and store them locally
@@ -60,7 +61,6 @@ if not os.path.exists("reports"):
     os.makedirs("reports")
     
 with alive_bar(len(exploitable_analysis_ids)) as bar:
-    ## TOOD: check if the report has already been downloaded
     for report_id in exploitable_analysis_ids:
         if f"abr_report_{report_id}.json" not in os.listdir("reports"):
             print(f"downloading report {report_id}")
@@ -81,7 +81,24 @@ with alive_bar(len(exploitable_analysis_ids)) as bar:
             bar()
 
 ### Using jinja templates to create the graph using the data present in each report
-env = Environment(loader=FileSystemLoader('.'))
+env = Environment(
+    loader=FileSystemLoader('.'),
+    undefined=StrictUndefined
+)
+
+## Define string conversion function that will be used in the template
+def convertToFriendlyNodeName(value):
+    value = value.replace(' ', '_')
+    value = value.replace('%', 'percent')
+    return value
+
+## Return a list with only unique elements
+def unique(elemList):
+    return set(elemList)
+
+## Add the conversion functions to the jinja enviroment
+env.filters['convertToFriendlyNodeName'] = convertToFriendlyNodeName
+env.filters['unique'] = unique
 
 ## Looks for available templates for jinja
 def isTemplateExists(templatePath):
@@ -89,14 +106,28 @@ def isTemplateExists(templatePath):
         return True
     return False 
 
+## Return the dictionnary of the data corresponding to a given json file
+def readJsonFromFile(path):
+    with open(path) as f:
+        d = json.load(f)
+        return d
+
 ## For SOSA
 def buildSosaGraph():
     if isTemplateExists("graph-templates/sosa.j2"):
         template = env.get_template('graph-templates/sosa.j2')
-        # for report in reportsDirectory
-        template_vars = {
-            
+        allReports = [readJsonFromFile(f"reports/{reportFilename}") for reportFilename in os.listdir("reports") if reportFilename.endswith(".json")]
+        templateVars = {
+            "graphCreationDate": datetime.datetime.now(),
+            "samples": [allReports[x]["sections"][0]["data"] for x in range(0, len(allReports))],
+            "species": [allReports[x]["sections"][1]["data"][0]["values"][0] for x in range(0, len(allReports))],
+            "resistanceHeader": allReports[0]["sections"][2]["data"][0]["header"],
+            "resistances": [allReports[x]["sections"][2]["data"][0]["values"] for x in range(0, len(allReports))]
         }
+        renderedTemplate = template.render(templateVars)
+        with open('out/sosa.ttl', 'w') as f:
+            f.write(renderedTemplate)
+        print("The graph has been created in the ./out directory")
     else:
         print("no jinja template for sosa have been provided")
 
@@ -108,11 +139,11 @@ def buildQbGraph():
 print("Choose graph type to build: (1:SOSA / 2:QB / 3:both)")
 graphType = input()
 
-if graphType == 1:
+if graphType == "1":
     buildSosaGraph()
-if graphType == 2:
+if graphType == "2":
     buildQbGraph()
-if graphType == 3:
+if graphType == "3":
     buildSosaGraph()
     buildQbGraph()
 
