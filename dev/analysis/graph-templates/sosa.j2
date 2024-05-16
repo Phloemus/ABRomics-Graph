@@ -63,12 +63,12 @@ abromics:WF1_spec rdf:type sosa:Procedure ;
 
 ########################### Genes Feature of Interest ###################################
 
-{% for sample in resistances %}
-##!!! CONTINUE HERE !!!#
-<gene_1> rdf:type sosa:FeatureOfInterest  ; 
+{% for geneName in allGenes %} 
+<gene_{{ loop.index0 }}> rdf:type sosa:FeatureOfInterest  ; 
         rdf:type go:Gene ;
-        schema:identifier uniprot:blaTEM-1A ;
-        rdfs:label "blaTEM-1A" .
+        ## schema:identifier uniprot:{{ geneName }} ; ## should check if the gene name has a specific uniprot identifier 
+        rdfs:label "{{ geneName }}" .
+{% endfor %}
 
 ############################# Observable propertues ########################################
 
@@ -83,17 +83,38 @@ abromics:WF1_spec rdf:type sosa:Procedure ;
 {% set ns = namespace(globalObservationCounter=0) %}
 {% for sample in resistances %}
     {% set sampleId = loop.index0 %}
-    {% for observation in sample %}
-        <obs_s{{ sampleId }}_{{ns.globalObservationCounter}}> rdf:type sosa:Observation ; 
-            sosa:hasFeatureOfInterest <strain_{{ sampleId }}> ; 
-            sosa:hasFeatureOfInterest <sample_{{ sampleId }}> ; 
-            sosa:hasFeatureOfInterest <gene_{{ ns.globalObservationCounter }}> ; 
-            sosa:hasFeatureOfInterest <S{{ sampleId }}#location> ;
-            sosa:hasObservableProperty <{{ resistanceHeader[loop.index0]|convertToFriendlyNodeName }}> 
-            sosa:madeBySensor abromics:WF1_impl ;
-            sosa:usedProcedure abromics:WF1_spec ;
-            sosa:hasResult <r{{ ns.globalObservationCounter }}> .
-        {% set ns.globalObservationCounter = ns.globalObservationCounter + 1 %}
+    {% for observationSet in sample %}
+        {% set observationSetId = loop.index0 %}
+        {% for observation in observationSet %}
+            <obs_s{{ sampleId }}_{{ns.globalObservationCounter}}> rdf:type sosa:Observation ; 
+                sosa:hasFeatureOfInterest <strain_{{ sampleId }}> ; 
+                sosa:hasFeatureOfInterest <sample_{{ sampleId }}> ; 
+                sosa:hasFeatureOfInterest <gene_{{ getKeyFromValue(resistances[0][loop.index0], genes) }}> ; ## no 2 parameters function works in the template :/
+                sosa:hasFeatureOfInterest <S{{ sampleId }}#location> ;
+                sosa:hasObservableProperty <{{ resistanceHeader[observationSetId]|convertToFriendlyNodeName }}> 
+                sosa:madeBySensor abromics:WF1_impl ;
+                sosa:usedProcedure abromics:WF1_spec ;
+                sosa:hasResult <r{{ ns.globalObservationCounter }}> .
+            {% set ns.globalObservationCounter = ns.globalObservationCounter + 1 %}
+        {% endfor %}
+    {% endfor %}
+{% endfor %}
+
+
+############################# Results of Observations ######################################
+
+{% set ns = namespace(globalResultCounter=0) %}
+{% for sample in resistances %}
+    {% set sampleId = loop.index0 %}
+    {% for observationSet in sample %}
+        {% set observationSetId = loop.index0 %}
+        {% for observationValue in observationSet %} 
+            <r{{ ns.globalResultCounter }}> rdf:type sosa:Result ; 
+                sosa:hasSimpleResult "{{ observationValue }}" ;
+                sosa:hasUnit "{{ resistanceHeader[observationSetId] }}" ; # in unit ontology ? 
+                sosa:resultTime "{{ samples[sampleId][0]["values"][3] }}"^^xsd:dateTime .
+            {% set ns.globalResultCounter = ns.globalResultCounter + 1 %}
+        {% endfor %}
     {% endfor %}
 {% endfor %}
 

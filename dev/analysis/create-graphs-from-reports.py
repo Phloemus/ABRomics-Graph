@@ -94,11 +94,30 @@ def convertToFriendlyNodeName(value):
 
 ## Return a list with only unique elements
 def unique(elemList):
-    return set(elemList)
+    return list(set(elemList))
+
+## Return a concanetaded list from a list of n lists
+def concatList(listOfLists):
+    concatenatedList = list()
+    for n in listOfLists:
+        concatenatedList = concatenatedList + n
+    return concatenatedList
+
+## Return the key (position) of an element in from an list
+def getKeyFromValue(val, l):
+    key = l.index(l)
+    return key
+
+## Return the sum of two numbers
+def sum(val1, val2):
+    return val1 + val2
 
 ## Add the conversion functions to the jinja enviroment
 env.filters['convertToFriendlyNodeName'] = convertToFriendlyNodeName
 env.filters['unique'] = unique
+env.filters['concatList'] = concatList
+env.filters['getKeyFromValue'] = getKeyFromValue
+env.filters['sum'] = sum
 
 ## Looks for available templates for jinja
 def isTemplateExists(templatePath):
@@ -122,7 +141,8 @@ def buildSosaGraph():
             "samples": [allReports[x]["sections"][0]["data"] for x in range(0, len(allReports))],
             "species": [allReports[x]["sections"][1]["data"][0]["values"][0] for x in range(0, len(allReports))],
             "resistanceHeader": allReports[0]["sections"][2]["data"][0]["header"],
-            "resistances": [allReports[x]["sections"][2]["data"][0]["values"] for x in range(0, len(allReports))]
+            "resistances": [allReports[x]["sections"][2]["data"][0]["values"] for x in range(0, len(allReports))],
+            "allGenes": unique(concatList([allReports[x]["sections"][2]["data"][0]["values"][0] for x in range(0, len(allReports))]))
         }
         renderedTemplate = template.render(templateVars)
         with open('out/sosa.ttl', 'w') as f:
