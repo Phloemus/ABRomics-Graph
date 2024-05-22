@@ -105,19 +105,14 @@ def concatList(listOfLists):
 
 ## Return the key (position) of an element in from an list
 def getKeyFromValue(val, l):
-    key = l.index(l)
+    key = l.index(val)
     return key
-
-## Return the sum of two numbers
-def sum(val1, val2):
-    return val1 + val2
 
 ## Add the conversion functions to the jinja enviroment
 env.filters['convertToFriendlyNodeName'] = convertToFriendlyNodeName
 env.filters['unique'] = unique
 env.filters['concatList'] = concatList
 env.filters['getKeyFromValue'] = getKeyFromValue
-env.filters['sum'] = sum
 
 ## Looks for available templates for jinja
 def isTemplateExists(templatePath):

@@ -89,9 +89,9 @@ abromics:WF1_spec rdf:type sosa:Procedure ;
             <obs_s{{ sampleId }}_{{ns.globalObservationCounter}}> rdf:type sosa:Observation ; 
                 sosa:hasFeatureOfInterest <strain_{{ sampleId }}> ; 
                 sosa:hasFeatureOfInterest <sample_{{ sampleId }}> ; 
-                sosa:hasFeatureOfInterest <gene_{{ getKeyFromValue(resistances[0][loop.index0], genes) }}> ; ## no 2 parameters function works in the template :/
+                sosa:hasFeatureOfInterest <gene_{{ resistances[sampleId][0][loop.index0]|getKeyFromValue(allGenes) }}> ; ## no 2 parameters function works in the template :/
                 sosa:hasFeatureOfInterest <S{{ sampleId }}#location> ;
-                sosa:hasObservableProperty <{{ resistanceHeader[observationSetId]|convertToFriendlyNodeName }}> 
+                sosa:hasObservableProperty <{{ resistanceHeader[observationSetId]|convertToFriendlyNodeName }}> ;
                 sosa:madeBySensor abromics:WF1_impl ;
                 sosa:usedProcedure abromics:WF1_spec ;
                 sosa:hasResult <r{{ ns.globalObservationCounter }}> .
@@ -111,8 +111,8 @@ abromics:WF1_spec rdf:type sosa:Procedure ;
         {% for observationValue in observationSet %} 
             <r{{ ns.globalResultCounter }}> rdf:type sosa:Result ; 
                 sosa:hasSimpleResult "{{ observationValue }}" ;
-                sosa:hasUnit "{{ resistanceHeader[observationSetId] }}" ; # in unit ontology ? 
-                sosa:resultTime "{{ samples[sampleId][0]["values"][3] }}"^^xsd:dateTime .
+                sosa:hasUnit "{{ resistanceHeader[observationSetId] }}" . # in unit ontology ? 
+                ## sosa:resultTime "{{ samples[sampleId][0]["values"][3] }}T00:00:00Z"^^xsd:dateTime . ## RDFlib doesn't understand this line..
             {% set ns.globalResultCounter = ns.globalResultCounter + 1 %}
         {% endfor %}
     {% endfor %}
