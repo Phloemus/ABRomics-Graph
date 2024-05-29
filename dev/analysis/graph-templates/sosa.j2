@@ -70,7 +70,7 @@ abromics:WF1_spec rdf:type sosa:Procedure ;
         rdfs:label "{{ geneName }}" .
 {% endfor %}
 
-############################# Observable propertues ########################################
+############################# Observable properties ########################################
 
 {% for observableProperty in resistanceHeader %}
     <{{ observableProperty|convertToFriendlyNodeName }}> rdf:type sosa:ObservableProperty ;
@@ -110,8 +110,12 @@ abromics:WF1_spec rdf:type sosa:Procedure ;
         {% set observationSetId = loop.index0 %}
         {% for observationValue in observationSet %} 
             <r{{ ns.globalResultCounter }}> rdf:type sosa:Result ; 
-                sosa:hasSimpleResult "{{ observationValue }}" ;
-                sosa:hasUnit "{{ resistanceHeader[observationSetId] }}" . # in unit ontology ? 
+                {% if observationValue|isType == "float" %}
+                    sosa:hasSimpleResult "{{ observationValue }}"^^xsd:decimal ;
+                {% else %}
+                    sosa:hasSimpleResult "{{ observationValue }}" ;
+                {% endif %}
+                sosa:hasUnit "{{ resistanceHeader[observationSetId] }}". # in unit ontology ? 
                 ## sosa:resultTime "{{ samples[sampleId][0]["values"][3] }}T00:00:00Z"^^xsd:dateTime . ## RDFlib doesn't understand this line..
             {% set ns.globalResultCounter = ns.globalResultCounter + 1 %}
         {% endfor %}
