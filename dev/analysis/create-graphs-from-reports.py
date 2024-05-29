@@ -108,11 +108,16 @@ def getKeyFromValue(val, l):
     key = l.index(val)
     return key
 
+## return the type of variable given in parameter as a small string
+def isType(val):
+    return type(val).__name__
+
 ## Add the conversion functions to the jinja enviroment
 env.filters['convertToFriendlyNodeName'] = convertToFriendlyNodeName
 env.filters['unique'] = unique
 env.filters['concatList'] = concatList
 env.filters['getKeyFromValue'] = getKeyFromValue
+env.filters['isType'] = isType
 
 ## Looks for available templates for jinja
 def isTemplateExists(templatePath):
