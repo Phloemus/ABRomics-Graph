@@ -23,7 +23,7 @@ from alive_progress import alive_bar
 import time
 
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
-import datetime
+from datetime import datetime
 
 ### Checking for aleady generated graphs
 print("Checking for existing graphs")
@@ -112,12 +112,21 @@ def getKeyFromValue(val, l):
 def isType(val):
     return type(val).__name__
 
+## return a boolean indicating if the string parameter value has a correct datetime format
+def isDatetime(val):
+    try:
+        datetime.strptime(val, "%Y-%m-%d")
+        return True
+    except ValueError:
+        return False
+
 ## Add the conversion functions to the jinja enviroment
 env.filters['convertToFriendlyNodeName'] = convertToFriendlyNodeName
 env.filters['unique'] = unique
 env.filters['concatList'] = concatList
 env.filters['getKeyFromValue'] = getKeyFromValue
 env.filters['isType'] = isType
+env.filters['isDatetime'] = isDatetime
 
 ## Looks for available templates for jinja
 def isTemplateExists(templatePath):
@@ -137,8 +146,9 @@ def buildSosaGraph():
         template = env.get_template('graph-templates/sosa.j2')
         allReports = [readJsonFromFile(f"reports/{reportFilename}") for reportFilename in os.listdir("reports") if reportFilename.endswith(".json")]
         templateVars = {
-            "graphCreationDate": datetime.datetime.now(),
+            "graphCreationDate": datetime.now(),
             "samples": [allReports[x]["sections"][0]["data"] for x in range(0, len(allReports))],
+            "analysisSummary": [allReports[x]["sections"][1]["data"] for x in range(0, len(allReports))],
             "species": [allReports[x]["sections"][1]["data"][0]["values"][0] for x in range(0, len(allReports))],
             "resistanceHeader": allReports[0]["sections"][2]["data"][0]["header"],
             "resistances": [allReports[x]["sections"][2]["data"][0]["values"] for x in range(0, len(allReports))],
