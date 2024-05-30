@@ -46,6 +46,7 @@ abromics:WF1_spec rdf:type sosa:Procedure ;
 
 {% for sample in samples %}
     <strain_{{ loop.index0 }}> rdf:type sosa:FeatureOfInterest, aro:Strain ;
+        abromics:has_st "{{ analysisSummary[loop.index0][0]["values"][1] }}" ;
         {% if species[loop.index0] == "Escherichia coli" %} obo:RO_0002162 <http://purl.uniprot.org/taxonomy/562> . #in_taxon E. coli {% endif %}
         {% if species[loop.index0] == "Enterococcus faecalis" %} obo:RO_0002162 <http://purl.uniprot.org/taxonomy/1157389> . #in_taxon E. faecalis {% endif %}
         {% if species[loop.index0] == "Enterococcus faecium" %} obo:RO_0002162 <http://purl.uniprot.org/taxonomy/1155766> . #in_taxon E. faecium {% endif %}
@@ -115,8 +116,12 @@ abromics:WF1_spec rdf:type sosa:Procedure ;
                 {% else %}
                     sosa:hasSimpleResult "{{ observationValue }}" ;
                 {% endif %}
-                sosa:hasUnit "{{ resistanceHeader[observationSetId] }}". # in unit ontology ? 
-                ## sosa:resultTime "{{ samples[sampleId][0]["values"][3] }}T00:00:00Z"^^xsd:dateTime . ## RDFlib doesn't understand this line..
+                {% if samples[sampleId][0]["values"][3]|isDatetime %}
+                    sosa:hasUnit "{{ resistanceHeader[observationSetId] }}" ; # in unit ontology ? 
+                    sosa:resultTime "{{ samples[sampleId][0]["values"][3] }}T00:00:00Z"^^xsd:dateTime .
+                {% else %}
+                    sosa:hasUnit "{{ resistanceHeader[observationSetId] }}" . # in unit ontology ? 
+                {% endif %}
             {% set ns.globalResultCounter = ns.globalResultCounter + 1 %}
         {% endfor %}
     {% endfor %}
