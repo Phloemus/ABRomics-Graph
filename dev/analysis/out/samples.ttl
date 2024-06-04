@@ -1,0 +1,156 @@
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix schema: <https://schema.org/> .
+@prefix abromics: <https://abromics.fr/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix aro: <http://purl.obolibrary.org/obo/aro.owl#> .
+@prefix go: <http://purl.org/obo/owl/GO#> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+################################## Samples ####################################
+
+
+    <http://abromics/sample#0> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+        schema:identifier "R0043" ;
+        abromics:strainId "None" ;
+        abromics:microorganismScientificname "Escherichia coli" ;
+        
+            prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
+        
+        abromics:sampleType "animal" ;
+        abromics:sampleSource "Feces" ;
+        abromics:host "Bos taurus" ;
+        prov:atLocation "Belgium" ;
+        abromics:sequencingTechnology "Illumina NovaSeq 6000" ;
+        abromics:sequencingPartner "" ;
+
+    <http://abromics/sample#1> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+        schema:identifier "R0018" ;
+        abromics:strainId "None" ;
+        abromics:microorganismScientificname "Escherichia coli" ;
+        
+            prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
+        
+        abromics:sampleType "animal" ;
+        abromics:sampleSource "Intestine" ;
+        abromics:host "Bos taurus" ;
+        prov:atLocation "Belgium" ;
+        abromics:sequencingTechnology "Illumina NovaSeq 6000" ;
+        abromics:sequencingPartner "" ;
+
+    <http://abromics/sample#2> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+        schema:identifier "Test" ;
+        abromics:strainId "None" ;
+        abromics:microorganismScientificname "None" ;
+        
+            prov:generatedAtTime "2021-12-31T00:00:00Z"^^xsd:dateTime ;
+        
+        abromics:sampleType "animal" ;
+        abromics:sampleSource "Blood" ;
+        abromics:host "Bos taurus" ;
+        prov:atLocation "Belgium" ;
+        abromics:sequencingTechnology "454 GS Junior" ;
+        abromics:sequencingPartner "" ;
+
+    <http://abromics/sample#3> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+        schema:identifier "ARDIG-2" ;
+        abromics:strainId "None" ;
+        abromics:microorganismScientificname "None" ;
+        
+            prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
+        
+        abromics:sampleType "human" ;
+        abromics:sampleSource "Urine" ;
+        abromics:host "Homo sapiens" ;
+        prov:atLocation "France" ;
+        abromics:sequencingTechnology "NextSeq 500" ;
+        abromics:sequencingPartner "" ;
+
+    <http://abromics/sample#4> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+        schema:identifier "teed" ;
+        abromics:strainId "teed1" ;
+        abromics:microorganismScientificname "None" ;
+        
+            prov:generatedAtTime "2021-12-31T00:00:00Z"^^xsd:dateTime ;
+        
+        abromics:sampleType "human" ;
+        abromics:sampleSource "Sweat" ;
+        abromics:host "Homo sapiens" ;
+        prov:atLocation "Australia" ;
+        abromics:sequencingTechnology "NextSeq 500" ;
+        abromics:sequencingPartner "" ;
+
+    <http://abromics/sample#5> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+        schema:identifier "ARDIG-1" ;
+        abromics:strainId "None" ;
+        abromics:microorganismScientificname "None" ;
+        
+            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+        
+        abromics:sampleType "human" ;
+        abromics:sampleSource "Urine" ;
+        abromics:host "Homo sapiens" ;
+        prov:atLocation "France" ;
+        abromics:sequencingTechnology "NextSeq 500" ;
+        abromics:sequencingPartner "" ;
+
+    <http://abromics/sample#6> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+        schema:identifier "R0042" ;
+        abromics:strainId "Escherichia coli" ;
+        abromics:microorganismScientificname "2018-01-01" ;
+        
+        abromics:sampleType "Intestine" ;
+        abromics:sampleSource "Bos taurus" ;
+        abromics:host "None" ;
+        prov:atLocation "Illumina NovaSeq 6000" ;
+        abromics:sequencingTechnology "" ;
+        abromics:sequencingPartner "Philippe Glaser" ;
+
+    <http://abromics/sample#7> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+        schema:identifier "Ente9" ;
+        abromics:strainId "Ente9" ;
+        abromics:microorganismScientificname "None" ;
+        
+            prov:generatedAtTime "2024-04-01T00:00:00Z"^^xsd:dateTime ;
+        
+        abromics:sampleType "human" ;
+        abromics:sampleSource "Blood" ;
+        abromics:host "Homo sapiens" ;
+        prov:atLocation "France" ;
+        abromics:sequencingTechnology "Illumina HiSeq 4000" ;
+        abromics:sequencingPartner "" ;
+
+    <http://abromics/sample#8> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+        schema:identifier "R0023" ;
+        abromics:strainId "None" ;
+        abromics:microorganismScientificname "Escherichia coli" ;
+        
+            prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
+        
+        abromics:sampleType "animal" ;
+        abromics:sampleSource "Feces" ;
+        abromics:host "Bos taurus" ;
+        prov:atLocation "Belgium" ;
+        abromics:sequencingTechnology "Illumina NovaSeq 6000" ;
+        abromics:sequencingPartner "" ;
+
+    <http://abromics/sample#9> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+        schema:identifier "ARDIG-5" ;
+        abromics:strainId "None" ;
+        abromics:microorganismScientificname "None" ;
+        
+            prov:generatedAtTime "2019-05-01T00:00:00Z"^^xsd:dateTime ;
+        
+        abromics:sampleType "human" ;
+        abromics:sampleSource "Urine" ;
+        abromics:host "Homo sapiens" ;
+        prov:atLocation "France" ;
+        abromics:sequencingTechnology "NextSeq 500" ;
+        abromics:sequencingPartner "" ;

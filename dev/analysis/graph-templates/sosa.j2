@@ -21,10 +21,12 @@
 # software agent such as a program that acts on behalf an organization. In the ABRomics
 # graph this is more used to track the contributions of different persons
 
-<user_1> rdf:type prov:Person, prov:Agent ;
-        foaf:givenName "Philippe Glaser"^^xsd:string ;        
-        foaf:mbox <pglaser@pasteur.fr> ;
-        prov:actedOnBehalfOf <organization_1> .
+{% for username in usernames %}
+    <user_{{ loop.index0 }}> rdf:type prov:Person, prov:Agent ;
+            foaf:givenName "{{ username }}"^^xsd:string ;        
+            foaf:mbox <pglaser@pasteur.fr> ;
+            prov:actedOnBehalfOf <organization_1> .
+{% endfor %}
 
 <organization_1> rdf:type prov:Organization, prov:Agent ;
        foaf:name "Institut Pasteur" ;
@@ -56,7 +58,7 @@
     {% if sample[0]["values"][9] != "" %}
         abromics:sequencing_partner "{{ sample[0]["values"][5] }}" ;
     {% endif %}
-    prov:wasAttributedTo <user_1> .
+    prov:wasAttributedTo <user_1> . ## not in scope ? ## transform the username to the userid
 {% endfor %}
 
 

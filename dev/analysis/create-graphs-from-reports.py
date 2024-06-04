@@ -7,7 +7,7 @@
 # The way SOSA and RDF data cube both handle the data, compare queries execution time ect..
 
 ## Author : Brieuc Quemeneur
-## Last update : 14th may 2024
+## Last update : 31th may 2024
 
 ## Environment to activate : source activate ontology-analysis
 
@@ -146,6 +146,7 @@ def buildSosaGraph():
         template = env.get_template('graph-templates/sosa.j2')
         allReports = [readJsonFromFile(f"reports/{reportFilename}") for reportFilename in os.listdir("reports") if reportFilename.endswith(".json")]
         templateVars = {
+            "usernames": unique([allReports[x]["sections"][0]["data"][0]["values"][10] for x in range(0, len(allReports))]),
             "graphCreationDate": datetime.now(),
             "samples": [allReports[x]["sections"][0]["data"] for x in range(0, len(allReports))],
             "analysisSummary": [allReports[x]["sections"][1]["data"] for x in range(0, len(allReports))],
