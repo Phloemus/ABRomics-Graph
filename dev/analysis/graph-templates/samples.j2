@@ -17,17 +17,18 @@
 ################################## Samples ####################################
 
 {% for sample in samples %}
-    <{{ loop.index0|generateSampleUri }}> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
-        schema:identifier "{{ sample["values"][0] }}" ;
-        abromics:strainId "{{ sample["values"][1] }}" ;
-        abromics:microorganismScientificname "{{ sample["values"][2] }}" ;
-        {% if sample["values"][3]|isDatetime %}
-            prov:generatedAtTime "{{ sample["values"][3] }}T00:00:00Z"^^xsd:dateTime ;
+    <{{ sample["id"] }}> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+        schema:identifier "{{ sample["originalSampleId"] }}" ;
+        abromics:strainId "{{ sample["strainId"] }}" ;
+        abromics:microorganismScientificname "{{ sample["microorganismScientificName"] }}" ;
+        {% if sample["collectionDate"]|isDatetime %}
+            prov:generatedAtTime "{{ sample["collectionDate"] }}T00:00:00Z"^^xsd:dateTime ;
         {% endif %}
-        abromics:sampleType "{{ sample["values"][4] }}" ;
-        abromics:sampleSource "{{ sample["values"][5] }}" ;
-        abromics:host "{{ sample["values"][6] }}" ;
-        prov:atLocation "{{ sample["values"][7] }}" ;
-        abromics:sequencingTechnology "{{ sample["values"][8] }}" ;
-        abromics:sequencingPartner "{{ sample["values"][9] }}" ;
+        abromics:sampleType "{{ sample["sampleType"] }}" ;
+        abromics:sampleSource "{{ sample["sampleSource"] }}" ;
+        abromics:host "{{ sample["host"] }}" ;
+        prov:atLocation "{{ sample["country"] }}" ;
+        abromics:sequencingTechnology "{{ sample["sequencingTechnology"] }}" ;
+        abromics:sequencingPartner "{{ sample["sequencingPartner"] }}" ;
+        prov:wasAttributedTo "{{ sample["submitterId"] }}" . 
 {% endfor %}

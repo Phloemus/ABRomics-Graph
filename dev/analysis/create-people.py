@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-### Create the people.ttl file from the ABRomics reporst
+### Create the people.ttl file from the ABRomics reports
 
 import json
 import os
@@ -31,6 +31,7 @@ template = env.get_template('graph-templates/people.j2')
 allReports = [readJsonFromFile(f"reports/{reportFilename}") for reportFilename in os.listdir("reports") if reportFilename.endswith(".json")]
 
 ## Extract the people data from the reports
+peopleMappings = {}
 peopleNames = []
 people = []
 count = 1
@@ -48,6 +49,7 @@ for report in allReports:
             "name": name,
             "email": email
         })
+        peopleMappings[name] = count
         count = count + 1
 
 templateVars = {
