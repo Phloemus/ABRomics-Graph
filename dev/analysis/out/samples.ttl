@@ -17,7 +17,7 @@
 ################################## Samples ####################################
 
 
-    <http://abromics/sample#0> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <7582758e-2999-11ef-8e11-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "R0043" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "Escherichia coli" ;
@@ -30,8 +30,9 @@
         prov:atLocation "Belgium" ;
         abromics:sequencingTechnology "Illumina NovaSeq 6000" ;
         abromics:sequencingPartner "" ;
+        prov:wasAttributedTo "75822e44-2999-11ef-8e11-90658429fd42" . 
 
-    <http://abromics/sample#1> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <758275e8-2999-11ef-8e11-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "R0018" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "Escherichia coli" ;
@@ -44,8 +45,9 @@
         prov:atLocation "Belgium" ;
         abromics:sequencingTechnology "Illumina NovaSeq 6000" ;
         abromics:sequencingPartner "" ;
+        prov:wasAttributedTo "75822e44-2999-11ef-8e11-90658429fd42" . 
 
-    <http://abromics/sample#2> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <75827610-2999-11ef-8e11-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "Test" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "None" ;
@@ -58,8 +60,9 @@
         prov:atLocation "Belgium" ;
         abromics:sequencingTechnology "454 GS Junior" ;
         abromics:sequencingPartner "" ;
+        prov:wasAttributedTo "75822ebc-2999-11ef-8e11-90658429fd42" . 
 
-    <http://abromics/sample#3> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <75827642-2999-11ef-8e11-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG-2" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "None" ;
@@ -72,8 +75,9 @@
         prov:atLocation "France" ;
         abromics:sequencingTechnology "NextSeq 500" ;
         abromics:sequencingPartner "" ;
+        prov:wasAttributedTo "75822e44-2999-11ef-8e11-90658429fd42" . 
 
-    <http://abromics/sample#4> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <7582766a-2999-11ef-8e11-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "teed" ;
         abromics:strainId "teed1" ;
         abromics:microorganismScientificname "None" ;
@@ -86,8 +90,9 @@
         prov:atLocation "Australia" ;
         abromics:sequencingTechnology "NextSeq 500" ;
         abromics:sequencingPartner "" ;
+        prov:wasAttributedTo "75822ee4-2999-11ef-8e11-90658429fd42" . 
 
-    <http://abromics/sample#5> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <75827688-2999-11ef-8e11-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG-1" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "None" ;
@@ -100,8 +105,9 @@
         prov:atLocation "France" ;
         abromics:sequencingTechnology "NextSeq 500" ;
         abromics:sequencingPartner "" ;
+        prov:wasAttributedTo "75822e44-2999-11ef-8e11-90658429fd42" . 
 
-    <http://abromics/sample#6> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <758276a6-2999-11ef-8e11-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "R0042" ;
         abromics:strainId "Escherichia coli" ;
         abromics:microorganismScientificname "2018-01-01" ;
@@ -112,8 +118,9 @@
         prov:atLocation "Illumina NovaSeq 6000" ;
         abromics:sequencingTechnology "" ;
         abromics:sequencingPartner "Philippe Glaser" ;
+        prov:wasAttributedTo "75822ef8-2999-11ef-8e11-90658429fd42" . 
 
-    <http://abromics/sample#7> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <758276ce-2999-11ef-8e11-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "Ente9" ;
         abromics:strainId "Ente9" ;
         abromics:microorganismScientificname "None" ;
@@ -126,8 +133,9 @@
         prov:atLocation "France" ;
         abromics:sequencingTechnology "Illumina HiSeq 4000" ;
         abromics:sequencingPartner "" ;
+        prov:wasAttributedTo "75822ebc-2999-11ef-8e11-90658429fd42" . 
 
-    <http://abromics/sample#8> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <758276ec-2999-11ef-8e11-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "R0023" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "Escherichia coli" ;
@@ -140,8 +148,9 @@
         prov:atLocation "Belgium" ;
         abromics:sequencingTechnology "Illumina NovaSeq 6000" ;
         abromics:sequencingPartner "" ;
+        prov:wasAttributedTo "75822e44-2999-11ef-8e11-90658429fd42" . 
 
-    <http://abromics/sample#9> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <7582770a-2999-11ef-8e11-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG-5" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "None" ;
@@ -154,3 +163,4 @@
         prov:atLocation "France" ;
         abromics:sequencingTechnology "NextSeq 500" ;
         abromics:sequencingPartner "" ;
+        prov:wasAttributedTo "75822e44-2999-11ef-8e11-90658429fd42" . 
