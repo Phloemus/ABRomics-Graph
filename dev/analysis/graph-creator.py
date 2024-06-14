@@ -33,7 +33,6 @@ class GraphCreator:
         ## entities links
         self.samplesSubmitters = {}
 
-
     ##### Private methods #####
 
     ## Return the dictionnary of the data corresponding to a given json file
@@ -169,11 +168,24 @@ class GraphCreator:
         print("Samples graph created in the ./out directory")
 
 
+    ##### Public test methods #####
+    
+    ## Checks if a region name is findable in the regions fetched from wikidata
+    ## returns bool
+    def isRegionExists(self, regionName):
+        if regionName in self.regions.keys():
+            print(f"Region {regionName} exists ! -> {self.regions[regionName]}")
+            return True
+        else:
+            print(f"Region {regionName} doesn't exist")
+        return False
+
     ##### Public methods #####
 
     def createGraph(self):
         self.__getCountries()
         self.__getRegions()
+        self.isRegionExists("Oder")
         self.allReports = [self.__readJsonFromFile(f"{self.reportDirectory}/{reportFilename}") for reportFilename in os.listdir("reports") if reportFilename.endswith(".json")]
         self.__addPeople()
         self.__createPeople()
