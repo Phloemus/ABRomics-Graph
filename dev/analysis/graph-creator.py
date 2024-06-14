@@ -24,6 +24,7 @@ class GraphCreator:
 
         ## external entities
         self.countries = {}
+        self.regions = {}
 
         ## mappings help to track the link between entity from the reports and graph entities
         self.samplesMapping = {}
@@ -59,6 +60,7 @@ class GraphCreator:
               FILTER (lang(?countryName) = "en")
             }
         """
+        print("Fetching countries wikidata ids ...")
         sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
         sparql.setReturnFormat(JSON)
         sparql.setQuery(sparql_query)
@@ -70,6 +72,28 @@ class GraphCreator:
         for item in recs:
             self.countries[item["countryName"]["value"]] = item["countryId"]["value"] ## All countries are in self.countries now !
 
+    ## Get the regions from wikidata
+    ## returns dictionnary of regions name corresponding to wikidata ids
+    def __getRegions(self):
+        sparql_query = """
+            SELECT ?regionId ?regionName WHERE {
+                ?regionId wdt:P31 wd:Q56061 ;
+                    wdt:P17 ?country .
+                ?regionId rdfs:label ?regionName .
+            }
+        """
+        print("Fetching regions wikidata ids ...")
+        sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
+        sparql.setReturnFormat(JSON)
+        sparql.setQuery(sparql_query)
+        try:
+            res = sparql.query().convert()
+            recs = res["results"]["bindings"]
+        except Exception as e:
+            print(e)
+        for item in recs:
+            self.regions[item["regionName"]["value"]] = item["regionId"]["value"]
+        print(self.regions)
 
     ## Add people data to memory for graph creation
     def __addPeople(self):
@@ -110,6 +134,7 @@ class GraphCreator:
                 uniqueGraphId = uuid.uuid1()
                 originalSampleId = report["sections"][0]["data"][0]["values"][0]
                 submitterId = report["sections"][0]["data"][0]["values"][10]
+                countryName = report["sections"][0]["data"][0]["values"][7]
 
                 self.samples.append({
                     "id": uniqueGraphId,
@@ -120,7 +145,7 @@ class GraphCreator:
                     "sampleType": report["sections"][0]["data"][0]["values"][4],
                     "sampleSource": report["sections"][0]["data"][0]["values"][5],
                     "host": report["sections"][0]["data"][0]["values"][6],
-                    "country": report["sections"][0]["data"][0]["values"][7],
+                    "country": self.countries[countryName] if countryName in self.countries.keys() else "",
                     "sequencingTechnology": report["sections"][0]["data"][0]["values"][8],
                     "sequencingPartner": report["sections"][0]["data"][0]["values"][9],
                     "submitterId": self.peopleMapping[submitterId]
@@ -148,12 +173,12 @@ class GraphCreator:
 
     def createGraph(self):
         self.__getCountries()
+        self.__getRegions()
         self.allReports = [self.__readJsonFromFile(f"{self.reportDirectory}/{reportFilename}") for reportFilename in os.listdir("reports") if reportFilename.endswith(".json")]
         self.__addPeople()
         self.__createPeople()
         self.__addSamples()
         self.__createSamples()
-        
         
 
 
