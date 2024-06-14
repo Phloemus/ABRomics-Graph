@@ -9,6 +9,7 @@ import uuid
 
 from datetime import datetime
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
+from SPARQLWrapper import SPARQLWrapper, JSON
 
 ## Creator module class
 class GraphCreator:
@@ -20,6 +21,9 @@ class GraphCreator:
         ## entities
         self.people = []
         self.samples = []
+
+        ## external entities
+        self.countries = {}
 
         ## mappings help to track the link between entity from the reports and graph entities
         self.samplesMapping = {}
@@ -44,6 +48,28 @@ class GraphCreator:
             return True
         except ValueError:
             return False
+
+    ## Get the countries from wikidata
+    ## returns dictionnary of countries name corresponding wikidata ids
+    def __getCountries(self):
+        sparql_query = """
+            SELECT ?countryId ?countryName WHERE {
+              ?countryId wdt:P31 wd:Q6256 . 
+              ?countryId rdfs:label ?countryName .
+              FILTER (lang(?countryName) = "en")
+            }
+        """
+        sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
+        sparql.setReturnFormat(JSON)
+        sparql.setQuery(sparql_query)
+        try:
+            res = sparql.query().convert()
+            recs = res["results"]["bindings"]
+        except Exception as e:
+            print(e)
+        for item in recs:
+            self.countries[item["countryName"]["value"]] = item["countryId"]["value"] ## All countries are in self.countries now !
+
 
     ## Add people data to memory for graph creation
     def __addPeople(self):
@@ -121,6 +147,7 @@ class GraphCreator:
     ##### Public methods #####
 
     def createGraph(self):
+        self.__getCountries()
         self.allReports = [self.__readJsonFromFile(f"{self.reportDirectory}/{reportFilename}") for reportFilename in os.listdir("reports") if reportFilename.endswith(".json")]
         self.__addPeople()
         self.__createPeople()
