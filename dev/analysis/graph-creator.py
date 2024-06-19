@@ -41,6 +41,13 @@ class GraphCreator:
             d = json.load(f)
             return d
 
+    ## Write a dictionnary to a json file 
+    def __writeCacheToJson(self, dictionnary, path):
+        if not os.path.exists("cache"):
+            os.makedirs("cache")
+        with open(path, 'w') as file:
+            json.dump(dictionnary, file, indent=4)
+
     ## return a boolean indicating if the string parameter value has a correct datetime format
     def __isDatetime(self, val):
         try:
@@ -51,25 +58,29 @@ class GraphCreator:
 
     ## Get the countries from wikidata
     ## returns dictionnary of countries name corresponding wikidata ids
-    def __getCountries(self):
-        sparql_query = """
-            SELECT ?countryId ?countryName WHERE {
-              ?countryId wdt:P31 wd:Q6256 . 
-              ?countryId rdfs:label ?countryName .
-              FILTER (lang(?countryName) = "en")
-            }
-        """
-        print("Fetching countries wikidata ids ...")
-        sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
-        sparql.setReturnFormat(JSON)
-        sparql.setQuery(sparql_query)
-        try:
-            res = sparql.query().convert()
-            recs = res["results"]["bindings"]
-        except Exception as e:
-            print(e)
-        for item in recs:
-            self.countries[item["countryName"]["value"]] = item["countryId"]["value"] ## All countries are in self.countries now !
+    def __getCountries(self, from_cache=False):
+        if from_cache is False:
+            sparql_query = """
+                SELECT ?countryId ?countryName WHERE {
+                  ?countryId wdt:P31 wd:Q6256 . 
+                  ?countryId rdfs:label ?countryName .
+                  FILTER (lang(?countryName) = "en")
+                }
+            """
+            print("Fetching countries wikidata ids ...")
+            sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
+            sparql.setReturnFormat(JSON)
+            sparql.setQuery(sparql_query)
+            try:
+                res = sparql.query().convert()
+                recs = res["results"]["bindings"]
+            except Exception as e:
+                print(e)
+            for item in recs:
+                self.countries[item["countryName"]["value"]] = item["countryId"]["value"] ## All countries are in self.countries now !
+                self.__writeCacheToJson(self.countries, "cache/countries.json")
+        else:
+            self.countries = self.__readJsonFromFile("cache/countries.json")
 
     ## Get the regions from wikidata
     ## returns dictionnary of regions name corresponding to wikidata ids
@@ -92,7 +103,6 @@ class GraphCreator:
             print(e)
         for item in recs:
             self.regions[item["regionName"]["value"]] = item["regionId"]["value"]
-        print(self.regions)
 
     ## Add people data to memory for graph creation
     def __addPeople(self):
@@ -183,7 +193,11 @@ class GraphCreator:
     ##### Public methods #####
 
     def createGraph(self):
-        self.__getCountries()
+        choiceCountries = input("Get fresh countries data (from wikidata) ? [yes/no] ")
+        if choiceCountries == "yes": 
+            self.__getCountries(from_cache=False)
+        else:
+            self.__getCountries(from_cache=True)
         self.__getRegions()
         self.isRegionExists("Oder")
         self.allReports = [self.__readJsonFromFile(f"{self.reportDirectory}/{reportFilename}") for reportFilename in os.listdir("reports") if reportFilename.endswith(".json")]
