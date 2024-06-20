@@ -15,9 +15,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
-################################# Sensors ############################################
-
-
-    <2cf663be-2f18-11ef-b554-90658429fd42> rdf:type sosa:Sensor ;
-        sosa:implements abromics:WF1_spec ;
-        sosa:isHostedBy <2cf662a6-2f18-11ef-b554-90658429fd42> .
+{% for procedure in procedures %}
+    <{{ procedure["id"] }}> rdf:type sosa:Procedure ;
+        sosa:isImplementedBy <{{ procedure["isImplementedBy"] }}>
+{% endfor %}

@@ -21,6 +21,7 @@ class GraphCreator:
         ## entities
         self.platforms = []
         self.sensors = []
+        self.procedures = []
         self.people = []
         self.samples = []
 
@@ -31,6 +32,7 @@ class GraphCreator:
         ## mappings help to track the link between entity from the reports and graph entities
         self.platformsMapping = {}
         self.sensorsMapping = {}
+        self.proceduresMapping = {}
         self.samplesMapping = {}
         self.peopleMapping = {}
 
@@ -108,6 +110,31 @@ class GraphCreator:
             print(e)
         for item in recs:
             self.regions[item["regionName"]["value"]] = item["regionId"]["value"]
+
+    ## Add the plateforms (places where the workflows were performed)
+    def __addProcedures(self):
+        uniqueGraphId = uuid.uuid1()
+        name="wf1"
+
+        self.procedures.append({
+            "id": uniqueGraphId,
+            "isImplementedBy": self.sensorsMapping["genomic"]
+        })
+
+        self.platformsMapping[name] = uniqueGraphId
+
+    ## Create all added procedures
+    def __createProcedures(self):
+        env = Environment(
+            loader=FileSystemLoader('.'),
+            undefined=StrictUndefined
+        )
+        template = env.get_template("graph-templates/procedures.j2")
+        templateVars = { "procedures" : self.procedures }
+        proceduresGraph = template.render(templateVars)
+        with open("out/procedures.ttl", "w") as f:
+            f.write(proceduresGraph)
+        print("Procedures graph created in the ./out directory")
 
     ## Add the plateforms (places where the workflows were performed)
     def __addPlatforms(self):
@@ -257,8 +284,10 @@ class GraphCreator:
         self.allReports = [self.__readJsonFromFile(f"{self.reportDirectory}/{reportFilename}") for reportFilename in os.listdir("reports") if reportFilename.endswith(".json")]
         self.__addPlatforms()
         self.__addSensors()
+        self.__addProcedures()
         self.__createPlatforms()
         self.__createSensors()
+        self.__createProcedures()
         self.__addPeople()
         self.__createPeople()
         self.__addSamples()
