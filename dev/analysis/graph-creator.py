@@ -17,8 +17,10 @@ class GraphCreator:
     def __init__(self, reportDirectory):
         self.reportDirectory = reportDirectory
         self.allReports = []
-        
+
         ## entities
+        self.platforms = []
+        self.sensors = []
         self.people = []
         self.samples = []
 
@@ -27,6 +29,8 @@ class GraphCreator:
         self.regions = {}
 
         ## mappings help to track the link between entity from the reports and graph entities
+        self.platformsMapping = {}
+        self.sensorsMapping = {}
         self.samplesMapping = {}
         self.peopleMapping = {}
 
@@ -62,10 +66,10 @@ class GraphCreator:
         if from_cache is False:
             sparql_query = """
                 SELECT ?countryId ?countryName WHERE {
-                  ?countryId wdt:P31 wd:Q6256 . 
-                  ?countryId rdfs:label ?countryName .
-                  FILTER (lang(?countryName) = "en")
-                }
+                        ?countryId wdt:P31 wd:Q6256 . 
+                        ?countryId rdfs:label ?countryName .
+                        FILTER (lang(?countryName) = "en")
+                        }
             """
             print("Fetching countries wikidata ids ...")
             sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
@@ -84,13 +88,14 @@ class GraphCreator:
 
     ## Get the regions from wikidata
     ## returns dictionnary of regions name corresponding to wikidata ids
+    ## TODO: Link the regions to the sample
     def __getRegions(self):
         sparql_query = """
             SELECT ?regionId ?regionName WHERE {
-                ?regionId wdt:P31 wd:Q56061 ;
+                    ?regionId wdt:P31 wd:Q56061 ;
                     wdt:P17 ?country .
-                ?regionId rdfs:label ?regionName .
-            }
+                    ?regionId rdfs:label ?regionName .
+                    }
         """
         print("Fetching regions wikidata ids ...")
         sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
@@ -104,6 +109,57 @@ class GraphCreator:
         for item in recs:
             self.regions[item["regionName"]["value"]] = item["regionId"]["value"]
 
+    ## Add the plateforms (places where the workflows were performed)
+    def __addPlatforms(self):
+        uniqueGraphId = uuid.uuid1()
+        name="NNCR"
+
+        self.platforms.append({
+            "id": uniqueGraphId,
+        })
+
+        self.platformsMapping[name] = uniqueGraphId
+
+    ## Create all added platforms
+    def __createPlatforms(self):
+        env = Environment(
+                loader=FileSystemLoader('.'),
+                undefined=StrictUndefined
+                )
+        template = env.get_template("graph-templates/platforms.j2")
+        templateVars = { "platforms" : self.platforms }
+        platformsGraph = template.render(templateVars)
+        with open("out/platforms.ttl", "w") as f:
+            f.write(platformsGraph)
+        print("Sensors graph created in the ./out directory")
+
+    ## Add sensors data to memory for graph creation
+    ## Sensors define the workflow used in to produce de reports (default genomic)
+    def __addSensors(self):
+        uniqueGraphId = uuid.uuid1()
+        name="genomic"
+
+        self.sensors.append({
+            "id": uniqueGraphId,
+            "implements": "abromics:WF1_spec",
+            "isHostedBy": self.platformsMapping["NNCR"]
+        })
+
+        self.sensorsMapping[name] = uniqueGraphId
+
+    ## Create all added sensors
+    def __createSensors(self):
+        env = Environment(
+                loader=FileSystemLoader('.'),
+                undefined=StrictUndefined
+                )
+        template = env.get_template("graph-templates/sensors.j2") 
+        templateVars = { "sensors" : self.sensors }
+        sensorsGraph = template.render(templateVars)
+        with open("out/sensors.ttl", "w") as f:
+            f.write(sensorsGraph)
+        print("Sensors graph created in the ./out directory")
+
     ## Add people data to memory for graph creation
     def __addPeople(self):
         for report in self.allReports:
@@ -111,24 +167,24 @@ class GraphCreator:
                 uniqueGraphId = uuid.uuid1()
                 name = report["sections"][0]["data"][0]["values"][10]
                 email = ""
-            
+
                 if len(report["sections"][0]["data"][0]["values"]) == 12:
                     email = report["sections"][0]["data"][0]["values"][11] 
-            
+
                 self.people.append({
                     "id": uniqueGraphId,
                     "name": name,
                     "email": email
-                })
+                    })
 
                 self.peopleMapping[name] = uniqueGraphId
 
     ## Create the people entities in a ttl file
     def __createPeople(self):
         env = Environment(
-            loader=FileSystemLoader('.'),
-            undefined=StrictUndefined
-        )
+                loader=FileSystemLoader('.'),
+                undefined=StrictUndefined
+                )
         template = env.get_template("graph-templates/people.j2") 
         templateVars = { "people" : self.people }
         peopleGraph = template.render(templateVars)
@@ -158,7 +214,7 @@ class GraphCreator:
                     "sequencingTechnology": report["sections"][0]["data"][0]["values"][8],
                     "sequencingPartner": report["sections"][0]["data"][0]["values"][9],
                     "submitterId": self.peopleMapping[submitterId]
-                })
+                    })
 
                 self.samplesSubmitters[originalSampleId] = submitterId
                 self.samplesMapping[originalSampleId] = uniqueGraphId
@@ -166,9 +222,9 @@ class GraphCreator:
     ## Create the samples entities in a ttl file
     def __createSamples(self):
         env = Environment(
-            loader=FileSystemLoader('.'),
-            undefined=StrictUndefined
-        )
+                loader=FileSystemLoader('.'),
+                undefined=StrictUndefined
+                )
         env.filters['isDatetime'] = self.__isDatetime
         template = env.get_template("graph-templates/samples.j2") 
         templateVars = { "samples" : self.samples }
@@ -179,7 +235,7 @@ class GraphCreator:
 
 
     ##### Public test methods #####
-    
+
     ## Checks if a region name is findable in the regions fetched from wikidata
     ## returns bool
     def isRegionExists(self, regionName):
@@ -198,14 +254,16 @@ class GraphCreator:
             self.__getCountries(from_cache=False)
         else:
             self.__getCountries(from_cache=True)
-        self.__getRegions()
-        self.isRegionExists("Oder")
         self.allReports = [self.__readJsonFromFile(f"{self.reportDirectory}/{reportFilename}") for reportFilename in os.listdir("reports") if reportFilename.endswith(".json")]
+        self.__addPlatforms()
+        self.__addSensors()
+        self.__createPlatforms()
+        self.__createSensors()
         self.__addPeople()
         self.__createPeople()
         self.__addSamples()
         self.__createSamples()
-        
+
 
 
 ## Usecase of the graph creator

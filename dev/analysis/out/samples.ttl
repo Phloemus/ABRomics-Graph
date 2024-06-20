@@ -13,11 +13,12 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
 ################################## Samples ####################################
 
 
-    <3345d974-2e1a-11ef-932f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <c81bf6e2-2eeb-11ef-bc49-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "R0043" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "Escherichia coli" ;
@@ -27,12 +28,13 @@
         abromics:sampleType "animal" ;
         abromics:sampleSource "Feces" ;
         abromics:host "Bos taurus" ;
-        prov:atLocation "http://www.wikidata.org/entity/Q31" ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
+        wdt:P17 <http://www.wikidata.org/entity/Q31> ; ## Link to a country
         abromics:sequencingTechnology "Illumina NovaSeq 6000" ;
         abromics:sequencingPartner "" ;
-        prov:wasAttributedTo "33458b5e-2e1a-11ef-932f-90658429fd42" . 
+        prov:wasAttributedTo "c81bd252-2eeb-11ef-bc49-90658429fd42" . 
 
-    <3345d9ec-2e1a-11ef-932f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <c81bf75a-2eeb-11ef-bc49-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "R0018" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "Escherichia coli" ;
@@ -42,12 +44,13 @@
         abromics:sampleType "animal" ;
         abromics:sampleSource "Intestine" ;
         abromics:host "Bos taurus" ;
-        prov:atLocation "http://www.wikidata.org/entity/Q31" ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
+        wdt:P17 <http://www.wikidata.org/entity/Q31> ; ## Link to a country
         abromics:sequencingTechnology "Illumina NovaSeq 6000" ;
         abromics:sequencingPartner "" ;
-        prov:wasAttributedTo "33458b5e-2e1a-11ef-932f-90658429fd42" . 
+        prov:wasAttributedTo "c81bd252-2eeb-11ef-bc49-90658429fd42" . 
 
-    <3345da28-2e1a-11ef-932f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <c81bf796-2eeb-11ef-bc49-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "Test" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "None" ;
@@ -57,12 +60,13 @@
         abromics:sampleType "animal" ;
         abromics:sampleSource "Blood" ;
         abromics:host "Bos taurus" ;
-        prov:atLocation "http://www.wikidata.org/entity/Q31" ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
+        wdt:P17 <http://www.wikidata.org/entity/Q31> ; ## Link to a country
         abromics:sequencingTechnology "454 GS Junior" ;
         abromics:sequencingPartner "" ;
-        prov:wasAttributedTo "33458c1c-2e1a-11ef-932f-90658429fd42" . 
+        prov:wasAttributedTo "c81bd2ca-2eeb-11ef-bc49-90658429fd42" . 
 
-    <3345da5a-2e1a-11ef-932f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <c81bf7b4-2eeb-11ef-bc49-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG-2" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "None" ;
@@ -72,12 +76,13 @@
         abromics:sampleType "human" ;
         abromics:sampleSource "Urine" ;
         abromics:host "Homo sapiens" ;
-        prov:atLocation "http://www.wikidata.org/entity/Q142" ;
+        prov:atLocation <http://www.wikidata.org/entity/Q142> ;
+        wdt:P17 <http://www.wikidata.org/entity/Q142> ; ## Link to a country
         abromics:sequencingTechnology "NextSeq 500" ;
         abromics:sequencingPartner "" ;
-        prov:wasAttributedTo "33458b5e-2e1a-11ef-932f-90658429fd42" . 
+        prov:wasAttributedTo "c81bd252-2eeb-11ef-bc49-90658429fd42" . 
 
-    <3345da8c-2e1a-11ef-932f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <c81bf7d2-2eeb-11ef-bc49-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "teed" ;
         abromics:strainId "teed1" ;
         abromics:microorganismScientificname "None" ;
@@ -87,12 +92,13 @@
         abromics:sampleType "human" ;
         abromics:sampleSource "Sweat" ;
         abromics:host "Homo sapiens" ;
-        prov:atLocation "http://www.wikidata.org/entity/Q408" ;
+        prov:atLocation <http://www.wikidata.org/entity/Q408> ;
+        wdt:P17 <http://www.wikidata.org/entity/Q408> ; ## Link to a country
         abromics:sequencingTechnology "NextSeq 500" ;
         abromics:sequencingPartner "" ;
-        prov:wasAttributedTo "33458c4e-2e1a-11ef-932f-90658429fd42" . 
+        prov:wasAttributedTo "c81bd324-2eeb-11ef-bc49-90658429fd42" . 
 
-    <3345dab4-2e1a-11ef-932f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <c81bf7fa-2eeb-11ef-bc49-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG-1" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "None" ;
@@ -102,12 +108,13 @@
         abromics:sampleType "human" ;
         abromics:sampleSource "Urine" ;
         abromics:host "Homo sapiens" ;
-        prov:atLocation "http://www.wikidata.org/entity/Q142" ;
+        prov:atLocation <http://www.wikidata.org/entity/Q142> ;
+        wdt:P17 <http://www.wikidata.org/entity/Q142> ; ## Link to a country
         abromics:sequencingTechnology "NextSeq 500" ;
         abromics:sequencingPartner "" ;
-        prov:wasAttributedTo "33458b5e-2e1a-11ef-932f-90658429fd42" . 
+        prov:wasAttributedTo "c81bd252-2eeb-11ef-bc49-90658429fd42" . 
 
-    <3345dad2-2e1a-11ef-932f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <c81bf818-2eeb-11ef-bc49-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "R0042" ;
         abromics:strainId "Escherichia coli" ;
         abromics:microorganismScientificname "2018-01-01" ;
@@ -115,12 +122,13 @@
         abromics:sampleType "Intestine" ;
         abromics:sampleSource "Bos taurus" ;
         abromics:host "None" ;
-        prov:atLocation "" ;
+        prov:atLocation <> ;
+        wdt:P17 <> ; ## Link to a country
         abromics:sequencingTechnology "" ;
         abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo "33458c6c-2e1a-11ef-932f-90658429fd42" . 
+        prov:wasAttributedTo "c81bd342-2eeb-11ef-bc49-90658429fd42" . 
 
-    <3345db04-2e1a-11ef-932f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <c81bf84a-2eeb-11ef-bc49-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "Ente9" ;
         abromics:strainId "Ente9" ;
         abromics:microorganismScientificname "None" ;
@@ -130,12 +138,13 @@
         abromics:sampleType "human" ;
         abromics:sampleSource "Blood" ;
         abromics:host "Homo sapiens" ;
-        prov:atLocation "http://www.wikidata.org/entity/Q142" ;
+        prov:atLocation <http://www.wikidata.org/entity/Q142> ;
+        wdt:P17 <http://www.wikidata.org/entity/Q142> ; ## Link to a country
         abromics:sequencingTechnology "Illumina HiSeq 4000" ;
         abromics:sequencingPartner "" ;
-        prov:wasAttributedTo "33458c1c-2e1a-11ef-932f-90658429fd42" . 
+        prov:wasAttributedTo "c81bd2ca-2eeb-11ef-bc49-90658429fd42" . 
 
-    <3345db2c-2e1a-11ef-932f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <c81bf872-2eeb-11ef-bc49-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "R0023" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "Escherichia coli" ;
@@ -145,12 +154,13 @@
         abromics:sampleType "animal" ;
         abromics:sampleSource "Feces" ;
         abromics:host "Bos taurus" ;
-        prov:atLocation "http://www.wikidata.org/entity/Q31" ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
+        wdt:P17 <http://www.wikidata.org/entity/Q31> ; ## Link to a country
         abromics:sequencingTechnology "Illumina NovaSeq 6000" ;
         abromics:sequencingPartner "" ;
-        prov:wasAttributedTo "33458b5e-2e1a-11ef-932f-90658429fd42" . 
+        prov:wasAttributedTo "c81bd252-2eeb-11ef-bc49-90658429fd42" . 
 
-    <3345db4a-2e1a-11ef-932f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <c81bf890-2eeb-11ef-bc49-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG-5" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "None" ;
@@ -160,7 +170,8 @@
         abromics:sampleType "human" ;
         abromics:sampleSource "Urine" ;
         abromics:host "Homo sapiens" ;
-        prov:atLocation "http://www.wikidata.org/entity/Q142" ;
+        prov:atLocation <http://www.wikidata.org/entity/Q142> ;
+        wdt:P17 <http://www.wikidata.org/entity/Q142> ; ## Link to a country
         abromics:sequencingTechnology "NextSeq 500" ;
         abromics:sequencingPartner "" ;
-        prov:wasAttributedTo "33458b5e-2e1a-11ef-932f-90658429fd42" . 
+        prov:wasAttributedTo "c81bd252-2eeb-11ef-bc49-90658429fd42" . 
