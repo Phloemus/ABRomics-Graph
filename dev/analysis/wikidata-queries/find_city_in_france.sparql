@@ -1,0 +1,21 @@
+SELECT DISTINCT ?city ?cityLabel
+WHERE {
+  {
+    ?city wdt:P31/wdt:P279* wd:Q515.  # Instances of city or subclasses of city
+    ?city wdt:P17 wd:Q142.            # Located in France
+  }
+  UNION
+  {
+    ?city wdt:P31 wd:Q15284.          # Municipality instances
+    ?city wdt:P17 wd:Q142.            # Located in France
+  }
+  UNION
+  {
+    ?city wdt:P31 wd:Q484170;           # Instances of commune
+          wdt:P17 wd:Q142.              # Located in France
+  }
+  ?city rdfs:label ?cityLabel .
+  FILTER(LANG(?cityLabel) = "fr") .
+  FILTER(LCASE(?cityLabel) = "bouguenais"@fr)
+}
+ORDER BY ?cityLabel

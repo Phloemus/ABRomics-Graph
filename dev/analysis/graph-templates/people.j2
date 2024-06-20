@@ -19,5 +19,5 @@
 {% for person in people %}
     <{{ person["id"] }}> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "{{ person["name"] }}" ;
-        foaf:mbox "{{ person["email"] }}" .
+        foaf:mbox <{{ person["email"] }}> .
 {% endfor %}

@@ -13,22 +13,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
-################################## People #################################
 
-
-    <c81bd252-2eeb-11ef-bc49-90658429fd42> rdf:type prov:Person, prov:Agent ;
-        foaf:givenName "Philippe Glaser" ;
-        foaf:mbox <pglaser@pasteur.fr> .
-
-    <c81bd2ca-2eeb-11ef-bc49-90658429fd42> rdf:type prov:Person, prov:Agent ;
-        foaf:givenName "Raphael Test" ;
-        foaf:mbox <n3m0xy@gmail.com> .
-
-    <c81bd324-2eeb-11ef-bc49-90658429fd42> rdf:type prov:Person, prov:Agent ;
-        foaf:givenName "Admin Abromics" ;
-        foaf:mbox <admin@analysis.abromics.fr> .
-
-    <c81bd342-2eeb-11ef-bc49-90658429fd42> rdf:type prov:Person, prov:Agent ;
-        foaf:givenName "pglaser@pasteur.fr" ;
-        foaf:mbox <> .
+    <c81b69a2-2eeb-11ef-bc49-90658429fd42> rdf:type sosa:Platform .

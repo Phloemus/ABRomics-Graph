@@ -237,7 +237,8 @@ abromics:WF1_impl rdf:type sosa:Sensor ;
 
 ############################## Plateform (place) #########################################
 
-abromics:NNCR rdf:type sosa:Platform .
+abromics:NNCR rdf:type sosa:Platform ;
+    sosa:hosts abromics:WF1_impl .
 
 
 ################################# Procedures  #############################################
