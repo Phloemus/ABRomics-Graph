@@ -14,21 +14,11 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
-################################## People #################################
+################################## Strains #################################
 
-
-    <460b7706-2fd4-11ef-a651-90658429fd42> rdf:type prov:Person, prov:Agent ;
-        foaf:givenName "Philippe Glaser" ;
-        foaf:mbox <pglaser@pasteur.fr> .
-
-    <460b781e-2fd4-11ef-a651-90658429fd42> rdf:type prov:Person, prov:Agent ;
-        foaf:givenName "Raphael Test" ;
-        foaf:mbox <n3m0xy@gmail.com> .
-
-    <460b7896-2fd4-11ef-a651-90658429fd42> rdf:type prov:Person, prov:Agent ;
-        foaf:givenName "Admin Abromics" ;
-        foaf:mbox <admin@analysis.abromics.fr> .
-
-    <460b7904-2fd4-11ef-a651-90658429fd42> rdf:type prov:Person, prov:Agent ;
-        foaf:givenName "pglaser@pasteur.fr" ;
-        foaf:mbox <> .
+{% for strain in strains %}
+    <{{ strain["id"] }}> rdf:type sosa:FeatureOfInterest, aro:Strain ;
+        abromics:has_st "{{ strain["st"] }}" ;
+        obo:RO_0002162 <{{ strain["taxonomy"] }}> .
+{% endfor %}
+ 

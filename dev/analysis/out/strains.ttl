@@ -1,0 +1,60 @@
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix schema: <https://schema.org/> .
+@prefix abromics: <https://abromics.fr/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix aro: <http://purl.obolibrary.org/obo/aro.owl#> .
+@prefix go: <http://purl.org/obo/owl/GO#> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+################################## Strains #################################
+
+
+    <460b79d6-2fd4-11ef-a651-90658429fd42> rdf:type sosa:FeatureOfInterest, aro:Strain ;
+        abromics:has_st "69" ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/562> .
+
+    <460b7a44-2fd4-11ef-a651-90658429fd42> rdf:type sosa:FeatureOfInterest, aro:Strain ;
+        abromics:has_st "48" ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/562> .
+
+    <460b7a80-2fd4-11ef-a651-90658429fd42> rdf:type sosa:FeatureOfInterest, aro:Strain ;
+        abromics:has_st "768" ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/1351> .
+
+    <460b7abc-2fd4-11ef-a651-90658429fd42> rdf:type sosa:FeatureOfInterest, aro:Strain ;
+        abromics:has_st "10" ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/562> .
+
+    <460b7af8-2fd4-11ef-a651-90658429fd42> rdf:type sosa:FeatureOfInterest, aro:Strain ;
+        abromics:has_st "12" ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/562> .
+
+    <460b7b34-2fd4-11ef-a651-90658429fd42> rdf:type sosa:FeatureOfInterest, aro:Strain ;
+        abromics:has_st "38" ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/562> .
+
+    <460b7b70-2fd4-11ef-a651-90658429fd42> rdf:type sosa:FeatureOfInterest, aro:Strain ;
+        abromics:has_st "648" ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/562> .
+
+    <460b7bb6-2fd4-11ef-a651-90658429fd42> rdf:type sosa:FeatureOfInterest, aro:Strain ;
+        abromics:has_st "None" ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/1352> .
+
+    <460b7bfc-2fd4-11ef-a651-90658429fd42> rdf:type sosa:FeatureOfInterest, aro:Strain ;
+        abromics:has_st "10" ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/562> .
+
+    <460b7c38-2fd4-11ef-a651-90658429fd42> rdf:type sosa:FeatureOfInterest, aro:Strain ;
+        abromics:has_st "58" ;
+        obo:RO_0002162 <http://purl.uniprot.org/taxonomy/562> .
+
+ 
