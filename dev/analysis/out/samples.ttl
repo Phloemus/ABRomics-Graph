@@ -18,7 +18,7 @@
 ################################## Samples ####################################
 
 
-    <2cf79b12-2f18-11ef-b554-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8c44daee-2fae-11ef-940f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "R0043" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "Escherichia coli" ;
@@ -32,9 +32,9 @@
         wdt:P17 <http://www.wikidata.org/entity/Q31> ; ## Link to a country
         abromics:sequencingTechnology "Illumina NovaSeq 6000" ;
         abromics:sequencingPartner "" ;
-        prov:wasAttributedTo "2cf761e2-2f18-11ef-b554-90658429fd42" . 
+        prov:wasAttributedTo "8c44d940-2fae-11ef-940f-90658429fd42" . 
 
-    <2cf79b9e-2f18-11ef-b554-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8c44db48-2fae-11ef-940f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "R0018" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "Escherichia coli" ;
@@ -48,9 +48,9 @@
         wdt:P17 <http://www.wikidata.org/entity/Q31> ; ## Link to a country
         abromics:sequencingTechnology "Illumina NovaSeq 6000" ;
         abromics:sequencingPartner "" ;
-        prov:wasAttributedTo "2cf761e2-2f18-11ef-b554-90658429fd42" . 
+        prov:wasAttributedTo "8c44d940-2fae-11ef-940f-90658429fd42" . 
 
-    <2cf79be4-2f18-11ef-b554-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8c44db8e-2fae-11ef-940f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "Test" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "None" ;
@@ -64,9 +64,9 @@
         wdt:P17 <http://www.wikidata.org/entity/Q31> ; ## Link to a country
         abromics:sequencingTechnology "454 GS Junior" ;
         abromics:sequencingPartner "" ;
-        prov:wasAttributedTo "2cf76304-2f18-11ef-b554-90658429fd42" . 
+        prov:wasAttributedTo "8c44d9ea-2fae-11ef-940f-90658429fd42" . 
 
-    <2cf79c16-2f18-11ef-b554-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8c44dbca-2fae-11ef-940f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG-2" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "None" ;
@@ -80,9 +80,9 @@
         wdt:P17 <http://www.wikidata.org/entity/Q142> ; ## Link to a country
         abromics:sequencingTechnology "NextSeq 500" ;
         abromics:sequencingPartner "" ;
-        prov:wasAttributedTo "2cf761e2-2f18-11ef-b554-90658429fd42" . 
+        prov:wasAttributedTo "8c44d940-2fae-11ef-940f-90658429fd42" . 
 
-    <2cf79c48-2f18-11ef-b554-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8c44dbfc-2fae-11ef-940f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "teed" ;
         abromics:strainId "teed1" ;
         abromics:microorganismScientificname "None" ;
@@ -96,9 +96,9 @@
         wdt:P17 <http://www.wikidata.org/entity/Q408> ; ## Link to a country
         abromics:sequencingTechnology "NextSeq 500" ;
         abromics:sequencingPartner "" ;
-        prov:wasAttributedTo "2cf76354-2f18-11ef-b554-90658429fd42" . 
+        prov:wasAttributedTo "8c44da30-2fae-11ef-940f-90658429fd42" . 
 
-    <2cf79c7a-2f18-11ef-b554-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8c44dc38-2fae-11ef-940f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG-1" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "None" ;
@@ -112,9 +112,9 @@
         wdt:P17 <http://www.wikidata.org/entity/Q142> ; ## Link to a country
         abromics:sequencingTechnology "NextSeq 500" ;
         abromics:sequencingPartner "" ;
-        prov:wasAttributedTo "2cf761e2-2f18-11ef-b554-90658429fd42" . 
+        prov:wasAttributedTo "8c44d940-2fae-11ef-940f-90658429fd42" . 
 
-    <2cf79ca2-2f18-11ef-b554-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8c44dcb0-2fae-11ef-940f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "R0042" ;
         abromics:strainId "Escherichia coli" ;
         abromics:microorganismScientificname "2018-01-01" ;
@@ -126,9 +126,9 @@
         wdt:P17 <> ; ## Link to a country
         abromics:sequencingTechnology "" ;
         abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo "2cf76390-2f18-11ef-b554-90658429fd42" . 
+        prov:wasAttributedTo "8c44da62-2fae-11ef-940f-90658429fd42" . 
 
-    <2cf79cf2-2f18-11ef-b554-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8c44dd14-2fae-11ef-940f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "Ente9" ;
         abromics:strainId "Ente9" ;
         abromics:microorganismScientificname "None" ;
@@ -142,9 +142,9 @@
         wdt:P17 <http://www.wikidata.org/entity/Q142> ; ## Link to a country
         abromics:sequencingTechnology "Illumina HiSeq 4000" ;
         abromics:sequencingPartner "" ;
-        prov:wasAttributedTo "2cf76304-2f18-11ef-b554-90658429fd42" . 
+        prov:wasAttributedTo "8c44d9ea-2fae-11ef-940f-90658429fd42" . 
 
-    <2cf79d24-2f18-11ef-b554-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8c44dd78-2fae-11ef-940f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "R0023" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "Escherichia coli" ;
@@ -158,9 +158,9 @@
         wdt:P17 <http://www.wikidata.org/entity/Q31> ; ## Link to a country
         abromics:sequencingTechnology "Illumina NovaSeq 6000" ;
         abromics:sequencingPartner "" ;
-        prov:wasAttributedTo "2cf761e2-2f18-11ef-b554-90658429fd42" . 
+        prov:wasAttributedTo "8c44d940-2fae-11ef-940f-90658429fd42" . 
 
-    <2cf79d56-2f18-11ef-b554-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8c44ddb4-2fae-11ef-940f-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG-5" ;
         abromics:strainId "None" ;
         abromics:microorganismScientificname "None" ;
@@ -174,4 +174,4 @@
         wdt:P17 <http://www.wikidata.org/entity/Q142> ; ## Link to a country
         abromics:sequencingTechnology "NextSeq 500" ;
         abromics:sequencingPartner "" ;
-        prov:wasAttributedTo "2cf761e2-2f18-11ef-b554-90658429fd42" . 
+        prov:wasAttributedTo "8c44d940-2fae-11ef-940f-90658429fd42" . 
