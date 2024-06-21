@@ -229,7 +229,6 @@ class GraphCreator:
 
     ## Add strains data to memory for graph creation
     def __addStrains(self):
-        pass
         for report in self.allReports:
             uniqueGraphId = uuid.uuid1()
             speciesName = report["sections"][1]["data"][0]["values"][0]
@@ -241,6 +240,11 @@ class GraphCreator:
                 "st": st,
                 "taxonomy": taxonomy
             })
+
+    ## Add genes data to the memory for graph creation
+    ## should get all the gene ontology id from the gene names to have fair data !
+    def __addGenes(self):
+        pass
 
     ## Add the samples data to memory for graph creation
     def __addSamples(self):
