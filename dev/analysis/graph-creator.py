@@ -24,10 +24,13 @@ class GraphCreator:
         self.procedures = []
         self.people = []
         self.samples = []
+        self.species = []
+        self.strains = []
 
         ## external entities
         self.countries = {}
         self.regions = {}
+        self.speciesTaxonomy = {}
 
         ## mappings help to track the link between entity from the reports and graph entities
         self.platformsMapping = {}
@@ -134,6 +137,40 @@ class GraphCreator:
         for item in recs:
             self.regions[item["regionName"]["value"]] = item["regionId"]["value"]
 
+    ## Get the ncbi taxon id of a list of species
+    def __getSpeciesTaxonomy(self):
+        for report in self.allReports:
+            if report["sections"][1]["data"][0]["values"][0] not in self.species:
+                self.species.append(report["sections"][1]["data"][0]["values"][0])
+        speciesNames = ""
+        for speciesName in self.species:
+            speciesNames += f"'{speciesName}' "
+        sparql_query = f"""
+            PREFIX up: <http://purl.uniprot.org/core/>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            
+            SELECT ?speciesName ?taxon
+            WHERE {{
+              VALUES ?speciesName {{
+                  {speciesNames}
+              }}
+              
+              ?taxon a up:Taxon ;
+                     up:scientificName ?speciesName .
+            }}
+        """
+        print("Fetching species taxonomy ids ...")
+        sparql = SPARQLWrapper("https://sparql.uniprot.org/sparql/")
+        sparql.setReturnFormat(JSON)
+        sparql.setQuery(sparql_query)
+        try:
+            res = sparql.query().convert()
+            recs = res["results"]["bindings"]
+        except Exception as e:
+            print(e)
+        for item in recs:
+            self.speciesTaxonomy[item["speciesName"]["value"]] = item["taxon"]["value"]
+
     ## Add the plateforms (places where the workflows were performed)
     def __addProcedures(self):
         uniqueGraphId = uuid.uuid1()
@@ -190,11 +227,20 @@ class GraphCreator:
 
                 self.peopleMapping[name] = uniqueGraphId
 
-    ## Add strains !! ############################################################## continue
+    ## Add strains data to memory for graph creation
     def __addStrains(self):
         pass
         for report in self.allReports:
-            uniqueGraphId = uuid.uuid1() ##! continue here
+            uniqueGraphId = uuid.uuid1()
+            speciesName = report["sections"][1]["data"][0]["values"][0]
+            st = report["sections"][1]["data"][0]["values"][1]
+            taxonomy = self.speciesTaxonomy[speciesName]
+
+            self.strains.append({
+                "id": uniqueGraphId,
+                "st": st,
+                "taxonomy": taxonomy
+            })
 
     ## Add the samples data to memory for graph creation
     def __addSamples(self):
@@ -238,21 +284,32 @@ class GraphCreator:
     ##### Public methods #####
 
     def createGraph(self):
+
+        ## Loading the reports in memory
+        self.allReports = [self.__readJsonFromFile(f"{self.reportDirectory}/{reportFilename}") for reportFilename in os.listdir("reports") if reportFilename.endswith(".json")]
+
+        ## Getting static values
         choiceCountries = input("Get fresh countries data (from wikidata) ? [yes/no] ")
         if choiceCountries == "yes": 
             self.__getCountries(from_cache=False)
         else:
             self.__getCountries(from_cache=True)
-        self.allReports = [self.__readJsonFromFile(f"{self.reportDirectory}/{reportFilename}") for reportFilename in os.listdir("reports") if reportFilename.endswith(".json")]
+        self.__getSpeciesTaxonomy()
+
+        ## Adding entity data in memory 
         self.__addPlatforms()
         self.__addSensors()
         self.__addProcedures()
         self.__addPeople()
+        self.__addStrains()
         self.__addSamples()
+
+        ## Creating the turtle files
         self.__createTtlFile("graph-templates/platforms.j2", "platforms", self.platforms) 
         self.__createTtlFile("graph-templates/sensors.j2", "sensors", self.sensors) 
         self.__createTtlFile("graph-templates/procedures.j2", "procedures", self.procedures) 
         self.__createTtlFile("graph-templates/people.j2", "people", self.people) 
+        self.__createTtlFile("graph-templates/strains.j2", "strains", self.strains)
         self.__createTtlFile("graph-templates/samples.j2", "samples", self.samples, filterFunctions=[{"name": "isDatetime", "content": self.__isDatetime}])
 
 
