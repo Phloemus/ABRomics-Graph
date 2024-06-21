@@ -62,6 +62,29 @@ class GraphCreator:
         except ValueError:
             return False
 
+    ## Create the ttl file from a template and the data
+    ## 
+    ## templatePath: path to the template file used to create the ttl file from the data
+    ## dataName: name used to qualify the data present in the entities variables
+    ## data: content of an entity variable
+    ## filterFunctions: 
+    ##      (ex: [{"name": "isDatetime", "content": self.__isDatetime}])
+    ##      contains a list of objects each containing a function that is passed to 
+    ##      jinja as a filter function
+    def __createTtlFile(self, templatePath, dataName, data, filterFunctions=[]):
+        env = Environment(
+            loader=FileSystemLoader('.'),
+            undefined=StrictUndefined
+        )
+        for function in filterFunctions:
+            env.filters[function["name"]] = function["content"]
+        template = env.get_template(templatePath)
+        templateVars = { dataName : data }
+        dataGraph = template.render(templateVars)
+        with open(f"out/{dataName}.ttl", "w") as f:
+            f.write(dataGraph)
+        print(f"{dataName} graph created")
+
     ## Get the countries from wikidata
     ## returns dictionnary of countries name corresponding wikidata ids
     def __getCountries(self, from_cache=False):
@@ -123,19 +146,6 @@ class GraphCreator:
 
         self.platformsMapping[name] = uniqueGraphId
 
-    ## Create all added procedures
-    def __createProcedures(self):
-        env = Environment(
-            loader=FileSystemLoader('.'),
-            undefined=StrictUndefined
-        )
-        template = env.get_template("graph-templates/procedures.j2")
-        templateVars = { "procedures" : self.procedures }
-        proceduresGraph = template.render(templateVars)
-        with open("out/procedures.ttl", "w") as f:
-            f.write(proceduresGraph)
-        print("Procedures graph created in the ./out directory")
-
     ## Add the plateforms (places where the workflows were performed)
     def __addPlatforms(self):
         uniqueGraphId = uuid.uuid1()
@@ -146,19 +156,6 @@ class GraphCreator:
         })
 
         self.platformsMapping[name] = uniqueGraphId
-
-    ## Create all added platforms
-    def __createPlatforms(self):
-        env = Environment(
-                loader=FileSystemLoader('.'),
-                undefined=StrictUndefined
-                )
-        template = env.get_template("graph-templates/platforms.j2")
-        templateVars = { "platforms" : self.platforms }
-        platformsGraph = template.render(templateVars)
-        with open("out/platforms.ttl", "w") as f:
-            f.write(platformsGraph)
-        print("Sensors graph created in the ./out directory")
 
     ## Add sensors data to memory for graph creation
     ## Sensors define the workflow used in to produce de reports (default genomic)
@@ -173,19 +170,6 @@ class GraphCreator:
         })
 
         self.sensorsMapping[name] = uniqueGraphId
-
-    ## Create all added sensors
-    def __createSensors(self):
-        env = Environment(
-                loader=FileSystemLoader('.'),
-                undefined=StrictUndefined
-                )
-        template = env.get_template("graph-templates/sensors.j2") 
-        templateVars = { "sensors" : self.sensors }
-        sensorsGraph = template.render(templateVars)
-        with open("out/sensors.ttl", "w") as f:
-            f.write(sensorsGraph)
-        print("Sensors graph created in the ./out directory")
 
     ## Add people data to memory for graph creation
     def __addPeople(self):
@@ -206,18 +190,11 @@ class GraphCreator:
 
                 self.peopleMapping[name] = uniqueGraphId
 
-    ## Create the people entities in a ttl file
-    def __createPeople(self):
-        env = Environment(
-                loader=FileSystemLoader('.'),
-                undefined=StrictUndefined
-                )
-        template = env.get_template("graph-templates/people.j2") 
-        templateVars = { "people" : self.people }
-        peopleGraph = template.render(templateVars)
-        with open("out/people.ttl", "w") as f:
-            f.write(peopleGraph)
-        print("People graph created in the ./out directory")
+    ## Add strains !! ############################################################## continue
+    def __addStrains(self):
+        pass
+        for report in self.allReports:
+            uniqueGraphId = uuid.uuid1() ##! continue here
 
     ## Add the samples data to memory for graph creation
     def __addSamples(self):
@@ -241,25 +218,10 @@ class GraphCreator:
                     "sequencingTechnology": report["sections"][0]["data"][0]["values"][8],
                     "sequencingPartner": report["sections"][0]["data"][0]["values"][9],
                     "submitterId": self.peopleMapping[submitterId]
-                    })
+                })
 
                 self.samplesSubmitters[originalSampleId] = submitterId
                 self.samplesMapping[originalSampleId] = uniqueGraphId
-
-    ## Create the samples entities in a ttl file
-    def __createSamples(self):
-        env = Environment(
-                loader=FileSystemLoader('.'),
-                undefined=StrictUndefined
-                )
-        env.filters['isDatetime'] = self.__isDatetime
-        template = env.get_template("graph-templates/samples.j2") 
-        templateVars = { "samples" : self.samples }
-        sampleGraph = template.render(templateVars)
-        with open("out/samples.ttl", "w") as f:
-            f.write(sampleGraph)
-        print("Samples graph created in the ./out directory")
-
 
     ##### Public test methods #####
 
@@ -285,13 +247,13 @@ class GraphCreator:
         self.__addPlatforms()
         self.__addSensors()
         self.__addProcedures()
-        self.__createPlatforms()
-        self.__createSensors()
-        self.__createProcedures()
         self.__addPeople()
-        self.__createPeople()
         self.__addSamples()
-        self.__createSamples()
+        self.__createTtlFile("graph-templates/platforms.j2", "platforms", self.platforms) 
+        self.__createTtlFile("graph-templates/sensors.j2", "sensors", self.sensors) 
+        self.__createTtlFile("graph-templates/procedures.j2", "procedures", self.procedures) 
+        self.__createTtlFile("graph-templates/people.j2", "people", self.people) 
+        self.__createTtlFile("graph-templates/samples.j2", "samples", self.samples, filterFunctions=[{"name": "isDatetime", "content": self.__isDatetime}])
 
 
 
