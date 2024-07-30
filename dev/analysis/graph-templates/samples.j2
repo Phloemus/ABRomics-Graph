@@ -21,7 +21,7 @@
     <{{ sample["id"] }}> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "{{ sample["originalSampleId"] }}" ;
         abromics:strainId "{{ sample["strainId"] }}" ;
-        abromics:microorganismScientificname "{{ sample["microorganismScientificName"] }}" ;
+        abromics:microorganism <{{ sample["microorganism"] }}> ;
         {% if sample["collectionDate"]|isDatetime %}
             prov:generatedAtTime "{{ sample["collectionDate"] }}T00:00:00Z"^^xsd:dateTime ;
         {% endif %}
@@ -32,5 +32,5 @@
         wdt:P17 <{{ sample["country"] }}> ; ## Link to a country
         abromics:sequencingTechnology "{{ sample["sequencingTechnology"] }}" ;
         abromics:sequencingPartner "{{ sample["sequencingPartner"] }}" ;
-        prov:wasAttributedTo "{{ sample["submitterId"] }}" . 
+        prov:wasAttributedTo <{{ sample["submitterId"] }}> . 
 {% endfor %}

@@ -65,16 +65,21 @@ class GraphCreator:
         except ValueError:
             return False
 
-    ## Create the ttl file from a template and the data
-    ## 
-    ## templatePath: path to the template file used to create the ttl file from the data
-    ## dataName: name used to qualify the data present in the entities variables
-    ## data: content of an entity variable
-    ## filterFunctions: 
-    ##      (ex: [{"name": "isDatetime", "content": self.__isDatetime}])
-    ##      contains a list of objects each containing a function that is passed to 
-    ##      jinja as a filter function
     def __createTtlFile(self, templatePath, dataName, data, filterFunctions=[]):
+
+        """
+          Create the ttl file from a template and the data
+          
+          templatePath: path to the template file used to create the ttl file from the data
+          dataName: name used to qualify the data present in the entities variables
+          data: content of an entity variable
+
+          filterFunctions: 
+               (ex: [{"name": "isDatetime", "content": self.__isDatetime}])
+               contains a list of objects each containing a function that is passed to 
+               jinja as a filter function
+        """
+
         env = Environment(
             loader=FileSystemLoader('.'),
             undefined=StrictUndefined
@@ -88,6 +93,7 @@ class GraphCreator:
             f.write(dataGraph)
         print(f"{dataName} graph created")
 
+
     ## Get the countries from wikidata
     ## returns dictionnary of countries name corresponding wikidata ids
     def __getCountries(self, from_cache=False):
@@ -97,7 +103,7 @@ class GraphCreator:
                         ?countryId wdt:P31 wd:Q6256 . 
                         ?countryId rdfs:label ?countryName .
                         FILTER (lang(?countryName) = "en")
-                        }
+                    }
             """
             print("Fetching countries wikidata ids ...")
             sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
@@ -123,7 +129,7 @@ class GraphCreator:
                     ?regionId wdt:P31 wd:Q56061 ;
                     wdt:P17 ?country .
                     ?regionId rdfs:label ?regionName .
-                    }
+                }
         """
         print("Fetching regions wikidata ids ...")
         sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
@@ -254,12 +260,13 @@ class GraphCreator:
                 originalSampleId = report["sections"][0]["data"][0]["values"][0]
                 submitterId = report["sections"][0]["data"][0]["values"][10]
                 countryName = report["sections"][0]["data"][0]["values"][7]
+                microorganism = report["sections"][0]["data"][0]["values"][2]
 
                 self.samples.append({
                     "id": uniqueGraphId,
                     "originalSampleId": originalSampleId,
                     "strainId": report["sections"][0]["data"][0]["values"][1],
-                    "microorganismScientificName": report["sections"][0]["data"][0]["values"][2],
+                    "microorganism": self.speciesTaxonomy[microorganism] if microorganism in self.speciesTaxonomy.keys() else "",
                     "collectionDate": report["sections"][0]["data"][0]["values"][3],
                     "sampleType": report["sections"][0]["data"][0]["values"][4],
                     "sampleSource": report["sections"][0]["data"][0]["values"][5],
