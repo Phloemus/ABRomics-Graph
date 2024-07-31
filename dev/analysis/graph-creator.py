@@ -26,11 +26,13 @@ class GraphCreator:
         self.samples = []
         self.species = []
         self.strains = []
+        self.sampleSources = []
 
-        ## external entities
+        ## external entities and mappings between entities and ontology identifiers
         self.countries = {}
         self.regions = {}
-        self.speciesTaxonomy = {}
+        self.speciesTaxonomy = {}  # bind species with NCBI Taxon ontology terms
+        self.sampleSourcesBindNCIT = {}    # bind sampleSources with NCIT terms
 
         ## mappings help to track the link between entity from the reports and graph entities
         self.platformsMapping = {}
@@ -143,11 +145,51 @@ class GraphCreator:
         for item in recs:
             self.regions[item["regionName"]["value"]] = item["regionId"]["value"]
 
+
+    ## Get the sample sources from the NCIT ontology hosted by the ncit browser ######################################################
+    ## Doesn't really works ..
+    ## The response of the query doesn't seems to be right ..
+    ## All the issues to create the query and now with the issue that seems to be caused by the format of the query 
+    ## could be solved by getting the NCIT ontology directly onto the virtuoso server
+    def __getSampleSources(self):
+        for report in self.allReports:
+            self.sampleSources.append(report["sections"][0]["data"][0]["values"][5])
+        sampleSourceNames = ""
+        for sampleSourceName in self.species:
+            sampleSourceNames += f"'{sampleSourceName}' "
+        sparql_query = f"""
+            SELECT ?sampleSourceName ?sourceId WHERE {{
+                VALUES ?sampleSourceName {{
+                    "{sampleSourceNames}"^^<http://www.w3.org/2001/XMLSchema#string> 
+                }}
+                ?sourceId rdfs:label ?sampleSource .
+                FILTER STRSTARTS(STR(?sourceId), "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#") .
+            }}
+        """
+        print("Fetching sample source ids ...")
+        sparql = SPARQLWrapper("https://sparql.hegroup.org/sparql")
+        sparql.setReturnFormat(JSON)
+        sparql.setQuery(sparql_query)
+        try:
+            res = sparql.query().convert()
+            recs = res["results"]["bindings"]
+            for item in recs:
+                print(item)
+                print(f"- binding {item['sourceSampleName']['value']} with {item['sourceId']['value']} -")
+                self.sampleSourcesBindNCIT[item["sampleSourceName"]["value"]] = item["sourceId"]["value"]
+        except Exception as e:
+            print(e)
+        
+
     ## Get the ncbi taxon id of a list of species
     def __getSpeciesTaxonomy(self):
         for report in self.allReports:
+            # add the microorganisms in the species dictionnary
             if report["sections"][1]["data"][0]["values"][0] not in self.species:
                 self.species.append(report["sections"][1]["data"][0]["values"][0])
+            # add the host specie to the species dictionnary
+            if report["sections"][0]["data"][0]["values"][6] not in self.species: 
+                self.species.append(report["sections"][0]["data"][0]["values"][6])
         speciesNames = ""
         for speciesName in self.species:
             speciesNames += f"'{speciesName}' "
@@ -261,6 +303,8 @@ class GraphCreator:
                 submitterId = report["sections"][0]["data"][0]["values"][10]
                 countryName = report["sections"][0]["data"][0]["values"][7]
                 microorganism = report["sections"][0]["data"][0]["values"][2]
+                host = report["sections"][0]["data"][0]["values"][6]
+                sampleSource = report["sections"][0]["data"][0]["values"][5]
 
                 self.samples.append({
                     "id": uniqueGraphId,
@@ -269,8 +313,8 @@ class GraphCreator:
                     "microorganism": self.speciesTaxonomy[microorganism] if microorganism in self.speciesTaxonomy.keys() else "",
                     "collectionDate": report["sections"][0]["data"][0]["values"][3],
                     "sampleType": report["sections"][0]["data"][0]["values"][4],
-                    "sampleSource": report["sections"][0]["data"][0]["values"][5],
-                    "host": report["sections"][0]["data"][0]["values"][6],
+                    "sampleSource": "amelioration en cours", ####################### Sample source bind to relevant ontology
+                    "host": self.speciesTaxonomy[host] if host in self.speciesTaxonomy.keys() else "",
                     "country": self.countries[countryName] if countryName in self.countries.keys() else "",
                     "sequencingTechnology": report["sections"][0]["data"][0]["values"][8],
                     "sequencingPartner": report["sections"][0]["data"][0]["values"][9],
@@ -306,6 +350,7 @@ class GraphCreator:
         else:
             self.__getCountries(from_cache=True)
         self.__getSpeciesTaxonomy()
+        self.__getSampleSources()
 
         ## Adding entity data in memory 
         self.__addPlatforms()
