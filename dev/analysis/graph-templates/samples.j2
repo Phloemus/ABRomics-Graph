@@ -27,7 +27,7 @@
         {% endif %}
         abromics:sampleType "{{ sample["sampleType"] }}" ;
         abromics:sampleSource "{{ sample["sampleSource"] }}" ;
-        abromics:host "{{ sample["host"] }}" ;
+        abromics:host <{{ sample["host"] }}> ;
         prov:atLocation <{{ sample["country"] }}> ;
         wdt:P17 <{{ sample["country"] }}> ; ## Link to a country
         abromics:sequencingTechnology "{{ sample["sequencingTechnology"] }}" ;
