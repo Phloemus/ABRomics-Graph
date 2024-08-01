@@ -31,7 +31,7 @@ class GraphCreator:
         ## external entities and mappings between entities and ontology identifiers
         self.countries = {}
         self.regions = {}
-        self.speciesTaxonomy = {}  # bind species with NCBI Taxon ontology terms
+        self.speciesTaxonomy = {}          # bind species with NCBI Taxon ontology terms
         self.sampleSourcesBindNCIT = {}    # bind sampleSources with NCIT terms
 
         ## mappings help to track the link between entity from the reports and graph entities
@@ -153,33 +153,35 @@ class GraphCreator:
     ## could be solved by getting the NCIT ontology directly onto the virtuoso server
     def __getSampleSources(self):
         for report in self.allReports:
-            self.sampleSources.append(report["sections"][0]["data"][0]["values"][5])
+            if report["sections"][0]["data"][0]["values"][5] not in self.sampleSources:
+                self.sampleSources.append(report["sections"][0]["data"][0]["values"][5])
         sampleSourceNames = ""
-        for sampleSourceName in self.species:
+        for sampleSourceName in self.sampleSources:
             sampleSourceNames += f"'{sampleSourceName}' "
         sparql_query = f"""
+            PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
             SELECT ?sampleSourceName ?sourceId WHERE {{
-                VALUES ?sampleSourceName {{
-                    "{sampleSourceNames}"^^<http://www.w3.org/2001/XMLSchema#string> 
-                }}
-                ?sourceId rdfs:label ?sampleSource .
-                FILTER STRSTARTS(STR(?sourceId), "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#") .
+                 VALUES ?sampleSourceName {{
+                     "Intestine"
+                 }}
+
+                ?sourceId rdfs:label "Intestine" .
             }}
         """
         print("Fetching sample source ids ...")
-        sparql = SPARQLWrapper("https://sparql.hegroup.org/sparql")
+        sparql = SPARQLWrapper("https://abromics.gcp.glicid.fr/sparql")
         sparql.setReturnFormat(JSON)
         sparql.setQuery(sparql_query)
         try:
             res = sparql.query().convert()
             recs = res["results"]["bindings"]
             for item in recs:
-                print(item)
-                print(f"- binding {item['sourceSampleName']['value']} with {item['sourceId']['value']} -")
                 self.sampleSourcesBindNCIT[item["sampleSourceName"]["value"]] = item["sourceId"]["value"]
         except Exception as e:
             print(e)
-        
+
 
     ## Get the ncbi taxon id of a list of species
     def __getSpeciesTaxonomy(self):
@@ -313,7 +315,7 @@ class GraphCreator:
                     "microorganism": self.speciesTaxonomy[microorganism] if microorganism in self.speciesTaxonomy.keys() else "",
                     "collectionDate": report["sections"][0]["data"][0]["values"][3],
                     "sampleType": report["sections"][0]["data"][0]["values"][4],
-                    "sampleSource": "amelioration en cours", ####################### Sample source bind to relevant ontology
+                    "sampleSource": self.sampleSourcesBindNCIT[sampleSource] if sampleSource in self.sampleSourcesBindNCIT.keys() else "", ## I don't understand why the sampleSource does not end up in the samples.ttl file...
                     "host": self.speciesTaxonomy[host] if host in self.speciesTaxonomy.keys() else "",
                     "country": self.countries[countryName] if countryName in self.countries.keys() else "",
                     "sequencingTechnology": report["sections"][0]["data"][0]["values"][8],
