@@ -163,10 +163,10 @@ class GraphCreator:
 
             SELECT ?sampleSourceName ?sourceId WHERE {{
                  VALUES ?sampleSourceName {{
-                     "Intestine"
+                     { sampleSourceNames }
                  }}
 
-                ?sourceId rdfs:label "Intestine" .
+                ?sourceId rdfs:label ?sampleSourceName .
             }}
         """
         print("Fetching sample source ids ...")

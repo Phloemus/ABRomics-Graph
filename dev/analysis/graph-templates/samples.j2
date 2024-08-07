@@ -26,7 +26,7 @@
             prov:generatedAtTime "{{ sample["collectionDate"] }}T00:00:00Z"^^xsd:dateTime ;
         {% endif %}
         abromics:sampleType "{{ sample["sampleType"] }}" ;
-        abromics:sampleSource "{{ sample["sampleSource"] }}" ;
+        abromics:sampleSource <{{ sample["sampleSource"] }}> ;
         abromics:host <{{ sample["host"] }}> ;
         prov:atLocation <{{ sample["country"] }}> ;
         wdt:P17 <{{ sample["country"] }}> ; ## Link to a country
