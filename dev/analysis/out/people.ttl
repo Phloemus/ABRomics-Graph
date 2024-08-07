@@ -17,18 +17,18 @@
 ################################## People #################################
 
 
-    <4afd1ce0-5010-11ef-9a16-90658429fd42> rdf:type prov:Person, prov:Agent ;
+    <10271a1a-54c2-11ef-8453-90658429fd42> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "Philippe Glaser" ;
         foaf:mbox <pglaser@pasteur.fr> .
 
-    <4afd1d8a-5010-11ef-9a16-90658429fd42> rdf:type prov:Person, prov:Agent ;
+    <10271b82-54c2-11ef-8453-90658429fd42> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "Raphael Test" ;
         foaf:mbox <n3m0xy@gmail.com> .
 
-    <4afd1dda-5010-11ef-9a16-90658429fd42> rdf:type prov:Person, prov:Agent ;
+    <10271c0e-54c2-11ef-8453-90658429fd42> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "Admin Abromics" ;
         foaf:mbox <admin@analysis.abromics.fr> .
 
-    <4afd1e20-5010-11ef-9a16-90658429fd42> rdf:type prov:Person, prov:Agent ;
+    <10271c86-54c2-11ef-8453-90658429fd42> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "pglaser@pasteur.fr" ;
         foaf:mbox <> .

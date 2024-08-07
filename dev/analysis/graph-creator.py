@@ -160,7 +160,6 @@ class GraphCreator:
             sampleSourceNames += f"'{sampleSourceName}' "
         sparql_query = f"""
             PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
-            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
             SELECT ?sampleSourceName ?sourceId WHERE {{
                  VALUES ?sampleSourceName {{
@@ -186,7 +185,7 @@ class GraphCreator:
     ## Get the ncbi taxon id of a list of species
     def __getSpeciesTaxonomy(self):
         for report in self.allReports:
-            # add the microorganisms in the species dictionnary
+            # add the microorganisms in the species dictionnary (from section 1-0-0)
             if report["sections"][1]["data"][0]["values"][0] not in self.species:
                 self.species.append(report["sections"][1]["data"][0]["values"][0])
             # add the host specie to the species dictionnary
@@ -304,7 +303,7 @@ class GraphCreator:
                 originalSampleId = report["sections"][0]["data"][0]["values"][0]
                 submitterId = report["sections"][0]["data"][0]["values"][10]
                 countryName = report["sections"][0]["data"][0]["values"][7]
-                microorganism = report["sections"][0]["data"][0]["values"][2]
+                microorganism = report["sections"][1]["data"][0]["values"][0] ## because the section 0-0 is not consistant we use the name of the microorganism from the section 1-0-0
                 host = report["sections"][0]["data"][0]["values"][6]
                 sampleSource = report["sections"][0]["data"][0]["values"][5]
 
