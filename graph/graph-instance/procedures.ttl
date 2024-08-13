@@ -15,7 +15,6 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
-{% for procedure in procedures %}
-    <{{ procedure["id"] }}> rdf:type sosa:Procedure ;
-        sosa:isImplementedBy <{{ procedure["isImplementedBy"] }}> .
-{% endfor %}
+
+    <273af436-54c4-11ef-976c-90658429fd42> rdf:type sosa:Procedure ;
+        sosa:isImplementedBy <273af3aa-54c4-11ef-976c-90658429fd42>

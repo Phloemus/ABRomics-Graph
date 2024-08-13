@@ -26,6 +26,13 @@ services:
     #entrypoint:
     #["virtuoso.sh", "/usr/local/virtuoso-opensource/share/virtuoso/vad/set_up.sh"]
 
+  fastapi:
+    container_name: abromics-graph-api
+    build:
+      context: ./api
+    ports:
+      - 8080:8080
+  
   streamlit:
     image: phloemus/streamlit:0.0.1-sparql
     container_name: streamlit
