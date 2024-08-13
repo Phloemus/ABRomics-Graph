@@ -14,21 +14,10 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
-################################## People #################################
+################################## Observable Properties #################################
 
-
-    <b7c7ba2a-597e-11ef-a3cb-90658429fd42> rdf:type prov:Person, prov:Agent ;
-        foaf:givenName "Philippe Glaser" ;
-        foaf:mbox <pglaser@pasteur.fr> .
-
-    <b7c7ba8e-597e-11ef-a3cb-90658429fd42> rdf:type prov:Person, prov:Agent ;
-        foaf:givenName "Raphael Test" ;
-        foaf:mbox <n3m0xy@gmail.com> .
-
-    <b7c7bac0-597e-11ef-a3cb-90658429fd42> rdf:type prov:Person, prov:Agent ;
-        foaf:givenName "Admin Abromics" ;
-        foaf:mbox <admin@analysis.abromics.fr> .
-
-    <b7c7bade-597e-11ef-a3cb-90658429fd42> rdf:type prov:Person, prov:Agent ;
-        foaf:givenName "pglaser@pasteur.fr" ;
-        foaf:mbox <> .
+{% for gene in genes %}
+    <{{ gene["id"] }}> rdf:type sosa:observableProperty ;
+        rdf:type go:Gene ;
+        rdfs:label "{{ gene["label"] }}" .
+{% endfor %}

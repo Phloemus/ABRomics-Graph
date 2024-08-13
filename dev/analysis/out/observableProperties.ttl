@@ -1,0 +1,51 @@
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix schema: <https://schema.org/> .
+@prefix abromics: <https://abromics.fr/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix aro: <http://purl.obolibrary.org/obo/aro.owl#> .
+@prefix go: <http://purl.org/obo/owl/GO#> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+################################## Observable Properties #################################
+
+
+    <b7c7bc1e-597e-11ef-a3cb-90658429fd42> rdf:type sosa:observableProperty ;
+        rdfs:label <Resistance gene> .
+
+    <b7c7bc32-597e-11ef-a3cb-90658429fd42> rdf:type sosa:observableProperty ;
+        rdfs:label <Gene length> .
+
+    <b7c7bc3c-597e-11ef-a3cb-90658429fd42> rdf:type sosa:observableProperty ;
+        rdfs:label <Identity %> .
+
+    <b7c7bc50-597e-11ef-a3cb-90658429fd42> rdf:type sosa:observableProperty ;
+        rdfs:label <Coverage %> .
+
+    <b7c7bc5a-597e-11ef-a3cb-90658429fd42> rdf:type sosa:observableProperty ;
+        rdfs:label <Contig> .
+
+    <b7c7bc6e-597e-11ef-a3cb-90658429fd42> rdf:type sosa:observableProperty ;
+        rdfs:label <Start in contig> .
+
+    <b7c7bc78-597e-11ef-a3cb-90658429fd42> rdf:type sosa:observableProperty ;
+        rdfs:label <End in contig> .
+
+    <b7c7bc8c-597e-11ef-a3cb-90658429fd42> rdf:type sosa:observableProperty ;
+        rdfs:label <Strand> .
+
+    <b7c7bca0-597e-11ef-a3cb-90658429fd42> rdf:type sosa:observableProperty ;
+        rdfs:label <Antibiotic class> .
+
+    <b7c7bcb4-597e-11ef-a3cb-90658429fd42> rdf:type sosa:observableProperty ;
+        rdfs:label <Target antibiotic> .
+
+    <b7c7bcbe-597e-11ef-a3cb-90658429fd42> rdf:type sosa:observableProperty ;
+        rdfs:label <Accession number> .

@@ -27,6 +27,8 @@ class GraphCreator:
         self.species = []
         self.strains = []
         self.sampleSources = []
+        self.observableProperties = []
+        self.genes = []
 
         ## external entities and mappings between entities and ontology identifiers
         self.countries = {}
@@ -40,6 +42,8 @@ class GraphCreator:
         self.proceduresMapping = {}
         self.samplesMapping = {}
         self.peopleMapping = {}
+        self.observablePropertiesMapping = {}
+        self.genesMapping = {}
 
         ## entities links
         self.samplesSubmitters = {}
@@ -291,7 +295,8 @@ class GraphCreator:
                 uniqueGraphId = uuid.uuid1()
                 name = report["sections"][0]["data"][0]["values"][10]
                 email = ""
-
+                
+                ## some reports have different formats for the people data
                 if len(report["sections"][0]["data"][0]["values"]) == 12:
                     email = report["sections"][0]["data"][0]["values"][11] 
 
@@ -319,8 +324,33 @@ class GraphCreator:
 
     ## Add genes data to the memory for graph creation
     ## should get all the gene ontology id from the gene names to have fair data !
+    ## TODO: Add the link with gene ontology
     def __addGenes(self):
-        pass
+        for report in self.allReports:
+            for gene in report["sections"][2]["data"][0]["values"][0] + report["sections"][2]["data"][1]["values"][0]:
+                if gene not in self.genesMapping.keys():
+                    uniqueGraphId = uuid.uuid1()
+                    label = gene
+                    self.genes.append({
+                        "id": uniqueGraphId,
+                        "label": label
+                    })
+                    self.genesMapping[label] = uniqueGraphId
+
+    ## Adding all the observable properties used in the abromics reports in the 
+    ## observableProperty list.
+    def __addObservableProperties(self):
+        for report in self.allReports:
+            for observableProperty in report["sections"][2]["data"][0]["header"]: 
+                if observableProperty not in self.observablePropertiesMapping.keys():
+                    uniqueGraphId = uuid.uuid1()
+                    label = observableProperty
+                    self.observableProperties.append({
+                        "id": uniqueGraphId,
+                        "label": label
+                    })
+                    self.observablePropertiesMapping[label] = uniqueGraphId
+
 
     ## Add the samples data to memory for graph creation
     def __addSamples(self):
@@ -341,7 +371,7 @@ class GraphCreator:
                     "microorganism": self.speciesTaxonomy[microorganism] if microorganism in self.speciesTaxonomy.keys() else "",
                     "collectionDate": report["sections"][0]["data"][0]["values"][3],
                     "sampleType": report["sections"][0]["data"][0]["values"][4],
-                    "sampleSource": self.sampleSourcesBindNCIT[sampleSource] if sampleSource in self.sampleSourcesBindNCIT.keys() else "", ## I don't understand why the sampleSource does not end up in the samples.ttl file...
+                    "sampleSource": self.sampleSourcesBindNCIT[sampleSource] if sampleSource in self.sampleSourcesBindNCIT.keys() else "", 
                     "host": self.speciesTaxonomy[host] if host in self.speciesTaxonomy.keys() else "",
                     "country": self.countries[countryName] if countryName in self.countries.keys() else "",
                     "sequencingTechnology": report["sections"][0]["data"][0]["values"][8],
@@ -386,6 +416,8 @@ class GraphCreator:
         self.__addProcedures()
         self.__addPeople()
         self.__addStrains()
+        self.__addObservableProperties() 
+        self.__addGenes()
         self.__addSamples()
 
         ## Creating the turtle files
@@ -394,6 +426,8 @@ class GraphCreator:
         self.__createTtlFile("graph-templates/procedures.j2", "procedures", self.procedures) 
         self.__createTtlFile("graph-templates/people.j2", "people", self.people) 
         self.__createTtlFile("graph-templates/strains.j2", "strains", self.strains)
+        self.__createTtlFile("graph-templates/observable-properties.j2", "observableProperties", self.observableProperties)
+        self.__createTtlFile("graph-templates/genes.j2", "genes", self.genes)
         self.__createTtlFile("graph-templates/samples.j2", "samples", self.samples, filterFunctions=[{"name": "isDatetime", "content": self.__isDatetime}])
 
 
