@@ -122,6 +122,7 @@ class GraphCreator:
         else:
             self.countries = self.__readJsonFromFile("cache/countries.json")
 
+
     ## Get the regions from wikidata
     ## returns dictionnary of regions name corresponding to wikidata ids
     ## TODO: Link the regions to the sample
@@ -144,6 +145,32 @@ class GraphCreator:
             print(e)
         for item in recs:
             self.regions[item["regionName"]["value"]] = item["regionId"]["value"]
+
+
+    ## TODO: a place will be used in the acinetobacter usecase as the city
+    ## the query get the place name and the country to get the city id from
+    ## wikidata
+    def __getCity(self):
+        sparql_query ="""
+            SELECT ?city ?cityLabel WHERE {
+                ?city wdt:P31/wdt:P279* wd:Q515;  # ?city is an instance or subclass of city
+                rdfs:label "CITY_NAME"@en;    # Replace CITY_NAME with the name of the city
+                wdt:P17 wd:COUNTRY_ID .        # Replace COUNTRY_ID with the country's Wikidata ID
+                SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+            }
+            LIMIT 1
+        """
+        print("Fetching city wikidata ids ...")
+        sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
+        sparql.setReturnFormat(JSON)
+        sparql.setQuery(sparql_query)
+        try:
+            res = sparql.query().convert()
+            recs = res["results"]["bindings"]
+        except Exception as e:
+            pritn(e)
+        for item in recs:
+            self.cities[item["regionName"]["value"]] = item["regionId"]["value"]
 
 
     ## Get the sample sources from the NCIT ontology hosted by the ncit browser ######################################################

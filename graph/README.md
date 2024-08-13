@@ -30,8 +30,8 @@ telling virtuoso to consume the files present in **ontologies** and **graph-inst
 ```
 bash 
 # after doing a docker compose up -d
-# check the container launched
-docker ps
+# check the container launched and copy the container id
+docker ps | grep virtuoso 
 ```
 
 ```
@@ -48,7 +48,7 @@ bash
 cd /usr/local/virtuoso-opensource/share/virtuoso/vad
 chmod 777 set_up.sh
 ./set_up.sh
-# then exit the script with CTRL-C
+# then exit the script with CTRL-C. Wait until the last message written is 'Done. -- XXXXmsec'
 ```
 
 Now all the nodes present in the included graph files should be displonible in the graph when performing
@@ -62,5 +62,17 @@ select (COUNT(*) AS ?count) where {
 }
 ```
 
-The basic number of element in a virtuoso graph is arround **5400** if you have more (**~26k**) as of 
-today, the set up has been completed successfully 
+The basic number of element in a virtuoso graph is arround **5400** if you have more, the set up has been 
+completed successfully 
+
+## Loading new data
+
+Adding new data can be done using SPARQL requests (for small data addition). However, this process is not
+very efficient for large data update. In the case of a large update or addition of data. It's more relevant 
+to generate new ttl files that can be added in the **graph-instance** directory.
+
+When adding ttl files in **graph-instance** directory, virtuoso will not automatically update the graph database.
+To update it use execute the **reload.sh** (in /usr/local/virtuoso-opensource/share/virtuoso/vad) script 
+in the virutoso container. The script will make virutoso reload all the ttl files.
+
+## Deleting data

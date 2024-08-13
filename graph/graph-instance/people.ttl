@@ -13,9 +13,22 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
-{% for procedure in procedures %}
-    <{{ procedure["id"] }}> rdf:type sosa:Procedure ;
-        sosa:isImplementedBy <{{ procedure["isImplementedBy"] }}> .
-{% endfor %}
+################################## People #################################
+
+
+    <273af4e0-54c4-11ef-976c-90658429fd42> rdf:type prov:Person, prov:Agent ;
+        foaf:givenName "Philippe Glaser" ;
+        foaf:mbox <pglaser@pasteur.fr> .
+
+    <273af648-54c4-11ef-976c-90658429fd42> rdf:type prov:Person, prov:Agent ;
+        foaf:givenName "Raphael Test" ;
+        foaf:mbox <n3m0xy@gmail.com> .
+
+    <273af6de-54c4-11ef-976c-90658429fd42> rdf:type prov:Person, prov:Agent ;
+        foaf:givenName "Admin Abromics" ;
+        foaf:mbox <admin@analysis.abromics.fr> .
+
+    <273af756-54c4-11ef-976c-90658429fd42> rdf:type prov:Person, prov:Agent ;
+        foaf:givenName "pglaser@pasteur.fr" ;
+        foaf:mbox <> .
