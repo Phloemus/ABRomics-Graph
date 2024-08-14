@@ -40,6 +40,7 @@ class GraphCreator:
         self.platformsMapping = {}
         self.sensorsMapping = {}
         self.proceduresMapping = {}
+        self.strainsMapping = {}
         self.samplesMapping = {}
         self.peopleMapping = {}
         self.observablePropertiesMapping = {}
@@ -322,6 +323,8 @@ class GraphCreator:
                 "taxonomy": taxonomy
             })
 
+            self.strainsMapping[speciesName] = uniqueGraphId 
+
     ## Add genes data to the memory for graph creation
     ## should get all the gene ontology id from the gene names to have fair data !
     ## TODO: Add the link with gene ontology
@@ -350,7 +353,6 @@ class GraphCreator:
                         "label": label
                     })
                     self.observablePropertiesMapping[label] = uniqueGraphId
-
 
     ## Add the samples data to memory for graph creation
     def __addSamples(self):
@@ -381,6 +383,45 @@ class GraphCreator:
 
                 self.samplesSubmitters[originalSampleId] = submitterId
                 self.samplesMapping[originalSampleId] = uniqueGraphId
+
+
+    ## Add the observations made on all the samples
+    ## Not finished
+    def __addObservations(self):
+        observationHeaderId = 0
+        observationId = 0
+        for report in self.allReports:
+            for observationHeader in report["sections"][2]["data"][0]["header"]:
+                for observation in report["sections"][2]["data"][0]["values"][observationHeaderId]:
+                    # print(f"header id: {observationHeaderId}")
+                    print(f"len header: {len(report['sections'][2]['data'][0]['header'])}") ## Problem with the header index..
+                    uniqueGraphId = uuid.uuid1()
+                    strainFeatureOfInterest = self.strainsMapping[report["sections"][1]["data"][0]["values"][0]]
+                    sampleFeatureOfInterest = self.samplesMapping[report["sections"][0]["data"][0]["values"][0]]
+                    geneFeatureOfInterest = self.genesMapping[report["sections"][2]["data"][0]["values"][0][observationId]]
+                    observableProperty = self.observablePropertiesMapping[observationHeader]
+                    sensor = ""
+                    procedure = ""
+                    result = ""
+
+                    self.samples.append({
+                        "id": uniqueGraphId,
+                        "strain": strainFeatureOfInterest,
+                        "sample": sampleFeatureOfInterest,
+                        "gene": geneFeatureOfInterest,
+                        "observableProperty": observableProperty,
+                        "sensor": sensor,
+                        "procedure": procedure,
+                        "result": result
+                    })
+
+                    observationId = observationId + 1 
+                observationId = 0
+                observationHeaderId = observationHeaderId + 1
+
+
+
+
 
     ##### Public test methods #####
 
@@ -419,6 +460,7 @@ class GraphCreator:
         self.__addObservableProperties() 
         self.__addGenes()
         self.__addSamples()
+        self.__addObservations()
 
         ## Creating the turtle files
         self.__createTtlFile("graph-templates/platforms.j2", "platforms", self.platforms) 
