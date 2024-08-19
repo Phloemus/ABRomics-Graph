@@ -18,6 +18,6 @@
 ################################# Sensors ############################################
 
 
-    <273af3aa-54c4-11ef-976c-90658429fd42> rdf:type sosa:Sensor ;
+    <fc90e7aa-5e3b-11ef-a3d6-90658429fd42> rdf:type sosa:Sensor ;
         sosa:implements abromics:WF1_spec ;
-        sosa:isHostedBy <273af166-54c4-11ef-976c-90658429fd42> .
+        sosa:isHostedBy <fc90e520-5e3b-11ef-a3d6-90658429fd42> .

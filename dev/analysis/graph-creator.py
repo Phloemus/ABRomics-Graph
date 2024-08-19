@@ -28,6 +28,7 @@ class GraphCreator:
         self.strains = []
         self.sampleSources = []
         self.observableProperties = []
+        self.observations = []
         self.genes = []
 
         ## external entities and mappings between entities and ontology identifiers
@@ -386,15 +387,17 @@ class GraphCreator:
 
 
     ## Add the observations made on all the samples
-    ## Not finished
+    ########################################################################################################################################### NOT FINISHED - HERE ##
+    ## TODO: Adding the ttl file to a virtuoso graph
+    ## TDOD: Check if it's possible to reach observations by filtering the feature of interest and observable properties
+    ## TODO: Add the madeby sensor, used procedure and hasResult fields to the ttl observation file
+    ## TODO: Create the results ttl file
     def __addObservations(self):
         observationHeaderId = 0
         observationId = 0
         for report in self.allReports:
             for observationHeader in report["sections"][2]["data"][0]["header"]:
                 for observation in report["sections"][2]["data"][0]["values"][observationHeaderId]:
-                    # print(f"header id: {observationHeaderId}")
-                    print(f"len header: {len(report['sections'][2]['data'][0]['header'])}") ## Problem with the header index..
                     uniqueGraphId = uuid.uuid1()
                     strainFeatureOfInterest = self.strainsMapping[report["sections"][1]["data"][0]["values"][0]]
                     sampleFeatureOfInterest = self.samplesMapping[report["sections"][0]["data"][0]["values"][0]]
@@ -404,7 +407,7 @@ class GraphCreator:
                     procedure = ""
                     result = ""
 
-                    self.samples.append({
+                    self.observations.append({
                         "id": uniqueGraphId,
                         "strain": strainFeatureOfInterest,
                         "sample": sampleFeatureOfInterest,
@@ -418,9 +421,7 @@ class GraphCreator:
                     observationId = observationId + 1 
                 observationId = 0
                 observationHeaderId = observationHeaderId + 1
-
-
-
+            observationHeaderId = 0
 
 
     ##### Public test methods #####
@@ -471,6 +472,7 @@ class GraphCreator:
         self.__createTtlFile("graph-templates/observable-properties.j2", "observableProperties", self.observableProperties)
         self.__createTtlFile("graph-templates/genes.j2", "genes", self.genes)
         self.__createTtlFile("graph-templates/samples.j2", "samples", self.samples, filterFunctions=[{"name": "isDatetime", "content": self.__isDatetime}])
+        self.__createTtlFile("graph-templates/observations.j2", "observations", self.observations)
 
 
 
