@@ -18,5 +18,5 @@
 
 {% for observableProperty in observableProperties %}
     <{{ observableProperty["id"] }}> rdf:type sosa:observableProperty ;
-        rdfs:label <{{ observableProperty["label"] }}> .
+        rdfs:label "{{ observableProperty["label"] }}" .
 {% endfor %}
