@@ -16,5 +16,5 @@
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
 
-    <fc90e836-5e3b-11ef-a3d6-90658429fd42> rdf:type sosa:Procedure ;
-        sosa:isImplementedBy <fc90e7aa-5e3b-11ef-a3d6-90658429fd42> .
+    <bcdf27a4-5ede-11ef-8224-90658429fd42> rdf:type sosa:Procedure ;
+        sosa:isImplementedBy <bcdf272c-5ede-11ef-8224-90658429fd42> .
