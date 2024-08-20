@@ -374,7 +374,7 @@ class GraphCreator:
                     "microorganism": self.speciesTaxonomy[microorganism] if microorganism in self.speciesTaxonomy.keys() else "",
                     "collectionDate": report["sections"][0]["data"][0]["values"][3],
                     "sampleType": report["sections"][0]["data"][0]["values"][4],
-                    "sampleSource": self.sampleSourcesBindNCIT[sampleSource] if sampleSource in self.sampleSourcesBindNCIT.keys() else "", 
+                    "sampleSource": self.sampleSourcesBindNCIT[sampleSource] if sampleSource in self.sampleSourcesBindNCIT.keys() else "", ## BUG # always return en empty string
                     "host": self.speciesTaxonomy[host] if host in self.speciesTaxonomy.keys() else "",
                     "country": self.countries[countryName] if countryName in self.countries.keys() else "",
                     "sequencingTechnology": report["sections"][0]["data"][0]["values"][8],
@@ -388,7 +388,6 @@ class GraphCreator:
 
     ## Add the observations made on all the samples
     ########################################################################################################################################### NOT FINISHED - HERE ##
-    ## TDOD: Check if it's possible to reach observations by filtering the feature of interest and observable properties
     ## TODO: Add the madeby sensor, used procedure and hasResult fields to the ttl observation file
     ## TODO: Create the results ttl file
     def __addObservations(self):
