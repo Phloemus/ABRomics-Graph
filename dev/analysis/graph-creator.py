@@ -388,7 +388,6 @@ class GraphCreator:
 
     ## Add the observations made on all the samples
     ########################################################################################################################################### NOT FINISHED - HERE ##
-    ## TODO: Adding the ttl file to a virtuoso graph
     ## TDOD: Check if it's possible to reach observations by filtering the feature of interest and observable properties
     ## TODO: Add the madeby sensor, used procedure and hasResult fields to the ttl observation file
     ## TODO: Create the results ttl file
