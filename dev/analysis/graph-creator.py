@@ -389,7 +389,6 @@ class GraphCreator:
     ## Add the observations made on all the samples
     ########################################################################################################################################### NOT FINISHED - HERE ##
     ## TODO: Add the madeby sensor, used procedure and hasResult fields to the ttl observation file
-    ## TODO: Create the results ttl file
     def __addObservations(self):
         observationHeaderId = 0
         observationId = 0
@@ -420,6 +419,19 @@ class GraphCreator:
                 observationId = 0
                 observationHeaderId = observationHeaderId + 1
             observationHeaderId = 0
+
+
+    ## Add the observation results made on all the samples
+    ########################################################################################################################################### NOT FINISHED - HERE ##
+    def __addObservationResults(self):
+        pass
+        for report in self.allReports:
+            self.observationResults.append({
+                "id": uniqueGraphId,
+                "simpleResult": "",
+                "unit": "",
+                "resultTime": ""
+            })
 
 
     ##### Public test methods #####
