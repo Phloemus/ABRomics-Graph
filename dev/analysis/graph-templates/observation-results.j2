@@ -13,7 +13,12 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
+################################## Observation results #################################
 
-    <07cd7252-5fa2-11ef-97e3-90658429fd42> rdf:type sosa:Platform .
+{% for observationResult in observationResults %}
+    <{{ observationResult["id"] }}> rdf:type sosa:Result ;
+        sosa:hasSimpleResult "{{ observationResult["simpleResult"] }}" ;
+        sosa:hasUnit <{{ observationResult["unit"] }}> ;
+        sosa:resultTime "{{ observationResult["resultTime"] }}T00:00:00Z"^^xsd:dateTime .
+{% endfor %}

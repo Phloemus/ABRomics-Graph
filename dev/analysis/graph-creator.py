@@ -30,6 +30,7 @@ class GraphCreator:
         self.observableProperties = []
         self.observations = []
         self.genes = []
+        self.observationResults = []
 
         ## external entities and mappings between entities and ontology identifiers
         self.countries = {}
@@ -424,14 +425,27 @@ class GraphCreator:
     ## Add the observation results made on all the samples
     ########################################################################################################################################### NOT FINISHED - HERE ##
     def __addObservationResults(self):
-        pass
+        observationHeaderId = 0
+        observationId = 0
         for report in self.allReports:
-            self.observationResults.append({
-                "id": uniqueGraphId,
-                "simpleResult": "",
-                "unit": "",
-                "resultTime": ""
-            })
+            for observationHeader in report["sections"][2]["data"][0]["header"]:
+                for observation in report["sections"][2]["data"][0]["values"][observationHeaderId]:
+                    uniqueGraphId = uuid.uuid1()
+                    simpleResult = observation
+                    unit = self.observablePropertiesMapping[observationHeader]
+                    resultTime = report["sections"][0]["data"][0]["values"][3]
+
+                    self.observationResults.append({
+                        "id": uniqueGraphId,
+                        "simpleResult": simpleResult,
+                        "unit": unit,                       ## The unit is the graph id of the obervable property of linked to the result
+                        "resultTime": resultTime
+                    })
+
+                    observationId = observationId + 1 
+                observationId = 0
+                observationHeaderId = observationHeaderId + 1
+            observationHeaderId = 0
 
 
     ##### Public test methods #####
@@ -472,6 +486,7 @@ class GraphCreator:
         self.__addGenes()
         self.__addSamples()
         self.__addObservations()
+        self.__addObservationResults()
 
         ## Creating the turtle files
         self.__createTtlFile("graph-templates/platforms.j2", "platforms", self.platforms) 
@@ -483,6 +498,7 @@ class GraphCreator:
         self.__createTtlFile("graph-templates/genes.j2", "genes", self.genes)
         self.__createTtlFile("graph-templates/samples.j2", "samples", self.samples, filterFunctions=[{"name": "isDatetime", "content": self.__isDatetime}])
         self.__createTtlFile("graph-templates/observations.j2", "observations", self.observations)
+        self.__createTtlFile("graph-templates/observation-results.j2", "observationResults", self.observationResults)
 
 
 
