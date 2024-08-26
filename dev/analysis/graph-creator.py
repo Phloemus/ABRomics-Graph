@@ -423,7 +423,6 @@ class GraphCreator:
 
 
     ## Add the observation results made on all the samples
-    ########################################################################################################################################### NOT FINISHED - HERE ##
     def __addObservationResults(self):
         observationHeaderId = 0
         observationId = 0
