@@ -88,3 +88,6 @@ To update it use execute the **clear_abromics_graph.sh** (in /usr/local/virtuoso
 in the virutoso container and then load it back using the **load.sh** script. 
 The script will make virutoso reload all the ttl files.
 
+## Executing SPARQL requests from the terminal
+
+The **exectute_query.sh** script allows to send SPARQL query to the abromics SPARQL endpoint. 

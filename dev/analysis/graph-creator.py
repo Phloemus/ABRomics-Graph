@@ -200,9 +200,17 @@ class GraphCreator:
                      { sampleSourceNames }
                  }}
 
+                VALUES ?topLevelClassName {{ 
+                  'Anatomic Structure, System, or Substance'
+                }}
+
+                ?topLevelClass rdfs:label ?topLevelClassName .
+                ?sourceId rdfs:subClassOf+ ?topLevelClass .
+
                 ?sourceId rdfs:label ?sampleSourceName .
             }}
-        """
+       """
+        print(sparql_query)
         print("Fetching sample source ids ...")
         sparql = SPARQLWrapper("https://abromics.gcp.glicid.fr/sparql")
         sparql.setReturnFormat(JSON)
