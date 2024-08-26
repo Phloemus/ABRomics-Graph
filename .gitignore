@@ -1,4 +1,7 @@
 # exclude data directory (where virtuoso puts data in)
 data
 
+# exclude the ongologies used in the graph
+graph/ontologies
+
 .env
