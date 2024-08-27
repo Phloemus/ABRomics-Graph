@@ -209,8 +209,7 @@ class GraphCreator:
 
                 ?sourceId rdfs:label ?sampleSourceName .
             }}
-       """
-        print(sparql_query)
+        """
         print("Fetching sample source ids ...")
         sparql = SPARQLWrapper("https://abromics.gcp.glicid.fr/sparql")
         sparql.setReturnFormat(JSON)
@@ -263,41 +262,51 @@ class GraphCreator:
             self.speciesTaxonomy[item["speciesName"]["value"]] = item["taxon"]["value"]
 
     ## Add the plateforms (places where the workflows were performed)
+    ############################################################################################################################################# REWORK THIS FUNCTION
     def __addProcedures(self):
-        uniqueGraphId = uuid.uuid1()
-        name="wf1"
+        pass
+        #uniqueGraphId = uuid.uuid1()
+        #name="wf1"
 
-        self.procedures.append({
-            "id": uniqueGraphId,
-            "isImplementedBy": self.sensorsMapping["genomic"]
-        })
+        #self.procedures.append({
+        #    "id": uniqueGraphId,
+        #    "isImplementedBy": self.sensorsMapping["genomic"]
+        #})
 
-        self.platformsMapping[name] = uniqueGraphId
+        #self.platformsMapping[name] = uniqueGraphId
 
     ## Add the plateforms (places where the workflows were performed)
+    ############################################################################################################################################# REWORK THIS FUNCTION
     def __addPlatforms(self):
-        uniqueGraphId = uuid.uuid1()
-        name="NNCR"
+        pass
+        #uniqueGraphId = uuid.uuid1()
+        #name="NNCR"
 
-        self.platforms.append({
-            "id": uniqueGraphId,
-        })
+        #self.sensors.append({
+        #    "id": uniqueGraphId,
+        #    "implements": "abromics:WF1_spec",
+        #    "isHostedBy": self.platformsMapping["NNCR"]
+        #})
 
-        self.platformsMapping[name] = uniqueGraphId
+        #self.platforms.append({
+        #    "id": uniqueGraphId,
+        #})
+
+        #self.platformsMapping[name] = uniqueGraphId
 
     ## Add sensors data to memory for graph creation
     ## Sensors define the workflow used in to produce de reports (default genomic)
     def __addSensors(self):
-        uniqueGraphId = uuid.uuid1()
-        name="genomic"
+        for report in self.allReports:
+            uniqueGraphId = uuid.uuid1()
+            name = report["sections"][0]["data"][0]["values"][8]
 
-        self.sensors.append({
-            "id": uniqueGraphId,
-            "implements": "abromics:WF1_spec",
-            "isHostedBy": self.platformsMapping["NNCR"]
-        })
+            self.sensors.append({
+                "id": uniqueGraphId,
+                "name": name
+            })
 
-        self.sensorsMapping[name] = uniqueGraphId
+            self.sensorsMapping[name] = uniqueGraphId
 
     ## Add people data to memory for graph creation
     def __addPeople(self):
@@ -409,7 +418,7 @@ class GraphCreator:
                     sampleFeatureOfInterest = self.samplesMapping[report["sections"][0]["data"][0]["values"][0]]
                     geneFeatureOfInterest = self.genesMapping[report["sections"][2]["data"][0]["values"][0][observationId]]
                     observableProperty = self.observablePropertiesMapping[observationHeader]
-                    sensor = ""
+                    sensor = self.sensorsMapping[report["sections"][0]["data"][0]["values"][8]]
                     procedure = ""
                     result = ""
 

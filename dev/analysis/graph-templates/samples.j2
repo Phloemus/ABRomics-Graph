@@ -29,8 +29,7 @@
         abromics:sampleSource <{{ sample["sampleSource"] }}> ;
         abromics:host <{{ sample["host"] }}> ;
         prov:atLocation <{{ sample["country"] }}> ;
-        wdt:P17 <{{ sample["country"] }}> ; ## Link to a country
-        abromics:sequencingTechnology "{{ sample["sequencingTechnology"] }}" ;
+        prov:wasGeneratedBy "{{ sample["sequencingTechnology"] }}" ;
         abromics:sequencingPartner "{{ sample["sequencingPartner"] }}" ;
         prov:wasAttributedTo <{{ sample["submitterId"] }}> . 
 {% endfor %}

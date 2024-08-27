@@ -1,4 +1,5 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix schema: <https://schema.org/> .
 @prefix abromics: <https://abromics.fr/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -19,6 +20,9 @@
 
 {% for sensor in sensors %}
     <{{ sensor["id"] }}> rdf:type sosa:Sensor ;
-        sosa:implements {{ sensor["implements"] }} ;
-        sosa:isHostedBy <{{ sensor["isHostedBy"] }}> .
+        rdfs:label "{{ sensor["name"] }}" ;
+        sosa:isHostedBy <> ;
+        sosa:observes <> ;
+        sosa:madeObservation <> ;
+        ssn:implementsOnly <> .
 {% endfor %}
