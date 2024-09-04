@@ -15,3 +15,5 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
+
+    <291e5c02-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:Platform .

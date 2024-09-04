@@ -23,7 +23,7 @@
         sosa:hasFeatureOfInterest <{{ observation["gene"] }}> ;
         sosa:hasObservableProperty <{{ observation["observableProperty"] }}> ;
         prov:wasGeneratedBy <{{ observation["sensor"] }}> ;
-        sosa:madeBySensor <{{ observation["sensor"] }}> ;
+        {% if observation["sensor"] != "" %}sosa:madeBySensor <{{ observation["sensor"] }}> ;{% endif %}
         sosa:usedProcedure <{{ observation["procedure"] }}> ;
         sosa:hasResult <{{ observation["result"] }}> .
 {% endfor %}

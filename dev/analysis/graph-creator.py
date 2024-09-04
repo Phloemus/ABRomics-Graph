@@ -264,49 +264,45 @@ class GraphCreator:
     ## Add the plateforms (places where the workflows were performed)
     ############################################################################################################################################# REWORK THIS FUNCTION
     def __addProcedures(self):
-        pass
-        #uniqueGraphId = uuid.uuid1()
-        #name="wf1"
+        uniqueGraphId = uuid.uuid1()
+        name="workflow 1 (genomic)"
+        sensorsList = filter(None, list(self.sensorsMapping.values()))
 
-        #self.procedures.append({
-        #    "id": uniqueGraphId,
-        #    "isImplementedBy": self.sensorsMapping["genomic"]
-        #})
+        self.procedures.append({
+            "id": uniqueGraphId,
+            "name": name,
+            "isImplementedBy": sensorsList
+        })
 
-        #self.platformsMapping[name] = uniqueGraphId
+        self.proceduresMapping[name] = uniqueGraphId
 
     ## Add the plateforms (places where the workflows were performed)
     ############################################################################################################################################# REWORK THIS FUNCTION
     def __addPlatforms(self):
-        pass
-        #uniqueGraphId = uuid.uuid1()
-        #name="NNCR"
+        uniqueGraphId = uuid.uuid1()
+        name="NNCR"
 
-        #self.sensors.append({
-        #    "id": uniqueGraphId,
-        #    "implements": "abromics:WF1_spec",
-        #    "isHostedBy": self.platformsMapping["NNCR"]
-        #})
+        self.platforms.append({
+            "id": uniqueGraphId,
+        })
 
-        #self.platforms.append({
-        #    "id": uniqueGraphId,
-        #})
-
-        #self.platformsMapping[name] = uniqueGraphId
+        self.platformsMapping[name] = uniqueGraphId
 
     ## Add sensors data to memory for graph creation
-    ## Sensors define the workflow used in to produce de reports (default genomic)
+    ## Sensors define the sequencer used to get the sequencing data
     def __addSensors(self):
         for report in self.allReports:
-            uniqueGraphId = uuid.uuid1()
             name = report["sections"][0]["data"][0]["values"][8]
+            if name not in self.sensorsMapping.keys() and name != "":
+                uniqueGraphId = uuid.uuid1()
 
-            self.sensors.append({
-                "id": uniqueGraphId,
-                "name": name
-            })
+                self.sensors.append({
+                    "id": uniqueGraphId,
+                    "name": name,
+                    "isHostedBy": self.platformsMapping["NNCR"],
+                })
 
-            self.sensorsMapping[name] = uniqueGraphId
+                self.sensorsMapping[name] = uniqueGraphId
 
     ## Add people data to memory for graph creation
     def __addPeople(self):
@@ -418,8 +414,8 @@ class GraphCreator:
                     sampleFeatureOfInterest = self.samplesMapping[report["sections"][0]["data"][0]["values"][0]]
                     geneFeatureOfInterest = self.genesMapping[report["sections"][2]["data"][0]["values"][0][observationId]]
                     observableProperty = self.observablePropertiesMapping[observationHeader]
-                    sensor = self.sensorsMapping[report["sections"][0]["data"][0]["values"][8]]
-                    procedure = ""
+                    sensor = "" if report["sections"][0]["data"][0]["values"][8] == "" else self.sensorsMapping[report["sections"][0]["data"][0]["values"][8]] 
+                    procedure = self.proceduresMapping["workflow 1 (genomic)"]
                     result = ""
 
                     self.observations.append({

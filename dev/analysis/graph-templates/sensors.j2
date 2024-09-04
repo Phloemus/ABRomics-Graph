@@ -21,8 +21,5 @@
 {% for sensor in sensors %}
     <{{ sensor["id"] }}> rdf:type sosa:Sensor ;
         rdfs:label "{{ sensor["name"] }}" ;
-        sosa:isHostedBy <> ;
-        sosa:observes <> ;
-        sosa:madeObservation <> ;
-        ssn:implementsOnly <> .
+        sosa:isHostedBy <{{ sensor["isHostedBy"]}}> ;
 {% endfor %}

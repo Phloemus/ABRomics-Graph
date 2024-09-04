@@ -17,846 +17,846 @@
 ################################## Observable Properties #################################
 
 
-    <6544523e-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6062-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "blaTEM-1A" .
 
-    <65445266-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e606c-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "tet(A)" .
 
-    <65445284-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6076-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "sul1" .
 
-    <654452a2-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e609e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "qacE" .
 
-    <654452c0-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e60a8-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "dfrA1" .
 
-    <654452d4-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e60b2-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "aadA1" .
 
-    <654452f2-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e60c6-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "espL1" .
 
-    <6544531a-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e60e4-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "espY2" .
 
-    <65445338-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e60ee-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "espY1" .
 
-    <65445356-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e60f8-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "espY3" .
 
-    <6544536a-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6102-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "gspC" .
 
-    <65445388-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6116-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "gspD" .
 
-    <654453c4-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6120-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "gspE" .
 
-    <654453d8-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e612a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "gspF" .
 
-    <654453f6-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6134-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "gspG" .
 
-    <6544540a-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e613e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "gspH" .
 
-    <65445428-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6148-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "gspI" .
 
-    <6544543c-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6152-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "gspJ" .
 
-    <6544545a-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e615c-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "gspK" .
 
-    <6544546e-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6166-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "gspL" .
 
-    <65445482-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e617a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "gspM" .
 
-    <654454a0-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6184-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "entD" .
 
-    <654454be-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e618e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fepA" .
 
-    <65445504-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6198-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fes" .
 
-    <65445518-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e61a2-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "entF" .
 
-    <65445536-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e61ac-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fepC" .
 
-    <65445554-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e61c0-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fepG" .
 
-    <65445568-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e61d4-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fepD" .
 
-    <65445586-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e61de-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "entS" .
 
-    <6544559a-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e61e8-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fepB" .
 
-    <654455b8-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e61fc-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "entC" .
 
-    <654455cc-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6206-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "entE" .
 
-    <654455e0-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6210-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "entB" .
 
-    <654455fe-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e621a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "entA" .
 
-    <65445612-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6224-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "csgB" .
 
-    <65445630-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e622e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "csgD" .
 
-    <65445644-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6238-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "csgF" .
 
-    <65445658-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6242-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "csgG" .
 
-    <6544566c-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e624c-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "ompA" .
 
-    <65445680-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6260-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fimB" .
 
-    <6544569e-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6274-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fimE" .
 
-    <654456b2-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e627e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fimA" .
 
-    <654456d0-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6288-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fimI" .
 
-    <654456ee-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e629c-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fimC" .
 
-    <65445720-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e62a6-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fimD" .
 
-    <6544573e-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e62b0-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fimF" .
 
-    <65445752-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e62ba-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fimG" .
 
-    <65445770-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e62c4-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fimH" .
 
-    <65445784-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e62ce-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "espY4" .
 
-    <65445798-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e62d8-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "aslA" .
 
-    <654457b6-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e62ec-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "espR1" .
 
-    <654457ca-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e62f6-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "espX1" .
 
-    <654457de-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6300-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fdeC" .
 
-    <654457fc-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e630a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "ykgK/ecpR" .
 
-    <6544581a-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6314-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "yagZ/ecpA" .
 
-    <65445856-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e631e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "yagY/ecpB" .
 
-    <65445874-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6328-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "yagX/ecpC" .
 
-    <65445892-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e638c-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "yagW/ecpD" .
 
-    <654458a6-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6396-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "yagV/ecpE" .
 
-    <654458ba-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e63aa-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "espX4" .
 
-    <654458d8-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e63b4-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "espL4" .
 
-    <654458ec-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e63c8-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "espX5" .
 
-    <65445900-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e63d2-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "chuS" .
 
-    <6544591e-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e63dc-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "shuA" .
 
-    <65445932-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e63e6-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "shuT" .
 
-    <65445946-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e63f0-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "chuW" .
 
-    <65445964-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e63fa-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "shuX" .
 
-    <65445978-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6404-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "chuY" .
 
-    <6544598c-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e640e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "chuU" .
 
-    <654459aa-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6418-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "chuV" .
 
-    <654459be-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e642c-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "espR4" .
 
-    <654459d2-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6436-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "iutA" .
 
-    <654459f0-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e644a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "iucD" .
 
-    <65445a04-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6454-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "iucC" .
 
-    <65445a18-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e645e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "iucB" .
 
-    <65445a36-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6468-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "iucA" .
 
-    <65445a5e-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6472-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "afaF-VII" .
 
-    <65445a7c-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6486-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "afaA-VIII" .
 
-    <65445a9a-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6490-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "afaB-VIII" .
 
-    <65445ab8-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e649a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "afaC-VIII" .
 
-    <65445acc-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e64a4-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "afaD-VIII" .
 
-    <65445aea-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e64ae-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "afaE-VIII" .
 
-    <65445afe-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e64b8-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "faeC" .
 
-    <65445b12-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e64c2-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "faeD" .
 
-    <65445b30-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e64d6-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "faeE" .
 
-    <65445b44-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e64e0-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "faeF" .
 
-    <65445b80-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e64f4-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "faeH" .
 
-    <65445b9e-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e64fe-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "faeI" .
 
-    <65445bbc-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6512-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "faeJ" .
 
-    <65445bd0-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e651c-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "astA" .
 
-    <65445c02-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e653a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "sitABCD" .
 
-    <65445c20-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e654e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "dfrA36" .
 
-    <65445c34-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6558-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "sul2" .
 
-    <65445c52-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6562-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "tet(B)" .
 
-    <65445c70-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6576-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "floR" .
 
-    <65445c84-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6580-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "catA1" .
 
-    <65445ca2-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e658a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "blaOXA-1" .
 
-    <65445cc0-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6594-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "aph(3')-Ia" .
 
-    <65445d10-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e65c6-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "lsa(A)" .
 
-    <65445d24-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e65d0-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "optrA" .
 
-    <65445d42-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e65da-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fexA" .
 
-    <65445d56-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e65e4-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "aph(3')-III" .
 
-    <65445d6a-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e65f8-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "ant(6)-Ia" .
 
-    <65445d7e-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e660c-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "tet(M)" .
 
-    <65445d9c-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6616-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "erm(B)" .
 
-    <65445db0-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6620-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "dfrG" .
 
-    <65445dc4-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e662a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "ClpL" .
 
-    <65445df6-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6634-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "tet(L)" .
 
-    <65445e14-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e663e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "bopD" .
 
-    <65445e32-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6652-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "efaA" .
 
-    <65445e46-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e665c-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "prgB/asc10" .
 
-    <65445e64-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6666-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fss2" .
 
-    <65445e78-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6670-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "cpsA" .
 
-    <65445e8c-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e667a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "cpsB" .
 
-    <65445ea0-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6684-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "cpsC" .
 
-    <65445ebe-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e668e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "cpsD" .
 
-    <65445ed2-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e66a2-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "cpsE" .
 
-    <65445ee6-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e66ac-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "cpsG" .
 
-    <65445f18-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e66b6-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "cpsH" .
 
-    <65445f36-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e66c0-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "cpsI" .
 
-    <65445f4a-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e66ca-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "cpsJ" .
 
-    <65445f5e-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e66d4-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "cpsK" .
 
-    <65445f7c-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e66e8-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fss3" .
 
-    <65445f90-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e66f2-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "sprE" .
 
-    <65445fa4-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e66fc-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "gelE" .
 
-    <65445fb8-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6706-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fsrC" .
 
-    <65445fd6-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6710-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "srtC" .
 
-    <65445fea-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e671a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "ebpC" .
 
-    <65445ffe-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6724-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "ebpB" .
 
-    <6544601c-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6738-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "ebpA" .
 
-    <6544603a-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6742-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fss1" .
 
-    <6544606c-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6756-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "blaCTX-M-15" .
 
-    <65446080-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e676a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "dfrA17" .
 
-    <6544609e-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6774-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "aadA5" .
 
-    <654460b2-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e677e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "mph(A)" .
 
-    <654460d0-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e67b0-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "aac(3)-IIa" .
 
-    <654460e4-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e67ba-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "catB3" .
 
-    <654460f8-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e67c4-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "aac(6')-Ib-cr" .
 
-    <65446152-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6800-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "blaTEM-1B" .
 
-    <65446184-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e680a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "qnrB4" .
 
-    <654461b6-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6814-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "blaDHA-1" .
 
-    <654461d4-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e681e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "aph(3'')-Ib" .
 
-    <654461f2-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6828-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "aph(6)-Id" .
 
-    <65446206-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e683c-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "ere(A)" .
 
-    <6544621a-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6846-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "aac(6')-IIc" .
 
-    <65446238-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6850-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "blaSHV-12" .
 
-    <6544624c-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e685a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "aac(6')-Ib3" .
 
-    <6544626a-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6864-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "ARR-3" .
 
-    <65446288-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e686e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "mcr-9" .
 
-    <654462a6-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6882-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "dfrA19" .
 
-    <654462ec-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6896-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "vat" .
 
-    <6544630a-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e68aa-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "chuA" .
 
-    <65446328-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e68b4-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "chuT" .
 
-    <65446346-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e68be-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "chuX" .
 
-    <65446364-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6b48-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "tcpC" .
 
-    <65446378-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6b5c-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "ybtS" .
 
-    <65446396-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6b66-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "ybtX" .
 
-    <654463aa-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6b70-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "ybtQ" .
 
-    <654463be-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6b7a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "ybtP" .
 
-    <65446792-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6b8e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "ybtA" .
 
-    <654467b0-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6b98-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "irp2" .
 
-    <654467ce-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6ba2-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "irp1" .
 
-    <654467ec-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6bac-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "ybtU" .
 
-    <65446800-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6bb6-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "ybtT" .
 
-    <65446814-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6bc0-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "ybtE" .
 
-    <65446832-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6bca-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "fyuA" .
 
-    <65446846-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6bd4-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "sfaC" .
 
-    <65446864-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6bf2-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "gtrB" .
 
-    <65446882-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6bfc-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "gtrA" .
 
-    <65446896-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6c10-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "cnf1" .
 
-    <654468b4-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6c1a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "papI" .
 
-    <654468fa-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6c2e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "papB" .
 
-    <65446918-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6c38-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "papH" .
 
-    <65446940-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6c56-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "papC" .
 
-    <65446954-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6c60-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "papD" .
 
-    <65446972-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6c6a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "papJ" .
 
-    <65446986-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6c74-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "papK" .
 
-    <654469a4-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6c7e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "papE" .
 
-    <654469b8-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6c88-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "papF" .
 
-    <654469d6-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6c9c-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "papX" .
 
-    <654469ea-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6ca6-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "iroN" .
 
-    <65446a08-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6cb0-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "iroE" .
 
-    <65446a4e-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6cba-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "iroD" .
 
-    <65446a6c-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6cc4-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "iroC" .
 
-    <65446a8a-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6cce-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "iroB" .
 
-    <65446a9e-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6cd8-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "sfaB" .
 
-    <65446abc-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6cf6-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "sfaD" .
 
-    <65446ad0-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6d00-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "sfaE" .
 
-    <65446aee-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6d0a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "sfaF" .
 
-    <65446b02-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6d14-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "sfaG" .
 
-    <65446b20-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6d1e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "hlyD" .
 
-    <65446b34-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6d28-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "hlyB" .
 
-    <65446b48-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6d32-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "sfaY" .
 
-    <65446b66-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6d3c-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "focG" .
 
-    <65446b7a-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6d46-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "focH" .
 
-    <65446bac-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6d64-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "blaTEM-35" .
 
-    <65446bc0-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6d6e-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "blaCTX-M-27" .
 
-    <65446be8-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6d82-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "kpsM" .
 
-    <65446c2e-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6daa-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "kpsD" .
 
-    <65446c4c-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6dbe-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "draP" .
 
-    <65446c60-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6dc8-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "afaD" .
 
-    <65446c7e-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6ddc-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "draC" .
 
-    <65446c9c-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6de6-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "draB" .
 
-    <65446cce-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6df0-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "draA" .
 
-    <65446cec-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6dfa-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "afaF-III" .
 
-    <65446d1e-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6e18-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "mcr-1.1" .
 
-    <65446d6e-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6e4a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "papG" .
 
-    <65446daa-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6e68-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "blaCTX-M-55" .
 
-    <65446dc8-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6e72-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "stcE" .
 
-    <65446e04-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6e90-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "paa" .
 
-    <65446e22-6489-11ef-b134-90658429fd42> rdf:type sosa:observableProperty ;
+    <291e6e9a-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:observableProperty ;
         rdf:type go:Gene ;
         rdfs:label "estIa" .
