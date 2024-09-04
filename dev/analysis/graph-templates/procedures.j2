@@ -17,5 +17,8 @@
 
 {% for procedure in procedures %}
     <{{ procedure["id"] }}> rdf:type sosa:Procedure ;
-        sosa:isImplementedBy <{{ procedure["isImplementedBy"] }}> .
+        {% for sensorId in procedure["isImplementedBy"] %}
+            sosa:isImplementedBy <{{ sensorId }}> ; 
+        {% endfor %}
+        rdfs:label "{{ procedure["name"] }}" .
 {% endfor %}
