@@ -19,18 +19,18 @@
 ################################# Sensors ############################################
 
 
-    <291e5ca2-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:Sensor ;
+    <fe6e1d20-6c34-11ef-bff7-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "Illumina NovaSeq 6000" ;
-        sosa:isHostedBy <291e5c02-6ac7-11ef-9f85-90658429fd42> ;
+        sosa:isHostedBy <fe6e1b68-6c34-11ef-bff7-90658429fd42> ;
 
-    <291e5cd4-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:Sensor ;
+    <fe6e1db6-6c34-11ef-bff7-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "454 GS Junior" ;
-        sosa:isHostedBy <291e5c02-6ac7-11ef-9f85-90658429fd42> ;
+        sosa:isHostedBy <fe6e1b68-6c34-11ef-bff7-90658429fd42> ;
 
-    <291e5cf2-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:Sensor ;
+    <fe6e1dfc-6c34-11ef-bff7-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "NextSeq 500" ;
-        sosa:isHostedBy <291e5c02-6ac7-11ef-9f85-90658429fd42> ;
+        sosa:isHostedBy <fe6e1b68-6c34-11ef-bff7-90658429fd42> ;
 
-    <291e5d60-6ac7-11ef-9f85-90658429fd42> rdf:type sosa:Sensor ;
+    <fe6e1f32-6c34-11ef-bff7-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "Illumina HiSeq 4000" ;
-        sosa:isHostedBy <291e5c02-6ac7-11ef-9f85-90658429fd42> ;
+        sosa:isHostedBy <fe6e1b68-6c34-11ef-bff7-90658429fd42> ;

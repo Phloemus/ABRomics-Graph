@@ -46,6 +46,7 @@ class GraphCreator:
         self.samplesMapping = {}
         self.peopleMapping = {}
         self.observablePropertiesMapping = {}
+        self.observationResultsMapping = {}
         self.genesMapping = {}
 
         ## entities links
@@ -404,6 +405,7 @@ class GraphCreator:
     ########################################################################################################################################### NOT FINISHED - HERE ##
     ## TODO: Add the madeby sensor, used procedure and hasResult fields to the ttl observation file
     def __addObservations(self):
+        reportId = 0
         observationHeaderId = 0
         observationId = 0
         for report in self.allReports:
@@ -416,7 +418,11 @@ class GraphCreator:
                     observableProperty = self.observablePropertiesMapping[observationHeader]
                     sensor = "" if report["sections"][0]["data"][0]["values"][8] == "" else self.sensorsMapping[report["sections"][0]["data"][0]["values"][8]] 
                     procedure = self.proceduresMapping["workflow 1 (genomic)"]
-                    result = ""
+
+                    ## To get the result the key of to get the result value should be crafted with the sampleId 
+                    ## (aka reportId) and with the observable property name (header of table) and with the 
+                    ## the observationId (corresponding to the row of the observations table)
+                    result = self.observationResultsMapping[f"{reportId}_{observableProperty}_{observationId}"]
 
                     self.observations.append({
                         "id": uniqueGraphId,
@@ -433,10 +439,12 @@ class GraphCreator:
                 observationId = 0
                 observationHeaderId = observationHeaderId + 1
             observationHeaderId = 0
+            reportId = reportId + 1
 
 
     ## Add the observation results made on all the samples
     def __addObservationResults(self):
+        reportId = 0
         observationHeaderId = 0
         observationId = 0
         for report in self.allReports:
@@ -454,10 +462,17 @@ class GraphCreator:
                         "resultTime": resultTime
                     })
 
+                    ## As the observation results have are in a table. 3 keys should be combined to craft a unique key 
+                    ## that could be searched in other part of the code to retrive the uniqueGraphId associated with 
+                    ## the observationResult
+                    observationResultId = f"{reportId}_{unit}_{str(observationId)}"
+                    self.observationResultsMapping[observationResultId] = uniqueGraphId
+
                     observationId = observationId + 1 
                 observationId = 0
                 observationHeaderId = observationHeaderId + 1
             observationHeaderId = 0
+            reportId = reportId + 1
 
 
     ##### Public test methods #####
@@ -497,8 +512,8 @@ class GraphCreator:
         self.__addObservableProperties() 
         self.__addGenes()
         self.__addSamples()
-        self.__addObservations()
         self.__addObservationResults()
+        self.__addObservations()
 
         ## Creating the turtle files
         self.__createTtlFile("graph-templates/platforms.j2", "platforms", self.platforms) 
