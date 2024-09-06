@@ -1,0 +1,13 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ncbitaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+PREFIX uberon: <http://purl.obolibrary.org/obo/UBERON_>
+PREFIX obom: <https://data.bioontology.org/metadata/obo/>
+PREFIX ro: <http://purl.obolibrary.org/obo/RO_>
+
+SELECT ?specie ?organs ?organLabels WHERE {
+  ?specie rdfs:label "Homo sapiens" .
+  ?organs ro:0002175 ?specie .
+  ?organs rdfs:label ?organLabels .
+}
+
