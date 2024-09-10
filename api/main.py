@@ -9,6 +9,7 @@ from typing import Union
 from fastapi import FastAPI
 
 app = FastAPI(debug=True)
+sparqlEndpoint = "https://abromics.gcp.glicid.fr/sparql"
 
 @app.get("/")
 def root():
@@ -18,6 +19,7 @@ def root():
 @app.get("/items/{item_id}")
 def item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
+
 
 @app.get("/count-nodes") 
 def countNodes():
@@ -30,7 +32,7 @@ def countNodes():
         }
         GROUP BY ?graph
     """
-    sparql = SPARQLWrapper("http://localhost:8081/sparql")
+    sparql = SPARQLWrapper(sparqlEndpoint)
     sparql.setReturnFormat(JSON)
     sparql.setQuery(sparql_query)
     try:
@@ -61,7 +63,7 @@ def getOrgans(specie_name: str):
           ?organs rdfs:label ?organLabels .
         }}
     """
-    sparql = SPARQLWrapper("http://localhost:8081/sparql")
+    sparql = SPARQLWrapper(sparqlEndpoint)
     sparql.setReturnFormat(JSON)
     sparql.setQuery(sparql_query)
     try:
