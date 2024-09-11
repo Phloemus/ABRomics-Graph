@@ -21,6 +21,7 @@ services:
     volumes:
       - ./data/virtuoso:/data
       - ./graph:/usr/local/virtuoso-opensource/share/virtuoso/vad
+      - /dev/null:/usr/local/virtuoso-opensource/share/virtuoso/vad/old-data # delete the old data folder in the container so it doesn't load the old data
     ports:
       - "8890:8890"
     #entrypoint:
