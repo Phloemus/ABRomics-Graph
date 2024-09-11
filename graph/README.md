@@ -85,8 +85,10 @@ to generate new ttl files that can be added in the **graph-instance** directory.
 
 When adding ttl files in **graph-instance** directory, virtuoso will not automatically update the graph database.
 To update it use execute the **clear_abromics_graph.sh** (in /usr/local/virtuoso-opensource/share/virtuoso/vad) script 
-in the virutoso container and then load it back using the **load.sh** script. 
-The script will make virutoso reload all the ttl files.
+
+### The new data doest load
+
+To fix this issue. Destroy the data folder at the root of the project (its a volume that contains the database used by virtuoso). When destroying it you can do a fresh restart, recreate the data folder and launch a new virtuoso container. There should be no data for the data.abromics.fr graph neither for the ontologies.abromics.fr graph. So log into the container an launch the set_up.sh file to create a graph with the .ttl files (data) and with the .owl files (ontologies)
 
 ## Executing SPARQL requests from the terminal
 
