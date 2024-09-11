@@ -10,6 +10,63 @@ import uuid
 from datetime import datetime
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
 from SPARQLWrapper import SPARQLWrapper, JSON
+from dotenv import load_dotenv # to read the environment variables from the .env file
+
+from alive_progress import alive_bar
+import time
+import requests
+import json
+
+## Downloader class allows to fetch abromics reports from the api, filter them 
+## and save them locally
+class Downloader():
+
+    def __init__(self):
+
+        ## env variables (get the user ABRomics credentials from .env file)
+        load_dotenv()
+        
+        ## load the environment variables
+        self.api_url = os.getenv('API_URL') 
+        self.api_username = os.getenv('API_USERNAME')
+        self.api_password = os.getenv('API_PASSWORD')
+        self.api_temp_basic_token = os.getenv('API_TEMP_BASIC_TOKEN')
+
+    ## Public methods
+
+    ## download all the abromics reports marked as "ready to report" 
+    ## downloadDir (string) : indicate the directory in which the reports should be saved
+    def getAllAbromicsReadyReports(self, downloadDir):
+        response = requests.get(
+            "https://analysis.abromics.fr/api/analysis/",
+            params={'status': 'ready_to_report'},
+            headers = {
+                'Authorization': f"Basic {self.api_temp_basic_token}",
+            }
+        )
+        exploitable_analysis = response.json()
+        exploitable_analysis_ids = [analysis["id"] for analysis in exploitable_analysis["results"]]
+
+        if not os.path.exists(downloadDir):
+            os.makedirs(downloadDir)
+    
+        with alive_bar(len(exploitable_analysis_ids)) as bar:
+            for report_id in exploitable_analysis_ids:
+                print(report_id)
+                response = requests.get(
+                    f"https://analysis.abromics.fr/api/analysis/{report_id}/report/",
+                    headers = {
+                        'Authorization': f"Basic {self.api_temp_basic_token}",
+                    }
+                )
+                report = response.json()
+                
+                # save the reports in a local file
+                with open(f'{downloadDir}/abr_report_{report_id}.json', 'w') as f:
+                    json.dump(report, f)
+                bar()
+
+
 
 ## Creator module class
 class GraphCreator:
@@ -74,6 +131,16 @@ class GraphCreator:
             return True
         except ValueError:
             return False
+
+    ## curate the reports and only keep the reports that contains all the required fields
+    def __curateReports(self):
+        curatedReports = []
+        for report in self.allReports:
+            if len(report["sections"][0]["data"][0]["values"]) < 11:
+                continue
+            curatedReports.append(report)
+        self.allReports = curatedReports
+
 
     def __createTtlFile(self, templatePath, dataName, data, filterFunctions=[]):
 
@@ -494,6 +561,9 @@ class GraphCreator:
         ## Loading the reports in memory
         self.allReports = [self.__readJsonFromFile(f"{self.reportDirectory}/{reportFilename}") for reportFilename in os.listdir("reports") if reportFilename.endswith(".json")]
 
+        ## Curate the reports
+        self.__curateReports()
+
         ## Getting static values
         choiceCountries = input("Get fresh countries data (from wikidata) ? [yes/no] ")
         if choiceCountries == "yes": 
@@ -528,6 +598,14 @@ class GraphCreator:
         self.__createTtlFile("graph-templates/observation-results.j2", "observationResults", self.observationResults)
 
 
+
+
+## Download all the abromics reports marked as ready to report
+downloadDir = "reports"
+choiceDownloadFreshReports = input(f"Download fresh reports data from abromics (this action is destructive) (target directory: {downloadDir}) ? [yes/no] ")
+if choiceDownloadFreshReports == "yes": 
+    downloader = Downloader()
+    downloader.getAllAbromicsReadyReports(downloadDir)
 
 ## Usecase of the graph creator
 gc = GraphCreator("reports")
