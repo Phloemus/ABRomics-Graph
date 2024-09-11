@@ -17,18 +17,30 @@
 ################################## People #################################
 
 
-    <6d2cb8be-7024-11ef-ad57-90658429fd42> rdf:type prov:Person, prov:Agent ;
+    <d2617c12-704f-11ef-bc4d-90658429fd42> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "Philippe Glaser" ;
         foaf:mbox <pglaser@pasteur.fr> .
 
-    <6d2cb954-7024-11ef-ad57-90658429fd42> rdf:type prov:Person, prov:Agent ;
+    <d2617c4e-704f-11ef-bc4d-90658429fd42> rdf:type prov:Person, prov:Agent ;
+        foaf:givenName "Claudine Médigue" ;
+        foaf:mbox <claudine.medigue@france-bioinformatique.fr> .
+
+    <d2617c8a-704f-11ef-bc4d-90658429fd42> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "Raphael Test" ;
         foaf:mbox <n3m0xy@gmail.com> .
 
-    <6d2cb9b8-7024-11ef-ad57-90658429fd42> rdf:type prov:Person, prov:Agent ;
+    <d2617cc6-704f-11ef-bc4d-90658429fd42> rdf:type prov:Person, prov:Agent ;
+        foaf:givenName "Sebastien Leclercq" ;
+        foaf:mbox <sebastien.leclercq@inrae.fr> .
+
+    <d2617d20-704f-11ef-bc4d-90658429fd42> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "Admin Abromics" ;
         foaf:mbox <admin@analysis.abromics.fr> .
 
-    <6d2cb9fe-7024-11ef-ad57-90658429fd42> rdf:type prov:Person, prov:Agent ;
+    <d2617d5c-704f-11ef-bc4d-90658429fd42> rdf:type prov:Person, prov:Agent ;
         foaf:givenName "pglaser@pasteur.fr" ;
         foaf:mbox <> .
+
+    <d2617dac-704f-11ef-bc4d-90658429fd42> rdf:type prov:Person, prov:Agent ;
+        foaf:givenName "Amanda Dieuaide" ;
+        foaf:mbox <amanda.dieuaide@france-bioinformatique.fr> .
