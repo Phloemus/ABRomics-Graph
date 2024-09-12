@@ -1,0 +1,36 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX abromics: <https://abromics.fr/>
+
+
+## Q2bis: List k top antibiotic genes by sample type
+## 
+## Get the list of the antibiotic genes the most present in specific sample types as well as the number 
+## of samples the resistance gene have been found in the samples
+## 
+## Getting only the samples having a sample type defined to "human" (this value can be changed to "animal" or "environmental"
+## to explore the list of the most present antibiotic resistance genes in those sample types). Filtration of the 
+## observations to have an observationProperty of "Resistance gene". Counts the number of each time a sample has the 
+## same gene_name in its linked observations. Returns a list of the k top antibiotic genes in descending order for 
+## a specific sample type
+## 
+SELECT ?gene_name (COUNT(?gene_name) AS ?nbObservations) WHERE {
+
+    ?sample rdf:type sosa:FeatureOfInterest, sio:001050 ; ## sio:001050 corresponds to the sample entity of the SIO ontology (more information: https://www.ebi.ac.uk/ols4/search?q=sio%3A001050)
+       abromics:sampleType "human" . ## the value can be changed to "animal" or "environmental"
+
+    ?coverage_prop rdf:type sosa:observableProperty ;
+        rdfs:label "Resistance gene" .
+
+    ?observation sosa:hasObservableProperty ?coverage_prop ;
+                 sosa:hasFeatureOfInterest ?sample ;
+                 sosa:hasFeatureOfInterest ?gene .
+
+    ?gene rdf:type sosa:observableProperty, go:Gene ;
+        rdfs:label ?gene_name .
+             
+} 
+GROUP BY ?gene_name 
+ORDER BY DESC(?nbObservations) 
