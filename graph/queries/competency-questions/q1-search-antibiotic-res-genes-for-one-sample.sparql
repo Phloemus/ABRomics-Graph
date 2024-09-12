@@ -13,7 +13,7 @@ PREFIX schema: <https://schema.org/>
 ## The query returns the simpleResults of these filtered observations. The simpleResults 
 ## are strings corresponding to the name of the resistance gene
 SELECT DISTINCT ?gene_names WHERE {
-    ?gene_name_prop a sosa:observableProperty ;
+    ?gene_name_prop a sosa:ObservableProperty ;
         rdfs:label "Resistance gene" .
                 
     ?sample rdf:type sosa:FeatureOfInterest ;

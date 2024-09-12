@@ -17,7 +17,7 @@
 ################################## Observable Properties #################################
 
 {% for gene in genes %}
-    <{{ gene["id"] }}> rdf:type sosa:observableProperty ;
+    <{{ gene["id"] }}> rdf:type sosa:ObservableProperty ;
         rdf:type go:Gene ;
         rdfs:label "{{ gene["label"] }}" .
 {% endfor %}

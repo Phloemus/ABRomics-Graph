@@ -15,7 +15,7 @@ SELECT DISTINCT ?gene_name ?coverage ?sample WHERE {
 
     ?sample rdf:type sosa:FeatureOfInterest, sio:001050 . ## sio:001050 corresponds to the sample entity of the SIO ontology (more information: https://www.ebi.ac.uk/ols4/search?q=sio%3A001050)
 
-    ?coverage_prop rdf:type sosa:observableProperty ;
+    ?coverage_prop rdf:type sosa:ObservableProperty ;
         rdfs:label "Coverage %" .
 
     ?observation sosa:hasObservableProperty ?coverage_prop ;
@@ -23,7 +23,7 @@ SELECT DISTINCT ?gene_name ?coverage ?sample WHERE {
                  sosa:hasFeatureOfInterest ?gene ;
                  sosa:hasResult/sosa:hasSimpleResult ?coverage .
 
-    ?gene rdf:type sosa:observableProperty, go:Gene ;
+    ?gene rdf:type sosa:ObservableProperty, go:Gene ;
         rdfs:label ?gene_name .
              
 } 
