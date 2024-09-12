@@ -21,14 +21,14 @@ SELECT ?gene_name (COUNT(?gene_name) AS ?nbObservations) WHERE {
     ?sample rdf:type sosa:FeatureOfInterest, sio:001050 ; ## sio:001050 corresponds to the sample entity of the SIO ontology (more information: https://www.ebi.ac.uk/ols4/search?q=sio%3A001050)
        abromics:sampleType "human" . ## the value can be changed to "animal" or "environmental"
 
-    ?coverage_prop rdf:type sosa:observableProperty ;
+    ?coverage_prop rdf:type sosa:ObservableProperty ;
         rdfs:label "Resistance gene" .
 
     ?observation sosa:hasObservableProperty ?coverage_prop ;
                  sosa:hasFeatureOfInterest ?sample ;
                  sosa:hasFeatureOfInterest ?gene .
 
-    ?gene rdf:type sosa:observableProperty, go:Gene ;
+    ?gene rdf:type sosa:ObservableProperty, go:Gene ;
         rdfs:label ?gene_name .
              
 } 
