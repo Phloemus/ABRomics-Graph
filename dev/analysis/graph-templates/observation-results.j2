@@ -18,7 +18,11 @@
 
 {% for observationResult in observationResults %}
     <{{ observationResult["id"] }}> rdf:type sosa:Result ;
-        sosa:hasSimpleResult "{{ observationResult["simpleResult"] }}" ;
+        {% if observationResult["simpleResult"]|isFloat %}
+            sosa:hasSimpleResult "{{ observationResult["simpleResult"] }}"^^xsd:decimal ;
+        {% else %}
+            sosa:hasSimpleResult "{{ observationResult["simpleResult"] }}" ;
+        {% endif %}
         sosa:hasUnit <{{ observationResult["unit"] }}> ;
         sosa:resultTime "{{ observationResult["resultTime"] }}T00:00:00Z"^^xsd:dateTime .
 {% endfor %}

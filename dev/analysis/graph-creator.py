@@ -132,6 +132,10 @@ class GraphCreator:
         except ValueError:
             return False
 
+    ## return true if the number given as parameter is a floating number and returns false otherwise
+    def __isFloat(self, val):
+        return type(val).__name__ == "float"
+
     ## curate the reports and only keep the reports that contains all the required fields
     def __curateReports(self):
         curatedReports = []
@@ -595,7 +599,7 @@ class GraphCreator:
         self.__createTtlFile("graph-templates/genes.j2", "genes", self.genes)
         self.__createTtlFile("graph-templates/samples.j2", "samples", self.samples, filterFunctions=[{"name": "isDatetime", "content": self.__isDatetime}])
         self.__createTtlFile("graph-templates/observations.j2", "observations", self.observations)
-        self.__createTtlFile("graph-templates/observation-results.j2", "observationResults", self.observationResults)
+        self.__createTtlFile("graph-templates/observation-results.j2", "observationResults", self.observationResults, filterFunctions=[{"name": "isFloat", "content": self.__isFloat}])
 
 
 
