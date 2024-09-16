@@ -1,0 +1,1 @@
+Download fresh reports data from abromics (this action is destructive) (target directory: reports) ? [yes/no] 
