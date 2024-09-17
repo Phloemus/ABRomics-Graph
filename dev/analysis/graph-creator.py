@@ -264,6 +264,7 @@ class GraphCreator:
         sampleSourceNames = ""
         for sampleSourceName in self.sampleSources:
             sampleSourceNames += f"'{sampleSourceName}' "
+            print(sampleSourceName)
         sparql_query = f"""
             PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
 
