@@ -19,30 +19,30 @@
 ################################# Sensors ############################################
 
 
-    <73a4f992-7112-11ef-9a97-90658429fd42> rdf:type sosa:Sensor ;
+    <9388bbf6-743a-11ef-a049-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "NextSeq 500" ;
-        sosa:isHostedBy <73a4f712-7112-11ef-9a97-90658429fd42> .
+        sosa:isHostedBy <9388ba34-743a-11ef-a049-90658429fd42> .
 
-    <73a4fa1e-7112-11ef-9a97-90658429fd42> rdf:type sosa:Sensor ;
+    <9388bc96-743a-11ef-a049-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "Illumina NextSeq 2000" ;
-        sosa:isHostedBy <73a4f712-7112-11ef-9a97-90658429fd42> .
+        sosa:isHostedBy <9388ba34-743a-11ef-a049-90658429fd42> .
 
-    <73a4fa8c-7112-11ef-9a97-90658429fd42> rdf:type sosa:Sensor ;
+    <9388bd0e-743a-11ef-a049-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "Illumina NovaSeq 6000" ;
-        sosa:isHostedBy <73a4f712-7112-11ef-9a97-90658429fd42> .
+        sosa:isHostedBy <9388ba34-743a-11ef-a049-90658429fd42> .
 
-    <73a4fbcc-7112-11ef-9a97-90658429fd42> rdf:type sosa:Sensor ;
+    <9388bdfe-743a-11ef-a049-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "454 GS Junior" ;
-        sosa:isHostedBy <73a4f712-7112-11ef-9a97-90658429fd42> .
+        sosa:isHostedBy <9388ba34-743a-11ef-a049-90658429fd42> .
 
-    <73a4fc62-7112-11ef-9a97-90658429fd42> rdf:type sosa:Sensor ;
+    <9388be76-743a-11ef-a049-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "Illumina HiSeq 2500" ;
-        sosa:isHostedBy <73a4f712-7112-11ef-9a97-90658429fd42> .
+        sosa:isHostedBy <9388ba34-743a-11ef-a049-90658429fd42> .
 
-    <73a4fd5c-7112-11ef-9a97-90658429fd42> rdf:type sosa:Sensor ;
+    <9388bf66-743a-11ef-a049-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "Illumina HiSeq 4000" ;
-        sosa:isHostedBy <73a4f712-7112-11ef-9a97-90658429fd42> .
+        sosa:isHostedBy <9388ba34-743a-11ef-a049-90658429fd42> .
 
-    <73a4fe24-7112-11ef-9a97-90658429fd42> rdf:type sosa:Sensor ;
+    <9388c060-743a-11ef-a049-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "Illumina HiScanSQ" ;
-        sosa:isHostedBy <73a4f712-7112-11ef-9a97-90658429fd42> .
+        sosa:isHostedBy <9388ba34-743a-11ef-a049-90658429fd42> .

@@ -26,6 +26,5 @@ st.markdown('''The ABRomics KG demo will help you understand how to use a knowle
 
 st.markdown('''The demonstration is intended for all public, researchers and clinicians are welcomed. Further documentation
             about the technical details of the project can be found in the complete documentation
-        ''')
-
+           ''')
 

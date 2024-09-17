@@ -17,44 +17,44 @@
 ################################## Observable Properties #################################
 
 
-    <73a50662-7112-11ef-9a97-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <9388c9a2-743a-11ef-a049-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Resistance gene" .
 
-    <73a5069e-7112-11ef-9a97-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <9388c9de-743a-11ef-a049-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Gene length" .
 
-    <73a506c6-7112-11ef-9a97-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <9388ca1a-743a-11ef-a049-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Identity (%)" .
 
-    <73a506ee-7112-11ef-9a97-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <9388cae2-743a-11ef-a049-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Coverage (%)" .
 
-    <73a50716-7112-11ef-9a97-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <9388cb28-743a-11ef-a049-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Contig" .
 
-    <73a50748-7112-11ef-9a97-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <9388cb5a-743a-11ef-a049-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Start in contig" .
 
-    <73a50770-7112-11ef-9a97-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <9388cb96-743a-11ef-a049-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "End in contig" .
 
-    <73a507ac-7112-11ef-9a97-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <9388cbdc-743a-11ef-a049-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Strand" .
 
-    <73a507de-7112-11ef-9a97-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <9388cc18-743a-11ef-a049-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Antibiotic class" .
 
-    <73a50806-7112-11ef-9a97-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <9388cc54-743a-11ef-a049-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Target antibiotic" .
 
-    <73a5082e-7112-11ef-9a97-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <9388cc86-743a-11ef-a049-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "# Accession" .
 
-    <73a5089c-7112-11ef-9a97-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <9388ccf4-743a-11ef-a049-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Identity %" .
 
-    <73a508ba-7112-11ef-9a97-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <9388cd26-743a-11ef-a049-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Coverage %" .
 
-    <73a508ec-7112-11ef-9a97-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <9388cd62-743a-11ef-a049-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Accession number" .
