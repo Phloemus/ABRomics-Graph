@@ -37,15 +37,21 @@ class Downloader():
     ## download all the abromics reports marked as "ready to report" 
     ## downloadDir (string) : indicate the directory in which the reports should be saved
     def getAllAbromicsReadyReports(self, downloadDir):
-        response = requests.get(
-            "https://analysis.abromics.fr/api/analysis/",
-            params={'status': 'ready_to_report'},
-            headers = {
-                'Authorization': f"Basic {self.api_temp_basic_token}",
-            }
-        )
-        exploitable_analysis = response.json()
-        exploitable_analysis_ids = [analysis["id"] for analysis in exploitable_analysis["results"]]
+        response = { "next": "https://analysis.abromics.fr/api/analysis/" }
+        exploitable_analysis_ids = []
+        while "next" in response and response["next"] != None: 
+            response = requests.get(
+                response["next"],
+                params={'status': 'ready_to_report'},
+                headers = {
+                    'Authorization': f"Basic {self.api_temp_basic_token}",
+                }
+            )
+            response = response.json()
+            for analysis in response["results"]:
+                exploitable_analysis_ids.append(analysis["id"])
+
+        print(f"{len(exploitable_analysis_ids)} reports will be downloaded ...")
 
         if not os.path.exists(downloadDir):
             os.makedirs(downloadDir)

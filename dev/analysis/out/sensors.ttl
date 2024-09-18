@@ -19,30 +19,26 @@
 ################################# Sensors ############################################
 
 
-    <75f286e6-74dd-11ef-9b7f-90658429fd42> rdf:type sosa:Sensor ;
+    <63948968-75c3-11ef-b578-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "NextSeq 500" ;
-        sosa:isHostedBy <75f2854c-74dd-11ef-9b7f-90658429fd42> .
+        sosa:isHostedBy <639486c0-75c3-11ef-b578-90658429fd42> .
 
-    <75f28772-74dd-11ef-9b7f-90658429fd42> rdf:type sosa:Sensor ;
+    <63948a3a-75c3-11ef-b578-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "Illumina NextSeq 2000" ;
-        sosa:isHostedBy <75f2854c-74dd-11ef-9b7f-90658429fd42> .
+        sosa:isHostedBy <639486c0-75c3-11ef-b578-90658429fd42> .
 
-    <75f287cc-74dd-11ef-9b7f-90658429fd42> rdf:type sosa:Sensor ;
+    <63948ac6-75c3-11ef-b578-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "Illumina NovaSeq 6000" ;
-        sosa:isHostedBy <75f2854c-74dd-11ef-9b7f-90658429fd42> .
+        sosa:isHostedBy <639486c0-75c3-11ef-b578-90658429fd42> .
 
-    <75f288a8-74dd-11ef-9b7f-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "454 GS Junior" ;
-        sosa:isHostedBy <75f2854c-74dd-11ef-9b7f-90658429fd42> .
-
-    <75f28902-74dd-11ef-9b7f-90658429fd42> rdf:type sosa:Sensor ;
+    <63948c38-75c3-11ef-b578-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "Illumina HiSeq 2500" ;
-        sosa:isHostedBy <75f2854c-74dd-11ef-9b7f-90658429fd42> .
+        sosa:isHostedBy <639486c0-75c3-11ef-b578-90658429fd42> .
 
-    <75f289d4-74dd-11ef-9b7f-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "Illumina HiSeq 4000" ;
-        sosa:isHostedBy <75f2854c-74dd-11ef-9b7f-90658429fd42> .
+    <63948dfa-75c3-11ef-b578-90658429fd42> rdf:type sosa:Sensor ;
+        rdfs:label "Illumina MiSeq" ;
+        sosa:isHostedBy <639486c0-75c3-11ef-b578-90658429fd42> .
 
-    <75f28a7e-74dd-11ef-9b7f-90658429fd42> rdf:type sosa:Sensor ;
+    <63948e68-75c3-11ef-b578-90658429fd42> rdf:type sosa:Sensor ;
         rdfs:label "Illumina HiScanSQ" ;
-        sosa:isHostedBy <75f2854c-74dd-11ef-9b7f-90658429fd42> .
+        sosa:isHostedBy <639486c0-75c3-11ef-b578-90658429fd42> .

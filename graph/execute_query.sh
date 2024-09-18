@@ -12,7 +12,7 @@ fi
 SPARQL_QUERY=$(<"$1")
 
 ## Change the host if needed
-HOST="http://locahost:8081/sparql"
+HOST="http://localhost:8081/sparql"
 if [ "$2" == "-h" ]; then
     HOST=$3
 fi
