@@ -1,8 +1,0 @@
-SELECT ?countryName WHERE {
-  ?region rdfs:label "Loburg"@en .
-  ?place wdt:P131 ?region .
-  ?place wdt:P17 ?country .
-  ?country rdfs:label ?countryName .
-  FILTER(LANG(?countryName) = "en")
-}
-LIMIT 10
