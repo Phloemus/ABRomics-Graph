@@ -8,7 +8,8 @@ services:
     ports:
       - 8081:80
     volumes:
-      - ./nginx-config/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./src/nginx-config/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./src/web:/usr/share/nginx/html
     depends_on:
       - virtuoso
 
@@ -19,18 +20,16 @@ services:
       SPARQL_UPDATE: "true"
       DEFAULT_GRAPH: "http://sparql.abromics.fr/"
     volumes:
-      - ./data/virtuoso:/data
-      - ./graph:/usr/local/virtuoso-opensource/share/virtuoso/vad
+      - ./src/data/virtuoso:/data
+      - ./src/graph:/usr/local/virtuoso-opensource/share/virtuoso/vad
       - /dev/null:/usr/local/virtuoso-opensource/share/virtuoso/vad/old-data # delete the old data folder in the container so it doesn't load the old data
     ports:
       - "8890:8890"
-    #entrypoint:
-    #["virtuoso.sh", "/usr/local/virtuoso-opensource/share/virtuoso/vad/set_up.sh"]
 
   fastapi:
     container_name: abromics-graph-api
     build:
-      context: ./api
+      context: ./src/web/api
     ports:
       - 8080:8080
   
@@ -38,6 +37,6 @@ services:
     image: phloemus/streamlit:0.0.1-sparql
     container_name: streamlit
     volumes:
-      - ./streamlit/app:/streamlit/app
+      - ./src/web/streamlit/app:/streamlit/app
     ports:
       - "8501:8501"

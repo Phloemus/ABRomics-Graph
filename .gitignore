@@ -1,6 +1,7 @@
 
-.virtual_ducuments
-.ipynb_checkpoints
+*/__pycache__
+*/.virtual_ducuments
+*/.ipynb_checkpoints
 
 src/graph/ontologies
 src/data

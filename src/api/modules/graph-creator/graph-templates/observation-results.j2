@@ -1,0 +1,28 @@
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix schema: <https://schema.org/> .
+@prefix abromics: <https://abromics.fr/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix aro: <http://purl.obolibrary.org/obo/aro.owl#> .
+@prefix go: <http://purl.org/obo/owl/GO#> .
+@prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+################################## Observation results #################################
+
+{% for observationResult in observationResults %}
+    <{{ observationResult["id"] }}> rdf:type sosa:Result ;
+        {% if observationResult["simpleResult"]|isFloat %}
+            sosa:hasSimpleResult "{{ observationResult["simpleResult"] }}"^^xsd:decimal ;
+        {% else %}
+            sosa:hasSimpleResult "{{ observationResult["simpleResult"] }}" ;
+        {% endif %}
+        sosa:hasUnit <{{ observationResult["unit"] }}> ;
+        sosa:resultTime "{{ observationResult["resultTime"] }}T00:00:00Z"^^xsd:dateTime .
+{% endfor %}
