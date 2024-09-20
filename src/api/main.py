@@ -9,7 +9,7 @@ from typing import Union
 from fastapi import FastAPI
 
 ## Module imports
-from modules.graph-creator import graph-creator as GraphCreator
+from modules.graph-creator import graph-creator as GraphTools
 
 app = FastAPI(debug=True)
 sparqlEndpoint = "https://abromics.gcp.glicid.fr/sparql"
@@ -78,5 +78,13 @@ def getOrgans(specie_name: str):
     for item in recs:
         response.append({"specie": item["specie"]["value"], "organ": item["organs"]["value"], "organName": item["organLabels"]["value"]})
     return response
+
+
+## Allow to create the graph files 
+@app.get("/create-graph")
+def createGraph():
+    gc = GraphTools.GraphCreator("reports")
+    gc.createGraph()
+
 
 
