@@ -1,0 +1,15 @@
+
+## Request that get all the countries from wikidata 
+## (execute this request locally which perform a request to wikidata
+
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+
+SELECT ?countryId ?countryName WHERE {
+    
+    SERVICE <https://query.wikidata.org/sparql> {
+        ?countryId wdt:P31 wd:Q6256 . 
+        ?countryId rdfs:label ?countryName .
+        FILTER (lang(?countryName) = "en")
+    }
+}
