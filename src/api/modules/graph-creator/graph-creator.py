@@ -549,15 +549,3 @@ class GraphCreator:
         self.__createTtlFile("graph-templates/observation-results.j2", "observationResults", self.observationResults, filterFunctions=[{"name": "isFloat", "content": self.__isFloat}])
 
 
-
-
-## Download all the abromics reports marked as ready to report
-downloadDir = "reports"
-choiceDownloadFreshReports = input(f"Download fresh reports data from abromics (this action is destructive) (target directory: {downloadDir}) ? [yes/no] ")
-if choiceDownloadFreshReports == "yes": 
-    downloader = Downloader()
-    downloader.getAllAbromicsReadyReports(downloadDir)
-
-## Usecase of the graph creator
-gc = GraphCreator("reports")
-gc.createGraph()
