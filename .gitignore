@@ -3,6 +3,8 @@
 */.virtual_ducuments
 */.ipynb_checkpoints
 
+*/.venv
+
 src/graph/ontologies
 src/data
 
