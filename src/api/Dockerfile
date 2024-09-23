@@ -3,13 +3,16 @@
 
 FROM python:3.9
 
-COPY requirements.txt /api/requirements.txt
-RUN pip install --no-cache-dir --upgrade -r /api/requirements.txt
+COPY requirements.txt api/requirements.txt
+COPY app.py api/app.py
+COPY modules api/modules
+COPY modules api/queries
+COPY data api/data
 
-COPY . /api
+RUN python3 -m pip install -r requirements.txt
 
 WORKDIR /api
 
 EXPOSE 8080
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["uwsgi", "--http", "127.0.0.1:8080", "--master", "-p", "4", "-w", "app:app"]

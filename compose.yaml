@@ -30,15 +30,6 @@ services:
     networks:
       - containers
 
-  fastapi:
-    container_name: abromics-graph-api
-    build:
-      context: ./src/api
-    ports:
-      - 8080:8080
-    networks:
-      - containers
-  
   streamlit:
     image: phloemus/streamlit:0.0.1-sparql
     container_name: streamlit
