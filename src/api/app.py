@@ -1,6 +1,10 @@
 
+import sys
 from flask import Flask, jsonify
 from SPARQLWrapper import SPARQLWrapper, JSON
+
+## Module imports
+import modules.graph_creator
 
 
 app = Flask(__name__)
@@ -57,6 +61,13 @@ def home():
     })
 
 
+## Routes that allow to modify the graph
+@app.route("/build-graph", methods=['GET'])
+def buildGraph():
+    gc = GraphCreator()
+    return jsonify({"message": "test 1 passed"})
+
+
 ## Routes that trigger SPARQL queries 
 @app.route("/query", methods=['GET'])
 def listAvailableQueries():
@@ -69,6 +80,7 @@ def countNodesInAllGraphs():
 @app.route("/sample/count", methods=[QUERIES[1]["method"]])
 def countSamplesInGraph():
     return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[1]["filePath"]))
+
 
 
 
