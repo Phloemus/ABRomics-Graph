@@ -5,18 +5,32 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 
 app = Flask(__name__)
 
-queries = [
+## Constants
+QUERIES = [
     {
-        "name": "count-all",
+        "name": "count-nodes",
         "method": "GET",
         "filePath": "queries/count-nodes-for-all-graphs.sparql",
         "description": """
             Return the number of nodes for each graphs present in the virtuoso server. 
         """,
         "parameters": {}
+    },
+    {
+        "name": "count-samples",
+        "method": "GET",
+        "filePath": "queries/count-samples-by-person.sparql",
+        "description": """
+            Return count the samples for every people that uploded some in the abromics kg
+        """,
+        "parameters": {}
     }
 ]
 
+SPARQL_ENDPOINT = "http://localhost:8890/sparql"
+
+
+## Util functions 
 def executeQuery(sparqlEndpointUrl, queryFilePath, Parameters={}):
     with open(queryFilePath, 'r') as file:
         query = file.read()
@@ -34,7 +48,7 @@ def executeQuery(sparqlEndpointUrl, queryFilePath, Parameters={}):
 
 
 
-
+## Home Route
 @app.route("/")
 def home():
     return jsonify({
@@ -43,15 +57,21 @@ def home():
     })
 
 
+## Routes that trigger SPARQL queries 
 @app.route("/query", methods=['GET'])
 def listAvailableQueries():
-    return jsonify(queries)
+    return jsonify(QUERIES)
 
-@app.route("/query/count-all", methods=[queries[0]["method"]])
+@app.route("/node/count", methods=[QUERIES[0]["method"]])
 def countNodesInAllGraphs():
-    return jsonify(executeQuery("http://localhost:8890/sparql", queries[0]["filePath"]))
+    return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[0]["filePath"]))
+
+@app.route("/sample/count", methods=[QUERIES[1]["method"]])
+def countSamplesInGraph():
+    return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[1]["filePath"]))
 
 
 
+## Launch the Flask app (the ABRomics-KG API)
 if __name__ == '__main__':
     app.run(debug=True)
