@@ -55,10 +55,19 @@ SPARQL_ENDPOINT = "http://localhost:8890/sparql"
 
 
 ## Util functions 
-def executeQuery(sparqlEndpointUrl, queryFilePath, Parameters={}):
+## 
+## parameters: list of dictionnary {"stringToReplace": "parameterValue"} (for one value)
+## parameters: list of dictionnary {"stringToReplace": ["parameterValue1", "parameterValue2"]} (for multiple values to change)
+## (this doesn't work for the queries where there are multiple values that should be changed)
+## 
+def executeQuery(sparqlEndpointUrl, queryFilePath, parameters=[]):
     with open(queryFilePath, 'r') as file:
         query = file.read()
-     
+
+    for parameter in parameters:
+        print(parameter)
+        ## modify the query accordingly to the parameter
+
     sparql = SPARQLWrapper(sparqlEndpointUrl)
     sparql.setReturnFormat(JSON)
     sparql.setQuery(query)
