@@ -1,6 +1,6 @@
 
 import sys
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 ## Module imports
@@ -21,13 +21,33 @@ QUERIES = [
         "parameters": {}
     },
     {
-        "name": "count-samples",
+        "name": "count-samples-by-people",
         "method": "GET",
-        "filePath": "queries/count-samples-by-person.sparql",
+        "filePath": "queries/count-samples-by-people.sparql",
         "description": """
-            Return count the samples for every people that uploded some in the abromics kg
+            Return count the samples for every person that uploded some in the abromics kg
         """,
         "parameters": {}
+    },
+    {
+        "name": "count-samples-by-countries",
+        "method": "GET",
+        "filePath": "queries/count-samples-by-countries.sparql",
+        "description": """
+            Return count the samples by countries that uploded some in the abromics kg
+        """,
+        "parameters": {}
+    },
+    {
+        "name": "get-organs-for-specie",
+        "method": "POST",
+        "filePath": "queries/get-organs-by-specie-name.sparql",
+        "description": """
+            Get all the organs for a specific specie indicated by a specie_name
+        """,
+        "parameters": {
+            "specie_name": "the name of the selected specie. Should be the latin name of the specie"
+        }
     }
 ]
 
@@ -77,9 +97,18 @@ def listAvailableQueries():
 def countNodesInAllGraphs():
     return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[0]["filePath"]))
 
-@app.route("/sample/count", methods=[QUERIES[1]["method"]])
-def countSamplesInGraph():
+@app.route("/sample/count/people", methods=[QUERIES[1]["method"]])
+def countSamplesInGraphByPeople():
     return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[1]["filePath"]))
+
+@app.route("/sample/count/countries", methods=[QUERIES[2]["method"]])
+def countSamplesInGraphByCountries():
+    return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[2]["filePath"]))
+
+@app.route("/organ", methods=[QUERIES[3]["method"]])
+def listAvailableOrgansForSpecieName():
+    specieName = request.json["specie_name"]
+    return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[3]["filePath"]))
 
 
 
