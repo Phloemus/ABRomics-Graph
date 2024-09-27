@@ -9,10 +9,10 @@ COPY modules api/modules
 COPY modules api/queries
 COPY data api/data
 
-RUN python3 -m pip install -r requirements.txt
-
 WORKDIR /api
 
-EXPOSE 8080
+RUN python3 -m pip install -r requirements.txt
 
-CMD ["uwsgi", "--http", "127.0.0.1:8080", "--master", "-p", "4", "-w", "app:app"]
+EXPOSE 5000
+
+CMD ["uwsgi", "--http", "127.0.0.1:5000", "--master", "-p", "4", "-w", "app.py"]

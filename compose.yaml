@@ -17,7 +17,7 @@ services:
 
   virtuoso:
     image: tenforce/virtuoso:1.3.1-virtuoso7.2.2
-    container_name: abromics-virtuoso
+    container_name: abromics-kg-virtuoso
     environment:
       SPARQL_UPDATE: "true"
       DEFAULT_GRAPH: "http://sparql.abromics.fr/"
@@ -30,13 +30,11 @@ services:
     networks:
       - containers
 
-  streamlit:
-    image: phloemus/streamlit:0.0.1-sparql
-    container_name: streamlit
-    volumes:
-      - ./src/web/streamlit/app:/streamlit/app
+  api:
+    build: ./src/api
+    container_name: abromics-kg-api
     ports:
-      - "8501:8501"
+      - "5000:5000"
     networks:
       - containers
 
