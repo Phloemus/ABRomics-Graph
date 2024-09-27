@@ -9,10 +9,15 @@ import modules.graph_creator
 
 app = Flask(__name__)
 
+
 ## Constants
+API_ENDPOINT = "http://localhost:5000"
+SPARQL_ENDPOINT = "http://localhost:8890/sparql"
+
 QUERIES = [
     {
         "name": "count-nodes",
+        "route": f"{API_ENDPOINT}/node/count",
         "method": "GET",
         "filePath": "queries/count-nodes-for-all-graphs.sparql",
         "description": """
@@ -22,24 +27,27 @@ QUERIES = [
     },
     {
         "name": "count-samples-by-people",
+        "route": f"{API_ENDPOINT}/sample/count/people",
         "method": "GET",
         "filePath": "queries/count-samples-by-people.sparql",
         "description": """
-            Return count the samples for every person that uploded some in the abromics kg
+            Return the count of the samples for every person that uploded some in the abromics kg
         """,
         "parameters": {}
     },
     {
         "name": "count-samples-by-countries",
+        "route": f"{API_ENDPOINT}/sample/count/countries",
         "method": "GET",
         "filePath": "queries/count-samples-by-countries.sparql",
         "description": """
-            Return count the samples by countries that uploded some in the abromics kg
+            Return the count of the samples by countries that uploded some in the abromics kg
         """,
         "parameters": {}
     },
     {
         "name": "get-organs-for-specie",
+        "route": f"{API_ENDPOINT}/organ",
         "method": "POST",
         "filePath": "queries/get-organs-by-specie-name.sparql",
         "description": """
@@ -51,22 +59,22 @@ QUERIES = [
     }
 ]
 
-SPARQL_ENDPOINT = "http://localhost:8890/sparql"
 
 
 ## Util functions 
 ## 
-## parameters: list of dictionnary {"stringToReplace": "parameterValue"} (for one value)
-## parameters: list of dictionnary {"stringToReplace": ["parameterValue1", "parameterValue2"]} (for multiple values to change)
-## (this doesn't work for the queries where there are multiple values that should be changed)
+## parameters: list of dictionnary {"string_to_replace": "defaultValue", "values": ["parameterA", "parameterB"]}
 ## 
 def executeQuery(sparqlEndpointUrl, queryFilePath, parameters=[]):
     with open(queryFilePath, 'r') as file:
         query = file.read()
 
     for parameter in parameters:
-        print(parameter)
-        ## modify the query accordingly to the parameter
+        values = ""
+        for value in parameter["values"]:
+            values += f"{value}"
+        query = query.replace(parameter["string_to_replace"], values) 
+        print(query)
 
     sparql = SPARQLWrapper(sparqlEndpointUrl)
     sparql.setReturnFormat(JSON)
@@ -117,7 +125,8 @@ def countSamplesInGraphByCountries():
 @app.route("/organ", methods=[QUERIES[3]["method"]])
 def listAvailableOrgansForSpecieName():
     specieName = request.json["specie_name"]
-    return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[3]["filePath"]))
+    query_parameters = [ {"string_to_replace": "Homo sapiens", "values": [specieName]} ]
+    return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[3]["filePath"], query_parameters))
 
 
 
