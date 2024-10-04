@@ -7,26 +7,26 @@ PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX schema: <https://schema.org>
 
 ## This query contains an error when fetching the country
-SELECT DISTINCT ?gene_name ?coverage ?sample WHERE {
+SELECT DISTINCT ?sample ?gene_name ?coverage WHERE {
 
     ?sample rdf:type sosa:FeatureOfInterest, sio:001050 ;
         prov:atLocation ?country .
 
-    SERVICE <https://query.wikidata.org/sparql> {
-      ?country rdfs:label ?countryName .
-      FILTER(LANG(?countryName) = "en") .
-      FILTER(?countryName = "France") .
-    }
+    #SERVICE <https://query.wikidata.org/sparql> {
+    #  ?country rdfs:label ?countryName .
+    #  FILTER(LANG(?countryName) = "en") .
+    #  FILTER(?countryName = "France") .
+    #}
 
-    ?coverage_prop rdf:type sosa:observableProperty ;
-        rdfs:label "Coverage %" .
+    ?coverage_prop rdf:type sosa:ObservableProperty ;
+        rdfs:label "Coverage (%)" .
 
     ?observation sosa:hasObservableProperty ?coverage_prop ;
                  sosa:hasFeatureOfInterest ?sample ;
                  sosa:hasFeatureOfInterest ?gene ;
                  sosa:hasResult/sosa:hasSimpleResult ?coverage .
 
-    ?gene rdf:type sosa:observableProperty, go:Gene ;
+    ?gene rdf:type sosa:ObservableProperty, go:Gene ;
         rdfs:label ?gene_name .
              
 }
