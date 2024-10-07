@@ -90,7 +90,7 @@ def executeQuery(sparqlEndpointUrl, queryFilePath, parameters=[]):
 
 
 ## Home Route
-@app.route("/")
+@app.route("/api")
 def home():
     return jsonify({
         "version": "0.0.1",
@@ -99,30 +99,30 @@ def home():
 
 
 ## Routes that allow to modify the graph
-@app.route("/build-graph", methods=['GET'])
+@app.route("/api/build-graph", methods=['GET'])
 def buildGraph():
     gc = GraphCreator()
     return jsonify({"message": "test 1 passed"})
 
 
 ## Routes that trigger SPARQL queries 
-@app.route("/query", methods=['GET'])
+@app.route("/api/query", methods=['GET'])
 def listAvailableQueries():
     return jsonify(QUERIES)
 
-@app.route("/node/count", methods=[QUERIES[0]["method"]])
+@app.route("/api/node/count", methods=[QUERIES[0]["method"]])
 def countNodesInAllGraphs():
     return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[0]["filePath"]))
 
-@app.route("/sample/count/people", methods=[QUERIES[1]["method"]])
+@app.route("/api/sample/count/people", methods=[QUERIES[1]["method"]])
 def countSamplesInGraphByPeople():
     return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[1]["filePath"]))
 
-@app.route("/sample/count/countries", methods=[QUERIES[2]["method"]])
+@app.route("/api/sample/count/countries", methods=[QUERIES[2]["method"]])
 def countSamplesInGraphByCountries():
     return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[2]["filePath"]))
 
-@app.route("/organ", methods=[QUERIES[3]["method"]])
+@app.route("/api/organ", methods=[QUERIES[3]["method"]])
 def listAvailableOrgansForSpecieName():
     specieName = request.json["specie_name"]
     query_parameters = [ {"string_to_replace": "Homo sapiens", "values": [specieName]} ]
@@ -133,4 +133,4 @@ def listAvailableOrgansForSpecieName():
 
 ## Launch the Flask app (the ABRomics-KG API)
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

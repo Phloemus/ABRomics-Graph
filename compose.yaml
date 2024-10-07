@@ -12,8 +12,9 @@ services:
       - ./src/web:/usr/share/nginx/html
     depends_on:
       - virtuoso
+      - api
     networks:
-      - containers
+      - services
 
   virtuoso:
     image: tenforce/virtuoso:1.3.1-virtuoso7.2.2
@@ -26,22 +27,29 @@ services:
       - ./src/graph:/usr/local/virtuoso-opensource/share/virtuoso/vad
       - /dev/null:/usr/local/virtuoso-opensource/share/virtuoso/vad/old-data # delete the old data folder in the container so it doesn't load the old data
     ports:
-      - "8890:8890"
+      - 8890:8890
     networks:
-      - containers
+      - services
+      - graph
 
   api:
     build: ./src/api
     container_name: abromics-kg-api
     ports:
-      - "5000:5000"
+      - 5000:5000
     networks:
-      - containers
+      - services
+      - graph
 
 
 networks:
 
   ## Services network (all the containers that can serve the clients)
-  containers:
-    name: containers-network
+  services:
+    name: abromics-kg-services-network
+
+  ## give access to the virtuoso data directly through the graph network
+  graph:
+    name: abromics-kg-graph-network
+
 
