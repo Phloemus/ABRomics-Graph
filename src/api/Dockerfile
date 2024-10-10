@@ -15,6 +15,4 @@ RUN pip install -r api/requirements.txt
 
 WORKDIR /api
 
-EXPOSE 5000
-
 CMD ["python3", "app.py"]

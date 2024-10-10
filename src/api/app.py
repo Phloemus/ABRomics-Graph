@@ -10,9 +10,13 @@ import modules.graph_creator
 app = Flask(__name__)
 
 
-## Constants
+## Constants # NOT CONTAINERIZED
 API_ENDPOINT = "http://localhost:5000"
 SPARQL_ENDPOINT = "http://localhost:8890/sparql"
+
+## Constants # CONTAINERIZED (to use when the app is containerized)
+# SPARQL_ENDPOINT = "http://virtuoso:8890/sparql"
+
 
 QUERIES = [
     {
