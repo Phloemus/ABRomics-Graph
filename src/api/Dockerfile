@@ -6,8 +6,8 @@ RUN apk add --no-cache python3 py3-pip py3-virtualenv
 COPY requirements.txt api/requirements.txt
 COPY app.py api/app.py
 COPY modules api/modules
-COPY modules api/queries
 COPY data api/data
+COPY queries api/queries
 
 RUN python3 -m venv .venv
 RUN source .venv/bin/activate
