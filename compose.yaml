@@ -36,6 +36,10 @@ services:
   api:
     build: ./src/api
     container_name: abromics-kg-api
+    environment:
+      - FLASK_ENV=development
+    volumes:
+      - ./src/api/app.py:/api/app.py
     ports:
       - 5000:5000
     networks:
