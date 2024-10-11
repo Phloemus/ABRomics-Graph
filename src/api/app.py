@@ -15,6 +15,7 @@ API_ENDPOINT = "http://localhost:5000"
 SPARQL_ENDPOINT = "http://localhost:8890/sparql"
 
 ## Constants # CONTAINERIZED (to use when the app is containerized)
+# API_ENDPOINT = "http://localhost:5000"
 # SPARQL_ENDPOINT = "http://virtuoso:8890/sparql"
 
 
@@ -59,6 +60,18 @@ QUERIES = [
         """,
         "parameters": {
             "specie_name": "the name of the selected specie. Should be the latin name of the specie"
+        }
+    },
+    {
+        "name": "get-ktop-antibiotic-res-genes",
+        "route": f"{API_ENDPOINT}/res-genes/best",
+        "method": "GET",
+        "filePath": "queries/q1-search-antibiotic-res-genes-all-sample.sparql",
+        "description": """
+            Get all the best antibiotic resistance genes for a given metric for all the samples
+        """
+        "parameters": {
+            "metric": "the label of the feature of interest that the antibiotic resistance genes should be filtered by"
         }
     }
 ]
@@ -131,6 +144,14 @@ def listAvailableOrgansForSpecieName():
     specieName = request.json["specie_name"]
     query_parameters = [ {"string_to_replace": "Homo sapiens", "values": [specieName]} ]
     return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[3]["filePath"], query_parameters))
+
+
+## Compentency questions
+@app.route("/api/get-ktop-antibiotic-res-genes", methods=[QUERIES[4]["method"]])
+def getKTopAntibioticResGenes():
+    metric = request.json["metric"]
+    query_parameters = [ {"string_to_replace": "Gene Length", "values": [metric]} ]
+    return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[4]["filePath"]))
 
 
 

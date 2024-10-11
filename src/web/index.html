@@ -62,9 +62,10 @@
 
             function executeQuery(id) {
                 console.log(id)
-                fetch("http://localhost:8081/api/node/count").then(data => {
-                    const response = data.json()
-                    console.log('Data received:', response);
+                fetch("http://localhost:8081/api/node/count").then(response => {
+                    return response.json()
+                }).then((data) => {
+                    console.log(data);
                 })
                 .catch(error => {
                     console.error('Error fetching data:', error);
