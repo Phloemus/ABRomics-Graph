@@ -1,0 +1,46 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX go: <http://purl.org/obo/owl/GO#>
+PREFIX aro: <http://purl.obolibrary.org/obo/aro.owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX schema: <https://schema.org/>
+PREFIX abromics: <https://abromics.fr/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+## Q5: What are the most represented antibiotic resistance genes in a specific geographical region of interest ?
+##
+## There is an error
+##
+SELECT ?sample ?gene_name (COUNT(?gene_name) as ?nb_occurences) WHERE {
+
+  { 
+     ?sample rdf:type sio:001050 ;
+        schema:identifier ?sample_id ;
+        abromics:sampleType ?sampleType ;
+        prov:atLocation ?location .
+
+     ?obs_prop rdf:type sosa:ObservableProperty ;
+        rdfs:label "Resistance gene" .
+
+     ?gene rdf:type go:Gene ;
+        rdfs:label ?gene_name .
+
+     ?observations sosa:hasObservableProperty ?obs_prop ;
+        sosa:hasFeatureOfInterest ?gene ;
+        sosa:hasFeatureOfInterest ?sample .
+
+  }
+  UNION 
+  {
+   # fetch the id corresponding to the targeted location
+   SERVICE <https://query.wikidata.org/sparql> {
+      ?location rdfs:label "France" .
+      FILTER(LANG("France") = "en")
+   }
+  }
+
+} 
+GROUP BY ?gene_name
+ORDER BY DESC ?nb_occurences
