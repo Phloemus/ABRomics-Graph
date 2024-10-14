@@ -69,7 +69,7 @@ QUERIES = [
         "filePath": "queries/q1-search-antibiotic-res-genes-all-sample.sparql",
         "description": """
             Get all the best antibiotic resistance genes for a given metric for all the samples
-        """
+        """,
         "parameters": {
             "metric": "the label of the feature of interest that the antibiotic resistance genes should be filtered by"
         }

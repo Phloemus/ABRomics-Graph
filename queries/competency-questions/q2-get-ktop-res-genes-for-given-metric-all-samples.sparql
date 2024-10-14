@@ -8,7 +8,7 @@ PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX schema: <https://schema.org/>
 
 
-## Q1: Get the best antibiotic resistance genes for a given metric for all the samples
+## Q2: Get the best antibiotic resistance genes for a given metric for all the samples
 ## 
 SELECT DISTINCT ?gene_name ?res ?sample_id ?taxonomy_link WHERE {
     
