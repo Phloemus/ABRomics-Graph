@@ -9,20 +9,13 @@ PREFIX schema: <https://schema.org/>
 PREFIX abromics: <https://abromics.fr/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 
-## Q4: What are actively circulating ABR genes, given a specific time-frame and at least 
-## two different sample types ?
-## 
-## Circulating ABR genes are the antibiotic resistance genes that are found in samples 
-## collected in a specific time frame 
-## between multiple biological sources
-## 
-## This request example only focuses between october 2019 and march 2020
-##
-SELECT ?gene_name ?sampleType (COUNT(DISTINCT ?res) as ?nb_occurences) WHERE {
-
+# Q6: What are the common antibiotic resistance genes present in a specific period of time 
+#     and a list of all the samples where the resistance gene have been found
+# 
+SELECT ?gene_name (COUNT(DISTINCT ?res) as ?nb_occurences) (GROUP_CONCAT(DISTINCT ?sample; separator=", ") AS ?samples) WHERE {
+   
    ?sample rdf:type sio:001050 ;
         schema:identifier ?sample_id ;
-        abromics:sampleType ?sampleType ;
         prov:generatedAtTime ?collectedDate .
 
    ## collectedDate filtration
@@ -45,5 +38,5 @@ SELECT ?gene_name ?sampleType (COUNT(DISTINCT ?res) as ?nb_occurences) WHERE {
         sosa:hasResult ?res .
 
 } 
-GROUP BY ?gene_name ?resValue ?sampleType
+GROUP BY ?gene_name ?resValue
 ORDER BY DESC(?nb_occurences)
