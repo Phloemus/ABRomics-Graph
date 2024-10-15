@@ -11,7 +11,6 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 
 ## Q5: What are the most represented antibiotic resistance genes in a specific geographical region of interest ?
 ##
-## There is an error
 ##
 SELECT ?sample ?gene_name (COUNT(?gene_name) as ?nb_occurences) WHERE {
 
