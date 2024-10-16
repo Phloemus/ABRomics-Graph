@@ -1,5 +1,6 @@
 
-import sys
+import sys 
+import os
 from flask import Flask, jsonify, request
 from SPARQLWrapper import SPARQLWrapper, JSON
 
@@ -11,12 +12,8 @@ app = Flask(__name__)
 
 
 ## Constants # NOT CONTAINERIZED
-API_ENDPOINT = "http://localhost:5000"
-SPARQL_ENDPOINT = "http://localhost:8890/sparql"
-
-## Constants # CONTAINERIZED (to use when the app is containerized)
-# API_ENDPOINT = "http://localhost:5000"
-# SPARQL_ENDPOINT = "http://virtuoso:8890/sparql"
+API_ENDPOINT = f"{os.environ['HTTP']}{os.environ['API_HOST']}:{os.environ['API_PORT']}"
+SPARQL_ENDPOINT = f"{os.environ['HTTP']}{os.environ['VIRTUOSO_HOST']}:{os.environ['VIRTUOSO_PORT']}/sparql"
 
 
 QUERIES = [
@@ -158,4 +155,4 @@ def getKTopAntibioticResGenes():
 
 ## Launch the Flask app (the ABRomics-KG API)
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host=os.environ['API_HOST'], port=os.environ['API_PORT'], debug=True)
