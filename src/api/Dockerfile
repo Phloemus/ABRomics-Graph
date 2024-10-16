@@ -32,4 +32,4 @@ RUN pip install -r api/requirements.txt
 
 WORKDIR /api
 
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["flask", "run", "--host=$API_HOST"]
