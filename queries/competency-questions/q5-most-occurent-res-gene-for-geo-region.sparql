@@ -11,10 +11,10 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 
 ## Q5: What are the most represented antibiotic resistance genes in a specific geographical region of interest ?
 ##
-##
-SELECT ?sample ?gene_name (COUNT(?gene_name) as ?nb_occurences) WHERE {
+## The query seems to be too long to execute
+## 
+SELECT ?sample_id ?gene_name ?location_name (COUNT(?gene_name) as ?nb_occurences) WHERE {
 
-  { 
      ?sample rdf:type sio:001050 ;
         schema:identifier ?sample_id ;
         abromics:sampleType ?sampleType ;
@@ -30,16 +30,14 @@ SELECT ?sample ?gene_name (COUNT(?gene_name) as ?nb_occurences) WHERE {
         sosa:hasFeatureOfInterest ?gene ;
         sosa:hasFeatureOfInterest ?sample .
 
-  }
-  UNION 
-  {
+
    # fetch the id corresponding to the targeted location
    SERVICE <https://query.wikidata.org/sparql> {
-      ?location rdfs:label "France" .
-      FILTER(LANG("France") = "en")
+      ?location rdfs:label ?location_name .
+      FILTER(?location_name = "France" && LANG(?location_name) = "en")
    }
-  }
+
 
 } 
-GROUP BY ?gene_name
-ORDER BY DESC ?nb_occurences
+GROUP BY ?sample_id ?gene_name ?location_name
+ORDER BY DESC(?nb_occurences)

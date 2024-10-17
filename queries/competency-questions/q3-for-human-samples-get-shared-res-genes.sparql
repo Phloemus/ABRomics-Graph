@@ -3,7 +3,6 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX go: <http://purl.org/obo/owl/GO#>
-PREFIX aro: <http://purl.obolibrary.org/obo/aro.owl#>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX schema: <https://schema.org/>
 PREFIX abromics: <https://abromics.fr/>
@@ -16,7 +15,6 @@ PREFIX abromics: <https://abromics.fr/>
 SELECT DISTINCT ?gene_name (COUNT(?res) as ?nb_occurences) WHERE {
 
    ?sample rdf:type sio:001050 ;
-        schema:identifier ?sample_id ;
         abromics:sampleType "human" .
 
    ?obs_prop rdf:type sosa:ObservableProperty ;
@@ -28,7 +26,6 @@ SELECT DISTINCT ?gene_name (COUNT(?res) as ?nb_occurences) WHERE {
    ?observations sosa:hasObservableProperty ?obs_prop ;
         sosa:hasFeatureOfInterest ?gene ;
         sosa:hasFeatureOfInterest ?sample ;
-        sosa:hasFeatureOfInterest ?strain ;
         sosa:hasResult/sosa:hasSimpleResult ?res .
 
 } 

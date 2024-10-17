@@ -7,10 +7,9 @@ PREFIX aro: <http://purl.obolibrary.org/obo/aro.owl#>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX schema: <https://schema.org/>
 
-
 ## Q2: Get the best antibiotic resistance genes for a given metric for all the samples
 ## 
-SELECT DISTINCT ?gene_name ?res ?sample_id ?taxonomy_link WHERE {
+SELECT DISTINCT ?sample_id ?gene_name (?res as ?gene_length) WHERE {
     
     ?obs_prop rdf:type sosa:ObservableProperty ;
         rdfs:label "Gene length" .
@@ -20,14 +19,10 @@ SELECT DISTINCT ?gene_name ?res ?sample_id ?taxonomy_link WHERE {
 
     ?gene rdf:type go:Gene ;
         rdfs:label ?gene_name .
-
-    ?strain rdf:type aro:Strain ;
-        obo:RO_0002162 ?taxonomy_link .
                 
     ?observations sosa:hasObservableProperty ?obs_prop ;
         sosa:hasFeatureOfInterest ?gene ;
         sosa:hasFeatureOfInterest ?sample ;
-        sosa:hasFeatureOfInterest ?strain ;
         sosa:hasResult/sosa:hasSimpleResult ?res .
   
 }
