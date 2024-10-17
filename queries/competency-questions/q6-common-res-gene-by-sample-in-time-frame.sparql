@@ -3,8 +3,6 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX go: <http://purl.org/obo/owl/GO#>
-PREFIX aro: <http://purl.obolibrary.org/obo/aro.owl#>
-PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX schema: <https://schema.org/>
 PREFIX abromics: <https://abromics.fr/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -12,7 +10,7 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 # Q6: What are the common antibiotic resistance genes present in a specific period of time 
 #     and a list of all the samples where the resistance gene have been found
 # 
-SELECT ?gene_name (COUNT(DISTINCT ?res) as ?nb_occurences) (GROUP_CONCAT(DISTINCT ?sample; separator=", ") AS ?samples) WHERE {
+SELECT ?gene_name (COUNT(DISTINCT ?res) as ?nb_occurences) (GROUP_CONCAT(DISTINCT ?sample_id; separator=", ") AS ?sample_ids) WHERE {
    
    ?sample rdf:type sio:001050 ;
         schema:identifier ?sample_id ;
@@ -34,7 +32,6 @@ SELECT ?gene_name (COUNT(DISTINCT ?res) as ?nb_occurences) (GROUP_CONCAT(DISTINC
    ?observations sosa:hasObservableProperty ?obs_prop ;
         sosa:hasFeatureOfInterest ?gene ;
         sosa:hasFeatureOfInterest ?sample ;
-        sosa:hasFeatureOfInterest ?strain ;
         sosa:hasResult ?res .
 
 } 

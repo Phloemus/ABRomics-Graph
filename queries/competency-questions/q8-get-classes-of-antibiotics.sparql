@@ -9,15 +9,37 @@ PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX schema: <https://schema.org/>
 PREFIX abromics: <https://abromics.fr/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-# Q8: What are the strains resistant to specific class of antibiotics
+# Q8: What are the samples having resistant genes to specific class of antibiotics
 #
-# 
+# Not finished 
+#
 # Improvements: make the aro namespace common between the aro classes used in the graph and the 
 #               aro namespace used in the aro ontology 
 #
-SELECT ?antibiotic WHERE {
+SELECT ?sample_id ?gene_name ?antibiotic WHERE {
 
-   ?antibiotic rdfs:subClassOf aro_o:1000003 .
+   ?sample rdf:type sio:001050 ;
+        schema:identifier ?sample_id .
+
+   ?antibiotic_class rdfs:label "sulfasalazine"^^xsd:string . ## rdfs:subClassOf+ aro_o:1000003
+
+   ?obs_prop rdf:type sosa:ObservableProperty ;
+        rdfs:label "Target antibiotic" .
+
+   ?gene rdf:type go:Gene ;
+        rdfs:label ?gene_name .
+
+   ?res rdf:type sosa:Result ;
+        sosa:hasSimpleResult ?resValue .
+
+   ?observations sosa:hasObservableProperty ?obs_prop ;
+        sosa:hasFeatureOfInterest ?gene ;
+        sosa:hasFeatureOfInterest ?sample ;
+        sosa:hasResult ?antibiotic_name .
+
+   ?antibiotic rdfs:subClassOf+ ?antibiotic_class ;
+        rdfs:label ?antibiotic_name .
 
 }
