@@ -11,7 +11,7 @@ import modules.graph_creator
 app = Flask(__name__)
 
 
-API_ENDPOINT = f"{os.environ['HTTP']}{os.environ['API_EXTERNAL_HOST']}:{os.environ['API_PORT']}"
+API_ENDPOINT = f"{os.environ['HTTP']}{os.environ['API_HOST']}:{os.environ['API_PORT']}"
 SPARQL_ENDPOINT = f"{os.environ['HTTP']}{os.environ['VIRTUOSO_HOST']}:{os.environ['VIRTUOSO_PORT']}/sparql"
 
 
