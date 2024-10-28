@@ -1,4 +1,8 @@
 
+# Download the ontologies from remote VM
+# Need the vm to work... 
+# wget https://abromics.gcp.glicid.fr/ontologies
+
 # Tracks the data of these files
 echo "ld_dir_all('/usr/local/virtuoso-opensource/share/virtuoso/vad/graph-instance', '*.ttl', 'http://data.abromics.fr');" | isql-v -U dba -P dba 
 echo "ld_dir_all('/usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies', '*.owl', 'http://ontologies.abromics.fr');" | isql-v -U dba -P dba 
