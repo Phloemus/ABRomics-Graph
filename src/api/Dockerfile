@@ -11,8 +11,11 @@ COPY queries api/queries
 ARG HTTP
 ENV HTTP=$HTTP
 
-ARG API_HOST
-ENV API_HOST=$API_HOST
+ARG API_EXTERNAL_HOST
+ENV API_EXTERNAL_HOST=$API_EXTERNAL_HOST
+
+ARG API_BASEPATH
+ENV API_BASEPATH=$API_BASEPATH
 
 ARG API_PORT
 ENV API_PORT=$API_PORT
@@ -32,4 +35,4 @@ RUN pip install -r api/requirements.txt
 
 WORKDIR /api
 
-CMD ["flask", "run", "--host=$API_HOST"]
+CMD ["flask", "run", "--host=0.0.0.0"]
