@@ -39,7 +39,7 @@ services:
     environment:
       - FLASK_ENV=${FLASK_ENV}
       - HTTP=${HTTP}
-      - API_EXTERNAL_HOST=${API_EXTERNAL_HOST}
+      - API_HOST=${API_HOST}
       - API_BASEPATH=${API_BASEPATH}
       - API_PORT=${API_PORT}
       - VIRTUOSO_HOST=${VIRTUOSO_HOST}
