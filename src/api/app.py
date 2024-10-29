@@ -154,4 +154,4 @@ def getKTopAntibioticResGenes():
 
 ## Launch the Flask app (the ABRomics-KG API)
 if __name__ == '__main__':
-    app.run(host=0.0.0.0, port=os.environ['API_PORT'], debug=True)
+    app.run(host="0.0.0.0", port=os.environ['API_PORT'], debug=True)
