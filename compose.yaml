@@ -8,8 +8,11 @@ services:
     ports:
       - ${NGINX_HTTP_PORT}:80
       - ${NGINX_HTTPS_PORT}:443
+    environment:
+      - API_BASEPATH=${API_BASEPATH}
     volumes:
       - ./src/nginx-config/${NGINX_CONF_FILE}:/etc/nginx/nginx.conf
+      - ./src/nginx-config/nginx.conf.template:/etc/nginx/templates/nginx.conf.template:ro
       - ./src/web:/usr/share/nginx/html
     depends_on:
       - virtuoso

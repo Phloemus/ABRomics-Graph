@@ -1,0 +1,3 @@
+map $API_BASEPATH {
+  default "$API_BASEPATH";
+}
