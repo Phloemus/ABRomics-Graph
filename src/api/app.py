@@ -103,7 +103,7 @@ def executeQuery(sparqlEndpointUrl, queryFilePath, parameters=[]):
 
 
 ## Home Route
-@app.route(f"/{os.environ['API_HOST']}")
+@app.route(f"/{os.environ['API_BASEPATH']}")
 def home():
     return jsonify({
         "version": "0.0.1",
@@ -112,30 +112,30 @@ def home():
 
 
 ## Routes that allow to modify the graph
-@app.route(f"/{os.environ['API_HOST']}/build-graph", methods=['GET'])
+@app.route(f"/{os.environ['API_BASEPATH']}/build-graph", methods=['GET'])
 def buildGraph():
     gc = GraphCreator()
     return jsonify({"message": "test 1 passed"})
 
 
 ## Routes that trigger SPARQL queries 
-@app.route(f"/{os.environ['API_HOST']}/query", methods=['GET'])
+@app.route(f"/{os.environ['API_BASEPATH']}/query", methods=['GET'])
 def listAvailableQueries():
     return jsonify(QUERIES)
 
-@app.route(f"/{os.environ['API_HOST']}/node/count", methods=[QUERIES[0]["method"]])
+@app.route(f"/{os.environ['API_BASEPATH']}/node/count", methods=[QUERIES[0]["method"]])
 def countNodesInAllGraphs():
     return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[0]["filePath"]))
 
-@app.route(f"/{os.environ['API_HOST']}/sample/count/people", methods=[QUERIES[1]["method"]])
+@app.route(f"/{os.environ['API_BASEPATH']}/sample/count/people", methods=[QUERIES[1]["method"]])
 def countSamplesInGraphByPeople():
     return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[1]["filePath"]))
 
-@app.route(f"/{os.environ['API_HOST']}/sample/count/countries", methods=[QUERIES[2]["method"]])
+@app.route(f"/{os.environ['API_BASEPATH']}/sample/count/countries", methods=[QUERIES[2]["method"]])
 def countSamplesInGraphByCountries():
     return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[2]["filePath"]))
 
-@app.route(f"/{os.environ['API_HOST']}/organ", methods=[QUERIES[3]["method"]])
+@app.route(f"/{os.environ['API_BASEPATH']}/organ", methods=[QUERIES[3]["method"]])
 def listAvailableOrgansForSpecieName():
     specieName = request.json["specie_name"]
     query_parameters = [ {"string_to_replace": "Homo sapiens", "values": [specieName]} ]
@@ -143,7 +143,7 @@ def listAvailableOrgansForSpecieName():
 
 
 ## Compentency questions
-@app.route(f"/{os.environ['API_HOST']}/get-ktop-antibiotic-res-genes", methods=[QUERIES[4]["method"]])
+@app.route(f"/{os.environ['API_BASEPATH']}/get-ktop-antibiotic-res-genes", methods=[QUERIES[4]["method"]])
 def getKTopAntibioticResGenes():
     metric = request.json["metric"]
     query_parameters = [ {"string_to_replace": "Gene Length", "values": [metric]} ]
@@ -154,4 +154,4 @@ def getKTopAntibioticResGenes():
 
 ## Launch the Flask app (the ABRomics-KG API)
 if __name__ == '__main__':
-    app.run(host=os.environ['API_HOST'], port=os.environ['API_PORT'], debug=True)
+    app.run(host=0.0.0.0, port=os.environ['API_PORT'], debug=True)
