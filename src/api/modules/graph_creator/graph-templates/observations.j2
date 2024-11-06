@@ -30,5 +30,5 @@
         {% else %}
             sosa:hasSimpleResult "{{ observation["simpleResult"] }}" ;
         {% endif %}
-        sosa:resultTime {{ observation["resultTime"] }} .
+        sosa:resultTime "{{ observation["resultTime"] }}"^^xsd:dateTime .
 {% endfor %}

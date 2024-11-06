@@ -15,9 +15,7 @@ class Downloader():
         
         ## load the environment variables
         self.api_url = os.getenv('API_URL') 
-        self.api_username = os.getenv('API_USERNAME')
-        self.api_password = os.getenv('API_PASSWORD')
-        self.api_temp_basic_token = os.getenv('API_TEMP_BASIC_TOKEN')
+        self.api_user_token = os.getenv('API_USER_TOKEN')
 
     ## Public methods
 
@@ -31,7 +29,7 @@ class Downloader():
                 response["next"],
                 params={'status': 'ready_to_report'},
                 headers = {
-                    'Authorization': f"Basic {self.api_temp_basic_token}",
+                    'Authorization': f"Basic {self.api_user_token}",
                 }
             )
             response = response.json()
@@ -49,7 +47,7 @@ class Downloader():
                 response = requests.get(
                     f"https://analysis.abromics.fr/api/analysis/{report_id}/report/",
                     headers = {
-                        'Authorization': f"Basic {self.api_temp_basic_token}",
+                        'Authorization': f"Basic {self.api_user_token}",
                     }
                 )
                 report = response.json()
