@@ -23,6 +23,6 @@ SELECT ?sample_id (?gene_name as ?resistance_gene_name) WHERE {
    ?observations sosa:hasObservableProperty ?obs_prop ;
        sosa:hasFeatureOfInterest ?gene ;
        sosa:hasFeatureOfInterest ?sample ;
-       sosa:hasResult/sosa:hasSimpleResult ?gene_name .
+       sosa:hasSimpleResult ?gene_name .
 
 }
