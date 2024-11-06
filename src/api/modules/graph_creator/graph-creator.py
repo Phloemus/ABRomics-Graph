@@ -33,7 +33,6 @@ class GraphCreator:
         self.observableProperties = []
         self.observations = []
         self.genes = []
-        self.observationResults = []
 
         ## external entities and mappings between entities and ontology identifiers
         self.countries = {}
@@ -49,7 +48,6 @@ class GraphCreator:
         self.samplesMapping = {}
         self.peopleMapping = {}
         self.observablePropertiesMapping = {}
-        self.observationResultsMapping = {}
         self.genesMapping = {}
 
         ## entities links
@@ -437,11 +435,6 @@ class GraphCreator:
                     sensor = "" if report["sections"][0]["data"][0]["values"][8] == "" else self.sensorsMapping[report["sections"][0]["data"][0]["values"][8]] 
                     procedure = self.proceduresMapping["workflow 1 (genomic)"]
 
-                    ## To get the result the key of to get the result value should be crafted with the sampleId 
-                    ## (aka reportId) and with the observable property name (header of table) and with the 
-                    ## the observationId (corresponding to the row of the observations table)
-                    result = self.observationResultsMapping[f"{reportId}_{observableProperty}_{observationId}"]
-
                     self.observations.append({
                         "id": uniqueGraphId,
                         "strain": strainFeatureOfInterest,
@@ -450,41 +443,9 @@ class GraphCreator:
                         "observableProperty": observableProperty,
                         "sensor": sensor,
                         "procedure": procedure,
-                        "result": result
+                        "simpleResult": observation,
+                        "resultTime": report["sections"][0]["data"][0]["values"][3]
                     })
-
-                    observationId = observationId + 1 
-                observationId = 0
-                observationHeaderId = observationHeaderId + 1
-            observationHeaderId = 0
-            reportId = reportId + 1
-
-
-    ## Add the observation results made on all the samples
-    def __addObservationResults(self):
-        reportId = 0
-        observationHeaderId = 0
-        observationId = 0
-        for report in self.allReports:
-            for observationHeader in report["sections"][2]["data"][0]["header"]:
-                for observation in report["sections"][2]["data"][0]["values"][observationHeaderId]:
-                    uniqueGraphId = uuid.uuid1()
-                    simpleResult = observation
-                    unit = self.observablePropertiesMapping[observationHeader]
-                    resultTime = report["sections"][0]["data"][0]["values"][3]
-
-                    self.observationResults.append({
-                        "id": uniqueGraphId,
-                        "simpleResult": simpleResult,
-                        "unit": unit,                       ## The unit is the graph id of the obervable property of linked to the result
-                        "resultTime": resultTime
-                    })
-
-                    ## As the observation results have are in a table. 3 keys should be combined to craft a unique key 
-                    ## that could be searched in other part of the code to retrive the uniqueGraphId associated with 
-                    ## the observationResult
-                    observationResultId = f"{reportId}_{unit}_{str(observationId)}"
-                    self.observationResultsMapping[observationResultId] = uniqueGraphId
 
                     observationId = observationId + 1 
                 observationId = 0
@@ -510,7 +471,7 @@ class GraphCreator:
     def createGraph(self):
 
         ## Loading the reports in memory
-        self.allReports = [self.__readJsonFromFile(f"{self.reportDirectory}/{reportFilename}") for reportFilename in os.listdir("reports") if reportFilename.endswith(".json")]
+        self.allReports = [self.__readJsonFromFile(f"{self.reportDirectory}/{reportFilename}") for reportFilename in os.listdir(self.reportDirectory) if reportFilename.endswith(".json")]
 
         ## Curate the reports
         self.__curateReports()
@@ -533,7 +494,6 @@ class GraphCreator:
         self.__addObservableProperties() 
         self.__addGenes()
         self.__addSamples()
-        self.__addObservationResults()
         self.__addObservations()
 
         ## Creating the turtle files
@@ -545,7 +505,9 @@ class GraphCreator:
         self.__createTtlFile("graph-templates/observable-properties.j2", "observableProperties", self.observableProperties)
         self.__createTtlFile("graph-templates/genes.j2", "genes", self.genes)
         self.__createTtlFile("graph-templates/samples.j2", "samples", self.samples, filterFunctions=[{"name": "isDatetime", "content": self.__isDatetime}])
-        self.__createTtlFile("graph-templates/observations.j2", "observations", self.observations)
-        self.__createTtlFile("graph-templates/observation-results.j2", "observationResults", self.observationResults, filterFunctions=[{"name": "isFloat", "content": self.__isFloat}])
+        self.__createTtlFile("graph-templates/observations.j2", "observations", self.observations, filterFunctions=[{"name": "isFloat", "content": self.__isFloat}])
 
 
+
+## gc = GraphCreator("../../data/reports")
+## gc.createGraph()

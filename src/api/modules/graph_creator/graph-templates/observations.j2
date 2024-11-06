@@ -25,5 +25,10 @@
         prov:wasGeneratedBy <{{ observation["sensor"] }}> ;
         {% if observation["sensor"] != "" %}sosa:madeBySensor <{{ observation["sensor"] }}> ;{% endif %}
         sosa:usedProcedure <{{ observation["procedure"] }}> ;
-        sosa:hasResult <{{ observation["result"] }}> .
+        {% if observation["simpleResult"]|isFloat %}
+            sosa:hasSimpleResult "{{ observation["simpleResult"] }}"^^xsd:decimal ;
+        {% else %}
+            sosa:hasSimpleResult "{{ observation["simpleResult"] }}" ;
+        {% endif %}
+        sosa:resultTime {{ observation["resultTime"] }} .
 {% endfor %}
