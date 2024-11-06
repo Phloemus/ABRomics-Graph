@@ -18,7 +18,7 @@
 ################################## Samples ####################################
 
 
-    <6395272e-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170420-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG10" ;
         abromics:strainId "ARDIG10" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -26,14 +26,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952788-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170452-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG32" ;
         abromics:strainId "ARDIG32" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -41,14 +41,14 @@
             prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639527ba-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017047a-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "19-Klo102A" ;
         abromics:strainId "19-Klo102A" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -56,14 +56,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639527ec-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801704a2-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-HoPe-P1-2" ;
         abromics:strainId "17-HoPe_P1-2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -76,9 +76,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952814-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801704ca-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "SS-1224b" ;
         abromics:strainId "ss1224b" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/1307> ;
@@ -86,14 +86,14 @@
             prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468> ;
+        abromics:sampleSource <> ;
         abromics:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina NovaSeq 6000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <6395283c-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801704f2-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-ZW-S17-2-3" ;
         abromics:strainId "17-ZW-S17-2-3" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -106,9 +106,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952864-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017051a-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-ZWS24-1-1" ;
         abromics:strainId "U17-ZWS24_1-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -121,9 +121,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639528aa-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017054c-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "18-MOC94-2" ;
         abromics:strainId "18-MOC94-2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -136,9 +136,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639528f0-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170574-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "F1307" ;
         abromics:strainId "F1307" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/584> ;
@@ -146,14 +146,14 @@
             prov:generatedAtTime "2018-06-19T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9031> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiSeq 2500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952922-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170592-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG39" ;
         abromics:strainId "ARDIG39" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -161,14 +161,14 @@
             prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952940-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801705b0-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U19-StiWa-S1-1" ;
         abromics:strainId "U19-StiWaS1-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -181,9 +181,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952972-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801705ce-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-HoPe-S1-1" ;
         abromics:strainId "U17-HoPe-S1-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -196,9 +196,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952990-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170600-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-HoPeP5-1" ;
         abromics:strainId "U17-HoPeP5-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -211,9 +211,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639529ae-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170628-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "AC-A125" ;
         abromics:strainId "A125" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/715> ;
@@ -221,14 +221,14 @@
             prov:generatedAtTime "2006-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468> ;
+        abromics:sampleSource <> ;
         abromics:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q28> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639529cc-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170646-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "F872" ;
         abromics:strainId "F872" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/584> ;
@@ -236,14 +236,14 @@
             prov:generatedAtTime "2019-04-16T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9031> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiSeq 2500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639529ea-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170664-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U20-HoPe-S30-1" ;
         abromics:strainId "U20-HoPe-S30-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -256,9 +256,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952a12-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170678-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U20-Benz-P4-4" ;
         abromics:strainId "U20-Benz-S24-4" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -271,9 +271,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952a30-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017068c-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "18-CSP68-2" ;
         abromics:strainId "18-CSP68-2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -286,9 +286,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952a4e-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801706b4-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "18-8A-2" ;
         abromics:strainId "18-8A-2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -296,14 +296,14 @@
             prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952a6c-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801706c8-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG13" ;
         abromics:strainId "ARDIG13" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -311,14 +311,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952a94-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801706e6-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "SA-21CS0188" ;
         abromics:strainId "21CS0188" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/1280> ;
@@ -331,9 +331,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina MiSeq" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952ab2-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801706fa-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG19" ;
         abromics:strainId "ARDIG19" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -341,14 +341,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952ad0-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170722-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "s1" ;
         abromics:strainId "st1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/1352> ;
@@ -356,14 +356,14 @@
             prov:generatedAtTime "2000-11-11T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9913> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiScanSQ" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949e58-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bf42-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952b16-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170740-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG25" ;
         abromics:strainId "ARDIG25" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -371,14 +371,14 @@
             prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952b48-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017075e-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "HUG2" ;
         abromics:strainId "KPN8" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/573> ;
@@ -386,14 +386,14 @@
             prov:generatedAtTime "2015-03-02T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12470> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q39> ;
         prov:wasGeneratedBy "Illumina MiSeq" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949ea8-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bf60-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952b70-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170772-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "SAG-TAB490" ;
         abromics:strainId "TAB490" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/1311> ;
@@ -406,9 +406,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q414> ;
         prov:wasGeneratedBy "Illumina MiSeq" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952b98-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170790-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U19-StiWa-S2-1" ;
         abromics:strainId "U19-StiWa-S2-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -421,9 +421,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952bb6-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801707a4-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "s6" ;
         abromics:strainId "st6" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/1351> ;
@@ -431,14 +431,14 @@
             prov:generatedAtTime "2000-11-16T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9913> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiScanSQ" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949e58-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bf42-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952bd4-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801707c2-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "SU-SU92" ;
         abromics:strainId "SU92" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/1349> ;
@@ -451,9 +451,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q213> ;
         prov:wasGeneratedBy "Illumina HiSeq 2500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952bfc-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801707e0-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG17" ;
         abromics:strainId "ARDIG17" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -461,14 +461,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952c1a-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801707fe-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "19-65P29" ;
         abromics:strainId "19-65P29" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -476,14 +476,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952c38-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017081c-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-SmaS1-1" ;
         abromics:strainId "U17SmaS1-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -496,9 +496,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952c60-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170830-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG4" ;
         abromics:strainId "ARDIG4" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -506,14 +506,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952c7e-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170858-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "HUG1" ;
         abromics:strainId "KPN5" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/573> ;
@@ -526,9 +526,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q39> ;
         prov:wasGeneratedBy "Illumina MiSeq" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949ea8-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bf60-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952c9c-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170880-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-HoPe-P2-1" ;
         abromics:strainId "U17-HoPe-P2-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -541,9 +541,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952cba-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170894-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG30" ;
         abromics:strainId "ARDIG30" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -551,14 +551,14 @@
             prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952cd8-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801708a8-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG18" ;
         abromics:strainId "ARDIG18" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -566,14 +566,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952cec-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801708c6-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "HUG3" ;
         abromics:strainId "KPN10" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/573> ;
@@ -581,14 +581,14 @@
             prov:generatedAtTime "2015-03-12T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q39> ;
         prov:wasGeneratedBy "Illumina MiSeq" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949ea8-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bf60-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952d0a-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801708e4-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG15" ;
         abromics:strainId "ARDIG15" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -596,14 +596,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952d32-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801708f8-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG35" ;
         abromics:strainId "ARDIG35" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -611,14 +611,14 @@
             prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952d50-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170916-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG20" ;
         abromics:strainId "ARDIG20" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -626,14 +626,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952d6e-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170934-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U19-StiWa-S4-1" ;
         abromics:strainId "U19-StiWa-S4-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -646,9 +646,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952d96-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170948-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-HaSW-S1-3" ;
         abromics:strainId "U17-HaSW-S1-3" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -661,9 +661,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952dc8-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170970-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "19-50P73O" ;
         abromics:strainId "19-50P73O" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -671,14 +671,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952de6-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170998-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U20-Benz-S18-1" ;
         abromics:strainId "U20-Benz-S18-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -691,9 +691,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952e04-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801709ac-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-NWi34" ;
         abromics:strainId "15-NWi34" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -701,14 +701,14 @@
             prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/10090> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952e2c-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801709d4-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-Klo-3-2" ;
         abromics:strainId "15-Klo_3-2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -716,14 +716,14 @@
             prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952e40-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801709e8-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "K19M11" ;
         abromics:strainId "K19M11" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -736,9 +736,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952e5e-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170a06-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "s2" ;
         abromics:strainId "st2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/1351> ;
@@ -746,14 +746,14 @@
             prov:generatedAtTime "2000-11-12T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9913> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiScanSQ" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949e58-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bf42-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952e7c-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170a1a-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "16-Klo1-1-PLG9P835" ;
         abromics:strainId "PLG9P835" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -761,14 +761,14 @@
             prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952e9a-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170a2e-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U20-Benz-S21-4" ;
         abromics:strainId "U20-Benz-S21-4" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -781,9 +781,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952eb8-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170a4c-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "18-48P83L-2" ;
         abromics:strainId "18-48P83L-2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -791,14 +791,14 @@
             prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952ee0-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170a60-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-HoPe-S16-5" ;
         abromics:strainId "17-HoPe_S16-5" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -811,9 +811,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952f08-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170a74-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-20A" ;
         abromics:strainId "17-20A" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -821,14 +821,14 @@
             prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952f26-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170a9c-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "F264" ;
         abromics:strainId "F264" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/584> ;
@@ -836,14 +836,14 @@
             prov:generatedAtTime "2018-06-19T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9031> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiSeq 2500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952f44-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170ab0-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-Eisch21-2" ;
         abromics:strainId "15-Eisch21-2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -856,9 +856,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952f62-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170ac4-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG28" ;
         abromics:strainId "ARDIG28" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -866,14 +866,14 @@
             prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952f94-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170ae2-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-NCu32R24h" ;
         abromics:strainId "15-NCu32R24h" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -881,14 +881,14 @@
             prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/10090> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952fb2-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170af6-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-Eisch26-1" ;
         abromics:strainId "15-Eisch26-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -901,9 +901,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952fda-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170b14-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "s4" ;
         abromics:strainId "st4" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/158836> ;
@@ -911,14 +911,14 @@
             prov:generatedAtTime "2000-11-14T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9913> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiScanSQ" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949e58-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bf42-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63952ff8-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170b32-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG24" ;
         abromics:strainId "ARDIG24" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -926,14 +926,14 @@
             prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953016-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170b46-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "16-Klo37-1" ;
         abromics:strainId "16-Klo37-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -941,14 +941,14 @@
             prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953052-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170b6e-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "F105" ;
         abromics:strainId "F105" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/584> ;
@@ -956,14 +956,14 @@
             prov:generatedAtTime "2018-05-14T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9031> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiSeq 2500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <6395307a-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170b82-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "18-MasT3036T-1" ;
         abromics:strainId "18-MasT3036T-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -971,14 +971,14 @@
             prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953098-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170ba0-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-932-1" ;
         abromics:strainId "15-932-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -986,14 +986,14 @@
             prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639530b6-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170bbe-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "F1361" ;
         abromics:strainId "F1361" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/2742627> ;
@@ -1001,14 +1001,14 @@
             prov:generatedAtTime "2018-04-26T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9031> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiSeq 2500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639530d4-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170bdc-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "F1297" ;
         abromics:strainId "F1297" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/584> ;
@@ -1016,14 +1016,14 @@
             prov:generatedAtTime "2018-06-06T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9031> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiSeq 2500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639530f2-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170bf0-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U20-Benz-S21-1" ;
         abromics:strainId "U20-Benz-S21-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1036,9 +1036,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953110-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170c0e-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG33" ;
         abromics:strainId "ARDIG33" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1046,14 +1046,14 @@
             prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953124-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170c22-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG27" ;
         abromics:strainId "ARDIG27" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1061,14 +1061,14 @@
             prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <6395314c-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170c40-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-HoPe-S1-2" ;
         abromics:strainId "17-HoPe_S1-2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1081,9 +1081,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <6395316a-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170c54-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-Eisch20-1" ;
         abromics:strainId "15-Eisch20-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1096,9 +1096,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953192-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170c68-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "K19M16" ;
         abromics:strainId "K19M16" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1111,9 +1111,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639531ba-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170c86-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG9" ;
         abromics:strainId "ARDIG9" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1121,14 +1121,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639531d8-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170c9a-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG46" ;
         abromics:strainId "ARDIG46" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1136,14 +1136,14 @@
             prov:generatedAtTime "2019-03-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639531f6-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170cae-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U19-Zw-LK2-3" ;
         abromics:strainId "U19-Zw-LK2-3" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1156,9 +1156,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953214-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170ccc-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG34" ;
         abromics:strainId "ARDIG34" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1166,14 +1166,14 @@
             prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953232-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170cea-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "s5" ;
         abromics:strainId "st5" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/584> ;
@@ -1181,14 +1181,14 @@
             prov:generatedAtTime "2000-11-15T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9913> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiScanSQ" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949e58-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bf42-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <6395325a-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170cfe-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-Klo-71TR-1" ;
         abromics:strainId "15-Klo_71TR-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1196,14 +1196,14 @@
             prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953278-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170d12-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-ZW-S24-2-2" ;
         abromics:strainId "17-ZW-S24-2-2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1216,9 +1216,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <6395328c-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170d30-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "SD-SDvet48" ;
         abromics:strainId "SDvet48" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/1334> ;
@@ -1231,9 +1231,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q20> ;
         prov:wasGeneratedBy "Illumina MiSeq" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639532b4-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170d4e-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "EC-68T-1" ;
         abromics:strainId "68T-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1246,9 +1246,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q155> ;
         prov:wasGeneratedBy "Illumina MiSeq" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639532e6-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170d6c-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-ZWS21-4-2" ;
         abromics:strainId "U17-ZWS21_4-2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1261,9 +1261,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953304-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170d80-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG14" ;
         abromics:strainId "ARDIG14" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1271,14 +1271,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953322-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170d9e-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "F897" ;
         abromics:strainId "F897" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/584> ;
@@ -1286,14 +1286,14 @@
             prov:generatedAtTime "2019-04-16T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9031> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiSeq 2500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953340-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170dbc-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "18-Pos1016-1" ;
         abromics:strainId "18-Pos1016-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1301,14 +1301,14 @@
             prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953368-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170de4-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "18-OBC4-1" ;
         abromics:strainId "18-OBC4-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1321,9 +1321,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953386-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170e02-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG45" ;
         abromics:strainId "ARDIG45" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1331,14 +1331,14 @@
             prov:generatedAtTime "2019-03-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639533a4-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170e16-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-HoPeS16-1" ;
         abromics:strainId "U17-HoPeS16-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1351,9 +1351,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639533e0-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170e34-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG8" ;
         abromics:strainId "ARDIG8" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1361,14 +1361,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639533f4-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170e52-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "SA-IMD49-10" ;
         abromics:strainId "IMD49-10" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/1280> ;
@@ -1381,9 +1381,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q39> ;
         prov:wasGeneratedBy "Illumina MiSeq" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <6395341c-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170e66-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG21" ;
         abromics:strainId "ARDIG21" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1391,14 +1391,14 @@
             prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953444-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170e84-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "F1287 " ;
         abromics:strainId "F1287 " ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/584> ;
@@ -1406,14 +1406,14 @@
             prov:generatedAtTime "2018-06-06T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9031> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiSeq 2500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <6395346c-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170e98-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG5" ;
         abromics:strainId "ARDIG5" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1421,14 +1421,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <6395348a-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170eca-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG49" ;
         abromics:strainId "ARDIG49" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1436,14 +1436,14 @@
             prov:generatedAtTime "2019-03-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639534a8-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170ee8-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG22" ;
         abromics:strainId "ARDIG22" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1451,14 +1451,14 @@
             prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639534e4-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170f06-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "16-33-1" ;
         abromics:strainId "16-33-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1466,14 +1466,14 @@
             prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639534f8-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170f24-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "16-68-1" ;
         abromics:strainId "16-68-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1481,14 +1481,14 @@
             prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953516-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170f42-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "F97" ;
         abromics:strainId "F97" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/584> ;
@@ -1496,14 +1496,14 @@
             prov:generatedAtTime "2018-04-26T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9031> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiSeq 2500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953534-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170f56-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "08-IB3" ;
         abromics:strainId "08-IB3" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1516,9 +1516,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953552-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170f74-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG3" ;
         abromics:strainId "ARDIG3" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1526,14 +1526,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953570-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170f88-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-8P826-1" ;
         abromics:strainId "15-8P826-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1541,14 +1541,14 @@
             prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953598-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170f9c-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "AC-H30-PLA-28" ;
         abromics:strainId "H30-PLA-28" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/715> ;
@@ -1556,14 +1556,14 @@
             prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468> ;
+        abromics:sampleSource <> ;
         abromics:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q17> ;
         prov:wasGeneratedBy "Illumina MiSeq" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639535b6-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170fba-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG6" ;
         abromics:strainId "ARDIG6" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1571,14 +1571,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639535d4-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170fd8-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-KloGe21-24-1" ;
         abromics:strainId "17-Klo21_24-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1591,9 +1591,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639535fc-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80170ff6-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "K19K7" ;
         abromics:strainId "K19K7" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1606,9 +1606,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <6395361a-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017100a-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG1" ;
         abromics:strainId "ARDIG1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1616,14 +1616,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953638-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171028-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG42" ;
         abromics:strainId "ARDIG42" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1631,14 +1631,14 @@
             prov:generatedAtTime "2019-03-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953656-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017103c-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-27P47D-2" ;
         abromics:strainId "17-27P47D-2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1646,14 +1646,14 @@
             prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953674-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017105a-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "19-War16-2B-1" ;
         abromics:strainId "19-War16.2B-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1661,14 +1661,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953692-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017106e-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U20-Benz-P4-2" ;
         abromics:strainId "U20-Benz-S24-2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1681,9 +1681,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639536b0-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171082-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG40" ;
         abromics:strainId "ARDIG40" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1691,14 +1691,14 @@
             prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953700-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801710a0-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "19-Pos108-1" ;
         abromics:strainId "19-Pos108-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/259> ;
@@ -1706,14 +1706,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <6395371e-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801710be-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "14-SPoe1-1" ;
         abromics:strainId "14-SPoe1-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1721,14 +1721,14 @@
             prov:generatedAtTime "2014-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/111917> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <6395373c-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801710e6-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-33P31K1" ;
         abromics:strainId "17-33P31K1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1736,14 +1736,14 @@
             prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <6395375a-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171104-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG29" ;
         abromics:strainId "ARDIG29" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1751,14 +1751,14 @@
             prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953782-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171118-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "14-SPoe3-1" ;
         abromics:strainId "14-SPoe3-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1766,14 +1766,14 @@
             prov:generatedAtTime "2014-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/111917> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953796-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171136-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U19-HoPe-P28-1" ;
         abromics:strainId "U19-HoPe-P28-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1786,9 +1786,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639537be-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017114a-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG31" ;
         abromics:strainId "ARDIG31" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1796,14 +1796,14 @@
             prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639537dc-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171168-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "HUG6" ;
         abromics:strainId "KPN4" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/573> ;
@@ -1811,14 +1811,14 @@
             prov:generatedAtTime "2012-07-20T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q39> ;
         prov:wasGeneratedBy "Illumina MiSeq" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949ea8-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bf60-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639537fa-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017117c-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "K19K6" ;
         abromics:strainId "K19K6" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1831,9 +1831,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953822-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017119a-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "s7" ;
         abromics:strainId "st7" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/1351> ;
@@ -1841,14 +1841,14 @@
             prov:generatedAtTime "2000-11-17T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9913> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiScanSQ" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949e58-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bf42-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <6395384a-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801711b8-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "18-CSD76-1" ;
         abromics:strainId "18-CSD76-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1861,9 +1861,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953872-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801711cc-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG12" ;
         abromics:strainId "ARDIG12" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1871,14 +1871,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953890-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801711f4-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-Woeul6" ;
         abromics:strainId "15-Woeul6" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1891,9 +1891,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639538ae-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171208-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG41" ;
         abromics:strainId "ARDIG41" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1901,14 +1901,14 @@
             prov:generatedAtTime "2019-03-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639538cc-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017123a-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U20-Benz-P2-1" ;
         abromics:strainId "U20-Benz-P2-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1921,9 +1921,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639538e0-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017124e-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-33P28K-1" ;
         abromics:strainId "17-33P28K-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -1931,14 +1931,14 @@
             prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639538fe-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171262-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG47" ;
         abromics:strainId "ARDIG47" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1946,14 +1946,14 @@
             prov:generatedAtTime "2019-03-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <6395391c-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017128a-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "HUG5" ;
         abromics:strainId "KPN2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/573> ;
@@ -1961,14 +1961,14 @@
             prov:generatedAtTime "2010-11-15T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q39> ;
         prov:wasGeneratedBy "Illumina MiSeq" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949ea8-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bf60-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <6395393a-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017129e-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG23" ;
         abromics:strainId "ARDIG23" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -1976,14 +1976,14 @@
             prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953958-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801712b2-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "F149" ;
         abromics:strainId "F149" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/584> ;
@@ -1991,14 +1991,14 @@
             prov:generatedAtTime "2018-07-02T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9031> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiSeq 2500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953980-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801712d0-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG11" ;
         abromics:strainId "ARDIG11" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -2006,14 +2006,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639539a8-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801712e4-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG26" ;
         abromics:strainId "ARDIG26" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -2021,14 +2021,14 @@
             prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639539c6-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171302-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG2" ;
         abromics:strainId "ARDIG2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -2036,14 +2036,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <639539e4-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171320-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG38" ;
         abromics:strainId "ARDIG38" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -2051,14 +2051,14 @@
             prov:generatedAtTime "2019-02-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953a02-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171334-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG7" ;
         abromics:strainId "ARDIG7" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -2066,14 +2066,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953a20-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171348-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "HUG4" ;
         abromics:strainId "KPN11" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/573> ;
@@ -2081,14 +2081,14 @@
             prov:generatedAtTime "2015-03-13T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q39> ;
         prov:wasGeneratedBy "Illumina MiSeq" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949ea8-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bf60-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953a3e-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171366-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "16-81-1" ;
         abromics:strainId "16-81-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -2096,14 +2096,14 @@
             prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953a66-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171384-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-28P84D-1" ;
         abromics:strainId "17-28P84D-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -2111,14 +2111,14 @@
             prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953a84-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171398-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U20-Benz-S6-1" ;
         abromics:strainId "U20-Benz-S6-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -2131,9 +2131,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953aa2-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801713ac-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG48" ;
         abromics:strainId "ARDIG48" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -2141,14 +2141,14 @@
             prov:generatedAtTime "2019-03-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953aca-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801713ca-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "R0045_1" ;
         abromics:strainId "R0045_1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/1351> ;
@@ -2156,14 +2156,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <6394a1be-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016c0be-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953ae8-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801713de-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "14-Fe-1" ;
         abromics:strainId "14-Fe-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -2176,9 +2176,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953b06-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801713fc-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-HoPe-P2-2" ;
         abromics:strainId "17-HoPe_P2-2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -2191,9 +2191,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953b24-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017141a-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "EC-N11CTX" ;
         abromics:strainId "N11CTX" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -2201,14 +2201,14 @@
             prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9031> ;
         prov:atLocation <http://www.wikidata.org/entity/Q822> ;
         prov:wasGeneratedBy "Illumina HiSeq 2500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953b4c-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017142e-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U19-HoPe-S40-3" ;
         abromics:strainId "U19-HoPe-S40-3" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -2221,9 +2221,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953b6a-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017144c-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-ZW-S21-1-1" ;
         abromics:strainId "17-ZW-S21-1-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -2236,9 +2236,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953b9c-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171460-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG50" ;
         abromics:strainId "ARDIG50" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -2246,14 +2246,14 @@
             prov:generatedAtTime "2019-03-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953bba-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017147e-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-ODR-Wezyska-12-2" ;
         abromics:strainId "15-ODR_Wezyska_12-2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -2266,9 +2266,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953c00-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171492-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "17-HoPe-P12-1" ;
         abromics:strainId "17-HoPe_P12-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -2281,9 +2281,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953c32-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801714b0-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U19-Zw-LK3-3" ;
         abromics:strainId "U19-Zw-LK3-3" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -2296,9 +2296,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953c5a-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801714ce-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-TFL22" ;
         abromics:strainId "15-TFL22" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -2311,9 +2311,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953c8c-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801714e2-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "F87" ;
         abromics:strainId "F87" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/584> ;
@@ -2321,14 +2321,14 @@
             prov:generatedAtTime "2018-04-26T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9031> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiSeq 2500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953caa-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017150a-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "ARDIG43" ;
         abromics:strainId "ARDIG43" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -2336,14 +2336,14 @@
             prov:generatedAtTime "2019-03-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "NextSeq 500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949c82-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bea2-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953cc8-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171528-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-HoPe-P1-1" ;
         abromics:strainId "U17-HoPe-P1-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -2356,9 +2356,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953ce6-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171546-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "s8" ;
         abromics:strainId "st8" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/562> ;
@@ -2366,14 +2366,14 @@
             prov:generatedAtTime "2000-11-18T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "human" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9606> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiScanSQ" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949e58-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bf42-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953d04-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <8017155a-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U17-HoPe-P3-1" ;
         abromics:strainId "U17-HoPe-P3-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -2386,9 +2386,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953d22-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <80171582-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "18-MOC93-1" ;
         abromics:strainId "18-MOC93-1" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -2401,9 +2401,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953d36-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801715a0-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "F177" ;
         abromics:strainId "F177" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/584> ;
@@ -2411,14 +2411,14 @@
             prov:generatedAtTime "2018-06-19T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/9031> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina HiSeq 2500" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953d54-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801715be-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "SS-450" ;
         abromics:strainId "ss450" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/1307> ;
@@ -2426,14 +2426,14 @@
             prov:generatedAtTime "2004-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12424> ;
+        abromics:sampleSource <> ;
         abromics:host <> ;
         prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasGeneratedBy "Illumina NovaSeq 6000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949d4a-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bede-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953d72-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801716ae-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "U20-Benz-P2-3" ;
         abromics:strainId "U20-Benz-P2-3" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -2446,9 +2446,9 @@
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953dae-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801716cc-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "19-50P57O-2" ;
         abromics:strainId "19-50P57O-2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -2456,14 +2456,14 @@
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
 
-    <63953dcc-75c3-11ef-b578-90658429fd42> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <801716e0-9c2f-11ef-ac06-0242fdf98456> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "15-932-2" ;
         abromics:strainId "15-932-2" ;
         abromics:microorganism <http://purl.uniprot.org/taxonomy/470> ;
@@ -2471,9 +2471,9 @@
             prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
         
         abromics:sampleType "animal" ;
-        abromics:sampleSource <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ;
+        abromics:sampleSource <> ;
         abromics:host <http://purl.uniprot.org/taxonomy/8928> ;
         prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasGeneratedBy "Illumina NextSeq 2000" ;
         abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <63949cfa-75c3-11ef-b578-90658429fd42> . 
+        prov:wasAttributedTo <8016bec0-9c2f-11ef-ac06-0242fdf98456> . 
