@@ -139,11 +139,13 @@ class GraphCreator:
                 recs = res["results"]["bindings"]
             except Exception as e:
                 print(e)
+                print(recs) ## Here the is a problem. Wikidata gives us a 403 HTTP error :/
             for item in recs:
                 self.countries[item["countryName"]["value"]] = item["countryId"]["value"] ## All countries are in self.countries now !
                 self.__writeCacheToJson(self.countries, "cache/countries.json")
         else:
             self.countries = self.__readJsonFromFile("cache/countries.json")
+            print(self.countries)
 
 
     ## Get the regions from wikidata
@@ -347,7 +349,10 @@ class GraphCreator:
             uniqueGraphId = uuid.uuid1()
             speciesName = report["sections"][1]["data"][0]["values"][0]
             st = report["sections"][1]["data"][0]["values"][1]
-            taxonomy = self.speciesTaxonomy[speciesName]
+            if speciesName in self.speciesTaxonomy:
+                taxonomy = self.speciesTaxonomy[speciesName]
+            else:
+                taxonomy = ""
 
             self.strains.append({
                 "id": uniqueGraphId,
@@ -509,5 +514,5 @@ class GraphCreator:
 
 
 
-## gc = GraphCreator("../../data/reports")
-## gc.createGraph()
+gc = GraphCreator("../../data/reports")
+gc.createGraph()

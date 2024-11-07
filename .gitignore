@@ -8,7 +8,5 @@
 src/graph/ontologies
 src/data
 
-src/.env
-
 */.env
 

@@ -87,7 +87,7 @@ class Downloader():
 
 
 ## Download all the abromics reports marked as ready to report
-downloadDir = "reports"
+downloadDir = "reports-public"
 choiceDownloadFreshReports = input(f"Download fresh reports data from abromics (this action is destructive) (target directory: {downloadDir}) ? [yes/no] ")
 if choiceDownloadFreshReports == "yes": 
     downloader = Downloader()
