@@ -53,8 +53,8 @@ def getPublicReportsIds():
             print("miswritten json string")
     return publicReportIds
 
-publicReportIds = getPublicReportsIds()
-print(publicReportIds)
+# publicReportIds = getPublicReportsIds()
+# print(publicReportIds)
 
 
 ## Filter only the reports made by Claudine and the sampleId has to be exaclty the same as one that is present in the public database of ABRomics
@@ -63,7 +63,7 @@ nbReportsNotPublishable = 0
 i = 0
 for report in allReports:
     if report["sections"][0]["data"][0]["values"][10] == "Claudine Médigue":
-        shutil.copy(i²i:wqination_directory)
+        shutil.copy(f"reports/{allReportsFilenames[i]}", f"reports-claudine/{allReportsFilenames[i]}")
         nbReportsPublishable += 1
     else:
         nbReportsNotPublishable += 1
