@@ -139,13 +139,11 @@ class GraphCreator:
                 recs = res["results"]["bindings"]
             except Exception as e:
                 print(e)
-                print(recs) ## Here the is a problem. Wikidata gives us a 403 HTTP error :/
             for item in recs:
                 self.countries[item["countryName"]["value"]] = item["countryId"]["value"] ## All countries are in self.countries now !
                 self.__writeCacheToJson(self.countries, "cache/countries.json")
         else:
             self.countries = self.__readJsonFromFile("cache/countries.json")
-            print(self.countries)
 
 
     ## Get the regions from wikidata
@@ -230,7 +228,7 @@ class GraphCreator:
             }}
         """
         print("Fetching sample source ids ...")
-        sparql = SPARQLWrapper("https://abromics.gcp.glicid.fr/sparql")
+        sparql = SPARQLWrapper("http://localhost:8890/sparql")
         sparql.setReturnFormat(JSON)
         sparql.setQuery(sparql_query)
         try:
@@ -269,6 +267,7 @@ class GraphCreator:
             }}
         """
         print("Fetching species taxonomy ids ...")
+        print(sparql_query)
         sparql = SPARQLWrapper("https://sparql.uniprot.org/sparql/")
         sparql.setReturnFormat(JSON)
         sparql.setQuery(sparql_query)
