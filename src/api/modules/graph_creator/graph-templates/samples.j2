@@ -8,6 +8,7 @@
 @prefix aro: <http://purl.obolibrary.org/obo/aro.owl#> .
 @prefix go: <http://purl.org/obo/owl/GO#> .
 @prefix uniprot: <http://purl.uniprot.org/uniprot/> .
+@prefix uniprot-core: <http://purl.uniprot.org/uniprot/core/> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -20,16 +21,20 @@
 {% for sample in samples %}
     <{{ sample["id"] }}> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
         schema:identifier "{{ sample["originalSampleId"] }}" ;
-        abromics:strainId "{{ sample["strainId"] }}" ;
-        abromics:microorganism <{{ sample["microorganism"] }}> ;
+        obo:RO_0002162 <{{ sample["microorganism"] }}> ;
         {% if sample["collectionDate"]|isDatetime %}
             prov:generatedAtTime "{{ sample["collectionDate"] }}T00:00:00Z"^^xsd:dateTime ;
         {% endif %}
-        abromics:sampleType "{{ sample["sampleType"] }}" ;
-        abromics:sampleSource <{{ sample["sampleSource"] }}> ;
-        abromics:host <{{ sample["host"] }}> ;
+        sio:000068 [ rdf:type prov:Entity ; rdfs:label "{{ sample["sampleType"] }}" ] ;
+
+        {% if sample["sampleSource"] != "" %}
+            prov:wasDerivedFrom [ rdf:type <{{sample["sampleSource"]}}> ] ;
+        {% else %}
+            prov:wasDerivedFrom <> ;
+        {% endif %}
+        uniprot-core:host <{{ sample["host"] }}> ;
         prov:atLocation <{{ sample["country"] }}> ;
-        prov:wasGeneratedBy "{{ sample["sequencingTechnology"] }}" ;
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "{{ sample["sequencingTechnology"] }}"  ] ;
         abromics:sequencingPartner "{{ sample["sequencingPartner"] }}" ;
         prov:wasAttributedTo <{{ sample["submitterId"] }}> . 
 {% endfor %}

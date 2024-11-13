@@ -8,6 +8,7 @@ import os
 import uuid
 
 from datetime import datetime
+from dateutil import parser
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
 from SPARQLWrapper import SPARQLWrapper, JSON
 from dotenv import load_dotenv # to read the environment variables from the .env file
@@ -398,6 +399,12 @@ class GraphCreator:
                 originalSampleId = report["sections"][0]["data"][0]["values"][0]
                 submitterId = report["sections"][0]["data"][0]["values"][10]
                 countryName = report["sections"][0]["data"][0]["values"][7]
+                collectionDate = report["sections"][0]["data"][0]["values"][3]
+                ##################### Stuck here
+                collectionDate = parser.parse(collectionDate)
+
+                if datetime.strftime(collectionDate, "%Y"):
+                    collectionDate = datetime.strftime(collectionDate, '%Y-%m-%d')
                 microorganism = report["sections"][1]["data"][0]["values"][0] ## because the section 0-0 is not consistant we use the name of the microorganism from the section 1-0-0
                 host = report["sections"][0]["data"][0]["values"][6]
                 sampleSource = report["sections"][0]["data"][0]["values"][5]
@@ -407,7 +414,7 @@ class GraphCreator:
                     "originalSampleId": originalSampleId,
                     "strainId": report["sections"][0]["data"][0]["values"][1],
                     "microorganism": self.speciesTaxonomy[microorganism] if microorganism in self.speciesTaxonomy.keys() else "",
-                    "collectionDate": report["sections"][0]["data"][0]["values"][3],
+                    "collectionDate": collectionDate,
                     "sampleType": report["sections"][0]["data"][0]["values"][4],
                     "sampleSource": self.sampleSourcesBindNCIT[sampleSource] if sampleSource in self.sampleSourcesBindNCIT.keys() else "", ## BUG # always return en empty string
                     "host": self.speciesTaxonomy[host] if host in self.speciesTaxonomy.keys() else "",
