@@ -19,7 +19,7 @@
 ################################# Sensors ############################################
 
 {% for sensor in sensors %}
-    <{{ sensor["id"] }}> rdf:type sosa:Sensor ;
+    <abromics:{{ sensor["id"] }}> rdf:type sosa:Sensor ;
         rdfs:label "{{ sensor["name"] }}" ;
-        sosa:isHostedBy <{{ sensor["isHostedBy"]}}> .
+        sosa:isHostedBy <abromics:{{ sensor["isHostedBy"]}}> .
 {% endfor %}

@@ -17,14 +17,14 @@
 ################################## Observable Properties #################################
 
 {% for observation in observations %}
-    <{{ observation["id"] }}> rdf:type sosa:Observation ;
-        sosa:hasFeatureOfInterest <{{ observation["strain"] }}> ;
-        sosa:hasFeatureOfInterest <{{ observation["sample"] }}> ;
-        sosa:hasFeatureOfInterest <{{ observation["gene"] }}> ;
-        sosa:hasObservableProperty <{{ observation["observableProperty"] }}> ;
-        prov:wasGeneratedBy <{{ observation["sensor"] }}> ;
-        {% if observation["sensor"] != "" %}sosa:madeBySensor <{{ observation["sensor"] }}> ;{% endif %}
-        sosa:usedProcedure <{{ observation["procedure"] }}> ;
+    <abromics:{{ observation["id"] }}> rdf:type sosa:Observation ;
+        sosa:hasFeatureOfInterest <abromics:{{ observation["strain"] }}> ;
+        sosa:hasFeatureOfInterest <abromics:{{ observation["sample"] }}> ;
+        sosa:hasFeatureOfInterest <abromics:{{ observation["gene"] }}> ;
+        sosa:hasObservableProperty <abromics:{{ observation["observableProperty"] }}> ;
+        prov:wasGeneratedBy <abromics:{{ observation["sensor"] }}> ;
+        {% if observation["sensor"] != "" %}sosa:madeBySensor <abromics:{{ observation["sensor"] }}> ;{% endif %}
+        sosa:usedProcedure <abromics:{{ observation["procedure"] }}> ;
         {% if observation["simpleResult"]|isFloat %}
             sosa:hasSimpleResult "{{ observation["simpleResult"] }}"^^xsd:decimal ;
         {% else %}

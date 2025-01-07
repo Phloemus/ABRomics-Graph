@@ -404,7 +404,7 @@ class GraphCreator:
                 collectionDate = parser.parse(collectionDate)
 
                 if datetime.strftime(collectionDate, "%Y"):
-                    collectionDate = datetime.strftime(collectionDate, '%Y-%m-%d')
+                    collectionDate = datetime.strftime(collectionDate, '%Y-01-01')
                 microorganism = report["sections"][1]["data"][0]["values"][0] ## because the section 0-0 is not consistant we use the name of the microorganism from the section 1-0-0
                 host = report["sections"][0]["data"][0]["values"][6]
                 sampleSource = report["sections"][0]["data"][0]["values"][5]
@@ -446,6 +446,11 @@ class GraphCreator:
                     sensor = "" if report["sections"][0]["data"][0]["values"][8] == "" else self.sensorsMapping[report["sections"][0]["data"][0]["values"][8]] 
                     procedure = self.proceduresMapping["workflow 1 (genomic)"]
 
+                    resultTime = report["sections"][0]["data"][0]["values"][3]
+                    resultTime = parser.parse(resultTime)
+                    if datetime.strftime(resultTime, "%Y"):
+                        resultTime = datetime.strftime(resultTime, '%Y-01-01')
+
                     self.observations.append({
                         "id": uniqueGraphId,
                         "strain": strainFeatureOfInterest,
@@ -455,7 +460,7 @@ class GraphCreator:
                         "sensor": sensor,
                         "procedure": procedure,
                         "simpleResult": observation,
-                        "resultTime": report["sections"][0]["data"][0]["values"][3]
+                        "resultTime": resultTime
                     })
 
                     observationId = observationId + 1 

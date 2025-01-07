@@ -17,6 +17,6 @@
 ################################## Observable Properties #################################
 
 {% for observableProperty in observableProperties %}
-    <{{ observableProperty["id"] }}> rdf:type sosa:ObservableProperty ;
+    <abromics:{{ observableProperty["id"] }}> rdf:type sosa:ObservableProperty ;
         rdfs:label "{{ observableProperty["label"] }}" .
 {% endfor %}
