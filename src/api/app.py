@@ -1,6 +1,7 @@
 
 import sys 
 import os
+import jwt
 from flask import Flask, jsonify, request
 from SPARQLWrapper import SPARQLWrapper, JSON
 
@@ -8,11 +9,26 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 import modules.graph_creator
 
 
+## API configuration
 app = Flask(__name__)
+app.config['secret_key'] = "this is secret"
 
 
-API_ENDPOINT = f"{os.environ['HTTP']}{os.environ['API_HOST']}:{os.environ['API_PORT']}"
-SPARQL_ENDPOINT = f"{os.environ['HTTP']}{os.environ['VIRTUOSO_HOST']}:{os.environ['VIRTUOSO_PORT']}/sparql"
+## Fetching the environment variables depending on the is_dev flag
+if "IS_DEV" in os.environ and os.environ['IS_DEV'] == "false":
+    API_PORT = f"{os.environ['API_PORT']}"
+    API_ENDPOINT = f"{os.environ['HTTP']}{os.environ['API_HOST']}:{os.environ['API_PORT']}"
+    API_BASEPATH = f"{os.environ['API_BASEPATH']}"
+    SPARQL_ENDPOINT = f"{os.environ['HTTP']}{os.environ['VIRTUOSO_HOST']}:{os.environ['VIRTUOSO_PORT']}/sparql"
+    ADMIN_USERNAME = f"{os.environ['API_ADMIN_USERNAME']}"
+    ADMIN_PASSWORD = f"{os.environ['API_ADMIN_PASSWORD']}"
+else:   
+    API_PORT = "5000"
+    API_ENDPOINT = "http://localhost:5000"
+    API_BASEPATH = f"graph-api"
+    SPARQL_ENDPOINT = "http://localhost:8890"
+    ADMIN_USERNAME = "admin"
+    ADMIN_PASSWORD = "admin"
 
 
 QUERIES = [
@@ -101,9 +117,30 @@ def executeQuery(sparqlEndpointUrl, queryFilePath, parameters=[]):
         return {"status": "error", "message": str(e)}
 
 
+## Middleware functions
+## 
+## 
+def authentification_required(f):
+    def decorated(*args, **kwargs):
+        token = request.args.get('token')
+        if not token:
+            return jsonify({'error': 'token is missing'}), 403
+        try:
+            jwt.decode(token, app.config['secret_key'], algorithms="HS256")
+        except Exception as error:
+            return jsonify({'error': 'token is invalid/expired'})
+        return f(*args, **kwargs)
+    return decorated
+
+
+## API routes functions
+##
+##
+##
+
 
 ## Home Route
-@app.route(f"/{os.environ['API_BASEPATH']}")
+@app.route(f"/{API_BASEPATH}")
 def home():
     return jsonify({
         "version": "0.0.1",
@@ -111,31 +148,50 @@ def home():
     })
 
 
+## Login route
+@app.route(f"/{API_BASEPATH}/login", methods=['POST'])
+def login():
+    username = request.json["username"]
+    password = request.json["password"]
+    if username == ADMIN_USERNAME and password == ADMIN_PASSWORD:
+        token = jwt.encode({'user': auth.username, 'exp': datetime.datetime.utcnow() + datetime.timedelta(seconds=10)}, app.config['secret_key'])
+        return jsonify({"token": token})
+    else:
+        return jsonify({"message": "wrong username or password"})
+
+
+## protected route
+@app.route(f"/{API_BASEPATH}/protected")
+@authentification_required
+def protected():
+    return jsonify({"message": "protected route tested"})
+
+
 ## Routes that allow to modify the graph
-@app.route(f"/{os.environ['API_BASEPATH']}/build-graph", methods=['GET'])
+@app.route(f"/{API_BASEPATH}/build-graph", methods=['GET'])
 def buildGraph():
     gc = GraphCreator()
     return jsonify({"message": "test 1 passed"})
 
 
 ## Routes that trigger SPARQL queries 
-@app.route(f"/{os.environ['API_BASEPATH']}/query", methods=['GET'])
+@app.route(f"/{API_BASEPATH}/query", methods=['GET'])
 def listAvailableQueries():
     return jsonify(QUERIES)
 
-@app.route(f"/{os.environ['API_BASEPATH']}/node/count", methods=[QUERIES[0]["method"]])
+@app.route(f"/{API_BASEPATH}/node/count", methods=[QUERIES[0]["method"]])
 def countNodesInAllGraphs():
     return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[0]["filePath"]))
 
-@app.route(f"/{os.environ['API_BASEPATH']}/sample/count/people", methods=[QUERIES[1]["method"]])
+@app.route(f"/{API_BASEPATH}/sample/count/people", methods=[QUERIES[1]["method"]])
 def countSamplesInGraphByPeople():
     return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[1]["filePath"]))
 
-@app.route(f"/{os.environ['API_BASEPATH']}/sample/count/countries", methods=[QUERIES[2]["method"]])
+@app.route(f"/{API_BASEPATH}/sample/count/countries", methods=[QUERIES[2]["method"]])
 def countSamplesInGraphByCountries():
     return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[2]["filePath"]))
 
-@app.route(f"/{os.environ['API_BASEPATH']}/organ", methods=[QUERIES[3]["method"]])
+@app.route(f"/{API_BASEPATH}/organ", methods=[QUERIES[3]["method"]])
 def listAvailableOrgansForSpecieName():
     specieName = request.json["specie_name"]
     query_parameters = [ {"string_to_replace": "Homo sapiens", "values": [specieName]} ]
@@ -143,7 +199,7 @@ def listAvailableOrgansForSpecieName():
 
 
 ## Compentency questions
-@app.route(f"/{os.environ['API_BASEPATH']}/get-ktop-antibiotic-res-genes", methods=[QUERIES[4]["method"]])
+@app.route(f"/{API_BASEPATH}/get-ktop-antibiotic-res-genes", methods=[QUERIES[4]["method"]])
 def getKTopAntibioticResGenes():
     metric = request.json["metric"]
     query_parameters = [ {"string_to_replace": "Gene Length", "values": [metric]} ]
@@ -154,4 +210,4 @@ def getKTopAntibioticResGenes():
 
 ## Launch the Flask app (the ABRomics-KG API)
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=os.environ['API_PORT'], debug=True)
+    app.run(host="0.0.0.0", port=API_PORT, debug=True)
