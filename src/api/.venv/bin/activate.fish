@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/brieuc/Documents/dev/abromics/abromics-kg/src/api/.venv"
+set -gx VIRTUAL_ENV "/home/brieuc/Documents/dev/abromics/abromics-graph/src/api/.venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
