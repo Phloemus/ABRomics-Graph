@@ -2,6 +2,7 @@
 import sys 
 import os
 import jwt
+import datetime
 from flask import Flask, jsonify, request
 from SPARQLWrapper import SPARQLWrapper, JSON
 
@@ -119,10 +120,10 @@ def executeQuery(sparqlEndpointUrl, queryFilePath, parameters=[]):
 
 ## Middleware functions
 ## 
-## 
+## Alwa
 def authentification_required(f):
     def decorated(*args, **kwargs):
-        token = request.args.get('token')
+        token = request.json['token']
         if not token:
             return jsonify({'error': 'token is missing'}), 403
         try:
@@ -154,7 +155,7 @@ def login():
     username = request.json["username"]
     password = request.json["password"]
     if username == ADMIN_USERNAME and password == ADMIN_PASSWORD:
-        token = jwt.encode({'user': auth.username, 'exp': datetime.datetime.utcnow() + datetime.timedelta(seconds=10)}, app.config['secret_key'])
+        token = jwt.encode({'user': username, 'exp': datetime.datetime.utcnow() + datetime.timedelta(days=3)}, app.config['secret_key'])
         return jsonify({"token": token})
     else:
         return jsonify({"message": "wrong username or password"})
