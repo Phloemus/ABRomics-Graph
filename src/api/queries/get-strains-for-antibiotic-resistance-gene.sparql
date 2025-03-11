@@ -1,0 +1,24 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX prov: <http://www.w3.org/ns/prov#> 
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX abromics: <https://abromics.fr/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX aro: <http://purl.obolibrary.org/obo/aro.owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT ?strains ?st ?taxonomy
+WHERE {
+        ?strains rdf:type aro:Strain ;
+           abromics:has_st ?st ;
+           obo:RO_0002162 ?taxonomy .
+            
+        ?gene rdfs:label "sul1" .
+
+        ?geneObservableProperty rdf:type sosa:observableProperty ;
+            rdfs:label "Resistance gene" .
+
+        ?observations sosa:hasFeatureOfInterest ?gene ;
+            sosa:hasObservableProperty ?geneObservableProperty ;
+            sosa:hasFeatureOfInterest ?strains .
+ }

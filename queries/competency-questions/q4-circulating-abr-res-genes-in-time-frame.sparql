@@ -1,0 +1,46 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX go: <http://purl.org/obo/owl/GO#>
+PREFIX aro: <http://purl.obolibrary.org/obo/aro.owl#>
+PREFIX schema: <https://schema.org/>
+PREFIX abromics: <https://abromics.fr/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+## Q4: What are actively circulating ABR genes, given a specific time-frame and at least 
+## two different sample types ?
+## 
+## Circulating ABR genes are the antibiotic resistance genes that are found in samples 
+## collected in a specific time frame between different biological source (sampleType)
+## 
+## This request example only focuses between october 2010 and october 2024
+##
+SELECT ?gene_name (COUNT(DISTINCT ?sampleType) as ?nb_sample_types) (GROUP_CONCAT(DISTINCT ?sampleType; separator=", ") AS ?sampleTypes) (COUNT(DISTINCT ?res) as ?total_nb_occurences) WHERE {
+
+   ?sample rdf:type sio:001050 ;
+        abromics:sampleType ?sampleType ;
+        prov:generatedAtTime ?collectedDate .
+
+   ## collectedDate filtration
+   FILTER (?collectedDate > "2010-10-23T00:00:00Z"^^xsd:dateTime && 
+           ?collectedDate < "2024-10-23T00:00:00Z"^^xsd:dateTime)
+
+   ?obs_prop rdf:type sosa:ObservableProperty ;
+        rdfs:label "Resistance gene" .
+
+   ?gene rdf:type go:Gene ;
+        rdfs:label ?gene_name .
+
+   ?res rdf:type sosa:Result ;
+        sosa:hasSimpleResult ?resValue .
+
+   ?observations sosa:hasObservableProperty ?obs_prop ;
+        sosa:hasFeatureOfInterest ?gene ;
+        sosa:hasFeatureOfInterest ?sample ;
+        sosa:hasResult ?res .
+
+} 
+GROUP BY ?gene_name ?resValue
+HAVING (COUNT(DISTINCT ?sampleType) > 1)
+ORDER BY DESC(?total_nb_occurences)
