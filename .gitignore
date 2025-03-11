@@ -4,6 +4,7 @@
 */.ipynb_checkpoints
 
 */.venv
+node_modules/
 
 src/graph/ontologies
 src/data

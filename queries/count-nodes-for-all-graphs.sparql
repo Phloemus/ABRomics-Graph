@@ -1,7 +1,0 @@
-SELECT ?graph (COUNT(?s) AS ?triples)
-WHERE {
-  GRAPH ?graph {
-    ?s ?p ?o .
-  }
-}
-GROUP BY ?graph
