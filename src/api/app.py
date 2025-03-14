@@ -115,7 +115,7 @@ def executeQuery(sparqlEndpointUrl, queryFilePath, parameters=[]):
         return recs
     except Exception as e:
         print(e)
-        return {"status": "error", "message": str(e)}
+        return {"status": "error", "message": str(e), "endpoint": SPARQL_ENDPOINT}
 
 
 ## Middleware functions
