@@ -27,7 +27,7 @@ else:
     API_PORT = "5000"
     API_ENDPOINT = "http://localhost:5000"
     API_BASEPATH = f"graph-api"
-    SPARQL_ENDPOINT = "http://localhost:8890"
+    SPARQL_ENDPOINT = "http://localhost:8890/sparql"
     ADMIN_USERNAME = "admin"
     ADMIN_PASSWORD = "admin"
 
@@ -182,6 +182,7 @@ def listAvailableQueries():
 
 @app.route(f"/{API_BASEPATH}/node/count", methods=[QUERIES[0]["method"]])
 def countNodesInAllGraphs():
+    print(QUERIES[0]["filePath"])
     return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[0]["filePath"]))
 
 @app.route(f"/{API_BASEPATH}/sample/count/people", methods=[QUERIES[1]["method"]])
