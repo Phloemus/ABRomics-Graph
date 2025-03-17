@@ -8,7 +8,8 @@
 
     function fetchQueryResult(id) {
         console.log(id)
-        fetch("http://localhost:5000/graph-api/node/count").then(response => {
+        // Don't forget to change the port or the host in prod ;)
+        fetch("http://localhost:5000/graph-api/node/count").then(response => { 
             return response.json()
         }).then((data) => {
             console.log(data)
