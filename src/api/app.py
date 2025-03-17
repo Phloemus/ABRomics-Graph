@@ -4,6 +4,7 @@ import os
 import jwt
 import datetime
 from flask import Flask, jsonify, request
+from flask_cors import CORS, cross_origin
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 ## Module imports
@@ -13,6 +14,9 @@ import modules.graph_creator
 ## API configuration
 app = Flask(__name__)
 app.config['secret_key'] = "this is secret"
+
+cors = CORS(app) # allow CORS for all domains on all routes.
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 ## Fetching the environment variables depending on the is_dev flag
@@ -120,7 +124,6 @@ def executeQuery(sparqlEndpointUrl, queryFilePath, parameters=[]):
 
 ## Middleware functions
 ## 
-## Alwa
 def authentification_required(f):
     def decorated(*args, **kwargs):
         token = request.json['token']
@@ -141,6 +144,7 @@ def authentification_required(f):
 
 
 ## Home Route
+@cross_origin()
 @app.route(f"/{API_BASEPATH}")
 def home():
     return jsonify({
@@ -169,6 +173,7 @@ def protected():
 
 
 ## Routes that allow to modify the graph
+@cross_origin()
 @app.route(f"/{API_BASEPATH}/build-graph", methods=['GET'])
 def buildGraph():
     gc = GraphCreator()
@@ -176,31 +181,36 @@ def buildGraph():
 
 
 ## Routes that trigger SPARQL queries 
+@cross_origin()
 @app.route(f"/{API_BASEPATH}/query", methods=['GET'])
 def listAvailableQueries():
     return jsonify(QUERIES)
 
+@cross_origin()
 @app.route(f"/{API_BASEPATH}/node/count", methods=[QUERIES[0]["method"]])
 def countNodesInAllGraphs():
     print(QUERIES[0]["filePath"])
     return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[0]["filePath"]))
 
+@cross_origin()
 @app.route(f"/{API_BASEPATH}/sample/count/people", methods=[QUERIES[1]["method"]])
 def countSamplesInGraphByPeople():
     return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[1]["filePath"]))
 
+@cross_origin()
 @app.route(f"/{API_BASEPATH}/sample/count/countries", methods=[QUERIES[2]["method"]])
 def countSamplesInGraphByCountries():
     return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[2]["filePath"]))
 
+@cross_origin()
 @app.route(f"/{API_BASEPATH}/organ", methods=[QUERIES[3]["method"]])
 def listAvailableOrgansForSpecieName():
     specieName = request.json["specie_name"]
     query_parameters = [ {"string_to_replace": "Homo sapiens", "values": [specieName]} ]
     return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[3]["filePath"], query_parameters))
 
-
 ## Compentency questions
+@cross_origin()
 @app.route(f"/{API_BASEPATH}/get-ktop-antibiotic-res-genes", methods=[QUERIES[4]["method"]])
 def getKTopAntibioticResGenes():
     metric = request.json["metric"]
