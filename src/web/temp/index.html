@@ -61,7 +61,6 @@
         <script>
 
             function executeQuery(id) {
-                console.log(id)
                 fetch("http://localhost:8081/api/node/count").then(response => {
                     return response.json()
                 }).then((data) => {
