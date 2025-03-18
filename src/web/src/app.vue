@@ -24,13 +24,13 @@
             </div>
             <div class="w-full relative">
                 <h3 class="mx-1 my-4 text-slate-600 text-lg">Queries</h3>
-                <div class="my-3 p-2 bg-slate-50 rounded-md">
+                <div class="my-3 p-2 bg-slate-50 rounded-md hover:bg-slate-100 hover:cursor-pointer">
                     <h4 class="text-slate-800 text-md">
                         <span class="font-medium text-slate-900">Competency Question 1:</span> 
                         What are the most common antibiotic resistance genes present in all samples
                     </h4>
                 </div>
-                <div class="my-3 p-2 bg-slate-50 rounded-md">
+                <div class="my-3 p-2 bg-slate-50 rounded-md hover:bg-slate-100 hover:cursor-pointer">
                     <h4 class="text-slate-800 text-md">
                         <span class="font-medium text-slate-900">Competency Question 1:</span> 
                         What are the most common antibiotic resistance genes present in all samples
