@@ -22,7 +22,7 @@
             <div>
 
             </div>
-            <div class="w-full">
+            <div class="w-full relative">
                 <h3 class="mx-1 my-4 text-slate-600 text-lg">Queries</h3>
                 <div class="my-3 p-2 bg-slate-50 rounded-md">
                     <h4 class="text-slate-800 text-md">
@@ -42,6 +42,13 @@
                     >
                         More queries
                     </button>
+                </div>
+            </div>
+            <div class="mx-12 px-6 pb-4 absolute bottom-0 left-0 border-t-2 border-slate-200">
+                <div class="py-3 flex gap-2 text-slate-500">
+                    <span>v0.0.1</span>
+                    <span>ABRomicsKG</span>
+                    <span>2025</span>
                 </div>
             </div>
         </div>
