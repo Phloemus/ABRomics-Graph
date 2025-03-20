@@ -1,8 +1,12 @@
 <script setup>
     import { ref } from 'vue'
+    
 
     import Sidebar from "./components/Sidebar.vue"
+    import Navbar from "./components/Navbar.vue"
     import ActionButton from "./components/ActionButton.vue"
+
+    import queries from './static/queries.json'
 
     function fetchQueryResult(id) {
         console.log(id)
@@ -23,44 +27,41 @@
     <div class="h-screen w-full bg-slate-50 flex">
         <Sidebar />
         <div class="w-full">
-            <nav class="px-6 py-3 w-full bg-white border-b border-slate-200">
-                <div class="flex flex-row-reverse gap-4">
-                    <ActionButton content="Login"/>
-                </div>
-            </nav>
+            <Navbar />
             <div class="px-10 my-10">
                 <main class="mx-auto p-8 bg-white max-w-screen-xl border border-slate-200 rounded-md">
-                    <h1 class="mb-1 text-2xl text-slate-900 font-bold">What are the most common antibiotic resistance genes in all samples ?</h1>
-                    <span class="text-md text-slate-600">competency question 1</span>
+                    <h1 class="mb-1 text-2xl text-slate-900 font-bold">{{ queries[0].title }}</h1>
+                    <span class="text-md text-slate-600">{{ queries[0].name }}</span>
                     <div>
-                        <p class="my-6 text-lg text-slate-700">
-                            This competency question allows to explore the whole database in order to find relevant data for 
-                            further exploration. The query is a template that can be easily reused to build new SPARQL queries
-                            that will rely on different data sources using Uniprot or Wikidata. It serves as the test request 
-                            when deploying the application, so this query should always work perfectly !
-                        </p>
+                        <p class="my-6 text-lg text-slate-700">{{ queries[0].definition }}</p>
                     </div>
                     <div>
                         <h2 class="text-xl text-slate-900 font-bold">Ontologies involved</h2>
                         <div class="my-6 flex gap-4">
                             <div class="p-4 bg-slate-50 hover:bg-slate-100 w-96 rounded-md cursor-pointer">
-                                <span class="px-4 py-1 text-md bg-sky-200 text-sky-500 rounded-sm">GO: Gene Ontology</span>
+                                <span class="px-4 py-1 text-md bg-sky-200 text-sky-500 rounded-sm">
+                                    {{ queries[0].ontologies[0].shortName }}: {{ queries[0].ontologies[0].name }}
+                                </span>
                                 <p class="mt-4 text-slate-800">
-                                    Provides structured controlled vocabularies for the annotation of gene products with... 
+                                    {{ queries[0].ontologies[0].definition }}
                                     <span class="text-slate-900 font-semibold hover:underline">more</span>
                                 </p>
                             </div>
                             <div class="p-4 bg-slate-50 hover:bg-slate-100 w-96 rounded-md cursor-pointer">
-                                <span class="px-4 py-1 text-md bg-sky-200 text-sky-500 rounded-sm">GO: Gene Ontology</span>
+                                <span class="px-4 py-1 text-md bg-sky-200 text-sky-500 rounded-sm">
+                                    {{ queries[0].ontologies[0].shortName }}: {{ queries[0].ontologies[0].name }}
+                                </span>
                                 <p class="mt-4 text-slate-800">
-                                    Provides structured controlled vocabularies for the annotation of gene products with... 
+                                    {{ queries[0].ontologies[0].definition }}
                                     <span class="text-slate-900 font-semibold hover:underline">more</span>
                                 </p>
                             </div>
                             <div class="p-4 bg-slate-50 hover:bg-slate-100 w-96 rounded-md cursor-pointer">
-                                <span class="px-4 py-1 text-md bg-sky-200 text-sky-500 rounded-sm">GO: Gene Ontology</span>
+                                <span class="px-4 py-1 text-md bg-sky-200 text-sky-500 rounded-sm">
+                                    {{ queries[0].ontologies[0].shortName }}: {{ queries[0].ontologies[0].name }}
+                                </span>
                                 <p class="mt-4 text-slate-800">
-                                    Provides structured controlled vocabularies for the annotation of gene products with... 
+                                    {{ queries[0].ontologies[0].definition }}
                                     <span class="text-slate-900 font-semibold hover:underline">more</span>
                                 </p>
                             </div>
@@ -80,12 +81,8 @@
                                 </div>
                                 <div class="p-4 w-full bg-slate-800 rounded-b-md">
                                     <code>
-                                        <p class="text-white">test !!</p>
-                                        <p class="text-white">test !!</p>
-                                        <p class="text-white">test !!</p>
-                                        <p class="text-white">test !!</p>
-                                        <p class="text-white">test !!</p>
-                                        <p class="text-white">test !!</p>
+                                        <p class="text-white">{{ queries[0].sparqlQuery }}</p>
+                                        <Shiki theme="monokai" lang="js" :code="queries[0].sparqlQuery" />
                                     </code>
                                 </div>
                             </div>

@@ -13,6 +13,7 @@
                 "definition": "Provides structured controlled vocabularies for the annotation of gene products with..",
                 "bioportalUrl": "https://bioportal.bioontology.org/ontologies/GO"
             }
-        ]
+        ],
+        "sparqlQuery": "SELECT ?gene WHERE {}"
     }
 ]
