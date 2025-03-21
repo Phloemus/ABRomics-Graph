@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/brieuc/Documents/dev/abromics/abromics-kg/src/api/.venv"
+VIRTUAL_ENV="/home/brieuc/Documents/dev/abromics/abromics-graph/src/api/.venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
