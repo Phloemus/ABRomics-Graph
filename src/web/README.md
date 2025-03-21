@@ -1,33 +1,75 @@
-# Streamlit demo app
+# Nuxt Minimal Starter
 
-This is a small demo of the graph. It shows the structure of the graph as well as interesting queries that can 
-be performed using SPARQL requests on the abromics knowledge graph.
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Launch the application standalone
+## Setup
 
-It's possible to launch the streamlit app without the other services listed in docker compose. 
+Make sure to install dependencies:
 
+```bash
+# npm
+npm install
 
-### Install the conda environement
+# pnpm
+pnpm install
 
-```
-bash
-conda env create --name abr-streamlit -f environement.yaml
-```
+# yarn
+yarn install
 
-### Activate the conda environement
-
-```
-bash
-conda activate abr-streamlit 
-## or
-source activate abr-streamlit 
+# bun
+bun install
 ```
 
-### Launch the application in development mode
+## Development Server
 
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
 ```
-bash 
-cd app
-streamlit run Home.py --server.port=8502 --server.address=0.0.0.0
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
 ```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
