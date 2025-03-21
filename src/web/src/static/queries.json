@@ -14,6 +14,6 @@
                 "bioportalUrl": "https://bioportal.bioontology.org/ontologies/GO"
             }
         ],
-        "sparqlQuery": "SELECT ?gene WHERE {}"
+        "sparqlQuery": "q1-get-all-res-genes-for-specific-sample.sparql"
     }
 ]

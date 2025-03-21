@@ -9,7 +9,38 @@
 
     import queries from './static/queries.json'
 
-    const queryHtml = await codeToHtml(queries[0].sparqlQuery, { lang: 'sparql', theme: 'catppuccin-mocha', colorReplacements: { '#1e1e2e': '#1e293b' }})
+    const textQuery = `
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX go: <http://purl.org/obo/owl/GO#>
+PREFIX schema: <https://schema.org/>
+        
+## Q1: Get the resistances genes for a specific sample (sample ARDIG32)
+## 
+SELECT ?sample_id (?gene_name as ?resistance_gene_name) WHERE {
+        
+    ?obs_prop rdf:type sosa:ObservableProperty ;
+        rdfs:label "Resistance gene" .
+                        
+    ?sample rdf:type sio:001050 ;
+        schema:identifier ?sample_id .
+        
+    FILTER(?sample_id = "ARDIG32")
+        
+    ?gene rdf:type go:Gene ;
+        rdfs:label ?gene_name .
+                        
+    ?observations sosa:hasObservableProperty ?obs_prop ;
+        sosa:hasFeatureOfInterest ?gene ;
+        sosa:hasFeatureOfInterest ?sample ;
+        sosa:hasSimpleResult ?gene_name .
+        
+}
+    `
+
+    const queryHtml = await codeToHtml(textQuery, { lang: 'sparql', theme: 'catppuccin-mocha', colorReplacements: { '#1e1e2e': '#1e293b' }})
     console.log(queryHtml)
 
     function fetchQueryResult(id) {
@@ -71,7 +102,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-6 flex gap-4">
+                    <div class="mt-6 flex gap-6">
                         <div class="w-3/5">
                             <h2 class="text-xl text-slate-900 font-bold">Query</h2>
                             <div class="my-4 w-full bg-slate-800 rounded-md">
@@ -103,7 +134,9 @@
                     </div>
 
                     <div class="my-6 hidden">
-                        <h2 class="text-xl text-slate-900 font-bold">Query result</h2>
+                        <div class="flex justify-between items-center">
+                            <h2 class="text-xl text-slate-900 font-bold">Query result</h2>
+                        </div>
                         <div class="my-4 w-full bg-slate-800 rounded-md">
                             <div class="py-2 px-4 flex items-center justify-between border-b border-slate-700">
                                 <span class="text-white">csv</span>
