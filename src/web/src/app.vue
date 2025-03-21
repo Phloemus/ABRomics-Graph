@@ -1,12 +1,16 @@
 <script setup>
     import { ref } from 'vue'
-    
+
+    import { codeToHtml } from 'shiki'
 
     import Sidebar from "./components/Sidebar.vue"
     import Navbar from "./components/Navbar.vue"
     import ActionButton from "./components/ActionButton.vue"
 
     import queries from './static/queries.json'
+
+    const queryHtml = await codeToHtml(queries[0].sparqlQuery, { lang: 'sparql', theme: 'catppuccin-mocha', colorReplacements: { '#1e1e2e': '#1e293b' }})
+    console.log(queryHtml)
 
     function fetchQueryResult(id) {
         console.log(id)
@@ -81,8 +85,7 @@
                                 </div>
                                 <div class="p-4 w-full bg-slate-800 rounded-b-md">
                                     <code>
-                                        <p class="text-white">{{ queries[0].sparqlQuery }}</p>
-                                        <Shiki theme="monokai" lang="js" :code="queries[0].sparqlQuery" />
+                                        <div v-html="queryHtml"></div>
                                     </code>
                                 </div>
                             </div>
