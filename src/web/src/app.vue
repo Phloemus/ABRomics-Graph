@@ -41,7 +41,6 @@ SELECT ?sample_id (?gene_name as ?resistance_gene_name) WHERE {
     `
 
     const queryHtml = await codeToHtml(textQuery, { lang: 'sparql', theme: 'catppuccin-mocha', colorReplacements: { '#1e1e2e': '#1e293b' }})
-    console.log(queryHtml)
 
     function fetchQueryResult(id) {
         console.log(id)
