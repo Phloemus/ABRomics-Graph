@@ -453,9 +453,7 @@ class GraphCreator:
 
                     self.observations.append({
                         "id": uniqueGraphId,
-                        "strain": strainFeatureOfInterest,
                         "sample": sampleFeatureOfInterest,
-                        "gene": geneFeatureOfInterest,
                         "observableProperty": observableProperty,
                         "sensor": sensor,
                         "procedure": procedure,

@@ -1,4 +1,4 @@
-#!/home/brieuc/Documents/dev/abromics/abromics-kg/src/api/.venv/bin/python3
+#!/home/brieuc/Documents/dev/abromics/abromics-graph/src/api/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
