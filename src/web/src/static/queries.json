@@ -15,7 +15,8 @@
                 "bioportalUrl": "https://bioportal.bioontology.org/ontologies/GO"
             }
         ],
-        "sparqlQuery": "q1-get-all-res-genes-for-specific-sample.sparql"
+        "sparqlQuery": "q1-get-all-res-genes-for-specific-sample.sparql",
+        "apiLink": "node/count"
     },
     {
         "id": 2,
@@ -33,6 +34,7 @@
                 "bioportalUrl": "https://bioportal.bioontology.org/ontologies/ENVO"
             }
         ],
-        "sparqlQuery": "q2-get-ktop-res-genes-for-given-metric-all-samples.sparql"
+        "sparqlQuery": "q2-get-ktop-res-genes-for-given-metric-all-samples.sparql",
+        "apiLink": ""
     }
 ]
