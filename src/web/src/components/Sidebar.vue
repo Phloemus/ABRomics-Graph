@@ -6,7 +6,7 @@
 </script>
 
 <template>
-    <div class="px-4 w-96 h-full bg-white border-r border-slate-200 z-20">
+    <div class="px-4 w-96 h-full block bg-white border-r border-slate-200 z-20">
             <div>
 
             </div>
