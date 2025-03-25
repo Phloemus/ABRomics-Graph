@@ -41,14 +41,18 @@ SELECT ?sample_id (?gene_name as ?resistance_gene_name) WHERE {
 
     const route = useRoute()
     const queryId = route.params.id - 1
-    console.log(queryId)
-    console.log(queries[queryId].ontologies[0].name)
-    console.log(queries[queryId].ontologies[0])
-
-    // State handling 
-    
+    const queryFilename = queries[queryId].sparqlQuery
+    const ontologies = queries[queryId].ontologies
 
     const queryHtml = await codeToHtml(textQuery, { lang: 'sparql', theme: 'catppuccin-mocha', colorReplacements: { '#1e1e2e': '#1e293b' }})
+
+    fetch(`/${queryFilename}`).then(response => { 
+        return response.text()
+    }).then((data) => {
+        console.log(data)
+    }).catch(err => { 
+        console.error('Error loading file: ' + err)
+    })
 
     function fetchQueryResult(id) {
         console.log(id)
@@ -74,33 +78,14 @@ SELECT ?sample_id (?gene_name as ?resistance_gene_name) WHERE {
     <div>
         <h2 class="text-xl text-slate-900 font-bold">Ontologies involved</h2>
         <div class="my-6 flex gap-4">
-            <div class="p-4 bg-slate-50 hover:bg-slate-100 w-96 rounded-md cursor-pointer">
-                <span class="px-4 py-1 text-md bg-sky-200 text-sky-500 rounded-sm">
-                    {{ queries[queryId].ontologies[0].shortName }}: {{ queries[queryId].ontologies[0].name }} 
-                </span>
-                <p class="mt-4 text-slate-800">
-                    {{ queries[queryId].ontologies[0].description }}
-                    <span class="text-slate-900 font-semibold hover:underline">more</span>
-                </p>
-            </div>
-            <div class="p-4 bg-slate-50 hover:bg-slate-100 w-96 rounded-md cursor-pointer">
-                <span class="px-4 py-1 text-md bg-sky-200 text-sky-500 rounded-sm">
-                    {{ queries[queryId].ontologies[0].shortName }}: {{ queries[queryId].ontologies[0].name }}
-                </span>
-                <p class="mt-4 text-slate-800">
-                    {{ queries[queryId].ontologies[0].description }}
-                    <span class="text-slate-900 font-semibold hover:underline">more</span>
-                </p>
-            </div>
-            <div class="p-4 bg-slate-50 hover:bg-slate-100 w-96 rounded-md cursor-pointer">
-                <span class="px-4 py-1 text-md bg-sky-200 text-sky-500 rounded-sm">
-                    {{ queries[queryId].ontologies[0].shortName }}: {{ queries[queryId].ontologies[0].name }}
-                </span>
-                <p class="mt-4 text-slate-800">
-                    {{ queries[queryId].ontologies[0].description }}
-                    <span class="text-slate-900 font-semibold hover:underline">more</span> 
-                </p>
-            </div>
+            <OntologyCard 
+                v-for="(ontology, index) in ontologies"
+                :name="ontology.name"
+                :shortName="ontology.shortName"
+                :type="ontology.type"
+                :description="ontology.description"
+                :link="ontology.bioportalUrl"
+            />
         </div>
     </div>
     <div class="mt-6 flex gap-6">
