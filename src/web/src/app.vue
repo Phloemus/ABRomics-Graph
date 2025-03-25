@@ -5,7 +5,10 @@
 </script>
 
 <template>
-    <NuxtLayout>
-        <NuxtPage/>
-    </NuxtLayout>
+    <div>
+        <LoginPanel />
+        <NuxtLayout>
+            <NuxtPage/>
+        </NuxtLayout>
+    </div>
 </template>
