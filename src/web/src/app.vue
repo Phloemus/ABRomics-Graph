@@ -1,12 +1,12 @@
-<script>
+<script setup>
 
-
+    const isLoginPanelOpened = useState('isLoginPanelOpened', () => false)
 
 </script>
 
 <template>
     <div>
-        <LoginPanel />
+        <LoginPanel v-show="isLoginPanelOpened"/>
         <NuxtLayout>
             <NuxtPage/>
         </NuxtLayout>

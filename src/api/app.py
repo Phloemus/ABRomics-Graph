@@ -3,7 +3,7 @@ import sys
 import os
 import jwt
 import datetime
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, make_response
 from flask_cors import CORS, cross_origin
 from SPARQLWrapper import SPARQLWrapper, JSON
 
@@ -162,7 +162,7 @@ def login():
         token = jwt.encode({'user': username, 'exp': datetime.datetime.utcnow() + datetime.timedelta(days=3)}, app.config['secret_key'])
         return jsonify({"token": token})
     else:
-        return jsonify({"message": "wrong username or password"})
+        return make_response(jsonify({"message": "wrong username or password"}), 401)
 
 
 ## protected route
