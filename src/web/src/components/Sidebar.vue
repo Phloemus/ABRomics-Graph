@@ -27,7 +27,7 @@
             <div v-show="isUserLoggedIn" class="w-full relative">
                 <h3 class="mx-1 my-4 text-slate-600 text-lg">Admin actions</h3>
                 <div class="my-2 p-2 bg-slate-50 hover:bg-slate-100 text-slate-800 rounded-md hover:cursor-pointer">
-                    <NuxtLink to="/admin/1">
+                    <NuxtLink to="/admin/test">
                         <p>
                             test protected route
                         </p>

@@ -166,7 +166,7 @@ def login():
 
 
 ## protected route
-@app.route(f"/{API_BASEPATH}/protected")
+@app.route(f"/{API_BASEPATH}/protected", methods=['POST'])
 @authentification_required
 def protected():
     return jsonify({"message": "protected route tested"})
