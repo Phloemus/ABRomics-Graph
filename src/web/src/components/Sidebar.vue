@@ -3,6 +3,8 @@
     import SmallCard from '../components/SmallCard.vue'
     import queries from '../static/queries.json'
 
+    const isUserLoggedIn = useState("isUserLoggedIn")
+
 </script>
 
 <template>
@@ -20,6 +22,26 @@
                 />
                 <div class="flex justify-center">
                     <ActionButton content="More queries"></ActionButton>
+                </div>
+            </div>
+            <div v-show="isUserLoggedIn" class="w-full relative">
+                <h3 class="mx-1 my-4 text-slate-600 text-lg">Admin actions</h3>
+                <div class="my-2 p-2 bg-slate-50 hover:bg-slate-100 text-slate-800 rounded-md hover:cursor-pointer">
+                    <NuxtLink to="/admin/1">
+                        <p>
+                            test protected route
+                        </p>
+                    </NuxtLink>
+                </div>
+                <div class="my-2 p-2 bg-slate-50 hover:bg-slate-100 text-slate-800 rounded-md hover:cursor-pointer">
+                    <p>
+                        recreate graph
+                    </p>
+                </div>
+                <div class="my-2 p-2 bg-slate-50 hover:bg-slate-100 text-slate-800 rounded-md hover:cursor-pointer">
+                    <p>
+                        delete graph content
+                    </p>
                 </div>
             </div>
             <div class="mx-12 px-6 pb-4 absolute bottom-0 left-0 border-t-2 border-slate-200">
