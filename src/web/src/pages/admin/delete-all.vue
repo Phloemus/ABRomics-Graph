@@ -4,7 +4,6 @@
     const userAuthToken = useState('userAuthToken')
 
     function executeQuery() {
-        
         fetch(
             "http://localhost:5000/graph-api/protected", 
             { 
@@ -29,11 +28,11 @@
 <template>
     <div class="flex justify-between items-start">
         <div>
-            <h1 class="mb-1 text-2xl text-slate-900 font-bold">Test API admin route</h1>
+            <h1 class="mb-1 text-2xl text-slate-900 font-bold">Clear all the nodes in the knowledge graph</h1>
             <span class="text-md text-slate-600">admin query</span>
         </div>
-        <div class="px-4 py-1 bg-sky-200 text-sky-500 rounded-sm">
-            <NuxtLink to="http://localhost:5000/graph-api/protected">[POST] /protected</NuxtLink>
+        <div class="px-4 py-1 bg-red-200 text-red-500 rounded-sm">
+            <NuxtLink to="http://localhost:5000/graph-api/protected">[DELETE] /graph</NuxtLink>
         </div>
     </div>
     <div class="mt-4">
