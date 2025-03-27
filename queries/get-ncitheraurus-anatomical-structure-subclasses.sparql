@@ -9,8 +9,9 @@ PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
 ## Get all the anatomical structure from uberon and ncit excluding some categories 
 ## like all the subclasses of the micro anatomical structure and cell part classes 
 ##
-## ! The query doesn't select the specie when getting the classes from ncit..
-## ! it's going to be a problem at one point
+## ! The query doesn't select the specie when getting the classes from ncit because 
+## ! there is no link between the ncit class and the specie (at least not a link that
+## ! the "present in taxon" term of the relation ontology)
 ##
 SELECT DISTINCT ?specie ?allOrgans ?allLabels WHERE {
   {

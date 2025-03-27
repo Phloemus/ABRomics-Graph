@@ -93,6 +93,18 @@ QUERIES = [
     }
 ]
 
+ADMIN_QUERIES = [
+    {
+        "name": "delete-all-nodes",
+        "route": f"{API_ENDPOINT}/graph",
+        "method": "DELETE",
+        "filePath": "queries/delete-all-nodes.sparql",
+        "description": """
+            Delete all the nodes present in the knowledge graph 
+        """
+    }
+]
+
 
 
 ## Util functions 
@@ -165,14 +177,24 @@ def login():
         return make_response(jsonify({"message": "wrong username or password"}), 401)
 
 
-## protected route
+## protected test route
+## Use this function in development to test if you have access to the protected routes of the API
 @app.route(f"/{API_BASEPATH}/protected", methods=['POST'])
 @authentification_required
 def protected():
     return jsonify({"message": "protected route tested"})
 
 
+## Route that delete all the content (all the nodes) of the knowledge graph
+@app.route(f"/{API_BASEPATH}/graph", methods=['DELETE'])
+@authentification_required
+def deleteGraphData():
+    executeQuery(ADMIN_QUERIES[0]["filePath"])
+    return jsonify({"message": "graph delete successfully"})
+
+
 ## Routes that allow to modify the graph
+## Check if this route works and protect it behind authentification 
 @cross_origin()
 @app.route(f"/{API_BASEPATH}/build-graph", methods=['GET'])
 def buildGraph():
