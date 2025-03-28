@@ -3,6 +3,7 @@ import sys
 import os
 import jwt
 import datetime
+from functools import wraps
 from flask import Flask, jsonify, request, make_response
 from flask_cors import CORS, cross_origin
 from SPARQLWrapper import SPARQLWrapper, JSON
@@ -137,6 +138,7 @@ def executeQuery(sparqlEndpointUrl, queryFilePath, parameters=[]):
 ## Middleware functions
 ## 
 def authentification_required(f):
+    @wraps(f)
     def decorated(*args, **kwargs):
         token = request.json['token']
         if not token:
@@ -187,9 +189,9 @@ def protected():
 
 ## Route that delete all the content (all the nodes) of the knowledge graph
 @app.route(f"/{API_BASEPATH}/graph", methods=['DELETE'])
-@authentification_required
+@authentification_required ## This is the issue : when I add authentification_required the app bugs 
 def deleteGraphData():
-    executeQuery(ADMIN_QUERIES[0]["filePath"])
+    executeQuery(SPARQL_ENDPOINT, ADMIN_QUERIES[0]["filePath"])
     return jsonify({"message": "graph delete successfully"})
 
 
