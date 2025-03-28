@@ -189,7 +189,7 @@ def protected():
 
 ## Route that delete all the content (all the nodes) of the knowledge graph
 @app.route(f"/{API_BASEPATH}/graph", methods=['DELETE'])
-@authentification_required ## This is the issue : when I add authentification_required the app bugs 
+@authentification_required 
 def deleteGraphData():
     executeQuery(SPARQL_ENDPOINT, ADMIN_QUERIES[0]["filePath"])
     return jsonify({"message": "graph delete successfully"})
@@ -199,8 +199,9 @@ def deleteGraphData():
 ## Check if this route works and protect it behind authentification 
 @cross_origin()
 @app.route(f"/{API_BASEPATH}/build-graph", methods=['GET'])
+@authentification_required 
 def buildGraph():
-    gc = GraphCreator()
+    gc = GraphCreator() ## make the graph creation here
     return jsonify({"message": "test 1 passed"})
 
 
