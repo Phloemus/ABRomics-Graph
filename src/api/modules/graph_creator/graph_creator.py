@@ -18,8 +18,9 @@ from dotenv import load_dotenv # to read the environment variables from the .env
 ## Creator module class
 class GraphCreator:
 
-    def __init__(self, reportDirectory):
+    def __init__(self, reportDirectory = "", sparqlEndpoint = ""):
         self.reportDirectory = reportDirectory
+        self.sparqlEndpoint = sparqlEndpoint
         self.allReports = []
 
         ## entities
@@ -91,7 +92,7 @@ class GraphCreator:
         self.allReports = curatedReports
 
 
-    def __createTtlFile(self, templatePath, dataName, data, filterFunctions=[]):
+    def __createTtlFile(self, templatePath, outputPath, dataName, data, filterFunctions=[]):
 
         """
           Create the ttl file from a template and the data
@@ -115,7 +116,7 @@ class GraphCreator:
         template = env.get_template(templatePath)
         templateVars = { dataName : data }
         dataGraph = template.render(templateVars)
-        with open(f"out/{dataName}.ttl", "w") as f:
+        with open(f"{outputPath}/{dataName}.ttl", "w") as f:
             f.write(dataGraph)
         print(f"{dataName} graph created")
 
@@ -482,7 +483,7 @@ class GraphCreator:
 
     ##### Public methods #####
 
-    def createGraph(self):
+    def createGraph(self, fetchCountriesFromCache = None, templatePath = "", outputPath = ""):
 
         ## Loading the reports in memory
         self.allReports = [self.__readJsonFromFile(f"{self.reportDirectory}/{reportFilename}") for reportFilename in os.listdir(self.reportDirectory) if reportFilename.endswith(".json")]
@@ -490,12 +491,16 @@ class GraphCreator:
         ## Curate the reports
         self.__curateReports()
 
-        ## Getting static values
-        choiceCountries = input("Get fresh countries data (from wikidata) ? [yes/no] ")
-        if choiceCountries == "yes": 
-            self.__getCountries(from_cache=False)
+        ## Ask the user when the way to get the countries is not indicated
+        if fetchCountriesFromCache is None: 
+            choiceCountries = input("Get fresh countries data (from wikidata) ? [yes/no] ")
+            if choiceCountries == "yes": 
+                self.__getCountries(from_cache=False)
+            else:
+                self.__getCountries(from_cache=True)
         else:
-            self.__getCountries(from_cache=True)
+            self.__getCountries(from_cache=fetchCountriesFromCache)
+
         self.__getSpeciesTaxonomy()
         self.__getSampleSources()
 
@@ -510,18 +515,52 @@ class GraphCreator:
         self.__addSamples()
         self.__addObservations()
 
-        ## Creating the turtle files
-        self.__createTtlFile("graph-templates/platforms.j2", "platforms", self.platforms) 
-        self.__createTtlFile("graph-templates/sensors.j2", "sensors", self.sensors) 
-        self.__createTtlFile("graph-templates/procedures.j2", "procedures", self.procedures) 
-        self.__createTtlFile("graph-templates/people.j2", "people", self.people) 
-        self.__createTtlFile("graph-templates/strains.j2", "strains", self.strains)
-        self.__createTtlFile("graph-templates/observable-properties.j2", "observableProperties", self.observableProperties)
-        self.__createTtlFile("graph-templates/genes.j2", "genes", self.genes)
-        self.__createTtlFile("graph-templates/samples.j2", "samples", self.samples, filterFunctions=[{"name": "isDatetime", "content": self.__isDatetime}])
-        self.__createTtlFile("graph-templates/observations.j2", "observations", self.observations, filterFunctions=[{"name": "isFloat", "content": self.__isFloat}])
+        ## Creating the turtle file
+        self.__createTtlFile(f"{templatePath}graph-templates/platforms.j2", outputPath, "platforms", self.platforms) 
+        self.__createTtlFile(f"{templatePath}graph-templates/sensors.j2", outputPath, "sensors", self.sensors) 
+        self.__createTtlFile(f"{templatePath}graph-templates/procedures.j2", outputPath, "procedures", self.procedures) 
+        self.__createTtlFile(f"{templatePath}graph-templates/people.j2", outputPath, "people", self.people) 
+        self.__createTtlFile(f"{templatePath}graph-templates/strains.j2", outputPath, "strains", self.strains)
+        self.__createTtlFile(f"{templatePath}graph-templates/observable-properties.j2", outputPath, "observableProperties", self.observableProperties)
+        self.__createTtlFile(f"{templatePath}graph-templates/genes.j2", outputPath, "genes", self.genes)
+        self.__createTtlFile(f"{templatePath}graph-templates/samples.j2", outputPath, "samples", self.samples, filterFunctions=[{"name": "isDatetime", "content": self.__isDatetime}])
+        self.__createTtlFile(f"{templatePath}graph-templates/observations.j2", outputPath, "observations", self.observations, filterFunctions=[{"name": "isFloat", "content": self.__isFloat}])
+
+        ## Try to create the abromics data graph 
+        create_graph_query = "CREATE GRAPH <http://data.abromics.fr>"
+        print("creating the abromics data graph")
+        print(create_graph_query)
+        sparql = SPARQLWrapper(self.sparqlEndpoint)
+        sparql.setReturnFormat(JSON)
+        sparql.setQuery(create_graph_query)
+        try:
+            res = sparql.query().convert()
+            recs = res["results"]["bindings"]
+        except Exception as e: 
+            print(e) ## When there is an error here it means that the graph already exists
+        
+        ## Craft the add nodes from rdf files sparql queries
+        with open(f"{outputPath}/genes.ttl") as file:
+            query = "INSERT DATA { GRAPH <http://data.abromics.fr> { "
+            for line in file:
+                if line[0] != "@":
+                    query = query + str(line)
+            query = query + "}}"
+            with open(f"test.sparql", "w") as test:
+                test.write(query)
+
+        ## Execute the sparql queries
+        print("Executing the data addition queries")
+        print(query)
+        sparql = SPARQLWrapper(self.sparqlEndpoint)
+        sparql.setReturnFormat(JSON)
+        sparql.setQuery(query)
+        try:
+            res = sparql.query().convert()
+            recs = res["results"]["bindings"]
+        except Exception as e: 
+            print(e) 
 
 
-
-gc = GraphCreator("../../data/reports")
-gc.createGraph()
+## gc = GraphCreator("../../data/reports")
+## gc.createGraph()

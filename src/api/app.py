@@ -9,7 +9,7 @@ from flask_cors import CORS, cross_origin
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 ## Module imports
-import modules.graph_creator
+from modules.graph_creator.graph_creator import GraphCreator
 
 
 ## API configuration
@@ -198,10 +198,12 @@ def deleteGraphData():
 ## Routes that allow to modify the graph
 ## Check if this route works and protect it behind authentification 
 @cross_origin()
-@app.route(f"/{API_BASEPATH}/build-graph", methods=['GET'])
+@app.route(f"/{API_BASEPATH}/graph", methods=['POST'])
 @authentification_required 
 def buildGraph():
-    gc = GraphCreator() ## make the graph creation here
+    gc = GraphCreator(reportDirectory = "data/reports", sparqlEndpoint = "http://localhost:8890/sparql") ## replace the localhost:8890 with a flexible link to the virtuoso server
+    gc.createGraph(fetchCountriesFromCache = False, templatePath="modules/graph_creator/", outputPath="modules/graph_creator/out")
+    print("ok")
     return jsonify({"message": "test 1 passed"})
 
 

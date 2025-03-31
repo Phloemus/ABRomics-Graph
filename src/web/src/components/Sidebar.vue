@@ -34,9 +34,11 @@
                     </NuxtLink>
                 </div>
                 <div class="my-2 p-2 bg-slate-50 hover:bg-slate-100 text-slate-800 rounded-md hover:cursor-pointer">
-                    <p>
-                        recreate graph
-                    </p>
+                    <NuxtLink to="/admin/recreate-graph">
+                        <p>
+                            recreate graph
+                        </p>
+                    </NuxtLink>
                 </div>
                 <div class="my-2 p-2 bg-slate-50 hover:bg-slate-100 text-slate-800 rounded-md hover:cursor-pointer">
                     <p>
