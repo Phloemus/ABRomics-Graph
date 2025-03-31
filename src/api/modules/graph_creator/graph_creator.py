@@ -546,8 +546,8 @@ class GraphCreator:
                 if line[0] != "@":
                     query = query + str(line)
             query = query + "}}"
-            with open(f"test.sparql", "w") as test:
-                test.write(query)
+            #with open(f"test.sparql", "w") as test:
+            #    test.write(query)
 
         ## Execute the sparql queries
         print("Executing the data addition queries")
