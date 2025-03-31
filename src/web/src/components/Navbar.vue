@@ -9,9 +9,10 @@
         isLoginPanelOpened.value = true
     }
 
-    function logout() {
+    async function logout() {
         isUserLoggedIn.value = false
         userAuthToken.value = ""
+        await navigateTo("/")
     }
 
 </script>

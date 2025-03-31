@@ -2,12 +2,17 @@
 
     // Global state
     const userAuthToken = useState('userAuthToken')
+    const isUserLoggedIn = useState('isUserLoggedIn')
+
+    if(!isUserLoggedIn.value) {
+        await navigateTo('/')
+    }
 
     function executeQuery() {
         fetch(
-            "http://localhost:5000/graph-api/protected", 
+            "http://localhost:5000/graph-api/graph", 
             { 
-                method: "POST",
+                method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"
                 },
@@ -32,7 +37,7 @@
             <span class="text-md text-slate-600">admin query</span>
         </div>
         <div class="px-4 py-1 bg-red-200 text-red-500 rounded-sm">
-            <NuxtLink to="http://localhost:5000/graph-api/protected">[DELETE] /graph</NuxtLink>
+            <NuxtLink to="http://localhost:5000/graph-api/graph">[DELETE] /graph</NuxtLink>
         </div>
     </div>
     <div class="mt-4">
