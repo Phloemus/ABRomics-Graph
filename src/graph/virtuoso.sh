@@ -62,10 +62,18 @@ then
     echo "Start data loading from toLoad folder"
     pwd="dba"
     graph="http://localhost:8890/DAV"
+    ontologyGraph="http://localhost:8890/ontologies"
 
     if [ "$DBA_PASSWORD" ]; then pwd="$DBA_PASSWORD" ; fi
     if [ "$DEFAULT_GRAPH" ]; then graph="$DEFAULT_GRAPH" ; fi
+    if [ "$ONTOLOGY_GRAPH" ]; then ontologyGraph="$ONTOLOGY_GRAPH" ; fi
+
+    ## Load the abromics data from the toLoad in the graph 
     echo "ld_dir('toLoad', '*', '$graph');" >> /load_data.sql
+
+    ## Load the ontologies directory in the ontologies graph
+    echo "ld_dir('ontologies', '*', '$ontologyGraph');" >> /load_data.sql
+
     echo "rdf_loader_run();" >> /load_data.sql
     echo "exec('checkpoint');" >> /load_data.sql
     echo "WAIT_FOR_CHILDREN; " >> /load_data.sql
