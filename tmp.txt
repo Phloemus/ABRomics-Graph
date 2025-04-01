@@ -1,0 +1,3 @@
+- Recreate the virtuoso docker container with the Dockerfile of the github repo 
+- Add the creation of the ontology graph 
+- Add a listener that index the ttl files when new ones are created in the ttl volume
