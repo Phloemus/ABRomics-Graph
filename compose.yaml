@@ -27,6 +27,7 @@ services:
     volumes:
       - ./src/data/virtuoso:/data
       - ./src/graph/graph-instance:/data/toLoad ## Should automatically load the ttl files from the graph instance to the default graph ## seems to work well
+      - ./src/data/ontologies:/data/toLoad ## the ontologies into the default graph
       - ./src/graph:/usr/local/virtuoso-opensource/share/virtuoso/vad
       - /dev/null:/usr/local/virtuoso-opensource/share/virtuoso/vad/old-data # delete the old data folder in the container so it doesn't load the old data
     ports:
