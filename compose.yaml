@@ -25,12 +25,14 @@ services:
       SPARQL_UPDATE: "true" 
       DEFAULT_GRAPH: "http://data.abromics.fr"
       ONTOLOGY_GRAPH: "http://ontologies.abromics.fr"
+      DATA_DIR: "/usr/local/virtuoso-opensource/share/virtuoso/vad/graph-instance"
+      ONTOLOGY_DIR: "/usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies"
     volumes:
       - ./src/data/virtuoso:/data
       - ./src/graph/graph-instance:/data/toLoad ## data of the kg 
       - ./src/graph/ontologies:/data/ontologies ## content of the ontologies used in the kg
       - ./src/graph:/usr/local/virtuoso-opensource/share/virtuoso/vad ## Script for maintenance 
-      - /dev/null:/usr/local/virtuoso-opensource/share/virtuoso/vad/old-data 
+        # - /dev/null:/usr/local/virtuoso-opensource/share/virtuoso/vad/old-data 
     ports:
       - 8890:8890
     networks:
