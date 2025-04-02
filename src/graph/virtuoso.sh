@@ -13,6 +13,7 @@ fi
 
 chmod +x /clean-logs.sh
 mv /clean-logs.sh . 2>/dev/null
+chmod +x /dir-observer.sh
 
 original_port=`crudini --get virtuoso.ini HTTPServer ServerPort`
 # NOTE: prevents virtuoso to expose on port 8890 before we actually run
@@ -85,4 +86,5 @@ fi
 
 crudini --set virtuoso.ini HTTPServer ServerPort ${VIRT_HTTPServer_ServerPort:-$original_port}
 
+nohup ./dir-observer.sh &
 exec virtuoso-t +wait +foreground

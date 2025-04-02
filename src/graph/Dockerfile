@@ -37,6 +37,10 @@ COPY dump_nquads_procedure.sql /dump_nquads_procedure.sql
 # Add Virtuoso log cleaning script
 COPY clean-logs.sh /clean-logs.sh
 
+# Add the script that observes the data and ontologies directories and 
+# index the data in the graph automatically 
+COPY dir-observer.sh /dir-observer.sh
+
 # Add startup script
 COPY virtuoso.sh /virtuoso.sh
 
