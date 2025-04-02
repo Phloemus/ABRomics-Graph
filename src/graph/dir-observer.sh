@@ -19,14 +19,12 @@ if [ ! -d "$ONTOLOGY_DIR" ]; then
 fi
 
 # Use inotifywait to listen for creation or modify events in the directory
-inotifywait -m -r -e create -e modify --format '%w%f %e %T' --timefmt '%Y-%m-%d %H:%M:%S' "$DATA_DIR" |
+inotifywait -m -r -e create -e modify -e moved_to --format '%w%f %e %T' --timefmt '%Y-%m-%d %H:%M:%S' "$DATA_DIR" |
 while read FILE EVENT TIMESTAMP
 do
   # Log the event to the log file
-  if [[ "$EVENT" == "CREATE" || "$EVENT" == "MODIFY" ]]; then
-    filename=$(basename "$FILE")
-    echo "ld_dir_all('$DATA_DIR', '$filename', '$DEFAULT_GRAPH');" | isql-v -U dba -P dba
-    isql-v -U dba -P dba exec="rdf_loader_run();" &
-    echo "$TIMESTAMP - File '$FILE' was $EVENT" >> "$LOG_FILE"
-  fi
+  filename=$(basename "$FILE")
+  echo "ld_dir_all('$DATA_DIR', '$filename', '$DEFAULT_GRAPH');" | isql-v -U dba -P dba
+  isql-v -U dba -P dba exec="rdf_loader_run();" &
+  echo "$TIMESTAMP - File '$FILE' was $EVENT" >> "$LOG_FILE"
 done
