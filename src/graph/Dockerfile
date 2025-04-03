@@ -5,7 +5,7 @@ ENV VIRTUOSO_COMMIT 64663f91c657aec14bbdcef8b6e5c9b6ac89cb8b
 
 # Build virtuoso from source and clean up afterwards
 RUN apt-get update \
-        && apt-get install -y build-essential autotools-dev autoconf automake unzip wget net-tools libtool flex bison gperf gawk m4 libssl-dev libreadline-dev openssl crudini \
+        && apt-get install -y build-essential autotools-dev autoconf automake unzip wget net-tools libtool flex bison gperf gawk m4 libssl-dev libreadline-dev openssl crudini openssh-server \
         # Workaround for #663
         && apt-get install -y libssl1.0-dev \
         ## The package that helps to listen to changes in a directory
