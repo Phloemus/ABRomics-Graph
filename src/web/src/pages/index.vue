@@ -1,43 +1,48 @@
-<script>
+<script setup>
 
-    import SearchInput from "../components/SearchInput.vue"
+    import { Index, Charset } from 'flexsearch'
 
-    // import data from "../static/result-10k-first-classes.json"
-    import data from "../static/test-classes.json"
+    import data from "../static/result-10k-first-classes.json"
 
-    const searchTerm = ref("")
-    const organs = ref([])
+    const query = ref("")
+    const results = ref([])
+
+    const index = new Index({
+      encoder: Charset.LatinBalance,
+      tokenize: "forward", 
+      async: true, 
+    });
+
+    console.log(data.results.bindings.length)
 
     data.results.bindings.forEach((data) => {
-        organs.value.push({ "name": data.organLabels.value, "ontology": data.organs.value })
+        index.add(data.class.value, data.label.value)
     })
 
-    function filterOntologyList(event) {
-        console.log("hahaha")
-        searchTerm.value = event.target.value
-        console.log(searchTerm.value)
-        const query= searchTerm.value.toLowerCase();
-        organs.value = []
-        data.results.bindings.forEach(suggestion => {
-            if(suggestion.organLabels.value.toLowerCase().includes(query)) {
-                const elem = {
-                    "name": suggestion.organLabels.value,
-                    "ontology": suggestion.organs.value
-                }
-                organs.value.push(elem)
-            }
-        });
+    function performSearch() {
+        if(query.value.length > 0) {
+            results.value = index.search(query.value)
+        } else {
+            results.value = []
+        }
     }
 
 </script>
 
 <template>
+    <div>
+        <input v-model="query" @input="performSearch" placeholder="Search..." />
+        
+        <div v-if="results.length > 0">
+            <ul>
+                <li v-for="(result, index) in results" :key="index">
+                    {{ result }}
+                </li>
+            </ul>
+        </div>
 
-    <SearchInput 
-        :searchTerm="searchTerm"
-        @input="filterOntologyList"
-        placeholder="Searching an ontology term.."
-        :results="organs"
-    />
-
+        <div v-else>
+            <p>No results found</p>
+        </div>
+  </div>
 </template>

@@ -2,6 +2,7 @@
 
     // Imports
     import SearchInput from './SearchInput.vue'
+    import data from '../static/result-10k-first-classes.json'
 
     // Global state
     const isUserLoggedIn = useState('isUserLoggedIn')
@@ -19,36 +20,23 @@
     }
 
     const searchTerm = ref("")
-    const organs = ref([])
-
-    const data = { "head": { "link": [], "vars": ["specie", "organs", "organLabels"] },
-  "results": { "distinct": false, "ordered": true, "bindings": [
-    { "specie": { "type": "uri", "value": "http://purl.obolibrary.org/obo/NCBITaxon_9606" }	, "organs": { "type": "uri", "value": "http://purl.obolibrary.org/obo/UBERON_0000038" }	, "organLabels": { "type": "literal", "value": "follicular fluid" }},
-    { "specie": { "type": "uri", "value": "http://purl.obolibrary.org/obo/NCBITaxon_9606" }	, "organs": { "type": "uri", "value": "http://purl.obolibrary.org/obo/UBERON_0000170" }	, "organLabels": { "type": "literal", "value": "pair of lungs" }},
-    { "specie": { "type": "uri", "value": "http://purl.obolibrary.org/obo/NCBITaxon_9606" }	, "organs": { "type": "uri", "value": "http://purl.obolibrary.org/obo/UBERON_0001814" }	, "organLabels": { "type": "literal", "value": "brachial nerve plexus" }},
-    { "specie": { "type": "uri", "value": "http://purl.obolibrary.org/obo/NCBITaxon_9606" }	, "organs": { "type": "uri", "value": "http://purl.obolibrary.org/obo/UBERON_0003254" }	, "organLabels": { "type": "literal", "value": "amniotic ectoderm" }},
-    { "specie": { "type": "uri", "value": "http://purl.obolibrary.org/obo/NCBITaxon_9606" }	, "organs": { "type": "uri", "value": "http://purl.obolibrary.org/obo/UBERON_0003262" }	, "organLabels": { "type": "literal", "value": "amniotic mesoderm" }},
-    { "specie": { "type": "uri", "value": "http://purl.obolibrary.org/obo/NCBITaxon_9606" }	, "organs": { "type": "uri", "value": "http://purl.obolibrary.org/obo/UBERON_0003725" }	, "organLabels": { "type": "literal", "value": "cervical nerve plexus" }},
-    { "specie": { "type": "uri", "value": "http://purl.obolibrary.org/obo/NCBITaxon_9606" }	, "organs": { "type": "uri", "value": "http://purl.obolibrary.org/obo/UBERON_0004100" }	, "organLabels": { "type": "literal", "value": "renal collecting system" }},
-    { "specie": { "type": "uri", "value": "http://purl.obolibrary.org/obo/NCBITaxon_9606" }	, "organs": { "type": "uri", "value": "http://purl.obolibrary.org/obo/UBERON_0034713" }	, "organLabels": { "type": "literal", "value": "cranial neuron projection bundle" }} ], }, }
+    const ontologyClasses = ref([])
 
     data.results.bindings.forEach((data) => {
-        organs.value.push({ "name": data.organLabels.value, "ontology": data.organs.value })
+        ontologyClasses.value.push({ "name": data.label.value, "ontology": data.class.value })
     })
 
     function filterOntologyList(event) {
-        console.log("hahaha")
         searchTerm.value = event.target.value
-        console.log(searchTerm.value)
         const query= searchTerm.value.toLowerCase();
-        organs.value = []
+        ontologyClasses.value = []
         data.results.bindings.forEach(suggestion => {
-            if(suggestion.organLabels.value.toLowerCase().includes(query)) {
+            if(suggestion.label.value.toLowerCase().includes(query) && ontologyClasses.value.length <= 10) {
                 const elem = {
-                    "name": suggestion.organLabels.value,
-                    "ontology": suggestion.organs.value
+                    "name": suggestion.label.value,
+                    "ontology": suggestion.class.value
                 }
-                organs.value.push(elem)
+                ontologyClasses.value.push(elem)
             }
         });
     }
@@ -61,7 +49,7 @@
             :searchTerm="searchTerm"
             @input="filterOntologyList"
             placeholder="Search for ontology term.."
-            :results="organs"
+            :results="ontologyClasses"
         />
         <div class="flex flex-row-reverse gap-4">
             <ActionButton @click="displayLoginPanel" v-show="!isUserLoggedIn" content="Login"/>
