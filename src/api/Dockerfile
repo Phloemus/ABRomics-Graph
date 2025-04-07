@@ -2,7 +2,7 @@
 
 FROM python:3.11-alpine
 
-RUN apk add --no-cache python3 py3-pip py3-virtualenv
+RUN apk add --no-cache python3 py3-pip py3-virtualenv openssh
 COPY requirements.txt api/requirements.txt
 COPY modules api/modules
 COPY data api/data
