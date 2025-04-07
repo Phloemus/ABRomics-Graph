@@ -16,10 +16,10 @@
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
 
-    <90712eaa-de23-11ef-9103-90658429fd42> rdf:type sosa:Procedure ;
+    <fc71d4ec-0e3e-11f0-aeb7-90658429fd42> rdf:type sosa:Procedure ;
         
-            sosa:isImplementedBy <90712ad6-de23-11ef-9103-90658429fd42> ; 
+            sosa:isImplementedBy <fc71d0e6-0e3e-11f0-aeb7-90658429fd42> ; 
         
-            sosa:isImplementedBy <90712b08-de23-11ef-9103-90658429fd42> ; 
+            sosa:isImplementedBy <fc71d122-0e3e-11f0-aeb7-90658429fd42> ; 
         
         rdfs:label "workflow 1 (genomic)" .

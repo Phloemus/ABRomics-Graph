@@ -5,9 +5,9 @@ PREFIX uberon: <http://purl.obolibrary.org/obo/UBERON_>
 PREFIX obom: <https://data.bioontology.org/metadata/obo/>
 PREFIX ro: <http://purl.obolibrary.org/obo/RO_>
 
-SELECT ?specie ?organs ?organLabels WHERE {
+SELECT DISTINCT ?specie ?organs ?organLabels WHERE {
   ?specie rdfs:label "Homo sapiens" .
   ?organs ro:0002175 ?specie . ## ro:0002175 indicates the "present_in_taxon" ontology
+  ?organs rdfs:subClassOf+ uberon:0000465 . ## The organ should be a material anatomical structure (include all organs of the specie + blood ect)
   ?organs rdfs:label ?organLabels .
 }
-

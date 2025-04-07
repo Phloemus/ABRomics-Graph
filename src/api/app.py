@@ -3,12 +3,13 @@ import sys
 import os
 import jwt
 import datetime
-from flask import Flask, jsonify, request
+from functools import wraps
+from flask import Flask, jsonify, request, make_response
 from flask_cors import CORS, cross_origin
 from SPARQLWrapper import SPARQLWrapper, JSON
 
 ## Module imports
-import modules.graph_creator
+from modules.graph_creator.graph_creator import GraphCreator
 
 
 ## API configuration
@@ -93,6 +94,18 @@ QUERIES = [
     }
 ]
 
+ADMIN_QUERIES = [
+    {
+        "name": "delete-all-nodes",
+        "route": f"{API_ENDPOINT}/graph",
+        "method": "DELETE",
+        "filePath": "queries/delete-all-nodes.sparql",
+        "description": """
+            Delete all the nodes present in the knowledge graph 
+        """
+    }
+]
+
 
 
 ## Util functions 
@@ -125,6 +138,7 @@ def executeQuery(sparqlEndpointUrl, queryFilePath, parameters=[]):
 ## Middleware functions
 ## 
 def authentification_required(f):
+    @wraps(f)
     def decorated(*args, **kwargs):
         token = request.json['token']
         if not token:
@@ -162,21 +176,34 @@ def login():
         token = jwt.encode({'user': username, 'exp': datetime.datetime.utcnow() + datetime.timedelta(days=3)}, app.config['secret_key'])
         return jsonify({"token": token})
     else:
-        return jsonify({"message": "wrong username or password"})
+        return make_response(jsonify({"message": "wrong username or password"}), 401)
 
 
-## protected route
-@app.route(f"/{API_BASEPATH}/protected")
+## protected test route
+## Use this function in development to test if you have access to the protected routes of the API
+@app.route(f"/{API_BASEPATH}/protected", methods=['POST'])
 @authentification_required
 def protected():
     return jsonify({"message": "protected route tested"})
 
 
+## Route that delete all the content (all the nodes) of the knowledge graph
+@app.route(f"/{API_BASEPATH}/graph", methods=['DELETE'])
+@authentification_required 
+def deleteGraphData():
+    executeQuery(SPARQL_ENDPOINT, ADMIN_QUERIES[0]["filePath"])
+    return jsonify({"message": "graph delete successfully"})
+
+
 ## Routes that allow to modify the graph
+## Check if this route works and protect it behind authentification 
 @cross_origin()
-@app.route(f"/{API_BASEPATH}/build-graph", methods=['GET'])
+@app.route(f"/{API_BASEPATH}/graph", methods=['POST'])
+@authentification_required 
 def buildGraph():
-    gc = GraphCreator()
+    gc = GraphCreator(reportDirectory = "data/reports", sparqlEndpoint = "http://localhost:8890/sparql") ## replace the localhost:8890 with a flexible link to the virtuoso server
+    gc.createGraph(fetchCountriesFromCache = False, templatePath="modules/graph_creator/", outputPath="modules/graph_creator/out")
+    print("ok")
     return jsonify({"message": "test 1 passed"})
 
 
