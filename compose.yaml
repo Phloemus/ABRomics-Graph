@@ -60,6 +60,12 @@ services:
       - services
       - graph
 
+  web:
+    build: ./src/web
+    ports:
+      - 3000:3000
+    networks:
+      - services
 
 networks:
 
