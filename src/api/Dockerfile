@@ -4,9 +4,6 @@ FROM python:3.11-alpine
 
 RUN apk add --no-cache python3 py3-pip py3-virtualenv openssh
 COPY requirements.txt api/requirements.txt
-COPY modules api/modules
-COPY data api/data
-COPY queries api/queries
 
 ARG IS_DEV
 ENV IS_DEV=$IS_DEV
@@ -36,6 +33,6 @@ RUN python3 -m venv .venv
 RUN source .venv/bin/activate
 RUN pip install -r api/requirements.txt
 
-WORKDIR /api
+WORKDIR /api/src
 
 CMD ["flask", "run", "--host=0.0.0.0"]

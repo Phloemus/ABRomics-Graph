@@ -24,6 +24,6 @@ from utils.query import Query
 @app.route(f"/{API_BASEPATH}/sample-sources", methods=[QUERIES[5]["method"]])
 def getSampleSources():
     specieName = request.json["specieName"]
-    query = Query(QUERIES[5]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT, parameters={"specieName": "Homo sapiens"})
+    query = Query(QUERIES[5]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT, parameters={"specieName": specieName})
     return jsonify(query.executeQuery())
 

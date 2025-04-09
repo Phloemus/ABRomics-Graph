@@ -53,7 +53,7 @@ services:
       - VIRTUOSO_HOST=${VIRTUOSO_HOST}
       - VIRTUOSO_PORT=${VIRTUOSO_PORT}
     volumes:
-      - ./src/api/app.py:/api/app.py
+      - ./src/api/src:/api/src
     ports:
       - 5000:5000
     networks:
