@@ -62,6 +62,7 @@ services:
 
   web:
     build: ./src/web
+    container_name: abromics-kg-web
     ports:
       - 3000:3000
     networks:
