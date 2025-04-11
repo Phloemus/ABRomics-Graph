@@ -14,7 +14,7 @@ from routes.competency_questions import *
 from modules.graph_creator.graph_creator import GraphCreator
 
 
-## On API start
+# On api launch
 
 
 ## Launch the Flask app (the ABRomics-KG API)
