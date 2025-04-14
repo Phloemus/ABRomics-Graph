@@ -1,0 +1,6 @@
+PREFIX envo: <http://purl.obolibrary.org/obo/ENVO_>
+
+SELECT ?class ?classLabel WHERE { 
+ ?class rdfs:subClassOf+ envo:00000428 . ## corresponds to the biome envo class
+ ?class rdfs:label ?classLabel .
+}
