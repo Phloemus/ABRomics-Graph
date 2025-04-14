@@ -5,10 +5,10 @@ PREFIX uberon: <http://purl.obolibrary.org/obo/UBERON_>
 PREFIX obom: <https://data.bioontology.org/metadata/obo/>
 PREFIX ro: <http://purl.obolibrary.org/obo/RO_>
 PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+PREFIX envo: <http://purl.obolibrary.org/obo/ENVO_>
 
-## Get all the anatomical structure from uberon and ncit excluding some categories 
-## like all the subclasses of the micro anatomical structure and cell part classes 
-## This query doesn't filter by specie names
+## Get all the sample sources including the animal, human and environmental sample sources
+## available 
 ##
 SELECT DISTINCT ?class ?classLabel WHERE {
   {
@@ -25,6 +25,10 @@ SELECT DISTINCT ?class ?classLabel WHERE {
     ?class rdfs:label ?classLabels .
     BIND(?class as ?class)
     BIND(?classLabels as ?classLabel)
+  } UNION {
+    ?envClass rdfs:subClassOf+ envo:00000428 . 
+    ?envClass rdfs:label ?envClassLabel .
+    BIND(?envClass as ?class)
+    BIND(?envClassLabel as ?classLabel)
   }
-  
 }
