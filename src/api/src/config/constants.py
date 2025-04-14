@@ -65,12 +65,18 @@ QUERIES = [
         "name": "get-sample-sources",
         "route": f"{API_ENDPOINT}/sample-sources",
         "method": "POST",
-        "filePath": "queries/get-ncithesaurus-anatomical-structure-subclasses.sparql",
+        "filePath": { 
+            "animal": "queries/sample-sources/get-anatomical-structures-animal.sparql",
+            "animal-no-specie": "queries/sample-sources/get-anatomical-structures-animal-no-specie.sparql",
+            "environmental": "queries/sample-sources/get-sample-sources-environmental.sparql", 
+            "all": "queries/sample-sources/get-sample-sources-all.sparql"
+        },
         "description": """
             Get all the disponible sample sources
         """,
         "parameters": {
-            "specieName": "The name of the specie the sample source is from"
+            "specieName": "[optional] The name of the specie the sample source is from",
+            "sampleType": "[optional] The type of the sample. Can be human, animal or environmental"
         }
     }
 ]

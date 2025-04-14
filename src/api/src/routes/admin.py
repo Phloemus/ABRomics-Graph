@@ -10,7 +10,7 @@
 
 import jwt
 import datetime
-from flask import jsonify
+from flask import jsonify, request
 from flask_cors import cross_origin
 
 ## Config imports
