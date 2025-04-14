@@ -1,0 +1,30 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ncbitaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+PREFIX uberon: <http://purl.obolibrary.org/obo/UBERON_>
+PREFIX obom: <https://data.bioontology.org/metadata/obo/>
+PREFIX ro: <http://purl.obolibrary.org/obo/RO_>
+PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+
+## Get all the anatomical structure from uberon and ncit excluding some categories 
+## like all the subclasses of the micro anatomical structure and cell part classes 
+## This query doesn't filter by specie names
+##
+SELECT DISTINCT ?allOrgans ?allLabels WHERE {
+  {
+    ?organs rdfs:subClassOf+ uberon:0000465 . 
+    ?organs rdfs:label ?organLabels .
+    BIND(?organs as ?allOrgans)
+    BIND(?organLabels as ?allLabels)
+  } UNION {
+    ?class rdfs:subClassOf+ ncit:C12219 . ## ncit anatomical structure, system or substance
+    MINUS {
+      ?class rdfs:subClassOf+ ?excluded .
+      VALUES ?excluded { ncit:C21599 ncit:C34070 } . ## Exclude micro anatomical structure and cell part
+    }
+    ?class rdfs:label ?classLabels .
+    BIND(?class as ?allOrgans)
+    BIND(?classLabels as ?allLabels)
+  }
+  
+}
