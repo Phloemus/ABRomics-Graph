@@ -47,3 +47,9 @@ def getSampleSources():
 
     return jsonify(query.executeQuery())
 
+
+@cross_origin()
+@app.route(f"/{API_BASEPATH}/microoganisms")
+def getMicroorgnismSpecies():
+    query = Query(QUERIES[6]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT) ## All the bacteria species name
+    return jsonify(query.executeQuery())
