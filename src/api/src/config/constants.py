@@ -78,6 +78,15 @@ QUERIES = [
             "specieName": "[optional] The name of the specie the sample source is from",
             "sampleType": "[optional] The type of the sample. Can be human, animal or environmental"
         }
+    },
+    {
+        "name": "get-microorganism-specie-names",
+        "route": f"{API_ENDPOINT}/microoganisms",
+        "method": "POST",
+        "filePath": "query/microorganisms/get-microorganism-specie-names.sparql",
+        "description": """
+            Get the names of all the microoganisms (bacterias) present in the ncbitaxon ontology
+        """
     }
 ]
 
