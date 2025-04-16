@@ -81,9 +81,9 @@ QUERIES = [
     },
     {
         "name": "get-microorganism-specie-names",
-        "route": f"{API_ENDPOINT}/microoganisms",
-        "method": "POST",
-        "filePath": "query/microorganisms/get-microorganism-specie-names.sparql",
+        "route": f"{API_ENDPOINT}/microorganisms",
+        "method": "GET",
+        "filePath": "queries/microorganisms/get-microorganism-specie-names.sparql",
         "description": """
             Get the names of all the microoganisms (bacterias) present in the ncbitaxon ontology
         """
