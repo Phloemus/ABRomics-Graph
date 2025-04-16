@@ -48,8 +48,18 @@ def getSampleSources():
     return jsonify(query.executeQuery())
 
 
+#### Takes too much time, implement some caching mecanisms here ####
+
 @cross_origin()
 @app.route(f"/{API_BASEPATH}/microorganisms")
 def getMicroorgnismSpecies():
     query = Query(QUERIES[6]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT) ## All the bacteria species name
+    query.exportQueryResult("cache/microorganisms/test.json") ## test for the cache feature
+    return jsonify(query.executeQuery())
+
+
+@cross_origin()
+@app.route(f"/{API_BASEPATH}/hosts")
+def getHostSpecies():
+    query = Query(QUERIES[7]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT) ## All the host species name
     return jsonify(query.executeQuery())

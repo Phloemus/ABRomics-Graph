@@ -4,6 +4,9 @@
 ## All the methods that allows to manipulate and execute a sparql query on the knowledge graph
 ##
 ## methods:
+## - __prepareQuery: (private method) allows to replace the variables present inside the 
+##                   queries by the parameter values
+##
 ## - executeQuery: execute the query defined in the queryFile on the sparql endpoint 
 ##                 and return the records that were given as the knowledge graph response
 ##                 or return the error status and error associated message
@@ -11,6 +14,7 @@
 
 
 from SPARQLWrapper import SPARQLWrapper, JSON
+import json
 
 ## Config imports
 from config.config import *
@@ -53,3 +57,16 @@ class Query:
             print(e)
             return {"status": "error", "message": str(e), "endpoint": self.sparqlEndpoint}
 
+
+    def exportQueryResult(self, filePath):
+
+        recs = self.executeQuery()
+
+        if "status" in recs and recs["status"] == "error":
+            return Exception
+        else:
+            records = []
+            for rec in recs:
+                records.append({ rec["class"]["value"]: rec["specieName"]["value"] })
+            with open(filePath, 'w+') as f:
+                json.dump(records, f)
