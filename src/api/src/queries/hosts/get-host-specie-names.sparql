@@ -1,0 +1,6 @@
+PREFIX ncbitaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+
+SELECT ?class ?specieName WHERE {
+  ?class rdfs:subClassOf+ ncbitaxon:2759 . ## Getting all the sub class of eucaryota class
+  ?class rdfs:label ?specieName .
+}

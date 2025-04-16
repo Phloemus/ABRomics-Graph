@@ -87,6 +87,15 @@ QUERIES = [
         "description": """
             Get the names of all the microoganisms (bacterias) present in the ncbitaxon ontology
         """
+    },
+    {
+        "name": "get-host-specie-names",
+        "route": f"{API_ENDPOINT}/hosts",
+        "method": "GET",
+        "filePath": "queries/hosts/get-host-specie-names.sparql",
+        "description": """
+            Get all the host species present in the ncbitaxon ontology
+        """
     }
 ]
 

@@ -2,6 +2,7 @@
 */__pycache__
 */.virtual_ducuments
 */.ipynb_checkpoints
+cache
 
 */.venv
 node_modules/
