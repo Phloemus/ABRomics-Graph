@@ -30,8 +30,6 @@ def getSampleSources():
         specieName = request.json["specieName"]
     if "sampleType" in request.json:
         sampleType = request.json["sampleType"]
-    print(sampleType)
-    print(specieName)
 
     if sampleType == "human":
         query = Query(QUERIES[5]["filePath"]["animal"], sparqlEndpoint=SPARQL_ENDPOINT, parameters={"specieName": "Homo sapiens" })
