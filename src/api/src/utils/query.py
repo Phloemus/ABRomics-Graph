@@ -39,7 +39,6 @@ class Query:
             query = query.replace(f"${key}", f"'{value}'")
 
         self.queryString = query
-        print(self.queryString)
 
     
     def executeQuery(self):
