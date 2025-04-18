@@ -8,6 +8,7 @@
 import os
 from flask import Flask
 from flask_cors import CORS
+from flask_caching import Cache
 
 
 if "IS_DEV" in os.environ and os.environ['IS_DEV'] == "false":
@@ -33,6 +34,14 @@ QUERY_DIR="queries"
 app = Flask(__name__)
 app.config['secret_key'] = "this is secret"
 
-cors = CORS(app) # allow CORS for all domains on all routes.
-app.config['CORS_HEADERS'] = 'Content-Type'
+config = {
+    "DEBUG": True,          
+    "CACHE_TYPE": "SimpleCache",  
+    "CACHE_DEFAULT_TIMEOUT": 300,
+    "CORS_HEADERS": 'Content-Type'
+}
+
+app.config.from_mapping(config)
+cors = CORS(app) 
+cache = Cache(app)
 
