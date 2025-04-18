@@ -64,8 +64,14 @@ class Query:
         if "status" in recs and recs["status"] == "error":
             return Exception
         else:
-            records = []
+            records = {}
+            count = 0
             for rec in recs:
-                records.append({ rec["class"]["value"]: rec["specieName"]["value"] })
+                recordDict = {
+                    "class": rec["class"]["value"],
+                    "specieName": rec["specieName"]["value"]
+                }
+                records[count] = recordDict
+                count = count + 1
             with open(filePath, 'w+') as f:
                 json.dump(records, f)
