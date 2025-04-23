@@ -28,8 +28,8 @@ services:
       DATA_DIR: "/usr/local/virtuoso-opensource/share/virtuoso/vad/graph-instance"
       ONTOLOGY_DIR: "/usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies"
     volumes:
-      - ./src/data/virtuoso:/data
-      - ${VIRTUOSO_LOCAL_DATA_VOLUME_PATH}:/data/toLoad ## data of the kg 
+      - ${VIRTUOSO_LOCAL_DATA_VOLUME_PATH}:/data
+      - ${VIRTUOSO_LOCAL_GRAPH_DATA_VOLUME_PATH}:/data/toLoad ## data of the kg 
       - ${VIRTUOSO_LOCAL_ONTOLOGY_VOLUME_PATH}:/data/ontologies ## content of the ontologies used in the kg
       - ./src/graph:/usr/local/virtuoso-opensource/share/virtuoso/vad ## Script for maintenance 
         # - /dev/null:/usr/local/virtuoso-opensource/share/virtuoso/vad/old-data 
