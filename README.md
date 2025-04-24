@@ -1,22 +1,19 @@
-# ABRomics KG 
+# ABRomics graph
 
-Abromics KG correspond to the WP2.4 of the Abromics project, which should ensure the FAIR principles by using 
+Abromics graph correspond to the WP2.4 of the Abromics project, which should ensure the FAIR principles by using 
 finding appropriate ontologies for Abromics usecases and setting up a knowledge graph to integrate more data
 in the graph.
 
-## Main goals of ABRomics KG
+## Main goals of ABRomics graph
 
-The ABRomics KG provide a graph with which the ABRomics platform can get data from and easily get access to 
-informations available in external knowledge graphs provided by external data sources.
+ABRomics graph provide a knowledge graph for the ABRomics platform. The ABRomics graph has 4 main objectives:
 
 1. Provide graph structure for the ABRomics data that can support SPARQL request
-2. Laverage the graph structure to access fine descriptions in external specific ontologies enriching the ABRomics database.
-3. Provide a way to make requests to external knowledge graphs
+2. Use terms from relevant ontologies in the domain of antibiotic resistance
+3. Link the ABRomics data with external knowledge graph 
 4. Ensuring an interoperability between the ABRomics data and the data present in external knowledge graphs
 
 ## Parts of the project
-
-To ensure the goal written previously, ABRomics KG is composed of multiple parts.
 
 1. Virtuoso graph server
 2. Developper API
@@ -41,10 +38,10 @@ bash
 git clone https://gitlab.univ-nantes.fr/BiRD/abromics-kg.git
 ```
 
-## Production deploy 
+## Development deployment
 
-First modify the **.env** file to fit your project. The values by default will work correctly when deploying the 
-app using docker but in a production environment, don't forget to modify the api admin credentials  
+First modify the variables in **.env** file to fit your project. The values by default will work correctly 
+when deploying the app using docker.
 
 To deploy the whole application (graph server, API and dashboard), you can use docker by running:
 
@@ -59,11 +56,36 @@ By default :
 - API: [http://localhost:8081/graph-api](http://localhost:8081/graph-api)
 - Graph server: [http://localhost:8081/sparql](http://localhost:8081/sparql)
 
+## Production deployment
+
+To deploy the application in a production environement use the **.env.prod** file instead. 
+
+> [!NOTE]
+> Do not forget to change the admin credentials ! 
+
+```
+bash 
+docker compose --env-file .env.prod up -d
+```
+
 ## Virtuoso graph server
+
+The virtuoso graph server respond to SPARQL queries sent to [http://localhost:8081/sparql](http://localhost:8081/sparql). This sparql endpoint holds all the public data of ABRomics and is accessible publicly to request using SPARQL queries.
+
+See more [developper documentation](https://gitlab.com/ifb-elixirfr/abromics/abromics-graph/-/blob/main/src/graph/README.md) about the virtuoso graph server
 
 ## Developper API 
 
+The API allows any plateform to perform execute some predefined sparql queries on the knowledge graph without 
+needing to write SPARQL queries.
+
+See more [developper documentation](https://gitlab.com/ifb-elixirfr/abromics/abromics-graph/-/blob/main/src/api/README.md)
+
 ## SPARQL queries collection
+
+A SPARQL queries collection is available [here](https://gitlab.com/ifb-elixirfr/abromics/abromics-graph/-/blob/main/queries) to test the knowledge graph 
+
+See the [documentation](https://gitlab.com/ifb-elixirfr/abromics/abromics-graph/-/blob/main/queries/README.md) of the structure of the knowledge graph of ABRomics
 
 ## Web dashboard
 
