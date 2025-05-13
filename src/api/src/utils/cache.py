@@ -67,11 +67,13 @@ def random_id():
     return ''.join(random.choices(string.ascii_lowercase + string.digits, k=8))
 
 def generate_dummy_data(n=10000):
-    return {
+    json_data = {
         str(i): {"class": random.choice(["www", "abc", "xyz", "def"]),
                  "specieName": f"specie{random.randint(1, 100)}"}
         for i in range(n)
     }
+    with open("test.json", "w") as f:
+        json.dump(json_data, f)
 
 
 def build_trie_and_data(data, data_path="data.bin", trie_class_path="index_class.trie", trie_specie_path="index_specie.trie"):
@@ -105,8 +107,8 @@ def build_trie_and_data(data, data_path="data.bin", trie_class_path="index_class
 
 if __name__ == "__main__":
     # 1. Generate & build
-    # json_data = generate_dummy_data(n=10000)
-    with open("test.json", "w") as f:
+    ## json_data = generate_dummy_data(n=100000)
+    with open("test.json", "r") as f:
         json_data = json.load(f)
     build_trie_and_data(json_data)
 

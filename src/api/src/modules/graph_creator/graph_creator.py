@@ -243,6 +243,11 @@ class GraphCreator:
 
 
     ## Get the ncbi taxon id of a list of species
+    ## The SPARQL request is made on uniprot as uniprot-core contains the ids of ncbitaxon
+    ## and uniprot is always up. So it's a great way to get the ids even though the abromics graph kg
+    ## is not up yet (in which case, the ncbitaxon ontology present in the abromics graph is unaccessible)
+    ## WARNING: the uniprot id present at the end of the url seems to match ncbi taxon. 
+    ##          the solution would be to get the id and change the start of the url to ncbi taxon.
     def __getSpeciesTaxonomy(self):
         for report in self.allReports:
             # add the microorganisms in the species dictionnary (from section 1-0-0)
@@ -279,7 +284,9 @@ class GraphCreator:
         except Exception as e:
             print(e)
         for item in recs:
-            self.speciesTaxonomy[item["speciesName"]["value"]] = item["taxon"]["value"]
+            ## only the ncbi taxon id
+            taxon = item["taxon"]["value"].split("http://purl.uniprot.org/taxonomy/")[1] 
+            self.speciesTaxonomy[item["speciesName"]["value"]] = taxon
 
     ## Add the plateforms (places where the workflows were performed)
     ############################################################################################################################################# REWORK THIS FUNCTION

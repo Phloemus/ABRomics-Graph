@@ -19,11 +19,10 @@ class TestSampleSource(unittest.TestCase):
             r = requests.get(SPARQL_ENDPOINT)
         except Exception as e:
             self.assertTrue(False, "Should be able to connect to the sparql endpoint url")
-
         self.assertTrue(r.status_code == 200, "Should return a 200 status code")
 
 
-    def testHumanSampleSources(self): 
+    def testHumanSampleSources(self):
         query = Query(f"{self.queryPathPrefix}/{QUERIES[5]['filePath']['animal']}", sparqlEndpoint=SPARQL_ENDPOINT, parameters={"specieName": "Homo sapiens" })
         res = query.executeQuery()
         self.assertFalse("status" in res and res["status"] == "error", "Should return a query response as a json")
