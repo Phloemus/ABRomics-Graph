@@ -51,6 +51,7 @@ def deleteGraphData():
 
 
 ####################################### Recreate graph route #########################################
+## This should be implemented after that the graph creator module has been tested
 @cross_origin()
 @app.route(f"/{API_BASEPATH}/graph", methods=['POST'])
 @authentification_required 

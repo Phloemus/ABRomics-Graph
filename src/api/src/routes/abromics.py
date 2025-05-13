@@ -63,3 +63,5 @@ def getMicroorgnismSpecies():
 def getHostSpecies():
     query = Query(QUERIES[7]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT) ## All the host species name
     return jsonify(query.executeQuery())
+
+

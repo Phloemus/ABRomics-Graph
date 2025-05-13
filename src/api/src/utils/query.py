@@ -18,6 +18,7 @@ import json
 
 ## Config imports
 from config.config import *
+## from utils.cache import BinaryTrieCache ## Cache not mature now
 
 
 class Query:
