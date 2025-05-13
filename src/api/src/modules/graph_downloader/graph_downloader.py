@@ -5,6 +5,7 @@ import requests
 import os
 import json
 from dotenv import load_dotenv
+from getpass4 import getpass
 
 
 ## Downloader class allows to fetch abromics reports from the api, filter them 
@@ -24,10 +25,14 @@ class Downloader():
 
     ## Public methods
 
-    def getUserToken(self):
+    ## Method used for manual authentification
+    def authenticate(self):
+        print("User authenfication")
+        self.email = input("Enter your email: ")
+        self.password = getpass("Password: ")
         response = requests.post(
             "https://analysis.abromics.fr/api/login", 
-            data={
+            json={
                 "email": self.email, 
                 "password": self.password
             }
@@ -53,6 +58,7 @@ class Downloader():
                 }
             )
             response = response.json()
+            print(response)
             ## print(response)
             for analysis in response["results"]:
                 exploitable_analysis_ids.append(analysis["id"])
@@ -87,9 +93,9 @@ class Downloader():
 
 
 ## Download all the abromics reports marked as ready to report
-downloadDir = "reports-public"
-choiceDownloadFreshReports = input(f"Download fresh reports data from abromics (this action is destructive) (target directory: {downloadDir}) ? [yes/no] ")
-if choiceDownloadFreshReports == "yes": 
-    downloader = Downloader()
-    downloader.getAllAbromicsReadyReports(downloadDir)
-
+## downloadDir = "reports-public"
+## choiceDownloadFreshReports = input(f"Download fresh reports data from abromics (this action is destructive) (target directory: {downloadDir}) ? [yes/no] ")
+## if choiceDownloadFreshReports == "yes": 
+##     downloader = Downloader()
+##     downloader.getAllAbromicsReadyReports(downloadDir)
+## 
