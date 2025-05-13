@@ -1,0 +1,10 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX uniprot-core: <http://purl.uniprot.org/uniprot/core/>
+PREFIX sio: <http://semanticscience.org/resource/>
+
+## Get the name of all the host species that were already indicated present in at least one node in the kg
+SELECT ?sample ?hostNode WHERE {
+   ?sample rdf:type sio:001050 .
+   ?sample uniprot-core:host ?hostNode .
+   # ?hostNode rdfs:label ?hostSpecieName .
+}

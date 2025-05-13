@@ -7,10 +7,14 @@ from utils.query import Query
 from config.constants import QUERIES 
 from config.config import SPARQL_ENDPOINT
 
+from modules.graph_downloader.graph_downloader import Downloader
+from modules.graph_creator.graph_creator import GraphCreator
+
 class TestSampleSource(unittest.TestCase):
 
     def setUp(self):
         self.queryPathPrefix = "../src"
+        self.temporaryPath = "temp"
         pass
 
 
@@ -50,6 +54,19 @@ class TestSampleSource(unittest.TestCase):
         query = Query(f"{self.queryPathPrefix}/{QUERIES[5]['filePath']['all']}", sparqlEndpoint=SPARQL_ENDPOINT)
         res = query.executeQuery()
         self.assertFalse("status" in res and res["status"] == "error", "Should return a query response as a json")
+
+
+    ## Test get all the abromics reports
+    def testGetReports(self):
+        downloader = Downloader()
+        downloader.authenticate()
+        downloader.getAllAbromicsReadyReports(f"{self.temporaryPath}/reports")
+
+    ## Test of the graph creation
+    ## def testGraphCreation(self):
+    ##     gc = GraphCreator(reportDirectory = "temp/data/reports", sparqlEndpoint = "http://localhost:8890/sparql")
+    ##     gc.createGraph(fetchCountriesFromCache = False, templatePath = "src/modules/graph_creator/", outputPath="temp/out")
+        
 
 
 if __name__ == "__main__":
