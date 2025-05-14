@@ -12,7 +12,6 @@ from flask_caching import Cache
 
 
 if "IS_DEV" in os.environ and os.environ['IS_DEV'] == "false":
-    print("waaaawww")
     API_PORT = f"{os.environ['API_PORT']}"
     API_ENDPOINT = f"{os.environ['HTTP']}{os.environ['API_HOST']}:{os.environ['API_PORT']}"
     API_BASEPATH = f"{os.environ['API_BASEPATH']}"
@@ -20,7 +19,6 @@ if "IS_DEV" in os.environ and os.environ['IS_DEV'] == "false":
     ADMIN_USERNAME = f"{os.environ['API_ADMIN_USERNAME']}"
     ADMIN_PASSWORD = f"{os.environ['API_ADMIN_PASSWORD']}"
 else:   
-    print("arff")
     API_PORT = "5000"
     API_ENDPOINT = "http://localhost:5000"
     API_BASEPATH = f"graph-api"

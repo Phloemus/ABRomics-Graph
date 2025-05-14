@@ -1,6 +1,9 @@
 
-import unittest
+import os
+import glob
+import pytest
 import requests
+from getpass4 import getpass
 
 from routes.abromics import getSampleSources
 from utils.query import Query
@@ -10,64 +13,76 @@ from config.config import SPARQL_ENDPOINT
 from modules.graph_downloader.graph_downloader import Downloader
 from modules.graph_creator.graph_creator import GraphCreator
 
-class TestSampleSource(unittest.TestCase):
 
-    def setUp(self):
-        self.queryPathPrefix = "../src"
-        self.temporaryPath = "temp"
-        pass
+queryPathPrefix = "../src"
+temporaryPath = "./temp"
 
-
-    def testSparqlEndpointActivity(self):
-        try:
-            r = requests.get(SPARQL_ENDPOINT)
-        except Exception as e:
-            self.assertTrue(False, "Should be able to connect to the sparql endpoint url")
-        self.assertTrue(r.status_code == 200, "Should return a 200 status code")
+print("\n\nSome of these tests need a connection to the ABRomics plateform")
+email = input("Enter your email: ")
+password = getpass("Password: ")
 
 
-    def testHumanSampleSources(self):
-        query = Query(f"{self.queryPathPrefix}/{QUERIES[5]['filePath']['animal']}", sparqlEndpoint=SPARQL_ENDPOINT, parameters={"specieName": "Homo sapiens" })
-        res = query.executeQuery()
-        self.assertFalse("status" in res and res["status"] == "error", "Should return a query response as a json")
+"""
+    Should connect to the sparql endpoint and returning a valid status code
+"""
+def test_sparql_endpoint_activity():
+    try:
+        r = requests.get(SPARQL_ENDPOINT)
+    except Exception as e:
+        assert False
+    assert r.status_code == 200
 
 
-    def testAnimalSampleSources(self): 
-        query = Query(f"{self.queryPathPrefix}/{QUERIES[5]['filePath']['animal']}", sparqlEndpoint=SPARQL_ENDPOINT, parameters={"specieName": "Mus musculus" })
-        res = query.executeQuery()
-        self.assertFalse("status" in res and res["status"] == "error", "Should return a query response as a json")
+"""
+    Should check if the samples source of humans are accessible via the 
+    knowledge graph
+"""
+def test_human_sample_sources():
+    query = Query(f"{queryPathPrefix}/{QUERIES[5]['filePath']['animal']}", sparqlEndpoint=SPARQL_ENDPOINT, parameters={"specieName": "Homo sapiens" })
+    res = query.executeQuery()
+    assert "status" not in res or res["status"] == "error"
 
 
-    def testAnimalNoSpecieSampleSources(self): 
-        query = Query(f"{self.queryPathPrefix}/{QUERIES[5]['filePath']['animal']}", sparqlEndpoint=SPARQL_ENDPOINT)
-        res = query.executeQuery()
-        self.assertFalse("status" in res and res["status"] == "error", "Should return a query response as a json")
+"""
+    Should check if the samples source for an animal are accessible via the 
+    knowledge graph
+"""
+def test_animal_sample_sources(): 
+    query = Query(f"{queryPathPrefix}/{QUERIES[5]['filePath']['animal']}", sparqlEndpoint=SPARQL_ENDPOINT, parameters={"specieName": "Mus musculus" })
+    res = query.executeQuery()
+    assert "status" not in res or res["status"] == "error"
 
 
-    def testEnvironmentalSampleSources(self): 
-        query = Query(f"{self.queryPathPrefix}/{QUERIES[5]['filePath']['environmental']}", sparqlEndpoint=SPARQL_ENDPOINT)
-        res = query.executeQuery()
-        self.assertFalse("status" in res and res["status"] == "error", "Should return a query response as a json")
+def test_animal_no_specie_sample_sources(): 
+    query = Query(f"{queryPathPrefix}/{QUERIES[5]['filePath']['animal']}", sparqlEndpoint=SPARQL_ENDPOINT)
+    res = query.executeQuery()
+    assert "status" not in res or res["status"] == "error"
 
 
-    def testAllSampleSources(self): 
-        query = Query(f"{self.queryPathPrefix}/{QUERIES[5]['filePath']['all']}", sparqlEndpoint=SPARQL_ENDPOINT)
-        res = query.executeQuery()
-        self.assertFalse("status" in res and res["status"] == "error", "Should return a query response as a json")
+def test_environmental_sample_sources(): 
+    query = Query(f"{queryPathPrefix}/{QUERIES[5]['filePath']['environmental']}", sparqlEndpoint=SPARQL_ENDPOINT)
+    res = query.executeQuery()
+    assert "status" not in res or res["status"] == "error"
 
 
-    ## Test get all the abromics reports
-    def testGetReports(self):
-        downloader = Downloader()
-        downloader.authenticate()
-        downloader.getAllAbromicsReadyReports(f"{self.temporaryPath}/reports")
-
-    ## Test of the graph creation
-    ## def testGraphCreation(self):
-    ##     gc = GraphCreator(reportDirectory = "temp/data/reports", sparqlEndpoint = "http://localhost:8890/sparql")
-    ##     gc.createGraph(fetchCountriesFromCache = False, templatePath = "src/modules/graph_creator/", outputPath="temp/out")
-        
+def test_all_sample_sources(): 
+    query = Query(f"{queryPathPrefix}/{QUERIES[5]['filePath']['all']}", sparqlEndpoint=SPARQL_ENDPOINT)
+    res = query.executeQuery()
+    assert "status" not in res or res["status"] == "error"
 
 
-if __name__ == "__main__":
-    unittest.main()
+
+## Test get all the abromics reports
+def testDownladReports():
+    downloader = Downloader(downloadDir = f"{temporaryPath}/reports", email = email, password = password)
+    downloader.authenticate()
+    print("Wait for downloading process to be launch..")
+    downloader.getAllAbromicsReadyReports()
+    assert os.path.exists(glob.glob(f"{temporaryPath}/reports/*.json")[0]) == True
+
+#    ## Test of the graph creation
+#    ## def testGraphCreation(self):
+#    ##     gc = GraphCreator(reportDirectory = "temp/data/reports", sparqlEndpoint = "http://localhost:8890/sparql")
+#    ##     gc.createGraph(fetchCountriesFromCache = False, templatePath = "src/modules/graph_creator/", outputPath="temp/out")
+#        
+#
