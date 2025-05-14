@@ -8,7 +8,8 @@
 export PYTHONPATH="../src"
 
 ## Perform all the tests
-python -m unittest discover -v
+## the -s flag allows to perform print() in the tests... because when this flag is not indicated it doesn't work..
+pytest -s 
 
 ## Deactivate the virtual environment
 deactivate

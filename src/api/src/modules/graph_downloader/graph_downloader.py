@@ -12,41 +12,53 @@ from getpass4 import getpass
 ## and save them locally
 class Downloader():
 
-    def __init__(self):
+    def __init__(self, downloadDir = ".", email = "", password = ""):
 
         ## env variables (get the user ABRomics credentials from .env file)
         load_dotenv()
         
         ## load the environment variables
         self.api_url = "https://analysis.abromics.fr" # os.getenv('API_URL') 
-        self.email = ""
-        self.password = ""
-        self.api_user_token = "YWRtaW5AYW5hbHlzaXMuYWJyb21pY3MuZnI6YWJyb21pY3MyMDIz" # This is the master basic token # os.getenv('API_USER_TOKEN')
+        self.email = email
+        self.password = password
+        self.api_user_token = ""
+        self.downloadDir = downloadDir
 
     ## Public methods
 
     ## Method used for manual authentification
     def authenticate(self):
-        print("User authenfication")
-        self.email = input("Enter your email: ")
-        self.password = getpass("Password: ")
+
+        email = ""
+        password = ""
+
+        if self.email == "" or self.password == "":
+            print("User authenfication")
+            email = input("Enter your email: ")
+            password = getpass("Password: ")
+
         response = requests.post(
-            "https://analysis.abromics.fr/api/login", 
+            "https://analysis.abromics.fr/api/login/", 
             json={
-                "email": self.email, 
-                "password": self.password
+                "email": email,
+                "password": password
             }
         )
         try:
             response = response.json()
+            print(response.keys())
+            if response.status_code != 200: ## HERE 14/05/2025 - I love when the doc doesn't work..
+                exit()
         except:
             print(f"Invalid Credentials: {response}")
             exit()
-        self.api_user_token = response.access
+        print(response.keys())
+        self.api_user_token = response['access']
+
 
     ## download all the abromics reports marked as "ready to report" 
     ## downloadDir (string) : indicate the directory in which the reports should be saved
-    def getAllAbromicsReadyReports(self, downloadDir):
+    def getAllAbromicsReadyReports(self):
         response = { "next": "https://analysis.abromics.fr/api/analysis/" }
         exploitable_analysis_ids = []
         while "next" in response and response["next"] != None: 
@@ -54,19 +66,17 @@ class Downloader():
                 response["next"],
                 params={'status': 'ready_to_report'},
                 headers = {
-                    'Authorization': f"Basic {self.api_user_token}", ## replace Basic with Bearer if it's a Bearer token
+                    'Authorization': f"Bearer {self.api_user_token}", ## replace Basic with Bearer if it's a Bearer token
                 }
             )
             response = response.json()
-            print(response)
-            ## print(response)
             for analysis in response["results"]:
                 exploitable_analysis_ids.append(analysis["id"])
 
         print(f"{len(exploitable_analysis_ids)} reports will be downloaded ...")
 
-        if not os.path.exists(downloadDir):
-            os.makedirs(downloadDir)
+        if not os.path.exists(self.downloadDir):
+            os.makedirs(self.downloadDir)
     
         with alive_bar(len(exploitable_analysis_ids)) as bar:
             countDownloadFails = 0
@@ -82,7 +92,7 @@ class Downloader():
                 try:
                     report = response.json()
                     # save the reports in a local file
-                    with open(f'{downloadDir}/abr_report_{report_id}.json', 'w') as f:
+                    with open(f'{self.downloadDir}/abr_report_{report_id}.json', 'w') as f:
                         json.dump(report, f)
                     countDownloadSuccess += 1
                 except:
@@ -96,6 +106,6 @@ class Downloader():
 ## downloadDir = "reports-public"
 ## choiceDownloadFreshReports = input(f"Download fresh reports data from abromics (this action is destructive) (target directory: {downloadDir}) ? [yes/no] ")
 ## if choiceDownloadFreshReports == "yes": 
-##     downloader = Downloader()
-##     downloader.getAllAbromicsReadyReports(downloadDir)
+##     downloader = Downloader(downloadDir = downloadDir)
+##     downloader.getAllAbromicsReadyReports()
 ## 
