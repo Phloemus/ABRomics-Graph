@@ -1,6 +1,7 @@
 
 import os
 import glob
+import shutil
 import pytest
 import requests
 from getpass4 import getpass
@@ -20,6 +21,13 @@ temporaryPath = "./temp"
 print("\n\nSome of these tests need a connection to the ABRomics plateform")
 email = input("Enter your email: ")
 password = getpass("Password: ")
+
+
+"""
+    Utility function that cleans (remove the tests/temp directory)
+"""
+def __cleaning_temp():
+    shutil.rmtree(temporaryPath)
 
 
 """
@@ -76,7 +84,7 @@ def test_all_sample_sources():
 def testDownladReports():
     downloader = Downloader(downloadDir = f"{temporaryPath}/reports", email = email, password = password)
     downloader.authenticate()
-    print("Wait for downloading process to be launch..")
+    print("Wait for downloading process to be launched..")
     downloader.getAllAbromicsReadyReports()
     assert os.path.exists(glob.glob(f"{temporaryPath}/reports/*.json")[0]) == True
 
