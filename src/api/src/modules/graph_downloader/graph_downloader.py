@@ -29,8 +29,8 @@ class Downloader():
     ## Method used for manual authentification
     def authenticate(self):
 
-        email = ""
-        password = ""
+        email = self.email
+        password = self.password
 
         if self.email == "" or self.password == "":
             print("User authenfication")
@@ -45,15 +45,12 @@ class Downloader():
             }
         )
         try:
+            response.raise_for_status()
             response = response.json()
-            print(response.keys())
-            if response.status_code != 200: ## HERE 14/05/2025 - I love when the doc doesn't work..
-                exit()
-        except:
-            print(f"Invalid Credentials: {response}")
+            self.api_user_token = response['access']
+        except requests.exceptions.HTTPError as e:
+            print(e)
             exit()
-        print(response.keys())
-        self.api_user_token = response['access']
 
 
     ## download all the abromics reports marked as "ready to report" 
