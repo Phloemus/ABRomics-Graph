@@ -24,13 +24,6 @@ password = getpass("Password: ")
 
 
 """
-    Utility function that cleans (remove the tests/temp directory)
-"""
-def __cleaning_temp():
-    shutil.rmtree(temporaryPath)
-
-
-"""
     Should connect to the sparql endpoint and returning a valid status code
 """
 def test_sparql_endpoint_activity():
@@ -88,9 +81,9 @@ def testDownladReports():
     downloader.getAllAbromicsReadyReports()
     assert os.path.exists(glob.glob(f"{temporaryPath}/reports/*.json")[0]) == True
 
-#    ## Test of the graph creation
-#    ## def testGraphCreation(self):
-#    ##     gc = GraphCreator(reportDirectory = "temp/data/reports", sparqlEndpoint = "http://localhost:8890/sparql")
-#    ##     gc.createGraph(fetchCountriesFromCache = False, templatePath = "src/modules/graph_creator/", outputPath="temp/out")
-#        
-#
+
+## Test of the graph creation
+def testGraphCreation():
+    gc = GraphCreator(reportDirectory = "temp/reports", sparqlEndpoint = "http://localhost:8890/sparql")
+    gc.createGraph(fetchCountriesFromCache = False, templatePath = "src/modules/graph_creator/", outputPath="temp/graph_data")
+    assert os.path.exists(glob.glob(f"{temporaryPath}/graph_data/*.ttl")[0]) == True
