@@ -1,0 +1,8 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+SELECT DISTINCT ?sampleSources (COUNT(?entity) AS ?nbOccurences) WHERE {
+    ?entity prov:wasDerivedFrom ?sampleSources .
+    ?sampleSources rdf:type ?type . ## Deletes the empty sample sources. This works unlike FILTER !isBlank(?sampleSources) 
+} GROUP BY ?type ?sampleSources
+ORDER BY DESC(?nbOccurences)
