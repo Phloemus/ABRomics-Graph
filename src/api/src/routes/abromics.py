@@ -47,6 +47,13 @@ def getSampleSources():
     return jsonify(query.executeQuery())
 
 
+@cross_origin()
+@app.route(f"/{API_BASEPATH}/sample-sources/popular", methods=[QUERIES[]["method"]])
+def getPopularSampleSources():
+    query = Query(QUERIES[]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT)
+    return jsonify(query.exportQueryResult())
+
+
 #### Takes too much time, implement some caching mecanisms here ####
 
 @cross_origin()
