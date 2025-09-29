@@ -96,6 +96,16 @@ QUERIES = [
         "description": """
             Get all the host species present in the ncbitaxon ontology
         """
+    },
+    {
+        "name": "get-popular-sample-sources",
+        "route": f"{API_ENDPOINT}/sample-sources/popular",
+        "method": "GET",
+        "filePath": "queries/sample-sources/get-popular-anatomical-structures-animal-no-specie.sparql",
+        "description": """
+            Get the most popular sample sources. Used to get an insight on
+            the most used sample sources in the graph.
+        """
     }
 ]
 
