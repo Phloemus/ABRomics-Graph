@@ -66,6 +66,11 @@ GROUP BY ?graph
 ORDER BY DESC(?tripleCount)
 ```
 
+## Fixing the error virtuoso doesn't start
+
+Newest version of virutoso aren't compatible with the older ones, so if you have some sort of error message that says this, 
+delete the *src/data* directory and restart you virtuoso container.
+
 ## Deleting all the abromics data
 
 It's possible to clear the data of the abromics graph by running the **clear_abromics_graph.sh**

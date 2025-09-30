@@ -86,5 +86,5 @@ fi
 
 crudini --set virtuoso.ini HTTPServer ServerPort ${VIRT_HTTPServer_ServerPort:-$original_port}
 
-nohup ./dir-observer.sh &
+nohup /usr/local/virtuoso-opensource/share/virtuoso/vad/dir-observer.sh &
 exec virtuoso-t +wait +foreground
