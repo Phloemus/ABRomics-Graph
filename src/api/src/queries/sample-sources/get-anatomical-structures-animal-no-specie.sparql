@@ -13,7 +13,7 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 ##
 ## The count doesn't count all the samples it only counts one of them for 
 ## each sampleSource
-SELECT DISTINCT ?class ?classLabel (COUNT(?existingSamples) as ?nbOccurences) WHERE {
+SELECT DISTINCT ?class ?classLabel ?parentClass ?parentClassLabel (COUNT(?existingSamples) as ?nbOccurences) WHERE {
    {
     ?organs rdfs:subClassOf+ uberon:0000465 . 
     ?organs rdfs:label ?organLabels .
@@ -30,6 +30,8 @@ SELECT DISTINCT ?class ?classLabel (COUNT(?existingSamples) as ?nbOccurences) WH
     BIND(?class as ?class)
     BIND(?classLabels as ?classLabel)
   }
+  ?class rdfs:subClassOf ?parentClass .
+  ?parentClass rdfs:label ?parentClassLabel .
   
-} GROUP BY ?class ?classLabel
+} GROUP BY ?class ?classLabel ?parentClass ?parentClassLabel
 ORDER BY DESC(?nbOccurences)
