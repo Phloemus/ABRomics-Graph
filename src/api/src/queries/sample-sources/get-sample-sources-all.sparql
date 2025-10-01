@@ -6,14 +6,18 @@ PREFIX obom: <https://data.bioontology.org/metadata/obo/>
 PREFIX ro: <http://purl.obolibrary.org/obo/RO_>
 PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
 PREFIX envo: <http://purl.obolibrary.org/obo/ENVO_>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 
 ## Get all the sample sources including the animal, human and environmental sample sources
 ## available 
 ##
-SELECT DISTINCT ?class ?classLabel WHERE {
+## Wierd. It doesn't give the whole list but only the classes that doesn't have 0 occurences !!
+##
+SELECT DISTINCT ?class ?classLabel ?parentClass ?parentClassLabel (COUNT(?existingSamples) as ?nbOccurences) WHERE {
   {
     ?organs rdfs:subClassOf+ uberon:0000465 . ## uberon anatomical entity
     ?organs rdfs:label ?organLabels .
+    ?existingSamples prov:wasDerivedFrom ?class .
     BIND(?organs as ?class)
     BIND(?organLabels as ?classLabel)
   } UNION {
@@ -31,4 +35,9 @@ SELECT DISTINCT ?class ?classLabel WHERE {
     BIND(?envClass as ?class)
     BIND(?envClassLabel as ?classLabel)
   }
-}
+  ?class rdfs:label ?classLabels .
+  ?existingSamples prov:wasDerivedFrom ?class .
+  ?class rdfs:subClassOf ?parentClass .
+  ?parentClass rdfs:label ?parentClassLabel .
+} GROUP BY ?class ?classLabel ?parentClass ?parentClassLabel
+ORDER BY DESC(?nbOccurences)
