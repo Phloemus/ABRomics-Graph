@@ -5,6 +5,7 @@ PREFIX uberon: <http://purl.obolibrary.org/obo/UBERON_>
 PREFIX obom: <https://data.bioontology.org/metadata/obo/>
 PREFIX ro: <http://purl.obolibrary.org/obo/RO_>
 PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 
 ## Get all the anatomical structure from uberon and ncit excluding some categories 
 ## like all the subclass of the micro anatomical structure and cell part classes 
@@ -14,7 +15,7 @@ PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
 ## Parameters:
 ##  $specieName: string (example: "Homo sapiens")
 ##
-SELECT DISTINCT ?specie ?class ?classLabel WHERE {
+SELECT DISTINCT ?specie ?class ?classLabel ?parentClass ?parentClassLabel (COUNT(?existingSamples) as ?nbOccurences) WHERE {
   {
     ?specie rdfs:label $specieName .
     ?organs ro:0002175 ?specie . ## ro:0002175 indicates the "present_in_taxon" ontology
@@ -29,8 +30,12 @@ SELECT DISTINCT ?specie ?class ?classLabel WHERE {
       VALUES ?excluded { ncit:C21599 ncit:C34070 } . ## Exclude micro anatomical structure and cell part
     }
     ?class rdfs:label ?classLabels .
+    ?existingSamples prov:wasDerivedFrom ?class .
     BIND(?class as ?class)
     BIND(?classLabels as ?classLabel)
   }
+  ?class rdfs:subClassOf ?parentClass .
+  ?parentClass rdfs:label ?parentClassLabel .
   
-}
+} GROUP BY ?specie ?class ?classLabel ?parentClass ?parentClassLabel
+ORDER BY DESC(?nbOccurences)

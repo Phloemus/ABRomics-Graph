@@ -1,0 +1,10 @@
+PREFIX schema: <https://schema.org/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+INSERT {
+   GRAPH <http://data.abromics.fr> {
+       ?sample prov:wasDerivedFrom <http://purl.obolibrary.org/obo/ENVO_01001835> . 
+   }
+} WHERE {
+  ?sample schema:identifier "17-HoPe-P1-2" .
+}
