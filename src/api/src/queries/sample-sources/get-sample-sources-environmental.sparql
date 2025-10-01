@@ -1,6 +1,20 @@
 PREFIX envo: <http://purl.obolibrary.org/obo/ENVO_>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 
-SELECT ?class ?classLabel WHERE { 
- ?class rdfs:subClassOf+ envo:00000428 . ## corresponds to the biome envo class
- ?class rdfs:label ?classLabel .
-}
+SELECT DISTINCT ?class ?classLabel ?parentClass ?parentClassLabel (COUNT(?existingSamples) as ?nbOccurences) WHERE {
+{ 
+  SELECT ?class ?classLabel ?parentClass ?parentClassLabel ?existingSamples WHERE {
+    ?class rdfs:label ?classLabel .
+    ?class rdfs:subClassOf ?parentClass .
+    ?parentClass rdfs:label ?parentClassLabel .
+    ?existingSamples prov:wasDerivedFrom ?class .
+    ?class rdfs:subClassOf+ envo:00000428 .
+  }
+} UNION {
+    ?class rdfs:label ?classLabel .
+    ?class rdfs:subClassOf ?parentClass .
+    ?parentClass rdfs:label ?parentClassLabel .
+    ?class rdfs:subClassOf+ envo:00000428 .
+  }
+} GROUP BY ?class ?parentClass ?classLabel ?parentClassLabel
+ORDER BY DESC(?nbOccurences)
