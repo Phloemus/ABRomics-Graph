@@ -2,42 +2,31 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX ncbitaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
 PREFIX uberon: <http://purl.obolibrary.org/obo/UBERON_>
-PREFIX obom: <https://data.bioontology.org/metadata/obo/>
-PREFIX ro: <http://purl.obolibrary.org/obo/RO_>
-PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
 PREFIX envo: <http://purl.obolibrary.org/obo/ENVO_>
 PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+PREFIX sio: <http://semanticscience.org/resource/>
 
-## Get all the sample sources including the animal, human and environmental sample sources
-## available 
-##
-## Wierd. It doesn't give the whole list but only the classes that doesn't have 0 occurences !!
-##
-SELECT DISTINCT ?class ?classLabel ?parentClass ?parentClassLabel (COUNT(?existingSamples) as ?nbOccurences) WHERE {
-  {
-    ?organs rdfs:subClassOf+ uberon:0000465 . ## uberon anatomical entity
-    ?organs rdfs:label ?organLabels .
-    ?existingSamples prov:wasDerivedFrom ?class .
-    BIND(?organs as ?class)
-    BIND(?organLabels as ?classLabel)
+SELECT DISTINCT  ?class ?classLabel ?parentClass ?parentClassLabel (COUNT(?existingSamples) as ?nbOccurences) WHERE {
+  { 
+    ?class rdfs:subClassOf+ uberon:0000465 . 
+    BIND(?class as ?class)
   } UNION {
-    ?class rdfs:subClassOf+ ncit:C12219 . ## ncit anatomical structure, system or substance
+    ?class rdfs:subClassOf+ envo:00000428 .
+    BIND(?class as ?class)
+  } UNION {
+     ?class rdfs:subClassOf+ ncit:C12219 . ## ncit anatomical structure, system or substance
     MINUS {
       ?class rdfs:subClassOf+ ?excluded .
       VALUES ?excluded { ncit:C21599 ncit:C34070 } . ## Exclude micro anatomical structure and cell part
     }
-    ?class rdfs:label ?classLabels .
     BIND(?class as ?class)
-    BIND(?classLabels as ?classLabel)
   } UNION {
-    ?envClass rdfs:subClassOf+ envo:00000428 . ## envo biome
-    ?envClass rdfs:label ?envClassLabel .
-    BIND(?envClass as ?class)
-    BIND(?envClassLabel as ?classLabel)
+    ?existingSamples rdf:type sio:001050 .
+    ?existingSamples prov:wasDerivedFrom ?class .
   }
-  ?class rdfs:label ?classLabels .
-  ?existingSamples prov:wasDerivedFrom ?class .
+  ?class rdfs:label ?classLabel .
   ?class rdfs:subClassOf ?parentClass .
   ?parentClass rdfs:label ?parentClassLabel .
-} GROUP BY ?class ?classLabel ?parentClass ?parentClassLabel
+} GROUP BY  ?class ?classLabel ?parentClass ?parentClassLabel
 ORDER BY DESC(?nbOccurences)
