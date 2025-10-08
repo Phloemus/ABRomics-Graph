@@ -39,7 +39,10 @@ def getSampleSources():
     else:
         query = Query(QUERIES[5]["filePath"]["all"], sparqlEndpoint=SPARQL_ENDPOINT) ## All sample sources all species 
 
-    return jsonify(query.executeQuery())
+    response = jsonify(query.executeQuery())
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    
+    return response
 
 
 @cross_origin()
