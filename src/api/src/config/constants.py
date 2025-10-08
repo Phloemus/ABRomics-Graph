@@ -64,7 +64,7 @@ QUERIES = [
     {
         "name": "get-sample-sources",
         "route": f"{API_ENDPOINT}/sample-sources",
-        "method": "POST",
+        "method": "GET",
         "filePath": { 
             "animal": "queries/sample-sources/get-anatomical-structures-animal.sparql",
             "animal-no-specie": "queries/sample-sources/get-anatomical-structures-animal-no-specie.sparql",
