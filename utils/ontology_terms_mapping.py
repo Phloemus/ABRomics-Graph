@@ -36,8 +36,24 @@ sparql.setQuery(sparql_query)
 try:
     res = sparql.query().convert()
     recs = res["results"]["bindings"]
-    print(recs)
+    
+    output = data
+    count = 0
+    success = 0
+    for item in data:
+        value = item["fields"]["name"]
+        for res in recs:
+            if value == res["classLabel"]["value"]:
+                output[count]["fields"]["class"] = res["class"]["value"]
+                success = success + 1
+        count = count + 1
+
+    json_str = json.dumps(output, indent=4)
+    with open("sources-with-ontology-terms.json", "w") as f:
+        f.write(json_str)
+    print(f"number of found classes: {success} on {count}")
 except Exception as e:
     print(e)
+
 
 
