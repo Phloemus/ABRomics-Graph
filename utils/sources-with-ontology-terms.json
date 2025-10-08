@@ -1,0 +1,1105 @@
+[
+    {
+        "model": "constant_data.source",
+        "pk": 1,
+        "fields": {
+            "name": "Upper respiratory tract",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 2,
+        "fields": {
+            "name": "Intestine",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 3,
+        "fields": {
+            "name": "Urethra",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12417"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 4,
+        "fields": {
+            "name": "Trachea",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 5,
+        "fields": {
+            "name": "Urine",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 6,
+        "fields": {
+            "name": "Bronchus",
+            "type": "human",
+            "class": "http://purl.obolibrary.org/obo/NCBITaxon_166845"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 7,
+        "fields": {
+            "name": "Anterior Nares",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 8,
+        "fields": {
+            "name": "Tissue",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12801"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 9,
+        "fields": {
+            "name": "Tear",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33739"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 10,
+        "fields": {
+            "name": "Esophagus",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12389"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 11,
+        "fields": {
+            "name": "Breast Milk",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 12,
+        "fields": {
+            "name": "Inferior Nasal Turbinate",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 13,
+        "fields": {
+            "name": "Alveolar sac",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 14,
+        "fields": {
+            "name": "Fluid (Pericardial)",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 15,
+        "fields": {
+            "name": "Mucus",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13259"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 16,
+        "fields": {
+            "name": "Sinus",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33556"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 17,
+        "fields": {
+            "name": "Skin",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12470"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 18,
+        "fields": {
+            "name": "Rectum",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 19,
+        "fields": {
+            "name": "Semen",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13277"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 20,
+        "fields": {
+            "name": "Pleural sac",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 21,
+        "fields": {
+            "name": "Sputum",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 22,
+        "fields": {
+            "name": "Sweat",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13280"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 23,
+        "fields": {
+            "name": "Anus",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43362"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 24,
+        "fields": {
+            "name": "Nasal Cavity",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12424"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 25,
+        "fields": {
+            "name": "Duodenum",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12263"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 26,
+        "fields": {
+            "name": "Catheter",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 27,
+        "fields": {
+            "name": "Blood",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 28,
+        "fields": {
+            "name": "Cranial hair",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 29,
+        "fields": {
+            "name": "Oropharynx (OP)",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 30,
+        "fields": {
+            "name": "Fluid (Amniotic)",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 31,
+        "fields": {
+            "name": "Bone and joint",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 32,
+        "fields": {
+            "name": "Fluid (Vaginal)",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 33,
+        "fields": {
+            "name": "Dialysis",
+            "type": "human",
+            "class": "http://purl.obolibrary.org/obo/NCBITaxon_124307"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 34,
+        "fields": {
+            "name": "Ethmoid sinus",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 35,
+        "fields": {
+            "name": "Middle Nasal Turbinate",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 36,
+        "fields": {
+            "name": "Saliva",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13275"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 37,
+        "fields": {
+            "name": "Vagina",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12407"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 38,
+        "fields": {
+            "name": "Surgical site",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 39,
+        "fields": {
+            "name": "Not Collected",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 40,
+        "fields": {
+            "name": "Lower respiratory tract",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 41,
+        "fields": {
+            "name": "Feces",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 42,
+        "fields": {
+            "name": "Nasopharynx (NP)",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 43,
+        "fields": {
+            "name": "Eye",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12401"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 44,
+        "fields": {
+            "name": "Prosthesis",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17598"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 45,
+        "fields": {
+            "name": "Fluid (Pleural)",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 46,
+        "fields": {
+            "name": "Fluid (Cerebrospinal (CSF))",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 47,
+        "fields": {
+            "name": "Bronchiole",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12684"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 48,
+        "fields": {
+            "name": "Pleural cavity",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 49,
+        "fields": {
+            "name": "Lung",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 50,
+        "fields": {
+            "name": "Stomach",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12391"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 51,
+        "fields": {
+            "name": "Fluid",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25278"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 52,
+        "fields": {
+            "name": "Upper respiratory tract",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 53,
+        "fields": {
+            "name": "Intestine",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 54,
+        "fields": {
+            "name": "Urethra",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12417"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 55,
+        "fields": {
+            "name": "Trachea",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 56,
+        "fields": {
+            "name": "Urine",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 57,
+        "fields": {
+            "name": "Bronchus",
+            "type": "animal",
+            "class": "http://purl.obolibrary.org/obo/NCBITaxon_166845"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 58,
+        "fields": {
+            "name": "Anterior Nares",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 59,
+        "fields": {
+            "name": "Tissue",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12801"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 60,
+        "fields": {
+            "name": "Tear",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33739"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 61,
+        "fields": {
+            "name": "Esophagus",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12389"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 62,
+        "fields": {
+            "name": "Breast Milk",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 63,
+        "fields": {
+            "name": "Inferior Nasal Turbinate",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 64,
+        "fields": {
+            "name": "Alveolar sac",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 65,
+        "fields": {
+            "name": "Fluid (Pericardial)",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 66,
+        "fields": {
+            "name": "Mucus",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13259"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 67,
+        "fields": {
+            "name": "Sinus",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33556"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 68,
+        "fields": {
+            "name": "Skin",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12470"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 69,
+        "fields": {
+            "name": "Rectum",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 70,
+        "fields": {
+            "name": "Semen",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13277"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 71,
+        "fields": {
+            "name": "Pleural sac",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 72,
+        "fields": {
+            "name": "Sputum",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 73,
+        "fields": {
+            "name": "Sweat",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13280"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 74,
+        "fields": {
+            "name": "Anus",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43362"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 75,
+        "fields": {
+            "name": "Nasal Cavity",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12424"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 76,
+        "fields": {
+            "name": "Duodenum",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12263"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 77,
+        "fields": {
+            "name": "Catheter",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 78,
+        "fields": {
+            "name": "Blood",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 79,
+        "fields": {
+            "name": "Cranial hair",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 80,
+        "fields": {
+            "name": "Oropharynx (OP)",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 81,
+        "fields": {
+            "name": "Fluid (Amniotic)",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 82,
+        "fields": {
+            "name": "Bone and joint",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 83,
+        "fields": {
+            "name": "Fluid (Vaginal)",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 84,
+        "fields": {
+            "name": "Dialysis",
+            "type": "animal",
+            "class": "http://purl.obolibrary.org/obo/NCBITaxon_124307"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 85,
+        "fields": {
+            "name": "Ethmoid sinus",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 86,
+        "fields": {
+            "name": "Middle Nasal Turbinate",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 87,
+        "fields": {
+            "name": "Saliva",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13275"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 88,
+        "fields": {
+            "name": "Vagina",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12407"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 89,
+        "fields": {
+            "name": "Surgical site",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 90,
+        "fields": {
+            "name": "Not Collected",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 91,
+        "fields": {
+            "name": "Lower respiratory tract",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 92,
+        "fields": {
+            "name": "Feces",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 93,
+        "fields": {
+            "name": "Nasopharynx (NP)",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 94,
+        "fields": {
+            "name": "Eye",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12401"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 95,
+        "fields": {
+            "name": "Prosthesis",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17598"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 96,
+        "fields": {
+            "name": "Fluid (Pleural)",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 97,
+        "fields": {
+            "name": "Fluid (Cerebrospinal (CSF))",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 98,
+        "fields": {
+            "name": "Bronchiole",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12684"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 99,
+        "fields": {
+            "name": "Pleural cavity",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 100,
+        "fields": {
+            "name": "Lung",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 101,
+        "fields": {
+            "name": "Stomach",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12391"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 102,
+        "fields": {
+            "name": "Fluid",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25278"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 103,
+        "fields": {
+            "name": "Farm effluent",
+            "type": "environmental"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 104,
+        "fields": {
+            "name": "Agricultural soil",
+            "type": "environmental"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 105,
+        "fields": {
+            "name": "River water",
+            "type": "environmental"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 106,
+        "fields": {
+            "name": "WWTP effluent",
+            "type": "environmental"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 107,
+        "fields": {
+            "name": "Other",
+            "type": "environmental",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17649"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 108,
+        "fields": {
+            "name": "Hospital effluent",
+            "type": "environmental"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 109,
+        "fields": {
+            "name": "Other",
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17649"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 110,
+        "fields": {
+            "name": "Other",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17649"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 111,
+        "fields": {
+            "name": "Not applicable",
+            "type": "environmental"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 112,
+        "fields": {
+            "name": "Feather",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 113,
+        "fields": {
+            "name": "Pellet",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 114,
+        "fields": {
+            "name": "Egg shells",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 115,
+        "fields": {
+            "name": "Egg shells",
+            "type": "environmental"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 116,
+        "fields": {
+            "name": "Nest",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 117,
+        "fields": {
+            "name": "Nest",
+            "type": "environmental"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 118,
+        "fields": {
+            "name": "Tracheal secretion",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 119,
+        "fields": {
+            "name": "Tracheal aspirate",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 120,
+        "fields": {
+            "name": "Wound",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 121,
+        "fields": {
+            "name": "Wound",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 122,
+        "fields": {
+            "name": "Nasal swab",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 123,
+        "fields": {
+            "name": "Foot",
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C32622"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 124,
+        "fields": {
+            "name": "Exudate tracheostoma",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 125,
+        "fields": {
+            "name": "Pulmonary abscess",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 126,
+        "fields": {
+            "name": "Pulmonary abscess",
+            "type": "animal"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 127,
+        "fields": {
+            "name": "Ear swab",
+            "type": "human"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 128,
+        "fields": {
+            "name": "Air",
+            "type": "environmental",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C73434"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 129,
+        "fields": {
+            "name": "Plant root",
+            "type": "environmental"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 130,
+        "fields": {
+            "name": "Soil",
+            "type": "environmental"
+        }
+    }
+]
