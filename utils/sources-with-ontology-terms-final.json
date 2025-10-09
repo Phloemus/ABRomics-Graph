@@ -4,7 +4,9 @@
         "pk": 1,
         "fields": {
             "name": "Upper respiratory tract",
-            "type": "human"
+            "type": "human",
+            "class": "http://purl.obolibrary.org/obo/UBERON_0001557",
+            "ontology": "UBERON"
         }
     },
     {
@@ -13,7 +15,8 @@
         "fields": {
             "name": "Intestine",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736",
+            "ontology": "NCIT"
         }
     },
     {
@@ -22,7 +25,8 @@
         "fields": {
             "name": "Urethra",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12417"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12417",
+            "ontology": "NCIT"
         }
     },
     {
@@ -31,7 +35,8 @@
         "fields": {
             "name": "Trachea",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428",
+            "ontology": "NCIT"
         }
     },
     {
@@ -40,7 +45,8 @@
         "fields": {
             "name": "Urine",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283",
+            "ontology": "NCIT"
         }
     },
     {
@@ -49,7 +55,8 @@
         "fields": {
             "name": "Bronchus",
             "type": "human",
-            "class": "http://purl.obolibrary.org/obo/NCBITaxon_166845"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12683",
+            "ontology": "NCIT"
         }
     },
     {
@@ -57,7 +64,9 @@
         "pk": 7,
         "fields": {
             "name": "Anterior Nares",
-            "type": "human"
+            "type": "human",
+            "class": "http://purl.bioontology.org/ontology/SNOMEDCT/697989009",
+            "ontology": "SNOMEDCT"
         }
     },
     {
@@ -66,7 +75,8 @@
         "fields": {
             "name": "Tissue",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12801"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12801",
+            "ontology": "NCIT"
         }
     },
     {
@@ -75,7 +85,8 @@
         "fields": {
             "name": "Tear",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33739"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33739",
+            "ontology": "NCIT"
         }
     },
     {
@@ -84,7 +95,8 @@
         "fields": {
             "name": "Esophagus",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12389"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12389",
+            "ontology": "NCIT"
         }
     },
     {
@@ -92,7 +104,9 @@
         "pk": 11,
         "fields": {
             "name": "Breast Milk",
-            "type": "human"
+            "type": "human",
+            "class": "http://purl.obolibrary.org/obo/ENVO_02000031",
+            "ontology": "ENVO"
         }
     },
     {
@@ -100,7 +114,9 @@
         "pk": 12,
         "fields": {
             "name": "Inferior Nasal Turbinate",
-            "type": "human"
+            "type": "human",
+            "class": "http://purl.bioontology.org/ontology/SNOMEDCT/361932000",
+            "ontology": "SNOMEDCT"
         }
     },
     {
@@ -108,7 +124,9 @@
         "pk": 13,
         "fields": {
             "name": "Alveolar sac",
-            "type": "human"
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C32057",
+            "ontology": "NCIT"
         }
     },
     {
@@ -116,7 +134,9 @@
         "pk": 14,
         "fields": {
             "name": "Fluid (Pericardial)",
-            "type": "human"
+            "type": "human",
+            "class": "http://purl.bioontology.org/ontology/SNOMEDCT/34429004",
+            "ontology": "SNOMEDCT"
         }
     },
     {
@@ -125,7 +145,8 @@
         "fields": {
             "name": "Mucus",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13259"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13259",
+            "ontology": "NCIT"
         }
     },
     {
@@ -134,7 +155,8 @@
         "fields": {
             "name": "Sinus",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33556"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33556",
+            "ontology": "NCIT"
         }
     },
     {
@@ -143,7 +165,8 @@
         "fields": {
             "name": "Skin",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12470"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12470",
+            "ontology": "NCIT"
         }
     },
     {
@@ -152,7 +175,8 @@
         "fields": {
             "name": "Rectum",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390",
+            "ontology": "NCIT"
         }
     },
     {
@@ -161,7 +185,8 @@
         "fields": {
             "name": "Semen",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13277"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13277",
+            "ontology": "NCIT"
         }
     },
     {
@@ -169,7 +194,9 @@
         "pk": 20,
         "fields": {
             "name": "Pleural sac",
-            "type": "human"
+            "type": "human",
+            "class": "http://purl.obolibrary.org/obo/UBERON_0009778",
+            "ontology": "UBERON"
         }
     },
     {
@@ -178,7 +205,8 @@
         "fields": {
             "name": "Sputum",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278",
+            "ontology": "NCIT"
         }
     },
     {
@@ -187,7 +215,8 @@
         "fields": {
             "name": "Sweat",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13280"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13280",
+            "ontology": "NCIT"
         }
     },
     {
@@ -196,7 +225,8 @@
         "fields": {
             "name": "Anus",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43362"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43362",
+            "ontology": "NCIT"
         }
     },
     {
@@ -205,7 +235,8 @@
         "fields": {
             "name": "Nasal Cavity",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12424"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12424",
+            "ontology": "NCIT"
         }
     },
     {
@@ -214,7 +245,8 @@
         "fields": {
             "name": "Duodenum",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12263"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12263",
+            "ontology": "NCIT"
         }
     },
     {
@@ -222,7 +254,9 @@
         "pk": 26,
         "fields": {
             "name": "Catheter",
-            "type": "human"
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C50344",
+            "ontology": "NCIT"
         }
     },
     {
@@ -231,7 +265,8 @@
         "fields": {
             "name": "Blood",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434",
+            "ontology": "NCIT"
         }
     },
     {
@@ -239,7 +274,9 @@
         "pk": 28,
         "fields": {
             "name": "Cranial hair",
-            "type": "human"
+            "type": "human",
+            "class": "http://purl.obolibrary.org/obo/UBERON_1000001",
+            "ontology": "UBERON"
         }
     },
     {
@@ -247,7 +284,9 @@
         "pk": 29,
         "fields": {
             "name": "Oropharynx (OP)",
-            "type": "human"
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12762",
+            "ontology": "NCIT"
         }
     },
     {
@@ -255,7 +294,9 @@
         "pk": 30,
         "fields": {
             "name": "Fluid (Amniotic)",
-            "type": "human"
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13188",
+            "ontology": "NCIT"
         }
     },
     {
@@ -263,7 +304,9 @@
         "pk": 31,
         "fields": {
             "name": "Bone and joint",
-            "type": "human"
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12366",
+            "ontology": "NCIT"
         }
     },
     {
@@ -271,7 +314,9 @@
         "pk": 32,
         "fields": {
             "name": "Fluid (Vaginal)",
-            "type": "human"
+            "type": "human",
+            "class": "http://purl.obolibrary.org/obo/UBERON_0036243",
+            "ontology": "UBERON"
         }
     },
     {
@@ -280,7 +325,8 @@
         "fields": {
             "name": "Dialysis",
             "type": "human",
-            "class": "http://purl.obolibrary.org/obo/NCBITaxon_124307"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15221",
+            "ontology": "NCIT"
         }
     },
     {
@@ -288,7 +334,9 @@
         "pk": 34,
         "fields": {
             "name": "Ethmoid sinus",
-            "type": "human"
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12276",
+            "ontology": "NCIT"
         }
     },
     {
@@ -296,7 +344,9 @@
         "pk": 35,
         "fields": {
             "name": "Middle Nasal Turbinate",
-            "type": "human"
+            "type": "human",
+            "class": "http://purl.bioontology.org/ontology/SNOMEDCT/60962000",
+            "ontology": "SNOMEDCT"
         }
     },
     {
@@ -305,7 +355,8 @@
         "fields": {
             "name": "Saliva",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13275"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13275",
+            "ontology": "NCIT"
         }
     },
     {
@@ -314,7 +365,8 @@
         "fields": {
             "name": "Vagina",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12407"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12407",
+            "ontology": "NCIT"
         }
     },
     {
@@ -322,7 +374,9 @@
         "pk": 38,
         "fields": {
             "name": "Surgical site",
-            "type": "human"
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C164323",
+            "ontology": "NCIT"
         }
     },
     {
@@ -330,7 +384,9 @@
         "pk": 39,
         "fields": {
             "name": "Not Collected",
-            "type": "human"
+            "type": "human",
+            "class": "http://www.w3.org/2002/07/owl#Thing",
+            "ontology": "OWL"
         }
     },
     {
@@ -338,7 +394,9 @@
         "pk": 40,
         "fields": {
             "name": "Lower respiratory tract",
-            "type": "human"
+            "type": "human",
+            "class": "http://purl.obolibrary.org/obo/UBERON_0001558",
+            "ontology": "UBERON"
         }
     },
     {
@@ -347,7 +405,8 @@
         "fields": {
             "name": "Feces",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234",
+            "ontology": "NCIT"
         }
     },
     {
@@ -355,7 +414,9 @@
         "pk": 42,
         "fields": {
             "name": "Nasopharynx (NP)",
-            "type": "human"
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12423",
+            "ontology": "NCIT"
         }
     },
     {
@@ -364,7 +425,8 @@
         "fields": {
             "name": "Eye",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12401"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12401",
+            "ontology": "NCIT"
         }
     },
     {
@@ -373,7 +435,8 @@
         "fields": {
             "name": "Prosthesis",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17598"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17598",
+            "ontology": "NCIT"
         }
     },
     {
@@ -381,7 +444,9 @@
         "pk": 45,
         "fields": {
             "name": "Fluid (Pleural)",
-            "type": "human"
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C77613",
+            "ontology": "NCIT"
         }
     },
     {
@@ -389,7 +454,9 @@
         "pk": 46,
         "fields": {
             "name": "Fluid (Cerebrospinal (CSF))",
-            "type": "human"
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12692",
+            "ontology": "NCIT"
         }
     },
     {
@@ -398,7 +465,8 @@
         "fields": {
             "name": "Bronchiole",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12684"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12684",
+            "ontology": "NCIT"
         }
     },
     {
@@ -406,7 +474,9 @@
         "pk": 48,
         "fields": {
             "name": "Pleural cavity",
-            "type": "human"
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12840",
+            "ontology": "NCIT"
         }
     },
     {
@@ -415,7 +485,8 @@
         "fields": {
             "name": "Lung",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468",
+            "ontology": "NCIT"
         }
     },
     {
@@ -424,7 +495,8 @@
         "fields": {
             "name": "Stomach",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12391"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12391",
+            "ontology": "NCIT"
         }
     },
     {
@@ -433,7 +505,8 @@
         "fields": {
             "name": "Fluid",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25278"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25278",
+            "ontology": "NCIT"
         }
     },
     {
@@ -441,7 +514,9 @@
         "pk": 52,
         "fields": {
             "name": "Upper respiratory tract",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://purl.obolibrary.org/obo/UBERON_0001557",
+            "ontology": "UBERON"
         }
     },
     {
@@ -450,7 +525,8 @@
         "fields": {
             "name": "Intestine",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736",
+            "ontology": "NCIT"
         }
     },
     {
@@ -459,7 +535,8 @@
         "fields": {
             "name": "Urethra",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12417"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12417",
+            "ontology": "NCIT"
         }
     },
     {
@@ -468,7 +545,8 @@
         "fields": {
             "name": "Trachea",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428",
+            "ontology": "NCIT"
         }
     },
     {
@@ -477,7 +555,8 @@
         "fields": {
             "name": "Urine",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283",
+            "ontology": "NCIT"
         }
     },
     {
@@ -486,7 +565,8 @@
         "fields": {
             "name": "Bronchus",
             "type": "animal",
-            "class": "http://purl.obolibrary.org/obo/NCBITaxon_166845"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12683",
+            "ontology": "NCIT"
         }
     },
     {
@@ -494,7 +574,9 @@
         "pk": 58,
         "fields": {
             "name": "Anterior Nares",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://purl.bioontology.org/ontology/SNOMEDCT/697989009",
+            "ontology": "SNOMEDCT"
         }
     },
     {
@@ -503,7 +585,8 @@
         "fields": {
             "name": "Tissue",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12801"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12801",
+            "ontology": "NCIT"
         }
     },
     {
@@ -512,7 +595,8 @@
         "fields": {
             "name": "Tear",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33739"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33739",
+            "ontology": "NCIT"
         }
     },
     {
@@ -521,7 +605,8 @@
         "fields": {
             "name": "Esophagus",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12389"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12389",
+            "ontology": "NCIT"
         }
     },
     {
@@ -529,7 +614,9 @@
         "pk": 62,
         "fields": {
             "name": "Breast Milk",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://purl.obolibrary.org/obo/ENVO_02000031",
+            "ontology": "ENVO"
         }
     },
     {
@@ -537,7 +624,9 @@
         "pk": 63,
         "fields": {
             "name": "Inferior Nasal Turbinate",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://purl.bioontology.org/ontology/SNOMEDCT/361932000",
+            "ontology": "SNOMEDCT"
         }
     },
     {
@@ -545,7 +634,9 @@
         "pk": 64,
         "fields": {
             "name": "Alveolar sac",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C32057",
+            "ontology": "NCIT"
         }
     },
     {
@@ -553,7 +644,9 @@
         "pk": 65,
         "fields": {
             "name": "Fluid (Pericardial)",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://purl.bioontology.org/ontology/SNOMEDCT/34429004",
+            "ontology": "SNOMEDCT"
         }
     },
     {
@@ -562,7 +655,8 @@
         "fields": {
             "name": "Mucus",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13259"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13259",
+            "ontology": "NCIT"
         }
     },
     {
@@ -571,7 +665,8 @@
         "fields": {
             "name": "Sinus",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33556"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33556",
+            "ontology": "NCIT"
         }
     },
     {
@@ -580,7 +675,8 @@
         "fields": {
             "name": "Skin",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12470"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12470",
+            "ontology": "NCIT"
         }
     },
     {
@@ -589,7 +685,8 @@
         "fields": {
             "name": "Rectum",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390",
+            "ontology": "NCIT"
         }
     },
     {
@@ -598,7 +695,8 @@
         "fields": {
             "name": "Semen",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13277"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13277",
+            "ontology": "NCIT"
         }
     },
     {
@@ -606,7 +704,9 @@
         "pk": 71,
         "fields": {
             "name": "Pleural sac",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://purl.obolibrary.org/obo/UBERON_0009778",
+            "ontology": "UBERON"
         }
     },
     {
@@ -615,7 +715,8 @@
         "fields": {
             "name": "Sputum",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278",
+            "ontology": "NCIT"
         }
     },
     {
@@ -624,7 +725,8 @@
         "fields": {
             "name": "Sweat",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13280"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13280",
+            "ontology": "NCIT"
         }
     },
     {
@@ -633,7 +735,8 @@
         "fields": {
             "name": "Anus",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43362"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43362",
+            "ontology": "NCIT"
         }
     },
     {
@@ -642,7 +745,8 @@
         "fields": {
             "name": "Nasal Cavity",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12424"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12424",
+            "ontology": "NCIT"
         }
     },
     {
@@ -651,7 +755,8 @@
         "fields": {
             "name": "Duodenum",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12263"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12263",
+            "ontology": "NCIT"
         }
     },
     {
@@ -659,7 +764,9 @@
         "pk": 77,
         "fields": {
             "name": "Catheter",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C50344",
+            "ontology": "NCIT"
         }
     },
     {
@@ -668,7 +775,8 @@
         "fields": {
             "name": "Blood",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434",
+            "ontology": "NCIT"
         }
     },
     {
@@ -676,7 +784,9 @@
         "pk": 79,
         "fields": {
             "name": "Cranial hair",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://purl.obolibrary.org/obo/UBERON_1000001",
+            "ontology": "UBERON"
         }
     },
     {
@@ -684,7 +794,9 @@
         "pk": 80,
         "fields": {
             "name": "Oropharynx (OP)",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12762",
+            "ontology": "NCIT"
         }
     },
     {
@@ -692,7 +804,9 @@
         "pk": 81,
         "fields": {
             "name": "Fluid (Amniotic)",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13188",
+            "ontology": "NCIT"
         }
     },
     {
@@ -700,7 +814,9 @@
         "pk": 82,
         "fields": {
             "name": "Bone and joint",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12366",
+            "ontology": "NCIT"
         }
     },
     {
@@ -708,7 +824,9 @@
         "pk": 83,
         "fields": {
             "name": "Fluid (Vaginal)",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://purl.obolibrary.org/obo/UBERON_0036243",
+            "ontology": "UBERON"
         }
     },
     {
@@ -717,7 +835,8 @@
         "fields": {
             "name": "Dialysis",
             "type": "animal",
-            "class": "http://purl.obolibrary.org/obo/NCBITaxon_124307"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15221",
+            "ontology": "NCIT"
         }
     },
     {
@@ -725,7 +844,9 @@
         "pk": 85,
         "fields": {
             "name": "Ethmoid sinus",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12276",
+            "ontology": "NCIT"
         }
     },
     {
@@ -733,7 +854,9 @@
         "pk": 86,
         "fields": {
             "name": "Middle Nasal Turbinate",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://purl.bioontology.org/ontology/SNOMEDCT/60962000",
+            "ontology": "SNOMEDCT"
         }
     },
     {
@@ -742,7 +865,8 @@
         "fields": {
             "name": "Saliva",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13275"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13275",
+            "ontology": "NCIT"
         }
     },
     {
@@ -751,7 +875,8 @@
         "fields": {
             "name": "Vagina",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12407"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12407",
+            "ontology": "NCIT"
         }
     },
     {
@@ -759,7 +884,9 @@
         "pk": 89,
         "fields": {
             "name": "Surgical site",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C164323",
+            "ontology": "NCIT"
         }
     },
     {
@@ -767,7 +894,9 @@
         "pk": 90,
         "fields": {
             "name": "Not Collected",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://www.w3.org/2002/07/owl#Thing",
+            "ontology": "OWL"
         }
     },
     {
@@ -775,7 +904,9 @@
         "pk": 91,
         "fields": {
             "name": "Lower respiratory tract",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://purl.obolibrary.org/obo/UBERON_0001558",
+            "ontology": "UBERON"
         }
     },
     {
@@ -784,7 +915,8 @@
         "fields": {
             "name": "Feces",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234",
+            "ontology": "NCIT"
         }
     },
     {
@@ -792,7 +924,9 @@
         "pk": 93,
         "fields": {
             "name": "Nasopharynx (NP)",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12423",
+            "ontology": "NCIT"
         }
     },
     {
@@ -801,7 +935,8 @@
         "fields": {
             "name": "Eye",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12401"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12401",
+            "ontology": "NCIT"
         }
     },
     {
@@ -810,7 +945,8 @@
         "fields": {
             "name": "Prosthesis",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17598"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17598",
+            "ontology": "NCIT"
         }
     },
     {
@@ -818,7 +954,9 @@
         "pk": 96,
         "fields": {
             "name": "Fluid (Pleural)",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C77613",
+            "ontology": "NCIT"
         }
     },
     {
@@ -826,7 +964,9 @@
         "pk": 97,
         "fields": {
             "name": "Fluid (Cerebrospinal (CSF))",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12692",
+            "ontology": "NCIT"
         }
     },
     {
@@ -835,7 +975,8 @@
         "fields": {
             "name": "Bronchiole",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12684"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12684",
+            "ontology": "NCIT"
         }
     },
     {
@@ -843,7 +984,9 @@
         "pk": 99,
         "fields": {
             "name": "Pleural cavity",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12840",
+            "ontology": "NCIT"
         }
     },
     {
@@ -852,7 +995,8 @@
         "fields": {
             "name": "Lung",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468",
+            "ontology": "NCIT"
         }
     },
     {
@@ -861,7 +1005,8 @@
         "fields": {
             "name": "Stomach",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12391"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12391",
+            "ontology": "NCIT"
         }
     },
     {
@@ -870,7 +1015,8 @@
         "fields": {
             "name": "Fluid",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25278"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25278",
+            "ontology": "NCIT"
         }
     },
     {
@@ -878,7 +1024,9 @@
         "pk": 103,
         "fields": {
             "name": "Farm effluent",
-            "type": "environmental"
+            "type": "environmental",
+            "class": "http://purl.obolibrary.org/obo/ENVO_00002001",
+            "ontology": "ENVO"
         }
     },
     {
@@ -886,7 +1034,9 @@
         "pk": 104,
         "fields": {
             "name": "Agricultural soil",
-            "type": "environmental"
+            "type": "environmental",
+            "class": "http://purl.obolibrary.org/obo/ENVO_00002259",
+            "ontology": "ENVO"
         }
     },
     {
@@ -894,7 +1044,9 @@
         "pk": 105,
         "fields": {
             "name": "River water",
-            "type": "environmental"
+            "type": "environmental",
+            "class": "http://purl.obolibrary.org/obo/ENVO_01000599",
+            "ontology": "ENVO"
         }
     },
     {
@@ -902,7 +1054,9 @@
         "pk": 106,
         "fields": {
             "name": "WWTP effluent",
-            "type": "environmental"
+            "type": "environmental",
+            "class": "http://purl.obolibrary.org/obo/ENVO_00002001",
+            "ontology": "ENVO"
         }
     },
     {
@@ -911,7 +1065,8 @@
         "fields": {
             "name": "Other",
             "type": "environmental",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17649"
+            "class": "http://www.w3.org/2002/07/owl#Thing",
+            "ontology": "OWL"
         }
     },
     {
@@ -919,7 +1074,9 @@
         "pk": 108,
         "fields": {
             "name": "Hospital effluent",
-            "type": "environmental"
+            "type": "environmental",
+            "class": "http://purl.obolibrary.org/obo/ENVO_00002001",
+            "ontology": "ENVO"
         }
     },
     {
@@ -928,7 +1085,8 @@
         "fields": {
             "name": "Other",
             "type": "animal",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17649"
+            "class": "http://www.w3.org/2002/07/owl#Thing",
+            "ontology": "OWL"
         }
     },
     {
@@ -937,7 +1095,8 @@
         "fields": {
             "name": "Other",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17649"
+            "class": "http://www.w3.org/2002/07/owl#Thing",
+            "ontology": "OWL"
         }
     },
     {
@@ -945,7 +1104,9 @@
         "pk": 111,
         "fields": {
             "name": "Not applicable",
-            "type": "environmental"
+            "type": "environmental",
+            "class": "http://www.w3.org/2002/07/owl#Thing",
+            "ontology": "OWL"
         }
     },
     {
@@ -953,7 +1114,9 @@
         "pk": 112,
         "fields": {
             "name": "Feather",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://purl.obolibrary.org/obo/UBERON_0000022",
+            "ontology": "UBERON"
         }
     },
     {
@@ -961,7 +1124,9 @@
         "pk": 113,
         "fields": {
             "name": "Pellet",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://purl.bioontology.org/ontology/SNOMEDCT/420768007",
+            "ontology": "SNOMEDCT"
         }
     },
     {
@@ -969,7 +1134,9 @@
         "pk": 114,
         "fields": {
             "name": "Egg shells",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://purl.bioontology.org/ontology/MESH/D004528",
+            "ontology": "MESH"
         }
     },
     {
@@ -977,7 +1144,9 @@
         "pk": 115,
         "fields": {
             "name": "Egg shells",
-            "type": "environmental"
+            "type": "environmental",
+            "class": "http://purl.bioontology.org/ontology/MESH/D004528",
+            "ontology": "MESH"
         }
     },
     {
@@ -985,7 +1154,9 @@
         "pk": 116,
         "fields": {
             "name": "Nest",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://purl.obolibrary.org/obo/ENVO_00005805",
+            "ontology": "ENVO"
         }
     },
     {
@@ -993,7 +1164,9 @@
         "pk": 117,
         "fields": {
             "name": "Nest",
-            "type": "environmental"
+            "type": "environmental",
+            "class": "http://purl.obolibrary.org/obo/ENVO_00005805",
+            "ontology": "ENVO"
         }
     },
     {
@@ -1009,7 +1182,9 @@
         "pk": 119,
         "fields": {
             "name": "Tracheal aspirate",
-            "type": "human"
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13347",
+            "ontology": "NCIT"
         }
     },
     {
@@ -1017,7 +1192,9 @@
         "pk": 120,
         "fields": {
             "name": "Wound",
-            "type": "human"
+            "type": "human",
+            "class": "http://purl.bioontology.org/ontology/SNOMEDCT/13924000",
+            "ontology": "SNOMEDCT"
         }
     },
     {
@@ -1025,7 +1202,9 @@
         "pk": 121,
         "fields": {
             "name": "Wound",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://purl.bioontology.org/ontology/SNOMEDCT/13924000",
+            "ontology": "SNOMEDCT"
         }
     },
     {
@@ -1033,7 +1212,9 @@
         "pk": 122,
         "fields": {
             "name": "Nasal swab",
-            "type": "human"
+            "type": "human",
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132119",
+            "ontology": "NCIT"
         }
     },
     {
@@ -1042,7 +1223,8 @@
         "fields": {
             "name": "Foot",
             "type": "human",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C32622"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C32622",
+            "ontology": "NCIT"
         }
     },
     {
@@ -1050,7 +1232,9 @@
         "pk": 124,
         "fields": {
             "name": "Exudate tracheostoma",
-            "type": "human"
+            "type": "human",
+            "class": "http://purl.bioontology.org/ontology/SNOMEDCT/465998006",
+            "ontology": "SNOMEDCT"
         }
     },
     {
@@ -1058,7 +1242,9 @@
         "pk": 125,
         "fields": {
             "name": "Pulmonary abscess",
-            "type": "human"
+            "type": "human",
+            "class": "http://purl.bioontology.org/ontology/SNOMEDCT/128477000",
+            "ontology": "SNOMEDCT"
         }
     },
     {
@@ -1066,7 +1252,9 @@
         "pk": 126,
         "fields": {
             "name": "Pulmonary abscess",
-            "type": "animal"
+            "type": "animal",
+            "class": "http://purl.bioontology.org/ontology/SNOMEDCT/128477000",
+            "ontology": "SNOMEDCT"
         }
     },
     {
@@ -1074,7 +1262,9 @@
         "pk": 127,
         "fields": {
             "name": "Ear swab",
-            "type": "human"
+            "type": "human",
+            "class": "http://purl.bioontology.org/ontology/RCD/XaBku",
+            "ontology": "RCTV3"
         }
     },
     {
@@ -1083,7 +1273,8 @@
         "fields": {
             "name": "Air",
             "type": "environmental",
-            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C73434"
+            "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C73434",
+            "ontology": "NCIT"
         }
     },
     {
@@ -1091,7 +1282,9 @@
         "pk": 129,
         "fields": {
             "name": "Plant root",
-            "type": "environmental"
+            "type": "environmental",
+            "class": "http://purl.jp/bio/11/meo/MEO_0000386",
+            "ontology": "MEO"
         }
     },
     {
@@ -1099,7 +1292,9 @@
         "pk": 130,
         "fields": {
             "name": "Soil",
-            "type": "environmental"
+            "type": "environmental",
+            "class": "http://purl.obolibrary.org/obo/ENVO_00001998",
+            "ontology": "ENVO"
         }
     }
 ]
