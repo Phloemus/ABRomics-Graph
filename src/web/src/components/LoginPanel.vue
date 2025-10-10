@@ -34,6 +34,7 @@
             }
             return response.json()
         }).then((data) => {
+            console.log(data.token)
             if(data.token != undefined || data.token != "") {
                 isUserLoggedIn.value = true
                 userAuthToken.value = data.token
