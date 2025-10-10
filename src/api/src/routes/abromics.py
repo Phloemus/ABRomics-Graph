@@ -49,7 +49,11 @@ def getSampleSources():
 @app.route(f"/{API_BASEPATH}/sample-sources/popular", methods=[QUERIES[8]["method"]])
 def getPopularSampleSources():
     query = Query(QUERIES[8]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT)
-    return jsonify(query.executeQuery())
+    response = jsonify(query.executeQuery())
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
+
 
 
 #### Takes too much time, implement some caching mecanisms here ####
@@ -60,13 +64,19 @@ def getPopularSampleSources():
 def getMicroorgnismSpecies():
     query = Query(QUERIES[6]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT) ## All the bacteria species name
     query.exportQueryResult("cache/microorganisms/test.json") ## test for the cache feature 
-    return jsonify(query.executeQuery())
+    response = jsonify(query.executeQuery())
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
 
 
 @cross_origin()
 @app.route(f"/{API_BASEPATH}/hosts")
 def getHostSpecies():
     query = Query(QUERIES[7]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT) ## All the host species name
-    return jsonify(query.executeQuery())
+    response = jsonify(query.executeQuery())
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
 
 

@@ -44,6 +44,6 @@ config = {
 }
 
 app.config.from_mapping(config)
-## cors = CORS(app) 
+cors = CORS(app, resources={r"/*": {"origins": "*"}}) 
 cache = Cache(app)
 
