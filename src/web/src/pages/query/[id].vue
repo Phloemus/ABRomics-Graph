@@ -52,7 +52,7 @@
     <div>
         <p class="my-6 text-lg text-slate-700">{{ queries[queryId].description }}</p>
     </div>
-    <div>
+    <div class="my-10">
         <h2 class="text-xl text-slate-900 font-bold">Ontologies involved</h2>
         <div class="my-6 flex gap-4">
             <OntologyCard 
@@ -65,7 +65,7 @@
             />
         </div>
     </div>
-    <div class="mt-6 flex gap-6">
+    <div class="mt-8 flex gap-6">
         <div class="w-3/5">
             <h2 class="text-xl text-slate-900 font-bold">Query</h2>
             <div class="my-4 w-full bg-slate-800 rounded-md">
@@ -83,37 +83,32 @@
                     </code>
                 </div>
             </div>
-            <div>
-                <ActionButton
-                    content="Execute query"
-                    @click="fetchQueryResult(1)"
-                >
-                </ActionButton>
-            </div>
         </div>
         <div>
             <h2 class="text-xl text-slate-900 font-bold">Datasources</h2>
             <div class="my-4">
-                <div class="p-6 bg-slate-50 hover:bg-slate-100 rounded-md">
+                <div class="p-6 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer">
                     <h3 class="text-slate-900 text-lg font-semibold">ABRomics database</h3>
-                    <div class="my-6">
-                        <p class="my-4 text-slate-800">
-                            <b>ABRomics</b> is a national platform designed to monitor the spread of antibiotic resistance genes in <b>human</b>, <b>animal</b> and <b>environmental</b>
-                            reservoirs. 
-                        </p>
-                        <p class="my-4 text-slate-800">
-                            This database contains publicly available antibiotic resistance reports made on the <b>genomic sequences</b> uploaded my the user.
-                        </p>
-                    </div>
+                    <p class="my-4 text-slate-800">
+                        <b>ABRomics</b> is a national platform designed to monitor the spread of antibiotic resistance genes in <b>human</b>, <b>animal</b> and <b>environmental</b>
+                        reservoirs. 
+                    </p>
                     <NuxtLink to="https://analysis.abromics.fr/" class="text-sky-500 font-semibold hover:underline">https://analysis.abromics.fr/</NuxtLink>
                 </div>
             </div>
         </div>
     </div>
+    <div class="w-full">
+        <ActionButton
+            content="Execute query"
+            @click="fetchQueryResult(1)"
+        >
+        </ActionButton>
+    </div>
     <div v-show="isQueryPerformed" class="my-6">
         <div class="flex justify-between items-center">
             <h2 class="text-xl text-slate-900 font-bold">Query result</h2>
         </div>
-        <!-- <Table :data="queryResponse"/> -->
+        <Table :data="queryResponse"/>
     </div>
 </template>

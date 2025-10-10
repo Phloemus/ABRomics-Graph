@@ -13,6 +13,20 @@
                 "name": "Gene Ontology",
                 "description": "Provides structured controlled vocabularies for the annotation of gene products with..",
                 "bioportalUrl": "https://bioportal.bioontology.org/ontologies/GO"
+            },
+            {
+                "type": "omics",
+                "shortName": "GO",
+                "name": "Gene Ontology",
+                "description": "Provides structured controlled vocabularies for the annotation of gene products with..",
+                "bioportalUrl": "https://bioportal.bioontology.org/ontologies/GO"
+            },
+            {
+                "type": "omics",
+                "shortName": "GO",
+                "name": "Gene Ontology",
+                "description": "Provides structured controlled vocabularies for the annotation of gene products with..",
+                "bioportalUrl": "https://bioportal.bioontology.org/ontologies/GO"
             }
         ],
         "sparqlQuery": "q1-get-all-res-genes-for-specific-sample.sparql",
