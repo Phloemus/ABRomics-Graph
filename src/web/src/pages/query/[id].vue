@@ -93,6 +93,21 @@
         </div>
         <div>
             <h2 class="text-xl text-slate-900 font-bold">Datasources</h2>
+            <div class="my-4">
+                <div class="p-6 bg-slate-50 hover:bg-slate-100 rounded-md">
+                    <h3 class="text-slate-900 text-lg font-semibold">ABRomics database</h3>
+                    <div class="my-6">
+                        <p class="my-4 text-slate-800">
+                            <b>ABRomics</b> is a national platform designed to monitor the spread of antibiotic resistance genes in <b>human</b>, <b>animal</b> and <b>environmental</b>
+                            reservoirs. 
+                        </p>
+                        <p class="my-4 text-slate-800">
+                            This database contains publicly available antibiotic resistance reports made on the <b>genomic sequences</b> uploaded my the user.
+                        </p>
+                    </div>
+                    <NuxtLink to="https://analysis.abromics.fr/" class="text-sky-500 font-semibold hover:underline">https://analysis.abromics.fr/</NuxtLink>
+                </div>
+            </div>
         </div>
     </div>
     <div v-show="isQueryPerformed" class="my-6">
