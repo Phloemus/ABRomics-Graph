@@ -20,19 +20,35 @@
 
     var queryResponse = ref([])
     var isQueryPerformed = ref(false)
-    console.log(isQueryPerformed)
+    var isQueryError = ref(false)
+    var queryError = ref("")
 
     function fetchQueryResult(id) {
-        console.log(id)
         // Don't forget to change the port or the host in prod ;)
-        fetch(`http://localhost:5000/graph-api/${queries[queryId].apiLink}`).then(response => { 
+        fetch(`http://localhost:5000/graph-api/node/count`, 
+            {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }
+        ).then((response) => {
+            if(response.status != 200) {
+                isQueryError.value = true
+                queryError.value = response.json()
+                return
+            } else {
+                isQueryError.value = false
+            }
             return response.json()
         }).then((data) => {
-            console.log(data)
             queryResponse.value = data
             isQueryPerformed.value = true
+            console.log(data)
         }).catch(err => {
             console.error("Error fetching data: ", err)
+            isQueryError.value = true
+            queryError.value = err
         })
     }
 </script>
@@ -105,7 +121,10 @@
         >
         </ActionButton>
     </div>
-    <div v-show="isQueryPerformed" class="my-6">
+    <div v-if="isQueryError" class="mt-6 py-2 px-4 bg-red-200 text-red-500 rounded-md">
+        Error: {{ queryError }}
+    </div>
+    <div v-if="isQueryPerformed" class="my-6">
         <div class="flex justify-between items-center">
             <h2 class="text-xl text-slate-900 font-bold">Query result</h2>
         </div>
