@@ -1,0 +1,131 @@
+name,type,ontology,ontology url class
+Upper respiratory tract,human,UBERON,http://purl.obolibrary.org/obo/UBERON_0001557
+Intestine,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736
+Urethra,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12417
+Trachea,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428
+Urine,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283
+Bronchus,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12683
+Anterior Nares,human,SNOMEDCT,http://purl.bioontology.org/ontology/SNOMEDCT/697989009
+Tissue,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12801
+Tear,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33739
+Esophagus,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12389
+Breast Milk,human,ENVO,http://purl.obolibrary.org/obo/ENVO_02000031
+Inferior Nasal Turbinate,human,SNOMEDCT,http://purl.bioontology.org/ontology/SNOMEDCT/361932000
+Alveolar sac,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C32057
+Fluid (Pericardial),human,SNOMEDCT,http://purl.bioontology.org/ontology/SNOMEDCT/34429004
+Mucus,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13259
+Sinus,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33556
+Skin,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12470
+Rectum,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390
+Semen,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13277
+Pleural sac,human,UBERON,http://purl.obolibrary.org/obo/UBERON_0009778
+Sputum,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278
+Sweat,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13280
+Anus,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43362
+Nasal Cavity,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12424
+Duodenum,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12263
+Catheter,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C50344
+Blood,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434
+Cranial hair,human,UBERON,http://purl.obolibrary.org/obo/UBERON_1000001
+Oropharynx (OP),human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12762
+Fluid (Amniotic),human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13188
+Bone and joint,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12366
+Fluid (Vaginal),human,UBERON,http://purl.obolibrary.org/obo/UBERON_0036243
+Dialysis,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15221
+Ethmoid sinus,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12276
+Middle Nasal Turbinate,human,SNOMEDCT,http://purl.bioontology.org/ontology/SNOMEDCT/60962000
+Saliva,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13275
+Vagina,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12407
+Surgical site,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C164323
+Not Collected,human,OWL,http://www.w3.org/2002/07/owl#Thing
+Lower respiratory tract,human,UBERON,http://purl.obolibrary.org/obo/UBERON_0001558
+Feces,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234
+Nasopharynx (NP),human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12423
+Eye,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12401
+Prosthesis,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17598
+Fluid (Pleural),human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C77613
+Fluid (Cerebrospinal (CSF)),human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12692
+Bronchiole,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12684
+Pleural cavity,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12840
+Lung,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468
+Stomach,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12391
+Fluid,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25278
+Upper respiratory tract,animal,UBERON,http://purl.obolibrary.org/obo/UBERON_0001557
+Intestine,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736
+Urethra,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12417
+Trachea,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428
+Urine,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283
+Bronchus,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12683
+Anterior Nares,animal,SNOMEDCT,http://purl.bioontology.org/ontology/SNOMEDCT/697989009
+Tissue,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12801
+Tear,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33739
+Esophagus,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12389
+Breast Milk,animal,ENVO,http://purl.obolibrary.org/obo/ENVO_02000031
+Inferior Nasal Turbinate,animal,SNOMEDCT,http://purl.bioontology.org/ontology/SNOMEDCT/361932000
+Alveolar sac,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C32057
+Fluid (Pericardial),animal,SNOMEDCT,http://purl.bioontology.org/ontology/SNOMEDCT/34429004
+Mucus,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13259
+Sinus,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33556
+Skin,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12470
+Rectum,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390
+Semen,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13277
+Pleural sac,animal,UBERON,http://purl.obolibrary.org/obo/UBERON_0009778
+Sputum,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278
+Sweat,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13280
+Anus,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43362
+Nasal Cavity,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12424
+Duodenum,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12263
+Catheter,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C50344
+Blood,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434
+Cranial hair,animal,UBERON,http://purl.obolibrary.org/obo/UBERON_1000001
+Oropharynx (OP),animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12762
+Fluid (Amniotic),animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13188
+Bone and joint,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12366
+Fluid (Vaginal),animal,UBERON,http://purl.obolibrary.org/obo/UBERON_0036243
+Dialysis,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15221
+Ethmoid sinus,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12276
+Middle Nasal Turbinate,animal,SNOMEDCT,http://purl.bioontology.org/ontology/SNOMEDCT/60962000
+Saliva,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13275
+Vagina,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12407
+Surgical site,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C164323
+Not Collected,animal,OWL,http://www.w3.org/2002/07/owl#Thing
+Lower respiratory tract,animal,UBERON,http://purl.obolibrary.org/obo/UBERON_0001558
+Feces,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234
+Nasopharynx (NP),animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12423
+Eye,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12401
+Prosthesis,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17598
+Fluid (Pleural),animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C77613
+Fluid (Cerebrospinal (CSF)),animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12692
+Bronchiole,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12684
+Pleural cavity,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12840
+Lung,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468
+Stomach,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12391
+Fluid,animal,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25278
+Farm effluent,environmental,ENVO,http://purl.obolibrary.org/obo/ENVO_00002001
+Agricultural soil,environmental,ENVO,http://purl.obolibrary.org/obo/ENVO_00002259
+River water,environmental,ENVO,http://purl.obolibrary.org/obo/ENVO_01000599
+WWTP effluent,environmental,ENVO,http://purl.obolibrary.org/obo/ENVO_00002001
+Other,environmental,OWL,http://www.w3.org/2002/07/owl#Thing
+Hospital effluent,environmental,ENVO,http://purl.obolibrary.org/obo/ENVO_00002001
+Other,animal,OWL,http://www.w3.org/2002/07/owl#Thing
+Other,human,OWL,http://www.w3.org/2002/07/owl#Thing
+Not applicable,environmental,OWL,http://www.w3.org/2002/07/owl#Thing
+Feather,animal,UBERON,http://purl.obolibrary.org/obo/UBERON_0000022
+Pellet,animal,SNOMEDCT,http://purl.bioontology.org/ontology/SNOMEDCT/420768007
+Egg shells,animal,MESH,http://purl.bioontology.org/ontology/MESH/D004528
+Egg shells,environmental,MESH,http://purl.bioontology.org/ontology/MESH/D004528
+Nest,animal,ENVO,http://purl.obolibrary.org/obo/ENVO_00005805
+Nest,environmental,ENVO,http://purl.obolibrary.org/obo/ENVO_00005805
+Tracheal secretion,human,SNOMEDCT,http://purl.bioontology.org/ontology/SNOMEDCT/57741000052105
+Tracheal aspirate,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13347
+Wound,human,SNOMEDCT,http://purl.bioontology.org/ontology/SNOMEDCT/13924000
+Wound,animal,SNOMEDCT,http://purl.bioontology.org/ontology/SNOMEDCT/13924000
+Nasal swab,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132119
+Foot,human,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C32622
+Exudate tracheostoma,human,SNOMEDCT,http://purl.bioontology.org/ontology/SNOMEDCT/465998006
+Pulmonary abscess,human,SNOMEDCT,http://purl.bioontology.org/ontology/SNOMEDCT/128477000
+Pulmonary abscess,animal,SNOMEDCT,http://purl.bioontology.org/ontology/SNOMEDCT/128477000
+Ear swab,human,RCTV3,http://purl.bioontology.org/ontology/RCD/XaBku
+Air,environmental,NCIT,http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C73434
+Plant root,environmental,MEO,http://purl.jp/bio/11/meo/MEO_0000386
+Soil,environmental,ENVO,http://purl.obolibrary.org/obo/ENVO_00001998

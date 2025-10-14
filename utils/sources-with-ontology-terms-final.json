@@ -1175,6 +1175,8 @@
         "fields": {
             "name": "Tracheal secretion",
             "type": "human"
+            "class": "http://purl.bioontology.org/ontology/SNOMEDCT/57741000052105",
+            "ontology": "SNOMEDCT"
         }
     },
     {
