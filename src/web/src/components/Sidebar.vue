@@ -8,7 +8,7 @@
 </script>
 
 <template>
-    <div class="px-4 w-96 h-full block bg-white border-r border-slate-200 z-10">
+    <div class="px-4 w-96 h-screen block bg-white border-r border-slate-200 z-10">
             <div>
 
             </div>
