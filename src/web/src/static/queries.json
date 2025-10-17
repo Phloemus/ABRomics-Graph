@@ -30,7 +30,8 @@
             }
         ],
         "sparqlQuery": "q1-get-all-res-genes-for-specific-sample.sparql",
-        "apiLink": "node/count"
+        "method": "GET",
+        "apiLink": "res-genes/best"
     },
     {
         "id": 2,
@@ -49,6 +50,7 @@
             }
         ],
         "sparqlQuery": "q2-get-ktop-res-genes-for-given-metric-all-samples.sparql",
+        "method": "GET",
         "apiLink": ""
     }
 ]

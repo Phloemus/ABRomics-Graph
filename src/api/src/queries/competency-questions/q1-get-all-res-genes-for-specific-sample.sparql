@@ -16,7 +16,7 @@ SELECT ?sample ?gene ?gene_name WHERE {
    ?sample rdf:type sio:001050 ;
        schema:identifier "ARDIG32" .
 
-   ?gene rdf:type go:Gene ;
+   ?gene rdf:type ncit:C16612 ; ## gene
        rdfs:label ?gene_name .
 
    ?strain rdf:type aro:Strain ;

@@ -15,6 +15,7 @@
     const queryFilename = queries[queryId].sparqlQuery
     const ontologies = queries[queryId].ontologies
     const queryApiLink = `http://localhost:5000/graph-api/${queries[queryId].apiLink}`
+    const queryMethod = queries[queryId].method
 
     const queryHtml = await codeToHtml(query.content, { lang: 'sparql', theme: 'catppuccin-mocha', colorReplacements: { '#1e1e2e': '#1e293b' }})
 
@@ -25,9 +26,9 @@
 
     function fetchQueryResult(id) {
         // Don't forget to change the port or the host in prod ;)
-        fetch(`http://localhost:5000/graph-api/node/count`, 
+        fetch(queryApiLink, 
             {
-                method: "GET",
+                method: queryMethod,
                 headers: {
                     "Content-Type": "application/json"
                 }

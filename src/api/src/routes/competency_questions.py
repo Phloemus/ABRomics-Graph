@@ -19,18 +19,23 @@ from config.constants import *
 from utils.query import Query
 
 
-@cross_origin()
-@app.route(f"/{API_BASEPATH}/organ", methods=[QUERIES[3]["method"]])
-def listAvailableOrgansForSpecieName():
-    specieName = request.json["specie_name"]
-    query_parameters = [ {"string_to_replace": "Homo sapiens", "values": [specieName]} ]
-    return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[3]["filePath"], query_parameters))
+## Out dated
+#@cross_origin()
+#@app.route(f"/{API_BASEPATH}/organ", methods=[QUERIES[3]["method"]])
+#def listAvailableOrgansForSpecieName():
+#    specieName = request.json["specie_name"]
+#    query_parameters = [ {"string_to_replace": "Homo sapiens", "values": [specieName]} ]
+#    return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[3]["filePath"], query_parameters))
 
 ## Compentency questions
 @cross_origin()
-@app.route(f"/{API_BASEPATH}/get-ktop-antibiotic-res-genes", methods=[QUERIES[4]["method"]])
+@app.route(f"/{API_BASEPATH}/res-genes/best", methods=[QUERIES[4]["method"]])
 def getKTopAntibioticResGenes():
-    metric = request.json["metric"]
-    query_parameters = [ {"string_to_replace": "Gene Length", "values": [metric]} ]
-    return jsonify(executeQuery(SPARQL_ENDPOINT, QUERIES[4]["filePath"]))
+    metric = request.args.get('metric')
+    query = Query(QUERIES[4]["filePath"], SPARQL_ENDPOINT, parameters={"Gene Length": metric})
+
+    reponse = jsonify(query.executeQuery())
+    response.headers.add('Access-Control-Allow-Origin', '*')
+
+    return response
 
