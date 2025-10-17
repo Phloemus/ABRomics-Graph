@@ -52,7 +52,7 @@ QUERIES = [
     {
         "name": "get-ktop-antibiotic-res-genes",
         "route": f"{API_ENDPOINT}/res-genes/best",
-        "method": "POST",
+        "method": "GET",
         "filePath": "queries/q1-search-antibiotic-res-genes-all-sample.sparql",
         "description": """
             Get all the best antibiotic resistance genes for a given metric for all the samples
