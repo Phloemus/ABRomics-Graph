@@ -5,7 +5,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
-@prefix aro: <http://purl.obolibrary.org/obo/aro.owl#> .
+@prefix aro: <http://purl.obolibrary.org/obo/ARO_> .
 @prefix go: <http://purl.org/obo/owl/GO#> .
 @prefix uniprot: <http://purl.uniprot.org/uniprot/> .
 @prefix uniprot-core: <http://purl.uniprot.org/uniprot/core/> .
@@ -17,9 +17,14 @@
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
 ################################## Samples ####################################
+## 
+## For the sample type we just use the ABRomics sample type (human, enviornmental, animal)
+## A subclass of the aro:3004532 (strain source) could be used instead -> clinical (humans), 
+## environmental, agricultural (animals)
+
 
 {% for sample in samples %}
-    <abromics:{{ sample["id"] }}> rdf:type sosa:FeatureOfInterest, prov:Entity, sio:001050 ;
+    <abromics:{{ sample["id"] }}> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "{{ sample["originalSampleId"] }}" ;
         obo:RO_0002162 <{{ sample["microorganism"] }}> ;
         {% if sample["collectionDate"]|isDatetime %}
@@ -37,4 +42,5 @@
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "{{ sample["sequencingTechnology"] }}"  ] ;
         abromics:sequencingPartner "{{ sample["sequencingPartner"] }}" ;
         prov:wasAttributedTo <abromics:{{ sample["submitterId"] }}> . 
+
 {% endfor %}

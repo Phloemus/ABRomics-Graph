@@ -1,0 +1,19 @@
+PREFIX sf: <http://www.opengis.net/ont/sf#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX ex: <https://example.com>
+
+INSERT {
+   GRAPH <http://data.abromics.fr> {
+        ex:irsUn rdf:type geo:Feature ;
+            rdfs:label "IrsUN" ;
+            geo:hasGeometry ex:IrsUnGeometry .
+        ex:IrsUnGeometry rdf:type geo:Geometry ;
+            geo:asWKT "POINT (-1.547441 47.200211)"^^geo:wktLiteral .
+
+        ex:tower rdf:type geo:Feature ;
+            rdfs:label "Tour de Bretagne" ;
+            geo:hasGeometry ex:towerGeometry .
+        ex:towerGeometry rdf:type geo:Geometry ;
+            geo:asWKT "POINT (-1.557827 47.217411)"^^geo:wktLiteral .
+   }
+}

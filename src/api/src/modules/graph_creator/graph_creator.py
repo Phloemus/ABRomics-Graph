@@ -18,8 +18,9 @@ from dotenv import load_dotenv # to read the environment variables from the .env
 ## Creator module class
 class GraphCreator:
 
-    def __init__(self, reportDirectory = "", sparqlEndpoint = ""):
+    def __init__(self, reportDirectory = "", cacheDirectory = "", sparqlEndpoint = ""):
         self.reportDirectory = reportDirectory
+        self.cacheDirectory = cacheDirectory
         self.sparqlEndpoint = sparqlEndpoint
         self.allReports = []
 
@@ -41,6 +42,7 @@ class GraphCreator:
         self.regions = {}
         self.speciesTaxonomy = {}          # bind species with NCBI Taxon ontology terms
         self.sampleSourcesBindNCIT = {}    # bind sampleSources with NCIT terms
+        self.genesAroClasses = {}               # bind genes with ARO terms
 
         ## mappings help to track the link between entity from the reports and graph entities
         self.platformsMapping = {}
@@ -54,6 +56,9 @@ class GraphCreator:
 
         ## entities links
         self.samplesSubmitters = {}
+
+        ## many to many links
+        self.linksSamplesObservations = []
 
     ##### Private methods #####
 
@@ -86,7 +91,7 @@ class GraphCreator:
     def __curateReports(self):
         curatedReports = []
         for report in self.allReports:
-            if len(report["sections"][0]["data"][0]["values"]) < 11:
+            if "sections" not in report or len(report["sections"][0]["data"][0]["values"]) < 11:
                 continue
             curatedReports.append(report)
         self.allReports = curatedReports
@@ -145,7 +150,7 @@ class GraphCreator:
                 self.countries[item["countryName"]["value"]] = item["countryId"]["value"] ## All countries are in self.countries now !
                 self.__writeCacheToJson(self.countries, "cache/countries.json")
         else:
-            self.countries = self.__readJsonFromFile("cache/countries.json")
+            self.countries = self.__readJsonFromFile(f"{self.cacheDirectory}/countries.json")
 
 
     ## Get the regions from wikidata
@@ -203,6 +208,9 @@ class GraphCreator:
     ## The response of the query doesn't seems to be right ..
     ## All the issues to create the query and now with the issue that seems to be caused by the format of the query 
     ## could be solved by getting the NCIT ontology directly onto the virtuoso server
+    ## 
+    ## This feature should be completed with the addition of UBERON and ENVO (inspired by the query that get a good list 
+    ## of sample sources)
     def __getSampleSources(self):
         for report in self.allReports:
             if report["sections"][0]["data"][0]["values"][5] not in self.sampleSources:
@@ -288,6 +296,47 @@ class GraphCreator:
             taxon = item["taxon"]["value"].split("http://purl.uniprot.org/taxonomy/")[1] 
             self.speciesTaxonomy[item["speciesName"]["value"]] = taxon
 
+    ## Get the list of the aro classes used for the genes
+    ## warning : need a server with the aro ontology indexed accessible to perform the sparql query..
+    def __getAroClasses(self):
+        genesNames = ""
+        genesNamesList = []
+        for report in self.allReports:
+            for genesName in report["sections"][2]["data"][0]["values"][0] + report["sections"][2]["data"][1]["values"][0]:
+                if genesName not in genesNamesList:
+                    genesNames += f""""{genesName}" """
+                    genesNamesList.append(genesName)
+        sparql_query = f""" 
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX aro: <http://purl.obolibrary.org/obo/ARO_>
+            PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+            
+            SELECT ?class ?genesName
+            WHERE {{
+              VALUES ?genesName {{
+                  {genesNames}
+              }}
+              ?class rdfs:subClassOf+ aro:3000000 .
+              ?class rdfs:label ?label .
+              FILTER (lcase(str(?label)) = lcase(?genesName))
+            }}
+        """
+        print("Fetching ARO classes...")
+        print(sparql_query)
+        sparql = SPARQLWrapper("http://localhost:8081/sparql") ## This is in local : it's very baaad (but it has ARO indexed)
+        sparql.setReturnFormat(JSON)
+        sparql.setQuery(sparql_query)
+        try:
+            res = sparql.query().convert()
+            recs = res["results"]["bindings"]
+        except Exception as e:
+            print(e)
+        for item in recs:
+            self.genesAroClasses[item["genesName"]["value"]] = item["class"]["value"]
+            print(self.genesAroClasses)
+
+
+
     ## Add the plateforms (places where the workflows were performed)
     ############################################################################################################################################# REWORK THIS FUNCTION
     def __addProcedures(self):
@@ -352,6 +401,7 @@ class GraphCreator:
                 self.peopleMapping[name] = uniqueGraphId
 
     ## Add strains data to memory for graph creation
+    ## feature to check if there is already an identical strain is missing in this function
     def __addStrains(self):
         for report in self.allReports:
             uniqueGraphId = uuid.uuid1()
@@ -379,9 +429,15 @@ class GraphCreator:
                 if gene not in self.genesMapping.keys():
                     uniqueGraphId = uuid.uuid1()
                     label = gene
+                    if label in self.genesAroClasses:
+                        aroClass = self.genesAroClasses[label]
+                    else:
+                        aroClass = ""
+
                     self.genes.append({
                         "id": uniqueGraphId,
-                        "label": label
+                        "label": label, 
+                        "aroClass": aroClass
                     })
                     self.genesMapping[label] = uniqueGraphId
 
@@ -461,7 +517,8 @@ class GraphCreator:
 
                     self.observations.append({
                         "id": uniqueGraphId,
-                        "sample": sampleFeatureOfInterest,
+                        "sample": sampleFeatureOfInterest, ## legacy (no longer used but may be interesting with the changes in sosa ontolgy 
+                        "gene": geneFeatureOfInterest,
                         "observableProperty": observableProperty,
                         "sensor": sensor,
                         "procedure": procedure,
@@ -474,6 +531,17 @@ class GraphCreator:
                 observationHeaderId = observationHeaderId + 1
             observationHeaderId = 0
             reportId = reportId + 1
+
+
+    ## Add the links between the samples and the observations in a variable that will be used in 
+    ## the links_samples_observations.j2 jinja template
+    ## This function is very very inefficient.. but I had not enough time to make it efficient
+    def __addLinksSamplesObservations(self):
+        for observation in self.observations:
+            self.linksSamplesObservations.append({
+                "sample": observation["sample"],
+                "observation": observation["id"]
+            })
 
 
     ##### Public test methods #####
@@ -510,6 +578,7 @@ class GraphCreator:
 
         self.__getSpeciesTaxonomy()
         self.__getSampleSources()
+        self.__getAroClasses()
 
         ## Adding entity data in memory 
         self.__addPlatforms()
@@ -522,6 +591,9 @@ class GraphCreator:
         self.__addSamples()
         self.__addObservations()
 
+        ## Add many to many links
+        self.__addLinksSamplesObservations()
+
         ## Creating the turtle file
         self.__createTtlFile(f"{templatePath}graph-templates/platforms.j2", outputPath, "platforms", self.platforms) 
         self.__createTtlFile(f"{templatePath}graph-templates/sensors.j2", outputPath, "sensors", self.sensors) 
@@ -532,6 +604,7 @@ class GraphCreator:
         self.__createTtlFile(f"{templatePath}graph-templates/genes.j2", outputPath, "genes", self.genes)
         self.__createTtlFile(f"{templatePath}graph-templates/samples.j2", outputPath, "samples", self.samples, filterFunctions=[{"name": "isDatetime", "content": self.__isDatetime}])
         self.__createTtlFile(f"{templatePath}graph-templates/observations.j2", outputPath, "observations", self.observations, filterFunctions=[{"name": "isFloat", "content": self.__isFloat}])
+        self.__createTtlFile(f"{templatePath}graph-templates/links_samples_observations.j2", outputPath, "linksSamplesObservations", self.linksSamplesObservations)
 
         ## Try to create the abromics data graph 
         create_graph_query = "CREATE GRAPH <http://data.abromics.fr>"
