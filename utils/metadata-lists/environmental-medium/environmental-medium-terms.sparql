@@ -1,0 +1,6 @@
+PREFIX envo: <http://purl.obolibrary.org/obo/ENVO_>
+
+SELECT ?class ?className WHERE {
+   ?class rdfs:subClassOf+ envo:00010483 .
+   ?class rdfs:label ?className .
+}
