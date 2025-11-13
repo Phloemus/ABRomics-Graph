@@ -123,16 +123,6 @@
         "model": "",
         "pk": 13,
         "fields": {
-            "name": "concentration basin mediterranean sea biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000004",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 14,
-        "fields": {
             "name": "estuarine biome",
             "type": "environmental",
             "class": "http://purl.obolibrary.org/obo/ENVO_01000020",
@@ -141,7 +131,7 @@
     },
     {
         "model": "",
-        "pk": 15,
+        "pk": 14,
         "fields": {
             "name": "marine salt marsh biome",
             "type": "environmental",
@@ -151,7 +141,7 @@
     },
     {
         "model": "",
-        "pk": 16,
+        "pk": 15,
         "fields": {
             "name": "marine pelagic biome",
             "type": "environmental",
@@ -161,7 +151,7 @@
     },
     {
         "model": "",
-        "pk": 17,
+        "pk": 16,
         "fields": {
             "name": "marine benthic biome",
             "type": "environmental",
@@ -171,7 +161,7 @@
     },
     {
         "model": "",
-        "pk": 18,
+        "pk": 17,
         "fields": {
             "name": "marine neritic benthic zone biome",
             "type": "environmental",
@@ -181,7 +171,7 @@
     },
     {
         "model": "",
-        "pk": 19,
+        "pk": 18,
         "fields": {
             "name": "marine bathyal zone biome",
             "type": "environmental",
@@ -191,7 +181,7 @@
     },
     {
         "model": "",
-        "pk": 20,
+        "pk": 19,
         "fields": {
             "name": "marine abyssal zone biome",
             "type": "environmental",
@@ -201,7 +191,7 @@
     },
     {
         "model": "",
-        "pk": 21,
+        "pk": 20,
         "fields": {
             "name": "marine hadal zone biome",
             "type": "environmental",
@@ -211,7 +201,7 @@
     },
     {
         "model": "",
-        "pk": 22,
+        "pk": 21,
         "fields": {
             "name": "marine reef biome",
             "type": "environmental",
@@ -221,7 +211,7 @@
     },
     {
         "model": "",
-        "pk": 23,
+        "pk": 22,
         "fields": {
             "name": "marine hydrothermal vent biome",
             "type": "environmental",
@@ -231,7 +221,7 @@
     },
     {
         "model": "",
-        "pk": 24,
+        "pk": 23,
         "fields": {
             "name": "neritic pelagic zone biome",
             "type": "environmental",
@@ -241,7 +231,7 @@
     },
     {
         "model": "",
-        "pk": 25,
+        "pk": 24,
         "fields": {
             "name": "oceanic pelagic zone biome",
             "type": "environmental",
@@ -251,7 +241,7 @@
     },
     {
         "model": "",
-        "pk": 26,
+        "pk": 25,
         "fields": {
             "name": "oceanic sea surface microlayer biome",
             "type": "environmental",
@@ -261,7 +251,7 @@
     },
     {
         "model": "",
-        "pk": 27,
+        "pk": 26,
         "fields": {
             "name": "oceanic epipelagic zone biome",
             "type": "environmental",
@@ -271,7 +261,7 @@
     },
     {
         "model": "",
-        "pk": 28,
+        "pk": 27,
         "fields": {
             "name": "oceanic mesopelagic zone biome",
             "type": "environmental",
@@ -281,7 +271,7 @@
     },
     {
         "model": "",
-        "pk": 29,
+        "pk": 28,
         "fields": {
             "name": "oceanic bathypelagic zone biome",
             "type": "environmental",
@@ -291,7 +281,7 @@
     },
     {
         "model": "",
-        "pk": 30,
+        "pk": 29,
         "fields": {
             "name": "oceanic abyssopelagic zone biome",
             "type": "environmental",
@@ -301,7 +291,7 @@
     },
     {
         "model": "",
-        "pk": 31,
+        "pk": 30,
         "fields": {
             "name": "oceanic hadal pelagic zone biome",
             "type": "environmental",
@@ -311,7 +301,7 @@
     },
     {
         "model": "",
-        "pk": 32,
+        "pk": 31,
         "fields": {
             "name": "oceanic benthopelagic zone biome",
             "type": "environmental",
@@ -321,7 +311,7 @@
     },
     {
         "model": "",
-        "pk": 33,
+        "pk": 32,
         "fields": {
             "name": "neritic sea surface microlayer biome",
             "type": "environmental",
@@ -331,7 +321,7 @@
     },
     {
         "model": "",
-        "pk": 34,
+        "pk": 33,
         "fields": {
             "name": "neritic epipelagic zone biome",
             "type": "environmental",
@@ -341,7 +331,7 @@
     },
     {
         "model": "",
-        "pk": 35,
+        "pk": 34,
         "fields": {
             "name": "neritic mesopelagic zone biome",
             "type": "environmental",
@@ -351,7 +341,7 @@
     },
     {
         "model": "",
-        "pk": 36,
+        "pk": 35,
         "fields": {
             "name": "epeiric sea biome",
             "type": "environmental",
@@ -361,7 +351,7 @@
     },
     {
         "model": "",
-        "pk": 37,
+        "pk": 36,
         "fields": {
             "name": "marginal sea biome",
             "type": "environmental",
@@ -371,27 +361,17 @@
     },
     {
         "model": "",
+        "pk": 37,
+        "fields": {
+            "name": "mediterranean sea biome",
+            "type": "environmental",
+            "class": "http://purl.obolibrary.org/obo/ENVO_01000047",
+            "ontology": "ENVO"
+        }
+    },
+    {
+        "model": "",
         "pk": 38,
-        "fields": {
-            "name": "mediterranean sea biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000047",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 39,
-        "fields": {
-            "name": "mediterranean sea biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000047",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 40,
         "fields": {
             "name": "ocean biome",
             "type": "environmental",
@@ -401,7 +381,7 @@
     },
     {
         "model": "",
-        "pk": 41,
+        "pk": 39,
         "fields": {
             "name": "marine coral reef biome",
             "type": "environmental",
@@ -411,7 +391,7 @@
     },
     {
         "model": "",
-        "pk": 42,
+        "pk": 40,
         "fields": {
             "name": "marine subtidal rocky reef biome",
             "type": "environmental",
@@ -421,7 +401,7 @@
     },
     {
         "model": "",
-        "pk": 43,
+        "pk": 41,
         "fields": {
             "name": "marine black smoker biome",
             "type": "environmental",
@@ -431,7 +411,7 @@
     },
     {
         "model": "",
-        "pk": 44,
+        "pk": 42,
         "fields": {
             "name": "marine white smoker biome",
             "type": "environmental",
@@ -441,7 +421,7 @@
     },
     {
         "model": "",
-        "pk": 45,
+        "pk": 43,
         "fields": {
             "name": "marine ultramafic hydrothermal vent biome",
             "type": "environmental",
@@ -451,7 +431,7 @@
     },
     {
         "model": "",
-        "pk": 46,
+        "pk": 44,
         "fields": {
             "name": "marine basaltic hydrothermal vent biome",
             "type": "environmental",
@@ -461,7 +441,7 @@
     },
     {
         "model": "",
-        "pk": 47,
+        "pk": 45,
         "fields": {
             "name": "marine sponge reef biome",
             "type": "environmental",
@@ -471,7 +451,7 @@
     },
     {
         "model": "",
-        "pk": 48,
+        "pk": 46,
         "fields": {
             "name": "marine cold seep biome",
             "type": "environmental",
@@ -481,7 +461,7 @@
     },
     {
         "model": "",
-        "pk": 49,
+        "pk": 47,
         "fields": {
             "name": "dilution basin mediterranean sea biome",
             "type": "environmental",
@@ -491,17 +471,7 @@
     },
     {
         "model": "",
-        "pk": 50,
-        "fields": {
-            "name": "dilution basin mediterranean sea biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000128",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 51,
+        "pk": 48,
         "fields": {
             "name": "woodland biome",
             "type": "environmental",
@@ -511,7 +481,7 @@
     },
     {
         "model": "",
-        "pk": 52,
+        "pk": 49,
         "fields": {
             "name": "shrubland biome",
             "type": "environmental",
@@ -521,7 +491,7 @@
     },
     {
         "model": "",
-        "pk": 53,
+        "pk": 50,
         "fields": {
             "name": "savanna biome",
             "type": "environmental",
@@ -531,7 +501,7 @@
     },
     {
         "model": "",
-        "pk": 54,
+        "pk": 51,
         "fields": {
             "name": "tundra biome",
             "type": "environmental",
@@ -541,7 +511,7 @@
     },
     {
         "model": "",
-        "pk": 55,
+        "pk": 52,
         "fields": {
             "name": "mangrove biome",
             "type": "environmental",
@@ -551,67 +521,37 @@
     },
     {
         "model": "",
+        "pk": 53,
+        "fields": {
+            "name": "subtropical savanna biome",
+            "type": "environmental",
+            "class": "http://purl.obolibrary.org/obo/ENVO_01000187",
+            "ontology": "ENVO"
+        }
+    },
+    {
+        "model": "",
+        "pk": 54,
+        "fields": {
+            "name": "tropical savanna biome",
+            "type": "environmental",
+            "class": "http://purl.obolibrary.org/obo/ENVO_01000188",
+            "ontology": "ENVO"
+        }
+    },
+    {
+        "model": "",
+        "pk": 55,
+        "fields": {
+            "name": "temperate savanna biome",
+            "type": "environmental",
+            "class": "http://purl.obolibrary.org/obo/ENVO_01000189",
+            "ontology": "ENVO"
+        }
+    },
+    {
+        "model": "",
         "pk": 56,
-        "fields": {
-            "name": "subtropical savanna biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000187",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 57,
-        "fields": {
-            "name": "subtropical savanna biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000187",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 58,
-        "fields": {
-            "name": "tropical savanna biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000188",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 59,
-        "fields": {
-            "name": "tropical savanna biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000188",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 60,
-        "fields": {
-            "name": "temperate savanna biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000189",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 61,
-        "fields": {
-            "name": "temperate savanna biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000189",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 62,
         "fields": {
             "name": "flooded savanna biome",
             "type": "environmental",
@@ -621,147 +561,67 @@
     },
     {
         "model": "",
+        "pk": 57,
+        "fields": {
+            "name": "mediterranean woodland biome",
+            "type": "environmental",
+            "class": "http://purl.obolibrary.org/obo/ENVO_01000208",
+            "ontology": "ENVO"
+        }
+    },
+    {
+        "model": "",
+        "pk": 58,
+        "fields": {
+            "name": "subtropical shrubland biome",
+            "type": "environmental",
+            "class": "http://purl.obolibrary.org/obo/ENVO_01000213",
+            "ontology": "ENVO"
+        }
+    },
+    {
+        "model": "",
+        "pk": 59,
+        "fields": {
+            "name": "tropical shrubland biome",
+            "type": "environmental",
+            "class": "http://purl.obolibrary.org/obo/ENVO_01000214",
+            "ontology": "ENVO"
+        }
+    },
+    {
+        "model": "",
+        "pk": 60,
+        "fields": {
+            "name": "temperate shrubland biome",
+            "type": "environmental",
+            "class": "http://purl.obolibrary.org/obo/ENVO_01000215",
+            "ontology": "ENVO"
+        }
+    },
+    {
+        "model": "",
+        "pk": 61,
+        "fields": {
+            "name": "montane shrubland biome",
+            "type": "environmental",
+            "class": "http://purl.obolibrary.org/obo/ENVO_01000216",
+            "ontology": "ENVO"
+        }
+    },
+    {
+        "model": "",
+        "pk": 62,
+        "fields": {
+            "name": "mediterranean shrubland biome",
+            "type": "environmental",
+            "class": "http://purl.obolibrary.org/obo/ENVO_01000217",
+            "ontology": "ENVO"
+        }
+    },
+    {
+        "model": "",
         "pk": 63,
-        "fields": {
-            "name": "mediterranean woodland biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000208",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 64,
-        "fields": {
-            "name": "mediterranean woodland biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000208",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 65,
-        "fields": {
-            "name": "mediterranean woodland biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000208",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 66,
-        "fields": {
-            "name": "subtropical shrubland biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000213",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 67,
-        "fields": {
-            "name": "subtropical shrubland biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000213",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 68,
-        "fields": {
-            "name": "tropical shrubland biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000214",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 69,
-        "fields": {
-            "name": "tropical shrubland biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000214",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 70,
-        "fields": {
-            "name": "temperate shrubland biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000215",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 71,
-        "fields": {
-            "name": "temperate shrubland biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000215",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 72,
-        "fields": {
-            "name": "montane shrubland biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000216",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 73,
-        "fields": {
-            "name": "montane shrubland biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000216",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 74,
-        "fields": {
-            "name": "mediterranean shrubland biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000217",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 75,
-        "fields": {
-            "name": "mediterranean shrubland biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000217",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 76,
-        "fields": {
-            "name": "mediterranean shrubland biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000217",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 77,
         "fields": {
             "name": "xeric shrubland biome",
             "type": "environmental",
@@ -771,7 +631,7 @@
     },
     {
         "model": "",
-        "pk": 78,
+        "pk": 64,
         "fields": {
             "name": "anthropogenic terrestrial biome",
             "type": "environmental",
@@ -781,7 +641,7 @@
     },
     {
         "model": "",
-        "pk": 79,
+        "pk": 65,
         "fields": {
             "name": "tropical woodland biome",
             "type": "environmental",
@@ -791,17 +651,7 @@
     },
     {
         "model": "",
-        "pk": 80,
-        "fields": {
-            "name": "tropical woodland biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000220",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 81,
+        "pk": 66,
         "fields": {
             "name": "temperate woodland biome",
             "type": "environmental",
@@ -811,17 +661,7 @@
     },
     {
         "model": "",
-        "pk": 82,
-        "fields": {
-            "name": "temperate woodland biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000221",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 83,
+        "pk": 67,
         "fields": {
             "name": "subtropical woodland biome",
             "type": "environmental",
@@ -831,17 +671,7 @@
     },
     {
         "model": "",
-        "pk": 84,
-        "fields": {
-            "name": "subtropical woodland biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000222",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 85,
+        "pk": 68,
         "fields": {
             "name": "montane savanna biome",
             "type": "environmental",
@@ -851,17 +681,7 @@
     },
     {
         "model": "",
-        "pk": 86,
-        "fields": {
-            "name": "montane savanna biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000223",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 87,
+        "pk": 69,
         "fields": {
             "name": "mediterranean savanna biome",
             "type": "environmental",
@@ -871,27 +691,7 @@
     },
     {
         "model": "",
-        "pk": 88,
-        "fields": {
-            "name": "mediterranean savanna biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000229",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 89,
-        "fields": {
-            "name": "mediterranean savanna biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000229",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 90,
+        "pk": 70,
         "fields": {
             "name": "village biome",
             "type": "environmental",
@@ -901,7 +701,7 @@
     },
     {
         "model": "",
-        "pk": 91,
+        "pk": 71,
         "fields": {
             "name": "rangeland biome",
             "type": "environmental",
@@ -911,7 +711,7 @@
     },
     {
         "model": "",
-        "pk": 92,
+        "pk": 72,
         "fields": {
             "name": "dense settlement biome",
             "type": "environmental",
@@ -921,7 +721,7 @@
     },
     {
         "model": "",
-        "pk": 93,
+        "pk": 73,
         "fields": {
             "name": "urban biome",
             "type": "environmental",
@@ -931,7 +731,7 @@
     },
     {
         "model": "",
-        "pk": 94,
+        "pk": 74,
         "fields": {
             "name": "freshwater lake biome",
             "type": "environmental",
@@ -941,7 +741,7 @@
     },
     {
         "model": "",
-        "pk": 95,
+        "pk": 75,
         "fields": {
             "name": "freshwater river biome",
             "type": "environmental",
@@ -951,7 +751,7 @@
     },
     {
         "model": "",
-        "pk": 96,
+        "pk": 76,
         "fields": {
             "name": "polar biome",
             "type": "environmental",
@@ -961,7 +761,7 @@
     },
     {
         "model": "",
-        "pk": 97,
+        "pk": 77,
         "fields": {
             "name": "tropical marine coral reef biome",
             "type": "environmental",
@@ -971,17 +771,7 @@
     },
     {
         "model": "",
-        "pk": 98,
-        "fields": {
-            "name": "tropical marine coral reef biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000854",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 99,
+        "pk": 78,
         "fields": {
             "name": "temperate marginal sea biome",
             "type": "environmental",
@@ -991,17 +781,7 @@
     },
     {
         "model": "",
-        "pk": 100,
-        "fields": {
-            "name": "temperate marginal sea biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000856",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 101,
+        "pk": 79,
         "fields": {
             "name": "temperate mediterranean sea biome",
             "type": "environmental",
@@ -1011,17 +791,7 @@
     },
     {
         "model": "",
-        "pk": 102,
-        "fields": {
-            "name": "temperate mediterranean sea biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000857",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 103,
+        "pk": 80,
         "fields": {
             "name": "marine upwelling biome",
             "type": "environmental",
@@ -1031,7 +801,7 @@
     },
     {
         "model": "",
-        "pk": 104,
+        "pk": 81,
         "fields": {
             "name": "tropical marine upwelling biome",
             "type": "environmental",
@@ -1041,17 +811,7 @@
     },
     {
         "model": "",
-        "pk": 105,
-        "fields": {
-            "name": "tropical marine upwelling biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000859",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 106,
+        "pk": 82,
         "fields": {
             "name": "temperate marine upwelling biome",
             "type": "environmental",
@@ -1061,17 +821,7 @@
     },
     {
         "model": "",
-        "pk": 107,
-        "fields": {
-            "name": "temperate marine upwelling biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01000860",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 108,
+        "pk": 83,
         "fields": {
             "name": "tropical marginal sea biome",
             "type": "environmental",
@@ -1081,17 +831,7 @@
     },
     {
         "model": "",
-        "pk": 109,
-        "fields": {
-            "name": "tropical marginal sea biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01001230",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 110,
+        "pk": 84,
         "fields": {
             "name": "tidal mangrove shrubland",
             "type": "environmental",
@@ -1101,7 +841,7 @@
     },
     {
         "model": "",
-        "pk": 111,
+        "pk": 85,
         "fields": {
             "name": "alpine tundra biome",
             "type": "environmental",
@@ -1111,17 +851,7 @@
     },
     {
         "model": "",
-        "pk": 112,
-        "fields": {
-            "name": "alpine tundra biome",
-            "type": "environmental",
-            "class": "http://purl.obolibrary.org/obo/ENVO_01001505",
-            "ontology": "ENVO"
-        }
-    },
-    {
-        "model": "",
-        "pk": 113,
+        "pk": 86,
         "fields": {
             "name": "tropical biome",
             "type": "environmental",
@@ -1131,7 +861,7 @@
     },
     {
         "model": "",
-        "pk": 114,
+        "pk": 87,
         "fields": {
             "name": "temperate biome",
             "type": "environmental",
@@ -1141,7 +871,7 @@
     },
     {
         "model": "",
-        "pk": 115,
+        "pk": 88,
         "fields": {
             "name": "subtropical biome",
             "type": "environmental",
@@ -1151,7 +881,7 @@
     },
     {
         "model": "",
-        "pk": 116,
+        "pk": 89,
         "fields": {
             "name": "mediterranean biome",
             "type": "environmental",
@@ -1161,7 +891,7 @@
     },
     {
         "model": "",
-        "pk": 117,
+        "pk": 90,
         "fields": {
             "name": "subpolar biome",
             "type": "environmental",
@@ -1171,7 +901,7 @@
     },
     {
         "model": "",
-        "pk": 118,
+        "pk": 91,
         "fields": {
             "name": "alpine biome",
             "type": "environmental",
@@ -1181,7 +911,7 @@
     },
     {
         "model": "",
-        "pk": 119,
+        "pk": 92,
         "fields": {
             "name": "montane biome",
             "type": "environmental",
@@ -1191,7 +921,7 @@
     },
     {
         "model": "",
-        "pk": 120,
+        "pk": 93,
         "fields": {
             "name": "subalpine biome",
             "type": "environmental",
@@ -1201,7 +931,7 @@
     },
     {
         "model": "",
-        "pk": 121,
+        "pk": 94,
         "fields": {
             "name": "arid biome",
             "type": "environmental",
@@ -1211,162 +941,162 @@
     },
     {
         "model": "",
-        "pk": 122,
+        "pk": 95,
         "fields": {
             "name": "human microbiome",
             "type": "environmental",
             "class": "http://purl.obolibrary.org/obo/OHMI_0000002",
-            "ontology": "ENVO"
+            "ontology": "OHMI"
         }
     },
     {
         "model": "",
-        "pk": 123,
+        "pk": 96,
         "fields": {
             "name": "microbiome",
             "type": "environmental",
             "class": "http://purl.obolibrary.org/obo/OHMI_0000003",
-            "ontology": "ENVO"
+            "ontology": "OHMI"
         }
     },
     {
         "model": "",
-        "pk": 124,
+        "pk": 97,
         "fields": {
             "name": "mouse microbiome",
             "type": "environmental",
             "class": "http://purl.obolibrary.org/obo/OHMI_0000004",
-            "ontology": "ENVO"
+            "ontology": "OHMI"
         }
     },
     {
         "model": "",
-        "pk": 125,
+        "pk": 98,
         "fields": {
             "name": "bacterial microbiome",
             "type": "environmental",
             "class": "http://purl.obolibrary.org/obo/OHMI_0000005",
-            "ontology": "ENVO"
+            "ontology": "OHMI"
         }
     },
     {
         "model": "",
-        "pk": 126,
+        "pk": 99,
         "fields": {
             "name": "fungal microbiome",
             "type": "environmental",
             "class": "http://purl.obolibrary.org/obo/OHMI_0000006",
-            "ontology": "ENVO"
+            "ontology": "OHMI"
         }
     },
     {
         "model": "",
-        "pk": 127,
+        "pk": 100,
         "fields": {
             "name": "viral microbiome",
             "type": "environmental",
             "class": "http://purl.obolibrary.org/obo/OHMI_0000007",
-            "ontology": "ENVO"
+            "ontology": "OHMI"
         }
     },
     {
         "model": "",
-        "pk": 128,
+        "pk": 101,
         "fields": {
             "name": "fungal microbiome of skin",
             "type": "environmental",
             "class": "http://purl.obolibrary.org/obo/OHMI_0000008",
-            "ontology": "ENVO"
+            "ontology": "OHMI"
         }
     },
     {
         "model": "",
-        "pk": 129,
+        "pk": 102,
         "fields": {
             "name": "fungal microbiome of mucosal site",
             "type": "environmental",
             "class": "http://purl.obolibrary.org/obo/OHMI_0000009",
-            "ontology": "ENVO"
+            "ontology": "OHMI"
         }
     },
     {
         "model": "",
-        "pk": 130,
+        "pk": 103,
         "fields": {
             "name": "fungal microbiome of lung",
             "type": "environmental",
             "class": "http://purl.obolibrary.org/obo/OHMI_0000010",
-            "ontology": "ENVO"
+            "ontology": "OHMI"
         }
     },
     {
         "model": "",
-        "pk": 131,
+        "pk": 104,
         "fields": {
             "name": "microbiome in human lung",
             "type": "environmental",
             "class": "http://purl.obolibrary.org/obo/OHMI_0000013",
-            "ontology": "ENVO"
+            "ontology": "OHMI"
         }
     },
     {
         "model": "",
-        "pk": 132,
+        "pk": 105,
         "fields": {
             "name": "microbiome in human respiratory system",
             "type": "environmental",
             "class": "http://purl.obolibrary.org/obo/OHMI_0000014",
-            "ontology": "ENVO"
+            "ontology": "OHMI"
         }
     },
     {
         "model": "",
-        "pk": 133,
+        "pk": 106,
         "fields": {
             "name": "microbiome in human oral",
             "type": "environmental",
             "class": "http://purl.obolibrary.org/obo/OHMI_0000015",
-            "ontology": "ENVO"
+            "ontology": "OHMI"
         }
     },
     {
         "model": "",
-        "pk": 134,
+        "pk": 107,
         "fields": {
             "name": "microbiome in human gastrointestinal system",
             "type": "environmental",
             "class": "http://purl.obolibrary.org/obo/OHMI_0000016",
-            "ontology": "ENVO"
+            "ontology": "OHMI"
         }
     },
     {
         "model": "",
-        "pk": 135,
+        "pk": 108,
         "fields": {
             "name": "microbiome in human cutaneous system",
             "type": "environmental",
             "class": "http://purl.obolibrary.org/obo/OHMI_0000017",
-            "ontology": "ENVO"
+            "ontology": "OHMI"
         }
     },
     {
         "model": "",
-        "pk": 136,
+        "pk": 109,
         "fields": {
             "name": "microbiome in human urogenital system",
             "type": "environmental",
             "class": "http://purl.obolibrary.org/obo/OHMI_0000018",
-            "ontology": "ENVO"
+            "ontology": "OHMI"
         }
     },
     {
         "model": "",
-        "pk": 137,
+        "pk": 110,
         "fields": {
             "name": "human gut microbiome",
             "type": "environmental",
             "class": "http://purl.obolibrary.org/obo/OHMI_0000020",
-            "ontology": "ENVO"
+            "ontology": "OHMI"
         }
     }
 ]
