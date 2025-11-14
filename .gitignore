@@ -8,8 +8,8 @@ cache
 node_modules/
 .nuxt/
 
-src/graph/ontologies
-src/data
+src/graph/graph-data/*.owl
+src/graph/graph-data/*.obo
 
 */.env
 temp
