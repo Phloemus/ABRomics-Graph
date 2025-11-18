@@ -23,7 +23,9 @@ services:
     container_name: abromics-kg-graphdb
     volumes:
       - ./src/graph/graph-data:/root/graphdb-import ## data and ontologies used in the KG
-      - ./src/graph/graphdb.ttl:/opt/graphdb/home/conf ## config pour graphdb
+      - ./src/graph/graphdb.ttl:/opt/graphdb/home/conf/graphdb.ttl ## config pour graphdb
+      - ./src/graph/graphdb.properties:/opt/graphdb/dist/conf/graphdb.properties
+        # - ./src/graph/graphdb.ttl:/opt/graphdb/home/data/repositories/abromics-kg/graphdb.ttl
     ports:
       - 7200:7200
     networks:
