@@ -21,6 +21,6 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "shiki": "^3.2.1"
+    "shiki": "^3.17.0"
   }
 }

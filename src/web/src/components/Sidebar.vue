@@ -3,6 +3,9 @@
     import SmallCard from '../components/SmallCard.vue'
     import queries from '../static/queries.json'
 
+    const config = useRuntimeConfig();
+    const appName = config.public.appName
+
     const isUserLoggedIn = useState("isUserLoggedIn")
 
 </script>
@@ -13,8 +16,8 @@
             <div>
                 <div class="my-4 flex justify-between w-full items-center">
                     <div>
-                        <h2 class="text-slate-800 text-lg">ABRomicsKG</h2>
-                        <p class="my-0.5 text-slate-600 text-sm">Linking all microbiome data</p>
+                        <h2 class="text-slate-800 text-lg">{{ appName }}</h2>
+                        <p class="my-0.5 text-slate-600 text-sm">Linking microbiome data</p>
                     </div>
                     <div 
                         class="w-8 h-10 rounded-md cursor-pointer flex items-center"

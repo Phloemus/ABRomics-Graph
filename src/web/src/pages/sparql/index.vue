@@ -5,6 +5,10 @@
 
     import { codeToHtml } from 'shiki'
 
+    // Test code editor
+    const code = ref(`console.log("Hello from Shiki + CodeMirror!")`)
+
+
     const query = {content: "SELECT ?s ?p ?o WHERE {\n\t?s ?p ?o . \n}\nLIMIT 10"}
     const queryHtml = await codeToHtml(query.content, { lang: 'sparql', theme: 'catppuccin-mocha', colorReplacements: { '#1e1e2e': '#1e293b' }})
 
@@ -32,11 +36,14 @@
                             </div>
                         </div>
                         <div class="p-4 w-full bg-slate-800 rounded-b-md">
-                            <code>
-                                <div v-html="queryHtml"></div>
+                            <code class="w-full h-full relative">
+                                <div class="w-full h-full" v-html="queryHtml"></div>
+                                <textarea class="bg-red-500 w-max absolute top-0 left-0 z-10" v-model="query.content"></textarea>
                             </code>
                         </div>
                     </div>
+                </div>
+                <div>
                 </div>
     </div>
 </template>
