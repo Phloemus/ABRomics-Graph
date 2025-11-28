@@ -4,7 +4,7 @@
 </script>
 
 <template>
-    <div class="flex justify-between items-start">
+    <div class="p-8 flex justify-between items-start">
         <div>
             <h1 class="mb-10 text-3xl text-slate-900 font-bold">Welcome to ABRomics KG</h1>
             <p class="my-6 text-lg text-slate-700 leading-8">
@@ -17,6 +17,14 @@
             As experimental results, we show how this domain knowledge can be used to answer a specific expert question as well as increasing the FAIRness of antibiotic resistance data.
             </p> 
             <h2 class="mt-10 mb-6 text-xl text-slate-900 font-bold">Summary</h2>
+            <ul>
+                <li>Dataset</li>
+                <li>Knowledge graph structure</li>
+                <li>Execute demo queries</li>
+                <li>Count query</li>
+                <li>Antibiotic resistances by country</li>
+                <li>Antibiotic resistances in different timeframes</li>
+            </ul>
         </div>
     </div>
 </template>
