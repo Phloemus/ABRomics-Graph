@@ -30,7 +30,7 @@ if [ "$2" == "-o" ]; then
     exit 1
   fi
 
-  # Send the query to the Virtuoso SPARQL endpoint
+  # Send the query to the SPARQL endpoint
   RESPONSE=$(curl -s --data-urlencode "query=$SPARQL_QUERY" \
                 -H "Accept: application/sparql-results+json" \
                 $HOST)
@@ -49,7 +49,7 @@ if [ "$2" == "-o" ]; then
 else
   # Case no file is provided (display directly on the console)
 
-  # Send the query to the Virtuoso SPARQL endpoint
+  # Send the query to the SPARQL endpoint
   RESPONSE=$(curl -s --data-urlencode "query=$SPARQL_QUERY" \
                 -H "Accept: text/tab-separated-values" \
                 $HOST)
