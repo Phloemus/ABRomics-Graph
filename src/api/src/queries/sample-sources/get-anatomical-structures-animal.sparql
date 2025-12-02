@@ -34,3 +34,4 @@ SELECT DISTINCT ?class ?classLabel ?parentClass ?parentClassLabel (COUNT(?existi
   ?parentClass rdfs:label ?parentClassLabel .
 } GROUP BY ?class ?classLabel ?parentClass ?parentClassLabel
 ORDER BY DESC(?nbOccurences)
+
