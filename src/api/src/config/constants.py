@@ -11,9 +11,9 @@ QUERIES = [
         "name": "count-nodes",
         "route": f"{API_ENDPOINT}/node/count",
         "method": "GET",
-        "filePath": "queries/count-nodes-for-all-graphs.sparql",
+        "filePath": "queries/count.sparql",
         "description": """
-            Return the number of nodes for each graphs present in the virtuoso server. 
+            Return the number of nodes in the knowledge graph
         """,
         "parameters": {}
     },
