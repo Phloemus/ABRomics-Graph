@@ -1,0 +1,10 @@
+PREFIX envo: <http://purl.obolibrary.org/obo/ENVO_>
+
+SELECT DISTINCT ?class ?classLabel WHERE {
+      ?class rdfs:subClassOf+ envo:01000281 .
+      ?class rdfs:label ?classLabel .
+      MINUS {
+          ?class rdfs:subClassOf+ ?excluded .
+          VALUES ?excluded { envo:01000267 envo:01000543 } ## Atmoshere, Atmospheric layer
+      }
+}

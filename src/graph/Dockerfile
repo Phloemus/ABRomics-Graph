@@ -1,52 +1,6 @@
-FROM ubuntu:18.04
+FROM ontotext/graphdb:10.8.11
 
-# Set Virtuoso commit SHA to Virtuoso 7.2.6.1 release (2021-06-22)
-ENV VIRTUOSO_COMMIT 64663f91c657aec14bbdcef8b6e5c9b6ac89cb8b
+RUN mkdir /root/graphdb-import
+RUN mkdir -p /opt/graphdb/home/data/repositories/abromics-kg
 
-# Build virtuoso from source and clean up afterwards
-RUN apt-get update \
-        && apt-get install -y build-essential autotools-dev autoconf automake unzip wget net-tools libtool flex bison gperf gawk m4 libssl-dev libreadline-dev openssl crudini openssh-server \
-        # Workaround for #663
-        && apt-get install -y libssl1.0-dev \
-        ## The package that helps to listen to changes in a directory
-        && apt-get install -y inotify-tools \
-        && wget https://github.com/openlink/virtuoso-opensource/archive/${VIRTUOSO_COMMIT}.zip \
-        && unzip ${VIRTUOSO_COMMIT}.zip \
-        && rm ${VIRTUOSO_COMMIT}.zip \
-        && cd virtuoso-opensource-${VIRTUOSO_COMMIT} \
-        && ./autogen.sh \
-        && export CFLAGS="-O2 -m64" && ./configure --disable-bpel-vad --enable-conductor-vad --enable-fct-vad --disable-dbpedia-vad --disable-demo-vad --disable-isparql-vad --disable-ods-vad --disable-sparqldemo-vad --disable-syncml-vad --disable-tutorial-vad --with-readline --program-transform-name="s/isql/isql-v/" \
-        && make && make install \
-        && ln -s /usr/local/virtuoso-opensource/var/lib/virtuoso/ /var/lib/virtuoso \
-        && ln -s /var/lib/virtuoso/db /data \
-        && cd .. \
-        && rm -r /virtuoso-opensource-${VIRTUOSO_COMMIT} \
-        && apt remove --purge -y build-essential autotools-dev autoconf automake unzip wget net-tools libtool flex bison gperf gawk m4 libssl-dev libreadline-dev \
-        && apt autoremove -y \
-        && apt autoclean
-
-# Add Virtuoso bin to the PATH
-ENV PATH /usr/local/virtuoso-opensource/bin/:$PATH
-
-# Add Virtuoso config
-COPY virtuoso.ini /virtuoso.ini
-
-# Add dump_nquads_procedure
-COPY dump_nquads_procedure.sql /dump_nquads_procedure.sql
-
-# Add Virtuoso log cleaning script
-COPY clean-logs.sh /clean-logs.sh
-
-# Add the script that observes the data and ontologies directories and 
-# index the data in the graph automatically 
-# COPY dir-observer.sh /dir-observer.sh
-
-# Add startup script
-COPY virtuoso.sh /virtuoso.sh
-
-VOLUME /data
-WORKDIR /data
-EXPOSE 8890
-EXPOSE 1111
-
-CMD ["/bin/bash", "/virtuoso.sh"]
+ENV JAVA_OPTS="-Xms32g -Xmx62g -XX:+UseG1GC -XX:MaxGCPauseMillis=200"

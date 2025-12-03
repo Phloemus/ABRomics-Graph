@@ -8,5 +8,11 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "@nuxt/icon", "nuxt-shiki"],
   shiki: {
     bundleThemes: ["ayu-dark"]
+  },
+  runtimeConfig: {
+    public: {
+        appName: "ABRomicsKG",
+        sparqlEnpoint: "http://localhost:7200/repositories/abromics-kg"
+    }
   }
 })

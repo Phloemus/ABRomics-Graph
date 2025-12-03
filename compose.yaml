@@ -13,28 +13,19 @@ services:
       - ./src/nginx-config/nginx.conf.template:/etc/nginx/templates/nginx.conf.template:ro
       - ./src/web:/usr/share/nginx/html
     depends_on:
-      - virtuoso
+      - graphdb
       - api
     networks:
       - services
 
-  virtuoso:
+  graphdb:
     build: ./src/graph
-    container_name: abromics-kg-virtuoso
-    environment:
-      SPARQL_UPDATE: "true" 
-      DEFAULT_GRAPH: "http://data.abromics.fr"
-      ONTOLOGY_GRAPH: "http://ontologies.abromics.fr"
-      DATA_DIR: "/usr/local/virtuoso-opensource/share/virtuoso/vad/graph-instance"
-      ONTOLOGY_DIR: "/usr/local/virtuoso-opensource/share/virtuoso/vad/ontologies"
+    container_name: abromics-kg-graphdb
     volumes:
-      - ${VIRTUOSO_LOCAL_DATA_VOLUME_PATH}:/data
-      - ${VIRTUOSO_LOCAL_GRAPH_DATA_VOLUME_PATH}:/data/toLoad ## data of the kg 
-      - ${VIRTUOSO_LOCAL_ONTOLOGY_VOLUME_PATH}:/data/ontologies ## content of the ontologies used in the kg
-      - ./src/graph:/usr/local/virtuoso-opensource/share/virtuoso/vad ## Script for maintenance 
-        # - /dev/null:/usr/local/virtuoso-opensource/share/virtuoso/vad/old-data 
+      - ./src/graph/graph-data:/root/graphdb-import ## data and ontologies used in the KG
+      - ./src/graph/config.ttl:/opt/graphdb/home/data/repositories/abromics-kg/config.ttl ## config pour graphdb
     ports:
-      - 8890:8890
+      - 7200:7200
     networks:
       - services
       - graph
@@ -74,7 +65,7 @@ networks:
   services:
     name: abromics-kg-services-network
 
-  ## give access to the virtuoso data directly through the graph network
+  ## give access to the graphdb data directly through the graph network
   graph:
     name: abromics-kg-graph-network
 
