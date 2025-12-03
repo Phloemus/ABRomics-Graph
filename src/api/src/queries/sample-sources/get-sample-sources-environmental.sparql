@@ -1,9 +1,13 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX envo: <http://purl.obolibrary.org/obo/ENVO_>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 
-SELECT DISTINCT ?class ?classLabel ?parentClass ?parentClassLabel (COUNT(?existingSamples) as ?nbOccurences) WHERE {
+SELECT DISTINCT ?class ?classLabel ?parentClass ?parentClassLabel (COUNT(?existingSamples) as ?nbOccurences) 
+FROM <http://www.ontotext.com/explicit>
+WHERE {
 { 
-  SELECT ?class ?classLabel ?parentClass ?parentClassLabel ?existingSamples WHERE {
+  SELECT DISTINCT ?class ?classLabel ?parentClass ?parentClassLabel ?existingSamples
+  WHERE {
     ?class rdfs:label ?classLabel .
     ?class rdfs:subClassOf ?parentClass .
     ?parentClass rdfs:label ?parentClassLabel .
