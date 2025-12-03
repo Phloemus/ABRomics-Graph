@@ -7,6 +7,7 @@ cache
 */.venv
 node_modules/
 .nuxt/
+package-lock.json
 
 src/graph/graph-data/*.owl
 src/graph/graph-data/*.obo
