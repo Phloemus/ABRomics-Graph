@@ -6,6 +6,7 @@ PREFIX obom: <https://data.bioontology.org/metadata/obo/>
 PREFIX ro: <http://purl.obolibrary.org/obo/RO_>
 PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX sio: <http://semanticscience.org/resource/>
 
 ## Get all the anatomical structure from uberon and ncit excluding some categories 
 ## like all the subclasses of the micro anatomical structure and cell part classes 
@@ -13,25 +14,23 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 ##
 ## The count doesn't count all the samples it only counts one of them for 
 ## each sampleSource
-SELECT DISTINCT ?class ?classLabel ?parentClass ?parentClassLabel (COUNT(?existingSamples) as ?nbOccurences) WHERE {
+SELECT DISTINCT ?class ?classLabel ?parentClass ?parentClassLabel (COUNT(?existingSamples) as ?nbOccurences) 
+FROM <http://www.ontotext.com/explicit>
+WHERE {
    {
-    ?organs rdfs:subClassOf+ uberon:0000465 . 
-    ?organs rdfs:label ?organLabels .
-    BIND(?organs as ?class)
-    BIND(?organLabels as ?classLabel)
+    ?class rdfs:subClassOf+ uberon:0000465 .
   } UNION {
     ?class rdfs:subClassOf+ ncit:C12219 . ## ncit anatomical structure, system or substance
     MINUS {
       ?class rdfs:subClassOf+ ?excluded .
       VALUES ?excluded { ncit:C21599 ncit:C34070 } . ## Exclude micro anatomical structure and cell part
     }
-    ?class rdfs:label ?classLabels .
+  } UNION {
+    ?existingSamples rdf:type sio:001050 .
     ?existingSamples prov:wasDerivedFrom ?class .
-    BIND(?class as ?class)
-    BIND(?classLabels as ?classLabel)
   }
+ ?class rdfs:label ?classLabel .
   ?class rdfs:subClassOf ?parentClass .
   ?parentClass rdfs:label ?parentClassLabel .
-  
 } GROUP BY ?class ?classLabel ?parentClass ?parentClassLabel
 ORDER BY DESC(?nbOccurences)

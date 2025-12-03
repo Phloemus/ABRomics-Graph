@@ -7,20 +7,19 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
 PREFIX sio: <http://semanticscience.org/resource/>
 
-SELECT DISTINCT  ?class ?classLabel ?parentClass ?parentClassLabel (COUNT(?existingSamples) as ?nbOccurences) WHERE {
+SELECT DISTINCT  ?class ?classLabel ?parentClass ?parentClassLabel (COUNT(?existingSamples) as ?nbOccurences) 
+FROM <http://www.ontotext.com/explicit>
+WHERE {
   { 
     ?class rdfs:subClassOf+ uberon:0000465 . 
-    BIND(?class as ?class)
   } UNION {
     ?class rdfs:subClassOf+ envo:00000428 .
-    BIND(?class as ?class)
   } UNION {
      ?class rdfs:subClassOf+ ncit:C12219 . ## ncit anatomical structure, system or substance
     MINUS {
       ?class rdfs:subClassOf+ ?excluded .
       VALUES ?excluded { ncit:C21599 ncit:C34070 } . ## Exclude micro anatomical structure and cell part
     }
-    BIND(?class as ?class)
   } UNION {
     ?existingSamples rdf:type sio:001050 .
     ?existingSamples prov:wasDerivedFrom ?class .
