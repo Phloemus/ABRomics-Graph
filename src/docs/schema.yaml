@@ -1,0 +1,101 @@
+id: https://ibdb.org/ontology
+name: IBD-kg
+description: The knowledge graph of the Infammatory Bowel Disease
+prefixes:
+  sosa: http://www.w3.org/ns/sosa/
+  ncit: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus
+  linkml: https://w3id.org/linkml/
+imports:
+  - linkml:types
+
+classes:
+  UlcerativeColitis:
+    class_uri: ncit:UlcerativeColitis
+    is_a: InflammatoryBowelDisease
+    description: An inflammatory bowel disease involving the mucosal surface of the large intestine and rectum. It may present with an acute or slow onset and follows an intermittent or continuous course. Signs and symptoms include abdominal pain, diarrhea, fever, weight loss, and intestinal hemorrhage.
+
+  CrohnDisease:
+    class_uri: ncit:CrohnDisease
+    is_a: InflammatoryBowelDisease
+    description: A gastrointestinal disorder characterized by chronic inflammation involving all layers of the intestinal wall, noncaseating granulomas affecting the intestinal wall and regional lymph nodes, and transmural fibrosis. Crohn disease most commonly involves the terminal ileum; the colon is the second most common site of involvement.
+
+  InflammatoryBowelDisease:
+    class_uri: ncit:InflammatoryBowelDisease
+    description: A spectrum of small and large bowel inflammatory diseases of unknown etiology. It includes Crohn's disease, ulcerative colitis, and colitis of indeterminate type
+
+  HealthyControl:
+    class_uri: ncit:HealthyControl
+    is_a: HealthySubject
+    description: A healthy subject that is matched with an affected individual in a trial.
+
+  HealthySubject:
+    class_uri: ncit:HealthySubject
+    see_also: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus/HealthySubject
+    is_a: HumanStudySubject
+    description: An individual who is or becomes a participant in a research study and has no significant health-related issues. code#C49651
+
+  ClinicalStudySubject:
+    class_uri: ncit:ClinicalStudySubject
+    is_a: HumanStudySubject
+    description: A living person who is observed, analyzed, examined, investigated, experimented upon, and/or treated in the course of a clinical study. This includes studies where an investigator obtains identifiable private information or data through the intervention or interaction with the individual. code#C70668
+
+  HumanStudySubject:
+    class_uri: ncit:HumanStudySubject
+    description: A living individual about whom an investigator conducting research obtains data through intervention or interaction with the individual or through identifiable private information. code#C70665
+
+  Sample:
+    class_uri: sosa:ObservableProperty
+    description: Observable Property - An observable quality (property, characteristic) of a FeatureOfInterest
+    attributes:
+      isFeatureOfInterestOf:
+        slot_uri: sosa:isFeatureOfInterestOf
+        description: indicate the feature of the Sample that is observed during an observation
+        multivalued: true
+        range: Observation
+
+  Observation:
+    class_uri: sosa:Observation
+    description: Observation - Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with.
+    attributes:
+      resultTime:
+        slot_uri: sosa:resultTime
+        description: The result time is the instant of time when the Observation, Actuation or Sampling activity was completed
+        domain: Observation
+        range: integer ## xsd:dateTime # Not recognized by the system
+      phenomenonTime:
+        slot_uri: sosa:phenomenonTime
+        description: The time that the Result of an Observation, Actuation, or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an interval or an instant, or some other compound temporal entity [owl-time]
+        domain: Observation
+        range: integer ## time:TemporalEntity # Not recognized by the system
+      hasSimpleResult:
+        slot_uri: sosa:hasSimpleResult
+        description: The simple value of an Observation or Actuation.
+        domain: Observation
+        range: integer ## rdfs:Literal # Not recognized by the system
+      hasResult:
+        slot_uri: sosa:Result
+        description: The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property
+        range: Result
+    slot_usage:
+      observedProperty:
+        range: Sample
+        required: true
+
+  Result:
+    class_uri: sosa:Result
+    description: The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property.
+
+  Metagenome:
+    class_uri: sosa:FeatureOfInterest
+
+  s16:
+    class_uri: sosa:FeatureOfInterest
+
+  Serology:
+    class_uri: sosa:FeatureOfInterest
+
+  Metatranscriptomics:
+    class_uri: sosa:FeatureOfInterest
+
+  HostTranscriptome:
+    class_uri: sosa:FeatureOfInterest
