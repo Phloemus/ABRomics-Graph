@@ -1,4 +1,5 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix schema: <https://schema.org/> .
 @prefix abromics: <https://abromics.fr/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -18,10 +19,10 @@
 
     <b28e7bcc-4daf-11f0-b0a2-90658429fd42> rdf:type sosa:Procedure ;
         
-            sosa:isImplementedBy <b28e74f6-4daf-11f0-b0a2-90658429fd42> ; 
+            ssn:implementedBy <b28e74f6-4daf-11f0-b0a2-90658429fd42> ; 
         
-            sosa:isImplementedBy <b28e755a-4daf-11f0-b0a2-90658429fd42> ; 
+            ssn:implementedBy <b28e755a-4daf-11f0-b0a2-90658429fd42> ; 
         
-            sosa:isImplementedBy <b28e7668-4daf-11f0-b0a2-90658429fd42> ; 
+            ssn:implementedBy <b28e7668-4daf-11f0-b0a2-90658429fd42> ; 
         
         rdfs:label "workflow 1 (genomic)" .

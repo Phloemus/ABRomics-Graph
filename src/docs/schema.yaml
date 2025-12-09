@@ -1,14 +1,58 @@
-id: https://ibdb.org/ontology
-name: IBD-kg
-description: The knowledge graph of the Infammatory Bowel Disease
+id: https://10-54-3-233.gcp.glicid.fr
+name: ABRomicsKG
+description: An antimicrobial resistance knowledge graph
 prefixes:
+  abromics: https://abromics.fr/
   sosa: http://www.w3.org/ns/sosa/
+  ssn: http://www.w3.org/ns/ssn/
+  schema: https://schema.org/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  obo: http://purl.obolibrary.org/obo/
+  aro: http://purl.obolibrary.org/obo/ARO_
+  go: http://purl.org/obo/owl/GO#
+  uniprot: http://purl.uniprot.org/uniprot/
+  uniprot-core: http://purl.uniprot.org/uniprot/core/
+  geo: http://www.w3.org/2003/01/geo/wgs84_pos#
+  sio: http://semanticscience.org/resource/
+  skos: http://www.w3.org/2004/02/skos/core#
+  prov: http://www.w3.org/ns/prov#
+  foaf: http://xmlns.com/foaf/0.1/
+  wdt: http://www.wikidata.org/prop/direct/
   ncit: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus
+  ncbitaxon: http://purl.bioontology.org/ontology/NCBITAXON/
   linkml: https://w3id.org/linkml/
 imports:
   - linkml:types
 
 classes:
+  Sample:
+    class_uri: [ prov:Entity, sio:001050, sio:000000 ]
+    is_a: Sample
+    description: A sample containing some sort of biological material
+    attributes:
+      host:
+        slot_uri: uniprot-core:host
+        description: indicates the host specie the sample has been collected from. In the case of a sample collected in the environement, when there is no host specie, this field is should be ignored.
+        multivalued: true
+        range: CellularOrganisms
+      wasDerivedFrom:
+        slot_uri: prov:wasDerivedFrom
+        description: The physical biological object that has been collected in the sample. It can be an anatomical structure, like a certain organ or a physical object such as soil for environemental samples. 
+
+  CellularOrganism:
+    class_uri: ncbitaxon:131567
+    is_a: cellular organisms
+    description: A cellular organism as defined in the NCBI taxonomy. All the bacterias, archeas and eukaryotas are considered to be cellular organisms
+
+
+
+
+
+
+
+
   UlcerativeColitis:
     class_uri: ncit:UlcerativeColitis
     is_a: InflammatoryBowelDisease
