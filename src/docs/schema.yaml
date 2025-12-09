@@ -22,6 +22,8 @@ prefixes:
   wdt: http://www.wikidata.org/prop/direct/
   ncit: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus
   ncbitaxon: http://purl.bioontology.org/ontology/NCBITAXON/
+  envo: http://purl.obolibrary.org/obo/ENVO_
+  uberon: http://purl.obolibrary.org/obo/UBERON_
   linkml: https://w3id.org/linkml/
 imports:
   - linkml:types
@@ -39,12 +41,25 @@ classes:
         range: CellularOrganisms
       wasDerivedFrom:
         slot_uri: prov:wasDerivedFrom
-        description: The physical biological object that has been collected in the sample. It can be an anatomical structure, like a certain organ or a physical object such as soil for environemental samples. 
+        description: Indicates the physical biological object that has been collected in the sample. It can be an anatomical structure, like a certain organ or a physical object such as soil for environemental samples. 
+        multivalued: true
+        range: SampleSource
 
   CellularOrganism:
     class_uri: ncbitaxon:131567
     is_a: cellular organisms
     description: A cellular organism as defined in the NCBI taxonomy. All the bacterias, archeas and eukaryotas are considered to be cellular organisms
+
+  SampleSource:
+    class_uri: [ envo:00010483, uberon:0000465, ncit:C12434 ]
+    description: A physical biological object, like an organ or a physical object such as soil for environement samples.
+
+
+
+
+
+
+
 
 
 
