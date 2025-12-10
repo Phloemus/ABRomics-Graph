@@ -36,7 +36,7 @@ classes:
     attributes:
       host:
         slot_uri: uniprot-core:host
-        description: indicates the host specie the sample has been collected from. In the case of a sample collected in the environement, when there is no host specie, this field is should be ignored.
+        description: Indicates the host specie the sample has been collected from. In the case of a sample collected in the environement, when there is no host specie, this field is should be ignored.
         multivalued: true
         range: CellularOrganisms
       wasDerivedFrom:
@@ -44,117 +44,93 @@ classes:
         description: Indicates the physical biological object that has been collected in the sample. It can be an anatomical structure, like a certain organ or a physical object such as soil for environemental samples. 
         multivalued: true
         range: SampleSource
+      atLocation:
+        slot_uri: prov:atLocation
+        description: Indicates the region where the sample has been collected. It can be any sub class of wikidata region, including a specific country, state or any other wikidata geographical location.
+        multivalued: true
+        range: Region
+      wasAttributedTo: 
+        slot_uri: prov:wasAttributedTo
+        description: Indicates the sequencer used to observe the biological sample leading to the generation of the raw sequence files from the biological sample or indicates the person that collected the biological sample
+        multivalued: true
+        range: [ Sensor, foaf:Person, prov:Agent ]
+      inTaxon:
+        slot_uri: obo:RO_0002162
+        description: Indicates the taxons present in the sample.
+        multivalued: true
+        range: cellularOrganisms
+      generatedAtTime:
+        slot_uri: prov:generatedAtTime
+        description: Indicates the exact time and date when the sample has been collected
+        multivalued: false
+        range: xsd:dateTime
+      isSubjectOf:
+        slot_uri: sio:000629
+        description: Indicates the observations performed by a workflow on the biological samples' sequence files
+        multivalued: true
+        range: Observation
+      isPartOf:
+        slot_uri: sio:000068
+        description: Indicates the type of the sample
+        multivalued: false
+        range: SampleType
+
 
   CellularOrganism:
     class_uri: ncbitaxon:131567
-    is_a: cellular organisms
+    is_a: Cellular organisms
     description: A cellular organism as defined in the NCBI taxonomy. All the bacterias, archeas and eukaryotas are considered to be cellular organisms
 
   SampleSource:
     class_uri: [ envo:00010483, uberon:0000465, ncit:C12434 ]
     description: A physical biological object, like an organ or a physical object such as soil for environement samples.
 
+  Region:
+    class_uri: wdt:Q82794
+    is_a: Region
+    description: 2D or 3D defined space on something, mainly in terrestrial and astrophysics sciences. It is any sub class of a region as defined in wikidata such as a specific country, state or any other wikidata geographical location. 
+
+  Sensor:
+    class_uri: sosa:Sensor
+    is_a: Sensor
+    description: The sequencer instrument that was used to generate the sequencing files from the biological sample
+    attributes: 
+      label:
+        slot_uri: rdfs:label
+        description: A string that represents the name of sequencer used to generate the sequencing files from the biological sample
+        multivalued: false
+        range: xsd:string
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-  UlcerativeColitis:
-    class_uri: ncit:UlcerativeColitis
-    is_a: InflammatoryBowelDisease
-    description: An inflammatory bowel disease involving the mucosal surface of the large intestine and rectum. It may present with an acute or slow onset and follows an intermittent or continuous course. Signs and symptoms include abdominal pain, diarrhea, fever, weight loss, and intestinal hemorrhage.
-
-  CrohnDisease:
-    class_uri: ncit:CrohnDisease
-    is_a: InflammatoryBowelDisease
-    description: A gastrointestinal disorder characterized by chronic inflammation involving all layers of the intestinal wall, noncaseating granulomas affecting the intestinal wall and regional lymph nodes, and transmural fibrosis. Crohn disease most commonly involves the terminal ileum; the colon is the second most common site of involvement.
-
-  InflammatoryBowelDisease:
-    class_uri: ncit:InflammatoryBowelDisease
-    description: A spectrum of small and large bowel inflammatory diseases of unknown etiology. It includes Crohn's disease, ulcerative colitis, and colitis of indeterminate type
-
-  HealthyControl:
-    class_uri: ncit:HealthyControl
-    is_a: HealthySubject
-    description: A healthy subject that is matched with an affected individual in a trial.
-
-  HealthySubject:
-    class_uri: ncit:HealthySubject
-    see_also: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus/HealthySubject
-    is_a: HumanStudySubject
-    description: An individual who is or becomes a participant in a research study and has no significant health-related issues. code#C49651
-
-  ClinicalStudySubject:
-    class_uri: ncit:ClinicalStudySubject
-    is_a: HumanStudySubject
-    description: A living person who is observed, analyzed, examined, investigated, experimented upon, and/or treated in the course of a clinical study. This includes studies where an investigator obtains identifiable private information or data through the intervention or interaction with the individual. code#C70668
-
-  HumanStudySubject:
-    class_uri: ncit:HumanStudySubject
-    description: A living individual about whom an investigator conducting research obtains data through intervention or interaction with the individual or through identifiable private information. code#C70665
-
-  Sample:
-    class_uri: sosa:ObservableProperty
-    description: Observable Property - An observable quality (property, characteristic) of a FeatureOfInterest
+  SampleType:
+    class_uri: prov:Entity
+    is_a: Entity
+    description: The type of a sample is represented by a single string being "human", "animal" or "enviromnental"
     attributes:
-      isFeatureOfInterestOf:
-        slot_uri: sosa:isFeatureOfInterestOf
-        description: indicate the feature of the Sample that is observed during an observation
-        multivalued: true
-        range: Observation
+      label:
+        slot_uri: rdfs:label
+        description: A string that represents the type of sample ("human", "animal" or "environmental")
+        multivalued: false
+        range: xsd:string
 
   Observation:
-    class_uri: sosa:Observation
-    description: Observation - Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with.
+    class_uri: [ sosa:Observation, sio:000000 ]
+    is_a: Observation
+    description: An observation made by a workflow on the sequencing files of a biological sample. The observation is one measure among many made the workflow on the sequencing files. 
     attributes:
-      resultTime:
-        slot_uri: sosa:resultTime
-        description: The result time is the instant of time when the Observation, Actuation or Sampling activity was completed
-        domain: Observation
-        range: integer ## xsd:dateTime # Not recognized by the system
-      phenomenonTime:
-        slot_uri: sosa:phenomenonTime
-        description: The time that the Result of an Observation, Actuation, or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an interval or an instant, or some other compound temporal entity [owl-time]
-        domain: Observation
-        range: integer ## time:TemporalEntity # Not recognized by the system
-      hasSimpleResult:
-        slot_uri: sosa:hasSimpleResult
-        description: The simple value of an Observation or Actuation.
-        domain: Observation
-        range: integer ## rdfs:Literal # Not recognized by the system
-      hasResult:
-        slot_uri: sosa:Result
-        description: The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property
-        range: Result
-    slot_usage:
-      observedProperty:
+      isAbout:
+        slot_uri: sio:000332
+        description: Indicates that the observation has been made about a certain sample
+        multivalued: false
         range: Sample
-        required: true
+      observedProperty:
+        slot_uri: sosa:observedProperty
+        description: A property of interest measured by the workflow on the seqencing file. It answers to the questions "what is the metric that has been measured ?". An example of observed property can be the a gene identity % or a specific quality metric for instance
+        multivalued: false
+        range: ObservableProperty
+      ## Continue here
 
-  Result:
-    class_uri: sosa:Result
-    description: The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property.
 
-  Metagenome:
-    class_uri: sosa:FeatureOfInterest
-
-  s16:
-    class_uri: sosa:FeatureOfInterest
-
-  Serology:
-    class_uri: sosa:FeatureOfInterest
-
-  Metatranscriptomics:
-    class_uri: sosa:FeatureOfInterest
-
-  HostTranscriptome:
-    class_uri: sosa:FeatureOfInterest
+  ObservableProperty:
+    class_uri: sosa:ObservableProperty
+    ## Continue here
