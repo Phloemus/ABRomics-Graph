@@ -1,5 +1,5 @@
 
-*/__pycache__
+__pycache__
 */.virtual_ducuments
 */.ipynb_checkpoints
 cache
@@ -11,6 +11,9 @@ package-lock.json
 
 src/graph/graph-data/*.owl
 src/graph/graph-data/*.obo
+
+src/docs/src/*
+src/docs/md/*
 
 */.env
 temp
