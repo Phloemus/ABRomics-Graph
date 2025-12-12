@@ -15,7 +15,7 @@ if "IS_DEV" in os.environ and os.environ['IS_DEV'] == "false": ##? IS_DEV might 
     API_PORT = f"{os.environ['API_PORT']}"
     API_ENDPOINT = f"{os.environ['HTTP']}{os.environ['API_HOST']}:{os.environ['API_PORT']}"
     API_BASEPATH = f"{os.environ['API_BASEPATH']}"
-    SPARQL_ENDPOINT = f"{os.environ['GRAPH_SERVER_HOST']}/repositories/abromics-kg"
+    SPARQL_ENDPOINT = f"{os.environ['GRAPH_SERVER_HOST']}repositories/abromics-kg"
     ADMIN_USERNAME = f"{os.environ['API_ADMIN_USERNAME']}"
     ADMIN_PASSWORD = f"{os.environ['API_ADMIN_PASSWORD']}"
 else:    
