@@ -18,25 +18,12 @@ services:
     networks:
       - services
 
-        #  graphdb:
-        #    build: ./src/graph
-        #    container_name: abromics-kg-graphdb
-        #    volumes:
-        #      - ./src/graph/graph-data:/root/graphdb-import ## data and ontologies used in the KG
-        #      - ./src/graph/config.ttl:/opt/graphdb/home/data/repositories/abromics-kg/config.ttl ## config pour graphdb
-        #    ports:
-        #      - 7200:7200
-        #    networks:
-        #      - services
-        #      - graph
-        #
-
   graphdb:
     image: ontotext/graphdb:10.1.2
     container_name: abromics-kg-graphdb
     hostname: graphdb
     environment: 
-      GDB_JAVA_OPTS: -Dgraphdb.external-url=http://localhost:8081/graphdb/
+      GDB_JAVA_OPTS: -Dgraphdb.external-url=${HOST_URL}/graphdb/
     volumes:
       - ./src/graph/graph-data:/root/graphdb-import ## data and ontologies used in the KG
       - ./src/graph/config.ttl:/opt/graphdb/home/data/repositories/abromics-kg/config.ttl ## config pour graphdb
