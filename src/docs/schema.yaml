@@ -128,9 +128,36 @@ classes:
         description: A property of interest measured by the workflow on the seqencing file. It answers to the questions "what is the metric that has been measured ?". An example of observed property can be the a gene identity % or a specific quality metric for instance
         multivalued: false
         range: ObservableProperty
+      usedProcedure:
+        slot_uri: sosa:usedProcedure
+        description: A relation to link to a re-usable Procedure used in making an Observation
+        multivalued: false
+        range: Procedure
+      wasGeneratedBy:
+        slot_uri: prov:wasGeneratedBy
+        description: Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.
+        multivalued: false
+        range: Procedure
+      resultTime:
+        slot_uri: sosa:resultTime
+        description: The result time is the instant of time when the Observation was completed.
+        multivalued: false
+        range: xsd:dateTime
+      hasSimpleResult:
+        slot_uri: sosa:hasSimpleResult
+        description: The simple value of an Observation
+        multivalued: false
+        range: [ xsd:string, xsd:decimal ]
       ## Continue here
 
 
   ObservableProperty:
     class_uri: sosa:ObservableProperty
-    ## Continue here
+    is_a: ObservableProperty
+    description: An observable quality (property, characteristic) of a sosa:FeatureOfInterst
+
+  Procedure:
+    class_uri: sosa:Procedure
+    is_a: Procedure
+    description: A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible Results.
+
