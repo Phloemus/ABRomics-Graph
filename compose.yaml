@@ -67,6 +67,9 @@ services:
   docs:
     build: ./src/docs
     container_name: abromics-kg-docs-builder
+    volumes:
+      - ./src/docs/md:/md
+      - ./src/docs/src:/src
     networks:
       - services
 
