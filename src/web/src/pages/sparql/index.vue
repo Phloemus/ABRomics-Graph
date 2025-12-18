@@ -1,13 +1,56 @@
 <script setup>
 
-    import { ref } from 'vue'
     import { useRoute } from 'vue-router'
 
     import { codeToHtml } from 'shiki'
 
+    /******************* Test with the monaco editor + shiki them ************* */
+    import { onMounted, ref } from 'vue'
+    import { init } from 'modern-monaco'
+    import { createHighlighter } from 'shiki'
+    import { shikiToMonaco } from '@shikijs/monaco'
+    
+    const editor = ref(null)
+    let monacoInstance = null
+    let editorInstance = null
+    
+    onMounted(async () => {
+        monacoInstance = await init()
+
+        monacoInstance.editor.defineTheme('catppuccin-mocha-tweaked', {
+          base: 'vs-dark',
+          inherit: true,
+          rules: [],
+          colors: {
+            'editor.background': '#11111b', // darker mocha
+            'editor.selectionBackground': '#585b70',
+            'editorCursor.foreground': '#f5e0dc'
+          }
+        })
+
+        monacoInstance.editor.setTheme('catppuccin-mocha-tweaked')
+
+        const highlighter = await createHighlighter({
+          themes: ['catppuccin-mocha', 'vitesse-dark'],
+          langs: ['javascript', 'typescript', 'json', 'html', 'css', 'sparql']
+        })
+
+        shikiToMonaco(highlighter, monacoInstance)
+
+        editorInstance = monacoInstance.editor.create(editor.value, {
+          value: "SELECT ?s ?p ?o WHERE {\n\t?s ?p ?o . \n}\nLIMIT 10",
+          language: 'javascript',
+          theme: 'catppuccin-mocha',
+          automaticLayout: true,
+          minimap: { enabled: false },
+          fontSize: 15
+        })
+    })
+
+    /************************************************************************** */
+
     // Test code editor
     const code = ref(`console.log("Hello from Shiki + CodeMirror!")`)
-
 
     const query = {content: "SELECT ?s ?p ?o WHERE {\n\t?s ?p ?o . \n}\nLIMIT 10"}
     const queryHtml = await codeToHtml(query.content, { lang: 'sparql', theme: 'catppuccin-mocha', colorReplacements: { '#1e1e2e': '#1e293b' }})
@@ -20,6 +63,7 @@
     function fetchQueryResult(id) {
 
     }
+
 </script>
 
 <template>
@@ -44,6 +88,9 @@
                     </div>
                 </div>
                 <div>
-                </div>
+            </div>
+    </div>
+    <div>
+        <div ref="editor" class="w-full h-56"></div>
     </div>
 </template>

@@ -40,7 +40,7 @@
                 <div class="my-10 w-full relative">
                     <h3 class="mx-1 my-4 text-slate-600 text-lg">Quick actions</h3>
                     <div class="my-2 p-2 bg-slate-50 hover:bg-slate-100 text-slate-800 rounded-md hover:cursor-pointer">
-                        <NuxtLink to="/query/create" @click="toggleSidebar">
+                        <NuxtLink to="/sparql" @click="toggleSidebar">
                             <p>
                                 Perform a query
                             </p>
