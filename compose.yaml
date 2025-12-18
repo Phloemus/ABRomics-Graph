@@ -11,10 +11,11 @@ services:
     volumes:
       - ./src/nginx-config/${NGINX_CONF_FILE}:/etc/nginx/nginx.conf
       - ./src/nginx-config/nginx.conf.template:/etc/nginx/templates/nginx.conf.template:ro
-      - ./src/web:/usr/share/nginx/html
+      - ./src/docs/src:/usr/share/nginx/html/docs
     depends_on:
       - graphdb
       - api
+      - docs
     networks:
       - services
 
@@ -60,6 +61,12 @@ services:
     container_name: abromics-kg-web
     ports:
       - 3001:3000
+    networks:
+      - services
+
+  docs:
+    build: ./src/docs
+    container_name: abromics-kg-docs-builder
     networks:
       - services
 

@@ -5,6 +5,10 @@
 <template>
     <div class="p-8 flex justify-between items-start">
         <div>
+            <div class="mb-8 p-4 w-full bg-sky-100 rounded-md flex justify-between">
+                <p class="text-sky-500 text-md font-medium">Check the full graph schema documentation</p>
+                <a class="text-sky-500 text-md font-medium hover:underline" href="docs/">Go to docs</a>
+            </div>
             <h1 class="mb-10 text-3xl text-slate-900 font-bold">Welcome to ABRomics KG</h1>
             <p class="my-6 text-lg text-slate-700 leading-8">
                 Understanding how antibiotic resistance genes spread is essential for protecting human, animal, and environmental health. It requires collaboration across multiple fields and expertise under One Health initiatives, emphasizing the pressing need to consolidate diverse antibiotic data from human, animal, and environmental samples. 

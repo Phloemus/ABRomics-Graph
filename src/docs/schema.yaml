@@ -1,0 +1,190 @@
+id: https://10-54-3-233.gcp.glicid.fr
+name: ABRomicsKG
+description: An antimicrobial resistance knowledge graph
+prefixes:
+  abromics: https://abromics.fr/
+  sosa: http://www.w3.org/ns/sosa/
+  ssn: http://www.w3.org/ns/ssn/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  xsd: http://www.w3.org/2001/XMLSchema#
+  obo: http://purl.obolibrary.org/obo/
+  aro: http://purl.obolibrary.org/obo/ARO_
+  go: http://purl.org/obo/owl/GO#
+  uniprot: http://purl.uniprot.org/uniprot/
+  uniprot-core: http://purl.uniprot.org/uniprot/core/
+  geo: http://www.w3.org/2003/01/geo/wgs84_pos#
+  sio: http://semanticscience.org/resource/
+  skos: http://www.w3.org/2004/02/skos/core#
+  prov: http://www.w3.org/ns/prov#
+  foaf: http://xmlns.com/foaf/0.1/
+  wdt: http://www.wikidata.org/prop/direct/
+  ncit: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus
+  ncbitaxon: http://purl.bioontology.org/ontology/NCBITAXON/
+  envo: http://purl.obolibrary.org/obo/ENVO_
+  uberon: http://purl.obolibrary.org/obo/UBERON_
+  linkml: https://w3id.org/linkml/
+imports:
+  - linkml:types
+
+classes:
+  Sample:
+    class_uri: sio:001050
+    exact_mappings:
+      - prov:Entity
+      - sio:000000
+    description: A sample containing some sort of biological material
+    attributes:
+      host:
+        slot_uri: uniprot-core:host
+        description: Indicates the host specie the sample has been collected from. In the case of a sample collected in the environement, when there is no host specie, this field is should be ignored.
+        multivalued: true
+        range: CellularOrganism
+      wasDerivedFrom:
+        slot_uri: prov:wasDerivedFrom
+        description: Indicates the physical biological object that has been collected in the sample. It can be an anatomical structure, like a certain organ or a physical object such as soil for environemental samples. 
+        multivalued: true
+        range: SampleSource
+      atLocation:
+        slot_uri: prov:atLocation
+        description: Indicates the region where the sample has been collected. It can be any sub class of wikidata region, including a specific country, state or any other wikidata geographical location.
+        multivalued: true
+        range: Region
+      wasAttributedTo: 
+        slot_uri: prov:wasAttributedTo
+        description: Indicates the sequencer used to observe the biological sample leading to the generation of the raw sequence files from the biological sample or indicates the person that collected the biological sample
+        multivalued: true
+        exactly_one_of:
+          - range: Sensor
+        any_of: 
+          - range: Person
+          - range: Agent
+      inTaxon:
+        slot_uri: obo:RO_0002162
+        description: Indicates the taxons present in the sample.
+        multivalued: true
+        range: CellularOrganism
+      generatedAtTime: 
+        slot_uri: prov:generatedAtTime
+        description: Indicates the exact time and date when the sample has been collected
+        multivalued: false
+        range: datetime 
+      isSubjectOf:
+        slot_uri: sio:000629
+        description: Indicates the observations performed by a workflow on the biological samples' sequence files
+        multivalued: true
+        range: Observation
+      isPartOf:
+        slot_uri: sio:000068
+        description: Indicates the type of the sample
+        multivalued: false
+        range: SampleType
+
+
+  CellularOrganism:
+    class_uri: ncbitaxon:131567
+    description: A cellular organism as defined in the NCBI taxonomy. All the bacterias, archeas and eukaryotas are considered to be cellular organisms
+
+  SampleSource:
+    union_of: ## The different possible class selectable for Sample Source are not visible in the html documentation
+      - envo:00010483
+      - uberon:0000465
+      - ncit:C12434
+    description: A physical biological object, like an organ or a physical object such as soil for environement samples.
+
+  Region:
+    class_uri: wdt:Q82794
+    description: 2D or 3D defined space on something, mainly in terrestrial and astrophysics sciences. It is any sub class of a region as defined in wikidata such as a specific country, state or any other wikidata geographical location. 
+
+  Sensor:
+    class_uri: sosa:Sensor
+    description: The sequencer instrument that was used to generate the sequencing files from the biological sample
+    attributes: 
+      label:
+        slot_uri: rdfs:label
+        description: A string that represents the name of sequencer used to generate the sequencing files from the biological sample
+        multivalued: false
+        range: xsd:string
+
+  Observation:
+    class_uri: sosa:Observation
+    related_mappings: sio:000000
+    description: An observation made by a workflow on the sequencing files of a biological sample. The observation is one measure among many made the workflow on the sequencing files. 
+    attributes:
+      isAbout:
+        slot_uri: sio:000332
+        description: Indicates that the observation has been made about a certain sample
+        multivalued: false
+        range: Sample
+      observedProperty:
+        slot_uri: sosa:observedProperty
+        description: A property of interest measured by the workflow on the seqencing file. It answers to the questions "what is the metric that has been measured ?". An example of observed property can be the a gene identity % or a specific quality metric for instance
+        multivalued: false
+        range: ObservableProperty
+      usedProcedure:
+        slot_uri: sosa:usedProcedure
+        description: A relation to link to a re-usable Procedure used in making an Observation
+        multivalued: false
+        range: Procedure
+      wasGeneratedBy:
+        slot_uri: prov:wasGeneratedBy
+        description: Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.
+        multivalued: false
+        range: Procedure
+      resultTime:
+        slot_uri: sosa:resultTime
+        description: The result time is the instant of time when the Observation was completed.
+        multivalued: false
+        range: datetime 
+      hasSimpleResult:
+        slot_uri: sosa:hasSimpleResult
+        description: The simple value of an Observation
+        multivalued: false
+        exactly_one_of: 
+          - range: xsd:string
+          - range: xsd:decimal ## This is not displayed in the doc
+      hasFeatureOfInterest:
+        slot_uri: sosa:hasFeatureOfInterest
+        description:  A relation between an Observation and the entity whose quality was observed
+        multivalued: false
+        range: Gene
+
+
+  ObservableProperty:
+    class_uri: sosa:ObservableProperty
+    description: An observable quality (property, characteristic) of a sosa:FeatureOfInterst
+
+  Procedure:
+    class_uri: sosa:Procedure
+    description: A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible Results.
+
+  Gene:
+    class_uri: ncit:C16612
+    close_mappings: aro:3000000
+    related_mappings: sosa:FeatureOfInterest
+    description: A functional unit of heredity which occupies a specific position on a particular chromosome and serves as the template for a product that contributes to a phenotype or a biological function
+    attributes:
+      label:
+        slot_uri: rdfs:label
+        description: The name of the gene
+        multivalued: false
+        range: xsd:string ## Makes the mermaid graph not generating
+
+  Person:
+    class_uri: foaf:Person
+
+  Agent:
+    class_uri: prov:Agent
+    description: An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. 
+
+
+enums:
+  SampleType:
+    enum_uri: xsd:string
+    permissible_values:
+      environmental:
+        description: indicates that the sample has been collected on the environment and not on an animal nor an human sample.
+      human:
+        description: indicates that the sample has been collected on a human, a part of a human or something secreted by a human.
+      animal:
+        description: indicates that the sample has been collected on an animal, a part of an animal or something secreted by an animal.
