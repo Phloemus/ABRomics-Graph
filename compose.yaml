@@ -24,7 +24,7 @@ services:
     container_name: abromics-kg-graphdb
     hostname: graphdb
     environment: 
-      GDB_JAVA_OPTS: -Dgraphdb.external-url=${HOST_URL}/graphdb/
+      GDB_JAVA_OPTS: -Dgraphdb.external-url=${HOST_URL}/graphdb/ -Dgraphdb.workbench.cors.enable=true -Dgraphdb.workbench.cors.origin=*
     volumes:
       - ./src/graph/graph-data:/root/graphdb-import ## data and ontologies used in the KG
       - ./src/graph/config.ttl:/opt/graphdb/home/data/repositories/abromics-kg/config.ttl ## config pour graphdb

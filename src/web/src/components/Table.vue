@@ -3,6 +3,7 @@
     const props = defineProps({
         data: Array,
     })
+    console.log(props) // probably need to wrap the results from the graphdb direct query with an object containing the key data
     console.log(props.data)
 
     const columns = Object.keys(props.data[0])

@@ -51,19 +51,18 @@
     })
 
     function fetchQueryResult(id) {
-        console.log(editorInstance.getValue())
         // Don't forget to change the port or the host in prod ;)
         const uri = encodeURI("http://localhost:7200/repositories/abromics-kg?query=" + editorInstance.getValue())
-        console.log(uri)
         fetch(uri,
             {
-                method: "POST",
+                method: "GET",
                 headers: {
-                    "Content-Type": "application/json",
-                },
-                mode: 'no-cors'
+                    'Content-Type': 'application/sparql-query',
+                    'Accept': 'application/sparql-results+json'
+                }
             }
         ).then((response) => {
+            console.log(response)
             if(response.status != 200) {
                 isQueryError.value = true
                 queryError.value = response.json()
@@ -73,11 +72,11 @@
             }
             return response.json()
         }).then((data) => {
-            queryResponse.value = data
+            queryResponse.value = data.results.bindings
             isQueryPerformed.value = true
             console.log(data)
         }).catch(err => {
-            console.error("Error fetching data: ", err)
+            console.error("Error while processing response: ", err)
             isQueryError.value = true
             queryError.value = err
         })
