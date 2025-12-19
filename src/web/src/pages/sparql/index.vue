@@ -2,9 +2,9 @@
 
     import { useRoute } from 'vue-router'
 
-    import { codeToHtml } from 'shiki'
+    import ActionButton from "../../components/ActionButton.vue"
+    import Table from "../../components/Table.vue"
 
-    /******************* Test with the monaco editor + shiki them ************* */
     import { onMounted, ref } from 'vue'
     import { init } from 'modern-monaco'
     import { createHighlighter } from 'shiki'
@@ -13,32 +13,35 @@
     const editor = ref(null)
     let monacoInstance = null
     let editorInstance = null
+
+    var queryResponse = ref([])
+    var isQueryPerformed = ref(false)
+    var isQueryError = ref(false)
+    var queryError = ref("")
     
     onMounted(async () => {
         monacoInstance = await init()
 
-        monacoInstance.editor.defineTheme('catppuccin-mocha-tweaked', {
+        const highlighter = await createHighlighter({
+          themes: ['vitesse-dark', 'catppuccin-mocha'],
+          langs: ['sparql']
+        })
+
+        shikiToMonaco(highlighter, monacoInstance)
+
+        monacoInstance.editor.defineTheme('catppuccin-mocha', {
           base: 'vs-dark',
           inherit: true,
           rules: [],
           colors: {
-            'editor.background': '#11111b', // darker mocha
+            'editor.background': '#1e293b',
             'editor.selectionBackground': '#585b70',
             'editorCursor.foreground': '#f5e0dc'
           }
         })
 
-        monacoInstance.editor.setTheme('catppuccin-mocha-tweaked')
-
-        const highlighter = await createHighlighter({
-          themes: ['catppuccin-mocha', 'vitesse-dark'],
-          langs: ['javascript', 'typescript', 'json', 'html', 'css', 'sparql']
-        })
-
-        shikiToMonaco(highlighter, monacoInstance)
-
         editorInstance = monacoInstance.editor.create(editor.value, {
-          value: "SELECT ?s ?p ?o WHERE {\n\t?s ?p ?o . \n}\nLIMIT 10",
+          value: "SELECT (COUNT(*) AS ?count) WHERE {\n\t?s ?p ?o .\n}",
           language: 'javascript',
           theme: 'catppuccin-mocha',
           automaticLayout: true,
@@ -47,27 +50,43 @@
         })
     })
 
-    /************************************************************************** */
-
-    // Test code editor
-    const code = ref(`console.log("Hello from Shiki + CodeMirror!")`)
-
-    const query = {content: "SELECT ?s ?p ?o WHERE {\n\t?s ?p ?o . \n}\nLIMIT 10"}
-    const queryHtml = await codeToHtml(query.content, { lang: 'sparql', theme: 'catppuccin-mocha', colorReplacements: { '#1e1e2e': '#1e293b' }})
-
-    var queryResponse = ref([])
-    var isQueryPerformed = ref(false)
-    var isQueryError = ref(false)
-    var queryError = ref("")
-
     function fetchQueryResult(id) {
-
+        console.log(editorInstance.getValue())
+        // Don't forget to change the port or the host in prod ;)
+        const uri = encodeURI("http://localhost:7200/repositories/abromics-kg?query=" + editorInstance.getValue())
+        console.log(uri)
+        fetch(uri,
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                mode: 'no-cors'
+            }
+        ).then((response) => {
+            if(response.status != 200) {
+                isQueryError.value = true
+                queryError.value = response.json()
+                return
+            } else {
+                isQueryError.value = false
+            }
+            return response.json()
+        }).then((data) => {
+            queryResponse.value = data
+            isQueryPerformed.value = true
+            console.log(data)
+        }).catch(err => {
+            console.error("Error fetching data: ", err)
+            isQueryError.value = true
+            queryError.value = err
+        })
     }
 
 </script>
 
 <template>
-    <div class="px-8 py-4 flex justify-between items-start">
+    <div class="flex justify-between items-start">
                 <div class="w-full">
                     <h2 class="text-xl text-slate-900 font-bold">Query</h2>
                     <div class="my-4 w-full bg-slate-800 rounded-md">
@@ -79,10 +98,9 @@
                                 <div class="h-4 w-4 rounded-full bg-slate-700"></div>
                             </div>
                         </div>
-                        <div class="p-4 w-full bg-slate-800 rounded-b-md">
+                        <div class="py-4 w-full bg-slate-800 rounded-b-md">
                             <code class="w-full h-full relative">
-                                <div class="w-full h-full" v-html="queryHtml"></div>
-                                <textarea class="bg-red-500 w-max absolute top-0 left-0 z-10" v-model="query.content"></textarea>
+                                <div ref="editor" class="w-full min-h-80"></div>
                             </code>
                         </div>
                     </div>
@@ -90,7 +108,20 @@
                 <div>
             </div>
     </div>
-    <div>
-        <div ref="editor" class="w-full h-56"></div>
+    <div class="w-full flex gap-4">
+        <ActionButton
+            content="Execute query"
+            @click="fetchQueryResult"
+        >
+        </ActionButton>
+        <div v-if="isQueryError" class="py-2 px-4 bg-red-200 text-red-500 rounded-md">
+            Error: {{ queryError }}
+        </div>
+    </div>
+    <div v-if="isQueryPerformed" class="my-6">
+        <div class="flex justify-between items-center">
+            <h2 class="text-xl text-slate-900 font-bold">Query result</h2>
+        </div>
+        <Table :data="queryResponse"/>
     </div>
 </template>
