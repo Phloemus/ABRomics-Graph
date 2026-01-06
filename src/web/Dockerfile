@@ -7,6 +7,9 @@ COPY nuxt.config.ts app
 
 WORKDIR app
 
+ARG GRAPH_SERVER_HOST
+ENV NUXT_PUBLIC_GRAPH_SERVER_HOST=$GRAPH_SERVER_HOST
+
 RUN npm install
 RUN npm run build
 

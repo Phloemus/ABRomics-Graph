@@ -12,7 +12,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
         appName: "ABRomicsKG",
-        sparqlEnpoint: "http://localhost:7200/repositories/abromics-kg"
+        graphServerUrl: typeof process.env.NUXT_PUBLIC_GRAPH_SERVER_HOST === "undefined" ? "http://localhost:7200/" : process.env.NUXT_PUBLIC_GRAPH_SERVER_HOST,
+        apiUrl: typeof process.env.NUXT_PUBLIC_API_HOST === "undefined" ? "http://localhost:5000/graph-api/" : "http://" + process.env.NUXT_PUBLIC_API_HOST + ":5000/" + process.env.NUXT_PUBLIC_API_HOST + "/"
     }
   }
 })

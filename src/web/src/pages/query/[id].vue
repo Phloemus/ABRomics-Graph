@@ -10,11 +10,15 @@
     import queries from '../../static/queries.json'
     import query from '../../static/cq1.json'
 
+    const config = useRuntimeConfig()
+
+    console.log(config.public.apiUrl)
+
     const route = useRoute()
     const queryId = route.params.id - 1
     const queryFilename = queries[queryId].sparqlQuery
     const ontologies = queries[queryId].ontologies
-    const queryApiLink = `http://localhost:5000/graph-api/${queries[queryId].apiLink}`
+    const queryApiLink = config.public.apiUrl + queries[queryId].apiLink
     const queryMethod = queries[queryId].method
 
     const queryHtml = await codeToHtml(query.content, { lang: 'sparql', theme: 'catppuccin-mocha', colorReplacements: { '#1e1e2e': '#1e293b' }})

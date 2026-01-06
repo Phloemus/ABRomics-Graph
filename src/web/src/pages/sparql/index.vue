@@ -9,6 +9,8 @@
     import { init } from 'modern-monaco'
     import { createHighlighter } from 'shiki'
     import { shikiToMonaco } from '@shikijs/monaco'
+
+    const config = useRuntimeConfig()
     
     const editor = ref(null)
     let monacoInstance = null
@@ -18,7 +20,7 @@
     var isQueryPerformed = ref(false)
     var isQueryError = ref(false)
     var queryError = ref("")
-    
+
     onMounted(async () => {
         monacoInstance = await init()
 
@@ -52,7 +54,7 @@
 
     function fetchQueryResult(id) {
         // Don't forget to change the port or the host in prod ;)
-        const uri = encodeURI("http://localhost:7200/repositories/abromics-kg?query=" + editorInstance.getValue())
+        const uri = encodeURI(config.public.graphServerUrl + "repositories/abromics-kg?query=" + editorInstance.getValue())
         fetch(uri,
             {
                 method: "GET",

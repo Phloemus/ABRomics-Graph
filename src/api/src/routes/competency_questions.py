@@ -31,10 +31,9 @@ from utils.query import Query
 @cross_origin()
 @app.route(f"/{API_BASEPATH}/res-genes/best", methods=[QUERIES[4]["method"]])
 def getKTopAntibioticResGenes():
-    metric = request.args.get('metric')
-    query = Query(QUERIES[4]["filePath"], SPARQL_ENDPOINT, parameters={"Gene Length": metric})
+    query = Query(QUERIES[4]["filePath"], SPARQL_ENDPOINT)
 
-    reponse = jsonify(query.executeQuery())
+    response = jsonify(query.executeQuery())
     response.headers.add('Access-Control-Allow-Origin', '*')
 
     return response

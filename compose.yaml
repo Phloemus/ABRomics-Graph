@@ -57,8 +57,11 @@ services:
       - graph
 
   web:
-    build: ./src/web
     container_name: abromics-kg-web
+    build: 
+      context: ./src/web
+      args:
+        - GRAPH_SERVER_HOST=${GRAPH_SERVER_HOST}
     ports:
       - 3001:3000
     networks:
