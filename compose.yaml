@@ -61,7 +61,11 @@ services:
     build: 
       context: ./src/web
       args:
+        - HTTP=${HTTP}
         - GRAPH_SERVER_HOST=${GRAPH_SERVER_HOST}
+        - API_HOST=${API_HOST}
+        - API_PORT=${API_PORT}
+        - API_BASEPATH=${API_BASEPATH}
     ports:
       - 3001:3000
     networks:

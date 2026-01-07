@@ -18,7 +18,7 @@
     const queryId = route.params.id - 1
     const queryFilename = queries[queryId].sparqlQuery
     const ontologies = queries[queryId].ontologies
-    const queryApiLink = config.public.apiUrl + queries[queryId].apiLink
+    const queryApiLink = config.public.apiUrl + '/' + queries[queryId].apiLink
     const queryMethod = queries[queryId].method
 
     const queryHtml = await codeToHtml(query.content, { lang: 'sparql', theme: 'catppuccin-mocha', colorReplacements: { '#1e1e2e': '#1e293b' }})
