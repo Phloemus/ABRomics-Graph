@@ -4,12 +4,12 @@
 ## All the constants used within the API
 ##
 
-from config.config import API_ENDPOINT
+from config.config import API_ENDPOINT, API_BASEPATH
 
 QUERIES = [
     {
         "name": "count-nodes",
-        "route": f"{API_ENDPOINT}/node/count",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/node/count",
         "method": "GET",
         "filePath": "queries/count.sparql",
         "description": """
@@ -19,7 +19,7 @@ QUERIES = [
     },
     {
         "name": "count-samples-by-people",
-        "route": f"{API_ENDPOINT}/sample/count/people",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/sample/count/people",
         "method": "GET",
         "filePath": "queries/count-samples-by-people.sparql",
         "description": """
@@ -29,7 +29,7 @@ QUERIES = [
     },
     {
         "name": "count-samples-by-countries",
-        "route": f"{API_ENDPOINT}/sample/count/countries",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/sample/count/countries",
         "method": "GET",
         "filePath": "queries/count-samples-by-countries.sparql",
         "description": """
@@ -39,7 +39,7 @@ QUERIES = [
     },
     {
         "name": "get-organs-for-specie",
-        "route": f"{API_ENDPOINT}/organ",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/organ",
         "method": "POST",
         "filePath": "queries/get-organs-by-specie-name.sparql",
         "description": """
@@ -51,7 +51,7 @@ QUERIES = [
     },
     {
         "name": "get-ktop-antibiotic-res-genes",
-        "route": f"{API_ENDPOINT}/res-genes/best",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/res-genes/best",
         "method": "GET",
         "filePath": "queries/q1-search-antibiotic-res-genes-all-sample.sparql",
         "description": """
@@ -63,7 +63,7 @@ QUERIES = [
     },
     {
         "name": "get-sample-sources",
-        "route": f"{API_ENDPOINT}/sample-sources",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/sample-sources",
         "method": "GET",
         "filePath": { 
             "animal": "queries/sample-sources/get-anatomical-structures-animal.sparql",
@@ -81,7 +81,7 @@ QUERIES = [
     },
     {
         "name": "get-microorganism-specie-names",
-        "route": f"{API_ENDPOINT}/microorganisms",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/microorganisms",
         "method": "GET",
         "filePath": "queries/microorganisms/get-microorganism-specie-names.sparql",
         "description": """
@@ -90,7 +90,7 @@ QUERIES = [
     },
     {
         "name": "get-host-specie-names",
-        "route": f"{API_ENDPOINT}/hosts",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/hosts",
         "method": "GET",
         "filePath": "queries/hosts/get-host-specie-names.sparql",
         "description": """
@@ -99,7 +99,7 @@ QUERIES = [
     },
     {
         "name": "get-popular-sample-sources",
-        "route": f"{API_ENDPOINT}/sample-sources/popular",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/sample-sources/popular",
         "method": "GET",
         "filePath": "queries/sample-sources/get-popular-anatomical-structures-animal-no-specie.sparql",
         "description": """
@@ -112,7 +112,7 @@ QUERIES = [
 ADMIN_QUERIES = [
     {
         "name": "delete-all-nodes",
-        "route": f"{API_ENDPOINT}/graph",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/graph",
         "method": "DELETE",
         "filePath": "queries/delete-all-nodes.sparql",
         "description": """

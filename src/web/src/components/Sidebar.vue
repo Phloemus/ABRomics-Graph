@@ -110,7 +110,7 @@
                 <div class="py-3 flex gap-2 text-slate-500">
                     <span>v0.0.2</span>
                     <span>ABRomicsKG</span>
-                    <span>2025</span>
+                    <span>2026</span>
                 </div>
             </div>
         </div>

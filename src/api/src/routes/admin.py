@@ -43,23 +43,23 @@ def protected():
 
 
 ####################################### Delete graph route ###########################################
-@app.route(f"/{API_BASEPATH}/graph", methods=['DELETE'])
-@authentification_required 
-def deleteGraphData():
-    executeQuery(SPARQL_ENDPOINT, ADMIN_QUERIES[0]["filePath"])
-    return jsonify({"message": "graph delete successfully"})
-
+##@app.route(f"/{API_BASEPATH}/graph", methods=['DELETE'])
+##@authentification_required 
+##def deleteGraphData():
+##    executeQuery(SPARQL_ENDPOINT, ADMIN_QUERIES[0]["filePath"])
+##    return jsonify({"message": "graph delete successfully"})
+##
 
 ####################################### Recreate graph route #########################################
 ## This should be implemented after that the graph creator module has been tested
-@cross_origin()
-@app.route(f"/{API_BASEPATH}/graph", methods=['POST'])
-@authentification_required 
-def buildGraph():
-    gc = GraphCreator(reportDirectory = "data/reports", sparqlEndpoint = "http://localhost:8890/sparql") ## replace the localhost:8890 with a flexible link to the virtuoso server
-    gc.createGraph(fetchCountriesFromCache = False, templatePath="modules/graph_creator/", outputPath="modules/graph_creator/out")
-    print("ok")
-    return jsonify({"message": "test 1 passed"})
-
+##@cross_origin()
+##@app.route(f"/{API_BASEPATH}/graph", methods=['POST'])
+##@authentification_required 
+##def buildGraph():
+##    gc = GraphCreator(reportDirectory = "data/reports", sparqlEndpoint = "http://localhost:8890/sparql") ## replace the localhost:8890 with a flexible link to the virtuoso server
+##    gc.createGraph(fetchCountriesFromCache = False, templatePath="modules/graph_creator/", outputPath="modules/graph_creator/out")
+##    print("ok")
+##    return jsonify({"message": "test 1 passed"})
+##
 
 

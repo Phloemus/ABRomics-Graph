@@ -11,7 +11,8 @@ from flask_cors import CORS
 from flask_caching import Cache
 
 
-if "IS_DEV" in os.environ and os.environ['IS_DEV'] == "false": ##? IS_DEV might be at fault here ..  
+## Checks if the api has been launched using docker or in standalone mode
+if "API_HOST" in os.environ:
     API_PORT = f"{os.environ['API_PORT']}"
     API_ENDPOINT = f"{os.environ['HTTP']}{os.environ['API_HOST']}:{os.environ['API_PORT']}"
     API_BASEPATH = f"{os.environ['API_BASEPATH']}"

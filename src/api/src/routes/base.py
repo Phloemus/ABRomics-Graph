@@ -24,7 +24,8 @@ from config.constants import *
 def home():
     return jsonify({
         "version": "0.0.1",
-        "message": "Welcome to ABRomics-kg API"
+        "message": "Welcome to ABRomics-kg API",
+        "routes": f"{API_ENDPOINT}/{API_BASEPATH}/query"
     })
 
 
