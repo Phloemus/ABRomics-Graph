@@ -20,7 +20,7 @@ services:
       - services
 
   graphdb:
-    image: ontotext/graphdb:10.1.2
+    image: ontotext/graphdb:10.8.11
     container_name: abromics-kg-graphdb
     hostname: graphdb
     environment: 
