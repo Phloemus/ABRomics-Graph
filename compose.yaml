@@ -62,6 +62,7 @@ services:
       context: ./src/web
       args:
         - HTTP=${HTTP}
+        - HOST_URL=${HOST_URL}
         - GRAPH_SERVER_HOST=${GRAPH_SERVER_HOST}
         - API_HOST=${API_HOST}
         - API_PORT=${API_PORT}

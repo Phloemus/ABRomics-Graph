@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
         appName: "ABRomicsKG",
-        graphServerUrl: typeof process.env.NUXT_PUBLIC_GRAPH_SERVER_HOST === "undefined" ? "http://localhost:7200/" : process.env.NUXT_PUBLIC_GRAPH_SERVER_HOST,
+        graphServerUrl: typeof process.env.NUXT_PUBLIC_HOST_URL === "undefined" ? "http://localhost:7200/" : process.env.NUXT_PUBLIC_HOST_URL + '/graphdb/',
         apiUrl: typeof process.env.NUXT_PUBLIC_API_HOST === "undefined" ? "http://localhost:5000/graph-api" : process.env.NUXT_PUBLIC_HTTP + process.env.NUXT_PUBLIC_API_HOST + ":" + process.env.NUXT_PUBLIC_API_PORT + '/' + process.env.NUXT_PUBLIC_API_BASEPATH
     }
   }
