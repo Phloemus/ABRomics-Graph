@@ -1,0 +1,14 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX aro: <http://purl.obolibrary.org/obo/ARO_>
+
+## List of all the aro resistance genes found in the KG
+
+SELECT ?aroTerm ?geneName 
+FROM <http://www.ontotext.com/explicit> ## Indicates to graphdb to only use explicit nodes and no other inference reasonner
+WHERE {
+  ?aroTerm rdfs:subClassOf+ aro:3000000 .
+  ?instance rdf:type ?aroTerm .
+  ?instance rdfs:label ?geneName .
+}
+GROUP BY ?aroTerm ?geneName
