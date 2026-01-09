@@ -1,0 +1,10 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sio: <http://semanticscience.org/resource/>
+
+## Get the number of biological samples
+
+SELECT (COUNT(?sample) as ?nb_samples)
+FROM <http://www.ontotext.com/explicit> ## Indicates to graphdb to only use explicit nodes and no other inference reasonner
+WHERE {
+        ?sample rdf:type sio:001050 .
+}
