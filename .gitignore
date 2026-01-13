@@ -16,4 +16,4 @@ src/docs/src/*
 src/docs/md/*
 
 */.env
-temp
+tmp
