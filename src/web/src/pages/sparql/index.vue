@@ -19,6 +19,7 @@
     var queryResponse = ref([])
     var isQueryPerformed = ref(false)
     var isQueryError = ref(false)
+    var isQueryLoading = ref(false)
     var queryError = ref("")
 
     onMounted(async () => {
@@ -53,8 +54,10 @@
     })
 
     function fetchQueryResult(id) {
-        // Don't forget to change the port or the host in prod ;)
-        const uri = encodeURI(config.public.graphServerUrl + "repositories/abromics-kg?query=" + editorInstance.getValue())
+        isQueryLoading.value = true
+        isQueryError.value = false
+        isQueryPerformed.value = false
+        const uri = config.public.graphServerUrl + "repositories/abromics-kg?query=" + encodeURIComponent(editorInstance.getValue())
         fetch(uri,
             {
                 method: "GET",
@@ -71,16 +74,19 @@
                 return
             } else {
                 isQueryError.value = false
+                isQueryLoading.value = false
             }
             return response.json()
         }).then((data) => {
             queryResponse.value = data.results.bindings
             isQueryPerformed.value = true
+            isQueryLoading.value = false
             console.log(data)
         }).catch(err => {
             console.error("Error while processing response: ", err)
             isQueryError.value = true
-            queryError.value = err
+            queryError.value = "The syntax of the query wrong or empty"
+            isQueryLoading.value = false
         })
     }
 
@@ -112,6 +118,7 @@
     <div class="w-full flex gap-4">
         <ActionButton
             content="Execute query"
+            :isLoading=isQueryLoading
             @click="fetchQueryResult"
         >
         </ActionButton>
