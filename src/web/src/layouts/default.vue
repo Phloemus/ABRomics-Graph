@@ -12,12 +12,12 @@
     <div class="min-h-screen">
         <Banner />
         <div class="w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
-        <div class="h-full w-full bg-slate-50 flex">
+        <div class="w-full bg-slate-50 flex">
             <Sidebar />
             <div class="w-full">
                 <Navbar />
-                <div class="px-10 my-10">
-                    <main class="mx-auto p-8 bg-white max-w-screen-xl border border-slate-200 rounded-md">
+                <div class="min-h-screen px-10 py-10">
+                    <main class="mx-auto p-8 bg-white max-w-screen-xl border border-slate-200 rounded-md overflow-scroll">
                         <slot />
                     </main>
                 </div>

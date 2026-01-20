@@ -8,6 +8,7 @@
     const isUserLoggedIn = useState('isUserLoggedIn')
     const userAuthToken = useState('userAuthToken')
     const isLoginPanelOpened = useState('isLoginPanelOpened')
+    const isSidebarToggled = useState('isSidebarToggled')
 
     function displayLoginPanel() { 
         isLoginPanelOpened.value = true
@@ -17,6 +18,10 @@
         isUserLoggedIn.value = false
         userAuthToken.value = ""
         await navigateTo("/")
+    }
+
+    function toggleSidebar() {
+        isSidebarToggled.value = !isSidebarToggled.value
     }
 
     const searchTerm = ref("")
@@ -44,13 +49,21 @@
 </script>
 
 <template>
-    <nav class="px-6 py-3 w-full flex justify-between items-center bg-white border-b border-slate-200">
-        <SearchInput 
-            :searchTerm="searchTerm"
-            @input="filterOntologyList"
-            placeholder="Search for ontology term.."
-            :results="ontologyClasses"
-        />
+    <nav class="px-6 py-3 sticky top-0 w-full flex justify-between items-center bg-white border-b border-slate-200">
+        <div class="flex gap-4 items-center">
+            <div 
+                class="w-8 h-10 rounded-md cursor-pointer flex items-center"
+                @click="toggleSidebar"
+            >
+                <img src="assets/sidebar-icon.svg">
+            </div>
+            <SearchInput 
+                :searchTerm="searchTerm"
+                @input="filterOntologyList"
+                placeholder="Search for ontology term.."
+                :results="ontologyClasses"
+            />
+        </div>
         <div class="flex flex-row-reverse gap-4">
             <ActionButton @click="displayLoginPanel" v-show="!isUserLoggedIn" content="Login"/>
             <SecondaryButton @click="logout" v-show="isUserLoggedIn" content="Log out"/>

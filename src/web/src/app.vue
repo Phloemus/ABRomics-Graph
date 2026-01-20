@@ -1,6 +1,7 @@
 <script setup>
 
     const isLoginPanelOpened = useState('isLoginPanelOpened', () => false)
+    const isSidebarToggled = useState('isSidebarToggled', () => false)
 
 </script>
 
