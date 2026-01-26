@@ -642,5 +642,6 @@ class GraphCreator:
             print(e) 
 
 
-## gc = GraphCreator("../../data/reports")
-## gc.createGraph()
+if __name__ == "__main__":
+    gc = GraphCreator("../../data/reports")
+    gc.createGraph()

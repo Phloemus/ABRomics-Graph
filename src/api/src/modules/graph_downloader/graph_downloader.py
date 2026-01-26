@@ -63,7 +63,7 @@ class Downloader():
             response = requests.get(
                 response["next"], ## ?status=ready_to_report is auto integrated in the next url responded by ABRomics
                 headers = {
-                    'Authorization': f"Bearer {self.api_user_token}", ## replace Basic with Bearer if it's a Bearer token
+                    'Authorization': f"Basic {self.api_user_token}", ## replace Basic with Bearer if it's a Bearer token
                 }
             )
             response = response.json()
