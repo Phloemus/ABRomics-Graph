@@ -40,8 +40,6 @@
         {% endif %}
         uniprot-core:host <ncbitaxon:{{ sample["host"] }}> ;
         prov:atLocation <{{ sample["country"] }}> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "{{ sample["sequencingTechnology"] }}"  ] ;
-        abromics:sequencingPartner "{{ sample["sequencingPartner"] }}" ;
-        prov:wasAttributedTo <abromics:{{ sample["submitterId"] }}> . 
+        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "{{ sample["sequencingTechnology"] }}"  ] .
 
 {% endfor %}

@@ -1,4 +1,5 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix schema: <https://schema.org/> .
 @prefix abromics: <https://abromics.fr/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -16,12 +17,38 @@
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
 
-    <b28e7bcc-4daf-11f0-b0a2-90658429fd42> rdf:type sosa:Procedure ;
+    <3e6252ac-fb9f-11f0-bf0e-90658429fd42> rdf:type sosa:Procedure ;
         
-            sosa:isImplementedBy <b28e74f6-4daf-11f0-b0a2-90658429fd42> ; 
+            ssn:implementedBy <3e6246d6-fb9f-11f0-bf0e-90658429fd42> ; 
         
-            sosa:isImplementedBy <b28e755a-4daf-11f0-b0a2-90658429fd42> ; 
+            ssn:implementedBy <3e624758-fb9f-11f0-bf0e-90658429fd42> ; 
         
-            sosa:isImplementedBy <b28e7668-4daf-11f0-b0a2-90658429fd42> ; 
+            ssn:implementedBy <3e624794-fb9f-11f0-bf0e-90658429fd42> ; 
+        
+            ssn:implementedBy <3e62483e-fb9f-11f0-bf0e-90658429fd42> ; 
+        
+            ssn:implementedBy <3e6248b6-fb9f-11f0-bf0e-90658429fd42> ; 
+        
+            ssn:implementedBy <3e6248fc-fb9f-11f0-bf0e-90658429fd42> ; 
+        
+            ssn:implementedBy <3e6249b0-fb9f-11f0-bf0e-90658429fd42> ; 
+        
+            ssn:implementedBy <3e624a28-fb9f-11f0-bf0e-90658429fd42> ; 
+        
+            ssn:implementedBy <3e624a6e-fb9f-11f0-bf0e-90658429fd42> ; 
+        
+            ssn:implementedBy <3e624bcc-fb9f-11f0-bf0e-90658429fd42> ; 
+        
+            ssn:implementedBy <3e624c80-fb9f-11f0-bf0e-90658429fd42> ; 
+        
+            ssn:implementedBy <3e624d0c-fb9f-11f0-bf0e-90658429fd42> ; 
+        
+            ssn:implementedBy <3e624df2-fb9f-11f0-bf0e-90658429fd42> ; 
+        
+            ssn:implementedBy <3e624e60-fb9f-11f0-bf0e-90658429fd42> ; 
+        
+            ssn:implementedBy <3e625162-fb9f-11f0-bf0e-90658429fd42> ; 
+        
+            ssn:implementedBy <3e6251f8-fb9f-11f0-bf0e-90658429fd42> ; 
         
         rdfs:label "workflow 1 (genomic)" .

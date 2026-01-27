@@ -91,10 +91,14 @@ class GraphCreator:
     def __curateReports(self):
         curatedReports = []
         for report in self.allReports:
-            if "sections" not in report or len(report["sections"][0]["data"][0]["values"]) < 11:
+            if "sections" not in report or len(report["sections"][1]["data"][0]["values"]) < 11:
                 continue
             curatedReports.append(report)
         self.allReports = curatedReports
+
+    ## give a header list and get the id corresponding to it's label in the header list
+    def __getHeaderId(self, headerData, label):
+        return [id for id, value in enumerate(headerData) if value == label][0]
 
 
     def __createTtlFile(self, templatePath, outputPath, dataName, data, filterFunctions=[]):
@@ -213,8 +217,8 @@ class GraphCreator:
     ## of sample sources)
     def __getSampleSources(self):
         for report in self.allReports:
-            if report["sections"][0]["data"][0]["values"][5] not in self.sampleSources:
-                self.sampleSources.append(report["sections"][0]["data"][0]["values"][5])
+            if report["sections"][1]["data"][0]["values"][5] not in self.sampleSources:
+                self.sampleSources.append(report["sections"][1]["data"][0]["values"][5])
         sampleSourceNames = ""
         for sampleSourceName in self.sampleSources:
             sampleSourceNames += f"'{sampleSourceName}' "
@@ -258,12 +262,14 @@ class GraphCreator:
     ##          the solution would be to get the id and change the start of the url to ncbi taxon.
     def __getSpeciesTaxonomy(self):
         for report in self.allReports:
+            microorganismHeaderId =  self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Microorganism scientific name")
+            hostHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Host")
             # add the microorganisms in the species dictionnary (from section 1-0-0)
-            if report["sections"][1]["data"][0]["values"][0] not in self.species:
-                self.species.append(report["sections"][1]["data"][0]["values"][0])
+            if report["sections"][1]["data"][0]["values"][microorganismHeaderId] not in self.species:
+                self.species.append(report["sections"][1]["data"][0]["values"][microorganismHeaderId])
             # add the host specie to the species dictionnary
-            if report["sections"][0]["data"][0]["values"][6] not in self.species: 
-                self.species.append(report["sections"][0]["data"][0]["values"][6])
+            if report["sections"][1]["data"][0]["values"][hostHeaderId] not in self.species: 
+                self.species.append(report["sections"][1]["data"][0]["values"][hostHeaderId])
         speciesNames = ""
         for speciesName in self.species:
             speciesNames += f"'{speciesName}' "
@@ -282,7 +288,6 @@ class GraphCreator:
             }}
         """
         print("Fetching species taxonomy ids ...")
-        print(sparql_query)
         sparql = SPARQLWrapper("https://sparql.uniprot.org/sparql/")
         sparql.setReturnFormat(JSON)
         sparql.setQuery(sparql_query)
@@ -302,7 +307,7 @@ class GraphCreator:
         genesNames = ""
         genesNamesList = []
         for report in self.allReports:
-            for genesName in report["sections"][2]["data"][0]["values"][0] + report["sections"][2]["data"][1]["values"][0]:
+            for genesName in report["sections"][3]["data"][0]["values"][0]:
                 if genesName not in genesNamesList:
                     genesNames += f""""{genesName}" """
                     genesNamesList.append(genesName)
@@ -323,7 +328,7 @@ class GraphCreator:
         """
         print("Fetching ARO classes...")
         print(sparql_query)
-        sparql = SPARQLWrapper("http://localhost:8081/sparql") ## This is in local : it's very baaad (but it has ARO indexed)
+        sparql = SPARQLWrapper("http://localhost:8081/graphdb/repositories/abromics-kg") ## This is in local : it's very baaad (but it has ARO indexed)
         sparql.setReturnFormat(JSON)
         sparql.setQuery(sparql_query)
         try:
@@ -368,7 +373,7 @@ class GraphCreator:
     ## Sensors define the sequencer used to get the sequencing data
     def __addSensors(self):
         for report in self.allReports:
-            name = report["sections"][0]["data"][0]["values"][8]
+            name = report["sections"][1]["data"][0]["values"][7]
             if name not in self.sensorsMapping.keys() and name != "":
                 uniqueGraphId = uuid.uuid1()
 
@@ -405,8 +410,8 @@ class GraphCreator:
     def __addStrains(self):
         for report in self.allReports:
             uniqueGraphId = uuid.uuid1()
-            speciesName = report["sections"][1]["data"][0]["values"][0]
-            st = report["sections"][1]["data"][0]["values"][1]
+            speciesName = report["sections"][2]["data"][0]["values"][0]
+            st = report["sections"][2]["data"][0]["values"][1]
             if speciesName in self.speciesTaxonomy:
                 taxonomy = self.speciesTaxonomy[speciesName]
             else:
@@ -425,7 +430,7 @@ class GraphCreator:
     ## TODO: Add the link with gene ontology
     def __addGenes(self):
         for report in self.allReports:
-            for gene in report["sections"][2]["data"][0]["values"][0] + report["sections"][2]["data"][1]["values"][0]:
+            for gene in report["sections"][3]["data"][0]["values"][0]:
                 if gene not in self.genesMapping.keys():
                     uniqueGraphId = uuid.uuid1()
                     label = gene
@@ -445,7 +450,7 @@ class GraphCreator:
     ## observableProperty list.
     def __addObservableProperties(self):
         for report in self.allReports:
-            for observableProperty in report["sections"][2]["data"][0]["header"]: 
+            for observableProperty in report["sections"][3]["data"][0]["header"]: 
                 if observableProperty not in self.observablePropertiesMapping.keys():
                     uniqueGraphId = uuid.uuid1()
                     label = observableProperty
@@ -458,37 +463,41 @@ class GraphCreator:
     ## Add the samples data to memory for graph creation
     def __addSamples(self):
         for report in self.allReports:
-            if report["sections"][0]["data"][0]["values"][0] not in self.samplesMapping.keys():
+            if report["sections"][1]["data"][0]["values"][0] not in self.samplesMapping.keys():
                 uniqueGraphId = uuid.uuid1()
-                originalSampleId = report["sections"][0]["data"][0]["values"][0]
-                submitterId = report["sections"][0]["data"][0]["values"][10]
-                countryName = report["sections"][0]["data"][0]["values"][7]
-                collectionDate = report["sections"][0]["data"][0]["values"][3]
+                originalSampleId = report["sections"][1]["data"][0]["values"][0]
+                ## submitterId = report["sections"][1]["data"][0]["values"][10]
+                countryName = report["sections"][1]["data"][0]["values"][6]
+                collectionDate = report["sections"][1]["data"][0]["values"][2]
                 ##################### Stuck here
-                collectionDate = parser.parse(collectionDate)
+                print(f"!!!! {collectionDate}")
+                try:
+                    collectionDate = parser.parse(collectionDate)
+                except:
+                    collectionDate = parser.parse("1970-01-01") ## In case of an error, just use the default collectionDate value
 
                 if datetime.strftime(collectionDate, "%Y"):
                     collectionDate = datetime.strftime(collectionDate, '%Y-01-01')
-                microorganism = report["sections"][1]["data"][0]["values"][0] ## because the section 0-0 is not consistant we use the name of the microorganism from the section 1-0-0
-                host = report["sections"][0]["data"][0]["values"][6]
-                sampleSource = report["sections"][0]["data"][0]["values"][5]
+                microorganism = report["sections"][1]["data"][0]["values"][1] ## because the section 0-0 is not consistant we use the name of the microorganism from the section 1-0-0
+                host = report["sections"][1]["data"][0]["values"][6]
+                sampleSource = report["sections"][1]["data"][0]["values"][5]
 
                 self.samples.append({
                     "id": uniqueGraphId,
                     "originalSampleId": originalSampleId,
-                    "strainId": report["sections"][0]["data"][0]["values"][1],
+                    "strainId": report["sections"][1]["data"][0]["values"][1],
                     "microorganism": self.speciesTaxonomy[microorganism] if microorganism in self.speciesTaxonomy.keys() else "",
                     "collectionDate": collectionDate,
-                    "sampleType": report["sections"][0]["data"][0]["values"][4],
+                    "sampleType": report["sections"][1]["data"][0]["values"][3],
                     "sampleSource": self.sampleSourcesBindNCIT[sampleSource] if sampleSource in self.sampleSourcesBindNCIT.keys() else "", ## BUG # always return en empty string
                     "host": self.speciesTaxonomy[host] if host in self.speciesTaxonomy.keys() else "",
                     "country": self.countries[countryName] if countryName in self.countries.keys() else "",
-                    "sequencingTechnology": report["sections"][0]["data"][0]["values"][8],
-                    "sequencingPartner": report["sections"][0]["data"][0]["values"][9],
-                    "submitterId": self.peopleMapping[submitterId]
+                    "sequencingTechnology": report["sections"][1]["data"][0]["values"][7],
+                    ## "sequencingPartner": report["sections"][1]["data"][0]["values"][9], Sequencing partner is no longer available in the ABRomics reports
+                    ## "submitterId": self.peopleMapping[submitterId]
                 })
 
-                self.samplesSubmitters[originalSampleId] = submitterId
+                ## self.samplesSubmitters[originalSampleId] = submitterId
                 self.samplesMapping[originalSampleId] = uniqueGraphId
 
 
@@ -500,18 +509,21 @@ class GraphCreator:
         observationHeaderId = 0
         observationId = 0
         for report in self.allReports:
-            for observationHeader in report["sections"][2]["data"][0]["header"]:
-                for observation in report["sections"][2]["data"][0]["values"][observationHeaderId]:
+            for observationHeader in report["sections"][3]["data"][0]["header"]:
+                for observation in report["sections"][3]["data"][0]["values"][observationHeaderId]:
                     uniqueGraphId = uuid.uuid1()
-                    strainFeatureOfInterest = self.strainsMapping[report["sections"][1]["data"][0]["values"][0]]
-                    sampleFeatureOfInterest = self.samplesMapping[report["sections"][0]["data"][0]["values"][0]]
-                    geneFeatureOfInterest = self.genesMapping[report["sections"][2]["data"][0]["values"][0][observationId]]
+                    ## strainFeatureOfInterest = self.strainsMapping[report["sections"][1]["data"][0]["values"][0]]
+                    sampleFeatureOfInterest = self.samplesMapping[report["sections"][1]["data"][0]["values"][0]]
+                    geneFeatureOfInterest = self.genesMapping[report["sections"][3]["data"][0]["values"][0][observationId]]
                     observableProperty = self.observablePropertiesMapping[observationHeader]
-                    sensor = "" if report["sections"][0]["data"][0]["values"][8] == "" else self.sensorsMapping[report["sections"][0]["data"][0]["values"][8]] 
+                    sensor = "" if report["sections"][1]["data"][0]["values"][7] == "" else self.sensorsMapping[report["sections"][1]["data"][0]["values"][7]] 
                     procedure = self.proceduresMapping["workflow 1 (genomic)"]
 
-                    resultTime = report["sections"][0]["data"][0]["values"][3]
-                    resultTime = parser.parse(resultTime)
+                    resultTime = report["sections"][1]["data"][0]["values"][2]
+                    try:
+                        resultTime = parser.parse(resultTime)
+                    except:
+                        resultTime = parser.parse("1970-01-01")
                     if datetime.strftime(resultTime, "%Y"):
                         resultTime = datetime.strftime(resultTime, '%Y-01-01')
 
@@ -542,6 +554,43 @@ class GraphCreator:
                 "sample": observation["sample"],
                 "observation": observation["id"]
             })
+
+    ## Create and send a sparql query that will generate the knowledge graph in a graph server
+    def __UploadGraphToServer(self):
+        ## Try to create the abromics data graph 
+        create_graph_query = "CREATE GRAPH <http://data.abromics.fr>"
+        print("creating the abromics data graph")
+        print(create_graph_query)
+        sparql = SPARQLWrapper(self.sparqlEndpoint)
+        sparql.setReturnFormat(JSON)
+        sparql.setQuery(create_graph_query)
+        try:
+            res = sparql.query().convert()
+            recs = res["results"]["bindings"]
+        except Exception as e: 
+            print(e) ## When there is an error here it means that the graph already exists
+        
+        ## Craft the add nodes from rdf files sparql queries
+        with open(f"{outputPath}/genes.ttl") as file:
+            query = "INSERT DATA { GRAPH <http://data.abromics.fr> { "
+            for line in file:
+                if line[0] != "@":
+                    query = query + str(line)
+            query = query + "}}"
+            #with open(f"test.sparql", "w") as test:
+            #    test.write(query)
+
+        ## Execute the sparql queries
+        print("Executing the data addition queries")
+        print(query)
+        sparql = SPARQLWrapper(self.sparqlEndpoint)
+        sparql.setReturnFormat(JSON)
+        sparql.setQuery(query)
+        try:
+            res = sparql.query().convert()
+            recs = res["results"]["bindings"]
+        except Exception as e: 
+            print(e) 
 
 
     ##### Public test methods #####
@@ -584,7 +633,7 @@ class GraphCreator:
         self.__addPlatforms()
         self.__addSensors()
         self.__addProcedures()
-        self.__addPeople()
+        ## self.__addPeople() ## People associated with the report is no longer available in the new versions of the ABRomics reports
         self.__addStrains()
         self.__addObservableProperties() 
         self.__addGenes()
@@ -598,7 +647,7 @@ class GraphCreator:
         self.__createTtlFile(f"{templatePath}graph-templates/platforms.j2", outputPath, "platforms", self.platforms) 
         self.__createTtlFile(f"{templatePath}graph-templates/sensors.j2", outputPath, "sensors", self.sensors) 
         self.__createTtlFile(f"{templatePath}graph-templates/procedures.j2", outputPath, "procedures", self.procedures) 
-        self.__createTtlFile(f"{templatePath}graph-templates/people.j2", outputPath, "people", self.people) 
+        ## self.__createTtlFile(f"{templatePath}graph-templates/people.j2", outputPath, "people", self.people) 
         self.__createTtlFile(f"{templatePath}graph-templates/strains.j2", outputPath, "strains", self.strains)
         self.__createTtlFile(f"{templatePath}graph-templates/observable-properties.j2", outputPath, "observableProperties", self.observableProperties)
         self.__createTtlFile(f"{templatePath}graph-templates/genes.j2", outputPath, "genes", self.genes)
@@ -606,49 +655,16 @@ class GraphCreator:
         self.__createTtlFile(f"{templatePath}graph-templates/observations.j2", outputPath, "observations", self.observations, filterFunctions=[{"name": "isFloat", "content": self.__isFloat}])
         self.__createTtlFile(f"{templatePath}graph-templates/links_samples_observations.j2", outputPath, "linksSamplesObservations", self.linksSamplesObservations)
 
-        ## Try to create the abromics data graph 
-        create_graph_query = "CREATE GRAPH <http://data.abromics.fr>"
-        print("creating the abromics data graph")
-        print(create_graph_query)
-        sparql = SPARQLWrapper(self.sparqlEndpoint)
-        sparql.setReturnFormat(JSON)
-        sparql.setQuery(create_graph_query)
-        try:
-            res = sparql.query().convert()
-            recs = res["results"]["bindings"]
-        except Exception as e: 
-            print(e) ## When there is an error here it means that the graph already exists
         
-        ## Craft the add nodes from rdf files sparql queries
-        with open(f"{outputPath}/genes.ttl") as file:
-            query = "INSERT DATA { GRAPH <http://data.abromics.fr> { "
-            for line in file:
-                if line[0] != "@":
-                    query = query + str(line)
-            query = query + "}}"
-            #with open(f"test.sparql", "w") as test:
-            #    test.write(query)
-
-        ## Execute the sparql queries
-        print("Executing the data addition queries")
-        print(query)
-        sparql = SPARQLWrapper(self.sparqlEndpoint)
-        sparql.setReturnFormat(JSON)
-        sparql.setQuery(query)
-        try:
-            res = sparql.query().convert()
-            recs = res["results"]["bindings"]
-        except Exception as e: 
-            print(e) 
 
 
 if __name__ == "__main__":
     print("=== Graph creator module ===\n")
-    reportsDir = "../../data/reports"
-    outPath = "out"
-    reportsDir = input(f"Indicate the abromics reports path (default {reportsDir}): ")
-    outputPath = input(f"Indicate the location where the output rdf files will be created (default {outputPath}): ")
+    reportsDir = "../graph_downloader/new-public-reports"
+    outputPath = "out"
+    ##reportsDir = input(f"Indicate the abromics reports path (default {reportsDir}): ")
+    ##outputPath = input(f"Indicate the location where the output rdf files will be created (default {outputPath}): ")
     choiceCreateNewGraph = input(f"\nCreate new graph (this action is destructive) (deleted content: {outputPath}/) ? [yes/no] ")
     if choiceCreateNewGraph == "yes": 
-        gc = GraphCreator(reportsDir)
+        gc = GraphCreator(reportDirectory=reportsDir, cacheDirectory="cache")
         gc.createGraph(outputPath=outputPath)
