@@ -643,5 +643,12 @@ class GraphCreator:
 
 
 if __name__ == "__main__":
-    gc = GraphCreator("../../data/reports")
-    gc.createGraph()
+    print("=== Graph creator module ===\n")
+    reportsDir = "../../data/reports"
+    outPath = "out"
+    reportsDir = input(f"Indicate the abromics reports path (default {reportsDir}): ")
+    outputPath = input(f"Indicate the location where the output rdf files will be created (default {outputPath}): ")
+    choiceCreateNewGraph = input(f"\nCreate new graph (this action is destructive) (deleted content: {outputPath}/) ? [yes/no] ")
+    if choiceCreateNewGraph == "yes": 
+        gc = GraphCreator(reportsDir)
+        gc.createGraph(outputPath=outputPath)
