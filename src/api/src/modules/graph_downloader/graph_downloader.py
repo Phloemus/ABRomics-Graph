@@ -21,7 +21,8 @@ class Downloader():
         self.api_url = "https://analysis.abromics.fr" # os.getenv('API_URL') 
         self.email = email
         self.password = password
-        self.api_user_token = ""
+        self.api_user_access_token = ""
+        self.api_user_refresh_token = ""
         self.downloadDir = downloadDir
 
     ## Public methods
@@ -47,10 +48,30 @@ class Downloader():
         try:
             response.raise_for_status()
             response = response.json()
-            self.api_user_token = response['access']
+            self.api_user_access_token = response['access']
+            self.api_user_refresh_token = response['refresh']
         except requests.exceptions.HTTPError as e:
             print(e)
             exit()
+
+
+    ## Used to get a fresh access token from the refresh access token given 
+    ## during the authentification process
+    def refreshAccessToken(self):
+        response = requests.post(
+            "https://analysis.abromics.fr/api/token/refresh/", 
+            json={
+                "refresh": self.api_user_refresh_token
+            }
+        )
+        try:
+            response.raise_for_status()
+            response = response.json()
+            self.api_user_access_token = response['access']
+        except requests.exceptions.HTTPError as e:
+            print(e)
+            exit()
+
 
 
     ## download all the abromics reports marked as "ready to report" 
@@ -63,7 +84,7 @@ class Downloader():
             response = requests.get(
                 response["next"], ## ?status=ready_to_report is auto integrated in the next url responded by ABRomics
                 headers = {
-                    'Authorization': f"Basic {self.api_user_token}", ## replace Basic with Bearer if it's a Bearer token
+                    'Authorization': f"Bearer {self.api_user_access_token}", ## replace Basic with Bearer if it's a Bearer token
                 }
             )
             response = response.json()
@@ -78,22 +99,33 @@ class Downloader():
         with alive_bar(len(exploitable_analysis_ids)) as bar:
             countDownloadFails = 0
             countDownloadSuccess = 0
+            countTotal = 0
             for report_id in exploitable_analysis_ids:
                 print(report_id)
                 response = requests.get(
                     f"https://analysis.abromics.fr/api/analysis/{report_id}/report/",
                     headers = {
-                        'Authorization': f"Basic {self.api_user_token}", ## replace Basic with Bearer if it's a Bearer token
+                        'Authorization': f"Bearer {self.api_user_access_token}", ## replace Basic with Bearer if it's a Bearer token
                     }
                 )
+                if response.status_code == 401:
+                    print(f"token expired.. retrying downloading report {report_id}")
+                    self.refreshAccessToken()
+                    response = requests.get(
+                        f"https://analysis.abromics.fr/api/analysis/{report_id}/report/",
+                        headers = {
+                            'Authorization': f"Bearer {self.api_user_access_token}", ## replace Basic with Bearer if it's a Bearer token
+                        }
+                    )
                 try:
                     report = response.json()
+                    print(report)
                     # save the reports in a local file
                     with open(f'{self.downloadDir}/abr_report_{report_id}.json', 'w') as f:
                         json.dump(report, f)
                     countDownloadSuccess += 1
-                except:
-                    print("report not downloaded - Wrong format")
+                except Exception as e:
+                    print(f"report not downloaded - Exception: {e}")
                     countDownloadFails += 1
                 bar()
             print(f"Download finish ! \nnb success: {countDownloadSuccess}\nnb fails: {countDownloadFails}")
