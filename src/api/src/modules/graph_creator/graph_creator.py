@@ -374,17 +374,21 @@ class GraphCreator:
     ## Sensors define the sequencer used to get the sequencing data
     def __addSensors(self):
         for report in self.allReports:
-            name = report["sections"][1]["data"][0]["values"][7]
-            if name not in self.sensorsMapping.keys() and name != "":
+
+            sensorNameHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Sequencing technology")
+            if sensorNameHeaderId is not None:
+                sensorName = report["sections"][1]["data"][0]["values"][sensorNameHeaderId]
+
+            if sensorName not in self.sensorsMapping.keys() and sensorName != "":
                 uniqueGraphId = uuid.uuid1()
 
                 self.sensors.append({
                     "id": uniqueGraphId,
-                    "name": name,
+                    "name": sensorName,
                     "isHostedBy": self.platformsMapping["NNCR"],
                 })
 
-                self.sensorsMapping[name] = uniqueGraphId
+                self.sensorsMapping[sensorName] = uniqueGraphId
 
     ## Add people data to memory for graph creation
     def __addPeople(self):
@@ -521,7 +525,11 @@ class GraphCreator:
                     sampleFeatureOfInterest = self.samplesMapping[report["sections"][1]["data"][0]["values"][0]]
                     geneFeatureOfInterest = self.genesMapping[report["sections"][3]["data"][0]["values"][0][observationId]]
                     observableProperty = self.observablePropertiesMapping[observationHeader]
-                    sensor = "" if report["sections"][1]["data"][0]["values"][7] == "" else self.sensorsMapping[report["sections"][1]["data"][0]["values"][7]] 
+
+                    sensorNameHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Sequencing technology")
+                    if sensorNameHeaderId is not None:
+                        sensor = "" if report["sections"][1]["data"][0]["values"][sensorNameHeaderId] == "" else self.sensorsMapping[report["sections"][1]["data"][0]["values"][sensorNameHeaderId]]
+
                     procedure = self.proceduresMapping["workflow 1 (genomic)"]
 
                     resultTime = report["sections"][1]["data"][0]["values"][2]

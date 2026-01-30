@@ -19,66 +19,18 @@
 ################################# Sensors ############################################
 
 
-    <abromics:f2823760-fde9-11f0-8af9-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "Bos taurus" ;
-        sosa:isHostedBy <abromics:f2823670-fde9-11f0-8af9-90658429fd42> .
+    <abromics:188ebfe4-fdec-11f0-87e3-90658429fd42> rdf:type sosa:Sensor ;
+        rdfs:label "NextSeq 500 (Illumina)" ;
+        sosa:isHostedBy <abromics:188ebe90-fdec-11f0-87e3-90658429fd42> .
 
-    <abromics:f28237c4-fde9-11f0-8af9-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "Ciconia ciconia" ;
-        sosa:isHostedBy <abromics:f2823670-fde9-11f0-8af9-90658429fd42> .
+    <abromics:188ec0c0-fdec-11f0-87e3-90658429fd42> rdf:type sosa:Sensor ;
+        rdfs:label "Illumina NextSeq 2000 (Illumina)" ;
+        sosa:isHostedBy <abromics:188ebe90-fdec-11f0-87e3-90658429fd42> .
 
-    <abromics:f28237e2-fde9-11f0-8af9-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "Not applicable" ;
-        sosa:isHostedBy <abromics:f2823670-fde9-11f0-8af9-90658429fd42> .
+    <abromics:188ec28c-fdec-11f0-87e3-90658429fd42> rdf:type sosa:Sensor ;
+        rdfs:label "None" ;
+        sosa:isHostedBy <abromics:188ebe90-fdec-11f0-87e3-90658429fd42> .
 
-    <abromics:f2823878-fde9-11f0-8af9-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "Plantae" ;
-        sosa:isHostedBy <abromics:f2823670-fde9-11f0-8af9-90658429fd42> .
-
-    <abromics:f28238be-fde9-11f0-8af9-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "Homo sapiens" ;
-        sosa:isHostedBy <abromics:f2823670-fde9-11f0-8af9-90658429fd42> .
-
-    <abromics:f28238f0-fde9-11f0-8af9-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "People's Republic of China" ;
-        sosa:isHostedBy <abromics:f2823670-fde9-11f0-8af9-90658429fd42> .
-
-    <abromics:f2823972-fde9-11f0-8af9-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "Ciconia" ;
-        sosa:isHostedBy <abromics:f2823670-fde9-11f0-8af9-90658429fd42> .
-
-    <abromics:f28239c2-fde9-11f0-8af9-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "Japan" ;
-        sosa:isHostedBy <abromics:f2823670-fde9-11f0-8af9-90658429fd42> .
-
-    <abromics:f28239ea-fde9-11f0-8af9-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "Canada" ;
-        sosa:isHostedBy <abromics:f2823670-fde9-11f0-8af9-90658429fd42> .
-
-    <abromics:f2823ad0-fde9-11f0-8af9-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "Mus musculus" ;
-        sosa:isHostedBy <abromics:f2823670-fde9-11f0-8af9-90658429fd42> .
-
-    <abromics:f2823b52-fde9-11f0-8af9-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "Aves" ;
-        sosa:isHostedBy <abromics:f2823670-fde9-11f0-8af9-90658429fd42> .
-
-    <abromics:f2823bac-fde9-11f0-8af9-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "Lasiommata megera" ;
-        sosa:isHostedBy <abromics:f2823670-fde9-11f0-8af9-90658429fd42> .
-
-    <abromics:f2823c42-fde9-11f0-8af9-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "United Kingdom" ;
-        sosa:isHostedBy <abromics:f2823670-fde9-11f0-8af9-90658429fd42> .
-
-    <abromics:f2823c7e-fde9-11f0-8af9-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "Asio otus" ;
-        sosa:isHostedBy <abromics:f2823670-fde9-11f0-8af9-90658429fd42> .
-
-    <abromics:f2823e9a-fde9-11f0-8af9-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "United States of America" ;
-        sosa:isHostedBy <abromics:f2823670-fde9-11f0-8af9-90658429fd42> .
-
-    <abromics:f2823efe-fde9-11f0-8af9-90658429fd42> rdf:type sosa:Sensor ;
-        rdfs:label "Falco tinnunculus" ;
-        sosa:isHostedBy <abromics:f2823670-fde9-11f0-8af9-90658429fd42> .
+    <abromics:188ec430-fdec-11f0-87e3-90658429fd42> rdf:type sosa:Sensor ;
+        rdfs:label "Illumina HiSeq 2000 (Illumina)" ;
+        sosa:isHostedBy <abromics:188ebe90-fdec-11f0-87e3-90658429fd42> .

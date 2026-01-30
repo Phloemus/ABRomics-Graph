@@ -17,38 +17,14 @@
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
 
-    <f2823f76-fde9-11f0-8af9-90658429fd42> rdf:type sosa:Procedure ;
+    <188ed65a-fdec-11f0-87e3-90658429fd42> rdf:type sosa:Procedure ;
         
-            ssn:implementedBy <f2823760-fde9-11f0-8af9-90658429fd42> ; 
+            ssn:implementedBy <188ebfe4-fdec-11f0-87e3-90658429fd42> ; 
         
-            ssn:implementedBy <f28237c4-fde9-11f0-8af9-90658429fd42> ; 
+            ssn:implementedBy <188ec0c0-fdec-11f0-87e3-90658429fd42> ; 
         
-            ssn:implementedBy <f28237e2-fde9-11f0-8af9-90658429fd42> ; 
+            ssn:implementedBy <188ec28c-fdec-11f0-87e3-90658429fd42> ; 
         
-            ssn:implementedBy <f2823878-fde9-11f0-8af9-90658429fd42> ; 
-        
-            ssn:implementedBy <f28238be-fde9-11f0-8af9-90658429fd42> ; 
-        
-            ssn:implementedBy <f28238f0-fde9-11f0-8af9-90658429fd42> ; 
-        
-            ssn:implementedBy <f2823972-fde9-11f0-8af9-90658429fd42> ; 
-        
-            ssn:implementedBy <f28239c2-fde9-11f0-8af9-90658429fd42> ; 
-        
-            ssn:implementedBy <f28239ea-fde9-11f0-8af9-90658429fd42> ; 
-        
-            ssn:implementedBy <f2823ad0-fde9-11f0-8af9-90658429fd42> ; 
-        
-            ssn:implementedBy <f2823b52-fde9-11f0-8af9-90658429fd42> ; 
-        
-            ssn:implementedBy <f2823bac-fde9-11f0-8af9-90658429fd42> ; 
-        
-            ssn:implementedBy <f2823c42-fde9-11f0-8af9-90658429fd42> ; 
-        
-            ssn:implementedBy <f2823c7e-fde9-11f0-8af9-90658429fd42> ; 
-        
-            ssn:implementedBy <f2823e9a-fde9-11f0-8af9-90658429fd42> ; 
-        
-            ssn:implementedBy <f2823efe-fde9-11f0-8af9-90658429fd42> ; 
+            ssn:implementedBy <188ec430-fdec-11f0-87e3-90658429fd42> ; 
         
         rdfs:label "workflow 1 (genomic)" .
