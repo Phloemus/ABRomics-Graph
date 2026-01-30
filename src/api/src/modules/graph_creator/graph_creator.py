@@ -98,7 +98,10 @@ class GraphCreator:
 
     ## give a header list and get the id corresponding to it's label in the header list
     def __getHeaderId(self, headerData, label):
-        return [id for id, value in enumerate(headerData) if value == label][0]
+        if len([id for id, value in enumerate(headerData) if value == label]) != 0: 
+            return [id for id, value in enumerate(headerData) if value == label][0]
+        else:
+            return None
 
 
     def __createTtlFile(self, templatePath, outputPath, dataName, data, filterFunctions=[]):
@@ -202,7 +205,7 @@ class GraphCreator:
             res = sparql.query().convert()
             recs = res["results"]["bindings"]
         except Exception as e:
-            pritn(e)
+            print(e)
         for item in recs:
             self.cities[item["regionName"]["value"]] = item["regionId"]["value"]
 
@@ -264,11 +267,9 @@ class GraphCreator:
         for report in self.allReports:
             microorganismHeaderId =  self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Microorganism scientific name")
             hostHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Host")
-            # add the microorganisms in the species dictionnary (from section 1-0-0)
-            if report["sections"][1]["data"][0]["values"][microorganismHeaderId] not in self.species:
+            if microorganismHeaderId is not None and report["sections"][1]["data"][0]["values"][microorganismHeaderId] not in self.species:
                 self.species.append(report["sections"][1]["data"][0]["values"][microorganismHeaderId])
-            # add the host specie to the species dictionnary
-            if report["sections"][1]["data"][0]["values"][hostHeaderId] not in self.species: 
+            if hostHeaderId is not None and report["sections"][1]["data"][0]["values"][hostHeaderId] not in self.species: 
                 self.species.append(report["sections"][1]["data"][0]["values"][hostHeaderId])
         speciesNames = ""
         for speciesName in self.species:
@@ -410,8 +411,12 @@ class GraphCreator:
     def __addStrains(self):
         for report in self.allReports:
             uniqueGraphId = uuid.uuid1()
-            speciesName = report["sections"][2]["data"][0]["values"][0]
-            st = report["sections"][2]["data"][0]["values"][1]
+            specieNameHeaderId = self.__getHeaderId(report["sections"][2]["data"][0]["header"], "Isolate identified as")
+            stHeaderId = self.__getHeaderId(report["sections"][2]["data"][0]["header"], "Sequence Type (ST)")
+            if specieNameHeaderId is not None:
+                speciesName = report["sections"][2]["data"][0]["values"][specieNameHeaderId]
+            if stHeaderId is not None:
+                st = report["sections"][2]["data"][0]["values"][stHeaderId]
             if speciesName in self.speciesTaxonomy:
                 taxonomy = self.speciesTaxonomy[speciesName]
             else:

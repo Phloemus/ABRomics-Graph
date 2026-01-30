@@ -13,12 +13,15 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ncbitaxon: <http://purl.bioontology.org/ontology/NCBITAXON/> .
 
 ################################## Strains #################################
 
 {% for strain in strains %}
     <abromics:{{ strain["id"] }}> rdf:type sosa:FeatureOfInterest, aro:3004531;
-        abromics:has_st "{{ strain["st"] }}" ;
-        obo:RO_0002162 <{{ strain["taxonomy"] }}> .
+        {% if strain["taxonomy"] != "" %}
+            obo:RO_0002162 <ncbitaxon:{{ strain["taxonomy"] }}> ;
+        {% endif %}
+        abromics:has_st "{{ strain["st"] }}" .
 {% endfor %}
  

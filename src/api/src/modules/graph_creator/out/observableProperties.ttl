@@ -17,35 +17,35 @@
 ################################## Observable Properties #################################
 
 
-    <abromics:3e626af8-fb9f-11f0-bf0e-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:f28256be-fde9-11f0-8af9-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Resistance gene" .
 
-    <abromics:3e626b20-fb9f-11f0-bf0e-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:f28256d2-fde9-11f0-8af9-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Gene length" .
 
-    <abromics:3e626b3e-fb9f-11f0-bf0e-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:f28256e6-fde9-11f0-8af9-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Identity (%)" .
 
-    <abromics:3e626b5c-fb9f-11f0-bf0e-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:f28256f0-fde9-11f0-8af9-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Coverage (%)" .
 
-    <abromics:3e626b7a-fb9f-11f0-bf0e-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:f28256fa-fde9-11f0-8af9-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Contig" .
 
-    <abromics:3e626b98-fb9f-11f0-bf0e-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:f282570e-fde9-11f0-8af9-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Start in contig" .
 
-    <abromics:3e626bb6-fb9f-11f0-bf0e-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:f2825718-fde9-11f0-8af9-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "End in contig" .
 
-    <abromics:3e626bde-fb9f-11f0-bf0e-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:f282572c-fde9-11f0-8af9-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Strand" .
 
-    <abromics:3e626bfc-fb9f-11f0-bf0e-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:f2825740-fde9-11f0-8af9-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Antibiotic class" .
 
-    <abromics:3e626c1a-fb9f-11f0-bf0e-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:f282574a-fde9-11f0-8af9-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "Target antibiotic" .
 
-    <abromics:3e626c38-fb9f-11f0-bf0e-90658429fd42> rdf:type sosa:ObservableProperty ;
+    <abromics:f282575e-fde9-11f0-8af9-90658429fd42> rdf:type sosa:ObservableProperty ;
         rdfs:label "# Accession" .
