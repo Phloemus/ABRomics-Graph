@@ -475,8 +475,14 @@ class GraphCreator:
             if report["sections"][1]["data"][0]["values"][0] not in self.samplesMapping.keys():
                 uniqueGraphId = uuid.uuid1()
                 originalSampleId = report["sections"][1]["data"][0]["values"][0]
-                ## submitterId = report["sections"][1]["data"][0]["values"][10]
-                countryName = report["sections"][1]["data"][0]["values"][6]
+
+
+                countryNameHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Country")
+                if countryNameHeaderId is not None:
+                    countryName = report["sections"][1]["data"][0]["values"][countryNameHeaderId]
+                else: 
+                    countryName = ""
+
                 collectionDate = report["sections"][1]["data"][0]["values"][2]
                 ##################### Stuck here
                 print(f"!!!! {collectionDate}")

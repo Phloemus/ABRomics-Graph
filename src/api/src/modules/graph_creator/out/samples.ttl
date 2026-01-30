@@ -25,7 +25,7 @@
 
 
 
-    <abromics:188f2704-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6791c0a-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002076" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -37,11 +37,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f2d76-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679265a-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002032" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -53,11 +53,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f300a-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6792b96-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002134" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -69,11 +69,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f321c-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6793096-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002116" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -85,11 +85,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f349c-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67935e6-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002183" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -101,11 +101,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188f36cc-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6793abe-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002059" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -117,11 +117,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:188f3924-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6793fa0-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002304" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -133,11 +133,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:188f3b5e-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679443c-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001898" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -149,11 +149,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:188f3dac-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6794996-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002038" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -165,11 +165,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f3f5a-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6794d74-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001924" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -181,11 +181,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Plantae"  ] .
 
 
-    <abromics:188f416c-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67951b6-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002022" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -197,11 +197,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f4306-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6795580-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002111" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -213,11 +213,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f44a0-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6795954-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002025" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -229,11 +229,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f4626-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6795cf6-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002292" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -245,11 +245,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188f47fc-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679612e-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002020" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -261,11 +261,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Homo sapiens"  ] .
 
 
-    <abromics:188f498c-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67964c6-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA003282" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -277,11 +277,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f4b08-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6796840-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "GCF_015291825.1" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -293,11 +293,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q148> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "People's Republic of China"  ] .
 
 
-    <abromics:188f4cac-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6796c28-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002105" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -309,11 +309,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f4e1e-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6796fe8-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "GCF_002961055.1" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -325,11 +325,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q148> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "People's Republic of China"  ] .
 
 
-    <abromics:188f4fb8-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67973b2-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002240" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -341,11 +341,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188f5170-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679779a-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002316" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -357,11 +357,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f52ec-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6797b14-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002024" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -373,11 +373,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f5468-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6797e98-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002182" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -389,11 +389,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:188f5620-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6798258-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001929" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -405,11 +405,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:188f57ba-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6798604-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002338" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -421,11 +421,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f5940-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679897e-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002155" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -437,11 +437,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f5abc-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6798ce4-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002296" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -453,11 +453,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q213> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Homo sapiens"  ] .
 
 
-    <abromics:188f5c4c-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6799068-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002179" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -469,11 +469,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia"  ] .
 
 
-    <abromics:188f5e04-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679945a-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002023" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -485,11 +485,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188f6020-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6799900-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA003270" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -501,11 +501,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188f620a-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f6799cde-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002126" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -517,11 +517,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:188f63ae-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679a09e-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002016" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -533,11 +533,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f6520-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679a404-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001995" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -549,11 +549,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f6692-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679a792-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "GCF_014192525.1" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -565,11 +565,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q17> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Japan"  ] .
 
 
-    <abromics:188f6818-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679ab34-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002033" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -581,11 +581,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:188f69a8-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679aeea-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA003277" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -597,11 +597,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f6b10-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679b264-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "GCF_013191295.1" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -613,11 +613,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q16> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Canada"  ] .
 
 
-    <abromics:188f6ca0-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679b5f2-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001926" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -629,11 +629,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f6e1c-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679b962-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002165" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -645,11 +645,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Plantae"  ] .
 
 
-    <abromics:188f6fa2-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679bd40-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002017" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -661,11 +661,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f710a-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679c0e2-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001900" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -677,11 +677,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f7272-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679c434-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001874" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -693,11 +693,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:188f7402-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679c7cc-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002357" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -709,11 +709,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f757e-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679cb46-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001955" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -725,11 +725,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f76e6-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679ceac-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002144" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -741,11 +741,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188f78b2-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679d302-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002312" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -757,11 +757,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:188f7a56-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679d6ae-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002005" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -773,11 +773,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:188f7bdc-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679da50-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004756" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -789,11 +789,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Homo sapiens"  ] .
 
 
-    <abromics:188f7d62-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679ddac-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002335" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -805,11 +805,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f7ede-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679e108-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001992" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -821,11 +821,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f8046-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679e48c-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002224" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -837,11 +837,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Plantae"  ] .
 
 
-    <abromics:188f81ea-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679ea4a-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001999" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -853,11 +853,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Plantae"  ] .
 
 
-    <abromics:188f837a-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679ecfc-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002186" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -869,11 +869,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f84f6-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679eedc-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002196" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -885,11 +885,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f8668-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679f08a-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001996" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -901,11 +901,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f87c6-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679f224-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002225" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -917,11 +917,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f894c-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679f3b4-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002293" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -933,11 +933,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f8ab4-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679f544-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001944" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -949,11 +949,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f8c26-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679f6ca-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002079" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -965,11 +965,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f8d98-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679f85a-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002215" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -981,11 +981,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f8f0a-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679fa26-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002294" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -997,11 +997,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f9068-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679fbb6-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001909" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1013,11 +1013,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Plantae"  ] .
 
 
-    <abromics:188f91ee-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679fd82-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002097" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1029,11 +1029,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Mus musculus"  ] .
 
 
-    <abromics:188f9388-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f679ff58-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002385" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1045,11 +1045,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f9504-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a0110-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "GCF_013343805.1" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1061,11 +1061,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q148> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "People's Republic of China"  ] .
 
 
-    <abromics:188f968a-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a02d2-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002088" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1077,11 +1077,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f97e8-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a0458-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002382" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1093,11 +1093,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Plantae"  ] .
 
 
-    <abromics:188f9978-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a061a-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002034" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1109,11 +1109,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f9ad6-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a07b4-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001970" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1125,11 +1125,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188f9c98-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a09c6-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA003278" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1141,11 +1141,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f9e00-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a0b9c-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001972" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1157,11 +1157,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188f9f54-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a0d2c-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002239" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1173,11 +1173,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188fa0c6-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a0eb2-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001886" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1189,11 +1189,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188fa21a-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a104c-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002147" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1205,11 +1205,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188fa396-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a120e-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002258" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1221,11 +1221,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Aves"  ] .
 
 
-    <abromics:188fa51c-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a13bc-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002366" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1237,11 +1237,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:188fa6ac-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a1574-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "GCF_013194615.1" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1253,11 +1253,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q16> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Canada"  ] .
 
 
-    <abromics:188fa832-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a172c-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002287" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1269,11 +1269,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188fa9e0-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a18f8-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002299" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1285,11 +1285,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188fab70-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a1aa6-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001880" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1301,11 +1301,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188face2-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a1c36-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001966" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1317,11 +1317,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Plantae"  ] .
 
 
-    <abromics:188fae5e-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a1dda-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002298" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1333,11 +1333,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188faff8-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a1f74-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002001" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1349,11 +1349,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Lasiommata megera"  ] .
 
 
-    <abromics:188fb174-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a2122-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001882" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1365,11 +1365,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188fb2f0-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a22b2-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002308" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1381,11 +1381,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188fb458-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a2442-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002057" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1397,11 +1397,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188fb5de-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a25dc-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001940" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1413,11 +1413,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q213> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Homo sapiens"  ] .
 
 
-    <abromics:188fb746-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a276c-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002334" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1429,11 +1429,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188fb8b8-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a2910-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002211" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1445,11 +1445,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188fba20-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a2aa0-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002098" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1461,11 +1461,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:188fbbba-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a2c62-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001930" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1477,11 +1477,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188fbd40-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a2e1a-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002156" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1493,11 +1493,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188fbea8-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a2fb4-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002233" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1509,11 +1509,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188fc006-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a3144-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002238" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1525,11 +1525,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188fc16e-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a32e8-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002387" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1541,11 +1541,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188fc2e0-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a3464-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002077" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1557,11 +1557,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Plantae"  ] .
 
 
-    <abromics:188fc470-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a3626-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002259" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1573,11 +1573,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Plantae"  ] .
 
 
-    <abromics:188fc600-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a37d4-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002318" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1589,11 +1589,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188fc7ae-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a39aa-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "GCF_013197155.1" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1605,11 +1605,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q145> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "United Kingdom"  ] .
 
 
-    <abromics:188fc92a-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a3b80-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001978" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1621,11 +1621,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Homo sapiens"  ] .
 
 
-    <abromics:188fca9c-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a3d38-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002288" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1637,11 +1637,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:188fcc36-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a3f04-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002226" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1653,11 +1653,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188fcdda-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a40da-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002235" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1669,11 +1669,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188fcf42-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a4274-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001973" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1685,11 +1685,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188fd10e-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a447c-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002081" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1701,11 +1701,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Asio otus"  ] .
 
 
-    <abromics:188fd294-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a4648-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001967" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1717,11 +1717,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188fd42e-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a4832-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002260" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1733,11 +1733,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188fd5aa-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a49ea-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002067" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1749,11 +1749,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:188fd758-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a4bb6-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001933" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1765,11 +1765,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188fd8de-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a4d8c-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002086" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1781,11 +1781,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188fda46-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a4f4e-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001961" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1797,11 +1797,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:188fdbd6-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a514c-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002201" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1813,11 +1813,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188fdd3e-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a5304-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002272" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1829,11 +1829,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188fdeba-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a54e4-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001866" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1845,11 +1845,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:188fe04a-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a56ba-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002080" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1861,11 +1861,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188fe1bc-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a585e-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "GCF_021390255.1" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1877,11 +1877,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q148> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "People's Republic of China"  ] .
 
 
-    <abromics:188fe342-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a5a52-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002227" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1893,11 +1893,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188fe4aa-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a5c00-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002123" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1909,11 +1909,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188fe626-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a5dd6-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002180" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1925,11 +1925,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188fe784-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a5f84-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001960" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1941,11 +1941,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188fe8ec-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a6128-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002207" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1957,11 +1957,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:188fea72-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a62fe-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001905" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1973,11 +1973,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188febd0-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a64a2-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001937" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -1989,11 +1989,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Homo sapiens"  ] .
 
 
-    <abromics:188fed42-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a6682-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001901" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2005,11 +2005,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188feed2-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a6880-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "GCF_019793975.1" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2021,11 +2021,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q148> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "People's Republic of China"  ] .
 
 
-    <abromics:188ff04e-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a6a92-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002267" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2037,11 +2037,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188ff1ac-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a6c68-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002026" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2053,11 +2053,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188ff30a-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a6e3e-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002386" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2069,11 +2069,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188ff4a4-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a7082-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002384" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2085,11 +2085,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188ff616-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a7262-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002289" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2101,11 +2101,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188ff77e-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a7438-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "GCF_000441455.1" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2117,11 +2117,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q148> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "People's Republic of China"  ] .
 
 
-    <abromics:188ff904-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a7636-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002094" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2133,11 +2133,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:188ffad0-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a7884-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002197" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2149,11 +2149,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188ffc38-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a7a82-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002114" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2165,11 +2165,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:188ffdb4-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a7c80-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002060" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2181,11 +2181,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Lasiommata megera"  ] .
 
 
-    <abromics:188fff1c-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a7eba-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002113" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2197,11 +2197,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Homo sapiens"  ] .
 
 
-    <abromics:18900098-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a8108-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002031" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2213,11 +2213,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:189001f6-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a82f2-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002036" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2229,11 +2229,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:18900368-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a84d2-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002206" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2245,11 +2245,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Plantae"  ] .
 
 
-    <abromics:189004f8-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a86e4-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001928" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2261,11 +2261,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:18900660-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a88c4-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002264" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2277,11 +2277,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:189007c8-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a8aae-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001869" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2293,11 +2293,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:18900926-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a8c8e-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002213" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2309,11 +2309,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Homo sapiens"  ] .
 
 
-    <abromics:18900a8e-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a8e96-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002229" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2325,11 +2325,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:18900c1e-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a90d0-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "GCF_013196225.1" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2341,11 +2341,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q145> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "United Kingdom"  ] .
 
 
-    <abromics:18900d9a-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a92f6-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002300" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2357,11 +2357,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:18900f02-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a94fe-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001942" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2373,11 +2373,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:1890106a-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a96e8-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001963" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2389,11 +2389,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:18901204-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a9922-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002181" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2405,11 +2405,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:1890138a-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a9b5c-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001917" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2421,11 +2421,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:1890151a-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a9daa-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002172" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2437,11 +2437,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:189016a0-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67a9fd0-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001993" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2453,11 +2453,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Homo sapiens"  ] .
 
 
-    <abromics:18901812-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67aa1ce-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002119" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2469,11 +2469,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:189019b6-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67aa44e-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002139" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2485,11 +2485,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Homo sapiens"  ] .
 
 
-    <abromics:18901b1e-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67aa692-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002217" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2501,11 +2501,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:18901c86-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67aa908-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002066" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2517,11 +2517,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:18901df8-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67aab38-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001883" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2533,11 +2533,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:18901f74-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67aadc2-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002166" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2549,11 +2549,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:189020f0-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67aaffc-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002193" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2565,11 +2565,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:1890228a-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67ab290-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "GCF_006568995.1" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2581,11 +2581,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q30> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "United States of America"  ] .
 
 
-    <abromics:18902406-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67ab506-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002321" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2597,11 +2597,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:189025be-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67ab790-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002273" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2613,11 +2613,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:18902730-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67ab9e8-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "GCF_002962445.1" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2629,11 +2629,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q148> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "People's Republic of China"  ] .
 
 
-    <abromics:189028ac-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67abc36-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001989" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2645,11 +2645,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia"  ] .
 
 
-    <abromics:18902a46-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67abeac-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002301" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2661,11 +2661,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:18902c08-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67ac15e-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001988" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2677,11 +2677,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q142> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Homo sapiens"  ] .
 
 
-    <abromics:18902d84-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67ac3ac-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002145" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2693,11 +2693,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q213> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Homo sapiens"  ] .
 
 
-    <abromics:18902ef6-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67ac5e6-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002309" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2709,11 +2709,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:18903090-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67ac85c-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "GCF_013191375.1" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2725,11 +2725,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q16> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Canada"  ] .
 
 
-    <abromics:1890320c-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67acb04-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002230" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2741,11 +2741,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Falco tinnunculus"  ] .
 
 
-    <abromics:18903392-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67acd98-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "GCF_000441195.1" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2757,11 +2757,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q148> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "People's Republic of China"  ] .
 
 
-    <abromics:1890352c-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67ad0ae-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002231" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2773,11 +2773,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia"  ] .
 
 
-    <abromics:189036b2-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67ad356-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002135" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2789,11 +2789,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:18903842-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67ad5f4-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002048" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2805,11 +2805,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Plantae"  ] .
 
 
-    <abromics:189039d2-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67ad8a6-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002176" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2821,11 +2821,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:18903b62-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67adb3a-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002064" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2837,11 +2837,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:18903cf2-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67addc4-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001994" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2853,11 +2853,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Bos taurus"  ] .
 
 
-    <abromics:18903e5a-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67ae026-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002202" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2869,11 +2869,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Not applicable"  ] .
 
 
-    <abromics:18903fea-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67ae2b0-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "GCF_013344365.1" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2885,11 +2885,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q148> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "People's Republic of China"  ] .
 
 
-    <abromics:18904170-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67ae53a-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002167" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2901,11 +2901,11 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Ciconia ciconia"  ] .
 
 
-    <abromics:1890431e-fdec-11f0-87e3-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    <abromics:f67ae7f6-fdf1-11f0-8d17-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA002158" ;
         obo:RO_0002162 <ncbitaxon:> ;
         
@@ -2917,6 +2917,6 @@
             prov:wasDerivedFrom <> ;
         
         uniprot-core:host <ncbitaxon:> ;
-        prov:atLocation <> ;
+        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
         prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Mus musculus"  ] .
 

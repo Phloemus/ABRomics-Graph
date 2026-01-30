@@ -17,14 +17,14 @@
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
 
-    <188ed65a-fdec-11f0-87e3-90658429fd42> rdf:type sosa:Procedure ;
+    <f678c2fa-fdf1-11f0-8d17-90658429fd42> rdf:type sosa:Procedure ;
         
-            ssn:implementedBy <188ebfe4-fdec-11f0-87e3-90658429fd42> ; 
+            ssn:implementedBy <f678aa86-fdf1-11f0-8d17-90658429fd42> ; 
         
-            ssn:implementedBy <188ec0c0-fdec-11f0-87e3-90658429fd42> ; 
+            ssn:implementedBy <f678ab9e-fdf1-11f0-8d17-90658429fd42> ; 
         
-            ssn:implementedBy <188ec28c-fdec-11f0-87e3-90658429fd42> ; 
+            ssn:implementedBy <f678ad9c-fdf1-11f0-8d17-90658429fd42> ; 
         
-            ssn:implementedBy <188ec430-fdec-11f0-87e3-90658429fd42> ; 
+            ssn:implementedBy <f678af86-fdf1-11f0-8d17-90658429fd42> ; 
         
         rdfs:label "workflow 1 (genomic)" .
