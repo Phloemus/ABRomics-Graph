@@ -91,7 +91,7 @@ class GraphCreator:
     def __curateReports(self):
         curatedReports = []
         for report in self.allReports:
-            if "sections" not in report or len(report["sections"][1]["data"][0]["values"]) < 11:
+            if "sections" not in report or len(report["sections"][1]["data"][0]["values"]) < 8:
                 continue
             curatedReports.append(report)
         self.allReports = curatedReports
@@ -471,11 +471,20 @@ class GraphCreator:
 
     ## Add the samples data to memory for graph creation
     def __addSamples(self):
+        count = 0
+        countSample = 0
         for report in self.allReports:
-            if report["sections"][1]["data"][0]["values"][0] not in self.samplesMapping.keys():
+            count += 1
+            print(f"count report: {count}")
+            abromicsIdHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "ABRomics ID")
+            if abromicsIdHeaderId is not None:
+                abromicsId = report["sections"][1]["data"][0]["values"][abromicsIdHeaderId]
+            else: 
+                continue
+            if abromicsId not in self.samplesMapping.keys():
+                countSample += 1
+                print(f"count sample: {countSample}")
                 uniqueGraphId = uuid.uuid1()
-                originalSampleId = report["sections"][1]["data"][0]["values"][0]
-
 
                 countryNameHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Country")
                 if countryNameHeaderId is not None:
@@ -483,23 +492,26 @@ class GraphCreator:
                 else: 
                     countryName = ""
 
-                collectionDate = report["sections"][1]["data"][0]["values"][2]
-                ##################### Stuck here
-                print(f"!!!! {collectionDate}")
-                try:
-                    collectionDate = parser.parse(collectionDate)
-                except:
-                    collectionDate = parser.parse("1970-01-01") ## In case of an error, just use the default collectionDate value
-
+                collectionDateHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Collection date")
+                if collectionDateHeaderId is not None:
+                    collectionDate = report["sections"][1]["data"][0]["values"][collectionDateHeaderId]
+                    try:
+                        collectionDate = parser.parse(collectionDate)
+                    except:
+                        collectionDate = parser.parse("1970-01-01") ## In case of an error, just use the default collectionDate value
+                else:
+                    collectionDate = parser.parse("1970-01-01")
+                
                 if datetime.strftime(collectionDate, "%Y"):
                     collectionDate = datetime.strftime(collectionDate, '%Y-01-01')
+
                 microorganism = report["sections"][1]["data"][0]["values"][1] ## because the section 0-0 is not consistant we use the name of the microorganism from the section 1-0-0
                 host = report["sections"][1]["data"][0]["values"][6]
                 sampleSource = report["sections"][1]["data"][0]["values"][5]
 
                 self.samples.append({
                     "id": uniqueGraphId,
-                    "originalSampleId": originalSampleId,
+                    "originalSampleId": abromicsId,
                     "strainId": report["sections"][1]["data"][0]["values"][1],
                     "microorganism": self.speciesTaxonomy[microorganism] if microorganism in self.speciesTaxonomy.keys() else "",
                     "collectionDate": collectionDate,
@@ -513,7 +525,7 @@ class GraphCreator:
                 })
 
                 ## self.samplesSubmitters[originalSampleId] = submitterId
-                self.samplesMapping[originalSampleId] = uniqueGraphId
+                self.samplesMapping[abromicsId] = uniqueGraphId
 
 
     ## Add the observations made on all the samples
@@ -528,7 +540,14 @@ class GraphCreator:
                 for observation in report["sections"][3]["data"][0]["values"][observationHeaderId]:
                     uniqueGraphId = uuid.uuid1()
                     ## strainFeatureOfInterest = self.strainsMapping[report["sections"][1]["data"][0]["values"][0]]
-                    sampleFeatureOfInterest = self.samplesMapping[report["sections"][1]["data"][0]["values"][0]]
+                    
+                    abromicsIdHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "ABRomics ID")
+                    if abromicsIdHeaderId is not None:
+                        abromicsId = report["sections"][1]["data"][0]["values"][abromicsIdHeaderId]
+                    else: 
+                        continue
+
+                    sampleFeatureOfInterest = self.samplesMapping[abromicsId]
                     geneFeatureOfInterest = self.genesMapping[report["sections"][3]["data"][0]["values"][0][observationId]]
                     observableProperty = self.observablePropertiesMapping[observationHeader]
 

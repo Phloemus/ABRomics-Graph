@@ -17,14 +17,30 @@
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
 
-    <f678c2fa-fdf1-11f0-8d17-90658429fd42> rdf:type sosa:Procedure ;
+    <3a1a37b8-0046-11f1-a685-90658429fd42> rdf:type sosa:Procedure ;
         
-            ssn:implementedBy <f678aa86-fdf1-11f0-8d17-90658429fd42> ; 
+            ssn:implementedBy <3a18c6d0-0046-11f1-a685-90658429fd42> ; 
         
-            ssn:implementedBy <f678ab9e-fdf1-11f0-8d17-90658429fd42> ; 
+            ssn:implementedBy <3a18c73e-0046-11f1-a685-90658429fd42> ; 
         
-            ssn:implementedBy <f678ad9c-fdf1-11f0-8d17-90658429fd42> ; 
+            ssn:implementedBy <3a18c7b6-0046-11f1-a685-90658429fd42> ; 
         
-            ssn:implementedBy <f678af86-fdf1-11f0-8d17-90658429fd42> ; 
+            ssn:implementedBy <3a18c900-0046-11f1-a685-90658429fd42> ; 
+        
+            ssn:implementedBy <3a18c9dc-0046-11f1-a685-90658429fd42> ; 
+        
+            ssn:implementedBy <3a18cb94-0046-11f1-a685-90658429fd42> ; 
+        
+            ssn:implementedBy <3a18cdd8-0046-11f1-a685-90658429fd42> ; 
+        
+            ssn:implementedBy <3a18ce5a-0046-11f1-a685-90658429fd42> ; 
+        
+            ssn:implementedBy <3a18d058-0046-11f1-a685-90658429fd42> ; 
+        
+            ssn:implementedBy <3a18d44a-0046-11f1-a685-90658429fd42> ; 
+        
+            ssn:implementedBy <3a19349e-0046-11f1-a685-90658429fd42> ; 
+        
+            ssn:implementedBy <3a19dfe8-0046-11f1-a685-90658429fd42> ; 
         
         rdfs:label "workflow 1 (genomic)" .
