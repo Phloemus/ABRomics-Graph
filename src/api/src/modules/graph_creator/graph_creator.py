@@ -96,13 +96,17 @@ class GraphCreator:
             curatedReports.append(report)
         self.allReports = curatedReports
 
-    ## give a header list and get the id corresponding to it's label in the header list
-    def __getHeaderId(self, headerData, label):
-        if len([id for id, value in enumerate(headerData) if value == label]) != 0: 
-            return [id for id, value in enumerate(headerData) if value == label][0]
+    ## from a table materialized as report["sections"][x][data][y], returns the value associated with 
+    ## the column name from header that match the label. 
+    def __getValueFromColname(self, tableData, label):
+        if len([id for id, value in enumerate(tableData["header"]) if value == label]) != 0: 
+            headerId = [id for id, value in enumerate(tableData["header"]) if value == label][0]
+            if headerId is not None:
+                return tableData["values"][headerId]
+            else: 
+                return ""
         else:
-            return None
-
+            return ""
 
     def __createTtlFile(self, templatePath, outputPath, dataName, data, filterFunctions=[]):
 
@@ -265,12 +269,12 @@ class GraphCreator:
     ##          the solution would be to get the id and change the start of the url to ncbi taxon.
     def __getSpeciesTaxonomy(self):
         for report in self.allReports:
-            microorganismHeaderId =  self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Microorganism scientific name")
-            hostHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Host")
-            if microorganismHeaderId is not None and report["sections"][1]["data"][0]["values"][microorganismHeaderId] not in self.species:
-                self.species.append(report["sections"][1]["data"][0]["values"][microorganismHeaderId])
-            if hostHeaderId is not None and report["sections"][1]["data"][0]["values"][hostHeaderId] not in self.species: 
-                self.species.append(report["sections"][1]["data"][0]["values"][hostHeaderId])
+            microorganism =  self.__getValueFromColname(report["sections"][1]["data"][0], "Microorganism scientific name")
+            host = self.__getValueFromColname(report["sections"][1]["data"][0], "Host")
+            if microorganism not in self.species:
+                self.species.append(microorganism)
+            if host not in self.species: 
+                self.species.append(host)
         speciesNames = ""
         for speciesName in self.species:
             speciesNames += f"'{speciesName}' "
@@ -375,9 +379,7 @@ class GraphCreator:
     def __addSensors(self):
         for report in self.allReports:
 
-            sensorNameHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Sequencing technology")
-            if sensorNameHeaderId is not None:
-                sensorName = report["sections"][1]["data"][0]["values"][sensorNameHeaderId]
+            sensorName = self.getValueFromColname(report["sections"][1]["data"][0], "Sequencing technology")
 
             if sensorName not in self.sensorsMapping.keys() and sensorName != "":
                 uniqueGraphId = uuid.uuid1()
@@ -415,12 +417,8 @@ class GraphCreator:
     def __addStrains(self):
         for report in self.allReports:
             uniqueGraphId = uuid.uuid1()
-            specieNameHeaderId = self.__getHeaderId(report["sections"][2]["data"][0]["header"], "Isolate identified as")
-            stHeaderId = self.__getHeaderId(report["sections"][2]["data"][0]["header"], "Sequence Type (ST)")
-            if specieNameHeaderId is not None:
-                speciesName = report["sections"][2]["data"][0]["values"][specieNameHeaderId]
-            if stHeaderId is not None:
-                st = report["sections"][2]["data"][0]["values"][stHeaderId]
+            specieName = self.__getValueFromColname(report["sections"][2]["data"][0], "Isolate identified as")
+            stHeaderId = self.__getValueFromColname(report["sections"][2]["data"][0], "Sequence Type (ST)")
             if speciesName in self.speciesTaxonomy:
                 taxonomy = self.speciesTaxonomy[speciesName]
             else:
@@ -471,30 +469,15 @@ class GraphCreator:
 
     ## Add the samples data to memory for graph creation
     def __addSamples(self):
-        count = 0
-        countSample = 0
         for report in self.allReports:
-            count += 1
-            print(f"count report: {count}")
-            abromicsIdHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "ABRomics ID")
-            if abromicsIdHeaderId is not None:
-                abromicsId = report["sections"][1]["data"][0]["values"][abromicsIdHeaderId]
-            else: 
+            abromicsId = self.__getValueFromColname(report["sections"][1]["data"][0], "ABRomics ID")
+            if abromicsId is not "":
                 continue
             if abromicsId not in self.samplesMapping.keys():
-                countSample += 1
-                print(f"count sample: {countSample}")
                 uniqueGraphId = uuid.uuid1()
-
-                countryNameHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Country")
-                if countryNameHeaderId is not None:
-                    countryName = report["sections"][1]["data"][0]["values"][countryNameHeaderId]
-                else: 
-                    countryName = ""
-
-                collectionDateHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Collection date")
-                if collectionDateHeaderId is not None:
-                    collectionDate = report["sections"][1]["data"][0]["values"][collectionDateHeaderId]
+                countryName = self.__getValueFromColname(report["sections"][1]["data"][0], "Country")
+                collectionDate = self.__getValueFromColname(report["sections"][1]["data"][0], "Collection date")
+                if collectionDateHeaderId is not "":
                     try:
                         collectionDate = parser.parse(collectionDate)
                     except:
@@ -502,12 +485,18 @@ class GraphCreator:
                 else:
                     collectionDate = parser.parse("1970-01-01")
                 
+                print(f"collection date: {collectionDate}")
                 if datetime.strftime(collectionDate, "%Y"):
                     collectionDate = datetime.strftime(collectionDate, '%Y-01-01')
+                print(f"real collection date: {collectionDate}")
 
-                microorganism = report["sections"][1]["data"][0]["values"][1] ## because the section 0-0 is not consistant we use the name of the microorganism from the section 1-0-0
-                host = report["sections"][1]["data"][0]["values"][6]
-                sampleSource = report["sections"][1]["data"][0]["values"][5]
+                microorganism = self.__getValueFromColname(report["sections"][2]["data"][0], "Isolate identified as")
+
+                host = self.__getValueFromColname(report["sections"][1]["data"][0], "Host")
+                
+                sampleType = self.__getValueFromColname(report["sections"][1]["data"][0], "Sample type")
+                sampleSource = self.__getValueFromColname(report["sections"][1]["data"][0], "Sample source")
+                sensor = self.__getValueFromColname(report["sections"][1]["data"][0], "Sequencing technology")
 
                 self.samples.append({
                     "id": uniqueGraphId,
@@ -515,13 +504,11 @@ class GraphCreator:
                     "strainId": report["sections"][1]["data"][0]["values"][1],
                     "microorganism": self.speciesTaxonomy[microorganism] if microorganism in self.speciesTaxonomy.keys() else "",
                     "collectionDate": collectionDate,
-                    "sampleType": report["sections"][1]["data"][0]["values"][3],
+                    "sampleType": sampleType,
                     "sampleSource": self.sampleSourcesBindNCIT[sampleSource] if sampleSource in self.sampleSourcesBindNCIT.keys() else "", ## BUG # always return en empty string
                     "host": self.speciesTaxonomy[host] if host in self.speciesTaxonomy.keys() else "",
                     "country": self.countries[countryName] if countryName in self.countries.keys() else "",
-                    "sequencingTechnology": report["sections"][1]["data"][0]["values"][7],
-                    ## "sequencingPartner": report["sections"][1]["data"][0]["values"][9], Sequencing partner is no longer available in the ABRomics reports
-                    ## "submitterId": self.peopleMapping[submitterId]
+                    "sequencingTechnology": self.sensorMapping[sensor] if sensor in self.sensorsMapping.keys() else ""
                 })
 
                 ## self.samplesSubmitters[originalSampleId] = submitterId
@@ -539,25 +526,17 @@ class GraphCreator:
             for observationHeader in report["sections"][3]["data"][0]["header"]:
                 for observation in report["sections"][3]["data"][0]["values"][observationHeaderId]:
                     uniqueGraphId = uuid.uuid1()
-                    ## strainFeatureOfInterest = self.strainsMapping[report["sections"][1]["data"][0]["values"][0]]
                     
-                    abromicsIdHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "ABRomics ID")
-                    if abromicsIdHeaderId is not None:
-                        abromicsId = report["sections"][1]["data"][0]["values"][abromicsIdHeaderId]
-                    else: 
-                        continue
-
+                    abromicsId = self.__getValueFromColname(report["sections"][1]["data"][0], "ABRomics ID")
                     sampleFeatureOfInterest = self.samplesMapping[abromicsId]
                     geneFeatureOfInterest = self.genesMapping[report["sections"][3]["data"][0]["values"][0][observationId]]
                     observableProperty = self.observablePropertiesMapping[observationHeader]
 
-                    sensorNameHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Sequencing technology")
-                    if sensorNameHeaderId is not None:
-                        sensor = "" if report["sections"][1]["data"][0]["values"][sensorNameHeaderId] == "" else self.sensorsMapping[report["sections"][1]["data"][0]["values"][sensorNameHeaderId]]
-
+                    sensorName = self.__getValueFromColname(report["sections"][1]["data"][0], "Sequencing technology")
+                    sensor = "" if sensorName == "" else self.sensorsMapping[sensorName]
                     procedure = self.proceduresMapping["workflow 1 (genomic)"]
 
-                    resultTime = report["sections"][1]["data"][0]["values"][2]
+                    resultTime = self.getValueFromColname(report["sections"][1]["data"][0], "Collection date")
                     try:
                         resultTime = parser.parse(resultTime)
                     except:
