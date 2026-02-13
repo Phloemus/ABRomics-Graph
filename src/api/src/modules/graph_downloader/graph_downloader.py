@@ -5,6 +5,7 @@ import os
 import json
 from dotenv import load_dotenv
 from getpass4 import getpass
+import shutil
 
 
 ## Downloader class allows to fetch abromics reports from the api, filter them 
@@ -130,11 +131,75 @@ class Downloader():
             print(f"Download finish ! \nnb success: {countDownloadSuccess}\nnb fails: {countDownloadFails}")
 
 
+## Used to curate downloaded reports using values present in the reports. 
+## Like filtering the reports depending on the country etc
+## This class allows to copy the some reports over to an other directory
+class ReportCurator():
+
+    def __init__(self, allReportsPath= ".", curatorOutputPath= "", metadataFilters={}):
+        self.allReportsPath = allReportsPath
+        self.curatorOutputPath = curatorOutputPath
+        self.metadataFilters = metadataFilters
+        self.allReportsFilenames = []
+        self.allReports = [self.__readJsonFromFile(f"{allReportsPath}/{reportFilename}", reportFilename) for reportFilename in os.listdir(allReportsPath) if reportFilename.endswith(".json")]
+        self.curatedReportsFilenames = []
+
+        if not os.path.exists(self.curatorOutputPath):
+            os.makedirs(self.curatorOutputPath)
+
+
+    def __getValueFromColname(self, tableData, label):
+        if len([id for id, value in enumerate(tableData["header"]) if value == label]) != 0: 
+            headerId = [id for id, value in enumerate(tableData["header"]) if value == label][0]
+            if headerId != None:
+                return tableData["values"][headerId]
+            else: 
+                return ""
+        else:
+            return ""
+
+    def __readJsonFromFile(self, path, filename):
+        with open(path) as f:
+            d = json.load(f)
+            self.allReportsFilenames.append(filename)
+            return d
+
+    ## curate the reports by only copying the reports have enough metadata and metadata that match the constraints given by the metadata filters
+    def curateReports(self):
+        self.curatedReportsFilenames = []
+        i = 0
+        for report in self.allReports:
+            i += 1
+            isMetadataOk = False
+            if len(report["sections"][1]["data"][0]["values"]) < 7:
+                continue
+            for key, value in self.metadataFilters.items():
+                inReportMetadataValue = self.__getValueFromColname(report["sections"][1]["data"][0], key)
+                print(f"{inReportMetadataValue} - {value}")
+                if inReportMetadataValue != None and inReportMetadataValue == value:
+                    isMetadataOk = True
+            if isMetadataOk:
+                self.curatedReportsFilenames.append(self.allReportsFilenames[i-1])
+                shutil.copy(f"{self.allReportsPath}/{self.allReportsFilenames[i-1]}", f"{self.curatorOutputPath}/{self.allReportsFilenames[i-1]}")
+        print(f"{len(self.curatedReportsFilenames)}/{len(self.allReportsFilenames)} reports kept after curation with given metadata filters")
+
+
+
+
 if __name__ == "__main__":
-    downloadDir = "new-public-reports"
-    choiceDownloadFreshReports = input(f"Download fresh reports data from abromics (this action is destructive) (target directory: {downloadDir}) ? [yes/no] ")
-    if choiceDownloadFreshReports == "yes": 
-        downloader = Downloader(downloadDir = downloadDir)
-        downloader.authenticate()
-        print("Preparing the downloading process can be a bit long. Please wait..")
-        downloader.getAllAbromicsReadyReports()
+    choiceOption = input(f"Report downloader module\n\n1.Download reports\n2.Curate UC1 and UC2 reports\n\nSelect an option (1 or 2)\n")
+    if choiceOption == "1":
+        downloadDir = "reports"
+        choiceDownloadFreshReports = input(f"Download fresh reports data from abromics (this action is destructive) (targeted directory: {downloadDir}) ? [yes/no] ")
+        if choiceDownloadFreshReports == "yes": 
+            downloader = Downloader(downloadDir = downloadDir)
+            downloader.authenticate()
+            print("Preparing the downloading process can be a bit long. Please wait..")
+            downloader.getAllAbromicsReadyReports()
+    if choiceOption == "2":
+        choiceCurateReports = input(f"Curation of the uc1 and uc2 reports (this action is destructive) (targeted directories: uc1-reports and uc2-reports) ? [yes/no] ")
+        if choiceCurateReports == "yes":
+            uc1Curator = ReportCurator("reports", "uc1-reports", {"Submitter name": "Claudine Médigue"})
+            uc1Curator.curateReports()
+            uc2Curator = ReportCurator("reports", "uc2-reports", {"Country": "Chile"})
+            uc2Curator.curateReports()
