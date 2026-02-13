@@ -101,7 +101,7 @@ class GraphCreator:
     def __getValueFromColname(self, tableData, label):
         if len([id for id, value in enumerate(tableData["header"]) if value == label]) != 0: 
             headerId = [id for id, value in enumerate(tableData["header"]) if value == label][0]
-            if headerId is not None:
+            if headerId != None:
                 return tableData["values"][headerId]
             else: 
                 return ""
@@ -379,7 +379,7 @@ class GraphCreator:
     def __addSensors(self):
         for report in self.allReports:
 
-            sensorName = self.getValueFromColname(report["sections"][1]["data"][0], "Sequencing technology")
+            sensorName = self.__getValueFromColname(report["sections"][1]["data"][0], "Sequencing technology")
 
             if sensorName not in self.sensorsMapping.keys() and sensorName != "":
                 uniqueGraphId = uuid.uuid1()
@@ -418,9 +418,9 @@ class GraphCreator:
         for report in self.allReports:
             uniqueGraphId = uuid.uuid1()
             specieName = self.__getValueFromColname(report["sections"][2]["data"][0], "Isolate identified as")
-            stHeaderId = self.__getValueFromColname(report["sections"][2]["data"][0], "Sequence Type (ST)")
-            if speciesName in self.speciesTaxonomy:
-                taxonomy = self.speciesTaxonomy[speciesName]
+            st = self.__getValueFromColname(report["sections"][2]["data"][0], "Sequence Type (ST)")
+            if specieName in self.speciesTaxonomy:
+                taxonomy = self.speciesTaxonomy[specieName]
             else:
                 taxonomy = ""
 
@@ -430,7 +430,7 @@ class GraphCreator:
                 "taxonomy": taxonomy
             })
 
-            self.strainsMapping[speciesName] = uniqueGraphId 
+            self.strainsMapping[specieName] = uniqueGraphId 
 
     ## Add genes data to the memory for graph creation
     ## should get all the gene ontology id from the gene names to have fair data !
@@ -471,13 +471,13 @@ class GraphCreator:
     def __addSamples(self):
         for report in self.allReports:
             abromicsId = self.__getValueFromColname(report["sections"][1]["data"][0], "ABRomics ID")
-            if abromicsId is not "":
+            if abromicsId != "":
                 continue
             if abromicsId not in self.samplesMapping.keys():
                 uniqueGraphId = uuid.uuid1()
                 countryName = self.__getValueFromColname(report["sections"][1]["data"][0], "Country")
                 collectionDate = self.__getValueFromColname(report["sections"][1]["data"][0], "Collection date")
-                if collectionDateHeaderId is not "":
+                if collectionDate != "":
                     try:
                         collectionDate = parser.parse(collectionDate)
                     except:
@@ -508,7 +508,7 @@ class GraphCreator:
                     "sampleSource": self.sampleSourcesBindNCIT[sampleSource] if sampleSource in self.sampleSourcesBindNCIT.keys() else "", ## BUG # always return en empty string
                     "host": self.speciesTaxonomy[host] if host in self.speciesTaxonomy.keys() else "",
                     "country": self.countries[countryName] if countryName in self.countries.keys() else "",
-                    "sequencingTechnology": self.sensorMapping[sensor] if sensor in self.sensorsMapping.keys() else ""
+                    "sequencingTechnology": self.sensorsMapping[sensor] if sensor in self.sensorsMapping.keys() else ""
                 })
 
                 ## self.samplesSubmitters[originalSampleId] = submitterId
@@ -536,7 +536,7 @@ class GraphCreator:
                     sensor = "" if sensorName == "" else self.sensorsMapping[sensorName]
                     procedure = self.proceduresMapping["workflow 1 (genomic)"]
 
-                    resultTime = self.getValueFromColname(report["sections"][1]["data"][0], "Collection date")
+                    resultTime = self.__getValueFromColname(report["sections"][1]["data"][0], "Collection date")
                     try:
                         resultTime = parser.parse(resultTime)
                     except:

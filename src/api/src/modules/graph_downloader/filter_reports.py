@@ -27,11 +27,33 @@ allReportsFilenames = []
 allReports = []
 allReports = [readJsonFromFile(f"reports/{reportFilename}", reportFilename, allReportsFilenames) for reportFilename in os.listdir("reports") if reportFilename.endswith(".json")]
 
-print(allReportsFilenames)
-
 data = curateReports(allReports, allReportsFilenames)
 allReports = data["reports"]
 allReportsFilenames = data["reportsFilenames"]
+
+accessToken = ""
+
+
+def authenticate():
+    print("User authenfication")
+    email = input("Enter your email: ")
+    password = getpass("Password: ")
+
+    response = requests.post(
+        "https://analysis.abromics.fr/api/login/", 
+        json={
+            "email": email,
+            "password": password
+        }
+    )
+    try:
+        response.raise_for_status()
+        response = response.json()
+        accessToken = response['access']
+    except requests.exceptions.HTTPError as e:
+        print(e)
+        exit()
+
 
 def getPublicReportsIds():
     response = { "next": "https://analysis.abromics.fr/api/report" }
@@ -41,12 +63,11 @@ def getPublicReportsIds():
             response["next"],
             params={'status': 'ready_to_report'},
             headers = {
-                'Authorization': f"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMwOTkwMjY0LCJpYXQiOjE3MzA5NzMxODEsImp0aSI6ImRlMGE5YzZmYTQwODQ2ZTg5ZmY0ODY5MWE1N2ZmYjIxIiwidXNlcl9pZCI6NTh9._SFTtNQ7qjf6w3hS7Mmst5ieH4dMGpXfViS63pAZ7eU",
+                'Authorization': f"Bearer {accessToken}"
             }
          )
         try:
             response = response.json()
-            ## print(response)
             for report in response["results"]:
                 publicReportIds.append(report["id"])
         except:
