@@ -18,8 +18,8 @@ from dotenv import load_dotenv # to read the environment variables from the .env
 ## Creator module class
 class GraphCreator:
 
-    def __init__(self, reportDirectory = "", cacheDirectory = "", sparqlEndpoint = ""):
-        self.reportDirectory = reportDirectory
+    def __init__(self, reportDirectories = [], cacheDirectory = "", sparqlEndpoint = ""):
+        self.reportDirectories = reportDirectories
         self.cacheDirectory = cacheDirectory
         self.sparqlEndpoint = sparqlEndpoint
         self.allReports = []
@@ -132,6 +132,8 @@ class GraphCreator:
         template = env.get_template(templatePath)
         templateVars = { dataName : data }
         dataGraph = template.render(templateVars)
+        if not os.path.exists(outputPath):
+            os.makedirs(outputPath)
         with open(f"{outputPath}/{dataName}.ttl", "w") as f:
             f.write(dataGraph)
         print(f"{dataName} graph created")
@@ -224,37 +226,56 @@ class GraphCreator:
     ## of sample sources)
     def __getSampleSources(self):
         for report in self.allReports:
-            if report["sections"][1]["data"][0]["values"][5] not in self.sampleSources:
-                self.sampleSources.append(report["sections"][1]["data"][0]["values"][5])
+            sampleSource = self.__getValueFromColname(report["sections"][1]["data"][0], "Sample source")
+            if sampleSource != None and sampleSource != "":
+                self.sampleSources.append(sampleSource)
         sampleSourceNames = ""
         for sampleSourceName in self.sampleSources:
             sampleSourceNames += f"'{sampleSourceName}' "
-            print(sampleSourceName)
         sparql_query = f"""
+            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX ncbitaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+            PREFIX uberon: <http://purl.obolibrary.org/obo/UBERON_>
+            PREFIX envo: <http://purl.obolibrary.org/obo/ENVO_>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
             PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+            PREFIX sio: <http://semanticscience.org/resource/>
 
-            SELECT ?sampleSourceName ?sourceId WHERE {{
-                 VALUES ?sampleSourceName {{
-                     { sampleSourceNames }
-                 }}
-
-                VALUES ?topLevelClassName {{ 
-                  'Anatomic Structure, System, or Substance'
+            SELECT DISTINCT  ?sampleSourceName ?sourceId ?parentClass ?parentClassLabel (COUNT(?existingSamples) as ?nbOccurences) 
+            FROM <http://www.ontotext.com/explicit>
+            WHERE {{
+              {{ 
+                ?sourceId rdfs:subClassOf+ uberon:0000465 . 
+              }} UNION {{
+                ?sourceId rdfs:subClassOf+ envo:00000428 .
+              }} UNION {{
+                 ?sourceId rdfs:subClassOf+ ncit:C12219 . ## ncit anatomical structure, system or substance
+                MINUS {{
+                  ?sourceId rdfs:subClassOf+ ?excluded .
+                  VALUES ?excluded {{ ncit:C21599 ncit:C34070 }} . ## Exclude micro anatomical structure and cell part
                 }}
-
-                ?topLevelClass rdfs:label ?topLevelClassName .
-                ?sourceId rdfs:subClassOf+ ?topLevelClass .
-
-                ?sourceId rdfs:label ?sampleSourceName .
-            }}
+              }} UNION {{
+                ?existingSamples rdf:type sio:001050 .
+                ?existingSamples prov:wasDerivedFrom ?sourceId .
+              }}
+              ?sourceId rdfs:label ?sampleSourceName .
+              VALUES ?sampleSourceName {{
+                    { sampleSourceNames }
+              }}
+              ?sourceId rdfs:subClassOf ?parentClass .
+              ?parentClass rdfs:label ?parentClassLabel .
+            }} GROUP BY ?sourceId ?sampleSourceName ?parentClass ?parentClassLabel
+            ORDER BY DESC(?nbOccurences)
         """
         print("Fetching sample source ids ...")
-        sparql = SPARQLWrapper("http://localhost:8890/sparql")
+        sparql = SPARQLWrapper("http://localhost:8081/graphdb/repositories/abromics-kg") ## This is in local : it's very baaad (but it has ARO indexed)
         sparql.setReturnFormat(JSON)
         sparql.setQuery(sparql_query)
         try:
             res = sparql.query().convert()
             recs = res["results"]["bindings"]
+            print(recs)
             for item in recs:
                 self.sampleSourcesBindNCIT[item["sampleSourceName"]["value"]] = item["sourceId"]["value"]
         except Exception as e:
@@ -471,7 +492,7 @@ class GraphCreator:
     def __addSamples(self):
         for report in self.allReports:
             abromicsId = self.__getValueFromColname(report["sections"][1]["data"][0], "ABRomics ID")
-            if abromicsId != "":
+            if abromicsId == None or abromicsId == "":
                 continue
             if abromicsId not in self.samplesMapping.keys():
                 uniqueGraphId = uuid.uuid1()
@@ -527,7 +548,7 @@ class GraphCreator:
                 for observation in report["sections"][3]["data"][0]["values"][observationHeaderId]:
                     uniqueGraphId = uuid.uuid1()
                     
-                    abromicsId = self.__getValueFromColname(report["sections"][1]["data"][0], "ABRomics ID")
+                    abromicsId = self.__getValueFromColname(report["sections"][1]["data"][0], "ABRomics ID") ## The samplesMapping is empty old abromics reports have an other key for hte ABRomics ID and it's not in the right place in the reports. 
                     sampleFeatureOfInterest = self.samplesMapping[abromicsId]
                     geneFeatureOfInterest = self.genesMapping[report["sections"][3]["data"][0]["values"][0][observationId]]
                     observableProperty = self.observablePropertiesMapping[observationHeader]
@@ -627,7 +648,12 @@ class GraphCreator:
     def createGraph(self, fetchCountriesFromCache = None, templatePath = "", outputPath = ""):
 
         ## Loading the reports in memory
-        self.allReports = [self.__readJsonFromFile(f"{self.reportDirectory}/{reportFilename}") for reportFilename in os.listdir(self.reportDirectory) if reportFilename.endswith(".json")]
+        if len(self.reportDirectories) != 0:
+            for reportDirectory in self.reportDirectories:
+                self.allReports.extend([self.__readJsonFromFile(f"{reportDirectory}/{reportFilename}") for reportFilename in os.listdir(reportDirectory) if reportFilename.endswith(".json")])
+        else:
+            print("no input report directory indicated. Give a list of report directories to use as input for the graph creation process")
+            exit()
 
         ## Curate the reports
         self.__curateReports()
@@ -661,27 +687,25 @@ class GraphCreator:
         self.__addLinksSamplesObservations()
 
         ## Creating the turtle file
-        self.__createTtlFile(f"{templatePath}graph-templates/platforms.j2", outputPath, "platforms", self.platforms) 
-        self.__createTtlFile(f"{templatePath}graph-templates/sensors.j2", outputPath, "sensors", self.sensors) 
-        self.__createTtlFile(f"{templatePath}graph-templates/procedures.j2", outputPath, "procedures", self.procedures) 
+        self.__createTtlFile(f"{templatePath}platforms.j2", outputPath, "platforms", self.platforms) 
+        self.__createTtlFile(f"{templatePath}sensors.j2", outputPath, "sensors", self.sensors) 
+        self.__createTtlFile(f"{templatePath}procedures.j2", outputPath, "procedures", self.procedures) 
         ## self.__createTtlFile(f"{templatePath}graph-templates/people.j2", outputPath, "people", self.people) 
-        self.__createTtlFile(f"{templatePath}graph-templates/strains.j2", outputPath, "strains", self.strains)
-        self.__createTtlFile(f"{templatePath}graph-templates/observable-properties.j2", outputPath, "observableProperties", self.observableProperties)
-        self.__createTtlFile(f"{templatePath}graph-templates/genes.j2", outputPath, "genes", self.genes)
-        self.__createTtlFile(f"{templatePath}graph-templates/samples.j2", outputPath, "samples", self.samples, filterFunctions=[{"name": "isDatetime", "content": self.__isDatetime}])
-        self.__createTtlFile(f"{templatePath}graph-templates/observations.j2", outputPath, "observations", self.observations, filterFunctions=[{"name": "isFloat", "content": self.__isFloat}])
-        self.__createTtlFile(f"{templatePath}graph-templates/links_samples_observations.j2", outputPath, "linksSamplesObservations", self.linksSamplesObservations)
+        self.__createTtlFile(f"{templatePath}strains.j2", outputPath, "strains", self.strains)
+        self.__createTtlFile(f"{templatePath}observable-properties.j2", outputPath, "observableProperties", self.observableProperties)
+        self.__createTtlFile(f"{templatePath}genes.j2", outputPath, "genes", self.genes)
+        self.__createTtlFile(f"{templatePath}samples.j2", outputPath, "samples", self.samples, filterFunctions=[{"name": "isDatetime", "content": self.__isDatetime}])
+        self.__createTtlFile(f"{templatePath}observations.j2", outputPath, "observations", self.observations, filterFunctions=[{"name": "isFloat", "content": self.__isFloat}])
+        self.__createTtlFile(f"{templatePath}links_samples_observations.j2", outputPath, "linksSamplesObservations", self.linksSamplesObservations)
 
         
 
 
 if __name__ == "__main__":
     print("=== Graph creator module ===\n")
-    reportsDir = "../graph_downloader/new-public-reports"
+    reportsDirs = ["../graph_downloader/uc1-reports", "../graph_downloader/uc2-reports"]
     outputPath = "out"
-    ##reportsDir = input(f"Indicate the abromics reports path (default {reportsDir}): ")
-    ##outputPath = input(f"Indicate the location where the output rdf files will be created (default {outputPath}): ")
     choiceCreateNewGraph = input(f"\nCreate new graph (this action is destructive) (deleted content: {outputPath}/) ? [yes/no] ")
     if choiceCreateNewGraph == "yes": 
-        gc = GraphCreator(reportDirectory=reportsDir, cacheDirectory="cache")
-        gc.createGraph(outputPath=outputPath)
+        gc = GraphCreator(reportDirectories=reportsDirs, cacheDirectory="cache")
+        gc.createGraph(templatePath="graph-templates/", outputPath=outputPath)
