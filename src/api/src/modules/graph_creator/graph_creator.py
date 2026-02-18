@@ -13,6 +13,38 @@ from jinja2 import Environment, FileSystemLoader, StrictUndefined
 from SPARQLWrapper import SPARQLWrapper, JSON
 from dotenv import load_dotenv # to read the environment variables from the .env file
 
+## Report class
+## It's a common interface for both old and new abromics reports
+class Report:
+
+    def __init__(self, content):
+        self.content = content
+        self.version = self.__getReportVersion()
+
+    def __getReportVersion(self):
+        if self.content[0].keys()[0] != "title":
+            self.version = 1 ## Old format report 
+        else: 
+            self.version = 2 ## New format report
+
+    def getSampleMetadata(self): ## TODO: Handle the issue with the ABRomicsID not existing in old reports 
+        if self.version == 1:
+            return self.content[0]["data"][0]
+        else:
+            return self.content[1]["data"][0]
+
+    def getSampleTaxonomyAndSt(self):
+        if self.version == 1:
+            return self.content[1]["data"][0]
+        else:
+            return self.content[2]["data"][0]
+
+    def getSampleObservations(self):
+        if self.version == 1:
+            return self.content[2]["data"][0]
+        else:
+            return self.content[3]["data"][0]
+
 
 
 ## Creator module class
