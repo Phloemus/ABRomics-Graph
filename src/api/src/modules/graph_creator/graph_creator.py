@@ -13,13 +13,45 @@ from jinja2 import Environment, FileSystemLoader, StrictUndefined
 from SPARQLWrapper import SPARQLWrapper, JSON
 from dotenv import load_dotenv # to read the environment variables from the .env file
 
+## Report class
+## It's a common interface for both old and new abromics reports
+class Report:
+
+    def __init__(self, content):
+        self.content = content
+        self.version = self.__getReportVersion()
+
+    def __getReportVersion(self):
+        if self.content[0].keys()[0] != "title":
+            self.version = 1 ## Old format report 
+        else: 
+            self.version = 2 ## New format report
+
+    def getSampleMetadata(self): ## TODO: Handle the issue with the ABRomicsID not existing in old reports 
+        if self.version == 1:
+            return self.content[0]["data"][0]
+        else:
+            return self.content[1]["data"][0]
+
+    def getSampleTaxonomyAndSt(self):
+        if self.version == 1:
+            return self.content[1]["data"][0]
+        else:
+            return self.content[2]["data"][0]
+
+    def getSampleObservations(self):
+        if self.version == 1:
+            return self.content[2]["data"][0]
+        else:
+            return self.content[3]["data"][0]
+
 
 
 ## Creator module class
 class GraphCreator:
 
-    def __init__(self, reportDirectory = "", cacheDirectory = "", sparqlEndpoint = ""):
-        self.reportDirectory = reportDirectory
+    def __init__(self, reportDirectories = [], cacheDirectory = "", sparqlEndpoint = ""):
+        self.reportDirectories = reportDirectories
         self.cacheDirectory = cacheDirectory
         self.sparqlEndpoint = sparqlEndpoint
         self.allReports = []
@@ -96,13 +128,17 @@ class GraphCreator:
             curatedReports.append(report)
         self.allReports = curatedReports
 
-    ## give a header list and get the id corresponding to it's label in the header list
-    def __getHeaderId(self, headerData, label):
-        if len([id for id, value in enumerate(headerData) if value == label]) != 0: 
-            return [id for id, value in enumerate(headerData) if value == label][0]
+    ## from a table materialized as report["sections"][x][data][y], returns the value associated with 
+    ## the column name from header that match the label. 
+    def __getValueFromColname(self, tableData, label):
+        if len([id for id, value in enumerate(tableData["header"]) if value == label]) != 0: 
+            headerId = [id for id, value in enumerate(tableData["header"]) if value == label][0]
+            if headerId != None:
+                return tableData["values"][headerId]
+            else: 
+                return ""
         else:
-            return None
-
+            return ""
 
     def __createTtlFile(self, templatePath, outputPath, dataName, data, filterFunctions=[]):
 
@@ -128,6 +164,8 @@ class GraphCreator:
         template = env.get_template(templatePath)
         templateVars = { dataName : data }
         dataGraph = template.render(templateVars)
+        if not os.path.exists(outputPath):
+            os.makedirs(outputPath)
         with open(f"{outputPath}/{dataName}.ttl", "w") as f:
             f.write(dataGraph)
         print(f"{dataName} graph created")
@@ -220,37 +258,56 @@ class GraphCreator:
     ## of sample sources)
     def __getSampleSources(self):
         for report in self.allReports:
-            if report["sections"][1]["data"][0]["values"][5] not in self.sampleSources:
-                self.sampleSources.append(report["sections"][1]["data"][0]["values"][5])
+            sampleSource = self.__getValueFromColname(report["sections"][1]["data"][0], "Sample source")
+            if sampleSource != None and sampleSource != "":
+                self.sampleSources.append(sampleSource)
         sampleSourceNames = ""
         for sampleSourceName in self.sampleSources:
             sampleSourceNames += f"'{sampleSourceName}' "
-            print(sampleSourceName)
         sparql_query = f"""
+            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX ncbitaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+            PREFIX uberon: <http://purl.obolibrary.org/obo/UBERON_>
+            PREFIX envo: <http://purl.obolibrary.org/obo/ENVO_>
+            PREFIX prov: <http://www.w3.org/ns/prov#>
             PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#>
+            PREFIX sio: <http://semanticscience.org/resource/>
 
-            SELECT ?sampleSourceName ?sourceId WHERE {{
-                 VALUES ?sampleSourceName {{
-                     { sampleSourceNames }
-                 }}
-
-                VALUES ?topLevelClassName {{ 
-                  'Anatomic Structure, System, or Substance'
+            SELECT DISTINCT  ?sampleSourceName ?sourceId ?parentClass ?parentClassLabel (COUNT(?existingSamples) as ?nbOccurences) 
+            FROM <http://www.ontotext.com/explicit>
+            WHERE {{
+              {{ 
+                ?sourceId rdfs:subClassOf+ uberon:0000465 . 
+              }} UNION {{
+                ?sourceId rdfs:subClassOf+ envo:00000428 .
+              }} UNION {{
+                 ?sourceId rdfs:subClassOf+ ncit:C12219 . ## ncit anatomical structure, system or substance
+                MINUS {{
+                  ?sourceId rdfs:subClassOf+ ?excluded .
+                  VALUES ?excluded {{ ncit:C21599 ncit:C34070 }} . ## Exclude micro anatomical structure and cell part
                 }}
-
-                ?topLevelClass rdfs:label ?topLevelClassName .
-                ?sourceId rdfs:subClassOf+ ?topLevelClass .
-
-                ?sourceId rdfs:label ?sampleSourceName .
-            }}
+              }} UNION {{
+                ?existingSamples rdf:type sio:001050 .
+                ?existingSamples prov:wasDerivedFrom ?sourceId .
+              }}
+              ?sourceId rdfs:label ?sampleSourceName .
+              VALUES ?sampleSourceName {{
+                    { sampleSourceNames }
+              }}
+              ?sourceId rdfs:subClassOf ?parentClass .
+              ?parentClass rdfs:label ?parentClassLabel .
+            }} GROUP BY ?sourceId ?sampleSourceName ?parentClass ?parentClassLabel
+            ORDER BY DESC(?nbOccurences)
         """
         print("Fetching sample source ids ...")
-        sparql = SPARQLWrapper("http://localhost:8890/sparql")
+        sparql = SPARQLWrapper("http://localhost:8081/graphdb/repositories/abromics-kg") ## This is in local : it's very baaad (but it has ARO indexed)
         sparql.setReturnFormat(JSON)
         sparql.setQuery(sparql_query)
         try:
             res = sparql.query().convert()
             recs = res["results"]["bindings"]
+            print(recs)
             for item in recs:
                 self.sampleSourcesBindNCIT[item["sampleSourceName"]["value"]] = item["sourceId"]["value"]
         except Exception as e:
@@ -265,12 +322,12 @@ class GraphCreator:
     ##          the solution would be to get the id and change the start of the url to ncbi taxon.
     def __getSpeciesTaxonomy(self):
         for report in self.allReports:
-            microorganismHeaderId =  self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Microorganism scientific name")
-            hostHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Host")
-            if microorganismHeaderId is not None and report["sections"][1]["data"][0]["values"][microorganismHeaderId] not in self.species:
-                self.species.append(report["sections"][1]["data"][0]["values"][microorganismHeaderId])
-            if hostHeaderId is not None and report["sections"][1]["data"][0]["values"][hostHeaderId] not in self.species: 
-                self.species.append(report["sections"][1]["data"][0]["values"][hostHeaderId])
+            microorganism =  self.__getValueFromColname(report["sections"][1]["data"][0], "Microorganism scientific name")
+            host = self.__getValueFromColname(report["sections"][1]["data"][0], "Host")
+            if microorganism not in self.species:
+                self.species.append(microorganism)
+            if host not in self.species: 
+                self.species.append(host)
         speciesNames = ""
         for speciesName in self.species:
             speciesNames += f"'{speciesName}' "
@@ -375,9 +432,7 @@ class GraphCreator:
     def __addSensors(self):
         for report in self.allReports:
 
-            sensorNameHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Sequencing technology")
-            if sensorNameHeaderId is not None:
-                sensorName = report["sections"][1]["data"][0]["values"][sensorNameHeaderId]
+            sensorName = self.__getValueFromColname(report["sections"][1]["data"][0], "Sequencing technology")
 
             if sensorName not in self.sensorsMapping.keys() and sensorName != "":
                 uniqueGraphId = uuid.uuid1()
@@ -415,14 +470,10 @@ class GraphCreator:
     def __addStrains(self):
         for report in self.allReports:
             uniqueGraphId = uuid.uuid1()
-            specieNameHeaderId = self.__getHeaderId(report["sections"][2]["data"][0]["header"], "Isolate identified as")
-            stHeaderId = self.__getHeaderId(report["sections"][2]["data"][0]["header"], "Sequence Type (ST)")
-            if specieNameHeaderId is not None:
-                speciesName = report["sections"][2]["data"][0]["values"][specieNameHeaderId]
-            if stHeaderId is not None:
-                st = report["sections"][2]["data"][0]["values"][stHeaderId]
-            if speciesName in self.speciesTaxonomy:
-                taxonomy = self.speciesTaxonomy[speciesName]
+            specieName = self.__getValueFromColname(report["sections"][2]["data"][0], "Isolate identified as")
+            st = self.__getValueFromColname(report["sections"][2]["data"][0], "Sequence Type (ST)")
+            if specieName in self.speciesTaxonomy:
+                taxonomy = self.speciesTaxonomy[specieName]
             else:
                 taxonomy = ""
 
@@ -432,7 +483,7 @@ class GraphCreator:
                 "taxonomy": taxonomy
             })
 
-            self.strainsMapping[speciesName] = uniqueGraphId 
+            self.strainsMapping[specieName] = uniqueGraphId 
 
     ## Add genes data to the memory for graph creation
     ## should get all the gene ontology id from the gene names to have fair data !
@@ -471,30 +522,15 @@ class GraphCreator:
 
     ## Add the samples data to memory for graph creation
     def __addSamples(self):
-        count = 0
-        countSample = 0
         for report in self.allReports:
-            count += 1
-            print(f"count report: {count}")
-            abromicsIdHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "ABRomics ID")
-            if abromicsIdHeaderId is not None:
-                abromicsId = report["sections"][1]["data"][0]["values"][abromicsIdHeaderId]
-            else: 
+            abromicsId = self.__getValueFromColname(report["sections"][1]["data"][0], "ABRomics ID")
+            if abromicsId == None or abromicsId == "":
                 continue
             if abromicsId not in self.samplesMapping.keys():
-                countSample += 1
-                print(f"count sample: {countSample}")
                 uniqueGraphId = uuid.uuid1()
-
-                countryNameHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Country")
-                if countryNameHeaderId is not None:
-                    countryName = report["sections"][1]["data"][0]["values"][countryNameHeaderId]
-                else: 
-                    countryName = ""
-
-                collectionDateHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Collection date")
-                if collectionDateHeaderId is not None:
-                    collectionDate = report["sections"][1]["data"][0]["values"][collectionDateHeaderId]
+                countryName = self.__getValueFromColname(report["sections"][1]["data"][0], "Country")
+                collectionDate = self.__getValueFromColname(report["sections"][1]["data"][0], "Collection date")
+                if collectionDate != "":
                     try:
                         collectionDate = parser.parse(collectionDate)
                     except:
@@ -502,12 +538,18 @@ class GraphCreator:
                 else:
                     collectionDate = parser.parse("1970-01-01")
                 
+                print(f"collection date: {collectionDate}")
                 if datetime.strftime(collectionDate, "%Y"):
                     collectionDate = datetime.strftime(collectionDate, '%Y-01-01')
+                print(f"real collection date: {collectionDate}")
 
-                microorganism = report["sections"][1]["data"][0]["values"][1] ## because the section 0-0 is not consistant we use the name of the microorganism from the section 1-0-0
-                host = report["sections"][1]["data"][0]["values"][6]
-                sampleSource = report["sections"][1]["data"][0]["values"][5]
+                microorganism = self.__getValueFromColname(report["sections"][2]["data"][0], "Isolate identified as")
+
+                host = self.__getValueFromColname(report["sections"][1]["data"][0], "Host")
+                
+                sampleType = self.__getValueFromColname(report["sections"][1]["data"][0], "Sample type")
+                sampleSource = self.__getValueFromColname(report["sections"][1]["data"][0], "Sample source")
+                sensor = self.__getValueFromColname(report["sections"][1]["data"][0], "Sequencing technology")
 
                 self.samples.append({
                     "id": uniqueGraphId,
@@ -515,13 +557,11 @@ class GraphCreator:
                     "strainId": report["sections"][1]["data"][0]["values"][1],
                     "microorganism": self.speciesTaxonomy[microorganism] if microorganism in self.speciesTaxonomy.keys() else "",
                     "collectionDate": collectionDate,
-                    "sampleType": report["sections"][1]["data"][0]["values"][3],
+                    "sampleType": sampleType,
                     "sampleSource": self.sampleSourcesBindNCIT[sampleSource] if sampleSource in self.sampleSourcesBindNCIT.keys() else "", ## BUG # always return en empty string
                     "host": self.speciesTaxonomy[host] if host in self.speciesTaxonomy.keys() else "",
                     "country": self.countries[countryName] if countryName in self.countries.keys() else "",
-                    "sequencingTechnology": report["sections"][1]["data"][0]["values"][7],
-                    ## "sequencingPartner": report["sections"][1]["data"][0]["values"][9], Sequencing partner is no longer available in the ABRomics reports
-                    ## "submitterId": self.peopleMapping[submitterId]
+                    "sequencingTechnology": self.sensorsMapping[sensor] if sensor in self.sensorsMapping.keys() else ""
                 })
 
                 ## self.samplesSubmitters[originalSampleId] = submitterId
@@ -539,25 +579,17 @@ class GraphCreator:
             for observationHeader in report["sections"][3]["data"][0]["header"]:
                 for observation in report["sections"][3]["data"][0]["values"][observationHeaderId]:
                     uniqueGraphId = uuid.uuid1()
-                    ## strainFeatureOfInterest = self.strainsMapping[report["sections"][1]["data"][0]["values"][0]]
                     
-                    abromicsIdHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "ABRomics ID")
-                    if abromicsIdHeaderId is not None:
-                        abromicsId = report["sections"][1]["data"][0]["values"][abromicsIdHeaderId]
-                    else: 
-                        continue
-
+                    abromicsId = self.__getValueFromColname(report["sections"][1]["data"][0], "ABRomics ID") ## The samplesMapping is empty old abromics reports have an other key for hte ABRomics ID and it's not in the right place in the reports. 
                     sampleFeatureOfInterest = self.samplesMapping[abromicsId]
                     geneFeatureOfInterest = self.genesMapping[report["sections"][3]["data"][0]["values"][0][observationId]]
                     observableProperty = self.observablePropertiesMapping[observationHeader]
 
-                    sensorNameHeaderId = self.__getHeaderId(report["sections"][1]["data"][0]["header"], "Sequencing technology")
-                    if sensorNameHeaderId is not None:
-                        sensor = "" if report["sections"][1]["data"][0]["values"][sensorNameHeaderId] == "" else self.sensorsMapping[report["sections"][1]["data"][0]["values"][sensorNameHeaderId]]
-
+                    sensorName = self.__getValueFromColname(report["sections"][1]["data"][0], "Sequencing technology")
+                    sensor = "" if sensorName == "" else self.sensorsMapping[sensorName]
                     procedure = self.proceduresMapping["workflow 1 (genomic)"]
 
-                    resultTime = report["sections"][1]["data"][0]["values"][2]
+                    resultTime = self.__getValueFromColname(report["sections"][1]["data"][0], "Collection date")
                     try:
                         resultTime = parser.parse(resultTime)
                     except:
@@ -648,7 +680,12 @@ class GraphCreator:
     def createGraph(self, fetchCountriesFromCache = None, templatePath = "", outputPath = ""):
 
         ## Loading the reports in memory
-        self.allReports = [self.__readJsonFromFile(f"{self.reportDirectory}/{reportFilename}") for reportFilename in os.listdir(self.reportDirectory) if reportFilename.endswith(".json")]
+        if len(self.reportDirectories) != 0:
+            for reportDirectory in self.reportDirectories:
+                self.allReports.extend([self.__readJsonFromFile(f"{reportDirectory}/{reportFilename}") for reportFilename in os.listdir(reportDirectory) if reportFilename.endswith(".json")])
+        else:
+            print("no input report directory indicated. Give a list of report directories to use as input for the graph creation process")
+            exit()
 
         ## Curate the reports
         self.__curateReports()
@@ -682,27 +719,25 @@ class GraphCreator:
         self.__addLinksSamplesObservations()
 
         ## Creating the turtle file
-        self.__createTtlFile(f"{templatePath}graph-templates/platforms.j2", outputPath, "platforms", self.platforms) 
-        self.__createTtlFile(f"{templatePath}graph-templates/sensors.j2", outputPath, "sensors", self.sensors) 
-        self.__createTtlFile(f"{templatePath}graph-templates/procedures.j2", outputPath, "procedures", self.procedures) 
+        self.__createTtlFile(f"{templatePath}platforms.j2", outputPath, "platforms", self.platforms) 
+        self.__createTtlFile(f"{templatePath}sensors.j2", outputPath, "sensors", self.sensors) 
+        self.__createTtlFile(f"{templatePath}procedures.j2", outputPath, "procedures", self.procedures) 
         ## self.__createTtlFile(f"{templatePath}graph-templates/people.j2", outputPath, "people", self.people) 
-        self.__createTtlFile(f"{templatePath}graph-templates/strains.j2", outputPath, "strains", self.strains)
-        self.__createTtlFile(f"{templatePath}graph-templates/observable-properties.j2", outputPath, "observableProperties", self.observableProperties)
-        self.__createTtlFile(f"{templatePath}graph-templates/genes.j2", outputPath, "genes", self.genes)
-        self.__createTtlFile(f"{templatePath}graph-templates/samples.j2", outputPath, "samples", self.samples, filterFunctions=[{"name": "isDatetime", "content": self.__isDatetime}])
-        self.__createTtlFile(f"{templatePath}graph-templates/observations.j2", outputPath, "observations", self.observations, filterFunctions=[{"name": "isFloat", "content": self.__isFloat}])
-        self.__createTtlFile(f"{templatePath}graph-templates/links_samples_observations.j2", outputPath, "linksSamplesObservations", self.linksSamplesObservations)
+        self.__createTtlFile(f"{templatePath}strains.j2", outputPath, "strains", self.strains)
+        self.__createTtlFile(f"{templatePath}observable-properties.j2", outputPath, "observableProperties", self.observableProperties)
+        self.__createTtlFile(f"{templatePath}genes.j2", outputPath, "genes", self.genes)
+        self.__createTtlFile(f"{templatePath}samples.j2", outputPath, "samples", self.samples, filterFunctions=[{"name": "isDatetime", "content": self.__isDatetime}])
+        self.__createTtlFile(f"{templatePath}observations.j2", outputPath, "observations", self.observations, filterFunctions=[{"name": "isFloat", "content": self.__isFloat}])
+        self.__createTtlFile(f"{templatePath}links_samples_observations.j2", outputPath, "linksSamplesObservations", self.linksSamplesObservations)
 
         
 
 
 if __name__ == "__main__":
     print("=== Graph creator module ===\n")
-    reportsDir = "../graph_downloader/new-public-reports"
+    reportsDirs = ["../graph_downloader/uc1-reports", "../graph_downloader/uc2-reports"]
     outputPath = "out"
-    ##reportsDir = input(f"Indicate the abromics reports path (default {reportsDir}): ")
-    ##outputPath = input(f"Indicate the location where the output rdf files will be created (default {outputPath}): ")
     choiceCreateNewGraph = input(f"\nCreate new graph (this action is destructive) (deleted content: {outputPath}/) ? [yes/no] ")
     if choiceCreateNewGraph == "yes": 
-        gc = GraphCreator(reportDirectory=reportsDir, cacheDirectory="cache")
-        gc.createGraph(outputPath=outputPath)
+        gc = GraphCreator(reportDirectories=reportsDirs, cacheDirectory="cache")
+        gc.createGraph(templatePath="graph-templates/", outputPath=outputPath)
