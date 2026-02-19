@@ -19,6 +19,6 @@
 ################################# Sensors ############################################
 
 
-    <abromics:8814dccc-0c1a-11f1-8ad4-90658429fd42> rdf:type sosa:Sensor ;
+    abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:Sensor ;
         rdfs:label "Illumina HiSeq 2500 (Illumina)" ;
-        sosa:isHostedBy <abromics:8814db96-0c1a-11f1-8ad4-90658429fd42> .
+        sosa:isHostedBy abromics:9e3a618a-0da9-11f1-b5ca-90658429fd42 .

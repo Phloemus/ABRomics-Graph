@@ -25,9 +25,9 @@
 
 
 
-    <abromics:8814f482-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a7616-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA001985" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -36,14 +36,14 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:9913> ;
+        uniprot-core:host ncbitaxon:9913 ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 
 
-    <abromics:8814fbee-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a7ae4-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004733" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -52,14 +52,14 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:> ;
+        uniprot-core:host ncbitaxon: ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 
 
-    <abromics:8814ffae-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a7d0a-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004752" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -68,14 +68,14 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:9612> ;
+        uniprot-core:host ncbitaxon:9612 ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 
 
-    <abromics:881502ec-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a7e9a-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004749" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -84,14 +84,14 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:9612> ;
+        uniprot-core:host ncbitaxon:9612 ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 
 
-    <abromics:8815067a-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a8052-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004741" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -100,14 +100,14 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:9612> ;
+        uniprot-core:host ncbitaxon:9612 ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 
 
-    <abromics:881509ae-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a81e2-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004746" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -116,14 +116,14 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:9612> ;
+        uniprot-core:host ncbitaxon:9612 ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 
 
-    <abromics:88150cec-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a8372-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004742" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -132,14 +132,14 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:9913> ;
+        uniprot-core:host ncbitaxon:9913 ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 
 
-    <abromics:88151016-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a8516-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004732" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -148,14 +148,14 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:9940> ;
+        uniprot-core:host ncbitaxon:9940 ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 
 
-    <abromics:881514c6-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a87e6-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004734" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -164,14 +164,14 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:10160> ;
+        uniprot-core:host ncbitaxon:10160 ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 
 
-    <abromics:881517d2-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a898a-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004735" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -180,14 +180,14 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:9031> ;
+        uniprot-core:host ncbitaxon:9031 ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 
 
-    <abromics:88151aac-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a8afc-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004743" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -196,14 +196,14 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:9612> ;
+        uniprot-core:host ncbitaxon:9612 ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 
 
-    <abromics:88151d72-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a8c50-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004738" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -212,14 +212,14 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:9031> ;
+        uniprot-core:host ncbitaxon:9031 ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 
 
-    <abromics:88152074-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a8da4-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004740" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -228,14 +228,14 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:9913> ;
+        uniprot-core:host ncbitaxon:9913 ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 
 
-    <abromics:8815238a-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a8f02-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004744" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -244,14 +244,14 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:9940> ;
+        uniprot-core:host ncbitaxon:9940 ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 
 
-    <abromics:88152664-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a9056-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004747" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -260,14 +260,14 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:9913> ;
+        uniprot-core:host ncbitaxon:9913 ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 
 
-    <abromics:8815293e-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a91aa-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004753" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -276,14 +276,14 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:> ;
+        uniprot-core:host ncbitaxon: ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 
 
-    <abromics:88152c22-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a9330-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004748" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -292,14 +292,14 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:9612> ;
+        uniprot-core:host ncbitaxon:9612 ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 
 
-    <abromics:88152ede-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a9484-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004750" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -308,14 +308,14 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:9612> ;
+        uniprot-core:host ncbitaxon:9612 ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 
 
-    <abromics:881531b8-0c1a-11f1-8ad4-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:9e3a95f6-0da9-11f1-b5ca-90658429fd42 rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "ABRA004751" ;
-        obo:RO_0002162 <ncbitaxon:562> ;
+        obo:RO_0002162 ncbitaxon:562 ;
         
             prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
         
@@ -324,7 +324,7 @@
         
             prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
         
-        uniprot-core:host <ncbitaxon:> ;
+        uniprot-core:host ncbitaxon: ;
         prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "8814dccc-0c1a-11f1-8ad4-90658429fd42"  ] .
+        prov:wasAttributedTo abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 .
 

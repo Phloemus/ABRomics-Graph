@@ -17,8 +17,8 @@
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
 
-    <8814e06e-0c1a-11f1-8ad4-90658429fd42> rdf:type sosa:Procedure ;
+    abromics:9e3a6662-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:Procedure ;
         
-            ssn:implementedBy <8814dccc-0c1a-11f1-8ad4-90658429fd42> ; 
+            ssn:implementedBy  abromics:9e3a62ca-0da9-11f1-b5ca-90658429fd42 ; 
         
         rdfs:label "workflow 1 (genomic)" .

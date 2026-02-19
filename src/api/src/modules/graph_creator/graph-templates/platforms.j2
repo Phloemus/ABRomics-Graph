@@ -16,5 +16,5 @@
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
 {% for platform in platforms %}
-    <abromics:{{ platform["id"] }}> rdf:type sosa:Platform .
+    abromics:{{ platform["id"] }} rdf:type sosa:Platform .
 {% endfor %}

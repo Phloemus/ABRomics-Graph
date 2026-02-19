@@ -25,9 +25,9 @@
 
 
 {% for sample in samples %}
-    <abromics:{{ sample["id"] }}> rdf:type prov:Entity, sio:001050, sio:000000 ;
+    abromics:{{ sample["id"] }} rdf:type prov:Entity, sio:001050, sio:000000 ;
         schema:identifier "{{ sample["originalSampleId"] }}" ;
-        obo:RO_0002162 <ncbitaxon:{{ sample["microorganism"] }}> ;
+        obo:RO_0002162 ncbitaxon:{{ sample["microorganism"] }} ;
         {% if sample["collectionDate"]|isDatetime %}
             prov:generatedAtTime "{{ sample["collectionDate"] }}T00:00:00Z"^^xsd:dateTime ;
         {% endif %}
@@ -38,8 +38,8 @@
         {% else %}
             prov:wasDerivedFrom <> ;
         {% endif %}
-        uniprot-core:host <ncbitaxon:{{ sample["host"] }}> ;
+        uniprot-core:host ncbitaxon:{{ sample["host"] }} ;
         prov:atLocation <{{ sample["country"] }}> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "{{ sample["sequencingTechnology"] }}"  ] .
+        prov:wasAttributedTo abromics:{{ sample["sequencingTechnology"] }} .
 
 {% endfor %}
