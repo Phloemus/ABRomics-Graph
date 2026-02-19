@@ -1,0 +1,156 @@
+{
+  "@context": [
+    "http://schema.org",
+    {
+      "OBI": "http://purl.obolibrary.org/obo/OBI_",
+      "biosample": "http://identifiers.org/biosample/"
+    }
+  ],
+  "@type": "DataRecord",
+  "@id": "biosample:SAMEA114388887",
+  "identifier": "biosample:SAMEA114388887",
+  "dateCreated": "2023-09-15T10:03:38.319Z",
+  "dateModified": "2024-02-28T07:00:13.982Z",
+  "dateReleased": "2023-09-18T12:39:25Z",
+  "dateSubmitted": "2023-09-15T10:03:38.753Z",
+  "mainEntity": {
+    "@id": "https://www.ebi.ac.uk/biosamples/samples/SAMEA114388887",
+    "@type": [
+      "Sample",
+      "OBI:0000747"
+    ],
+    "identifier": [
+      "biosample:SAMEA114388887"
+    ],
+    "name": "P7-2-C",
+    "description": "bacterial culture isolated from dog feces",
+    "url": "https://www.ebi.ac.uk/biosamples/samples/SAMEA114388887",
+    "subjectOf": [
+      "https://www.ebi.ac.uk/ena/browser/view/SAMEA114388887"
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "ENA-CHECKLIST",
+        "value": "ERC000028"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ENA-FIRST-PUBLIC",
+        "value": "2023-09-18T12:39:25Z"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "ENA-LAST-UPDATE",
+        "value": "2023-09-18T12:39:25Z"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "External Id",
+        "value": "SAMEA114388887"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "INSDC center name",
+        "value": "Institut de Recherche pour le Developpement"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "INSDC first public",
+        "value": "2023-09-18T12:39:25Z"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "INSDC last update",
+        "value": "2023-09-18T12:39:25Z"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "INSDC status",
+        "value": "public"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "SRA accession",
+        "value": "ERS16377953"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Submitter Id",
+        "value": "P7-2-C"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "collection date",
+        "value": "2019"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "environmental_sample",
+        "value": "No"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "geographic location (country and/or sea)",
+        "value": "Chile"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "geographic location (region and locality)",
+        "value": "Chacabuco Province"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "host health state",
+        "value": "healthy"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "host scientific name",
+        "value": "Canis lupus"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "isolate",
+        "value": "P7-2-C"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "isolation_source",
+        "value": "feces"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "organism",
+        "value": "Escherichia coli",
+        "valueReference": [
+          {
+            "@type": "DefinedTerm",
+            "termCode": ""
+          }
+        ]
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "scientific_name",
+        "value": "Escherichia coli",
+        "valueReference": [
+          {
+            "@type": "DefinedTerm",
+            "termCode": ""
+          }
+        ]
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "title",
+        "value": "56047_P72C_Dog_Farm1"
+      }
+    ],
+    "sameAs": "http://identifiers.org/biosample/SAMEA114388887"
+  },
+  "isPartOf": {
+    "@type": "Dataset",
+    "@id": "https://www.ebi.ac.uk/biosamples/samples"
+  }
+}

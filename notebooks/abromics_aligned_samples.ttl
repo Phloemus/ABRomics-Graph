@@ -1,0 +1,330 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://purl.obolibrary.org/obo/> .
+@prefix ns3: <http://semanticscience.org/resource/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388880> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388880" ;
+    ns1:title "56048_A71C_Chicken_Backyard" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Gallus gallus" ],
+        [ a ns3:001109 ;
+            rdfs:label "Gallus gallus" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388881> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388881" ;
+    ns1:title "56050_A73C_Chicken_Backyard" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Gallus gallus" ],
+        [ a ns3:001109 ;
+            rdfs:label "Gallus gallus" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388882> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388882" ;
+    ns1:title "56038_P241C_Dog_Farm2" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Canis lupus" ],
+        [ a ns3:001109 ;
+            rdfs:label "Canis lupus" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388883> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388883" ;
+    ns1:title "56044_P351C_Dog_Farm2" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Canis lupus" ],
+        [ a ns3:001109 ;
+            rdfs:label "Canis lupus" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388884> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388884" ;
+    ns1:title "56046_P43AC_Dog_Farm4" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Canis lupus" ],
+        [ a ns3:001109 ;
+            rdfs:label "Canis lupus" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388885> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388885" ;
+    ns1:title "56043_P42AC_Dog_Farm4" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Canis lupus" ],
+        [ a ns3:001109 ;
+            rdfs:label "Canis lupus" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388886> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388886" ;
+    ns1:title "56039_P52C_Dog_Farm4" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Canis lupus" ],
+        [ a ns3:001109 ;
+            rdfs:label "Canis lupus" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388887> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388887" ;
+    ns1:title "56047_P72C_Dog_Farm1" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Canis lupus" ],
+        [ a ns3:001109 ;
+            rdfs:label "Canis lupus" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388888> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388888" ;
+    ns1:title "56041_P71C_Dog_Farm1" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Canis lupus" ],
+        [ a ns3:001109 ;
+            rdfs:label "Canis lupus" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388889> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388889" ;
+    ns1:title "56037_Po151C_Pig_Farm1" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Sus scrofa" ],
+        [ a ns3:001109 ;
+            rdfs:label "Sus scrofa" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388890> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388890" ;
+    ns1:title "56052_Po61C_Pig_Farm1" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Sus scrofa" ],
+        [ a ns3:001109 ;
+            rdfs:label "Sus scrofa" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388891> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388891" ;
+    ns1:title "56040_Po62C_Pig_Farm1" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Sus scrofa" ],
+        [ a ns3:001109 ;
+            rdfs:label "Sus scrofa" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388892> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388892" ;
+    ns1:title "56053_R352C_Mice_Farm3" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Octodon degus" ],
+        [ a ns3:001109 ;
+            rdfs:label "Octodon degus" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388893> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388893" ;
+    ns1:title "56049_Sh282C_Sheep_Farm1" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Ovis aries" ],
+        [ a ns3:001109 ;
+            rdfs:label "Ovis aries" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388894> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388894" ;
+    ns1:title "56054_Sh41C_Sheep_Farm4" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Ovis aries" ],
+        [ a ns3:001109 ;
+            rdfs:label "Ovis aries" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388895> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388895" ;
+    ns1:title "56051_V1672C_Cow_Farm3" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Bos taurus" ],
+        [ a ns3:001109 ;
+            rdfs:label "Bos taurus" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388896> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388896" ;
+    ns1:title "56045_V1982C_Cow_Farm2" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Bos taurus" ],
+        [ a ns3:001109 ;
+            rdfs:label "Bos taurus" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388897> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388897" ;
+    ns1:title "56042_V2031C_Cow_Farm2" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Bos taurus" ],
+        [ a ns3:001109 ;
+            rdfs:label "Bos taurus" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
+<https://www.ebi.ac.uk/biosamples/samples/SAMEA114388898> a ns3:001050,
+        prov:Entity ;
+    ns2:RO_0002162 [ a ns2:COB_0000022 ;
+            rdfs:label "Escherichia coli" ] ;
+    ns1:identifier "biosample:SAMEA114388898" ;
+    ns1:title "56036_V2071C_Cow_Farm2" ;
+    ns3:000068 [ a ns3:001109 ;
+            rdfs:label "Bos taurus" ],
+        [ a ns3:001109 ;
+            rdfs:label "Bos taurus" ] ;
+    prov:atLocation [ a geo:Feature,
+                prov:Location ;
+            rdfs:label "Chile" ;
+            geo:hasGeometry [ a geo:Geometry ] ;
+            rdfs:comment "Chacabuco Province" ] ;
+    prov:generatedAtTime "2019" .
+
