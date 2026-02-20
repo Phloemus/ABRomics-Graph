@@ -17,33 +17,47 @@ from dotenv import load_dotenv # to read the environment variables from the .env
 ## It's a common interface for both old and new abromics reports
 class Report:
 
-    def __init__(self, content):
+    def __init__(self, content = {}):
         self.content = content
         self.version = self.__getReportVersion()
 
     def __getReportVersion(self):
-        if self.content[0].keys()[0] != "title":
+        if list(self.content["sections"][0].keys())[0] != "title":
             self.version = 1 ## Old format report 
         else: 
             self.version = 2 ## New format report
 
+    ## from a table materialized as report["sections"][x][data][y], returns the value associated with 
+    ## the column name from header that match the label. 
+    def __getValueFromColname(self, tableData, label):
+        if len([id for id, value in enumerate(tableData["header"]) if value == label]) != 0: 
+            headerId = [id for id, value in enumerate(tableData["header"]) if value == label][0]
+            if headerId != None:
+                return tableData["values"][headerId]
+            else: 
+                return ""
+        else:
+            return ""
+
     def getSampleMetadata(self): ## TODO: Handle the issue with the ABRomicsID not existing in old reports 
         if self.version == 1:
-            return self.content[0]["data"][0]
+            self.content["sections"][0]["data"][0]["values"][0] = self.__getValueFromColname(self.content["sections"][0]["data"][0], "Original Sample ID")
+            self.content["sections"][0]["data"][0]["header"][0] = "ABRomicsID" 
+            return self.content["sections"][0]["data"][0]
         else:
-            return self.content[1]["data"][0]
+            return self.content["sections"][1]["data"][0]
 
     def getSampleTaxonomyAndSt(self):
         if self.version == 1:
-            return self.content[1]["data"][0]
+            return self.content["sections"][1]["data"][0]
         else:
-            return self.content[2]["data"][0]
+            return self.content["sections"][2]["data"][0]
 
     def getSampleObservations(self):
         if self.version == 1:
-            return self.content[2]["data"][0]
+            return self.content["sections"][2]["data"][0]
         else:
-            return self.content[3]["data"][0]
+            return self.content["sections"][3]["data"][0]
 
 
 
@@ -123,7 +137,7 @@ class GraphCreator:
     def __curateReports(self):
         curatedReports = []
         for report in self.allReports:
-            if "sections" not in report or len(report["sections"][1]["data"][0]["values"]) < 8:
+            if "sections" not in report.content or len(report.getSampleMetadata()["values"]) < 8:
                 continue
             curatedReports.append(report)
         self.allReports = curatedReports
@@ -682,7 +696,10 @@ class GraphCreator:
         ## Loading the reports in memory
         if len(self.reportDirectories) != 0:
             for reportDirectory in self.reportDirectories:
-                self.allReports.extend([self.__readJsonFromFile(f"{reportDirectory}/{reportFilename}") for reportFilename in os.listdir(reportDirectory) if reportFilename.endswith(".json")])
+                for reportFilename in os.listdir(reportDirectory):
+                    if reportFilename.endswith(".json"):
+                        report = Report(self.__readJsonFromFile(f"{reportDirectory}/{reportFilename}"))
+                self.allReports.append(report)
         else:
             print("no input report directory indicated. Give a list of report directories to use as input for the graph creation process")
             exit()
