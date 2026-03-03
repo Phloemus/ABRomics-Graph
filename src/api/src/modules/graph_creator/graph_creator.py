@@ -13,9 +13,6 @@ from jinja2 import Environment, FileSystemLoader, StrictUndefined
 from SPARQLWrapper import SPARQLWrapper, JSON
 from dotenv import load_dotenv # to read the environment variables from the .env file
 
-## TODO: Fix the bug that made the value of the samplesource not present in the ttl file
-## TODO: Fix the bug that made no st appearing the the ttl file
-## TODO: Improve the coverage of the ARO ontology, too few genes are mapped to ARO
 
 ## Report class
 ## It's a common interface for both old and new abromics reports
@@ -286,8 +283,6 @@ class GraphCreator:
         sampleSourceNames = ""
         for sampleSourceName in self.sampleSources:
             sampleSourceNames += f"'{sampleSourceName}' "
-        print(sampleSourceNames)
-        exit()
         sparql_query = f"""
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -402,6 +397,7 @@ class GraphCreator:
         for report in self.allReports:
             for genesName in self.__getValueFromColname(report.sampleObservations, "Resistance gene"):
                 if genesName not in genesNamesList:
+                    genesName = genesName.replace("bla", "")
                     genesNames += f""""{genesName}" """
                     genesNamesList.append(genesName)
         sparql_query = f""" 
@@ -507,18 +503,20 @@ class GraphCreator:
         for report in self.allReports:
             uniqueGraphId = uuid.uuid1()
             specieName = self.__getValueFromColname(report.sampleTaxonomyAndSt, "Isolate identified as")
-            st = self.__getValueFromColname(report.sampleTaxonomyAndSt, "Sequence Type (ST)")
+            if report.version == 1:
+                st = self.__getValueFromColname(report.sampleTaxonomyAndSt, "ST")
+            else:
+                st = self.__getValueFromColname(report.sampleTaxonomyAndSt, "Sequence Type (ST)")
             if specieName in self.speciesTaxonomy:
                 taxonomy = self.speciesTaxonomy[specieName]
             else:
                 taxonomy = ""
-
+            
             self.strains.append({
                 "id": uniqueGraphId,
                 "st": st,
                 "taxonomy": taxonomy
             })
-
             self.strainsMapping[specieName] = uniqueGraphId 
 
     ## Add genes data to the memory for graph creation
@@ -526,10 +524,11 @@ class GraphCreator:
     ## TODO: Add the link with gene ontology
     def __addGenes(self):
         for report in self.allReports:
-            for gene in self.__getValueFromColname(report.sampleObservations, "Resistance gene"):
-                if gene not in self.genesMapping.keys():
+            for geneName in self.__getValueFromColname(report.sampleObservations, "Resistance gene"):
+                geneName = geneName.replace("bla", "")
+                if geneName not in self.genesMapping.keys():
                     uniqueGraphId = uuid.uuid1()
-                    label = gene
+                    label = geneName
                     if label in self.genesAroClasses:
                         aroClass = self.genesAroClasses[label]
                     else:
@@ -574,10 +573,8 @@ class GraphCreator:
                 else:
                     collectionDate = parser.parse("1970-01-01")
                 
-                print(f"collection date: {collectionDate}")
                 if datetime.strftime(collectionDate, "%Y"):
                     collectionDate = datetime.strftime(collectionDate, '%Y-01-01')
-                print(f"real collection date: {collectionDate}")
 
                 microorganism = self.__getValueFromColname(report.sampleTaxonomyAndSt, "Isolate identified as")
 
@@ -593,7 +590,7 @@ class GraphCreator:
                     "microorganism": self.speciesTaxonomy[microorganism] if microorganism in self.speciesTaxonomy.keys() else "",
                     "collectionDate": collectionDate,
                     "sampleType": sampleType,
-                    "sampleSource": self.sampleSourcesBindNCIT[sampleSource] if sampleSource in self.sampleSourcesBindNCIT.keys() else "", ## BUG # always return en empty string
+                    "sampleSource": self.sampleSourcesBindNCIT[sampleSource] if sampleSource in self.sampleSourcesBindNCIT.keys() else "",
                     "host": self.speciesTaxonomy[host] if host in self.speciesTaxonomy.keys() else "",
                     "country": self.countries[countryName] if countryName in self.countries.keys() else "",
                     "sequencingTechnology": self.sensorsMapping[sensor] if sensor in self.sensorsMapping.keys() else ""
@@ -614,7 +611,9 @@ class GraphCreator:
                     
                     abromicsId = self.__getValueFromColname(report.sampleMetadata, "ABRomics ID") 
                     sampleFeatureOfInterest = self.samplesMapping[abromicsId]
-                    geneFeatureOfInterest = self.genesMapping[report.sampleObservations["values"][0][observationId]]
+                    geneName = report.sampleObservations["values"][0][observationId]
+                    geneName = geneName.replace("bla", "")
+                    geneFeatureOfInterest = self.genesMapping[geneName]
                     observableProperty = self.observablePropertiesMapping[observationHeader]
 
                     sensorName = self.__getValueFromColname(report.sampleMetadata, "Sequencing technology")

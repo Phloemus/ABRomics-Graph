@@ -32,11 +32,8 @@
             prov:generatedAtTime "{{ sample["collectionDate"] }}T00:00:00Z"^^xsd:dateTime ;
         {% endif %}
         sio:000068 [ rdf:type prov:Entity ; rdfs:label "{{ sample["sampleType"] }}" ] ;
-
         {% if sample["sampleSource"] != "" %}
             prov:wasDerivedFrom [ rdf:type <{{sample["sampleSource"]}}> ] ;
-        {% else %}
-            prov:wasDerivedFrom <> ;
         {% endif %}
         uniprot-core:host ncbitaxon:{{ sample["host"] }} ;
         prov:atLocation <{{ sample["country"] }}> ;
