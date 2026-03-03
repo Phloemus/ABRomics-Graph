@@ -18,162 +18,410 @@
 ################################## Observable Properties #################################
 
 
-    abromics:9e3a730a-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <http://purl.obolibrary.org/obo/ARO_3000410> ;
-        rdfs:label "sul1" .
-
-    abromics:9e3a7328-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+    abromics:7eba8018-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
         rdf:type <> ;
-        rdfs:label "aadA1" .
+        rdfs:label "blaOXA-69" .
 
-    abromics:9e3a733c-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <http://purl.obolibrary.org/obo/ARO_3000230> ;
-        rdfs:label "ant(2'')-Ia" .
-
-    abromics:9e3a7346-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <http://purl.obolibrary.org/obo/ARO_3002705> ;
-        rdfs:label "floR" .
-
-    abromics:9e3a7350-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <http://purl.obolibrary.org/obo/ARO_3005348> ;
-        rdfs:label "dfrA36" .
-
-    abromics:9e3a7364-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <http://purl.obolibrary.org/obo/ARO_3000412> ;
-        rdfs:label "sul2" .
-
-    abromics:9e3a736e-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+    abromics:7eba8054-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
         rdf:type <> ;
-        rdfs:label "blaCMY-2" .
+        rdfs:label "blaOXA-23" .
 
-    abromics:9e3a738c-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+    abromics:7eba805e-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaTEM-1D" .
+
+    abromics:7eba807c-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3002683> ;
+        rdfs:label "catA1" .
+
+    abromics:7eba8090-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
         rdf:type <http://purl.obolibrary.org/obo/ARO_3000165> ;
         rdfs:label "tet(A)" .
 
-    abromics:9e3a73a0-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <http://purl.obolibrary.org/obo/ARO_3005113> ;
-        rdfs:label "aac(6')-Ib-cr" .
+    abromics:7eba80ae-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3002528> ;
+        rdfs:label "aac(3)-Ia" .
 
-    abromics:9e3a73aa-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <> ;
-        rdfs:label "blaOXA-1" .
-
-    abromics:9e3a73be-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <http://purl.obolibrary.org/obo/ARO_3002676> ;
-        rdfs:label "catB3" .
-
-    abromics:9e3a73c8-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <> ;
-        rdfs:label "blaCTX-M-15" .
-
-    abromics:9e3a73dc-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <> ;
-        rdfs:label "lnu(F)" .
-
-    abromics:9e3a73e6-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+    abromics:7eba80c2-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
         rdf:type <http://purl.obolibrary.org/obo/ARO_3000232> ;
         rdfs:label "ant(3'')-Ia" .
 
-    abromics:9e3a73fa-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <http://purl.obolibrary.org/obo/ARO_3000413> ;
-        rdfs:label "sul3" .
+    abromics:7eba80e0-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3005009> ;
+        rdfs:label "qacE" .
 
-    abromics:9e3a7404-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <http://purl.obolibrary.org/obo/ARO_3002693> ;
-        rdfs:label "cmlA1" .
-
-    abromics:9e3a740e-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+    abromics:7eba80f4-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
         rdf:type <> ;
-        rdfs:label "blaCTX-M-3" .
+        rdfs:label "blaNDM-1" .
 
-    abromics:9e3a7418-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <http://purl.obolibrary.org/obo/ARO_3000166> ;
-        rdfs:label "tet(B)" .
-
-    abromics:9e3a7422-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <> ;
-        rdfs:label "blaTEM-176" .
-
-    abromics:9e3a742c-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <http://purl.obolibrary.org/obo/ARO_3002872> ;
-        rdfs:label "fosA3" .
-
-    abromics:9e3a7440-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <http://purl.obolibrary.org/obo/ARO_3002860> ;
-        rdfs:label "dfrA17" .
-
-    abromics:9e3a745e-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <> ;
-        rdfs:label "blaCTX-M-8" .
-
-    abromics:9e3a7472-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <http://purl.obolibrary.org/obo/ARO_3002605> ;
-        rdfs:label "aadA5" .
-
-    abromics:9e3a747c-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <> ;
-        rdfs:label "blaCTX-M-55" .
-
-    abromics:9e3a7490-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+    abromics:7eba8108-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
         rdf:type <http://purl.obolibrary.org/obo/ARO_3002641> ;
         rdfs:label "aph(3')-Ia" .
 
-    abromics:9e3a749a-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <http://purl.obolibrary.org/obo/ARO_3002790> ;
-        rdfs:label "qnrS1" .
+    abromics:7eba8126-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3007412> ;
+        rdfs:label "aph(3')-VI" .
 
-    abromics:9e3a74ae-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+    abromics:7eba814e-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
         rdf:type <> ;
-        rdfs:label "lnu(G)" .
+        rdfs:label "blaOXA-132" .
 
-    abromics:9e3a74c2-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <http://purl.obolibrary.org/obo/ARO_3002734> ;
-        rdfs:label "qnrB19" .
-
-    abromics:9e3a74cc-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+    abromics:7eba816c-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
         rdf:type <> ;
-        rdfs:label "blaTEM-214" .
+        rdfs:label "blaOXA-106" .
 
-    abromics:9e3a74ea-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+    abromics:7eba8194-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3000412> ;
+        rdfs:label "sul2" .
+
+    abromics:7eba81a8-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
         rdf:type <> ;
-        rdfs:label "blaCTX-M-1" .
+        rdfs:label "blaOXA-51" .
 
-    abromics:9e3a751c-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <http://purl.obolibrary.org/obo/ARO_3002612> ;
-        rdfs:label "aadA12" .
-
-    abromics:9e3a7526-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+    abromics:7eba81d0-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
         rdf:type <> ;
-        rdfs:label "blaTEM-1A" .
+        rdfs:label "blaOXA-430" .
 
-    abromics:9e3a7530-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+    abromics:7eba8202-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
         rdf:type <> ;
-        rdfs:label "lnu(A)" .
+        rdfs:label "blaOXA-68" .
 
-    abromics:9e3a7544-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <http://purl.obolibrary.org/obo/ARO_3002854> ;
-        rdfs:label "dfrA1" .
+    abromics:7eba8216-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3000566> ;
+        rdfs:label "tet(39)" .
 
-    abromics:9e3a7558-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+    abromics:7eba8234-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
         rdf:type <> ;
-        rdfs:label "mph(A)" .
+        rdfs:label "blaOXA-95" .
 
-    abromics:9e3a7562-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+    abromics:7eba8252-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
         rdf:type <> ;
-        rdfs:label "blaCTX-M-14" .
+        rdfs:label "blaOXA-126" .
 
-    abromics:9e3a756c-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+    abromics:7eba8266-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-71" .
+
+    abromics:7eba8284-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-88" .
+
+    abromics:7eba82a2-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-91" .
+
+    abromics:7eba82ca-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-314" .
+
+    abromics:7eba82f2-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-259" .
+
+    abromics:7eba831a-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-179" .
+
+    abromics:7eba832e-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-120" .
+
+    abromics:7eba8356-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-203" .
+
+    abromics:7eba836a-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-342" .
+
+    abromics:7eba8388-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-556" .
+
+    abromics:7eba83b0-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-66" .
+
+    abromics:7eba83ba-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
         rdf:type <http://purl.obolibrary.org/obo/ARO_3002639> ;
         rdfs:label "aph(3'')-Ib" .
 
-    abromics:9e3a7580-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+    abromics:7eba83c4-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
         rdf:type <http://purl.obolibrary.org/obo/ARO_3002660> ;
         rdfs:label "aph(6)-Id" .
 
-    abromics:9e3a75a8-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+    abromics:7eba83e2-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3000166> ;
+        rdfs:label "tet(B)" .
+
+    abromics:7eba8414-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaADC-25" .
+
+    abromics:7eba8428-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3000410> ;
+        rdfs:label "sul1" .
+
+    abromics:7eba8450-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-510" .
+
+    abromics:7eba84a0-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3000230> ;
+        rdfs:label "ant(2'')-Ia" .
+
+    abromics:7eba84b4-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3002652> ;
+        rdfs:label "aph(3')-VIa" .
+
+    abromics:7eba84dc-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-374" .
+
+    abromics:7eba850e-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-64" .
+
+    abromics:7eba8536-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-263" .
+
+    abromics:7eba8554-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-86" .
+
+    abromics:7eba8572-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-93" .
+
+    abromics:7eba85a4-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-242" .
+
+    abromics:7eba85b8-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-260" .
+
+    abromics:7eba85c2-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-58" .
+
+    abromics:7eba85e0-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-100" .
+
+    abromics:7eba8630-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-78" .
+
+    abromics:7eba8658-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-429" .
+
+    abromics:7eba8680-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3002854> ;
+        rdfs:label "dfrA1" .
+
+    abromics:7eba868a-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-431" .
+
+    abromics:7eba88b0-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-262" .
+
+    abromics:7eba88ec-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-409" .
+
+    abromics:7eba8914-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-432" .
+
+    abromics:7eba8932-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-413" .
+
+    abromics:7eba8946-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-223" .
+
+    abromics:7eba896e-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-383" .
+
+    abromics:7eba898c-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-386" .
+
+    abromics:7eba89aa-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-65" .
+
+    abromics:7eba89be-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-180" .
+
+    abromics:7eba89e6-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-208" .
+
+    abromics:7eba8a0e-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-344" .
+
+    abromics:7eba8a4a-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-261" .
+
+    abromics:7eba8a72-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-98" .
+
+    abromics:7eba8ab8-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-343" .
+
+    abromics:7eba8b1c-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-109" .
+
+    abromics:7eba8bbc-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3002861> ;
+        rdfs:label "dfrA5" .
+
+    abromics:7eba8bf8-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-346" .
+
+    abromics:7eba8c0c-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-128" .
+
+    abromics:7eba8c5c-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-390" .
+
+    abromics:7eba8c84-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-341" .
+
+    abromics:7eba8cb6-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-365" .
+
+    abromics:7eba8ce8-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "aadA1" .
+
+    abromics:7eba8cfc-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3002705> ;
+        rdfs:label "floR" .
+
+    abromics:7eba8d10-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3005348> ;
+        rdfs:label "dfrA36" .
+
+    abromics:7eba8d2e-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaCMY-2" .
+
+    abromics:7eba8d42-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3005113> ;
+        rdfs:label "aac(6')-Ib-cr" .
+
+    abromics:7eba8d56-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaOXA-1" .
+
+    abromics:7eba8d74-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3002676> ;
+        rdfs:label "catB3" .
+
+    abromics:7eba8d88-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaCTX-M-15" .
+
+    abromics:7eba8d9c-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "lnu(F)" .
+
+    abromics:7eba8db0-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3000413> ;
+        rdfs:label "sul3" .
+
+    abromics:7eba8dba-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3002693> ;
+        rdfs:label "cmlA1" .
+
+    abromics:7eba8dc4-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaCTX-M-3" .
+
+    abromics:7eba8dd8-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaTEM-176" .
+
+    abromics:7eba8e00-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3002872> ;
+        rdfs:label "fosA3" .
+
+    abromics:7eba8e14-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3002860> ;
+        rdfs:label "dfrA17" .
+
+    abromics:7eba8e78-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaCTX-M-8" .
+
+    abromics:7eba8e96-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3002605> ;
+        rdfs:label "aadA5" .
+
+    abromics:7eba8eaa-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaCTX-M-55" .
+
+    abromics:7eba8ed2-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3002790> ;
+        rdfs:label "qnrS1" .
+
+    abromics:7eba8f0e-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "lnu(G)" .
+
+    abromics:7eba8f22-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3002734> ;
+        rdfs:label "qnrB19" .
+
+    abromics:7eba8f2c-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaTEM-214" .
+
+    abromics:7eba8f72-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaCTX-M-1" .
+
+    abromics:7eba8ffe-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <http://purl.obolibrary.org/obo/ARO_3002612> ;
+        rdfs:label "aadA12" .
+
+    abromics:7eba9012-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaTEM-1A" .
+
+    abromics:7eba9026-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "lnu(A)" .
+
+    abromics:7eba904e-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "mph(A)" .
+
+    abromics:7eba9058-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
+        rdf:type <> ;
+        rdfs:label "blaCTX-M-14" .
+
+    abromics:7eba90bc-16ed-11f1-9d10-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
         rdf:type <> ;
         rdfs:label "blaTEM-1B" .
-
-    abromics:9e3a75bc-0da9-11f1-b5ca-90658429fd42 rdf:type sosa:ObservableProperty, sosa:FeatureOfInterest, ncit:C16612 ;
-        rdf:type <http://purl.obolibrary.org/obo/ARO_3002683> ;
-        rdfs:label "catA1" .

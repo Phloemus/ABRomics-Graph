@@ -5,7 +5,7 @@ __pycache__
 */.ipynb_checkpoints
 cache
 *reports*
-*out*
+out
 
 .venv
 node_modules/

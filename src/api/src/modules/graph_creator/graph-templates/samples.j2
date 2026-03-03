@@ -26,7 +26,7 @@
 
 {% for sample in samples %}
     abromics:{{ sample["id"] }} rdf:type prov:Entity, sio:001050 ;
-        schema:identifier "{{ sample["originalSampleId"] }}" ;
+        schema:identifier "{{ sample["abromicsId"] }}" ;
         obo:RO_0002162 ncbitaxon:{{ sample["microorganism"] }} ;
         {% if sample["collectionDate"]|isDatetime %}
             prov:generatedAtTime "{{ sample["collectionDate"] }}T00:00:00Z"^^xsd:dateTime ;
