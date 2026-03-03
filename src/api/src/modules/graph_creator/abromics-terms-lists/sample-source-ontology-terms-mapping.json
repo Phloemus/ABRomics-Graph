@@ -1,0 +1,782 @@
+[
+  {
+    "name": "Upper respiratory tract",
+    "type": "human",
+    "class": "http://purl.obolibrary.org/obo/UBERON_0001557",
+    "ontology": "UBERON"
+  },
+  {
+    "name": "Intestine",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Urethra",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12417",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Trachea",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Urine",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Bronchus",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12683",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Anterior Nares",
+    "type": "human",
+    "class": "http://purl.bioontology.org/ontology/SNOMEDCT/697989009",
+    "ontology": "SNOMEDCT"
+  },
+  {
+    "name": "Tissue",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12801",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Tear",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33739",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Esophagus",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12389",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Breast Milk",
+    "type": "human",
+    "class": "http://purl.obolibrary.org/obo/ENVO_02000031",
+    "ontology": "ENVO"
+  },
+  {
+    "name": "Inferior Nasal Turbinate",
+    "type": "human",
+    "class": "http://purl.bioontology.org/ontology/SNOMEDCT/361932000",
+    "ontology": "SNOMEDCT"
+  },
+  {
+    "name": "Alveolar sac",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C32057",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Fluid (Pericardial)",
+    "type": "human",
+    "class": "http://purl.bioontology.org/ontology/SNOMEDCT/34429004",
+    "ontology": "SNOMEDCT"
+  },
+  {
+    "name": "Mucus",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13259",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Sinus",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33556",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Skin",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12470",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Rectum",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Semen",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13277",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Pleural sac",
+    "type": "human",
+    "class": "http://purl.obolibrary.org/obo/UBERON_0009778",
+    "ontology": "UBERON"
+  },
+  {
+    "name": "Sputum",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Sweat",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13280",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Anus",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43362",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Nasal Cavity",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12424",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Duodenum",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12263",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Catheter",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C50344",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Blood",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Cranial hair",
+    "type": "human",
+    "class": "http://purl.obolibrary.org/obo/UBERON_1000001",
+    "ontology": "UBERON"
+  },
+  {
+    "name": "Oropharynx (OP)",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12762",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Fluid (Amniotic)",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13188",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Bone and joint",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12366",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Fluid (Vaginal)",
+    "type": "human",
+    "class": "http://purl.obolibrary.org/obo/UBERON_0036243",
+    "ontology": "UBERON"
+  },
+  {
+    "name": "Dialysis",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15221",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Ethmoid sinus",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12276",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Middle Nasal Turbinate",
+    "type": "human",
+    "class": "http://purl.bioontology.org/ontology/SNOMEDCT/60962000",
+    "ontology": "SNOMEDCT"
+  },
+  {
+    "name": "Saliva",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13275",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Vagina",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12407",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Surgical site",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C164323",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Not Collected",
+    "type": "human",
+    "class": "http://www.w3.org/2002/07/owl#Thing",
+    "ontology": "OWL"
+  },
+  {
+    "name": "Lower respiratory tract",
+    "type": "human",
+    "class": "http://purl.obolibrary.org/obo/UBERON_0001558",
+    "ontology": "UBERON"
+  },
+  {
+    "name": "Feces",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Nasopharynx (NP)",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12423",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Eye",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12401",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Prosthesis",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17598",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Fluid (Pleural)",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C77613",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Fluid (Cerebrospinal (CSF))",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12692",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Bronchiole",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12684",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Pleural cavity",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12840",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Lung",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Stomach",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12391",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Fluid",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25278",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Upper respiratory tract",
+    "type": "animal",
+    "class": "http://purl.obolibrary.org/obo/UBERON_0001557",
+    "ontology": "UBERON"
+  },
+  {
+    "name": "Intestine",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Urethra",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12417",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Trachea",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Urine",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Bronchus",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12683",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Anterior Nares",
+    "type": "animal",
+    "class": "http://purl.bioontology.org/ontology/SNOMEDCT/697989009",
+    "ontology": "SNOMEDCT"
+  },
+  {
+    "name": "Tissue",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12801",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Tear",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33739",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Esophagus",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12389",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Breast Milk",
+    "type": "animal",
+    "class": "http://purl.obolibrary.org/obo/ENVO_02000031",
+    "ontology": "ENVO"
+  },
+  {
+    "name": "Inferior Nasal Turbinate",
+    "type": "animal",
+    "class": "http://purl.bioontology.org/ontology/SNOMEDCT/361932000",
+    "ontology": "SNOMEDCT"
+  },
+  {
+    "name": "Alveolar sac",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C32057",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Fluid (Pericardial)",
+    "type": "animal",
+    "class": "http://purl.bioontology.org/ontology/SNOMEDCT/34429004",
+    "ontology": "SNOMEDCT"
+  },
+  {
+    "name": "Mucus",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13259",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Sinus",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C33556",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Skin",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12470",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Rectum",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Semen",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13277",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Pleural sac",
+    "type": "animal",
+    "class": "http://purl.obolibrary.org/obo/UBERON_0009778",
+    "ontology": "UBERON"
+  },
+  {
+    "name": "Sputum",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Sweat",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13280",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Anus",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43362",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Nasal Cavity",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12424",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Duodenum",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12263",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Catheter",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C50344",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Blood",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12434",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Cranial hair",
+    "type": "animal",
+    "class": "http://purl.obolibrary.org/obo/UBERON_1000001",
+    "ontology": "UBERON"
+  },
+  {
+    "name": "Oropharynx (OP)",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12762",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Fluid (Amniotic)",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13188",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Bone and joint",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12366",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Fluid (Vaginal)",
+    "type": "animal",
+    "class": "http://purl.obolibrary.org/obo/UBERON_0036243",
+    "ontology": "UBERON"
+  },
+  {
+    "name": "Dialysis",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15221",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Ethmoid sinus",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12276",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Middle Nasal Turbinate",
+    "type": "animal",
+    "class": "http://purl.bioontology.org/ontology/SNOMEDCT/60962000",
+    "ontology": "SNOMEDCT"
+  },
+  {
+    "name": "Saliva",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13275",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Vagina",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12407",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Surgical site",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C164323",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Not Collected",
+    "type": "animal",
+    "class": "http://www.w3.org/2002/07/owl#Thing",
+    "ontology": "OWL"
+  },
+  {
+    "name": "Lower respiratory tract",
+    "type": "animal",
+    "class": "http://purl.obolibrary.org/obo/UBERON_0001558",
+    "ontology": "UBERON"
+  },
+  {
+    "name": "Feces",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Nasopharynx (NP)",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12423",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Eye",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12401",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Prosthesis",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17598",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Fluid (Pleural)",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C77613",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Fluid (Cerebrospinal (CSF))",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12692",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Bronchiole",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12684",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Pleural cavity",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12840",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Lung",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Stomach",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12391",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Fluid",
+    "type": "animal",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25278",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Farm effluent",
+    "type": "environmental",
+    "class": "http://purl.obolibrary.org/obo/ENVO_00002001",
+    "ontology": "ENVO"
+  },
+  {
+    "name": "Agricultural soil",
+    "type": "environmental",
+    "class": "http://purl.obolibrary.org/obo/ENVO_00002259",
+    "ontology": "ENVO"
+  },
+  {
+    "name": "River water",
+    "type": "environmental",
+    "class": "http://purl.obolibrary.org/obo/ENVO_01000599",
+    "ontology": "ENVO"
+  },
+  {
+    "name": "WWTP effluent",
+    "type": "environmental",
+    "class": "http://purl.obolibrary.org/obo/ENVO_00002001",
+    "ontology": "ENVO"
+  },
+  {
+    "name": "Other",
+    "type": "environmental",
+    "class": "http://www.w3.org/2002/07/owl#Thing",
+    "ontology": "OWL"
+  },
+  {
+    "name": "Hospital effluent",
+    "type": "environmental",
+    "class": "http://purl.obolibrary.org/obo/ENVO_00002001",
+    "ontology": "ENVO"
+  },
+  {
+    "name": "Other",
+    "type": "animal",
+    "class": "http://www.w3.org/2002/07/owl#Thing",
+    "ontology": "OWL"
+  },
+  {
+    "name": "Other",
+    "type": "human",
+    "class": "http://www.w3.org/2002/07/owl#Thing",
+    "ontology": "OWL"
+  },
+  {
+    "name": "Not applicable",
+    "type": "environmental",
+    "class": "http://www.w3.org/2002/07/owl#Thing",
+    "ontology": "OWL"
+  },
+  {
+    "name": "Feather",
+    "type": "animal",
+    "class": "http://purl.obolibrary.org/obo/UBERON_0000022",
+    "ontology": "UBERON"
+  },
+  {
+    "name": "Pellet",
+    "type": "animal",
+    "class": "http://purl.bioontology.org/ontology/SNOMEDCT/420768007",
+    "ontology": "SNOMEDCT"
+  },
+  {
+    "name": "Egg shells",
+    "type": "animal",
+    "class": "http://purl.bioontology.org/ontology/MESH/D004528",
+    "ontology": "MESH"
+  },
+  {
+    "name": "Egg shells",
+    "type": "environmental",
+    "class": "http://purl.bioontology.org/ontology/MESH/D004528",
+    "ontology": "MESH"
+  },
+  {
+    "name": "Nest",
+    "type": "animal",
+    "class": "http://purl.obolibrary.org/obo/ENVO_00005805",
+    "ontology": "ENVO"
+  },
+  {
+    "name": "Nest",
+    "type": "environmental",
+    "class": "http://purl.obolibrary.org/obo/ENVO_00005805",
+    "ontology": "ENVO"
+  },
+  {
+    "name": "Tracheal secretion",
+    "type": "human",
+    "class": "http://purl.bioontology.org/ontology/SNOMEDCT/57741000052105",
+    "ontology": "SNOMEDCT"
+  },
+  {
+    "name": "Tracheal aspirate",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13347",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Wound",
+    "type": "human",
+    "class": "http://purl.bioontology.org/ontology/SNOMEDCT/13924000",
+    "ontology": "SNOMEDCT"
+  },
+  {
+    "name": "Wound",
+    "type": "animal",
+    "class": "http://purl.bioontology.org/ontology/SNOMEDCT/13924000",
+    "ontology": "SNOMEDCT"
+  },
+  {
+    "name": "Nasal swab",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C132119",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Foot",
+    "type": "human",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C32622",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Exudate tracheostoma",
+    "type": "human",
+    "class": "http://purl.bioontology.org/ontology/SNOMEDCT/465998006",
+    "ontology": "SNOMEDCT"
+  },
+  {
+    "name": "Pulmonary abscess",
+    "type": "human",
+    "class": "http://purl.bioontology.org/ontology/SNOMEDCT/128477000",
+    "ontology": "SNOMEDCT"
+  },
+  {
+    "name": "Pulmonary abscess",
+    "type": "animal",
+    "class": "http://purl.bioontology.org/ontology/SNOMEDCT/128477000",
+    "ontology": "SNOMEDCT"
+  },
+  {
+    "name": "Ear swab",
+    "type": "human",
+    "class": "http://purl.bioontology.org/ontology/RCD/XaBku",
+    "ontology": "RCTV3"
+  },
+  {
+    "name": "Air",
+    "type": "environmental",
+    "class": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C73434",
+    "ontology": "NCIT"
+  },
+  {
+    "name": "Plant root",
+    "type": "environmental",
+    "class": "http://purl.jp/bio/11/meo/MEO_0000386",
+    "ontology": "MEO"
+  },
+  {
+    "name": "Soil",
+    "type": "environmental",
+    "class": "http://purl.obolibrary.org/obo/ENVO_00001998",
+    "ontology": "ENVO"
+  }
+]

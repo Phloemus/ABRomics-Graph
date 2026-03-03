@@ -13,6 +13,10 @@ from jinja2 import Environment, FileSystemLoader, StrictUndefined
 from SPARQLWrapper import SPARQLWrapper, JSON
 from dotenv import load_dotenv # to read the environment variables from the .env file
 
+## TODO: Fix the bug that made the value of the samplesource not present in the ttl file
+## TODO: Fix the bug that made no st appearing the the ttl file
+## TODO: Improve the coverage of the ARO ontology, too few genes are mapped to ARO
+
 ## Report class
 ## It's a common interface for both old and new abromics reports
 ## The content of the ABRomics report is fetched from the raw json report. The report class can handle 
@@ -269,21 +273,21 @@ class GraphCreator:
 
 
     ## Get the sample sources from the NCIT ontology hosted by the ncit browser ######################################################
-    ## Doesn't really works ..
-    ## The response of the query doesn't seems to be right ..
-    ## All the issues to create the query and now with the issue that seems to be caused by the format of the query 
-    ## could be solved by getting the NCIT ontology directly onto the virtuoso server
     ## 
     ## This feature should be completed with the addition of UBERON and ENVO (inspired by the query that get a good list 
     ## of sample sources)
-    def __getSampleSources(self):
+    ##
+    ##! Deprecated function. Not used
+    def __getSampleSourcesFromKg(self):
         for report in self.allReports:
             sampleSource = self.__getValueFromColname(report.sampleMetadata, "Sample source")
-            if sampleSource != None and sampleSource != "":
+            if sampleSource != None and sampleSource != "" and sampleSource not in self.sampleSources:
                 self.sampleSources.append(sampleSource)
         sampleSourceNames = ""
         for sampleSourceName in self.sampleSources:
             sampleSourceNames += f"'{sampleSourceName}' "
+        print(sampleSourceNames)
+        exit()
         sparql_query = f"""
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -327,11 +331,22 @@ class GraphCreator:
         try:
             res = sparql.query().convert()
             recs = res["results"]["bindings"]
-            print(recs)
             for item in recs:
                 self.sampleSourcesBindNCIT[item["sampleSourceName"]["value"]] = item["sourceId"]["value"]
         except Exception as e:
             print(e)
+    
+
+    ## Get the sample sources ontology terms from the ABRomics sample sources list
+    def __getSampleSources(self):
+        sampleSourcesTermsMapping = self.__readJsonFromFile("abromics-terms-lists/sample-source-ontology-terms-mapping.json")
+        for report in self.allReports:
+            sampleSource = self.__getValueFromColname(report.sampleMetadata, "Sample source")
+            if sampleSource != None and sampleSource != "" and sampleSource != "Not Collected" and sampleSource not in self.sampleSources:
+                self.sampleSources.append(sampleSource)
+                for sampleSourceItem in sampleSourcesTermsMapping:
+                    if sampleSourceItem["name"] == sampleSource:
+                        self.sampleSourcesBindNCIT[sampleSource] = sampleSourceItem["class"]
 
 
     ## Get the ncbi taxon id of a list of species
@@ -588,9 +603,6 @@ class GraphCreator:
                 self.samplesMapping[abromicsId] = uniqueGraphId
 
 
-    ## Add the observations made on all the samples
-    ########################################################################################################################################### NOT FINISHED - HERE ##
-    ## TODO: Add the madeby sensor, used procedure and hasResult fields to the ttl observation file
     def __addObservations(self):
         reportId = 0
         observationHeaderId = 0
