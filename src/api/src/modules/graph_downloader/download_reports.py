@@ -128,74 +128,67 @@ for samn in unique_samn:
 samnMetadataDf = pd.DataFrame.from_dict(samn_results, orient="index")
 
 df = df.merge(samnMetadataDf, on="SAMN", how="left")
-df.to_csv("file_with_metadata.tsv", sep="\t", index=False)
 
+## Generate the sample metadata section of the report
+print("Generating the analysis reports")
+reportsCounter = 0
+samplesDf = df.drop_duplicates(subset=["SAMN"], keep="first")
+print(samplesDf["SAMN"])
+for index, sample in samplesDf.iterrows():
+    titleSection = {"title": "GALAXY METAGENOMIC WORKFLOW RESULT REPORT"}
+    sampleMetadataSection = {"data": [
+        {
+            "type": "summary",
+            "header": ["ABRomics ID", "Microorganism scientific name", "Collection date", "Sample type", "Sample source", "Host", "Country", "City", "Latitude", "Longitude", "Sequencing technology"],
+            "values": [sample["ABRomics ID"], "", sample["Collection date"], "environmental", "WWTP effluant", "", sample["Country"], sample["City"], sample["Latitude"], sample["Longitude"], ""]
+        }
+    ]}
+    sampleTaxonomyAndStSection = {"data": [
+        {
+            "type": "summary", 
+            "header": ["Isolate identified as", "Sequence Type (ST)", "Number of genes with known resistance to target antibiotics"],
+            "valules": ["", "", ""]
+        }
+    ]}
+    sampleObservationsDf = df[df["SAMN"] == sample["SAMN"]]
+    resistanceGenes = []
+    geneLengths = []
+    identityPercentages = []
+    overlapPercentages = []
+    contigs = []
+    startInContigs = []
+    endInContigs = []
+    strands = []
+    targetAntibiotics = [] 
+    accessionNumbers = []
+    for index, observation in sampleObservationsDf.iterrows():
+        resistanceGenes.append(observation['Gene'])
+        geneLengths.append(observation['HSP Length/Total Length'].split("/")[0]) 
+        identityPercentages.append(observation['%Identity'])
+        overlapPercentages.append(observation['%Overlap'])
+        contigs.append(observation['Contig'])
+        startInContigs.append(observation['Start'])
+        endInContigs.append(observation['End'])
+        for antibiotic in observation['Predicted Phenotype'].split(","):
+            targetAntibiotics.append(antibiotic.strip())
+        accessionNumbers.append(observation['Accession'])
+    sampleObservationsSection = {"data": [
+        {
+            "type": "data-table", 
+            "header": ["Resistance gene", "Gene length", "Identity (%)", "Overlap (%)", "Contig", "Start in contig", "End in contig", "Target antibiotic", "# Accession"],
+            "valules": [resistanceGenes, geneLengths, identityPercentages, overlapPercentages, contigs, startInContigs, endInContigs, targetAntibiotics, accessionNumbers]
+        }
+    ]}
 
+    sections = [titleSection, sampleMetadataSection, sampleTaxonomyAndStSection, sampleObservationsSection]
 
-exit()
-
-## Generate the reports
-reportCounter = 0
-for index, row in df.iterrows(): ##! I do it on every row (every SRR) so duplicates SAMN data are return -> big loss of time
-    
-    reportCounter += 1
-print(f"{reportCounter} reports generated")
-
-
-
-
-
-
-
-
-
-
-
-
-url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=biosample&id=SAMN08275689&retmode=xml"
-
-r = requests.get(url)
-
-# Convert XML to dict
-data_dict = xmltodict.parse(r.text)
-
-# Convert dict to JSON string
-json_output = json.dumps(data_dict, indent=2)
-
-lat, lon = parse_lat_lon("0.313125 N 32.61509 E")
-print(lat, lon)
-
-titleSection = {"title": "GALAXY METAGENOMIC WORKFLOW RESULT REPORT"}
-sampleMetadataSection = {"data": [
-    {
-        "type": "summary",
-        "header": ["ABRomics ID", "Microorganism scientific name", "Collection date", "Sample type", "Sample source", "Host", "Country", "City", "Latitude", "Longitude", "Sequencing technology"],
-        "values": ["", "", "2013-10-17", "environmental", "WWTP effluant", "", "Uganda", "Kampala", 0.313125, 32.61509, ""]
+    reportDict = {
+        "title": "GALAXY METAGENOMIC WORKFLOW RESULT REPORT",
+        "sections": sections,
     }
-]}
 
-sampleTaxonomyAndStSection = {"data": [
-    {
-        "type": "summary", 
-        "header": ["Isolate identified as", "Sequence Type (ST)", "Number of genes with known resistance to target antibiotics"],
-        "valules": ["", "", ""]
-    }
-]}
-
-sampleObservationsSection = {"data": [
-    {
-        "type": "data-table", 
-        "header": ["Resistance gene", "Gene length", "Identity (%)", "Coverage (%)", "Contig", "Start in contig", "End in contig", "Strand", "Target antibiotic", "# Accession"],
-        "valules": [["sul1", "sul2"], [178, 981], [89.1, 96.4]]
-    }
-]}
-
-sections = [titleSection, sampleMetadataSection, sampleTaxonomyAndStSection, sampleObservationsSection]
-
-reportDict = {
-    "title": "GALAXY METAGENOMIC WORKFLOW RESULT REPORT",
-    "sections": sections,
-}
-
-with open("uc3-reports/report_SAMNSAMN08275701.json", "w", encoding="utf-8") as f:
-    json.dump(reportDict, f, indent=2)
+    with open(f"uc3-reports/report_{sample['SAMN']}.json", "w", encoding="utf-8") as f:
+        json.dump(reportDict, f, indent=2)
+    print(f"report for sample {sample['SAMN']} created in ./uc3-reports")
+    reportsCounter += 1
+print(f"{reportsCounter} reports generated")
