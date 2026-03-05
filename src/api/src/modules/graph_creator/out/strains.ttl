@@ -18,954 +18,982 @@
 ################################## Strains #################################
 
 
-    abromics:2e33ddca-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e399ee8-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "1" .
 
-    abromics:2e33de06-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e399f1a-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "108" .
 
-    abromics:2e33de38-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e399f4c-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "37" .
 
-    abromics:2e33de60-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e399f74-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "15" .
 
-    abromics:2e33de88-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e399f92-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "34" .
 
-    abromics:2e33dea6-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e399fb0-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "23" .
 
-    abromics:2e33dec4-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e399fce-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33deec-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e399ff6-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "1013" .
 
-    abromics:2e33df14-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a01e-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33df32-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a03c-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33df50-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a05a-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33df6e-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a078-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33df8c-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a096-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "23" .
 
-    abromics:2e33dfaa-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a0aa-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33dfc8-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a0c8-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "1060" .
 
-    abromics:2e33dfe6-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a0f0-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "1117" .
 
-    abromics:2e33e004-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a104-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "39" .
 
-    abromics:2e33e022-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a122-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e040-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a140-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "12" .
 
-    abromics:2e33e054-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a15e-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e072-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a17c-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e086-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a190-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "753" .
 
-    abromics:2e33e0ae-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a1ae-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "2176" .
 
-    abromics:2e33e0c2-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a1c2-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "118" .
 
-    abromics:2e33e0e0-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a1d6-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "2" .
 
-    abromics:2e33e0fe-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a1f4-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e11c-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a212-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "1102" .
 
-    abromics:2e33e13a-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a230-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e14e-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a244-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "155" .
 
-    abromics:2e33e16c-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a262-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "934" .
 
-    abromics:2e33e18a-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a280-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "1074" .
 
-    abromics:2e33e19e-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a294-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "932" .
 
-    abromics:2e33e1bc-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a2b2-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "1" .
 
-    abromics:2e33e1da-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a2d0-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "1" .
 
-    abromics:2e33e1ee-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a2e4-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "1179" .
 
-    abromics:2e33e20c-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a302-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "155" .
 
-    abromics:2e33e22a-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a316-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e248-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a334-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "837" .
 
-    abromics:2e33e25c-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a352-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e27a-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a370-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "11" .
 
-    abromics:2e33e298-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a384-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e2b6-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a3a2-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "933" .
 
-    abromics:2e33e2ca-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a3b6-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e2e8-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a3d4-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "639" .
 
-    abromics:2e33e2fc-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a3f2-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "New ST (0 new alleles)" .
 
-    abromics:2e33e324-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a406-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "47" .
 
-    abromics:2e33e338-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a42e-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "32" .
 
-    abromics:2e33e356-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a442-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "1013" .
 
-    abromics:2e33e374-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a460-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e392-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a47e-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "271" .
 
-    abromics:2e33e3b0-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a492-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "367" .
 
-    abromics:2e33e3c4-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a4b0-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "25" .
 
-    abromics:2e33e3e2-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a4c4-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "37" .
 
-    abromics:2e33e400-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a4e2-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e414-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a4f6-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e432-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a514-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e450-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a528-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "2" .
 
-    abromics:2e33e464-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a53c-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e48c-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a55a-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "9" .
 
-    abromics:2e33e4a0-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a578-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "927" .
 
-    abromics:2e33e4be-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a596-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "504" .
 
-    abromics:2e33e4dc-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a5aa-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "35" .
 
-    abromics:2e33e4f0-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a5c8-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "437" .
 
-    abromics:2e33e50e-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a5fa-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "15" .
 
-    abromics:2e33e52c-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a618-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "466" .
 
-    abromics:2e33e54a-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a636-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e55e-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a654-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "690" .
 
-    abromics:2e33e57c-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a668-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e590-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a686-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "New ST (0 new alleles)" .
 
-    abromics:2e33e5ae-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a69a-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "1058" .
 
-    abromics:2e33e5cc-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a6b8-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e5e0-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a6cc-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "1416" .
 
-    abromics:2e33e5f4-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a6ea-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e612-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a708-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "1878" .
 
-    abromics:2e33e630-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a71c-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "494" .
 
-    abromics:2e33e644-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a73a-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e662-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a74e-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "155" .
 
-    abromics:2e33e6bc-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a76c-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "New ST (0 new alleles)" .
 
-    abromics:2e33e6da-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a78a-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "1013" .
 
-    abromics:2e33e6f8-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a79e-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
         abromics:has_st "None" .
 
-    abromics:2e33e70c-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a7bc-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "934" .
 
-    abromics:2e33e72a-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a7d0-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "935" .
 
-    abromics:2e33e73e-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a7e4-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "438" .
 
-    abromics:2e33e75c-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a802-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e77a-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a820-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "935" .
 
-    abromics:2e33e78e-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a83e-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "504" .
 
-    abromics:2e33e7ac-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a852-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "1230" .
 
-    abromics:2e33e7ca-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a870-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "155" .
 
-    abromics:2e33e7de-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a884-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
         abromics:has_st "3" .
 
-    abromics:2e33e7fc-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a8a2-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "941" .
 
-    abromics:2e33e810-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a8b6-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e82e-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a8d4-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "639" .
 
-    abromics:2e33e84c-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a8f2-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "2" .
 
-    abromics:2e33e860-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a910-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "2" .
 
-    abromics:2e33e87e-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a924-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e89c-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a942-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "155" .
 
-    abromics:2e33e8ba-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a956-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "1013" .
 
-    abromics:2e33e8ce-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a974-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "283" .
 
-    abromics:2e33e8ec-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a988-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "40" .
 
-    abromics:2e33e900-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a9a6-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "36" .
 
-    abromics:2e33e91e-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a9ba-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "536" .
 
-    abromics:2e33e93c-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a9d8-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "766" .
 
-    abromics:2e33e950-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39a9ec-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e96e-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39aa0a-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e982-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39aa1e-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "2188" .
 
-    abromics:2e33e9a0-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39aa3c-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33e9b4-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39aa50-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "1" .
 
-    abromics:2e33e9d2-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39aa6e-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "274" .
 
-    abromics:2e33e9e6-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39aa8c-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "New ST (0 new alleles)" .
 
-    abromics:2e33ea04-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39aaa0-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33ea22-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39aabe-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "10" .
 
-    abromics:2e33ea36-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39aad2-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33ea54-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39aae6-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "155" .
 
-    abromics:2e33ea68-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ab04-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "2" .
 
-    abromics:2e33ea86-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ab22-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "New ST (0 new alleles)" .
 
-    abromics:2e33ea9a-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ab36-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "New ST (0 new alleles)" .
 
-    abromics:2e33eab8-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ab54-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "620" .
 
-    abromics:2e33eacc-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ab68-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33eaea-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ab86-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "None" .
 
-    abromics:2e33eb08-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ab9a-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "54" .
 
-    abromics:2e33eb26-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39abb8-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:470 ;
         
         abromics:has_st "38" .
 
-    abromics:2e33eb3a-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39abcc-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "410" .
 
-    abromics:2e33eb58-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39abea-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "617" .
 
-    abromics:2e33eb76-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ac08-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "410" .
 
-    abromics:2e33eb94-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ac26-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "2541" .
 
-    abromics:2e33eba8-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ac3a-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "410" .
 
-    abromics:2e33ebc6-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ac58-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "88" .
 
-    abromics:2e33ebe4-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ac6c-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "2973" .
 
-    abromics:2e33ebf8-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ac8a-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "6438" .
 
-    abromics:2e33ec16-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39aca8-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "2541" .
 
-    abromics:2e33ec34-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39acbc-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "58" .
 
-    abromics:2e33ec48-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39acda-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "2973" .
 
-    abromics:2e33ec66-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39acee-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "6438" .
 
-    abromics:2e33ec7a-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ad0c-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "2973" .
 
-    abromics:2e33ec98-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ad20-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "8553" .
 
-    abromics:2e33ecb6-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ad34-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "410" .
 
-    abromics:2e33ecca-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ad52-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "6438" .
 
-    abromics:2e33ece8-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ad66-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "2541" .
 
-    abromics:2e33ecfc-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ad7a-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "2973" .
 
-    abromics:2e33ed1a-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ad98-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "8553" .
 
-    abromics:2e33ed2e-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39adb6-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "410" .
 
-    abromics:2e33ed4c-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39adca-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "6438" .
 
-    abromics:2e33ed60-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39adde-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "58" .
 
-    abromics:2e33ed7e-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39adfc-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "2973" .
 
-    abromics:2e33ed92-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ae10-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "744" .
 
-    abromics:2e33edb0-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ae2e-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "88" .
 
-    abromics:2e33edc4-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ae42-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "410" .
 
-    abromics:2e33ede2-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ae60-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "58" .
 
-    abromics:2e33edf6-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39ae88-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "410" .
 
-    abromics:2e33ee14-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39aea6-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "617" .
 
-    abromics:2e33ee32-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39aec4-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "1011" .
 
-    abromics:2e33ee50-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39aed8-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "410" .
 
-    abromics:2e33ee64-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39aef6-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "58" .
 
-    abromics:2e33ee82-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39af0a-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "744" .
 
-    abromics:2e33ee96-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39af28-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "1011" .
 
-    abromics:2e33eeb4-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39af3c-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "2973" .
 
-    abromics:2e33eec8-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39af5a-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "410" .
 
-    abromics:2e33eedc-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39af6e-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "410" .
 
-    abromics:2e33eefa-170f-11f1-908b-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+    abromics:8e39af8c-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
         
             obo:RO_0002162 ncbitaxon:562 ;
         
         abromics:has_st "2541" .
+
+    abromics:8e39afa0-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+        
+        abromics:has_st "" .
+
+    abromics:8e39afbe-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+        
+        abromics:has_st "" .
+
+    abromics:8e39afd2-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+        
+        abromics:has_st "" .
+
+    abromics:8e39aff0-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+        
+        abromics:has_st "" .
+
+    abromics:8e39b004-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+        
+        abromics:has_st "" .
+
+    abromics:8e39b022-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+        
+        abromics:has_st "" .
+
+    abromics:8e39b036-18aa-11f1-ab36-90658429fd42 rdf:type sosa:FeatureOfInterest, aro:3004531;
+        
+        abromics:has_st "" .
 
  

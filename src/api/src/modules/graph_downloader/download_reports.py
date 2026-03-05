@@ -147,7 +147,7 @@ for index, sample in samplesDf.iterrows():
         {
             "type": "summary", 
             "header": ["Isolate identified as", "Sequence Type (ST)", "Number of genes with known resistance to target antibiotics"],
-            "valules": ["", "", ""]
+            "values": ["", "", ""]
         }
     ]}
     sampleObservationsDf = df[df["SAMN"] == sample["SAMN"]]
@@ -170,13 +170,14 @@ for index, sample in samplesDf.iterrows():
         startInContigs.append(observation['Start'])
         endInContigs.append(observation['End'])
         for antibiotic in observation['Predicted Phenotype'].split(","):
-            targetAntibiotics.append(antibiotic.strip())
+            if antibiotic not in targetAntibiotics:
+                targetAntibiotics.append(antibiotic.strip())
         accessionNumbers.append(observation['Accession'])
     sampleObservationsSection = {"data": [
         {
             "type": "data-table", 
             "header": ["Resistance gene", "Gene length", "Identity (%)", "Overlap (%)", "Contig", "Start in contig", "End in contig", "Target antibiotic", "# Accession"],
-            "valules": [resistanceGenes, geneLengths, identityPercentages, overlapPercentages, contigs, startInContigs, endInContigs, targetAntibiotics, accessionNumbers]
+            "values": [resistanceGenes, geneLengths, identityPercentages, overlapPercentages, contigs, startInContigs, endInContigs, targetAntibiotics, accessionNumbers]
         }
     ]}
 

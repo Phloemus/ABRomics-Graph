@@ -564,6 +564,8 @@ class GraphCreator:
             if abromicsId not in self.samplesMapping.keys():
                 uniqueGraphId = uuid.uuid1()
                 countryName = self.__getValueFromColname(report.sampleMetadata, "Country")
+                latitude = self.__getValueFromColname(report.sampleMetadata, "Latitude")
+                longitude = self.__getValueFromColname(report.sampleMetadata, "Longitude")
                 collectionDate = self.__getValueFromColname(report.sampleMetadata, "Collection date")
                 if collectionDate != "":
                     try:
@@ -593,6 +595,8 @@ class GraphCreator:
                     "sampleSource": self.sampleSourcesBindNCIT[sampleSource] if sampleSource in self.sampleSourcesBindNCIT.keys() else "",
                     "host": self.speciesTaxonomy[host] if host in self.speciesTaxonomy.keys() else "",
                     "country": self.countries[countryName] if countryName in self.countries.keys() else "",
+                    "latitude": latitude,
+                    "longitude": longitude,
                     "sequencingTechnology": self.sensorsMapping[sensor] if sensor in self.sensorsMapping.keys() else ""
                 })
 
@@ -772,7 +776,7 @@ class GraphCreator:
 
 if __name__ == "__main__":
     print("=== Graph creator module ===\n")
-    reportsDirs = ["../graph_downloader/uc1-reports", "../graph_downloader/uc2-reports"]
+    reportsDirs = ["../graph_downloader/uc1-reports", "../graph_downloader/uc2-reports", "../graph_downloader/uc3-reports"]
     outputPath = "out"
     choiceCreateNewGraph = input(f"\nCreate new graph (this action is destructive) (deleted content: {outputPath}/) ? [yes/no] ")
     if choiceCreateNewGraph == "yes": 

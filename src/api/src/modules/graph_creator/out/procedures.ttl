@@ -17,12 +17,12 @@
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
 
-    abromics:2e33dd8e-170f-11f1-908b-90658429fd42 rdf:type sosa:Procedure ;
+    abromics:8e399ea2-18aa-11f1-ab36-90658429fd42 rdf:type sosa:Procedure ;
         
-            ssn:implementedBy  abromics:2e33d50a-170f-11f1-908b-90658429fd42 ; 
+            ssn:implementedBy  abromics:8e399574-18aa-11f1-ab36-90658429fd42 ; 
         
-            ssn:implementedBy  abromics:2e33d550-170f-11f1-908b-90658429fd42 ; 
+            ssn:implementedBy  abromics:8e3995c4-18aa-11f1-ab36-90658429fd42 ; 
         
-            ssn:implementedBy  abromics:2e33dba4-170f-11f1-908b-90658429fd42 ; 
+            ssn:implementedBy  abromics:8e399c36-18aa-11f1-ab36-90658429fd42 ; 
         
         rdfs:label "workflow 1 (genomic)" .
