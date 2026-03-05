@@ -37,6 +37,9 @@
         {% endif %}
         uniprot-core:host ncbitaxon:{{ sample["host"] }} ;
         prov:atLocation <{{ sample["country"] }}> ;
+        
+        ## Add wkt coordinates with latitude and longitude
+
         prov:wasAttributedTo abromics:{{ sample["sequencingTechnology"] }} .
 
 {% endfor %}
