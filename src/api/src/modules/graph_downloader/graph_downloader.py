@@ -150,7 +150,6 @@ class Downloader():
         ncbiIdsDf = pd.DataFrame.from_dict(srr_results, orient="index")
 
         df = df.merge(ncbiIdsDf, on="SRR", how="left")
-        df.to_csv("file_with_metadata.tsv", sep="\t", index=False)
 
         ## Get the sample metadata in the df
         unique_samn = df["SAMN"].dropna().unique().tolist()
@@ -357,18 +356,17 @@ class ReportCurator():
             return d
 
     ## curate the reports by only copying the reports have enough metadata and metadata that match the constraints given by the metadata filters
+    ##! verify that the curation for uc1 is working correctly
+    ##! check if it works for the reports of uc3
     def curateReports(self):
         self.curatedReportsFilenames = []
         i = 0
         for report in self.allReports:
             i += 1
             isMetadataOk = False
-            if len(report["sections"][1]["data"][0]["values"]) < 7:
-                continue
             for key, value in self.metadataFilters.items():
                 inReportMetadataValue = self.__getValueFromColname(report["sections"][1]["data"][0], key)
-                print(f"{inReportMetadataValue} - {value}")
-                if inReportMetadataValue != None and inReportMetadataValue == value:
+                if inReportMetadataValue != "" and (inReportMetadataValue == value or value == "*"):
                     isMetadataOk = True
             if isMetadataOk:
                 self.curatedReportsFilenames.append(self.allReportsFilenames[i-1])
@@ -379,14 +377,14 @@ class ReportCurator():
 
 
 if __name__ == "__main__":
-    choiceOption = input(f"Report downloader module\n\n1.Download reports (UC1, UC2, UC3)\n2.Curate UC1 and UC2 reports\n\nSelect an option (1 or 2)\n")
+    choiceOption = input(f"Report downloader module\n\n1.Download reports (UC1, UC2, UC3)\n2.Curate UC1, UC2, UC3 reports\n\nSelect an option (1 or 2)\n")
     if choiceOption == "1":
         downloadDir = "reports"
         choiceDownloadFreshReports = input(f"Download fresh reports data from abromics (this action is destructive) (targeted directory: {downloadDir}) ? [yes/no] ")
         if choiceDownloadFreshReports == "yes": 
             downloader = Downloader(downloadDir = downloadDir)
             print("\n=== Public reports ===\nDownloading and creating reports based on publicly available samples in NCBI")
-            downloader.getPublicReportsFromWorkflowResult("uc3-reports/resfinder-galaxy-results.tsv")
+            downloader.getPublicReportsFromWorkflowResult("resfinder-galaxy-results.tsv")
             print("\n=== Private reports ===\nDownloading reports from the ABRomics database. Needs an authentification using ABRomics credentials (https://analysis.abromics.fr/register)")
             downloader.authenticate()
             print("Preparing the downloading process can be a bit long. Please wait..")
@@ -399,3 +397,5 @@ if __name__ == "__main__":
             uc1Curator.curateReports()
             uc2Curator = ReportCurator("reports", "uc2-reports", {"Country": "Chile"})
             uc2Curator.curateReports()
+            uc3Curator = ReportCurator("reports", "uc3-reports", {"Longitude": "*"})
+            uc3Curator.curateReports()
