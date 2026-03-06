@@ -24,1035 +24,1035 @@
 ## environmental, agricultural (animals)
 
 
-abromics:93b04c8c-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a719c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/MESH/D004528> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002183" .
 
-abromics:93b050ec-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a75d4-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2008-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C73434> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002059" .
 
-abromics:93b052c2-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a77e6-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002304" .
 
-abromics:93b05420-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a794e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001898" .
 
-abromics:93b0559c-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a7ac0-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001924" .
 
-abromics:93b0570e-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a7c32-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002292" .
 
-abromics:93b05858-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a7d7c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
     uniprot-core:host ncbitaxon:9606 ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002020" .
 
-abromics:93b059ac-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a7ec6-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002240" .
 
-abromics:93b05c36-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a8150-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002182" .
 
-abromics:93b05dee-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a82b8-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001929" .
 
-abromics:93b05fb0-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a83f8-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "1992-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278> ] ;
     uniprot-core:host ncbitaxon:9606 ;
     prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-    prov:wasAttributedTo abromics:93b0234c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4848-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002296" .
 
-abromics:93b06154-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a852e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/SNOMEDCT/420768007> ] ;
     uniprot-core:host ncbitaxon:8927 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002179" .
 
-abromics:93b0632a-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a865a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002023" .
 
-abromics:93b064d8-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a877c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA003270" .
 
-abromics:93b0665e-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a888a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002126" .
 
-abromics:93b067da-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a8998-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002033" .
 
-abromics:93b0694c-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a8aa6-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002165" .
 
-abromics:93b06ac8-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a8bb4-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001874" .
 
-abromics:93b06c58-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a8ccc-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002144" .
 
-abromics:93b06e1a-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a8e0c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002312" .
 
-abromics:93b06fc8-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a8f38-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002005" .
 
-abromics:93b07158-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a906e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002224" .
 
-abromics:93b072f2-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a919a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001999" .
 
-abromics:93b0746e-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a92b2-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001909" .
 
-abromics:93b075f4-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a93c0-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:10090 ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002097" .
 
-abromics:93b0775c-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a94ce-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002382" .
 
-abromics:93b078ce-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a95d2-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001970" .
 
-abromics:93b07a40-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a96d6-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00005805> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002147" .
 
-abromics:93b07ba8-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a97e4-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2014-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/UBERON_0000022> ] ;
     uniprot-core:host ncbitaxon:8782 ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002258" .
 
-abromics:93b07d1a-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a98e8-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002366" .
 
-abromics:93b07e82-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a99f6-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002287" .
 
-abromics:93b07ff4-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a9b04-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002299" .
 
-abromics:93b08152-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a9c12-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001966" .
 
-abromics:93b082c4-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a9d48-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2014-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:111917 ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002001" .
 
-abromics:93b08454-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a9e74-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "1992-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/SNOMEDCT/57741000052105> ] ;
     uniprot-core:host ncbitaxon:9606 ;
     prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-    prov:wasAttributedTo abromics:93b0234c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4848-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001940" .
 
-abromics:93b085c6-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5a9f8c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002098" .
 
-abromics:93b08738-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aa0a4-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001930" .
 
-abromics:93b088aa-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aa1a8-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002077" .
 
-abromics:93b08a26-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aa2b6-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002259" .
 
-abromics:93b08b7a-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aa3c4-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002318" .
 
-abromics:93b08cce-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aa4d2-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002288" .
 
-abromics:93b08e18-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aa5e0-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002226" .
 
-abromics:93b08f6c-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aa6e4-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001973" .
 
-abromics:93b090de-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aa81a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/SNOMEDCT/420768007> ] ;
     uniprot-core:host ncbitaxon:111810 ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002081" .
 
-abromics:93b09232-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aa928-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001967" .
 
-abromics:93b0937c-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aaa22-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002260" .
 
-abromics:93b094c6-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aab1c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C73434> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002067" .
 
-abromics:93b09624-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aac20-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/UBERON_0000022> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001933" .
 
-abromics:93b09782-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aad1a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001961" .
 
-abromics:93b098ea-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aae1e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/MESH/D004528> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002272" .
 
-abromics:93b09a34-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aaf22-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001866" .
 
-abromics:93b09b74-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ab012-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002123" .
 
-abromics:93b09cc8-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ab116-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002207" .
 
-abromics:93b09f84-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ab346-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
     uniprot-core:host ncbitaxon:9606 ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001937" .
 
-abromics:93b0a100-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ab45e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/MESH/D004528> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001901" .
 
-abromics:93b0a24a-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ab56c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002386" .
 
-abromics:93b0a38a-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ab67a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002094" .
 
-abromics:93b0a4c0-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ab774-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2014-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:111917 ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002060" .
 
-abromics:93b0a614-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ab88c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
     uniprot-core:host ncbitaxon:9606 ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002113" .
 
-abromics:93b0a754-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ab9fe-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002206" .
 
-abromics:93b0a8b2-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5abb20-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002229" .
 
-abromics:93b0aa10-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5abc42-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001963" .
 
-abromics:93b0ab5a-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5abd46-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002181" .
 
-abromics:93b0aca4-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5abe40-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001917" .
 
-abromics:93b0ade4-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5abf44-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002172" .
 
-abromics:93b0af60-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ac070-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
     uniprot-core:host ncbitaxon:9606 ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001993" .
 
-abromics:93b0b118-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ac17e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002119" .
 
-abromics:93b0b24e-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ac278-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001883" .
 
-abromics:93b0b384-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ac386-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002193" .
 
-abromics:93b0b4b0-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ac4bc-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002321" .
 
-abromics:93b0b5dc-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ac5ca-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002273" .
 
-abromics:93b0b712-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ac6d8-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/SNOMEDCT/420768007> ] ;
     uniprot-core:host ncbitaxon:8927 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001989" .
 
-abromics:93b0b852-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ac7dc-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002301" .
 
-abromics:93b0b97e-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ac8e0-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "1991-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ] ;
     uniprot-core:host ncbitaxon:9606 ;
     prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-    prov:wasAttributedTo abromics:93b0234c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4848-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002145" .
 
-abromics:93b0baaa-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ac9e4-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/MESH/D004528> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002309" .
 
-abromics:93b0bbea-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5acafc-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/SNOMEDCT/420768007> ] ;
     uniprot-core:host ncbitaxon:100819 ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002230" .
 
-abromics:93b0bd16-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5acc00-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/SNOMEDCT/420768007> ] ;
     uniprot-core:host ncbitaxon:8927 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002231" .
 
-abromics:93b0be56-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5acd0e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002135" .
 
-abromics:93b0bfaa-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ace12-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002048" .
 
-abromics:93b0c0cc-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5acf2a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002176" .
 
-abromics:93b0c1ee-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ad02e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002064" .
 
-abromics:93b0c31a-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ad13c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C73434> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002202" .
 
-abromics:93b0c43c-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ad240-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:8928 ;
     prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002167" .
 
-abromics:93b0c572-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ad33a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:470 ;
     prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
     uniprot-core:host ncbitaxon:10090 ;
     prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-    prov:wasAttributedTo abromics:93b0225c-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA002158" .
 
-abromics:93b0c68a-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ad43e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     uniprot-core:host ncbitaxon:9913 ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA001985" .
 
-abromics:93b0c7ac-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ad538-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA004733" .
 
-abromics:93b0c8d8-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ad63c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     uniprot-core:host ncbitaxon:9612 ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA004752" .
 
-abromics:93b0c9e6-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ad74a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     uniprot-core:host ncbitaxon:9612 ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA004749" .
 
-abromics:93b0cb12-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ad84e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     uniprot-core:host ncbitaxon:9612 ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA004741" .
 
-abromics:93b0cc34-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ad93e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     uniprot-core:host ncbitaxon:9612 ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA004746" .
 
-abromics:93b0cd4c-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ada38-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     uniprot-core:host ncbitaxon:9913 ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA004742" .
 
-abromics:93b0ce6e-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5adb3c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     uniprot-core:host ncbitaxon:9940 ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA004732" .
 
-abromics:93b0cfa4-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5adc54-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     uniprot-core:host ncbitaxon:10160 ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA004734" .
 
-abromics:93b0d0da-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5add6c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     uniprot-core:host ncbitaxon:9031 ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA004735" .
 
-abromics:93b0d210-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ade70-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     uniprot-core:host ncbitaxon:9612 ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA004743" .
 
-abromics:93b0d332-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5adf74-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     uniprot-core:host ncbitaxon:9031 ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA004738" .
 
-abromics:93b0d454-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ae06e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     uniprot-core:host ncbitaxon:9913 ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA004740" .
 
-abromics:93b0d56c-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ae172-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     uniprot-core:host ncbitaxon:9940 ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA004744" .
 
-abromics:93b0d6a2-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ae28a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     uniprot-core:host ncbitaxon:9913 ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA004747" .
 
-abromics:93b0d7d8-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ae384-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA004753" .
 
-abromics:93b0d8fa-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ae492-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     uniprot-core:host ncbitaxon:9612 ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA004748" .
 
-abromics:93b0da3a-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ae596-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     uniprot-core:host ncbitaxon:9612 ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA004750" .
 
-abromics:93b0db70-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ae6ae-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     obo:RO_0002162 ncbitaxon:562 ;
     prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
     prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q298> ;
-    prov:wasAttributedTo abromics:93b02752-194f-11f1-9823-90658429fd42 .
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
     schema:identifier "ABRA004751" .
 
-abromics:93b0dce2-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ae802-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q29520> ;
     geo:hasGeometry [ geo:asWKT "POINT(39.01 117.33)"^^geo:wktLiteral ] ; 
     schema:identifier "SAMN10644138" .
 
-abromics:93b0decc-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5ae9d8-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     prov:generatedAtTime "2013-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q1036> ;
     geo:hasGeometry [ geo:asWKT "POINT(0.287377 32.6393)"^^geo:wktLiteral ] ; 
     schema:identifier "SAMN08275702" .
 
-abromics:93b0e052-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aeb5e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q29520> ;
     geo:hasGeometry [ geo:asWKT "POINT(23.32659245 116.7115402)"^^geo:wktLiteral ] ; 
     schema:identifier "SAMN19228617" .
 
-abromics:93b0e1b0-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aeca8-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     prov:generatedAtTime "2013-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q1036> ;
     geo:hasGeometry [ geo:asWKT "POINT(0.313125 32.61509)"^^geo:wktLiteral ] ; 
     schema:identifier "SAMN08275689" .
 
-abromics:93b0e304-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aedf2-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     prov:generatedAtTime "2013-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q1036> ;
     geo:hasGeometry [ geo:asWKT "POINT(0.307199 32.6329)"^^geo:wktLiteral ] ; 
     schema:identifier "SAMN08275701" .
 
-abromics:93b0e46c-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5aef50-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q29520> ;
     geo:hasGeometry [ geo:asWKT "POINT(22.74297595 113.5654056)"^^geo:wktLiteral ] ; 
     schema:identifier "SAMN19228584" .
 
-abromics:93b0e5c0-194f-11f1-9823-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+abromics:ae5af086-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
     prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
     sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
     prov:atLocation <http://www.wikidata.org/entity/Q29520> ;

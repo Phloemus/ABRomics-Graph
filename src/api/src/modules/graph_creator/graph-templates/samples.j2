@@ -44,7 +44,7 @@ abromics:{{ sample["id"] }} rdf:type prov:Entity, sio:001050 ;
     geo:hasGeometry [ geo:asWKT "POINT({{ sample["latitude"] }} {{ sample["longitude"] }})"^^geo:wktLiteral ] ; 
     {% endif %}
     {% if sample["sequencingTechnology"] != "" %}
-    prov:wasAttributedTo abromics:{{ sample["sequencingTechnology"] }} .
+    prov:wasAttributedTo abromics:{{ sample["sequencingTechnology"] }} ;
     {% endif %}
     schema:identifier "{{ sample["abromicsId"] }}" .
 

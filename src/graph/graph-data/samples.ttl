@@ -9,2964 +9,1053 @@
 @prefix go: <http://purl.org/obo/owl/GO#> .
 @prefix uniprot: <http://purl.uniprot.org/uniprot/> .
 @prefix uniprot-core: <http://purl.uniprot.org/uniprot/core/> .
-@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix ncbitaxon: <http://purl.bioontology.org/ontology/NCBITAXON/> .
 
 ################################## Samples ####################################
-
-
-    <abromics:b28ebdda-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0215" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ec212-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0046" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ec3de-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0083" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ec578-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0225" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ec6cc-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "15-Eisch20-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ec80c-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "08-IB3" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2008-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ec94c-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "17-HoPe-S1-2" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28eca50-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U17-ZWS24-1-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ecc94-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0224" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ecde8-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "17-HoPe-P2-2" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ecef6-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0221" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ed018-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0092" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ed11c-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0301" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ed220-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "15-8P826-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ed306-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "K19K6" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <9606> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ed3e2-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0359" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ed4dc-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0067" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ed5ea-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "16-Klo37-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ed6d0-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0352" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ed7d4-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0229" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ed8b0-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U17-HaSW-S1-3" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ed982-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U19-StiWa-S2-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28eda54-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0346" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28edb44-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0049" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28edc2a-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "CIP110424" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "1992-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278> ] ;
-        
-        uniprot-core:host <9606> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28edd06-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "15-ODR-Wezyska-12-2" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <8927> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28eddd8-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "16-33-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28edea0-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "18-Pos1016-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28edf5e-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U19-HoPe-S40-3" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ee012-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0275" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ee0f8-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0122" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ee1e8-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U17-HoPe-S1-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ee2b0-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0370" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ee38c-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0185" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ee490-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U17-HoPeP5-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ee562-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0042" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ee65c-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0208" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ee742-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U20-Benz-S21-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ee814-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0355" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ee8fa-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0070" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ee9e0-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "16-68-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28eeaa8-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U17-ZWS21-4-2" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28eeb66-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U19-StiWa-S4-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28eec2e-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "ARDIG50" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ] ;
-        
-        uniprot-core:host <9606> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q142> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28eed50-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0154" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28eee40-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0089" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28eef1c-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "17-HoPe-P1-2" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ef034-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U17-HoPe-P1-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ef0fc-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0157" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ef1ec-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0008" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ef2dc-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0315" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ef3ae-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0023" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ef480-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0235" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ef552-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0177" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ef62e-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0201" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ef6f6-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0191" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ef7d2-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0243" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ef8ae-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U17-HoPe-P2-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28ef980-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "15-NCu32R24h" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <10090> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28efa48-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0073" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28efb2e-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0238" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28efc0a-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "17-HoPe-P12-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28efce6-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0351" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28efdc2-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "16-81-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28efe94-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0364" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28eff8e-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0334" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f0074-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0173" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f0150-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0005" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f0236-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "18-OBC4-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f02fe-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "14-Fe-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2014-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <8782> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f03c6-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U19-StiWa-S1-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f0484-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "17-33P28K-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f0538-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "19-Klo102A" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f05ec-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0252" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f06d2-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "18-CSP68-2" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f0790-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0323" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f086c-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "14-SPoe1-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2014-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <111917> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f0934-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0260" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f0a1a-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0001" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f0af6-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0239" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f0bd2-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "CIP110425" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "1992-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <9606> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f0ca4-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0050" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f0d76-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0340" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f0e48-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "17-HoPe-S16-5" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f0f10-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "15-Klo-3-2" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f0fd8-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0343" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f10d2-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "ARDIG49" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ] ;
-        
-        uniprot-core:host <9606> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q781> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "None" ;
-        prov:wasAttributedTo <abromics:b28e7e4c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f11e0-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0127" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f12b2-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0142" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f1384-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0198" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f1488-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U19-HoPe-P28-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f156e-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U20-Benz-P2-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f1654-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "19-65P29" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f174e-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "ARDIG48" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ] ;
-        
-        uniprot-core:host <9606> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q142> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f1866-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "17-ZW-S17-2-3" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f1938-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "17-28P84D-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f19f6-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0103" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f1adc-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "15-932-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f1bae-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "15-Woeul6" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <111810> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f1c76-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "19-50P57O-2" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f1e56-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "16-Klo1-1-PLG9P835" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f1f28-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U19-Zw-LK2-3" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f1fe6-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "18-MOC93-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f209a-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0290" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f2194-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "17-ZW-S24-2-2" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f2252-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0270" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f232e-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "15-Eisch26-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f23f6-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "17-ZW-S21-1-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f24b4-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0273" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f25ae-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0043" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f2694-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "19-Pos108-1" ;
-        obo:RO_0002162 <259> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f2766-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0319" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f2838-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0194" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f2914-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U20-Benz-S6-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f29e6-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0303" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f2ac2-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "K19M16" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <9606> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f2b8a-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "18-CSD76-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f2c3e-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0140" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f2d24-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0124" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f2e0a-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "17-33P31K1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f2ed2-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0018" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f2fae-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0098" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f3094-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "15-932-2" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f315c-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0180" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f3238-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0231" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12468> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f330a-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "14-SPoe3-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2014-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <111917> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f33dc-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "K19K7" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <9606> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f34a4-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0338" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f3594-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0064" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f3670-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U17-HoPe-P3-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f3742-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0086" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f381e-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0118" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f38fa-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0027" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f39e0-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U20-Benz-S18-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f3aa8-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0053" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f3b84-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0328" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f3c56-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "15-Klo-71TR-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f3d1e-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U20-HoPe-S30-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f3df0-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "17-20A" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f3eb8-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U20-Benz-P4-2" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f3f6c-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "K19M11" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <9606> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f4020-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "19-50P73O" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f40de-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0080" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f41ce-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0195" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12736> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f42aa-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U17-HoPeS16-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f4372-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0176" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f4458-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "18-8A-2" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f4520-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "18-48P83L-2" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f45de-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U17-SmaS1-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f469c-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "17-KloGe21-24-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <8927> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f4750-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "19-War16-2B-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f47fa-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "ARDIG47" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ] ;
-        
-        uniprot-core:host <9606> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q142> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f48fe-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "CIP110423" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "1991-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ] ;
-        
-        uniprot-core:host <9606> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q213> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina HiSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f49d0-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "15-Eisch21-2" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f4a8e-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "15-TFL22" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <100819> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f4b4c-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "18-MOC94-2" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <8927> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f4c00-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "18-MasT3036T-1" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f4cb4-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U20-Benz-P2-3" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f4d72-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U20-Benz-P4-4" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f4e26-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U20-Benz-S21-4" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f4ee4-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "R0306" ;
-        obo:RO_0002162 <562> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
-        
-        uniprot-core:host <9913> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q31> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "NextSeq 500"  ] ;
-        abromics:sequencingPartner "Philippe Glaser" ;
-        prov:wasAttributedTo <abromics:b28e7c26-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f4fd4-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "U19-Zw-LK3-3" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
-
-        
-            prov:wasDerivedFrom <> ;
-        
-        uniprot-core:host <> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f5092-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "17-27P47D-2" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <8928> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q36> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
-
-
-    <abromics:b28f5146-4daf-11f0-b0a2-90658429fd42> rdf:type prov:Entity, sio:001050, sio:000000 ;
-        schema:identifier "15-NWi34" ;
-        obo:RO_0002162 <470> ;
-        
-            prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
-        
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
-
-        
-            prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
-        
-        uniprot-core:host <10090> ;
-        prov:atLocation <http://www.wikidata.org/entity/Q183> ;
-        prov:wasAttributedTo [ rdf:type prov:Entity ; rdfs:label "Illumina NextSeq 2000"  ] ;
-        abromics:sequencingPartner "Claudine Médigue" ;
-        prov:wasAttributedTo <abromics:b28e7c6c-4daf-11f0-b0a2-90658429fd42> . 
+## 
+## For the sample type we just use the ABRomics sample type (human, enviornmental, animal)
+## A subclass of the aro:3004532 (strain source) could be used instead -> clinical (humans), 
+## environmental, agricultural (animals)
+
+
+abromics:ae5a719c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/MESH/D004528> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002183" .
+
+abromics:ae5a75d4-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2008-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C73434> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002059" .
+
+abromics:ae5a77e6-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002304" .
+
+abromics:ae5a794e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001898" .
+
+abromics:ae5a7ac0-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001924" .
+
+abromics:ae5a7c32-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002292" .
+
+abromics:ae5a7d7c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+    uniprot-core:host ncbitaxon:9606 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002020" .
+
+abromics:ae5a7ec6-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002240" .
+
+abromics:ae5a8150-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002182" .
+
+abromics:ae5a82b8-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001929" .
+
+abromics:ae5a83f8-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "1992-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13278> ] ;
+    uniprot-core:host ncbitaxon:9606 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q213> ;
+    prov:wasAttributedTo abromics:ae5a4848-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002296" .
+
+abromics:ae5a852e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/SNOMEDCT/420768007> ] ;
+    uniprot-core:host ncbitaxon:8927 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002179" .
+
+abromics:ae5a865a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002023" .
+
+abromics:ae5a877c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA003270" .
+
+abromics:ae5a888a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002126" .
+
+abromics:ae5a8998-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002033" .
+
+abromics:ae5a8aa6-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002165" .
+
+abromics:ae5a8bb4-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001874" .
+
+abromics:ae5a8ccc-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002144" .
+
+abromics:ae5a8e0c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002312" .
+
+abromics:ae5a8f38-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002005" .
+
+abromics:ae5a906e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002224" .
+
+abromics:ae5a919a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001999" .
+
+abromics:ae5a92b2-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001909" .
+
+abromics:ae5a93c0-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:10090 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002097" .
+
+abromics:ae5a94ce-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002382" .
+
+abromics:ae5a95d2-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001970" .
+
+abromics:ae5a96d6-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00005805> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002147" .
+
+abromics:ae5a97e4-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2014-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/UBERON_0000022> ] ;
+    uniprot-core:host ncbitaxon:8782 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002258" .
+
+abromics:ae5a98e8-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002366" .
+
+abromics:ae5a99f6-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002287" .
+
+abromics:ae5a9b04-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002299" .
+
+abromics:ae5a9c12-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001966" .
+
+abromics:ae5a9d48-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2014-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:111917 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002001" .
+
+abromics:ae5a9e74-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "1992-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/SNOMEDCT/57741000052105> ] ;
+    uniprot-core:host ncbitaxon:9606 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q213> ;
+    prov:wasAttributedTo abromics:ae5a4848-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001940" .
+
+abromics:ae5a9f8c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002098" .
+
+abromics:ae5aa0a4-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001930" .
+
+abromics:ae5aa1a8-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002077" .
+
+abromics:ae5aa2b6-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002259" .
+
+abromics:ae5aa3c4-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002318" .
+
+abromics:ae5aa4d2-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002288" .
+
+abromics:ae5aa5e0-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002226" .
+
+abromics:ae5aa6e4-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001973" .
+
+abromics:ae5aa81a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/SNOMEDCT/420768007> ] ;
+    uniprot-core:host ncbitaxon:111810 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002081" .
+
+abromics:ae5aa928-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001967" .
+
+abromics:ae5aaa22-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2016-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002260" .
+
+abromics:ae5aab1c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C73434> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002067" .
+
+abromics:ae5aac20-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/UBERON_0000022> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001933" .
+
+abromics:ae5aad1a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001961" .
+
+abromics:ae5aae1e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/MESH/D004528> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002272" .
+
+abromics:ae5aaf22-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001866" .
+
+abromics:ae5ab012-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002123" .
+
+abromics:ae5ab116-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002207" .
+
+abromics:ae5ab346-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+    uniprot-core:host ncbitaxon:9606 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001937" .
+
+abromics:ae5ab45e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/MESH/D004528> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001901" .
+
+abromics:ae5ab56c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002386" .
+
+abromics:ae5ab67a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002094" .
+
+abromics:ae5ab774-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2014-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:111917 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002060" .
+
+abromics:ae5ab88c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+    uniprot-core:host ncbitaxon:9606 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002113" .
+
+abromics:ae5ab9fe-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002206" .
+
+abromics:ae5abb20-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002229" .
+
+abromics:ae5abc42-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001963" .
+
+abromics:ae5abd46-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002181" .
+
+abromics:ae5abe40-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001917" .
+
+abromics:ae5abf44-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002172" .
+
+abromics:ae5ac070-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+    uniprot-core:host ncbitaxon:9606 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001993" .
+
+abromics:ae5ac17e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12390> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002119" .
+
+abromics:ae5ac278-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001883" .
+
+abromics:ae5ac386-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002193" .
+
+abromics:ae5ac4bc-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002321" .
+
+abromics:ae5ac5ca-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002273" .
+
+abromics:ae5ac6d8-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/SNOMEDCT/420768007> ] ;
+    uniprot-core:host ncbitaxon:8927 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001989" .
+
+abromics:ae5ac7dc-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002301" .
+
+abromics:ae5ac8e0-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "1991-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13283> ] ;
+    uniprot-core:host ncbitaxon:9606 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q213> ;
+    prov:wasAttributedTo abromics:ae5a4848-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002145" .
+
+abromics:ae5ac9e4-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/MESH/D004528> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002309" .
+
+abromics:ae5acafc-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/SNOMEDCT/420768007> ] ;
+    uniprot-core:host ncbitaxon:100819 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002230" .
+
+abromics:ae5acc00-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.bioontology.org/ontology/SNOMEDCT/420768007> ] ;
+    uniprot-core:host ncbitaxon:8927 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002231" .
+
+abromics:ae5acd0e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002135" .
+
+abromics:ae5ace12-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.jp/bio/11/meo/MEO_0000386> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002048" .
+
+abromics:ae5acf2a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002176" .
+
+abromics:ae5ad02e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2020-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://purl.obolibrary.org/obo/ENVO_00001998> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002064" .
+
+abromics:ae5ad13c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C73434> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002202" .
+
+abromics:ae5ad240-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2017-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:8928 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q36> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002167" .
+
+abromics:ae5ad33a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:470 ;
+    prov:generatedAtTime "2015-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12428> ] ;
+    uniprot-core:host ncbitaxon:10090 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q183> ;
+    prov:wasAttributedTo abromics:ae5a4758-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA002158" .
+
+abromics:ae5ad43e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    uniprot-core:host ncbitaxon:9913 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA001985" .
+
+abromics:ae5ad538-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA004733" .
+
+abromics:ae5ad63c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    uniprot-core:host ncbitaxon:9612 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA004752" .
+
+abromics:ae5ad74a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    uniprot-core:host ncbitaxon:9612 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA004749" .
+
+abromics:ae5ad84e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    uniprot-core:host ncbitaxon:9612 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA004741" .
+
+abromics:ae5ad93e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    uniprot-core:host ncbitaxon:9612 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA004746" .
+
+abromics:ae5ada38-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    uniprot-core:host ncbitaxon:9913 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA004742" .
+
+abromics:ae5adb3c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    uniprot-core:host ncbitaxon:9940 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA004732" .
+
+abromics:ae5adc54-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    uniprot-core:host ncbitaxon:10160 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA004734" .
+
+abromics:ae5add6c-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    uniprot-core:host ncbitaxon:9031 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA004735" .
+
+abromics:ae5ade70-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    uniprot-core:host ncbitaxon:9612 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA004743" .
+
+abromics:ae5adf74-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    uniprot-core:host ncbitaxon:9031 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA004738" .
+
+abromics:ae5ae06e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    uniprot-core:host ncbitaxon:9913 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA004740" .
+
+abromics:ae5ae172-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    uniprot-core:host ncbitaxon:9940 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA004744" .
+
+abromics:ae5ae28a-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    uniprot-core:host ncbitaxon:9913 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA004747" .
+
+abromics:ae5ae384-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA004753" .
+
+abromics:ae5ae492-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    uniprot-core:host ncbitaxon:9612 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA004748" .
+
+abromics:ae5ae596-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    uniprot-core:host ncbitaxon:9612 ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA004750" .
+
+abromics:ae5ae6ae-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    obo:RO_0002162 ncbitaxon:562 ;
+    prov:generatedAtTime "2019-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] ;
+    prov:wasDerivedFrom [ rdf:type <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C13234> ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q298> ;
+    prov:wasAttributedTo abromics:ae5a4c44-196e-11f1-af55-90658429fd42 ;
+    schema:identifier "ABRA004751" .
+
+abromics:ae5ae802-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q29520> ;
+    geo:hasGeometry [ geo:asWKT "POINT(39.01 117.33)"^^geo:wktLiteral ] ; 
+    schema:identifier "SAMN10644138" .
+
+abromics:ae5ae9d8-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    prov:generatedAtTime "2013-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q1036> ;
+    geo:hasGeometry [ geo:asWKT "POINT(0.287377 32.6393)"^^geo:wktLiteral ] ; 
+    schema:identifier "SAMN08275702" .
+
+abromics:ae5aeb5e-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q29520> ;
+    geo:hasGeometry [ geo:asWKT "POINT(23.32659245 116.7115402)"^^geo:wktLiteral ] ; 
+    schema:identifier "SAMN19228617" .
+
+abromics:ae5aeca8-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    prov:generatedAtTime "2013-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q1036> ;
+    geo:hasGeometry [ geo:asWKT "POINT(0.313125 32.61509)"^^geo:wktLiteral ] ; 
+    schema:identifier "SAMN08275689" .
+
+abromics:ae5aedf2-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    prov:generatedAtTime "2013-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q1036> ;
+    geo:hasGeometry [ geo:asWKT "POINT(0.307199 32.6329)"^^geo:wktLiteral ] ; 
+    schema:identifier "SAMN08275701" .
+
+abromics:ae5aef50-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q29520> ;
+    geo:hasGeometry [ geo:asWKT "POINT(22.74297595 113.5654056)"^^geo:wktLiteral ] ; 
+    schema:identifier "SAMN19228584" .
+
+abromics:ae5af086-196e-11f1-af55-90658429fd42 rdf:type prov:Entity, sio:001050 ;
+    prov:generatedAtTime "2018-01-01T00:00:00Z"^^xsd:dateTime ;
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "environmental" ] ;
+    prov:atLocation <http://www.wikidata.org/entity/Q29520> ;
+    geo:hasGeometry [ geo:asWKT "POINT(22.74297595 113.5654056)"^^geo:wktLiteral ] ; 
+    schema:identifier "SAMN19228585" .
 

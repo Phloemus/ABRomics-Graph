@@ -356,8 +356,6 @@ class ReportCurator():
             return d
 
     ## curate the reports by only copying the reports have enough metadata and metadata that match the constraints given by the metadata filters
-    ##! verify that the curation for uc1 is working correctly
-    ##! check if it works for the reports of uc3
     def curateReports(self):
         self.curatedReportsFilenames = []
         i = 0
