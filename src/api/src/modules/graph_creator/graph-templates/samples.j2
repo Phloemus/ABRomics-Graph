@@ -9,7 +9,7 @@
 @prefix go: <http://purl.org/obo/owl/GO#> .
 @prefix uniprot: <http://purl.uniprot.org/uniprot/> .
 @prefix uniprot-core: <http://purl.uniprot.org/uniprot/core/> .
-@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -25,21 +25,27 @@
 
 
 {% for sample in samples %}
-    abromics:{{ sample["id"] }} rdf:type prov:Entity, sio:001050 ;
-        schema:identifier "{{ sample["abromicsId"] }}" ;
-        obo:RO_0002162 ncbitaxon:{{ sample["microorganism"] }} ;
-        {% if sample["collectionDate"]|isDatetime %}
-            prov:generatedAtTime "{{ sample["collectionDate"] }}T00:00:00Z"^^xsd:dateTime ;
-        {% endif %}
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "{{ sample["sampleType"] }}" ] ;
-        {% if sample["sampleSource"] != "" %}
-            prov:wasDerivedFrom [ rdf:type <{{sample["sampleSource"]}}> ] ;
-        {% endif %}
-        uniprot-core:host ncbitaxon:{{ sample["host"] }} ;
-        prov:atLocation <{{ sample["country"] }}> ;
-        
-        ## Add wkt coordinates with latitude and longitude
-
-        prov:wasAttributedTo abromics:{{ sample["sequencingTechnology"] }} .
+abromics:{{ sample["id"] }} rdf:type prov:Entity, sio:001050 ;
+    {% if sample["microorganism"] %}
+    obo:RO_0002162 ncbitaxon:{{ sample["microorganism"] }} ;
+    {% endif %}
+    {% if sample["collectionDate"]|isDatetime %}
+    prov:generatedAtTime "{{ sample["collectionDate"] }}T00:00:00Z"^^xsd:dateTime ;
+    {% endif %}
+    sio:000068 [ rdf:type prov:Entity ; rdfs:label "{{ sample["sampleType"] }}" ] ;
+    {% if sample["sampleSource"] != "" %}
+    prov:wasDerivedFrom [ rdf:type <{{sample["sampleSource"]}}> ] ;
+    {% endif %}
+    {% if sample["host"] != "" %}
+    uniprot-core:host ncbitaxon:{{ sample["host"] }} ;
+    {% endif %}
+    prov:atLocation <{{ sample["country"] }}> ;
+    {% if sample["latitude"] != "" %}
+    geo:hasGeometry [ geo:asWKT "POINT({{ sample["latitude"] }} {{ sample["longitude"] }})"^^geo:wktLiteral ] ; 
+    {% endif %}
+    {% if sample["sequencingTechnology"] != "" %}
+    prov:wasAttributedTo abromics:{{ sample["sequencingTechnology"] }} .
+    {% endif %}
+    schema:identifier "{{ sample["abromicsId"] }}" .
 
 {% endfor %}

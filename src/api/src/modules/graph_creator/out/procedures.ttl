@@ -16,13 +16,8 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
-
-    abromics:8e399ea2-18aa-11f1-ab36-90658429fd42 rdf:type sosa:Procedure ;
-        
-            ssn:implementedBy  abromics:8e399574-18aa-11f1-ab36-90658429fd42 ; 
-        
-            ssn:implementedBy  abromics:8e3995c4-18aa-11f1-ab36-90658429fd42 ; 
-        
-            ssn:implementedBy  abromics:8e399c36-18aa-11f1-ab36-90658429fd42 ; 
-        
+    abromics:8da3ec58-1941-11f1-8102-90658429fd42 rdf:type sosa:Procedure ;
+            ssn:implementedBy  abromics:8da3e26c-1941-11f1-8102-90658429fd42 ; 
+            ssn:implementedBy  abromics:8da3e2bc-1941-11f1-8102-90658429fd42 ; 
+            ssn:implementedBy  abromics:8da3e9f6-1941-11f1-8102-90658429fd42 ; 
         rdfs:label "workflow 1 (genomic)" .

@@ -178,7 +178,9 @@ class GraphCreator:
 
         env = Environment(
             loader=FileSystemLoader('.'),
-            undefined=StrictUndefined
+            undefined=StrictUndefined,
+            trim_blocks=True,
+            lstrip_blocks=True
         )
         for function in filterFunctions:
             env.filters[function["name"]] = function["content"]
