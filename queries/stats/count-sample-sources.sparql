@@ -1,0 +1,14 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX prov: <http://www.w3.org/ns/prov#> 
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX abromics: <https://abromics.fr/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?samplesSources ?label (COUNT(?label) as ?total_nb_occurences)
+FROM <http://www.ontotext.com/explicit> ## Indicates to graphdb to only use explicit nodes and no other inference
+WHERE {
+    ?sample rdf:type sio:001050 ;
+    	prov:wasDerivedFrom/rdf:type ?samplesSources .
+    ?samplesSources rdfs:label ?label 
+} GROUP BY ?samplesSources ?label 
+ORDER BY DESC(?total_nb_occurences)
