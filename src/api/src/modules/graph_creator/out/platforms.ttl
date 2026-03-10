@@ -15,4 +15,4 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
-    abromics:ae5a465e-196e-11f1-af55-90658429fd42 rdf:type sosa:Platform .
+    abromics:8d30260c-1c7e-11f1-ad50-d0ad0803112d rdf:type sosa:Platform .

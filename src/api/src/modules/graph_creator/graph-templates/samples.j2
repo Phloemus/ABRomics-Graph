@@ -41,7 +41,7 @@ abromics:{{ sample["id"] }} rdf:type prov:Entity, sio:001050 ;
     {% endif %}
     prov:atLocation <{{ sample["country"] }}> ;
     {% if sample["latitude"] != "" %}
-    geo:hasGeometry [ geo:asWKT "POINT({{ sample["latitude"] }} {{ sample["longitude"] }})"^^geo:wktLiteral ] ; 
+    geo:hasGeometry [ geo:asWKT "POINT({{ sample["longitude"] }} {{ sample["latitude"] }})"^^geo:wktLiteral ] ; 
     {% endif %}
     {% if sample["sequencingTechnology"] != "" %}
     prov:wasAttributedTo abromics:{{ sample["sequencingTechnology"] }} ;

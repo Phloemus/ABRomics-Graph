@@ -1,0 +1,18 @@
+PREFIX abromics: <http://abromics.org/ontology#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
+PREFIX aro: <http://purl.obolibrary.org/obo/ARO_>
+
+FROM <http://www.ontotext.com/explicit> 
+SELECT ?sampleTest1Geo ?id ?sampleTest2Geo ?distanceKm WHERE {
+    
+    # Need to use the geosparql service of uniprot to get distances between two points because graphdb version of distance function
+    # return non sense data..
+    # Points should be "POINT(LONGITUDE, LATITUDE)"^^geo:wktLiteral
+    SERVICE <https://sparql.uniprot.org/sparql/> {
+    	BIND( geof:distance("POINT(0.70853 47.39166)"^^geo:wktLiteral, "POINT(-1.54927 47.21658)"^^geo:wktLiteral) AS ?distanceKm )
+	}
+    
+}
