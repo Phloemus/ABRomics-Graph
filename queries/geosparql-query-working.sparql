@@ -5,8 +5,9 @@ PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX aro: <http://purl.obolibrary.org/obo/ARO_>
 
+SELECT ?sampleTest1Geo ?id ?sampleTest2Geo ?distanceKm 
 FROM <http://www.ontotext.com/explicit> 
-SELECT ?sampleTest1Geo ?id ?sampleTest2Geo ?distanceKm WHERE {
+WHERE {
     
     # Need to use the geosparql service of uniprot to get distances between two points because graphdb version of distance function
     # return non sense data..

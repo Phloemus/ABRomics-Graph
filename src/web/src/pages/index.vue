@@ -1,5 +1,8 @@
 <script setup>
+    import { ref } from 'vue'
+    import BarChart from '../components/BarChart.vue'
 
+    const chartData = ref([10, 15, 20, 25, 30])
 </script>
 
 <template>
@@ -41,5 +44,8 @@
                 <img src="assets/measure-modelisation-sosa.png"/>
             </div>
         </div>
+
+        <!-- Appears at the top of the document in a corner. The place of the element has not been set properly -->
+        <BarChart :data="chartData" />
     </div>
 </template>
