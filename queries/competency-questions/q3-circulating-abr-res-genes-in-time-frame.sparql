@@ -1,8 +1,18 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX schema: <https://schema.org/>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl>
+PREFIX aro: <http://purl.obolibrary.org/obo/ARO_>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
 SELECT ?gene_name (COUNT(?gene_name) as ?total_nb_occurences)
 FROM <http://www.ontotext.com/explicit>
 WHERE {
     ?sample rdf:type sio:001050 ;
-        sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] .
+    	prov:atLocation <http://www.wikidata.org/entity/Q36> . # Poland
 
     ?observableProperty rdf:type sosa:ObservableProperty ;
         rdfs:label 'Resistance gene' .
