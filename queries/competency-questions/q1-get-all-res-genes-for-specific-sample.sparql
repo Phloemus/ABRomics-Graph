@@ -15,7 +15,7 @@ WHERE {
     ?observableProperty rdf:type sosa:ObservableProperty ;
         rdfs:label 'Resistance gene' .
 
-    ?observations sosa:observedProperty ?observableProperty ;
+    ?observation sosa:observedProperty ?observableProperty ;
         sio:000332 ?sample ;
         sosa:hasFeatureOfInterest ?gene .
 

@@ -6,7 +6,7 @@ PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl>
 PREFIX aro: <http://purl.obolibrary.org/obo/ARO_>
 PREFIX ro: <http://purl.obolibrary.org/obo/RO#_>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>:
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT ?gene_name
 (GROUP_CONCAT(DISTINCT ?drug_label; separator=", ") AS ?drug_classes)
@@ -37,4 +37,4 @@ WHERE {
     
     ?drugClass rdfs:label ?drug_label
 }
-group by ?gene_name
+GROUP BY ?gene_name
