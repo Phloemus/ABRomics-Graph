@@ -22,6 +22,8 @@ WHERE {
         sosa:hasFeatureOfInterest ?gene ;
         sosa:hasSimpleResult ?identity .
 
+    FILTER(?identity > 90.0)
+
     ?gene rdf:type ncit:C16612 ;
           rdf:type [ rdfs:subClassOf+ aro:3000000 ] ;
         rdfs:label ?gene_name .
