@@ -1,0 +1,1 @@
+Documenation of the environmental context: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS
