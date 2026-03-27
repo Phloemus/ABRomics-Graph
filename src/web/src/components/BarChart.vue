@@ -53,5 +53,7 @@
 </script>
 
 <template>
-  <svg ref="svg"></svg>
+  <div class="relative">
+    <svg ref="svg"></svg>
+  </div>
 </template>

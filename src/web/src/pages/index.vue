@@ -1,8 +1,146 @@
 <script setup>
     import { ref } from 'vue'
-    import BarChart from '../components/BarChart.vue'
+    import PackedBubbleChart from '../components/PackedBubbleChart.vue'
 
-    const chartData = ref([10, 15, 20, 25, 30])
+    const testData = {
+      name: "root",
+      children: [
+        {
+          name: "Class A",
+          children: [
+            { name: "Big", value: 83 },
+            { name: "Medium", value: 10 }
+          ]
+        },
+        {
+          name: "Class B",
+          children: [
+            { name: "Small1", value: 5 },
+            { name: "Small2", value: 20 },
+            { name: "Tiny", value: 1 }
+          ]
+        }
+      ]
+    }
+    
+    const config = useRuntimeConfig()
+
+    var queryResponse = ref([])
+    var isQueryPerformed = ref(false)
+    var isQueryError = ref(false)
+    var isQueryLoading = ref(false)
+    var bubbleChartData = ref({name: "root", children: []})
+    var queryError = ref("")
+
+    const sparqlQuery = `
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl>
+        PREFIX aro: <http://purl.obolibrary.org/obo/ARO_>
+        PREFIX sio: <http://semanticscience.org/resource/>
+        PREFIX prov: <http://www.w3.org/ns/prov#>
+
+        SELECT ?gene_name (COUNT(?gene_name) as ?total_nb_occurences) ?aroClass ?aroParentClass ?aroParentClassLabel
+        FROM <http://www.ontotext.com/explicit>
+        WHERE {
+
+            ?sample rdf:type sio:001050 . 
+
+            ?observableProperty rdf:type sosa:ObservableProperty ;
+                rdfs:label 'Resistance gene' .
+
+            ?gene rdf:type ncit:C16612 ;
+                rdf:type ?aroClass ;
+                rdfs:label ?gene_name .
+
+            ?aroClass rdfs:subClassOf+ aro:3000000 ;
+                rdfs:subClassOf ?aroParentClass .
+
+            ?aroParentClass rdfs:subClassOf+ aro:3000000 ;
+                rdfs:label ?aroParentClassLabel .
+
+            ?observation sosa:observedProperty ?observableProperty ;
+                sio:000332 ?sample ;
+                sosa:hasFeatureOfInterest ?gene .
+
+        } GROUP BY ?gene_name ?aroClass ?aroParentClass ?aroParentClassLabel 
+        ORDER BY DESC(?total_nb_occurences)
+    `
+
+    function fetchQueryResult() {
+        isQueryLoading.value = true
+        isQueryError.value = false
+        isQueryPerformed.value = false
+        const uri = config.public.graphServerUrl + "/repositories/abromics-kg?query=" + encodeURIComponent(sparqlQuery)
+        fetch(uri,
+            {
+                method: "GET",
+                headers: {
+                    'Content-Type': 'application/sparql-query',
+                    'Accept': 'application/sparql-results+json'
+                }
+            }
+        ).then((response) => {
+            if(response.status != 200) {
+                isQueryError.value = true
+                queryError.value = response.json()
+                return
+            } else {
+                isQueryError.value = false
+                isQueryLoading.value = false
+            }
+            return response.json()
+        }).then((data) => {
+            queryResponse.value = data.results.bindings
+            isQueryPerformed.value = true
+            console.log(data)
+            generatePackedBubblePlotData(data)
+            isQueryLoading.value = false
+            console.log(data)
+        }).catch(err => {
+            console.error("Error while processing response: ", err)
+            isQueryError.value = true
+            queryError.value = "The syntax of the query wrong or empty"
+            isQueryLoading.value = false
+        })
+    }
+
+    function generatePackedBubblePlotData(data) {
+        var plotData = {
+          name: "root",
+          children: []
+        };
+
+        var parentAroClasses = []
+        var parentAroClassesLabels = []
+
+        const dataFiltered = data.results.bindings.filter(item => item.total_nb_occurences.value > 1 && data.results.bindings.filter(i => i.aroParentClass.value == item.aroParentClass.value).length > 1 ) // Check if the item.parentAroClass is included 
+
+        dataFiltered.forEach(item => {
+            parentAroClasses.push(item.aroParentClass.value)
+            parentAroClassesLabels.push(item.aroParentClassLabel.value)
+        });
+
+        parentAroClasses = [...new Set(parentAroClasses)];
+        parentAroClassesLabels = [...new Set(parentAroClassesLabels)];
+
+        parentAroClassesLabels.forEach(parentAroClassLabel => {
+            plotData.children.push({name: parentAroClassLabel, children: []})
+        })
+
+        dataFiltered.forEach(item => {
+            const bubbleData = { name: item.gene_name.value, value: item.total_nb_occurences.value }
+            const index = parentAroClasses.indexOf(item.aroParentClass.value)
+            plotData.children[index].children.push(bubbleData)
+        })
+        
+        bubbleChartData.value = plotData
+        console.log(plotData)
+    }
+
+    fetchQueryResult()
+
 </script>
 
 <template>
@@ -44,8 +182,11 @@
                 <img src="assets/measure-modelisation-sosa.png"/>
             </div>
         </div>
-
-        <!-- Appears at the top of the document in a corner. The place of the element has not been set properly -->
-        <BarChart :data="chartData" />
+    </div>
+    <div>
+        <h2 class="mt-10 mb-6 text-xl text-slate-900 font-bold">Knowledge graph content</h2>
+        <div v-if="!isQueryError && !isQueryLoading">
+            <PackedBubbleChart :data="bubbleChartData"/>
+        </div>
     </div>
 </template>
