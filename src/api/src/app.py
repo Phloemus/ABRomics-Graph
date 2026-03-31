@@ -8,6 +8,7 @@ from routes.base import *
 from routes.admin import *
 from routes.stats import *
 from routes.abromics import *
+from routes.custom_query import *
 from routes.competency_questions import *
 
 ## Module imports

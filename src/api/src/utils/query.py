@@ -29,7 +29,7 @@ class Query:
         self.sparqlEndpoint = sparqlEndpoint
         self.parameters = parameters
         
-        self.queryString = ""
+        self.queryString = "" ## Create an alternative construtor instead. Might be confusing if there is a constructor that does has too much logic
 
 
     def __prepareQuery(self):

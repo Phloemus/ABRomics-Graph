@@ -72,13 +72,14 @@
         isQueryLoading.value = true
         isQueryError.value = false
         isQueryPerformed.value = false
-        const uri = config.public.graphServerUrl + "/repositories/abromics-kg?query=" + encodeURIComponent(sparqlQuery)
+        const uri = config.public.graphServerUrl + "repositories/abromics-kg?query=" + encodeURIComponent(sparqlQuery)
         fetch(uri,
             {
                 method: "GET",
                 headers: {
-                    'Content-Type': 'application/sparql-query',
-                    'Accept': 'application/sparql-results+json'
+                    'Access-Control-Allow-Origin': '*'
+                    //'Content-Type': 'application/sparql-query',
+                    //'Accept': 'application/sparql-results+json'
                 }
             }
         ).then((response) => {
