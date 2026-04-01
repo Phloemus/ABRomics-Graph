@@ -6,6 +6,43 @@
 
 from config.config import API_ENDPOINT, API_BASEPATH
 
+COMPETENCY_QUESTION_QUERIES = [
+    {
+        "id": 1,
+        "adminOnly": False,
+        "title": "What are the most common antibiotic resistance genes in all samples ?",
+        "name": "competency question 1",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/competency-question/1",
+        "description": "This competency question allows to explore the whole database in order to find relevant data for further exploration. The query is a template that can be easily reused to build new SPARQL queries that will rely on different data sources using Uniprot or Wikidata. It serves as the test request when deploying the application, so this query should always work perfectly !",
+        "ontologies": [
+            {
+                "type": "generic",
+                "shortName": "SOSA",
+                "name": "",
+                "description": "Provide a vocabulary to model observations made by a procedure such as a bioinformatics workflow",
+                "bioportalUrl": "https://www.w3.org/TR/vocab-ssn/"
+            },
+            {
+                "type": "generic",
+                "shortName": "SIO",
+                "name": "",
+                "description": "The semanticscience integrated ontology (SIO) provides a simple, integrated ontology (types, relations) for objects, processes and..",
+                "bioportalUrl": "https://bioportal.bioontology.org/ontologies/SIO"
+            },
+            {
+                "type": "omics",
+                "shortName": "NCIT",
+                "name": "",
+                "description": "reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and..",
+                "bioportalUrl": "https://bioportal.bioontology.org/ontologies/NCIT"
+            }
+        ],
+        "queryFilePath": "queries/competency-questions/q1-get-all-res-genes-for-specific-sample.sparql",
+        "method": "GET",
+        "parameters": {}
+    }
+]
+
 QUERIES = [
     {
         "name": "count-nodes",

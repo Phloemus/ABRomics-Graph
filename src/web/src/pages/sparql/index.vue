@@ -44,7 +44,7 @@
         })
 
         editorInstance = monacoInstance.editor.create(editor.value, {
-          value: "SELECT (COUNT(*) AS ?count) WHERE {\n\t?s ?p ?o .\n}",
+          value: "SELECT (COUNT(*) AS ?count) WHERE {\n\t?s ?p ?o .\n}\nLIMIT 10",
           language: 'javascript',
           theme: 'catppuccin-mocha',
           automaticLayout: true,

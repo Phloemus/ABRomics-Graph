@@ -1,6 +1,7 @@
 <script setup>
     import { ref } from 'vue'
     import { useRoute } from 'vue-router'
+    import { readFileSync } from 'fs';
 
     import { codeToHtml } from 'shiki'
 
@@ -8,27 +9,25 @@
     import Table from "../../components/Table.vue"
 
     import queries from '../../static/queries.json'
-    import query from '../../static/cq1.json'
 
     const config = useRuntimeConfig()
 
-    console.log(config.public.apiUrl)
-
     const route = useRoute()
     const queryId = route.params.id - 1
-    const queryFilename = queries[queryId].sparqlQuery
+    const queryFilename = `../../static/${queries[queryId].sparqlQuery}`
+    const queryContent = readFileSync(queryFilename)
     const ontologies = queries[queryId].ontologies
     const queryApiLink = config.public.apiUrl + '/' + queries[queryId].apiLink
     const queryMethod = queries[queryId].method
 
-    const queryHtml = await codeToHtml(query.content, { lang: 'sparql', theme: 'catppuccin-mocha', colorReplacements: { '#1e1e2e': '#1e293b' }})
+    const queryHtml = await codeToHtml(queryContent, { lang: 'sparql', theme: 'catppuccin-mocha', colorReplacements: { '#1e1e2e': '#1e293b' }})
 
     var queryResponse = ref([])
     var isQueryPerformed = ref(false)
     var isQueryError = ref(false)
     var queryError = ref("")
 
-    function fetchQueryResult(id) {
+    function fetchQueryResult() {
         // Don't forget to change the port or the host in prod ;)
         fetch(queryApiLink, 
             {
