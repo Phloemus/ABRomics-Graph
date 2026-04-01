@@ -28,16 +28,16 @@ def getSampleSources():
     sampleType = request.args.get('sampleType')
     
     if sampleType == "human":
-        query = Query(QUERIES[5]["filePath"]["animal"], sparqlEndpoint=SPARQL_ENDPOINT, parameters={"specieName": "Homo sapiens" })
+        query = Query.fromFile(QUERIES[5]["filePath"]["animal"], sparqlEndpoint=SPARQL_ENDPOINT, parameters={"specieName": "Homo sapiens" })
     elif sampleType == "animal":
         if specieName == "":
-            query = Query(QUERIES[5]["filePath"]["animal-no-specie"], sparqlEndpoint=SPARQL_ENDPOINT) ## Only animal no specific specie
+            query = Query.fromFile(QUERIES[5]["filePath"]["animal-no-specie"], sparqlEndpoint=SPARQL_ENDPOINT) ## Only animal no specific specie
         else:
-            query = Query(QUERIES[5]["filePath"]["animal"], sparqlEndpoint=SPARQL_ENDPOINT, parameters={"specieName": specieName })
+            query = Query.fromFile(QUERIES[5]["filePath"]["animal"], sparqlEndpoint=SPARQL_ENDPOINT, parameters={"specieName": specieName })
     elif sampleType == "environmental":
-        query = Query(QUERIES[5]["filePath"]["environmental"], sparqlEndpoint=SPARQL_ENDPOINT) ## Only environmental
+        query = Query.fromFile(QUERIES[5]["filePath"]["environmental"], sparqlEndpoint=SPARQL_ENDPOINT) ## Only environmental
     else:
-        query = Query(QUERIES[5]["filePath"]["all"], sparqlEndpoint=SPARQL_ENDPOINT) ## All sample sources all species 
+        query = Query.fromFile(QUERIES[5]["filePath"]["all"], sparqlEndpoint=SPARQL_ENDPOINT) ## All sample sources all species 
 
     response = jsonify(query.executeQuery())
     response.headers.add('Access-Control-Allow-Origin', '*')
@@ -48,7 +48,7 @@ def getSampleSources():
 @cross_origin()
 @app.route(f"/{API_BASEPATH}/sample-sources/popular", methods=[QUERIES[8]["method"]])
 def getPopularSampleSources():
-    query = Query(QUERIES[8]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT)
+    query = Query.fromFile(QUERIES[8]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT)
     response = jsonify(query.executeQuery())
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
@@ -62,7 +62,7 @@ def getPopularSampleSources():
 @cache.cached(timeout=50) ## 
 @app.route(f"/{API_BASEPATH}/microorganisms")
 def getMicroorgnismSpecies():
-    query = Query(QUERIES[6]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT) ## All the bacteria species name
+    query = Query.fromFile(QUERIES[6]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT) ## All the bacteria species name
     query.exportQueryResult("cache/microorganisms/test.json") ## test for the cache feature 
     response = jsonify(query.executeQuery())
     response.headers.add('Access-Control-Allow-Origin', '*')
@@ -73,7 +73,7 @@ def getMicroorgnismSpecies():
 @cross_origin()
 @app.route(f"/{API_BASEPATH}/hosts")
 def getHostSpecies():
-    query = Query(QUERIES[7]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT) ## All the host species name
+    query = Query.fromFile(QUERIES[7]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT) ## All the host species name
     response = jsonify(query.executeQuery())
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response

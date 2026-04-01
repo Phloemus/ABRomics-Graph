@@ -15,8 +15,6 @@ from flask_caching import Cache
 ## and the IS_API_STANDALONE variable is read from the .env file. While if the api is launched using docker, the .env.dev file 
 ## present at the root of the repo is the one that docker that is used so Flask gets the the environement variable from the 
 ## .env.dev file instead
-## I would like to applaud Flask for this very very dirty trick that costed me a day of work as well as an additional .env file 
-## that I will have to maintain..
 if "IS_API_STANDALONE" in os.environ and os.environ["IS_API_STANDALONE"] == "true":
     print("Launch in standalone mode detected")
     API_PORT = "5000"

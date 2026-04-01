@@ -17,6 +17,8 @@ from flask import jsonify, request, make_response
 from config.config import *
 from config.constants import *
 
+from utils.query import Query
+
 
 ## Custom query route
 @cross_origin()
@@ -26,7 +28,4 @@ def customQuery():
     queryContent = request.json["query"]
     query = Query(queryContent, SPARQL_ENDPOINT)
 
-    response = jsonify(query.executeQuery())
-    response.headers.add('Access-Control-Allow-Origin', '*')
-
-    return response
+    return make_response(jsonify({"results": query.executeQuery()}), 200)

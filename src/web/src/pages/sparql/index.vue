@@ -53,18 +53,20 @@
         })
     })
 
-    function fetchQueryResult(id) {
+    function fetchQueryResult() {
         isQueryLoading.value = true
         isQueryError.value = false
         isQueryPerformed.value = false
-        const uri = config.public.graphServerUrl + "repositories/abromics-kg?query=" + encodeURIComponent(editorInstance.getValue())
+        const uri = config.public.apiUrl + "/query/custom"
         fetch(uri,
             {
-                method: "GET",
+                method: "POST",
                 headers: {
-                    'Content-Type': 'application/sparql-query',
-                    'Accept': 'application/sparql-results+json'
-                }
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    "query": editorInstance.getValue()
+                })
             }
         ).then((response) => {
             console.log(response)
@@ -78,10 +80,10 @@
             }
             return response.json()
         }).then((data) => {
-            queryResponse.value = data.results.bindings
+            console.log(data.results)
+            queryResponse.value = data.results
             isQueryPerformed.value = true
             isQueryLoading.value = false
-            console.log(data)
         }).catch(err => {
             console.error("Error while processing response: ", err)
             isQueryError.value = true

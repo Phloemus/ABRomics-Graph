@@ -21,30 +21,28 @@ from config.config import *
 ## from utils.cache import BinaryTrieCache ## Cache not mature now
 
 
-class Query:
+## A query object that contains the content of a query and methods to execute such query on the targeted SPARQL endpoint
+## Basic use: 
+## From a raw string (default) :     Query(queryString, sparqlEndpoint)
+## From a query file           :     Query.fromFile(queryFilePath, sparqlEndpoint, parameters)
+class Query():
 
-    def __init__(self, queryFilePath, sparqlEndpoint="", parameters = {}):
-
-        self.queryFilePath = queryFilePath
+    def __init__(self, queryString, sparqlEndpoint=""): 
         self.sparqlEndpoint = sparqlEndpoint
-        self.parameters = parameters
-        
-        self.queryString = "" ## Create an alternative construtor instead. Might be confusing if there is a constructor that does has too much logic
-
-
-    def __prepareQuery(self):
-        with open(self.queryFilePath, 'r') as file:
+        self.queryString = queryString 
+    
+    @classmethod
+    def fromFile(cls, queryFilePath, sparqlEndpoint="", parameters={}):
+        with open(queryFilePath, 'r') as file:
             query = file.read()
 
-        for key, value in self.parameters.items():
+        for key, value in parameters.items():
             query = query.replace(f"${key}", f"'{value}'")
 
-        self.queryString = query
+        return cls(queryString=query, sparqlEndpoint=sparqlEndpoint)
 
     
     def executeQuery(self):
-
-        self.__prepareQuery()
         
         sparql = SPARQLWrapper(self.sparqlEndpoint)
         sparql.setReturnFormat(JSON)

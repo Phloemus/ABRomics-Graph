@@ -28,17 +28,17 @@ from utils.query import Query
 @cross_origin()
 @app.route(f"/{API_BASEPATH}/node/count", methods=[QUERIES[0]["method"]])
 def countNodesInAllGraphs():
-    query = Query(QUERIES[0]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT)
+    query = Query.fromFile(QUERIES[0]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT)
     return jsonify(query.executeQuery())
 
 @cross_origin()
 @app.route(f"/{API_BASEPATH}/sample/count/people", methods=[QUERIES[1]["method"]])
 def countSamplesInGraphByPeople():
-    query = Query(QUERIES[1]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT)
+    query = Query.fromFile(QUERIES[1]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT)
     return jsonify(query.executeQuery())
 
 @cross_origin()
 @app.route(f"/{API_BASEPATH}/sample/count/countries", methods=[QUERIES[2]["method"]])
 def countSamplesInGraphByCountries():
-    query = Query(QUERIES[2]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT)
+    query = Query.fromFile(QUERIES[2]["filePath"], sparqlEndpoint=SPARQL_ENDPOINT)
     return jsonify(query.executeQuery())
