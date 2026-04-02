@@ -72,17 +72,19 @@
         isQueryLoading.value = true
         isQueryError.value = false
         isQueryPerformed.value = false
-        const uri = config.public.graphServerUrl + "repositories/abromics-kg?query=" + encodeURIComponent(sparqlQuery)
+        const uri = config.public.apiUrl + "/query/custom"
         fetch(uri,
             {
-                method: "GET",
+                method: "POST",
                 headers: {
-                    'Access-Control-Allow-Origin': '*'
-                    //'Content-Type': 'application/sparql-query',
-                    //'Accept': 'application/sparql-results+json'
-                }
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    "query": sparqlQuery
+                })
             }
         ).then((response) => {
+            console.log(response)
             if(response.status != 200) {
                 isQueryError.value = true
                 queryError.value = response.json()
@@ -93,7 +95,7 @@
             }
             return response.json()
         }).then((data) => {
-            queryResponse.value = data.results.bindings
+            queryResponse.value = data.results
             isQueryPerformed.value = true
             console.log(data)
             generatePackedBubblePlotData(data)
@@ -116,7 +118,7 @@
         var parentAroClasses = []
         var parentAroClassesLabels = []
 
-        const dataFiltered = data.results.bindings.filter(item => item.total_nb_occurences.value > 1 && data.results.bindings.filter(i => i.aroParentClass.value == item.aroParentClass.value).length > 1 ) // Check if the item.parentAroClass is included 
+        const dataFiltered = data.results.filter(item => item.total_nb_occurences.value > 1 && data.results.filter(i => i.aroParentClass.value == item.aroParentClass.value).length > 1 ) // Check if the item.parentAroClass is unincluded 
 
         dataFiltered.forEach(item => {
             parentAroClasses.push(item.aroParentClass.value)

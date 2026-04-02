@@ -1,7 +1,5 @@
 <script setup>
 
-    import { useRoute } from 'vue-router'
-
     import ActionButton from "../../components/ActionButton.vue"
     import Table from "../../components/Table.vue"
 

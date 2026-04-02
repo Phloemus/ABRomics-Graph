@@ -115,7 +115,9 @@
                     :link="`/query/${query.id}`"
                 />
                 <div class="flex justify-center">
-                    <ActionButton content="More queries"></ActionButton>
+                    <NuxtLink to="/query">
+                        <ActionButton content="More queries"></ActionButton>
+                    </NuxtLink>
                 </div>
             </div>
             <div v-show="isUserLoggedIn" class="w-full relative">
