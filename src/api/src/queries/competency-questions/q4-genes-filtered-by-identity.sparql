@@ -30,4 +30,4 @@ WHERE {
 
 }
 GROUP BY ?gene_name ?identity
-ORDER BY DESC(?identity) # sort the result by the most identity % detected
+ORDER BY DESC(?identity)

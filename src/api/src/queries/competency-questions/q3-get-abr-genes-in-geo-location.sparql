@@ -16,7 +16,13 @@ WHERE {
     ?sample geo:hasGeometry/geo:asWKT ?sampling_point .
     
     # Compute distance in meters
-    BIND(geof:distance(?sampling_point, "POINT(32.582251 0.312568)", uom:metre) AS ?dist)
+    BIND(
+        geof:distance(
+            ?sampling_point, 
+            "POINT(32.582251 0.312568)", 
+            uom:metre
+        ) AS ?dist
+    )
 
     # Filter only close samples
     FILTER(?dist <= 10000)   # within 10 km
@@ -33,4 +39,4 @@ WHERE {
         rdfs:label ?gene_name .
 
 } GROUP BY ?gene_name 
-ORDER BY DESC(?total_nb_occurences) # sort results by the most represented ABR genes
+ORDER BY DESC(?total_nb_occurences)

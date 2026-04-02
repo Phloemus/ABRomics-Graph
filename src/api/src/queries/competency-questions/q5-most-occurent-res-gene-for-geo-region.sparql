@@ -20,13 +20,18 @@ WHERE {
     ?observation_human sosa:observedProperty ?observableProperty ;
         sio:000332 ?sample_human ;
         sosa:hasFeatureOfInterest ?gene .
-    ?sample_human sio:000068 [ rdf:type prov:Entity ; rdfs:label "human" ] .
+    
+    ?sample_human sio:000068 [ 
+        rdf:type prov:Entity ; rdfs:label "human" 
+    ] .
 
     ?observation_animal sosa:observedProperty ?observableProperty ;
         sio:000332 ?sample_animal ;
         sosa:hasFeatureOfInterest ?gene .
-    ?sample_animal sio:000068 [ rdf:type prov:Entity ; rdfs:label "animal" ] .
 
+    ?sample_animal sio:000068 [ 
+        rdf:type prov:Entity ; rdfs:label "animal" 
+    ] .
 
 } GROUP BY ?gene_name
 ORDER BY DESC(?total_nb_occurences) 

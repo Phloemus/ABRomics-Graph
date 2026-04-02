@@ -109,7 +109,7 @@
             <div class="px-4 w-full relative">
                 <h3 class="mx-1 my-4 text-slate-600 text-lg">Prewritten queries</h3>
                 <SmallCard 
-                    v-for="(query, index) in queries"
+                    v-for="(query, index) in queries.slice(0, 2)"
                     :title="query.name"
                     :description="query.title"
                     :link="`/query/${query.id}`"

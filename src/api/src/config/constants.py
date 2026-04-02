@@ -41,6 +41,181 @@ COMPETENCY_QUESTION_QUERIES = [
         "queryFilePath": "queries/competency-questions/q1-get-all-res-genes-for-specific-sample.sparql",
         "method": "GET",
         "parameters": {}
+    },
+    {
+        "id": 2,
+        "adminOnly": False,
+        "title": "What are actively circulating ABR genes, given a specific time-frame",
+        "name": "competency question 2",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/query/competency-question/2",
+        "smallRoute": "query/competency-question/2",
+        "description": "This competency question is a simple example that shows how to only select samples collected in a specific timeframe. ",
+        "ontologies": [
+            {
+                "type": "generic",
+                "shortName": "SOSA",
+                "name": "",
+                "description": "Provide a vocabulary to model observations made by a procedure such as a bioinformatics workflow",
+                "bioportalUrl": "https://www.w3.org/TR/vocab-ssn/"
+            },
+            {
+                "type": "generic",
+                "shortName": "SIO",
+                "name": "",
+                "description": "The semanticscience integrated ontology (SIO) provides a simple, integrated ontology (types, relations) for objects, processes and..",
+                "bioportalUrl": "https://bioportal.bioontology.org/ontologies/SIO"
+            },
+            {
+                "type": "omics",
+                "shortName": "NCIT",
+                "name": "",
+                "description": "reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and..",
+                "bioportalUrl": "https://bioportal.bioontology.org/ontologies/NCIT"
+            }
+        ],
+        "queryFilePath": "queries/competency-questions/q2-circulating-abr-genes-in-timeframe.sparql",
+        "method": "GET",
+        "parameters": {}
+    },
+    {
+        "id": 3,
+        "adminOnly": False,
+        "title": "What are the most represented antibiotic resistance genes in a specific geographical region of interest",
+        "name": "competency question 3",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/query/competency-question/3",
+        "smallRoute": "query/competency-question/3",
+        "description": "Filtering genes based on a precise geographical region of interest is key to study the spread of antibiotic resistance genes in the environment. This competency question shows how GPS coordinates can be laverage to select samples collected arround a point and evaluate the resistance genes found",
+        "ontologies": [
+            {
+                "type": "generic",
+                "shortName": "SOSA",
+                "name": "",
+                "description": "Provide a vocabulary to model observations made by a procedure such as a bioinformatics workflow",
+                "bioportalUrl": "https://www.w3.org/TR/vocab-ssn/"
+            },
+            {
+                "type": "generic",
+                "shortName": "SIO",
+                "name": "",
+                "description": "The semanticscience integrated ontology (SIO) provides a simple, integrated ontology (types, relations) for objects, processes and..",
+                "bioportalUrl": "https://bioportal.bioontology.org/ontologies/SIO"
+            },
+            {
+                "type": "omics",
+                "shortName": "NCIT",
+                "name": "",
+                "description": "reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and..",
+                "bioportalUrl": "https://bioportal.bioontology.org/ontologies/NCIT"
+            }
+        ],
+        "queryFilePath": "queries/competency-questions/q3-get-abr-genes-in-geo-location.sparql",
+        "method": "GET",
+        "parameters": {}
+    },
+    {
+        "id": 4,
+        "adminOnly": False,
+        "title": "What are the TOP-K antibiotic resistance genes given a certain quality metric",
+        "name": "competency question 4",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/query/competency-question/4",
+        "smallRoute": "query/competency-question/4",
+        "description": "Assessing the quality of a measure perfomed by a workflow is essential to propose relevant scientific conclusions. This competency question shows how the relevancy of the resistance genes discovered by a workflow can be assessed using the identify % metric as an indicator of good gene quality",
+        "ontologies": [
+            {
+                "type": "generic",
+                "shortName": "SOSA",
+                "name": "",
+                "description": "Provide a vocabulary to model observations made by a procedure such as a bioinformatics workflow",
+                "bioportalUrl": "https://www.w3.org/TR/vocab-ssn/"
+            },
+            {
+                "type": "generic",
+                "shortName": "SIO",
+                "name": "",
+                "description": "The semanticscience integrated ontology (SIO) provides a simple, integrated ontology (types, relations) for objects, processes and..",
+                "bioportalUrl": "https://bioportal.bioontology.org/ontologies/SIO"
+            },
+            {
+                "type": "omics",
+                "shortName": "NCIT",
+                "name": "",
+                "description": "reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and..",
+                "bioportalUrl": "https://bioportal.bioontology.org/ontologies/NCIT"
+            }
+        ],
+        "queryFilePath": "queries/competency-questions/q4-genes-filtered-by-identity.sparql",
+        "method": "GET",
+        "parameters": {}
+    },
+    {
+        "id": 5,
+        "adminOnly": False,
+        "title": "Between human and animal samples, what are the most shared resistance genes",
+        "name": "competency question 5",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/query/competency-question/5",
+        "smallRoute": "query/competency-question/5",
+        "description": "This competency questions shows how the knowledge graph can help to perform One Health investigations by looking at common antibiotic resistance genes present in the human, animal and environmental reservoirs. Such query can be further completed to perform rich analysis using timeframe filtration and selection of only specific geographical regions of interets",
+        "ontologies": [
+            {
+                "type": "generic",
+                "shortName": "SOSA",
+                "name": "",
+                "description": "Provide a vocabulary to model observations made by a procedure such as a bioinformatics workflow",
+                "bioportalUrl": "https://www.w3.org/TR/vocab-ssn/"
+            },
+            {
+                "type": "generic",
+                "shortName": "SIO",
+                "name": "",
+                "description": "The semanticscience integrated ontology (SIO) provides a simple, integrated ontology (types, relations) for objects, processes and..",
+                "bioportalUrl": "https://bioportal.bioontology.org/ontologies/SIO"
+            },
+            {
+                "type": "omics",
+                "shortName": "NCIT",
+                "name": "",
+                "description": "reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and..",
+                "bioportalUrl": "https://bioportal.bioontology.org/ontologies/NCIT"
+            }
+        ],
+        "queryFilePath": "queries/competency-questions/q5-most-occurent-res-gene-for-geo-region.sparql",
+        "method": "GET",
+        "parameters": {}
+    },
+    {
+        "id": 6,
+        "adminOnly": False,
+        "title": "What are all the potentially inefficient antibiotic drugs given a specific sample",
+        "name": "competency question 6",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/query/competency-question/6",
+        "smallRoute": "query/competency-question/6",
+        "description": "This competency questions shows how the ontologies used within the knowledge graph can be used to filter the data even more. For instance, with this query, we use the knowledge given by the ARO ontology to get the list of all the antibiotics that will be ineficient for treating all bacteria strains found in the human samples",
+        "ontologies": [
+            {
+                "type": "generic",
+                "shortName": "SOSA",
+                "name": "",
+                "description": "Provide a vocabulary to model observations made by a procedure such as a bioinformatics workflow",
+                "bioportalUrl": "https://www.w3.org/TR/vocab-ssn/"
+            },
+            {
+                "type": "generic",
+                "shortName": "SIO",
+                "name": "",
+                "description": "The semanticscience integrated ontology (SIO) provides a simple, integrated ontology (types, relations) for objects, processes and..",
+                "bioportalUrl": "https://bioportal.bioontology.org/ontologies/SIO"
+            },
+            {
+                "type": "omics",
+                "shortName": "NCIT",
+                "name": "",
+                "description": "reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and..",
+                "bioportalUrl": "https://bioportal.bioontology.org/ontologies/NCIT"
+            }
+        ],
+        "queryFilePath": "queries/competency-questions/q6-potentialy-inefficient-drugs.sparql",
+        "method": "GET",
+        "parameters": {}
     }
 ]
 

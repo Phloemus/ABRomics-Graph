@@ -11,11 +11,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?gene_name (COUNT(?gene_name) as ?total_nb_occurences)
 FROM <http://www.ontotext.com/explicit>
 WHERE {
-    ?sample rdf:type sio:001050 ; # any biological sample
-        prov:generatedAtTime ?collectedDate . # with their collection date
     
+    # any biological sample with their collection date
+    ?sample rdf:type sio:001050 ;
+        prov:generatedAtTime ?collectedDate . 
+    
+    # only collected between December 2019 and January 2021. 
     FILTER (?collectedDate > "2019-12-01T00:00:00Z"^^xsd:dateTime && 
-        ?collectedDate < "2021-01-01T00:00:00Z"^^xsd:dateTime) # only collected between December 2019 and January 2021. 
+        ?collectedDate < "2021-01-01T00:00:00Z"^^xsd:dateTime) 
 
     ?observableProperty rdf:type sosa:ObservableProperty ;
         rdfs:label 'Resistance gene' .
@@ -30,4 +33,4 @@ WHERE {
 
 }
 GROUP BY ?gene_name 
-ORDER BY DESC(?total_nb_occurences) # sort results by the most represented ABR genes 
+ORDER BY DESC(?total_nb_occurences)
