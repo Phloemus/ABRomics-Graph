@@ -1,3 +1,11 @@
+<p align="center">
+   <h1>ABRomics Graph</h1>
+   <a href="https://10-54-3-233.gcp.glicid.fr/" target="_blank" rel="noopener">
+      <img src="https://github.com/Phloemus/ABRomics-Graph/tree/main/assets/docker-tag.png" alt="Abromics Graph - A knowledge graph that links microbiome data" />
+   </a>
+
+</p>
+
 # ABRomics graph
 
 Abromics graph correspond to the WP2.4 of the Abromics project, which should ensure the FAIR principles by using 
