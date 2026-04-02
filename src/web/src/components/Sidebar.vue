@@ -1,13 +1,42 @@
 <script setup>
 
     import SmallCard from '../components/SmallCard.vue'
-    import queries from '../static/queries.json'
 
     const config = useRuntimeConfig();
     const appName = config.public.appName
 
     const isUserLoggedIn = useState("isUserLoggedIn")
     const isSidebarToggled = useState('isSidebarToggled', () => false)
+
+    // local states
+    const queries = ref([])
+
+    // on render
+    getCompetencyQuestions()
+
+    function getCompetencyQuestions() {
+        const uri = config.public.apiUrl + "/query/competency-question"
+        fetch(
+            uri,
+            { 
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }
+        )
+        .then(response => { 
+            if(response.status != 200) {
+                console.log("Error fetching competency questions")
+                return 
+            }
+            return response.json()
+        }).then((data) => {
+            queries.value = data
+        }).catch(err => {
+            console.error("Error fetching competency questions: ", err)
+        })
+    }
 
     function toggleSidebar() {
         isSidebarToggled.value = !isSidebarToggled.value
@@ -83,7 +112,7 @@
                     v-for="(query, index) in queries"
                     :title="query.name"
                     :description="query.title"
-                    :link="query.link"
+                    :link="`/query/${query.id}`"
                 />
                 <div class="flex justify-center">
                     <ActionButton content="More queries"></ActionButton>

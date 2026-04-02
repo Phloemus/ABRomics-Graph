@@ -1,5 +1,7 @@
 <script setup>
 
+    const config = useRuntimeConfig()
+
     // Global state
     const isUserLoggedIn = useState('isUserLoggedIn', () => false)
     const userAuthToken = useState('userAuthToken', () => "")
@@ -12,8 +14,9 @@
     const isError = ref(false)
 
     function login() {
+        const uri = config.public.apiUrl + "/login"
         fetch(
-            "http://localhost:5000/graph-api/login", 
+            uri,
             { 
                 method: "POST",
                 headers: {

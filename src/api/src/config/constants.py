@@ -12,7 +12,8 @@ COMPETENCY_QUESTION_QUERIES = [
         "adminOnly": False,
         "title": "What are the most common antibiotic resistance genes in all samples ?",
         "name": "competency question 1",
-        "route": f"{API_ENDPOINT}/{API_BASEPATH}/competency-question/1",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/query/competency-question/1",
+        "smallRoute": "query/competency-question/1",
         "description": "This competency question allows to explore the whole database in order to find relevant data for further exploration. The query is a template that can be easily reused to build new SPARQL queries that will rely on different data sources using Uniprot or Wikidata. It serves as the test request when deploying the application, so this query should always work perfectly !",
         "ontologies": [
             {

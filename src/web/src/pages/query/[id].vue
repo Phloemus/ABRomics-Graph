@@ -1,42 +1,64 @@
 <script setup>
     import { ref } from 'vue'
     import { useRoute } from 'vue-router'
-    import { readFileSync } from 'fs';
 
     import { codeToHtml } from 'shiki'
 
     import ActionButton from "../../components/ActionButton.vue"
     import Table from "../../components/Table.vue"
 
-    import queries from '../../static/queries.json'
-
     const config = useRuntimeConfig()
 
     const route = useRoute()
     const queryId = route.params.id - 1
-    const queryFilename = `../../static/${queries[queryId].sparqlQuery}`
-    const queryContent = readFileSync(queryFilename)
-    const ontologies = queries[queryId].ontologies
-    const queryApiLink = config.public.apiUrl + '/' + queries[queryId].apiLink
-    const queryMethod = queries[queryId].method
 
-    const queryHtml = await codeToHtml(queryContent, { lang: 'sparql', theme: 'catppuccin-mocha', colorReplacements: { '#1e1e2e': '#1e293b' }})
-
+    const queryMetadata = ref({})
+    const queryContent = ref("")
+    const queryHtml = ref({})
     var queryResponse = ref([])
     var isQueryPerformed = ref(false)
     var isQueryError = ref(false)
     var queryError = ref("")
 
+    // on render
+    getCompetencyQuestion(queryId)
+
+    function getCompetencyQuestion(id) {
+        const uri = config.public.apiUrl + "/query/competency-question"
+        fetch(
+            uri,
+            { 
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }
+        )
+        .then(response => { 
+            if(response.status != 200) {
+                console.log("Error fetching competency questions")
+                return 
+            }
+            return response.json()
+        }).then(async (data) => {
+            queryMetadata.value = data[id]
+            queryContent.value = data[id]["content"]
+            queryHtml.value = await codeToHtml(queryContent.value, { lang: 'sparql', theme: 'catppuccin-mocha', colorReplacements: { '#1e1e2e': '#1e293b' }})
+        }).catch(err => {
+            console.error("Error fetching competency questions: ", err)
+        })
+    }
+
     function fetchQueryResult() {
-        // Don't forget to change the port or the host in prod ;)
-        fetch(queryApiLink, 
+        fetch(queryMetadata.value.route, 
             {
-                method: queryMethod,
+                method: queryMetadata.value.method,
                 headers: {
                     "Content-Type": "application/json"
                 }
             }
         ).then((response) => {
+            console.log(response)
             if(response.status != 200) {
                 isQueryError.value = true
                 queryError.value = response.json()
@@ -62,21 +84,21 @@
 <template>
     <div class="flex justify-between items-start">
         <div>
-            <h1 class="mb-1 text-2xl text-slate-900 font-bold">{{ queries[queryId].title }}</h1>
-            <span class="text-md text-slate-600">{{ queries[queryId].name }}</span>
+            <h1 class="mb-1 text-2xl text-slate-900 font-bold">{{ queryMetadata.title }}</h1>
+            <span class="text-md text-slate-600">{{ queryMetadata.name }}</span>
         </div>
         <div class="px-4 py-1 bg-sky-200 text-sky-500 rounded-sm">
-            <NuxtLink :to="queryApiLink">{{ queries[queryId].apiLink }}</NuxtLink>
+            <NuxtLink :to="queryMetadata.route">{{ queryMetadata.smallRoute }}</NuxtLink>
         </div>
     </div>
     <div>
-        <p class="my-6 text-lg text-slate-700">{{ queries[queryId].description }}</p>
+        <p class="my-6 text-lg text-slate-700">{{ queryMetadata.description }}</p>
     </div>
     <div class="my-10">
         <h2 class="text-xl text-slate-900 font-bold">Ontologies involved</h2>
         <div class="my-6 flex gap-4">
             <OntologyCard 
-                v-for="(ontology, index) in ontologies"
+                v-for="(ontology, index) in queryMetadata.ontologies"
                 :name="ontology.name"
                 :shortName="ontology.shortName"
                 :type="ontology.type"
@@ -132,6 +154,6 @@
         <div class="flex justify-between items-center">
             <h2 class="text-xl text-slate-900 font-bold">Query result</h2>
         </div>
-        <Table :data="queryResponse"/>
+        <Table :data="queryResponse" />
     </div>
 </template>
