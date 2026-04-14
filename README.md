@@ -3,7 +3,6 @@
    <a href="https://10-54-3-233.gcp.glicid.fr/" target="_blank" rel="noopener">
       <img src="https://camo.githubusercontent.com/1423d8d34a668eb6efe1b0fc416c0b155d94610660d468b1d4fdf44dc740f54e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4275696c745f576974682d446f636b65722d696e666f726d6174696f6e616c3f7374796c653d666c6174266c6f676f3d646f636b6572" alt="Abromics Graph - A knowledge graph that links microbiome data" />
    </a>
-
 </p>
 
 # ABRomics graph
