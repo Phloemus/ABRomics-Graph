@@ -5,24 +5,24 @@
    </a>
 </p>
 
-# ABRomics graph
+# Abromics graph
 
-Abromics graph correspond to the WP2.4 of the Abromics project, which should ensure the FAIR principles by using 
-finding appropriate ontologies for Abromics usecases and setting up a knowledge graph to integrate more data
-in the graph.
+Abromics graph is a knowledge graph model that allows to perform complex queries on heterogeneous microbiome data extracted from animal, enironmental and human samples. 
+Fitting the one health approach, the project was first focused on antibiotic resistance data extracted from the [ABRomics platform](https://abromics.fr). With a simple and flexible 
+knowledge graph structure, Abromics graph is a prime model to use in order to integrate more complex microbiome data while limiting query complexity.
 
-## Main goals of ABRomics graph
+## Main goals of Abromics graph
 
-ABRomics graph provide a knowledge graph for the ABRomics platform. The ABRomics graph has 4 main objectives:
+Abromics graph provide a knowledge graph for the Abromics platform. The Abromics graph has 4 main objectives:
 
-1. Provide graph structure for the ABRomics data that can support SPARQL request
+1. Provide graph structure for the Abromics data that can support SPARQL request
 2. Use terms from relevant ontologies in the domain of antibiotic resistance
-3. Link the ABRomics data with external knowledge graph 
-4. Ensuring an interoperability between the ABRomics data and the data present in external knowledge graphs
+3. Link the Abromics data with external knowledge graph 
+4. Ensuring an interoperability between the Abromics data and the data present in external knowledge graphs
 
 ## Parts of the project
 
-1. Virtuoso graph server
+1. Graph server
 2. Developper API
 3. SPARQL queries collection
 4. Web dashboard
@@ -30,6 +30,13 @@ ABRomics graph provide a knowledge graph for the ABRomics platform. The ABRomics
 ## Download the codebase of the project
 
 To get the whole codebase of the ABRomics-kg project run:
+
+### From github.com
+
+```
+bash
+git clone git@github.com:Phloemus/ABRomics-Graph.git
+```
 
 ### From gitlab.com
 
@@ -47,8 +54,8 @@ git clone https://gitlab.univ-nantes.fr/BiRD/abromics-kg.git
 
 ## Development deployment
 
-First modify the variables in **.env** file to fit your project. The values by default will work correctly 
-when deploying the app using docker.
+First make sure you have the **.env.dev** file in the git repo of the project. Its default values will work correctly 
+for a standard development deployment of the whole application using docker
 
 To deploy the whole application (graph server, API and dashboard), you can use docker by running:
 
@@ -61,23 +68,54 @@ By default :
 
 - Web dashboard: [http://localhost:8081](http://localhost:8081)
 - API: [http://localhost:8081/graph-api](http://localhost:8081/graph-api)
-- Graph server: [http://localhost:8081/sparql](http://localhost:8081/sparql)
+- Graph server: [http://localhost:8081/graphdb](http://localhost:8081/graphdb)
+
+### Configuration of the graphdb instance and addition of graph data
+
+After the launch of every service via docker, it's essential to add a valid license to in the graphdb instance. 
+To do so, go to [http://localhost:8081/graphdb/](http://localhost:8081/graphdb/) and add a valid graphdb license by clicking on the red button indicating that there is no license associated with your graphdb repo. 
+
+> [!NOTE]
+> You can get a free graphdb license by going on [graphdb website](https://graphwise.ai/components/graphdb/) 
+
+> [!NOTE]
+> Moreover instead of using the web interface of graphdb you can directly upload the graphdb license file you got from the graphdb team by directly putting it in the ```./src/graph/``` directory
+> and naming the file "*license*". (A *.gitignore* entry make you license private, it won't be commited with your contributions)
 
 ## Production deployment
 
-To deploy the application in a production environement use the **.env.prod** file instead. 
+Deploying the application in a production environment requires a little bit more setup. 
 
-> [!NOTE]
-> Do not forget to change the admin credentials ! 
+First, you as the application uses the HTTPS protocol when deployed in a production environment, you need to put your hand on SSL certificates. 
+You can either generate your own self-signed SSL certificates with the following command: 
+
+```
+bash 
+cd src/nginx-config
+mkdir certificates
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ./certificates/nginx.key -out ./certificates/nginx.crt
+```
+
+This strategy is good for small production deployment but your traffic will be limited as a self-signed certificates is often flagged as malicious by web browsers. 
+
+To solve this issue, you can get the SSL certificates from a certificate authority like [Let's encrypt](https://letsencrypt.org/) which gives browser valid SSL certificates for free
+Make sure you place the SSL certificates in the ```./src/nginx-config/certificates``` directory to make them accessible to the nginx reverse proxy behind the Abromics graph application.
+
+Then, verify that all the values in the ```.env.prod``` file are ok. Especially for the API admin credentials and the url of the application which you should change to your own.
+
+To deploy the application in a production environement use the ```.env.prod``` file instead in the ```docker compose``` command
 
 ```
 bash 
 docker compose --env-file .env.prod up -d
 ```
 
-## Virtuoso graph server
+> [!NOTE]
+> Do not forget to change the API admin credentials ! 
 
-The virtuoso graph server respond to SPARQL queries sent to [http://localhost:8081/sparql](http://localhost:8081/sparql). This sparql endpoint holds all the public data of ABRomics and is accessible publicly to request using SPARQL queries.
+## Graphdb server
+
+The Graphdb server respond to SPARQL queries sent to [http://localhost:8081/sparql](http://localhost:8081/sparql). This sparql endpoint holds all the public data of ABRomics and is accessible publicly to request using SPARQL queries.
 
 See more [developper documentation](https://gitlab.com/ifb-elixirfr/abromics/abromics-graph/-/blob/main/src/graph/README.md) about the virtuoso graph server
 
