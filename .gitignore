@@ -15,6 +15,9 @@ package-lock.json
 
 src/graph/graph-data/*.owl
 src/graph/graph-data/*.obo
+src/graph/license
+
+src/nginx-config/certificates
 
 src/docs/src/*
 src/docs/md/*

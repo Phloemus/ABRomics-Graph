@@ -10,7 +10,7 @@ services:
       - API_BASEPATH=${API_BASEPATH}
     volumes:
       - ./src/nginx-config/${NGINX_CONF_FILE}:/etc/nginx/nginx.conf
-      - ./src/nginx-config/nginx.conf.template:/etc/nginx/templates/nginx.conf.template:ro
+      - ./src/nginx-config/certificates:/etc/nginx/certs
       - ./src/docs/src:/usr/share/nginx/html/docs
     depends_on:
       - graphdb
@@ -24,10 +24,11 @@ services:
     container_name: abromics-kg-graphdb
     hostname: graphdb
     environment: 
-      GDB_JAVA_OPTS: -Dgraphdb.external-url=${HOST_URL}/graphdb/ -Dgraphdb.workbench.cors.enable=true -Dgraphdb.workbench.cors.origin=* -Dgraphdb.workbench.cors.expose-headers="content,location"
+      GDB_JAVA_OPTS: -Dgraphdb.external-url=${HOST_URL}/graphdb/ -Dgraphdb.external-url.enforce.transactions=true -Dgraphdb.workbench.cors.enable=true -Dgraphdb.workbench.cors.origin=*
     volumes:
       - ./src/graph/graph-data:/root/graphdb-import ## data and ontologies used in the KG
       - ./src/graph/config.ttl:/opt/graphdb/home/data/repositories/abromics-kg/config.ttl ## config pour graphdb
+      - ./src/graph/license:/opt/graphdb/home/conf/graphdb.license
     ports:
       - 7200:7200
     networks:
