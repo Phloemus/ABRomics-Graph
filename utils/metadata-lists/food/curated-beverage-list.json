@@ -1,0 +1,116 @@
+[
+    {
+        "model": "constant_data.source",
+        "pk": 1,
+        "fields": {
+            "name": "fermented bevrage",
+            "type": "food",
+            "class": "http://purl.obolibrary.org/obo/FOODON_00001094",
+            "ontology": "FOODON"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 2,
+        "fields": {
+            "name": "juice beverage",
+            "type": "food",
+            "class": "http://purl.obolibrary.org/obo/FOODON_03315552",
+            "ontology": "FOODON"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 3,
+        "fields": {
+            "name": "animal derived beverage",
+            "type": "food",
+            "class": "http://purl.obolibrary.org/obo/FOODON_00001252",
+            "ontology": "FOODON"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 4,
+        "fields": {
+            "name": "plant derived beverage",
+            "type": "food",
+            "class": "http://purl.obolibrary.org/obo/FOODON_00001253",
+            "ontology": "FOODON"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 5,
+        "fields": {
+            "name": "nonalcoholic beverage",
+            "type": "food",
+            "class": "http://purl.obolibrary.org/obo/FOODON_00002057",
+            "ontology": "FOODON"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 6,
+        "fields": {
+            "name": "bevrage",
+            "type": "food",
+            "class": "http://purl.obolibrary.org/obo/FOODON_00003202",
+            "ontology": "FOODON"
+        }
+    },
+
+    {
+        "model": "constant_data.source",
+        "pk": 7,
+        "fields": {
+            "name": "alcoholic beverage",
+            "type": "food",
+            "class": "http://purl.obolibrary.org/obo/FOODON_00001579",
+            "ontology": "FOODON"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 8,
+        "fields": {
+            "name": "fruit juice bevrage",
+            "type": "food",
+            "class": "http://purl.obolibrary.org/obo/FOODON_00001140",
+            "ontology": "FOODON"
+        }
+    },
+
+
+    {
+        "model": "constant_data.source",
+        "pk": 9,
+        "fields": {
+            "name": "mammalian milk beverage",
+            "type": "food",
+            "class": "http://purl.obolibrary.org/obo/FOODON_00001217",
+            "ontology": "FOODON"
+        }
+    },
+
+    {
+        "model": "constant_data.source",
+        "pk": 10,
+        "fields": {
+            "name": "water",
+            "type": "food",
+            "class": "http://purl.obolibrary.org/obo/FOODON_03307287",
+            "ontology": "FOODON"
+        }
+    },
+    {
+        "model": "constant_data.source",
+        "pk": 11,
+        "fields": {
+            "name": "sport drink",
+            "type": "food",
+            "class": "http://purl.obolibrary.org/obo/FOODON_03316090",
+            "ontology": "FOODON"
+        }
+    }
+]
