@@ -22,6 +22,7 @@
             <http://www.ontotext.com/config/graphdb#fts-iris-index> "none";
             <http://www.ontotext.com/config/graphdb#fts-string-literals-index> "default";
             <http://www.ontotext.com/config/graphdb#imports> "/root/graphdb-import/aro.owl" ;
+            <http://www.ontotext.com/config/graphdb#imports> "/root/graphdb-import/foodon.owl" ;
             <http://www.ontotext.com/config/graphdb#imports> "/root/graphdb-import/envo.owl" ;
             <http://www.ontotext.com/config/graphdb#imports> "/root/graphdb-import/genes.ttl" ;
             <http://www.ontotext.com/config/graphdb#imports> "/root/graphdb-import/linksSamplesObservations.ttl" ;

@@ -1,0 +1,34 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl>
+PREFIX aro: <http://purl.obolibrary.org/obo/ARO_>
+PREFIX ro: <http://purl.obolibrary.org/obo/RO#_>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX foodon: <http://purl.obolibrary.org/obo/FOODON_>
+
+## All the foods that are interesting in the context of ABRomics from FOODON
+SELECT DISTINCT ?class ?classLabel ?parentClass ?parentClassLabel (COUNT(?existingSamples) as ?nbOccurences)
+FROM <http://www.ontotext.com/explicit>
+WHERE {
+    {
+    	?class rdfs:subClassOf+ foodon:03301977 . ## Brevages
+    } UNION {
+        ?class rdfs:subClassOf+ foodon:00004242 . ## Animal food
+   	} UNION {
+        ?class rdfs:subClassOf+ foodon:00001133 . ## Condiment food
+    } UNION {
+        ?class rdfs:subClassOf+ foodon:00001143 . ## Funfus food
+    } UNION {
+        ?class rdfs:subClassOf+ foodon:00001015 ## Plant food
+    } UNION {
+        ?existingSamples rdf:type sio:001050 .
+        ?existingSamples prov:wasDerivedFrom ?class .
+    }
+    ?class rdfs:label ?classLabel .
+    ?class rdfs:subClassOf ?parentClass .
+    ?parentClass rdfs:label ?parentClassLabel .
+} GROUP BY ?class ?classLabel ?parentClass ?parentClassLabel
+ORDER BY DESC(?nbOccurences)
