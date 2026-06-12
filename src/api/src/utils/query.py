@@ -37,7 +37,8 @@ class Query():
             query = file.read()
 
         for key, value in parameters.items():
-            query = query.replace(f"${key}", f"'{value}'")
+            query = query.replace(f"${key}", f"{value}")
+        print(f"query: {query}")
 
         return cls(queryString=query, sparqlEndpoint=sparqlEndpoint)
 

@@ -319,6 +319,19 @@ QUERIES = [
             Get the most popular sample sources. Used to get an insight on
             the most used sample sources in the graph.
         """
+    },
+    {
+        "name": "get-resistance-gene-aro-class",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/resistance-genes/aro-class",
+        "method": "POST",
+        "filePath": "queries/resistance-genes/get-resistance-gene-aro-class.sparql",
+        "description": """
+            From a list of resistance genes labels (name), get the list of the associated aro 
+            classes (url) if the resistance gene is found in the ARO ontology
+        """,
+        "parameters": {
+            "resistanceGenes": "The list of the resistance genes labels"
+        }
     }
 ]
 

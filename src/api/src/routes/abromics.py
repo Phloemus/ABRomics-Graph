@@ -54,8 +54,6 @@ def getPopularSampleSources():
     return response
 
 
-
-
 #### Takes too much time, implement some caching mecanisms here ####
 
 @cross_origin()
@@ -79,4 +77,20 @@ def getHostSpecies():
     return response
 
 
-
+@cross_origin()
+@app.route(f"/{API_BASEPATH}/resistance-genes/aro-class", methods=[QUERIES[9]["method"]])
+def getResistanceGenesAROClasses():
+    resistanceGenesList = request.json["resistanceGenes"]
+    resistanceGenesString = ""
+    for resistanceGeneName in resistanceGenesList:
+        resistanceGenesString += f"'{resistanceGeneName}' "
+    query = Query.fromFile(
+        QUERIES[9]["filePath"], 
+        sparqlEndpoint=SPARQL_ENDPOINT, 
+        parameters={"resistanceGenes": resistanceGenesString}
+    ) ## Get the aro classes of a list of resistance genes
+    rawResponse = query.executeQuery()
+    rawResponse = {item["resistanceGene"]["value"]: item["aroClass"]["value"] for item in rawResponse}
+    response = jsonify(rawResponse)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response

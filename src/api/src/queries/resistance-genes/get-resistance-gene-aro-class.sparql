@@ -1,0 +1,17 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sio: <http://semanticscience.org/resource/>
+PREFIX schema: <https://schema.org/>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl>
+PREFIX aro: <http://purl.obolibrary.org/obo/ARO_>
+
+SELECT ?resistanceGene ?aroClass
+FROM <http://www.ontotext.com/explicit>
+WHERE {
+    VALUES ?resistanceGene {
+        $resistanceGenes
+    }
+    ?aroClass rdfs:subClassOf+ aro:3000000 ;
+        rdfs:label ?resistanceGene .
+}
