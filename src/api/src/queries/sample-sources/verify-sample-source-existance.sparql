@@ -1,0 +1,7 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?label
+FROM <http://www.ontotext.com/explicit>
+WHERE {
+    <$sampleSourceClassUrl> rdfs:label ?label .
+}

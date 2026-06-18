@@ -332,7 +332,19 @@ QUERIES = [
         "parameters": {
             "resistanceGenes": "The list of the resistance genes labels"
         }
-    }
+    },
+    {
+        "name": "verify-sample-sources-existance",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/sample-sources/verify",
+        "method": "POST",
+        "filePath": "queries/sample-sources/verify-sample-source-existance.sparql",
+        "description": """
+            Check if a sample source class exists in the knowledge graph
+        """,
+        "parameters": {
+            "sampleSourceClassUrl": "[mendatory] The url of the sample source class",
+        }
+    },
 ]
 
 ADMIN_QUERIES = [

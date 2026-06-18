@@ -94,3 +94,27 @@ def getResistanceGenesAROClasses():
     response = jsonify(rawResponse)
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
+
+
+@cross_origin()
+@app.route(f"/{API_BASEPATH}/sample-sources/verify", methods=[QUERIES[10]["method"]])
+def verifySampleSourceClassExistance():
+    sampleSourceClassUrl = request.json["sampleSourceClassUrl"]
+    query = Query.fromFile(
+        QUERIES[10]["filePath"], 
+        sparqlEndpoint=SPARQL_ENDPOINT, 
+        parameters={"sampleSourceClassUrl": sampleSourceClassUrl}
+    ) ## Verify the existance of the sample source class in the KG
+    rawResponse = query.executeQuery()
+    if len(rawResponse) > 0:
+        return {
+            "message": "class found in knowledge graph", 
+            "exists": True,
+            "className": rawResponse[0]["label"]["value"],
+            "classUrl": sampleSourceClassUrl    
+        }
+    else: 
+        return {
+            "message": "no term was found with this class URI in the knowledge graph", 
+            "exists": False, 
+        }
