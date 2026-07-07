@@ -36,6 +36,9 @@ class Query():
         with open(queryFilePath, 'r') as file:
             query = file.read()
 
+        ## Be careful, this will replace variables marked by $ in the sparql query by the 
+        ## associated value but it assumes that the content in value is ok, with no 
+        ## polluting characters such as an unclosed ' or " at the middle of the string.
         for key, value in parameters.items():
             query = query.replace(f"${key}", f"{value}")
         print(f"query: {query}")

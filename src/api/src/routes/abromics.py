@@ -83,7 +83,9 @@ def getResistanceGenesAROClasses():
     resistanceGenesList = request.json["resistanceGenes"]
     resistanceGenesString = ""
     for resistanceGeneName in resistanceGenesList:
-        resistanceGenesString += f"'{resistanceGeneName}' "
+        resistanceGeneName = resistanceGeneName.replace("'", "\'")
+        resistanceGeneName = resistanceGeneName.replace("\"", "\"")
+        resistanceGenesString += f'"{resistanceGeneName}" '
     query = Query.fromFile(
         QUERIES[9]["filePath"], 
         sparqlEndpoint=SPARQL_ENDPOINT, 

@@ -126,17 +126,83 @@
                 </div>
             </div>
         </div>
-        <div>
-            <h2 class="text-xl text-slate-900 font-bold">Datasources</h2>
-            <div class="my-4">
-                <div class="p-6 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer">
-                    <h3 class="text-slate-900 text-lg font-semibold">ABRomics database</h3>
-                    <p class="my-4 text-slate-800">
-                        <b>ABRomics</b> is a national platform designed to monitor the spread of antibiotic resistance genes in <b>human</b>, <b>animal</b> and <b>environmental</b>
-                        reservoirs. 
-                    </p>
-                    <NuxtLink to="https://analysis.abromics.fr/" class="text-sky-500 font-semibold hover:underline">https://analysis.abromics.fr/</NuxtLink>
+        <div class="flex flex-col justify-between">
+            <div>
+                <h2 class="text-xl text-slate-900 font-bold">Datasources</h2>
+                <div class="my-4">
+                    <div class="p-6 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer">
+                        <h3 class="text-slate-900 text-lg font-semibold">ABRomics database</h3>
+                        <p class="my-4 text-slate-800">
+                            <b>ABRomics</b> is a national platform designed to monitor the spread of antibiotic resistance genes in <b>human</b>, <b>animal</b> and <b>environmental</b>
+                            reservoirs. 
+                        </p>
+                        <NuxtLink to="https://analysis.abromics.fr/" class="text-sky-500 font-semibold hover:underline">https://analysis.abromics.fr/</NuxtLink>
+                    </div>
                 </div>
+
+
+<div class="my-4">
+                    <div class="p-6 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer">
+                        <h3 class="text-slate-900 text-lg font-semibold">ABRomics database</h3>
+                        <p class="my-4 text-slate-800">
+                            <b>ABRomics</b> is a national platform designed to monitor the spread of antibiotic resistance genes in <b>human</b>, <b>animal</b> and <b>environmental</b>
+                            reservoirs. 
+                        </p>
+                        <NuxtLink to="https://analysis.abromics.fr/" class="text-sky-500 font-semibold hover:underline">https://analysis.abromics.fr/</NuxtLink>
+                    </div>
+                </div>
+<div class="my-4">
+                    <div class="p-6 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer">
+                        <h3 class="text-slate-900 text-lg font-semibold">ABRomics database</h3>
+                        <p class="my-4 text-slate-800">
+                            <b>ABRomics</b> is a national platform designed to monitor the spread of antibiotic resistance genes in <b>human</b>, <b>animal</b> and <b>environmental</b>
+                            reservoirs. 
+                        </p>
+                        <NuxtLink to="https://analysis.abromics.fr/" class="text-sky-500 font-semibold hover:underline">https://analysis.abromics.fr/</NuxtLink>
+                    </div>
+                </div>
+<div class="my-4">
+                    <div class="p-6 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer">
+                        <h3 class="text-slate-900 text-lg font-semibold">ABRomics database</h3>
+                        <p class="my-4 text-slate-800">
+                            <b>ABRomics</b> is a national platform designed to monitor the spread of antibiotic resistance genes in <b>human</b>, <b>animal</b> and <b>environmental</b>
+                            reservoirs. 
+                        </p>
+                        <NuxtLink to="https://analysis.abromics.fr/" class="text-sky-500 font-semibold hover:underline">https://analysis.abromics.fr/</NuxtLink>
+                    </div>
+                </div>
+<div class="my-4">
+                    <div class="p-6 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer">
+                        <h3 class="text-slate-900 text-lg font-semibold">ABRomics database</h3>
+                        <p class="my-4 text-slate-800">
+                            <b>ABRomics</b> is a national platform designed to monitor the spread of antibiotic resistance genes in <b>human</b>, <b>animal</b> and <b>environmental</b>
+                            reservoirs. 
+                        </p>
+                        <NuxtLink to="https://analysis.abromics.fr/" class="text-sky-500 font-semibold hover:underline">https://analysis.abromics.fr/</NuxtLink>
+                    </div>
+                </div>
+<div class="my-4">
+                    <div class="p-6 bg-slate-50 hover:bg-slate-100 rounded-md cursor-pointer">
+                        <h3 class="text-slate-900 text-lg font-semibold">ABRomics database</h3>
+                        <p class="my-4 text-slate-800">
+                            <b>ABRomics</b> is a national platform designed to monitor the spread of antibiotic resistance genes in <b>human</b>, <b>animal</b> and <b>environmental</b>
+                            reservoirs. 
+                        </p>
+                        <NuxtLink to="https://analysis.abromics.fr/" class="text-sky-500 font-semibold hover:underline">https://analysis.abromics.fr/</NuxtLink>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="my-4">
+                <h2 class="text-xl text-slate-900 font-bold">Reuse this query</h2>
+                <NuxtLink to="/sparql" class="my-4 p-4 bg-slate-50 flex justify-between rounded-md hover:bg-slate-100 hover:cursor-pointer">
+                    <p>
+                        <b>Reuse</b> this query as a <b>base</b> for your own
+                    </p>
+                    <img class="w-6 h-6" src="assets/arrow-right.svg">
+                </NuxtLink>
             </div>
         </div>
     </div>
