@@ -106,7 +106,7 @@
             <div>
 
             </div>
-            <div class="px-4 w-full relative">
+            <div class="my-10 px-4 w-full relative">
                 <h3 class="mx-1 my-4 text-slate-600 text-lg">Prewritten queries</h3>
                 <SmallCard 
                     v-for="(query, index) in queries.slice(0, 2)"
@@ -120,32 +120,32 @@
                     </NuxtLink>
                 </div>
             </div>
-            <div v-show="isUserLoggedIn" class="w-full relative">
+            <div v-show="isUserLoggedIn" class="px-4 w-full relative">
                 <h3 class="mx-1 my-4 text-slate-600 text-lg">Admin actions</h3>
                 <div class="my-2 p-2 bg-slate-50 hover:bg-slate-100 text-slate-800 rounded-md hover:cursor-pointer">
                     <NuxtLink to="/admin/delete-all">
                         <p>
-                            delete all graph nodes
+                            Delete all graph nodes
                         </p>
                     </NuxtLink>
                 </div>
                 <div class="my-2 p-2 bg-slate-50 hover:bg-slate-100 text-slate-800 rounded-md hover:cursor-pointer">
                     <NuxtLink to="/admin/recreate-graph">
                         <p>
-                            recreate graph
+                            Recreate graph
                         </p>
                     </NuxtLink>
                 </div>
                 <div class="my-2 p-2 bg-slate-50 hover:bg-slate-100 text-slate-800 rounded-md hover:cursor-pointer">
                     <p>
-                        delete graph content
+                        Delete graph content
                     </p>
                 </div>
             </div>
             <div class="mx-12 px-6 pb-4 absolute bottom-0 left-0 border-t-2 border-slate-200">
                 <div class="py-3 flex gap-2 text-slate-500">
                     <span>v0.0.2</span>
-                    <span>ABRomicsKG</span>
+                    <span>ABRomics KG</span>
                     <span>2026</span>
                 </div>
             </div>

@@ -2,6 +2,34 @@
     import { ref } from 'vue'
     import PackedBubbleChart from '../components/PackedBubbleChart.vue'
 
+    const { cdnURL, baseURL } = useRuntimeConfig().app
+    const hostUrl = useRuntimeConfig().public.hostUrl
+
+    // For SEO, page title, metadescriptions etc...
+    useHead({
+        title: 'ABRomics KG - Linking microbiome data',
+        meta: [
+          { name: 'description', content: 'ABRomics KG, an interoperable platform to analyse anti microbial resistance and perform data integration from different datasources' },
+          { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+          { name: 'author', content: 'Brieuc Quemeneur' },
+          { name: 'robots', content: 'index, follow' },
+          { name: 'og:locale', content: 'en_US' },
+          { name: 'og:type', content: 'website' },
+          { name: 'og:description', content: 'ABRomics KG, an interoperable platform for anti microbial resistance analysis and data integration' },
+          { name: 'og:title', content: 'ABRomics KG, an interoperable platform to analyse anti microbial resistance and perform data integration from different datasources' },
+          { name: 'og:url', content: 'https://abromics-kg.bird.glicid.fr' },
+          { name: 'og:site_name', content: 'ABRomics KG' },
+          { name: 'og:image', content: `${hostUrl}/thumbnails/thumbnail.png` },
+          { name: 'og:image:secure_url', content: `${hostUrl}/thumbnails/thumbnail.png` },
+          { name: 'og:image:type', content: 'image/png' },
+          { name: 'og:image:width', content: '1440' },
+          { name: 'og:image:height', content: '740' },
+        ],
+        link: [
+            { rel: 'icon', type: 'image/x-icon', href: `${cdnURL || baseURL}logos/abromicskg-logo-xs.svg` },
+        ],
+    })
+
     const testData = {
       name: "root",
       children: [
