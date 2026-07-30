@@ -49,7 +49,7 @@
 </script>
 
 <template>
-    <nav class="px-6 py-3 sticky top-0 w-full flex justify-between items-center bg-white border-b border-slate-200">
+    <nav class="px-3 md:px-6 py-3 sticky top-0 w-full flex justify-between items-center bg-white border-b border-slate-200">
         <div class="flex gap-4 items-center">
             <div 
                 class="w-8 h-10 rounded-md cursor-pointer flex items-center"
@@ -57,12 +57,14 @@
             >
                 <img src="assets/sidebar-icon.svg">
             </div>
-            <SearchInput 
-                :searchTerm="searchTerm"
-                @input="filterOntologyList"
-                placeholder="Search for ontology term.."
-                :results="ontologyClasses"
-            />
+            <div class="hidden md:block">
+                <SearchInput 
+                    :searchTerm="searchTerm"
+                    @input="filterOntologyList"
+                    placeholder="Search for ontology term.."
+                    :results="ontologyClasses"
+                />
+            </div>
         </div>
         <div class="flex flex-row-reverse gap-4">
             <ActionButton @click="displayLoginPanel" v-show="!isUserLoggedIn" content="Login"/>

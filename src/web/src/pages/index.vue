@@ -175,49 +175,66 @@
 </script>
 
 <template>
-    <div class="p-8 flex justify-between items-start">
-        <div>
-            <div class="mb-8 p-4 w-full bg-sky-100 rounded-md flex justify-between">
-                <p class="text-sky-500 text-md font-medium">Check the full graph schema documentation</p>
-                <a class="text-sky-500 text-md font-medium hover:underline" href="docs/">Go to docs</a>
+    <div class="">
+        <div class="mx-auto my-10">
+            <h1 class="mx-6 mb-6 text-center text-3xl text-slate-900 leading-relaxed font-bold">Welcome to ABRomics KG</h1>
+            <p class="sm:mx-6 text-lg text-slate-600 text-center">
+                Level up your data exploration with <span class="text-pink-500 font-medium">ABRomics Knowlegde Graph</span>, the best <span class="text-purple-500 font-medium">interoperable</span> platform to track and analyse anti-microbial resistance
+            </p>
+            <div class="mx-2 sm:mx-6 md:mx-auto my-14 md:flex md:gap-2">
+                <div class="my-2 px-4 py-2 md:w-72 bg-white rounded-md border border-slate-200 cursor-pointer">
+                    <p class="py-1 text-xl text-slate-800 font-semibold">18.1</p> 
+                    <p class="text-md text-slate-500 font-medium">million nodes</p>
+                </div>
+                <div class="my-2 px-4 py-2 md:w-72 bg-white rounded-md border border-slate-200 cursor-pointer">
+                    <p class="py-1 text-xl text-slate-800 font-semibold">xx.x</p> 
+                    <p class="text-md text-slate-500 font-medium">antibiotic resistance genes</p>
+                </div>
+                <div class="my-2 px-4 py-2 md:w-72 bg-white rounded-md border border-slate-200 cursor-pointer">
+                    <p class="py-1 text-xl text-slate-800 font-semibold">xx</p> 
+                    <p class="text-md text-slate-500 font-medium">different datasources</p>
+                </div>
             </div>
-            <h1 class="mb-10 text-3xl text-slate-900 font-bold">Welcome to ABRomics KG</h1>
-            <p class="my-6 text-lg text-slate-700 leading-8">
-                Understanding how antibiotic resistance genes spread is essential for protecting human, animal, and environmental health. It requires collaboration across multiple fields and expertise under One Health initiatives, emphasizing the pressing need to consolidate diverse antibiotic data from human, animal, and environmental samples. 
-            </p>
-            <p class="my-6 text-lg text-slate-700 leading-8">
-            In this paper, we propose a domain-specific Knowledge Graph leveraging the SOSA ontology to uniformly represent multi-modal data and their analysis while allowing the description of provenance metadata covering both time and geographical locations. This work is driven by a national consortium of antibiotic resistance experts (ABRomics). 
-            </p>
-            <p class="my-6 text-lg text-slate-700 leading-8">
-            As experimental results, we show how this domain knowledge can be used to answer a specific expert question as well as increasing the FAIRness of antibiotic resistance data.
-            </p> 
-            <h2 class="mt-10 mb-6 text-xl text-slate-900 font-bold">Summary</h2>
-            <ul>
-                <li>Dataset</li>
-                <li>Knowledge graph structure</li>
-                <li>Execute demo queries</li>
-                <li>Count query</li>
-                <li>Antibiotic resistances by country</li>
-                <li>Antibiotic resistances in different timeframes</li>
-            </ul>
-            <h2 class="mt-10 mb-6 text-xl text-slate-900 font-bold">Dataset</h2>
-            <p class="my-6 text-lg text-slate-700 leading-8">
-                The knowledge graph has been created using public metadata and antibiotic resistance analysis data from the ABRomics plateform.
-            </p>
-            <p class="my-6 text-lg text-slate-700 leading-8">
-                The genomic sequences and metadata of multiple harmfull strains of bacterias found in human, animal and environmental origins have been integrated and processed into the ABRomics platform. The resulting 1613 analysis reports gather sample metadata as well as antibiotic resistance genes detected with the ABRomics bioinformatics workflows were then extracted and formated using the graph structure described below.
-            </p>
-            <h2 class="mt-10 mb-6 text-xl text-slate-900 font-bold">Knowledge graph structure</h2>
-            <div class="px-10 w-full flex flex-col gap-10">
-                <img src="assets/sample-modelisation-sosa.png"/>
-                <img src="assets/measure-modelisation-sosa.png"/>
+            <div class="mx-2 mt-10 flex justify-center">
+                <NuxtLink to="/query" class="px-10 py-3 bg-slate-900 text-md font-medium hover:bg-slate-800 text-white text-md flex gap-4 items-center rounded-md">
+                    <span>Start Exploring</span>
+                </NuxtLink>
             </div>
         </div>
+        <div class="mx-4 my-16">
+            <h2 class="text-slate-800 text-2xl font-semibold">Consult the data</h2>
+            <p class="my-6 text-lg text-slate-600">
+                In close relation with the <NuxtLink to="https://analysis.abromics.fr" class="text-sky-500 hover:underline">ABRomics</NuxtLink> platform, we propose an alternative data structure with interoperability 
+                first in mind.
+            </p>
+            <p class="my-6 text-lg text-slate-600">
+                Our knowledge graph contains data from the <NuxtLink to="https://analysis.abromics.fr" class="text-sky-500 hover:underline">ABRomics</NuxtLink> platform and provide a structure compatible 
+                with W3C standards. The structured data is available directly to anyone using the SPARQL language through our
+                endpoint.
+            </p>
+            <p class="my-6 text-lg text-slate-600">
+                Overall, ABRomics KG, provide a FAIR structured Knowledge Graph and an ecosystem of tools for external data 
+                integration, quering, data exploration and pattern recognition. 
+            </p>
+        </div>
+        <div class="mx-4 my-16">
+            <h2 class="text-slate-800 text-2xl font-semibold">Visualize the data</h2>
+            <p class="my-6 text-lg text-slate-600">
+                <NuxtLink to="/integration" class="text-sky-500 hover:underline">Integrate</NuxtLink> your research data into the ABRomics Knoweldge Graph to combine your samples with public data 
+                to see matching returns or explore redundant patterns !
+            </p>
+            <h3 class="text-slate-800 text-lg font-semibold">Want the full ABRomics experience ?</h3>
+            <p class="my-4 text-lg text-slate-600">
+                <NuxtLink to="/tutorials/bind-accounts" class="text-sky-500 hover:underline">Follow</NuxtLink> our guide to bind your ABRomics account to ABRomics KG
+            </p>     
+        </div>
     </div>
+    <!--
     <div>
         <h2 class="mt-10 mb-6 text-xl text-slate-900 font-bold">Knowledge graph content</h2>
         <div v-if="!isQueryError && !isQueryLoading">
             <PackedBubbleChart :data="bubbleChartData"/>
         </div>
     </div>
+    -->
 </template>
