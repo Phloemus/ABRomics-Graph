@@ -1,6 +1,7 @@
 <script setup>
+
     import { ref } from 'vue'
-    import PackedBubbleChart from '../components/PackedBubbleChart.vue'
+    import WorldMap from '../components/WorldMap.vue'
 
     const { cdnURL, baseURL } = useRuntimeConfig().app
     const hostUrl = useRuntimeConfig().public.hostUrl
@@ -201,6 +202,16 @@
                 <NuxtLink to="/query" class="px-10 py-3 bg-slate-900 text-md font-medium hover:bg-slate-800 text-white text-md flex gap-4 items-center rounded-md">
                     <span>Start Exploring</span>
                 </NuxtLink>
+            </div>
+            <div class="mx-2 my-10 flex md:justify-center">
+                <div class="flex flex-col gap-2 w-full max-w-screen-lg">
+                    <div class="h-72 w-full bg-white rounded-md border border-slate-200">
+                        <WorldMap />
+                    </div>
+                    <div class="h-72 w-full bg-white rounded-md border border-slate-200">
+                        <p>ah</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="mx-auto max-w-screen-lg">
