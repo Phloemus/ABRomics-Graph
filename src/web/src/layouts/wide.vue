@@ -16,7 +16,7 @@
             <Sidebar />
             <div class="w-full">
                 <Navbar />
-                <div class="px-2 py-10">
+                <div class="py-10">
                     <slot />
                 </div>
             </div>

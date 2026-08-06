@@ -1,10 +1,18 @@
 <script setup>
 
     import { ref } from 'vue'
-    import WorldMap from '../components/WorldMap.vue'
+    import WorldMap from '~/components/WorldMap.vue'
+    import DonutChart from '~/components/DonutChart.vue'
 
-    const { cdnURL, baseURL } = useRuntimeConfig().app
+    import { codeToHtml } from 'shiki'
+
+    const { cdnURL, baseURL, apiUrl } = useRuntimeConfig().app
     const hostUrl = useRuntimeConfig().public.hostUrl
+
+    // To store the competency questions data
+    const queryMetadata = ref({})
+    const queryContent = ref("")
+    const queryHtml = ref({})
 
     // For SEO, page title, metadescriptions etc...
     useHead({
@@ -30,6 +38,44 @@
             { rel: 'icon', type: 'image/x-icon', href: `${cdnURL || baseURL}logos/abromicskg-logo-xs.svg` },
         ],
     })
+
+    // Shiki code to display the competency question query
+    getCompetencyQuestion(1)
+
+    function getCompetencyQuestion(id) {
+        const uri = apiUrl + "/query/competency-question"
+        fetch(
+            uri,
+            { 
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }
+        )
+        .then(response => { 
+            if(response.status != 200) {
+                console.log("Error fetching competency questions")
+                return 
+            }
+            return response.json()
+        }).then(async (data) => {
+            queryMetadata.value = data[id]
+            queryContent.value = data[id]["content"]
+            queryHtml.value = await codeToHtml(queryContent.value, { lang: 'sparql', theme: 'catppuccin-mocha', colorReplacements: { '#1e1e2e': '#1e293b' }})
+        }).catch(err => {
+            console.error("Error fetching competency questions: ", err)
+        })
+    }
+
+    // sample resistance genes data
+    const genes = {
+        blaTEM: 182,
+        tetA: 90,
+        sul1: 23,
+        aadA1: 45,
+        qnrS: 67
+    }
 
     const testData = {
       name: "root",
@@ -177,7 +223,7 @@
 
 <template>
     <div class="">
-        <div class="mx-auto my-10">
+        <div class="px-2 mx-auto my-10">
             <h1 class="mx-6 mb-6 text-center text-3xl text-slate-900 leading-relaxed font-bold">Welcome to ABRomics KG</h1>
             <p class="sm:mx-6 md:mx-auto md:max-w-screen-sm md:mt-8 md:mb-6 text-lg text-slate-600 text-center">
                 Level up your data exploration with <span class="text-pink-500 font-medium">ABRomics Knowlegde Graph</span>, the best <span class="text-purple-500 font-medium">interoperable</span> platform to track and analyse anti-microbial resistance
@@ -198,47 +244,114 @@
                     </div>
                 </div>
             </div>
-            <div class="mx-2 mt-10 lg:hidden flex justify-center">
+            <div class="mx-2 mt-10 lg:hidden flex justify-center gap-2">
                 <NuxtLink to="/query" class="px-10 py-3 bg-slate-900 text-md font-medium hover:bg-slate-800 text-white text-md flex gap-4 items-center rounded-md">
                     <span>Start Exploring</span>
                 </NuxtLink>
+                <NuxtLink to="https://github.com/Phloemus/ABRomics-Graph" class="p-2 bg-white rounded-md border border-slate-200 hover:bg-slate-50">
+                    <img class="h-8 w-8" src="assets/github-icon.svg" />
+                </NuxtLink>
+            </div>
+            <div class="my-10 flex justify-center">
+                <hr class="w-56 fill-slate-200 border border-slate-200 rounded-sm">
             </div>
             <div class="mx-2 my-10 flex md:justify-center">
                 <div class="flex flex-col gap-2 w-full max-w-screen-lg">
-                    <div class="h-72 w-full bg-white rounded-md border border-slate-200">
-                        <WorldMap />
+                    <div class="mt-6">
+                        <h2 class="text-slate-800 text-2xl text-center font-semibold">Explore samples from all around the world</h2>
+                        <p class="my-6 text-lg text-center text-slate-600">
+                            In close relation with the <NuxtLink to="https://analysis.abromics.fr" class="text-sky-500 hover:underline">ABRomics</NuxtLink> platform, we propose an alternative database with interoperability 
+                            first in mind. Ideal for world wide data exploration !
+                        </p>
                     </div>
-                    <div class="h-72 w-full bg-white rounded-md border border-slate-200">
-                        <p>ah</p>
+                    <div class="w-full bg-white rounded-md border border-slate-200">
+                        <div class="py-4 px-0">
+                            <WorldMap />
+                        </div>
+                        <div class="py-2 px-4 w-full bg-slate-100 flex justify-between">
+                            <div class="flex gap-3 items-center">
+                                <div class="h-2 w-2 bg-green-500 rounded-full"></div>
+                                <NuxtLink to="/map" class="text-sm text-slate-600 hover:underline hover:cursor-pointer">samples world map</NuxtLink>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-20">
+                        <h2 class="text-slate-800 text-2xl font-semibold text-center">Visualize growing public health threat head of time</h2>
+                        <p class="my-6 text-lg text-slate-600 text-center">
+                            Use ABRomics KG visualization tools to track anti-microbial resistance genes and identify emerging threat to public 
+                            safety before they occur. 
+                        </p>
+                    </div>
+                    <div class="w-full bg-white rounded-md border border-slate-200">
+                        <div class="py-4 px-0">
+                            <DonutChart :data="genes" />
+                        </div>
+                        <div class="py-2 px-4 w-full bg-slate-100 flex justify-between">
+                            <div class="flex gap-3 items-center">
+                                <div class="h-2 w-2 bg-green-500 rounded-full"></div>
+                                <NuxtLink to="/" class="text-sm text-slate-600 hover:underline hover:cursor-pointer">samples resistance genes</NuxtLink>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-20">
+            <div class="w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+            <div class="py-10 bg-slate-800 border-b-2 border-slate-600">
+                <h2 class="px-8 text-white text-2xl font-semibold text-center">Want to have a look to a gene you study ?</h2>
+                <p class="px-4 my-6 text-lg text-slate-100 text-center">
+                    Check if a resistance gene you study is present in other researchers datasets now !
+                </p>
+                <div class="mt-12 px-4">
+                    <input 
+                        class="w-full px-4 py-2 bg-slate-700 placeholder:italic placeholder:text-slate-500 border border-slate-800 focus:outline-none text-slate-100 rounded-md" 
+                        placeholder="Enter a gene name"     
+                    />
+                    <div class="mt-6 flex justify-center">
+                        <button class="px-1 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-md">
+                            <span class="px-8 py-2 bg-slate-50 text-lg text-slate-800 rounded-md">Search</span>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="mx-auto max-w-screen-lg">
             <div class="mx-4 my-16 lg:my-20">
-                <h2 class="text-slate-800 text-2xl font-semibold">Consult the data</h2>
-                <p class="my-6 text-lg text-slate-600">
-                    In close relation with the <NuxtLink to="https://analysis.abromics.fr" class="text-sky-500 hover:underline">ABRomics</NuxtLink> platform, we propose an alternative data structure with interoperability 
-                    first in mind.
-                </p>
-                <p class="my-6 text-lg text-slate-600">
+                <h2 class="text-slate-800 text-2xl text-center font-semibold">Perform your own query</h2>
+                <p class="my-6 text-lg text-slate-600 text-center">
                     Our knowledge graph contains data from the <NuxtLink to="https://analysis.abromics.fr" class="text-sky-500 hover:underline">ABRomics</NuxtLink> platform and provide a structure compatible 
                     with W3C standards. The structured data is available directly to anyone using the SPARQL language through our
                     endpoint.
                 </p>
-                <p class="my-6 text-lg text-slate-600">
+                <p class="my-6 text-lg text-slate-600 text-center">
                     Overall, ABRomics KG, provide a FAIR structured Knowledge Graph and an ecosystem of tools for external data 
                     integration, quering, data exploration and pattern recognition. 
                 </p>
+                <div class="my-4 w-full bg-slate-800 rounded-md">
+                    <div class="py-2 px-4 flex items-center justify-between border-b border-slate-700">
+                        <span class="text-white">sparql</span>
+                        <div class="flex items-center gap-2">
+                            <div class="h-4 w-4 rounded-full bg-slate-700"></div>
+                            <div class="h-4 w-4 rounded-full bg-slate-700"></div>
+                            <div class="h-4 w-4 rounded-full bg-slate-700"></div>
+                        </div>
+                    </div>
+                    <div class="p-4 w-full bg-slate-800 rounded-b-md">
+                        <code>
+                            <div v-html="queryHtml"></div>
+                        </code>
+                    </div>
+                </div>
             </div>
             <div class="mx-4 my-16">
-                <h2 class="text-slate-800 text-2xl font-semibold">Visualize the data</h2>
-                <p class="my-6 text-lg text-slate-600">
+                <h2 class="text-slate-800 text-2xl text-center font-semibold">Integrate your own data</h2>
+                <p class="my-6 text-lg text-slate-600 text-center">
                     <NuxtLink to="/integration" class="text-sky-500 hover:underline">Integrate</NuxtLink> your research data into the ABRomics Knoweldge Graph to combine your samples with public data 
                     to see matching returns or explore redundant patterns !
                 </p>
-                <h3 class="text-slate-800 text-lg font-semibold">Want the full ABRomics experience ?</h3>
-                <p class="my-4 text-lg text-slate-600">
+                <h3 class="text-slate-800 text-lg text-center font-semibold">Want the full ABRomics experience ?</h3>
+                <p class="my-4 text-lg text-slate-600 text-center">
                     <NuxtLink to="/tutorials/bind-accounts" class="text-sky-500 hover:underline">Follow</NuxtLink> our guide to bind your ABRomics account to ABRomics KG
                 </p>     
             </div>

@@ -1,61 +1,61 @@
 <script setup>
 
-   import { Line } from 'vue-chartjs'
-    import {
+  import { Line } from 'vue-chartjs'
+  import {
       Chart as ChartJS,
       LineElement,
       PointElement,
       LinearScale,
       CategoryScale
-    } from 'chart.js'
+  } from 'chart.js'
 
-    const chartData = [0, 0, 0, 0, 2, 3, 0, 0, 12, 2, 5, 8, 3, 0, 0, 10, 8, 12, 14, 7, 9]
-    const displayedChartData = chartData.map(value => value === 0 ? 1 : value)
-    const chartLabels = chartData.map(() => '')
-    const totalNbUsage = ref(chartData.reduce((total, value) => total + value, 0))
-    const totalNbUsageDays = ref(chartData.length)
+  const chartData = [0, 0, 0, 0, 2, 3, 0, 0, 12, 2, 5, 8, 3, 0, 0, 10, 8, 12, 14, 7, 9]
+  const displayedChartData = chartData.map(value => value === 0 ? 1 : value)
+  const chartLabels = chartData.map(() => '')
+  const totalNbUsage = ref(chartData.reduce((total, value) => total + value, 0))
+  const totalNbUsageDays = ref(chartData.length)
 
-    ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale)
+  ChartJS.register(LineElement, PointElement, LinearScale, CategoryScale)
 
-    const data = {
-      labels: chartLabels,
-      datasets: [
-        {
-          data: displayedChartData,
-          borderColor: '#2ecc71',
-          borderWidth: 2,
-          pointRadius: 0, // no dots
-          tension: 0.2, // smooth curve
-          fill: false
-        }
-      ]
-    }
-
-    const options = {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          display: false 
-        },
-        tooltip: {
-          enabled: false 
-        }
-      },
-      scales: {
-        x: {
-          display: false 
-        },
-        y: {
-          display: false 
-        }
-      },
-      elements: {
-        line: {
-          borderJoinStyle: 'round'
-        }
+  const data = {
+    labels: chartLabels,
+    datasets: [
+      {
+        data: displayedChartData,
+        borderColor: '#2ecc71',
+        borderWidth: 2,
+        pointRadius: 0, // no dots
+        tension: 0.2, // smooth curve
+        fill: false
       }
-    } 
+    ]
+  }
+
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false 
+      },
+      tooltip: {
+        enabled: false 
+      }
+    },
+    scales: {
+      x: {
+        display: false 
+      },
+      y: {
+        display: false 
+      }
+    },
+    elements: {
+      line: {
+        borderJoinStyle: 'round'
+      }
+    }
+  } 
 
 </script>
 

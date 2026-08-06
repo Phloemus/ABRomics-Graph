@@ -5,20 +5,28 @@
       geoNaturalEarth1,
       geoPath,
       scaleSequential,
-      interpolateBlues,
+      interpolateRdPu,
     } from 'd3'
 
     const width = 900
     const height = 520
 
     // Example analytics data.
-    // Replace this with a prop or data from your API.
-    const visitors = {
+    const samples = {
       France: 340,
       Germany: 128,
       Italy: 81,
       Spain: 17,
-      Belgium: 90
+      Belgium: 90,
+      Sweden: 12,
+      Norway: 2,
+      Canada: 25,
+      Brazil: 4,
+      England: 89,
+      USA: 67,
+      China: 45,
+      India: 21, 
+      Australia: 4
     }
 
     const countries = ref([])
@@ -27,12 +35,11 @@
     const path = geoPath(projection)
 
     const maxVisitors = computed(() =>
-      Math.max(...Object.values(visitors), 1)
+      Math.max(...Object.values(samples), 1)
     )
 
     const color = computed(() =>
-      scaleSequential(interpolateBlues)
-        .domain([0, maxVisitors.value])
+      scaleSequential([0, maxVisitors.value], interpolateRdPu)
     )
 
     onMounted(async () => {
@@ -42,11 +49,15 @@
     })
 
     function getVisitors(country) {
-      return visitors[country.properties.name] ?? 0
+      return samples[country.properties.name] ?? 0
     }
 
     function getColor(country) {
-      return color.value(getVisitors(country))
+      if(getVisitors(country) == 0) {
+        return "#e4e4e7"
+      } else {
+        return color.value(getVisitors(country))
+      }
     }
 
 
@@ -65,7 +76,7 @@
         :key="country.properties.name"
         :d="path(country) ?? ''"
         :fill="getColor(country)"
-        class="fill-zinc-200 stroke-white stroke-[0.4] transition-all duration-150 hover:opacity-80 cursor-pointer"
+        class="stroke-white stroke-[0.4] transition-all duration-150 hover:opacity-80 cursor-pointer"
         @mouseenter="hovered = country"
         @mouseleave="hovered = null"
       />
@@ -80,7 +91,7 @@
       </div>
 
       <div class="text-gray-600">
-        {{ getVisitors(hovered) }} visitors
+        {{ getVisitors(hovered) }} samples
       </div>
     </div>
 
