@@ -137,6 +137,44 @@
     var bubbleChartData = ref({name: "root", children: []})
     var queryError = ref("")
 
+    var nbAllNodes = ref("xx.x")
+    var nbResistanceGenes = ref("xxx")
+
+    const countAllNodesQuery = `
+        SELECT (COUNT(*) AS ?count) WHERE {
+   	        ?s ?p ?o .
+        }
+    `
+
+    const countNbResistanceGenesQuery = `
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX sio: <http://semanticscience.org/resource/>
+        PREFIX schema: <https://schema.org/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl>
+        PREFIX aro: <http://purl.obolibrary.org/obo/ARO_>
+        PREFIX prov: <http://www.w3.org/ns/prov#>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+        SELECT (COUNT(?gene) as ?gene_nb)
+        FROM <http://www.ontotext.com/explicit>
+        WHERE {
+            ?sample rdf:type sio:001050 .
+
+            ?observableProperty rdf:type sosa:ObservableProperty ;
+                rdfs:label 'Resistance gene' .
+
+            ?observation sosa:observedProperty ?observableProperty ;
+                sio:000332 ?sample ;
+                sosa:hasFeatureOfInterest ?gene .
+
+            ?gene rdf:type ncit:C16612 ;
+                rdf:type [ rdfs:subClassOf+ aro:3000000 ] ;
+                rdfs:label ?gene_name .
+        }
+    `
+
     const sparqlQuery = `
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -214,6 +252,61 @@
         })
     }
 
+    function getTotalNbNodes() {
+        const uri = apiUrl + "/query/custom"
+        fetch(uri,
+            {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    "query": countAllNodesQuery
+                })
+            }
+        ).then((response) => {
+            console.log(response)
+            if(response.status != 200) {
+                console.log(response.json())
+                return
+            }
+            return response.json()
+        }).then((data) => {
+            nbAllNodes.value = data.results[0].count.value
+            console.log(data.results[0].count.value)
+        }).catch(err => {
+            console.error("Error while processing response: ", err)
+        })
+
+    }
+
+    function getTotalNbResistanceGenes() {
+        const uri = apiUrl + "/query/custom"
+        fetch(uri,
+            {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    "query": countNbResistanceGenesQuery 
+                })
+            }
+        ).then((response) => {
+            console.log(response)
+            if(response.status != 200) {
+                console.log(response.json())
+                return
+            }
+            return response.json()
+        }).then((data) => {
+            nbResistanceGenes.value = data.results[0].gene_nb.value
+            console.log(data.results[0].gene_nb.value)
+        }).catch(err => {
+            console.error("Error while processing response: ", err)
+        })
+    }
+
     function generatePackedBubblePlotData(data) {
         var plotData = {
           name: "root",
@@ -247,7 +340,22 @@
         console.log(plotData)
     }
 
+    function formatNumber(num) {
+      if (num >= 1_000_000_000) {
+        return `${(num / 1_000_000_000).toFixed(1).replace(/\.0$/, '')}b`;
+      }
+      if (num >= 1_000_000) {
+        return `${(num / 1_000_000).toFixed(1).replace(/\.0$/, '')}m`;
+      }
+      if (num >= 1_000) {
+        return `${(num / 1_000).toFixed(1).replace(/\.0$/, '')}k`;
+      }
+      return num.toString();
+    }
+
     fetchQueryResult()
+    getTotalNbResistanceGenes()
+    getTotalNbNodes()
 
 </script>
 
@@ -261,15 +369,15 @@
             <div class="md:flex md:justify-center">
                 <div class="mx-2 sm:mx-6 md:mx-0 my-14 md:my-6 md:flex md:gap-2">
                     <div class="my-2 px-4 py-2 md:w-72 bg-white rounded-md border border-slate-200 cursor-pointer">
-                        <p class="py-1 text-xl text-slate-800 font-semibold">18.1</p> 
-                        <p class="text-md text-slate-500 font-medium">million nodes</p>
+                        <p class="py-1 text-xl text-slate-800 font-semibold">{{ formatNumber(nbAllNodes) }}</p> 
+                        <p class="text-md text-slate-500 font-medium">nodes</p>
                     </div>
                     <div class="my-2 px-4 py-2 md:w-72 bg-white rounded-md border border-slate-200 cursor-pointer">
-                        <p class="py-1 text-xl text-slate-800 font-semibold">xx.x</p> 
+                        <p class="py-1 text-xl text-slate-800 font-semibold">{{ nbResistanceGenes }}</p> 
                         <p class="text-md text-slate-500 font-medium">antibiotic resistance genes</p>
                     </div>
                     <div class="my-2 px-4 py-2 md:w-72 bg-white rounded-md border border-slate-200 cursor-pointer">
-                        <p class="py-1 text-xl text-slate-800 font-semibold">xx</p> 
+                        <p class="py-1 text-xl text-slate-800 font-semibold">1</p> 
                         <p class="text-md text-slate-500 font-medium">different datasources</p>
                     </div>
                 </div>
@@ -364,8 +472,10 @@
                     integration, quering, data exploration and pattern recognition. 
                 </p>
                 <div class="my-14">
-                    <h3 class="text-xl text-slate-800 font-semibold">Get all the resistance genes found in a specific sample</h3>
-                    <NuxtLink to="/query/1" class="text-slate-400 text-md">competency question 1</NuxtLink>
+                    <NuxtLink to="/query/1">
+                        <h3 class="text-xl text-slate-800 font-semibold">Get all the resistance genes found in a specific sample</h3>
+                        <span class="text-slate-400 text-md">competency question 1</span>
+                    </NuxtLink>
                     <div class="my-4 w-full bg-slate-800 rounded-md">
                         <div class="py-2 px-4 flex items-center justify-between border-b border-slate-700">
                             <span class="text-white">sparql</span>
@@ -383,7 +493,7 @@
                     </div>
                     <div class="px-2 py-2">
                         <SmallCard 
-                            v-for="(query, index) in queries"
+                            v-for="(query, index) in queries.slice(1, 5)"
                             :title="query.name"
                             :description="query.title"
                             :link="`/query/${query.id}`"
