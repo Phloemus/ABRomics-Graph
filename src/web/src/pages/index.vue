@@ -6,13 +6,16 @@
 
     import { codeToHtml } from 'shiki'
 
-    const { cdnURL, baseURL, apiUrl } = useRuntimeConfig().app
+    const { cdnURL, baseURL } = useRuntimeConfig().app
     const hostUrl = useRuntimeConfig().public.hostUrl
+    const apiUrl = useRuntimeConfig().public.apiUrl
 
     // To store the competency questions data
     const queryMetadata = ref({})
     const queryContent = ref("")
     const queryHtml = ref({})
+
+    const queries = ref([])
 
     // For SEO, page title, metadescriptions etc...
     useHead({
@@ -40,7 +43,10 @@
     })
 
     // Shiki code to display the competency question query
-    getCompetencyQuestion(1)
+    getCompetencyQuestion(0)
+
+    // Get the competency qestions to showcase how the knowledge graph works
+    getCompetencyQuestions()
 
     function getCompetencyQuestion(id) {
         const uri = apiUrl + "/query/competency-question"
@@ -63,6 +69,30 @@
             queryMetadata.value = data[id]
             queryContent.value = data[id]["content"]
             queryHtml.value = await codeToHtml(queryContent.value, { lang: 'sparql', theme: 'catppuccin-mocha', colorReplacements: { '#1e1e2e': '#1e293b' }})
+        }).catch(err => {
+            console.error("Error fetching competency questions: ", err)
+        })
+    }
+
+    function getCompetencyQuestions() {
+        const uri = apiUrl + "/query/competency-question"
+        fetch(
+            uri,
+            { 
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }
+        )
+        .then(response => { 
+            if(response.status != 200) {
+                console.log("Error fetching competency questions")
+                return 
+            }
+            return response.json()
+        }).then((data) => {
+            queries.value = data
         }).catch(err => {
             console.error("Error fetching competency questions: ", err)
         })
@@ -264,39 +294,41 @@
                             first in mind. Ideal for world wide data exploration !
                         </p>
                     </div>
-                    <div class="w-full bg-white rounded-md border border-slate-200">
-                        <div class="py-4 px-0">
-                            <WorldMap />
-                        </div>
-                        <div class="py-2 px-4 w-full bg-slate-100 flex justify-between">
-                            <div class="flex gap-3 items-center">
-                                <div class="h-2 w-2 bg-green-500 rounded-full"></div>
-                                <NuxtLink to="/map" class="text-sm text-slate-600 hover:underline hover:cursor-pointer">samples world map</NuxtLink>
+                    <div class="">
+                        <div class="w-full bg-white rounded-md border border-slate-200">
+                            <div class="py-4 px-0">
+                                <WorldMap />
+                            </div>
+                            <div class="py-2 px-4 w-full bg-slate-100 flex justify-between">
+                                <div class="flex gap-3 items-center">
+                                    <div class="h-2 w-2 bg-green-500 rounded-full"></div>
+                                    <NuxtLink to="/map" class="text-sm text-slate-600 hover:underline hover:cursor-pointer">samples world map</NuxtLink>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="mt-20">
-                        <h2 class="text-slate-800 text-2xl font-semibold text-center">Visualize growing public health threat head of time</h2>
-                        <p class="my-6 text-lg text-slate-600 text-center">
-                            Use ABRomics KG visualization tools to track anti-microbial resistance genes and identify emerging threat to public 
-                            safety before they occur. 
-                        </p>
-                    </div>
-                    <div class="w-full bg-white rounded-md border border-slate-200">
-                        <div class="py-4 px-0">
-                            <DonutChart :data="genes" />
+                        <div class="mt-20 lg:hidden">
+                            <h2 class="text-slate-800 text-2xl font-semibold text-center">Visualize growing public health threat head of time</h2>
+                            <p class="my-6 text-lg text-slate-600 text-center">
+                                Use ABRomics KG visualization tools to track anti-microbial resistance genes and identify emerging threat to public 
+                                safety before they occur. 
+                            </p>
                         </div>
-                        <div class="py-2 px-4 w-full bg-slate-100 flex justify-between">
-                            <div class="flex gap-3 items-center">
-                                <div class="h-2 w-2 bg-green-500 rounded-full"></div>
-                                <NuxtLink to="/" class="text-sm text-slate-600 hover:underline hover:cursor-pointer">samples resistance genes</NuxtLink>
+                        <div class="lg:mt-6 w-full bg-white rounded-md border border-slate-200">
+                            <div class="py-4 px-0 lg:px-6 lg:py-6">
+                                <DonutChart :data="genes" />
+                            </div>
+                            <div class="py-2 px-4 w-full bg-slate-100 flex justify-between">
+                                <div class="flex gap-3 items-center">
+                                    <div class="h-2 w-2 bg-green-500 rounded-full"></div>
+                                    <NuxtLink to="/" class="text-sm text-slate-600 hover:underline hover:cursor-pointer">samples resistance genes</NuxtLink>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="mt-20">
+        <div class="mt-20 md:hidden">
             <div class="w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
             <div class="py-10 bg-slate-800 border-b-2 border-slate-600">
                 <h2 class="px-8 text-white text-2xl font-semibold text-center">Want to have a look to a gene you study ?</h2>
@@ -316,6 +348,9 @@
                 </div>
             </div>
         </div>
+        <div class="mx-auto my-14 flex justify-center max-w-screen-lg hidden lg:block">
+            <hr class="w-56 fill-slate-200 border border-slate-200 rounded-sm">
+        </div>
         <div class="mx-auto max-w-screen-lg">
             <div class="mx-4 my-16 lg:my-20">
                 <h2 class="text-slate-800 text-2xl text-center font-semibold">Perform your own query</h2>
@@ -328,19 +363,31 @@
                     Overall, ABRomics KG, provide a FAIR structured Knowledge Graph and an ecosystem of tools for external data 
                     integration, quering, data exploration and pattern recognition. 
                 </p>
-                <div class="my-4 w-full bg-slate-800 rounded-md">
-                    <div class="py-2 px-4 flex items-center justify-between border-b border-slate-700">
-                        <span class="text-white">sparql</span>
-                        <div class="flex items-center gap-2">
-                            <div class="h-4 w-4 rounded-full bg-slate-700"></div>
-                            <div class="h-4 w-4 rounded-full bg-slate-700"></div>
-                            <div class="h-4 w-4 rounded-full bg-slate-700"></div>
+                <div class="my-14">
+                    <h3 class="text-xl text-slate-800 font-semibold">Get all the resistance genes found in a specific sample</h3>
+                    <NuxtLink to="/query/1" class="text-slate-400 text-md">competency question 1</NuxtLink>
+                    <div class="my-4 w-full bg-slate-800 rounded-md">
+                        <div class="py-2 px-4 flex items-center justify-between border-b border-slate-700">
+                            <span class="text-white">sparql</span>
+                            <div class="flex items-center gap-2">
+                                <div class="h-4 w-4 rounded-full bg-slate-700"></div>
+                                <div class="h-4 w-4 rounded-full bg-slate-700"></div>
+                                <div class="h-4 w-4 rounded-full bg-slate-700"></div>
+                            </div>
+                        </div>
+                        <div class="p-4 w-full bg-slate-800 rounded-b-md overflow-scroll">
+                            <code>
+                                <div v-html="queryHtml"></div>
+                            </code>
                         </div>
                     </div>
-                    <div class="p-4 w-full bg-slate-800 rounded-b-md">
-                        <code>
-                            <div v-html="queryHtml"></div>
-                        </code>
+                    <div class="px-2 py-2">
+                        <SmallCard 
+                            v-for="(query, index) in queries"
+                            :title="query.name"
+                            :description="query.title"
+                            :link="`/query/${query.id}`"
+                        />
                     </div>
                 </div>
             </div>
