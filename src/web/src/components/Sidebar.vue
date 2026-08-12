@@ -4,6 +4,7 @@
 
     const config = useRuntimeConfig();
     const appName = config.public.appName
+    const appVersion = config.public.appVersion
 
     const isUserLoggedIn = useState("isUserLoggedIn")
     const isSidebarToggled = useState('isSidebarToggled', () => false)
@@ -106,7 +107,7 @@
             <div>
 
             </div>
-            <div class="my-10 px-4 w-full relative">
+            <div class="mt-10 mb-6 px-4 w-full relative">
                 <h3 class="mx-1 my-4 text-slate-600 text-lg">Prewritten queries</h3>
                 <SmallCard 
                     v-for="(query, index) in queries.slice(0, 2)"
@@ -142,11 +143,11 @@
                     </p>
                 </div>
             </div>
-            <div class="mx-12 px-6 pb-4 absolute bottom-0 left-0 border-t-2 border-slate-200">
-                <div class="py-3 flex gap-2 text-slate-500">
-                    <span>v0.0.2</span>
-                    <span>ABRomics KG</span>
-                    <span>2026</span>
+            <div class="w-full flex justify-center md:absolute md:bottom-0 md:left-0">
+                <div class="pb-8 flex gap-2 text-slate-500">
+                    <span>v{{ appVersion }}</span>
+                    <span>{{ appName }}</span>
+                    <span>{{ new Date().getFullYear() }}</span>
                 </div>
             </div>
         </div>

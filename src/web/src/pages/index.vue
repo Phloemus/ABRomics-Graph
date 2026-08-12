@@ -493,7 +493,7 @@
                             </code>
                         </div>
                     </div>
-                    <div class="px-2 py-2">
+                    <div class="px-2 py-1 bg-white rounded-sm">
                         <SmallCard 
                             v-for="(query, index) in queries.slice(1, 5)"
                             :title="query.name"
