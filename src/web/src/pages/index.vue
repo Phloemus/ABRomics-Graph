@@ -369,11 +369,13 @@
             <div class="md:flex md:justify-center">
                 <div class="mx-2 sm:mx-6 md:mx-0 my-14 md:my-6 md:flex md:gap-2">
                     <div class="my-2 px-4 py-2 md:w-72 bg-white rounded-md border border-slate-200 cursor-pointer">
-                        <p class="py-1 text-xl text-slate-800 font-semibold">{{ formatNumber(nbAllNodes) }}</p> 
+                        <div v-if="nbAllNodes == 'xx.x'" class="my-3 h-3 w-20 animate-pulse bg-slate-200 rounded"></div>
+                        <p v-else-if="nbAllNodes != 'xx.x'" class="py-1 text-xl text-slate-800 font-semibold">{{ formatNumber(nbAllNodes) }}</p> 
                         <p class="text-md text-slate-500 font-medium">nodes</p>
                     </div>
                     <div class="my-2 px-4 py-2 md:w-72 bg-white rounded-md border border-slate-200 cursor-pointer">
-                        <p class="py-1 text-xl text-slate-800 font-semibold">{{ nbResistanceGenes }}</p> 
+                        <div v-if="nbResistanceGenes == 'xxx'" class="my-3 h-3 w-20 animate-pulse bg-slate-200 rounded"></div>
+                        <p v-else-if="nbResistanceGenes != 'xxx'" class="py-1 text-xl text-slate-800 font-semibold">{{ nbResistanceGenes }}</p> 
                         <p class="text-md text-slate-500 font-medium">antibiotic resistance genes</p>
                     </div>
                     <div class="my-2 px-4 py-2 md:w-72 bg-white rounded-md border border-slate-200 cursor-pointer">
