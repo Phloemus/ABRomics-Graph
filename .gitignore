@@ -24,3 +24,4 @@ src/docs/md/*
 
 */.env
 tmp
+src/api/src/data

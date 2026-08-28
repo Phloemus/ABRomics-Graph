@@ -24,11 +24,16 @@ source .venv/bin/activate
 python3 app.py
 ```
 
+## Downloading data
 
+To complete the informations present in the ARO, complementary data from the CARD database have to be downloaded.
 
-
-
-
+```
+cd data
+wget card.mcmaster.ca/latest/data
+tar -xvjf card-data.tar.bz2
+mv card-data card
+```
 
 
 ## Technical details

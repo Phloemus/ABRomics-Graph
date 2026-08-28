@@ -11,6 +11,7 @@
 from flask_cors import CORS, cross_origin
 from flask_caching import Cache
 from flask import jsonify, request
+import json
 
 ## Config imports
 from config.config import *
@@ -92,6 +93,28 @@ def getResistanceGenesAROClasses():
         parameters={"resistanceGenes": resistanceGenesString}
     ) ## Get the aro classes of a list of resistance genes
     rawResponse = query.executeQuery()
+    
+    ## Gettting the ARO ontology identifier
+    aroAccessions = []
+    for item in rawResponse:
+        aroAccessionUrl= item["aroClass"]["value"] 
+        aroAccession = aroAccessionUrl.rsplit('/', 1)[1].rsplit('_')[1]
+        aroAccessions.append(aroAccession)
+
+    ## Complete the informations with ones present in the card database
+    with open("data/card/card.json") as f:
+        data = json.load(f)
+        for key, item in data.items():
+            if isinstance(item, dict) and 'model_name' in item and 'ARO_id' in item and item['ARO_accession'] in aroAccessions:
+                print(item['model_name'])
+                print(item['ARO_id'])
+                if 'model_sequences' in item:
+                    print(item['model_sequences'])
+                    for key, sequence in item['model_sequences']['sequence'].items():
+                        sequence_accession = sequence['dna_sequence']['accession']
+                        print(sequence_accession)
+                        print(f"NCBI link: https://www.ncbi.nlm.nih.gov/nuccore/{sequence_accession}")
+
     rawResponse = {item["resistanceGene"]["value"]: item["aroClass"]["value"] for item in rawResponse}
     response = jsonify(rawResponse)
     response.headers.add('Access-Control-Allow-Origin', '*')
