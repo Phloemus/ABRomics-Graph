@@ -91,34 +91,91 @@ def getResistanceGenesAROClasses():
         QUERIES[9]["filePath"], 
         sparqlEndpoint=SPARQL_ENDPOINT, 
         parameters={"resistanceGenes": resistanceGenesString}
-    ) ## Get the aro classes of a list of resistance genes
+    ) ## Get the aro classes from a list of resistance genes
     rawResponse = query.executeQuery()
     
-    ## Gettting the ARO ontology identifier
-    aroAccessions = []
+    ## Getting the ARO ontology identifier
+    aroAccessionClassNamePairs = {}
     for item in rawResponse:
-        aroAccessionUrl= item["aroClass"]["value"] 
+        aroAccessionUrl = item["aroClass"]["value"] 
         aroAccession = aroAccessionUrl.rsplit('/', 1)[1].rsplit('_')[1]
-        aroAccessions.append(aroAccession)
+        aroAccessionClassNamePairs[item["resistanceGene"]["value"]] = aroAccession
 
     ## Complete the informations with ones present in the card database
     with open("data/card/card.json") as f:
         data = json.load(f)
+        cardLinks = []
         for key, item in data.items():
-            if isinstance(item, dict) and 'model_name' in item and 'ARO_id' in item and item['ARO_accession'] in aroAccessions:
-                print(item['model_name'])
-                print(item['ARO_id'])
-                if 'model_sequences' in item:
-                    print(item['model_sequences'])
-                    for key, sequence in item['model_sequences']['sequence'].items():
-                        sequence_accession = sequence['dna_sequence']['accession']
-                        print(sequence_accession)
-                        print(f"NCBI link: https://www.ncbi.nlm.nih.gov/nuccore/{sequence_accession}")
+            if isinstance(item, dict) and 'ARO_id' in item and item['ARO_accession'] in aroAccessionClassNamePairs.values():
+                cardLinks.append({
+                    "className": [k for k, v in aroAccessionClassNamePairs.items() if v == item['ARO_accession']][0],
+                    "url": f"https://card.mcmaster.ca/ontology/{item['ARO_id']}"
+                })
+                ## Use if the biologists want links to the gene in NCBI
+                ##if 'model_sequences' in item:
+                ##    print(item['model_sequences'])
+                ##    for key, sequence in item['model_sequences']['sequence'].items():
+                ##        sequence_accession = sequence['dna_sequence']['accession']
+                ##        print(sequence_accession)
+                ##        print(f"NCBI link: https://www.ncbi.nlm.nih.gov/nuccore/{sequence_accession}")
 
-    rawResponse = {item["resistanceGene"]["value"]: item["aroClass"]["value"] for item in rawResponse}
+    rawResponse = {
+        item["className"]: item["url"] for item in cardLinks
+    }
     response = jsonify(rawResponse)
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
+
+
+@cross_origin()
+@app.route(f"/{API_BASEPATH}/virulence-genes/aro-class", methods=[QUERIES[11]["method"]])
+def getVirulenceGenesAROClasses():
+    virulenceGenesList = request.json["virulenceGenes"]
+    virulenceGenesString = ""
+    for virulenceGeneName in virulenceGenesList:
+        virulenceGeneName = virulenceGeneName.replace("'", "\'")
+        virulenceGeneName = virulenceGeneName.replace("\"", "\"")
+        virulenceGenesList += f'"{virulenceGeneName}" '
+
+    query = Query.fromFile(
+        QUERIES[11]["filePath"], 
+        sparqlEndpoint=SPARQL_ENDPOINT, 
+        parameters={"virulenceGenes": virulenceGenesString}
+    ) ## Get the aro classes from a list of resistance genes
+    print(SPARQL_ENDPOINT)
+    rawResponse = query.executeQuery()
+
+    print("dedad")
+    ## Getting the ARO ontology identifier
+    aroAccessionClassNamePairs = {}
+    for item in rawResponse:
+        aroAccessionUrl = item["aroClass"]["value"] 
+        aroAccession = aroAccessionUrl.rsplit('/', 1)[1].rsplit('_')[1]
+        aroAccessionClassNamePairs[item["virulenceGene"]["value"]] = aroAccession
+
+    print("dedad")
+    ## Complete the informations with ones present in the card database
+    with open("data/card/card.json") as f:
+        data = json.load(f)
+        cardLinks = []
+        print("dedad")
+        for key, item in data.items():
+            print("dedad ui")
+            if isinstance(item, dict) and 'ARO_id' in item and item['ARO_accession'] in aroAccessionClassNamePairs.values():
+                cardLinks.append({
+                    "className": [k for k, v in aroAccessionClassNamePairs.items() if v == item['ARO_accession']][0],
+                    "url": f"https://card.mcmaster.ca/ontology/{item['ARO_id']}"
+                })
+
+    print("dedad plop")
+    rawResponse = {
+        item["className"]: item["url"] for item in cardLinks
+    }
+    response = jsonify(rawResponse)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
+
 
 
 @cross_origin()

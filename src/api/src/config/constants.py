@@ -345,6 +345,19 @@ QUERIES = [
             "sampleSourceClassUrl": "[mendatory] The url of the sample source class",
         }
     },
+    {
+        "name": "get-virulence-gene-aro-class",
+        "route": f"{API_ENDPOINT}/{API_BASEPATH}/virulence-genes/aro-class",
+        "method": "POST",
+        "filePath": "queries/virulence-genes/get-virulence-gene-aro-class.sparql",
+        "description": """
+            From a list of resistance genes labels (name), get the list of the associated aro 
+            classes (url) if the virulence gene is found in the ARO ontology
+        """,
+        "parameters": {
+            "virulenceGenes": "The list of the virulence genes labels"
+        }
+    }
 ]
 
 ADMIN_QUERIES = [
