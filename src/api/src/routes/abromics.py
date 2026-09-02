@@ -135,7 +135,7 @@ def getVirulenceGenesAROClasses():
     for virulenceGeneName in virulenceGenesList:
         virulenceGeneName = virulenceGeneName.replace("'", "\'")
         virulenceGeneName = virulenceGeneName.replace("\"", "\"")
-        virulenceGenesList += f'"{virulenceGeneName}" '
+        virulenceGenesString += f'"{virulenceGeneName}" '
 
     query = Query.fromFile(
         QUERIES[11]["filePath"], 
@@ -145,7 +145,6 @@ def getVirulenceGenesAROClasses():
     print(SPARQL_ENDPOINT)
     rawResponse = query.executeQuery()
 
-    print("dedad")
     ## Getting the ARO ontology identifier
     aroAccessionClassNamePairs = {}
     for item in rawResponse:
@@ -153,21 +152,17 @@ def getVirulenceGenesAROClasses():
         aroAccession = aroAccessionUrl.rsplit('/', 1)[1].rsplit('_')[1]
         aroAccessionClassNamePairs[item["virulenceGene"]["value"]] = aroAccession
 
-    print("dedad")
     ## Complete the informations with ones present in the card database
     with open("data/card/card.json") as f:
         data = json.load(f)
         cardLinks = []
-        print("dedad")
         for key, item in data.items():
-            print("dedad ui")
             if isinstance(item, dict) and 'ARO_id' in item and item['ARO_accession'] in aroAccessionClassNamePairs.values():
                 cardLinks.append({
                     "className": [k for k, v in aroAccessionClassNamePairs.items() if v == item['ARO_accession']][0],
                     "url": f"https://card.mcmaster.ca/ontology/{item['ARO_id']}"
                 })
 
-    print("dedad plop")
     rawResponse = {
         item["className"]: item["url"] for item in cardLinks
     }
