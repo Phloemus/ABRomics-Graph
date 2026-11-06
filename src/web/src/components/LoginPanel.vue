@@ -61,7 +61,7 @@
 <template>
     <div class="w-full h-full">
         <div class=" w-full h-full fixed top-0 left-0 bg-opacity-70 bg-slate-800 z-20" @click="hideLoginPanel($event)">
-            <div class="mx-auto my-14 p-4 bg-white rounded-md max-w-screen-sm">
+            <div class="mx-4 sm:mx-auto my-14 p-4 bg-white rounded-md max-w-screen-sm">
                 <h2 class="text-slate-900 text-2xl font-bold flex justify-center">Login</h2>
                 <p class="mt-8 mb-4 mx-4 text-slate-800">
                     Login as an authentenficated user allows to get access to your personal queries and admin priviledge API routes for the knowledge graph maintenance.

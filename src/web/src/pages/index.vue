@@ -541,7 +541,10 @@
                 </div>
             </div>
             <div class="my-8">
-                <span class="text-slate-800 text-lg">{{ appName }} - {{ new Date().getFullYear() }}</span>
+                <div>
+                    <p class="my-1 text-slate-800 text-lg">{{ appName }} - {{ new Date().getFullYear() }}</p>
+                    <p class="text-slate-600 text-sm">Linking micrombiome data</p>
+                </div>
             </div>
         </div>
     </footer>
