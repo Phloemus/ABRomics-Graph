@@ -9,6 +9,7 @@
     const { cdnURL, baseURL } = useRuntimeConfig().app
     const hostUrl = useRuntimeConfig().public.hostUrl
     const apiUrl = useRuntimeConfig().public.apiUrl
+    const appName = useRuntimeConfig().public.appName
 
     // To store the competency questions data
     const queryMetadata = ref({})
@@ -19,18 +20,18 @@
 
     // For SEO, page title, metadescriptions etc...
     useHead({
-        title: 'ABRomics KG - Linking microbiome data',
+        title: `${appName} - Linking microbiome data`,
         meta: [
-          { name: 'description', content: 'ABRomics KG, an interoperable platform to analyse anti microbial resistance and perform data integration from different datasources' },
+          { name: 'description', content: `${appName}, an interoperable platform to analyse anti microbial resistance and perform data integration from different datasources` },
           { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
           { name: 'author', content: 'Brieuc Quemeneur' },
           { name: 'robots', content: 'index, follow' },
           { name: 'og:locale', content: 'en_US' },
           { name: 'og:type', content: 'website' },
-          { name: 'og:description', content: 'ABRomics KG, an interoperable platform for anti microbial resistance analysis and data integration' },
-          { name: 'og:title', content: 'ABRomics KG, an interoperable platform to analyse anti microbial resistance and perform data integration from different datasources' },
-          { name: 'og:url', content: 'https://abromics-kg.bird.glicid.fr' },
-          { name: 'og:site_name', content: 'ABRomics KG' },
+          { name: 'og:description', content: `${appName}, an interoperable platform for anti microbial resistance analysis and data integration` },
+          { name: 'og:title', content: `${appName}, an interoperable platform to analyse anti microbial resistance and perform data integration from different datasources` },
+          { name: 'og:url', content: `${hostUrl}` },
+          { name: 'og:site_name', content: `${appName}` },
           { name: 'og:image', content: `${hostUrl}/thumbnails/thumbnail.png` },
           { name: 'og:image:secure_url', content: `${hostUrl}/thumbnails/thumbnail.png` },
           { name: 'og:image:type', content: 'image/png' },
@@ -362,7 +363,7 @@
 <template>
     <div class="">
         <div class="px-2 mx-auto my-10">
-            <h1 class="mx-6 mb-6 text-center text-3xl text-slate-900 leading-relaxed font-bold">Welcome to ABRomics KG</h1>
+            <h1 class="mx-6 mb-6 text-center text-3xl text-slate-900 leading-relaxed font-bold">Welcome to {{appName}}</h1>
             <p class="sm:mx-6 md:mx-auto md:max-w-screen-sm md:mt-8 md:mb-6 text-lg text-slate-600 text-center">
                 Level up your data exploration with <span class="text-pink-500 font-medium">ABRomics Knowlegde Graph</span>, the best <span class="text-purple-500 font-medium">interoperable</span> platform to track and analyse anti-microbial resistance
             </p>
@@ -419,7 +420,7 @@
                         <div class="mt-20 lg:hidden">
                             <h2 class="text-slate-800 text-2xl font-semibold text-center">Visualize growing public health threat head of time</h2>
                             <p class="my-6 text-lg text-slate-600 text-center">
-                                Use ABRomics KG visualization tools to track anti-microbial resistance genes and identify emerging threat to public 
+                                Use {{ appName }} visualization tools to track anti-microbial resistance genes and identify emerging threat to public 
                                 safety before they occur. 
                             </p>
                         </div>
@@ -470,7 +471,7 @@
                     endpoint.
                 </p>
                 <p class="my-6 text-lg text-slate-600 text-center">
-                    Overall, ABRomics KG, provide a FAIR structured Knowledge Graph and an ecosystem of tools for external data 
+                    Overall, {{ appName }}, provide a FAIR structured Knowledge Graph and an ecosystem of tools for external data 
                     integration, quering, data exploration and pattern recognition. 
                 </p>
                 <div class="my-14">
@@ -506,12 +507,12 @@
             <div class="mx-4 my-16">
                 <h2 class="text-slate-800 text-2xl text-center font-semibold">Integrate your own data</h2>
                 <p class="my-6 text-lg text-slate-600 text-center">
-                    <NuxtLink to="/integration" class="text-sky-500 hover:underline">Integrate</NuxtLink> your research data into the ABRomics Knoweldge Graph to combine your samples with public data 
+                <NuxtLink to="/integration" class="text-sky-500 hover:underline">Integrate</NuxtLink> your research data into the {{ appName }} to combine your samples with public data 
                     to see matching returns or explore redundant patterns !
                 </p>
                 <h3 class="text-slate-800 text-lg text-center font-semibold">Want the full ABRomics experience ?</h3>
                 <p class="my-4 text-lg text-slate-600 text-center">
-                    <NuxtLink to="/tutorials/bind-accounts" class="text-sky-500 hover:underline">Follow</NuxtLink> our guide to bind your ABRomics account to ABRomics KG
+                    <NuxtLink to="/tutorials/bind-accounts" class="text-sky-500 hover:underline">Follow</NuxtLink> our guide to bind your ABRomics account to {{ appName }}
                 </p>     
             </div>
         </div>
@@ -526,7 +527,7 @@
                         <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Perform a Query</NuxtLink></li>
                         <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Map exploration</NuxtLink></li>
                         <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Submit my data</NuxtLink></li>
-                        <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Integrate ABRomics-KG</NuxtLink></li>
+                        <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Integrate {{ appName }}</NuxtLink></li>
                     </ul>
                 </div>
                 <div class="my-8">
@@ -540,7 +541,7 @@
                 </div>
             </div>
             <div class="my-8">
-                <span class="text-slate-800 text-lg">ABRomics-KG - {{ new Date().getFullYear() }}</span>
+                <span class="text-slate-800 text-lg">{{ appName }} - {{ new Date().getFullYear() }}</span>
             </div>
         </div>
     </footer>
