@@ -516,6 +516,34 @@
             </div>
         </div>
     </div>
+    <footer>
+        <div class="w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+        <div class="px-6 mt-16 sm:flex sm:justify-between">
+            <div class="my-16">
+                <div class="my-8">
+                    <span class="text-slate-800 font-medium">Quick access</span>
+                    <ul class="my-4">
+                        <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Perform a Query</NuxtLink></li>
+                        <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Map exploration</NuxtLink></li>
+                        <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Submit my data</NuxtLink></li>
+                        <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Integrate ABRomics-KG</NuxtLink></li>
+                    </ul>
+                </div>
+                <div class="my-8">
+                    <span class="text-slate-800 font-medium">Documentation</span>
+                    <ul class="my-4">
+                        <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Check our data model</NuxtLink></li>
+                        <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Write your own query</NuxtLink></li>
+                        <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Index new data</NuxtLink></li>
+                        <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Analyse with our model</NuxtLink></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="my-8">
+                <span class="text-slate-800 text-lg">ABRomics-KG - {{ new Date().getFullYear() }}</span>
+            </div>
+        </div>
+    </footer>
     <!--
     <div>
         <h2 class="mt-10 mb-6 text-xl text-slate-900 font-bold">Knowledge graph content</h2>
