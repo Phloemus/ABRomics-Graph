@@ -517,33 +517,33 @@
             </div>
         </div>
     </div>
-    <footer>
+    <footer class="mt-16">
         <div class="w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
-        <div class="px-6 mt-16 sm:flex sm:justify-between">
-            <div class="my-16">
+        <div class="px-6 bg-slate-800 sm:bg-slate-50 sm:flex sm:justify-between">
+            <div class="py-10">
                 <div class="my-8">
-                    <span class="text-slate-800 font-medium">Quick access</span>
+                    <span class="sm:text-slate-800 text-slate-200 font-medium">Quick access</span>
                     <ul class="my-4">
-                        <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Perform a Query</NuxtLink></li>
-                        <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Map exploration</NuxtLink></li>
-                        <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Submit my data</NuxtLink></li>
-                        <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Integrate {{ appName }}</NuxtLink></li>
+                        <li class="my-2 sm:text-slate-600 text-slate-400 hover:underline cursor-pointer"><NuxtLink>Perform a Query</NuxtLink></li>
+                        <li class="my-2 sm:text-slate-600 text-slate-400 hover:underline cursor-pointer"><NuxtLink>Map exploration</NuxtLink></li>
+                        <li class="my-2 sm:text-slate-600 text-slate-400 hover:underline cursor-pointer"><NuxtLink>Submit my data</NuxtLink></li>
+                        <li class="my-2 sm:text-slate-600 text-slate-400 hover:underline cursor-pointer"><NuxtLink>Integrate {{ appName }}</NuxtLink></li>
                     </ul>
                 </div>
                 <div class="my-8">
-                    <span class="text-slate-800 font-medium">Documentation</span>
+                    <span class="sm:text-slate-800 text-slate-200 font-medium">Documentation</span>
                     <ul class="my-4">
-                        <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Check our data model</NuxtLink></li>
-                        <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Write your own query</NuxtLink></li>
-                        <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Index new data</NuxtLink></li>
-                        <li class="my-2 text-slate-600 hover:underline cursor-pointer"><NuxtLink>Analyse with our model</NuxtLink></li>
+                        <li class="my-2 sm:text-slate-600 text-slate-400 hover:underline cursor-pointer"><NuxtLink>Check our data model</NuxtLink></li>
+                        <li class="my-2 sm:text-slate-600 text-slate-400 hover:underline cursor-pointer"><NuxtLink>Write your own query</NuxtLink></li>
+                        <li class="my-2 sm:text-slate-600 text-slate-400 hover:underline cursor-pointer"><NuxtLink>Index new data</NuxtLink></li>
+                        <li class="my-2 sm:text-slate-600 text-slate-400 hover:underline cursor-pointer"><NuxtLink>Analyse with our model</NuxtLink></li>
                     </ul>
                 </div>
             </div>
-            <div class="my-8">
+            <div class="pb-8">
                 <div>
-                    <p class="my-1 text-slate-800 text-lg">{{ appName }} - {{ new Date().getFullYear() }}</p>
-                    <p class="text-slate-600 text-sm">Linking micrombiome data</p>
+                    <p class="my-1 sm:text-slate-800 text-slate-200 text-lg">{{ appName }} - {{ new Date().getFullYear() }}</p>
+                    <p class="sm:text-slate-600 text-slate-300 text-sm">Linking micrombiome data</p>
                 </div>
             </div>
         </div>
