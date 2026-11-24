@@ -517,10 +517,10 @@
             </div>
         </div>
     </div>
-    <footer class="mt-16">
+    <footer class="mt-16 ">
         <div class="w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
-        <div class="px-6 bg-slate-800 sm:bg-slate-50 sm:flex sm:justify-between">
-            <div class="py-10">
+        <div class="px-6 bg-slate-800 sm:bg-slate-50">
+            <div class="py-10 sm:flex sm:gap-14">
                 <div class="my-8">
                     <span class="sm:text-slate-800 text-slate-200 font-medium">Quick access</span>
                     <ul class="my-4">
